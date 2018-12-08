@@ -1,0 +1,17 @@
+b'Python\xef\xbc\x9anumba \xe7\x9a\x84\xe5\x9f\xba\xe6\x9c\xac\xe5\xba\x94\xe7\x94\xa8'http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+我们都知道 Python 比较慢，但很多时候我们都不知道为什么。虽然我用 Python 也有那么两年左右了，但也只能模模糊糊地感受到这么两点：
+**于是我们就有了 cython。然而 cython 毕竟不是原生的 Python 代码，使用起来还是有诸多不便的。为此，numba 就成了一个功能强大又容易上手的替代选择。下面我们就先来看一下它的基本用法，在最后我们则会用卷积神经网络（CNN）的卷积和池化操作来直观感受一下其威力
+（注意：以下代码的运行环境均为 Jupyter Notebook、Python3.6.1）
+jit 的全称是 Just-in-time，在 numba 里面则特指 Just-in-time compilation（即时编译）。它背后的原理我们就不细说了，总之我们看到“编译”两个字大概就能感受到它是干什么的对吧（喂
+那么来看一个简单的栗子——给数组中的每个数加上一个常数 c：
+  ***虽然jit确实能让我们代码加速不少，但比之numpy的Ufunc还是要差很多：<br data-filtered="filtered"  />
+    然后有几点需要注意的地方：
+***   此外，vectorize最炫酷的地方在于，它可以“并行”：
+  那么是否有用parallel总会更好的栗子呢？当然是有的：
+  需要指出的是，vectorize中的参数target一共有三种取值：cpu（默认）、parallel和cuda。关于选择哪个取值，官方文档上有很好的说明：
+我们知道，Python 中由于有
+GIL
+的存在，所以多线程用起来非常不舒服。不过 numba 的 jit 里面有一项参数叫 nogil，想来聪明的观众老爷们都猜到了它是干什么的了……
+下面就来看一个栗子：
+ **上述程序的运行结果将会是：<br data-filtered="filtered"  />
+ 

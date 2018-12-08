@@ -1,0 +1,17 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x882\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe9\x82\xa3\xe4\xba\x9b\xe5\xae\xb9\xe6\x98\x93\xe8\xa2\xab\xe5\xbf\xbd\xe7\x95\xa5\xe7\x9a\x84\xe9\x97\xae\xe9\xa2\x98\xef\xbc\x88\xe4\xb8\xad\xef\xbc\x89'  Python进阶系列连载（1）——那些容易被忽略的问题（上）</a>
+ Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicia2EXNLDcyCX7wsLMxFNH8sI10EMdGVBXM8Vh2vkgnpqt3Lby22eHRg/640?wx_fmt=png
+字符串快速转换为列表 发生关系http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UuOFsKzp1POrM4XCONsPNpTDvyqqv5xC4JetsjgOcicEqxXJrArDGBBw/0?wx_fmt=png
+ <span style="color: rgb(227, 55, 55);">有关系的</span>  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UlWSg2pCYIDxnZX8unBudPIG3rVxxgPCAxEibrQoPicLg5H2LYmbzMIRA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4U6BvaxHJiaZ9icTaTZl2SYCF68Q1yfvia3iadjAxgrslNK47AdxFTs8l4gA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UVJW80COyVKAGrGzkAMBH2Juatn54QkEznQh2icA91JAWc6Q6n94Uqeg/0?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4Uj6Z3pwXADZFQus6ibBeiafnOxZRe3mricMzpEO9WyeYfBC6w1HRjWxicyw/0?wx_fmt=png
+                http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UVoqOtibtkRpGakOdR8Ziam7FXCval8I7pSq0SJQEtzsYdIvyib3FhrSlw/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4U9OFhq8iaE3gFcHTicE5wsaFkib6fVsPqBAruJ7On3VVDI4aQVibzbvwJGw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UHB7udu0w6kvXvDiaTxicsc5GqtKvmo7r3Y3mzvTgHUIxk1S7VzzJwjLg/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UHZU9iaY2G2HQtOxgGsYj3BrPHONSkib0Z4wYBvwf8WdrWyqTXl9RoxPQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4UeXpazY1U3cslopbP5N9lGjsfwdqqDu9eOJhBkAu11iblt0CRiapJ9xEQ/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4Uefwl2f1y28PqsvIibeBUHSoxibe1hBVrCph3tL2H15AZxohiahTlfoZXQ/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttvAqF655IynehxQibHMlY4U6FJyj5kxAULA7qgaiceN1RWCrSOnEyQuJFAiarbibSylicnicJBAvicoF5Mg/0?wx_fmt=png
+       

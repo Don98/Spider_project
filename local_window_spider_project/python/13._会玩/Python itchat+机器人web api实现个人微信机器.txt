@@ -1,0 +1,2 @@
+b'Python itchat+\xe6\x9c\xba\xe5\x99\xa8\xe4\xba\xbaweb api\xe5\xae\x9e\xe7\x8e\xb0\xe4\xb8\xaa\xe4\xba\xba\xe5\xbe\xae\xe4\xbf\xa1\xe6\x9c\xba\xe5\x99\xa8'  本地使用：下载本项目(https://github.com/15331094/wx-robot)到本地，解压，进入项目目录，输入pip install itchat，等待安装完成，输入python wx.py，用手机微信扫描生成的二维码，确认登陆即可
+  在本项目中使用的是我的图灵机器人apikey,这个机器人的名字是火腿，谨纪念最后一条我亲手养大的狗仔。他的爸爸是我，妈妈是安妮海瑟薇。

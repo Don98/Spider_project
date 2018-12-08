@@ -1,0 +1,18 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x884\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe8\xbf\xad\xe4\xbb\xa3\xe5\x99\xa8'  Python进阶系列连载（1）——那些容易被忽略的问题（上）</a>
+Python进阶系列连载（2）——那些容易被忽略的问题（中）</a>
+  Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts2ZArb1gzDZNlibo1fBx3vJOSOPEbYwBLcespZ0icgoeqvkicgdiaebHcjwjiaRFVHYDIJV3gA3fS6bgg/0?wx_fmt=png
+迭代       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts2ZArb1gzDZNlibo1fBx3vJyI6G1w8icJDv8CNN4hnapVQax1a6xYHrkLbzdysS71ycE8khq8oZZLQ/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts2ZArb1gzDZNlibo1fBx3vJQQmopCM5ZE6tasL3NCiaIAUVbZblvvaO5YhTvVkZ58qNLNVQib0fM3Ig/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts2ZArb1gzDZNlibo1fBx3vJ1yTkvXwAibibDlLKJlmLjYpibiaic4rKSY2RPDjdicB7WmLmR2kprZ90e7aA/0?wx_fmt=png
+                 一大优点是不要求事先准备好整个迭代过程中所有的元素</span>
+迭代器仅仅在迭代到某个元素时才计算该元素，而在这之前或之后，元素可以不存在或者被销毁</span>
+这个特点使得它特别适合用于遍历一些巨大的或是无限的集合，比如几个G的文件</span>
+     今天作业：</strong>
+1.自己创建list
+ tuple
+ dict
+ set
+ str int float bool 类型数据，然后判断是否是可迭代对象
+</strong>

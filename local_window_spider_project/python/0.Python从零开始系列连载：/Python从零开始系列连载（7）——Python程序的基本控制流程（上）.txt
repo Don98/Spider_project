@@ -1,0 +1,129 @@
+Python从零开始系列连载（7）——Python程序的基本控制流程（上）前文传送门：
+      在Python中，可以使用一次赋值符号，给多个变量同时赋值：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6c9c2KlDar2puncGJoQLjtvgviafJo8gS9XFp04S1GX1uwibdibwPDGKzQ/0?wx_fmt=png
+ 大家思考一下以下这个的赋值机理：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6YOnOGRdIVsxPc7acYwfagtlEjXOpG1FRX75fksWIKaw4sFW8w47eZQ/0?wx_fmt=png
+ 好了，揭晓答案，结果是这样的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6YEY7sPxq8aMtlUZQvPKcKBhWFmkb1LGvCE3ibdvwNZjft2YKwxXmgnQ/0?wx_fmt=png
+ 它是将'Python'这个字符串按照字符拆成6个字符，按顺序分给b,c,d,e,f,g变量
+ 所以b变量对应的是'P'这个字符
+ 打断一下，你对你的性别满意么？
+ 有没有可能换个性别？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6lbbuzEAcM2ic3pQYeDvfQVDJc0hpXdiam7iaEOyhE7QZvKqzScvkibFEeg/0?wx_fmt=png
+ 当然 ,我是说在Python中，别误解！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6n4ax1ZLTGKBAJRXicWSDntwV6Er6zQy49edIdkwOw3BBZeRPbd8nFAw/0?wx_fmt=png
+ 这不就实现了么，哈哈
+  还记得其他语言交换两个变量的值很多情况都习惯用第三者temp么？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ibdiacRickHwibprVuiaeJrxfLdcYhUibIydqJK6pmVBgVMM2asKnD9EFjicw/0?wx_fmt=png
+ 还有一种很厉害的操作：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6T4F78KxeVKRUibpozfPhMrDobgmkC6ZCurnicRYuIiblLoDnGNVCldmyA/0?wx_fmt=png
+ 以上是给变量同时赋值为一个值
+ 其实在python中也支持运算操作和赋值操作结合的操作（官方称为复合赋值）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x62goUSjiaxEP4icW845Zg80NDHYXkmS2ibmupIEKsxNibpA1vbcwPBrxeAQ/0?wx_fmt=png
+ 这个怎么看呢?上面涉及加减乘除
+我拿乘法解释一下：
+ length *= 4 
+ 可以理解为 length = length*4 
+（但两者操作还是有区别的，现在不说哦~）
+ 其他三个就可以按照这个模式推出来啦~
+ 当然，还有乘方和取余数的操作：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x62GhveEuS82jEn5PoBicU2ia4RT4ibMfo2fibBCgG4cIsgXyKUlDwaXB7uw/0?wx_fmt=png
+ 理解方法同上~
+  顺序结构指的是做一件事情是按顺序完成每个步骤的
+举个栗子，我们糖炒个栗子：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6beP61EmdVHXbaoBcVvN5AY5vIYyb04IV3NeWRo9qDI3A4ExDBuH3icw/0?wx_fmt=png
+ 若干步骤之后。。。。。。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6IK0XnZoa2b8kr2lF2yxUrkRXMenUmhsxZNs8RWuOayrPPvs4NF0Awg/0?wx_fmt=png
+ 好了中间的过程省略了，有兴趣可以查看这个链接亲手做一下：
+http://home.meishichina.com/recipe-92590.html<br style="box-sizing: border-box;"  />
+ 什么？你没兴趣做？只会吃？
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x62V9L3LBrJnXFClbsBSsibdVYy90FRJibU0SxFPLXXB6B1WKWJYZL1LlA/0?wx_fmt=png
+ 大家应该从糖炒栗子的做法中理解了什么事顺序结构
+没用代码演示不爽是吧，来一发！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6rcNSmR3adWFuscnUlur9O1Wl6NKiaJicAoQ0BnVoqrQjgKrOmJJPjLuA/0?wx_fmt=png
+ 我输入5，按回车
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x63ApZ6WgRu9hHPb69xMq2USJCx0bOnLIspZhjYQyBcJhXfqy3BxGcag/0?wx_fmt=png
+ 通过输入半径，然后计算得出圆的面积，这就是一种顺序结构啦
+ 来，给你看个好玩的！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6DJ7W4ia9h9qvja80GewqP3y9N8ib2ysE5FMrotAiabUb6bQ2OcO8icnOaA/0?wx_fmt=png
+ 导入个模块，Python可以通过导入calendar日历模块，查看某年的日历（我这里查看的是今年的）
+ 至于import我之后连载会说到，莫慌！
+ 运行结果是:
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6F4L797b8WoMezgYc1VKtJLjJL0icLZudfcWBtMKR3UGETj0jxOHxyOg/0?wx_fmt=png
+ 哈哈 
+是不是写代码的时候 
+想看日历可以用这个？
+-----------------------------------------------------------------------
+你用吧 ，反正我是不用
+ 我会用
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6uPXGHePmol8gL7MQLItvsXPsD4ibhkPeyIsVlYIIA8MaOmb9tn9C18w/0?wx_fmt=png
+ 这个！
+ 这个多好 
+ 还提示今天是 几号 和 周几 还有 具体时间~~~~~
+ 以上的日历显示也是顺序结构哦~
+ 时间不早咯，明天再继续连载（啊，现在已经是第二天）
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ZnCmRC2VwZZibkCjs4pqJEmibVmNCWHLkDJib3MYn9xRmnqCNmHBbjSCw/0?wx_fmt=png
+ if语句可以通过判断条件是否成立来决定是否执行某个语句
+ 例如：今天下雨的话，就去踢足球！
+ 小明：老湿，你是不是有病？下雨踢什么球
+ 室内的，不行么！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6d3X874aUBOdofLKfqqu3ykuF9Xml1iaYhn7EICZME6YUtIARKAdRPaQ/0?wx_fmt=png
+ 好，刚才是否下雨就是一个判断，然后如果下雨，也就是条件为真的，那么执行去踢球这个操作
+ 那这个在Python中怎么实现呢？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6UWMQhZVp5DfI3AXocobkJmImAUOxk9nycr4P45vwloqKmas05wtcwQ/0?wx_fmt=png
+ 输入yes
+ 最后弹出：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6FpQ8v2gcgBAdZNZqxV0bhBYtHtd26T1ujwkJwsqBdT6aHB7goicfPYg/0?wx_fmt=png
+ 如果输入其他的呢？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6WbXG2QLttXLuvApm7ibKHQ8p3YzXDxicAedjINQhJxJWiaNRLpJkPXOtQ/0?wx_fmt=png
+ 运行完则没有结果
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6zjbf837OonRtEmNv6jkLDicHQMUsmrPAD5x6CT44lQM6SIns15DNwRg/0?wx_fmt=png
+ 因为我们只针对条件为真时设置了相关操作
+  if-else语句就是在原有的if成立执行操作的基础上
+当不成立的时候，也执行另一种操作
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6iamR5CerqrRkoM9CnuHb7w4wNCNicW6ib6RjbgLcXkLwpRFn2jS5rooUg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6cQwwLibTW5YiaPiaKnL4H6S2PHAR0goEwjFRZmiczR19bHAGwS7ltRQ7hA/0?wx_fmt=png
+ 当我输入yes时候，显示是去踢球
+——————————————————————————————————
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x67bRnsarezRn91BSCd7NyhOteibBdStVKHiaNzwkQe62hE9PyLeG8DxFw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6GXgK4mciaA0J3gdnj3RVBbiaR7pjUpEXTUiaiaZL80R8BM6NfwCqmiaSXYw/0?wx_fmt=png
+ 小明：今天不下雨明天为啥不去踢球？？？
+ 可能明天也不下雨啊
+ 小明：emmmm
+  这种语句是处理可能有多种情况的判断
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6LLqOWjAiaqaGo6cOKAiaASF9Xz2VWooc52NTSnT9qzSEXv85icDl1nADQ/0?wx_fmt=png
+ 例如，生活中常见的成绩分类为：优 良 中 差
+当然，这个太没吸引力了，例子太老，我们换个新的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ghuqBN9y21d7VL2Fe3haC3VjkbN8icEH9n9dV8PheyyxVNTx4PYbAnA/0?wx_fmt=png
+ 输入答案，按回车
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x67RVlQtx0plRy0vPJce6N7RzhLYHzXv8Zf8B5uDdiaib19Un58GmTGF9A/0?wx_fmt=png
+ 当然，这些没考虑到其他异常输入，例如：
+ 嘲讽一下，输入‘呵呵’
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x67USHOo9tpp6wyFKNtPZVwjxsgaY90AUt09gDsXYrzbr524QFUcwCZg/0?wx_fmt=png
+ 直接报错啦
+ 那我换个试试
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x672FFx1bCH9CagiamIrJAicEib1bC4btnu03icJ5jD7QEoldRiaaQsOYAqQg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ptftA8BwM9vmEYfNq5WLXMUP0dNXvf6F5s7j4dB00ab4alnybs5LIQ/0?wx_fmt=png
+ 还有人能666cm的身高？？
+ 所以在设置判断时候要构思好用户可能输入的特殊值
+  有时候分支语句需要嵌套
+ 你可能玩过俄罗斯套娃
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6TgibfibvJTsUhia4CwHYuQ6ticIFkZTickBiavicQg94ib4ymsyAiaLOEP7hUjg/0?wx_fmt=png
+ 小明：老湿，我没玩过！
+ 小明，你想玩么？
+ 小明：想啊！
+ 给你个传送门：
+https://s.taobao.com/search?q=%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83&amp;imgfile=&amp;commend=all&amp;ssid=s5-e&amp;search_type=item&amp;sourceId=tb.index&amp;spm=a21bo.50862.201856-taobao-item.1&amp;ie=utf8&amp;initiative_id=tbindexz_20170927<br style="box-sizing: border-box;"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6YzbEKrv6TlSt2dXB38PedwFhJ2XoIx7301oqhvnypfe7InwGOv2GmQ/0?wx_fmt=png
+ 看这意思，层数越多越厉害啊！
+ 相亲过么？
+像这种的:
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6QfibvgxsMXV0e8VEsmpb6RCjzH5nglJcVxuMkawu8iaAEHYaUIhl4YTw/0?wx_fmt=png
+  这女士打码的方式好像在哪见过？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x622kcTzMncgCjKGZSMzFjetVRREjmKow68gXAddsFfArkiaaiao2Vticicw/0?wx_fmt=png
+  好了，假设你现在要设置个到了法定结婚年龄就要提醒相亲的程序，你会怎么写？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6CPdDPHTJGsvX7y8BjKMcphdb3FNINqS7Xpsh2G0bjTLpaT5yepeRlQ/0?wx_fmt=png
+ 我给你写个:
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6GjDdPXw9IXHZS6mXWcHbTPyhgM4MWtGIIibPC1nBArCha56l727dzvw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6EEMGnibia2vZMxemhOnflzpOCNTXjrbZTeZWI4RcgDaJNkCzDRUvePEg/0?wx_fmt=png
+    

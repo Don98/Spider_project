@@ -1,0 +1,14 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x886\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe7\x94\x9f\xe6\x88\x90\xe5\x99\xa8\xef\xbc\x88\xe4\xb8\xad\xef\xbc\x89'  Python进阶系列连载（1）——那些容易被忽略的问题（上）</a>
+Python进阶系列连载（2）——那些容易被忽略的问题（中）</a>
+Python进阶系列连载（3）——那些容易被忽略的问题（下）</a>
+Python进阶系列连载（4）——迭代器</a>
+  Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttssP5ic59nCia7KYic57JAKVLAelpaibDxJwZAnpCcMuibDsY62ic9LzEMibMDISHRRPU49xCNWPnTiauwcJw/0?wx_fmt=png
+与next（）等价的方式  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttssP5ic59nCia7KYic57JAKVLAfstXrZ9BT1jlAWSERRcsdRcG2lxBenwBksXcvP1knualmde9upSwKw/0?wx_fmt=png
+          这是为什么呢？</span>
+ 今天作业：敲一遍代码，理解一下两种生成器创建方式
+</strong>
+自己不敲代码永远学不会写代码</strong>
+下课</strong>
+人生苦短，我选Python</strong>

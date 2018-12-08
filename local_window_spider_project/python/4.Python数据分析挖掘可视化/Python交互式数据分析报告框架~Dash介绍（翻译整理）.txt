@@ -1,0 +1,14 @@
+b'Python\xe4\xba\xa4\xe4\xba\x92\xe5\xbc\x8f\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe6\x8a\xa5\xe5\x91\x8a\xe6\xa1\x86\xe6\x9e\xb6~Dash\xe4\xbb\x8b\xe7\xbb\x8d\xef\xbc\x88\xe7\xbf\xbb\xe8\xaf\x91\xe6\x95\xb4\xe7\x90\x86\xef\xbc\x89'  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtzr80iacmvFviaa44RKgxrc330cV6bbWicqicELl6SsvOG8icmadUlzlD9icQ/0?wx_fmt=png
+     纯Python搭建响应式Web应用     http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtqzyZWLWaf766CNIfhA7mNdMMgtnEV2nKVjV1nOxgGhyn1YOySwBhMg/0?wx_fmt=gif
+        http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAt9kaOVxtlKPrfLbjX8KJ4jhAeJKGIwic8h4e6mtHDOqDnwzJ1c3RP8VQ/0?wx_fmt=gif
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtDEVGibZ7uoZx5mzR7ib6aMVA2ZcRYRlurOhcUdbbYroUfUMoX6dWMRFg/0?wx_fmt=png
+                体系架构    从React.js到Python Dash组件          并发-多用户应用 CSS与默认的样式 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtf67HVLjOYAjXRqP9O0glQ1ADiaT8N0TzzISfe1VN5nL5LHEIWEs3ZibQ/0?wx_fmt=png
+数据可视化  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtZibD5OqVYNbFq0RUsACUoNxlX7VibXTF5736LSx3amlg4vVdRwDQ3wlQ/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtYfkic13kh2X5mLFZKKomiaP8sicciaxZiccKf92Sv2ibiaaiahuhoMPcomKgOA/0?wx_fmt=png
+  开源库        http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtgpY0x2Qa220cauXB8p7qfoVaeUQ3lD1y9iceXC2od8NFCKV1tM6m6eQ/0?wx_fmt=gif
+     http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtMHvnV6osaRiaQfUVoeiadNb2DhYDCgzLQAU0licHwI8PV3WFjS9b7N6IQ/0?wx_fmt=gif
+             http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtQo4B0TwV015mpcpXMcq0HVCqPvjEe5BCM69q9Uy8ibXHKiaFOJOqibib6A/0?wx_fmt=gif
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtpEw5LRmkIjneicXSC6ibTTXPskAEDZjyEX8hicHRd6bbKUn9xEiapdXMRg/0?wx_fmt=png
+  钻取http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtgzxkX4WsuzJcvwrFeOe1UBAicB3gSWvTY4UcBLuKN6huNFp9yknnTiaA/0?wx_fmt=gif
+     http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttP8BobVDgFd88JtVVPoxAtCLZsgORBULzDRkicYIoz5IKqibRL6xAIvQo2OEwe2MMTgPCglOt6J7Zw/0?wx_fmt=gif
+ 许可与开源的商业模型                       

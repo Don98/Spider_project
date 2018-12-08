@@ -1,0 +1,33 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x901\xe3\x80\x91--\xe6\x95\xb0\xe6\x8d\xae\xe7\xb1\xbb\xe5\x9e\x8b\xe5\x8f\x8a\xe7\xbb\x93\xe6\x9e\x84' 一直想静下心来、花点时间学习Python3这门火爆的高级语言，但总是事与愿违，故只能挤点时间，做到每天进步一点点。从今天开始我把积累的点滴知识与大家做个分享，也欢迎感兴趣的朋友指教与提议。<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  />
+ 首先从Python的基础数据类型和数据结构说起，<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">数据类型</strong></span>主要包含三种，分别是数值型、字符型和日期时间型；<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">数据结构</strong></span>主要包含列表、元组和字典。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcPp65pym8gZnXcKjoKaTektLmGvUCONLxcluUm8Toc1gufoFGYQtCnQ/640?wx_fmt=png
+ 由于日期型和日期时间型比较特殊，我们来单独看一下。一般拿到日期型数据时基本都是字符串表示的，如
+'2017-04-24'
+和
+'2017/04/24 22:09:48' 。该如何将其转换为日期型和日期时间型呢？这里<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">借助datetime模块</strong></span>中的子例程datetime就可以轻松搞定。例如：
+http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcDxy3CQqS7iaPLFJVQ65IPAVEI2QUgYOdiaTImiav9snHYyQWACKQxrVTg/640?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcjOG2ib6H3ogvDt3Ifl4Sw7xNdC0H6Q7eZS62sKTqfEAyicvic8VW9FpEQ/640?wx_fmt=png
+第一个红框：如果你需要将字符串型的小数转化为整数，<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">必须先将字符串转化为浮点型，然后才可以转化为整数</strong></span>，否则将会报错。<br style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;"  />
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcpvLvcKZhQib8EkRD6JQAJNpWb7IqKW5Y7Up8GOYjgympEhglbCXobzA/640?wx_fmt=png
+   列表：是一个可变型的序列，之所以说可变，是因为可以对列表数据类型可以进行增、删、改的操作，而不可变对象则没有这三种操作。
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcCYNdvujQbick5c2pFEr6MficQzbnXeKibVgBxBCtGiclDQdMAiavoibIwlXw/640?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcXcAgGIcribSZE3mzbL9FMd3E2IWZgxmyHLjBiawYVibzxu3JCoTLGXOOQ/640?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcjRDFvTYSJO9SQNmZwibffAW4KxC9iaTt36oDD3xSDkickBytLXv3ReNJQ/640?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcUYib1riaWV7LoNxoXsiaGqSHxR3egmy9e1UAMB9SEhHvy4BEa36VnibIXA/640?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rc0WdMdTOHYD7kP2QpwgM4XLtkgvRknEibffIrdZ9AKx77GlfIKDkcKIw/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcXhCLeggKib0aUxEXeRxGa90APEEUVKCykf8QOIECCDIMfjiaBJgd0yzA/640?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcW5mo5juwLA9MJkvPQb583wXS2PV3ZSl6lib76Tp60eCsTxboTxDVsLg/640?wx_fmt=png
+元组是不可变的序列，故其没有增、删、改的权限。只能进行查询（索引和切片）和一些简单的其他方法。
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rccfhK6vgdxZHy2zKgkicAZicDZaRlOLibe5KBzAC0IohfibPAsJjsXe0qLw/640?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcSzmkrEK0ibYyQPtiawK9gLBs1IA2MugbfwCiaOKpd7XTRcWIA18q10KJw/640?wx_fmt=png
+由于元组没有copy方法，但如果你就是想复制一个物理对象给新的变量，可以考虑使用copy模块的copy方法。
+  字典的创建就不是通过上面的中括号[]和圆括号()方法构建了，而是<span style="max-width: 100%;color: rgb(2, 30, 170);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">通过花括号{}或dict函数来构造键-值对</strong></span>。
+http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcrWs6TOP5FY8aAuJgGBOutHPfEEzx4UMr8sR5pWS7LbXZgNNPyfr0IQ/640?wx_fmt=png
+    由于<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">字典</strong></span>也是一个<span style="max-width: 100%;color: rgb(255, 41, 65);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">可变对象</strong></span>，故其也有增、删、改的操作，具体如下：
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcLicXXGu0bicCkNicz3S3eKvib9z0xneRDia7nCjUhcUt8cVU8eQomAJXA5Q/640?wx_fmt=png
+所以，<span style="max-width: 100%;color: rgb(2, 30, 170);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">setdefault方法既可以实现查的功能，又可以完成添加键值对的功能</strong></span>。
+  http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcYmRSJbqyW6ymmxKOEaQYJ4xauyClDQXJJHO6bKwbNGW2VMb9h4ONDQ/640?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVFxTOrzVjjEpc7QZ8al4rcwywVDl1mJM3xgPxoXNNuialhSuiauJpatesqXOJiau3wS7EXZ4yFeD6Aw/640?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWVP7zASUIKwlCBn2BicdrJ0uLVwojyHLmJChBrkYdt1vjwBLPYekYyMB1cznqSggunoGpJwVp5SXA/640?wx_fmt=png
+字典中更新键对应的值，既可以使用索引的方式，也可以使用update方法，但update方法中的<span style="max-width: 100%;color: rgb(2, 30, 170);box-sizing: border-box !important;word-wrap: break-word !important;"><strong style="max-width: 100%;box-sizing: border-box !important;word-wrap: break-word !important;">参数一定是一个字典</strong></span>。如果该字典的键在dict3中存在，则操作改的动作，否则完成增加键值对的使命。
+  http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWVP7zASUIKwlCBn2BicdrJ0HSpKamKzOrCM4nD4kX2nAR4iaYS6cSLu99ibhhqO6ucAVRs9ONJhibMsg/640?wx_fmt=png

@@ -1,0 +1,10 @@
+b'\xe9\xab\x98\xe9\x80\xbc\xe6\xa0\xbc\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x9a\xe5\x88\xa9\xe7\x94\xa8Python\xe8\xb0\x83\xe5\x8f\x96\xe5\x9c\xb0\xe5\x9b\xbe\xe6\x89\x93\xe5\x87\xbb\xe7\x8a\xaf\xe7\xbd\xaa' <br  />关注<span style="color: rgb(255, 41, 65);">Python爱好者社区</span>，公众号后台回复 <span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);">旧金山</span>即可获取本文数据。<br  />昨晚看kaggle，在'San Francisco Crime Classification(旧金山犯罪分类)'数据集下，偶然发现国外一牛人写的代码，关于调取地图数据预测犯罪类型，另我耳目一新啊。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMFgjQkAd2TAyCwiam2D5QJlCy5ljS9xicC9sOyibZeIpc9P5GVfD7G8jicQ/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMHzj0iazANKHssnwc936Mg1SgOXWq5fMdiaCLgGaGKvDw02K6RpficGrmg/640?wx_fmt=png
+ mapdata是什么数据。</span>
+ 一开始猜测是经纬度数据，我用openstreetmap调取出经纬度数据以后载入，还是无法运行。（如果国内有大神成功运行，烦请告知一下噢，附上对方网址：https://www.kaggle.com/dbennett/test-map/code）</span>
+   http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMXdRIRxicEYbVLUTgRTfozBUib86WZYaG0sYL7ibzhWKNpRibGlt4wA169w/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMdic3MyksQvoczibDdM1wraSm7Dq91YsFh3mTC0evOwHiaJN2pHxl3VY1A/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMBicA1UKrby2kIcsCqtQUmJ3LXnDbmQiaxYjApWLjeosCSpPPoS2UpXPw/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpRbC62S0Q3YlRp4qClApzMLS9xqCrOlaC1pc3cLcSQvGeotn3rs8nUic8pnOAYyVQ6LoRv50sicIKQ/640?wx_fmt=png
+   肉来了，上图</span>

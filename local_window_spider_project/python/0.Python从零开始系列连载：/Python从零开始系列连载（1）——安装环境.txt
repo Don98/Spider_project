@@ -1,0 +1,83 @@
+Python从零开始系列连载（1）——安装环境 人生苦短，我选Python！
+大图镇楼：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6BrQlWRfEtoDZmHrb1k1lRZZyn0k0uQ0eLXEibGmmcjgoPpEag5CXUbA/0?wx_fmt=png
+ 很多初学Python的同学会有很多疑问，例如 :
+学Python应该看什么书啊？
+学Python有没有推荐速成的就业培训机构？
+学Python还是学R好啊？
+学Python工作好找么？
+
+ 对于以上问题，站在不同的立场，会有不同想象
+我...不作答【阿喂，你为啥用臭鸡蛋砸我？
+我带你Python入门打好基础
+至于提高部分，我尽量提升自身能力然后共勉
+ 经常有身边的朋友要入门Python让我推荐书
+还有群里的小伙伴初学Python遇到各种常见问题
+所以我想写一个从零开始的入门到熟练系列连载
+希望大家喜欢
+ 如果大家熟悉我的写作风格
+生动形象，由俭入奢，啊呸，由浅入深
+没错，就是这样
+我不是Python大佬
+但我乐于分享
+ 你可以跳过以上那段话直接开始【hhhh，这是什么套路】
+ n年前我初学Python的时候（n可能=1）
+那时 没有花香，没有树高，我是一只无人指导的菜鸟
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6UXPX6aMHX0mR03XqEsdia3cr7mhtYCiaCopUJ4HqlhQibcGLeWR5lGDqw/0?wx_fmt=png
+  当时我在群里问学派森要装什么
+有人说装个anaconda
+我想：这人说的和派森听起来没关系啊
+ 原来是我当年太年轻
+现在，我带大家装anaconda而不是装Python因为Python英文是蟒蛇，anaconda是水蟒（这算啥理由）
+ 大家和我一起搜索一下anaconda：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6asONBfibrZqSrEURvWAFeib0naLP4hMDsN2TpVlcAvibUB09zPwOWD5eg/0?wx_fmt=png
+  看第一条！！！！！！骚年，你的眼神有点涣散啊？？ 点进去：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq63Tb45Hj1gHYwNJFomOopncic6iadRDUbOowB7B6NbAz243T8SVZBwcBA/0?wx_fmt=png
+ 抱歉 
+我的浏览器问题，换成谷歌
+ https://www.continuum.io/downloads<br  />在首页我们可以看到：http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6ajhbVTrdchicIHyfcLcq6D2mkmuaia0MIXXZdSGbic5WQ6KmupdDibhbTA/0?wx_fmt=png
+ 你是初学者，建议你下载左边的Python3.X版本而不是Python2.X版本
+因为2和3版本的语法是有差异的，而且版本更新肯定是在优化啦
+Python2.X版本将在 2020年4月12日 退休。退休后将不再进行任何维护。
+
+图中根据你的计算机选择是64位还是32位的下载安装（现在一般都是64位的了）
+看自己的电脑是32位还是64位的（一般是64位）
+查看方法：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6yKKyY6joZ4ic79Fq1TPK6VbHibPeTbtF7j6GthUP6bibzEQBEI1x7YVGw/0?wx_fmt=png
+ 下载之后，双击安装，如行云流水。。。
+ 划重点：你安装之后可能程序没有自动配置anaconda环境变量，你需要手动配置！！！我们找到刚才安装的anaconda<br  />http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6quSRTc0kfMJWAn5XPtfoGicmgHd3nXNA1Cr0O5xXNRwribqr30QDF4KQ/0?wx_fmt=png
+ 找到Scripts，双击打开
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6VRQ8icibVpaK1avUyicTJMibXaibF7sWpH5fcPyDWmjnfzFhx5ibAKRovfTg/0?wx_fmt=png
+ 点击一下路径位置
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6ruWYAwFxccw8BgrGxnpNjT82CnJ8Rwfk24u6cibiczTEcsQ6IiaA9H5SQ/0?wx_fmt=png
+ 然后复制路径
+ 配置环境变量（以下是win7版操作方案，win8和win10可以百度）：
+右键我的电脑
+点击右下角更改设置：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6znEAagSoVSQrufEP0g5q8ibXnp5t2lnzkGseXNoF22aHRCRAXSZkfCw/0?wx_fmt=png
+ 弹出的窗口中如下操作：
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6Wul8UztQjZOSeBnick4lPicDYFzdS9VNja0wR4yGrib8iacuNcYXyGOWiaA/0?wx_fmt=png
+ 找到Path
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6UlTqJLibryDiaQwfga4CJqoB1YkWV2jCECRwTYytahgQTrjtUV8q5PhA/0?wx_fmt=png
+ 双击蓝色区域：
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6f2vGS6h4KRJQMLfacUdlypP0JG7v9pBFYfUsuJhQXkccUSgjjfqF6w/0?wx_fmt=png
+ 将刚才的路径复制在这串文字最后，注意与前一个要用一个英文分号隔开
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq61tcwcwPzibFcqsshx5sujBOP765O4ia1GyvIibJMerKlqaa36SIxjgicPA/0?wx_fmt=png
+ 然后点击多个确定
+ 打开cmd
+输入jupyter notebook
+这时应该可以了
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6w2CwUHuF6Mkn8tynP2kHUhKTbsHzhGibZgdF36I81BZTA9Y5KicbEJGA/0?wx_fmt=png
+ 然后会弹出一个网页：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6duSwYua9aAfqN5m4YvfgibicNwJIEoMX32otwHEuQGI4de6FZAY735wg/0?wx_fmt=png
+ 恭喜你，安装成功啦！
+ 至于为什么不让你去Python官网下载Python安装包安装是因为Anaconda是Python的集成环境
+安装好就自带很多你常用的包，你用的时候直接导入就行啦，不用再一个个分别装了
+ 人生苦短，我选Python
+未完待续，连载中......

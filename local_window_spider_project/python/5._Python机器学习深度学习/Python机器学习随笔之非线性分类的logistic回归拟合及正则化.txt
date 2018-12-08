@@ -1,0 +1,8 @@
+b'Python\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe9\x9a\x8f\xe7\xac\x94\xe4\xb9\x8b\xe9\x9d\x9e\xe7\xba\xbf\xe6\x80\xa7\xe5\x88\x86\xe7\xb1\xbb\xe7\x9a\x84logistic\xe5\x9b\x9e\xe5\xbd\x92\xe6\x8b\x9f\xe5\x90\x88\xe5\x8f\x8a\xe6\xad\xa3\xe5\x88\x99\xe5\x8c\x96' 01 非线性决策边界的logistic回归拟合https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvlibTddNqvabPlMIaGdgeiahzQO1leAb2iag4wW9tjWHqJL7XmuqcxcAjg/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvMqmibrEg8CdsZMBjM8K4HVyhlEl9vgQhW2bQcYcI4gHejnjDPLjGBHQ/640?wx_fmt=png
+02 正则化优化logistic回归过拟合https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvtEOObPVicYJiaa12shgRO6GYEYDeGIupq2ZQ9iajaibm1aKbfOYhqQx9iag/640?wx_fmt=png
+03 Regularized Logistic Regression实例  https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvoXJD1lUiaMicrM0UP2UxPeJj7PwfsliaicNQ70OUgcpljMSrQqrsLib8OSA/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvLmpKqk72hnwSjzX390w3NIw4iaEopnwicA459K83u2vBicxg2n0llFdLg/640?wx_fmt=png
+      https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvgJro9dyuFHLnItqk3kmlo2oia1rwoCEKh7oXYia0QF08c9uKv5t5yv8g/640?wx_fmt=png
+         https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvpK2UFQeJXiakpPaIMCEhMqdBI2iaJftmCk2JbHSed79N0sGhBMrNgYBg/640?wx_fmt=png
+             参考文献：   

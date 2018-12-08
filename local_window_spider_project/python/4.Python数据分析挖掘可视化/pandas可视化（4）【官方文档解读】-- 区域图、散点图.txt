@@ -1,0 +1,27 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x884\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91-- \xe5\x8c\xba\xe5\x9f\x9f\xe5\x9b\xbe\xe3\x80\x81\xe6\x95\xa3\xe7\x82\xb9\xe5\x9b\xbe'   前文传送门：
+   如绘图过程中，中文字体和负号显示有问题，可以参照如下链接修改配置参数设置正常显示：
+https://www.joinquant.com/post/441
+      可以使用Series.plot.area（）和DataFrame.plot.area（）创建区域图。
+
+默认情况下，区域图堆叠。 为了产生堆积区域图，每列必须是正值或全部负值。<br style="box-sizing: border-box; "  />
+当输入数据包含NaN时，它会自动填满0。
+如果要删除缺失值或填充其他值，请在调用plot之前使用dataframe.dropna（）或dataframe.fillna（）。<br style="box-sizing: border-box; "  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjhoJPVXuk0wnIjRQk1O6OglssvhPY9gm63qHVOEoSN3Z7dricJtEWREJDg/0?wx_fmt=png
+注：随机产生标准正态分布的df，四栏分别绘制堆积区域图
+ 为了产生一个未堆积的图，通过使参数<span style="box-sizing: border-box; color: rgb(76, 76, 76); ">stacked</span>=<span style="box-sizing: border-box; color: rgb(0, 112, 32); ">False</span>。
+除非另有规定，否则透明度：Alpha值设置为0.5，即半透明：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjho5rscRBZYfraIQUwmusTh5paUsRicFCZTTHg2VhXOj5zTtJSxH6JOjTg/0?wx_fmt=png
+ 可以使用DataFrame.plot.scatter（）方法绘制散点图。
+
+散点图需要x和y轴的数字列。 这些可以由x和y关键字指定。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjhoZgMTau4nNeY1dDz8lJgMfb3MOiclHV0jVE6IleCwAic8Me1jnNJNBxVw/0?wx_fmt=png
+注：将产生的a栏作为x轴数据，b栏作为y轴数据绘图
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjhoeamWn0MDstopRXPmXTgECbWeSaKPdTA51qfJQmnoqOOossBxqc7ibsA/0?wx_fmt=png
+注：要在单个轴上绘制多个列组，要重复指定目标轴的绘图方法，建议指定颜色和标签关键字来区分每个组。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjhor8TibmQMr7mswGcvm3dDYEcU4l3wqPsYFyrQsY2ROqD1uJj4xibbKTKw/0?wx_fmt=png
+注：关键字c可以作为列的名称给出，以为每个点提供颜色<br style="box-sizing: border-box; "  />
+ 你可以传递由matplotlib散点支持的其他关键字。
+下面的示例显示使用数据框列值作为气泡大小的气泡图：<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPOkrK2mK1DKIAfdFodjhojJoqDZCxGydWL1ujQhicrY1vd3KVfuEJX5N1ia55KDD09tDlY7xTV2NA/0?wx_fmt=png
+注：增加c栏作为气泡（散点）大小值
+ 

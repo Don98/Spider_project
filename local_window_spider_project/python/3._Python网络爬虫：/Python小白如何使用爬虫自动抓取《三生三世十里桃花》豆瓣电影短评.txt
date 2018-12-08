@@ -1,0 +1,18 @@
+b'Python\xe5\xb0\x8f\xe7\x99\xbd\xe5\xa6\x82\xe4\xbd\x95\xe4\xbd\xbf\xe7\x94\xa8\xe7\x88\xac\xe8\x99\xab\xe8\x87\xaa\xe5\x8a\xa8\xe6\x8a\x93\xe5\x8f\x96\xe3\x80\x8a\xe4\xb8\x89\xe7\x94\x9f\xe4\xb8\x89\xe4\xb8\x96\xe5\x8d\x81\xe9\x87\x8c\xe6\xa1\x83\xe8\x8a\xb1\xe3\x80\x8b\xe8\xb1\x86\xe7\x93\xa3\xe7\x94\xb5\xe5\xbd\xb1\xe7\x9f\xad\xe8\xaf\x84' 前言：<br  />本文主要针对有一定编程基础，但完全没有学习过python，又希望快速通过爬虫对网页中一些同类信息进行提取的人。http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv8roTm8c39Ia81f68xfmlhZnzZGUjWb6Cfp5MP13vic4bNP5viaib2e0nw/0?wx_fmt=jpeg
+前两天看了《三生三世十里桃花》，我的表情是懵逼的，内心是崩溃的，心情是想哭的。回家立刻打开了豆瓣刷起了影评，看到6w多条的短评，突然想深♂入了解众豆友对于《三》的普遍想法，于是我将魔爪伸向了python，一门我多次从入门到放弃的语言。
+
+
+鉴于之前的学习，都是从教程第一页开始，又在第一页结束，基本可以认定为是python小白。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvBhhIDcA7Bh5LjSa5Q0Pkic4RGDR7uXERLA1MNAEGFzcFUianRvIx0Opg/0?wx_fmt=jpeg
+         http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvDwgF1v2pM8C0Py1Ye9vJVPvHBFwCibfxl8r0Zg2bOsYbfw07qoF6dbg/0?wx_fmt=png
+ 以《三》的短评为例，首先键入豆瓣短评的网址https://movie.douban.com/subject/25823277/comments?status=P，载入网页后，在用户名和评分下方(定位信息)，即可看到用户的短评，6w条短评，我们就要不停的点击下一页来查看，这无疑是既重复，又费时的事情。
+   movie.douban.com/subject/25823277/comments?status=P
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvz2R2CFQNuIddS3nlD5oZ841jVyMZHV3cNtrMKdDJv48zibibYYcibicPYw/0?wx_fmt=png
+                   要看最终代码的直接跳到第9节      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvw3poiaMmONTIiaJgfoOI0DWOythx4hzU8L7TFic4osicZhPbzfzibUxvkeQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv6wEcXR2lYocglO1ldMObLztH7HMnUmjvV9VkWTIjVS080QOlRahCvg/0?wx_fmt=png
+ 这里可以看到爬取短评时会出现一些源代码，这里的源代码对应的是
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvD0xKOwiacZxYcvlWicmYAOAflbWNlEpwJdhAetJiccWNIrLHysOibFtcMw/0?wx_fmt=png
+ 这是为了标识出来自移动端发布的短评消息的一串代码，此类代码一共有三种，Android端、iPhone端和web端，可以通过程序筛选去除，为了更快的解(tou)决(lan)，我使用的是文本去重复工具
+               已更新优化代码2.0，查看文字后可直接跳过代码1.0继续阅读，2.0源码见第9节    半自动爬虫</strong>啊ㄒ_ㄒ)
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvGiaod5G7SfUeDfsXkjAaOctKtG8ztqxjwk9iaPBRjnEZoDJicuOcsCofQ/0?wx_fmt=png
+              

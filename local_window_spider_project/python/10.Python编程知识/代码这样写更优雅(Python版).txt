@@ -1,0 +1,9 @@
+b'\xe4\xbb\xa3\xe7\xa0\x81\xe8\xbf\x99\xe6\xa0\xb7\xe5\x86\x99\xe6\x9b\xb4\xe4\xbc\x98\xe9\x9b\x85(Python\xe7\x89\x88)' http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0.gif
+   http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMk2GcwsPXkzWIrLYBWqfA1O8k25VvUmFtwNklSv0d1wYEicicQU3rP2mzklicDbnjyVVlulYCkCwa0iaA/640?wx_fmt=jpeg
+ Python 这门语言最大的优点之一就是语法简洁，好的代码就像伪代码一样，干净、整洁、一目了然。但有时候我们写代码，特别是 Python 初学者，往往还是按照其它语言的思维习惯来写，那样的写法不仅运行速度慢，代码读起来也费尽，给人一种拖泥带水的感觉，过段时间连自己也读不懂。
+《计算机程序的构造和解释》的作者哈尔·阿伯尔森曾这样说：“Programs must be written for people to read, and only incidentally for machines to execute.”
+要写出 Pythonic（优雅的、地道的、整洁的）代码，还要平时多观察那些大牛代码，Github 上有很多非常优秀的源代码值得阅读，比如：requests、flask、tornado，笔者列举一些常见的 Pythonic 写法，希望能给你带来一点启迪。
+大部分编程语言中交换两个变量的值时，不得不引入一个临时变量：
+   遍历集合时如果需要使用到集合的索引位置时，直接对集合迭代是没有索引信息的，普通的方式使用：
+    执行文件操作时，最后一定不能忘记的操作是关闭文件，即使报错了也要 close。普通的方式是在 finnally 块中显示的调用 close 方法。
+  

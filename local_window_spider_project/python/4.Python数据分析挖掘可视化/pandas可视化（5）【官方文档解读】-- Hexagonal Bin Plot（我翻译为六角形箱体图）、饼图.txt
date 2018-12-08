@@ -1,0 +1,41 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x885\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91-- Hexagonal Bin Plot\xef\xbc\x88\xe6\x88\x91\xe7\xbf\xbb\xe8\xaf\x91\xe4\xb8\xba\xe5\x85\xad\xe8\xa7\x92\xe5\xbd\xa2\xe7\xae\xb1\xe4\xbd\x93\xe5\x9b\xbe\xef\xbc\x89\xe3\x80\x81\xe9\xa5\xbc\xe5\x9b\xbe'   前文传送门：
+     如绘图过程中，中文字体和负号显示有问题，可以参照如下链接修改配置参数设置正常显示：
+https://www.joinquant.com/post/441
+       你可以使用DataFrame.plot.hexbin（）创建六边形图形图。
+
+如果您的数据太密集，可以单独绘制每个点，六角形箱体图可以是散点图的有用替代方法。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QAJSGHd4gF8Og5icicxB0kyXY6DIR4Rf1jvr23ucDUByW33iaJmWPac1icw/0?wx_fmt=png
+注：左边坐标表示的是值的分布（这个图是二维标准正态分布）
+右边是数据量大小与颜色的对比，gridsize=10指的是大小，我们将其调为25：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QMteZ6tumjXROPK4gIUTMY2mEc9LEAiacoF4Is9pQNImvUlZuuX1icJaQ/0?wx_fmt=png
+ 我们接下来不做二维正态分布的图，加一个干扰：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QyYEibmZc6OFB5v2ocwIkUrkKKVKzpHV4bFlM2C2XePDiaZ6lryw93nNA/0?wx_fmt=png
+ 一个有用的关键字参数是gridsize; 它控制x方向的六边形数量，并且默认为100.较大的格栅意味着更多的较小的分区。<br style="box-sizing: border-box; "  />
+默认情况下，计算每个（x，y）点周围计数的直方图。 可以通过将值传递给C和reduce_C_function参数来指定替代聚合。
+C指定每个（x，y）点处的值，reduce_C_function是一个参数的函数，将一个bin中的所有值都减少为一个数字（例如，mean，max，sum，std）。
+
+在该示例中，位置由列a和b给出，而值由列z给出。 bins与numpy的最大功能相结合。<br style="box-sizing: border-box; "  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QVLPKZy2eker01pPE7iaPl9HIaxQpnGk2pjCI8rraiauvZLBuVEGsCXlA/0?wx_fmt=png
+注：这里z为在0-3上的均匀分布
+ 可以使用DataFrame.plot.pie（）或Series.plot.pie（）创建饼图。
+
+如果您的数据包含任何NaN，它们将自动填满0.如果数据中有任何负值，则会引发ValueError。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QPMia9s8RU7RLFjPv5JkuLwdt0IEZJxk95KwMUcCVUG2zmiaMNMjH3klw/0?wx_fmt=png
+注：饼图大小为6x6,如果长宽不一样，画出来是类似椭圆的
+ 对于饼图，最好使用平方数字，具有相等的长宽比。
+
+可以创建具有相同宽度和高度的图形，或者通过在返回的轴对象上调用ax.set_aspect（'equal'）来强制绘制后的宽高比相等。
+请注意，使用DataFrame的饼图需要您通过y参数或subplots = True指定目标列。
+
+指定y时，将绘制所选列的饼图。 如果指定<span style="box-sizing: border-box; ">subplots</span>= True，则每列的饼图将绘制为子图。
+
+默认情况下，每个饼图将绘制一个图例; 指定legend = False隐藏它。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1Q5Uc866IAeL9o1x5PIKkKujwdaElablE1uickENdKkph6iaiakFZ9IEmGw/0?wx_fmt=png
+注：子图绘制，默认显示图例，可以自己指定整个图的长宽大小（这里我选取9x4最后效果比较好）
+ 您可以使用标签和颜色关键字来指定每块的标签和颜色。<br style="box-sizing: border-box; "  />
+如果要隐藏标签，请指定标签=无。 如果指定了fontsize，该值将应用于标签。
+
+另外，可以使用matplotlib.pyplot.pie（）支持的其他关键字。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcKTFULWicAhdC9CMKvOa1QkR3wfibmKXgibeiaKu8tB1NlCuQ9gURULf6DqrGZWCD2mDh1lqdpHOu5g/0?wx_fmt=png
+注：colors指定每块对应的颜色，autopct是自动计算百分比显示，fontsize是百分比字体显示的大小
+ 如果您传递总和小于1.0的值，则matplotlib绘制半圆。

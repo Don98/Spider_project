@@ -1,0 +1,8 @@
+b'\xe9\x82\xa3\xe4\xba\x9b\xe5\xb9\xb4\xef\xbc\x8c\xe5\x86\x99 Python \xe7\x8a\xaf\xe8\xbf\x87\xe7\x9a\x84\xe9\x94\x99\xe8\xaf\xaf'  http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMmFjGY80FWFexC7sXsC9aKTicWL1dibSnrjNiaEtrRf2D5ibTwFs77nicrJJ3513nlaLnicO4bW6kMPsfRw/640?wx_fmt=jpeg
+ Python 以其简单易懂的语法格式与其它语言形成鲜明对比，初学者遇到最多的问题就是不按照 Python 的规则来写，即便是有编程经验的程序员，也容易按照固有的思维和语法格式来写 Python 代码，有一个外国小伙总结了一些大家常犯的错误，16 Common Python Runtime Errors Beginners Find，我把他翻译过来并在原来的基础补充了我的一些理解，希望可以让你避开这些坑。
+在 if、elif、else、for、while、class、def 语句后面忘记添加 “:”
+ “=” 是赋值操作，而判断两个值是否相等是 “==”
+ Python用缩进区分代码块，常见的错误用法：
+    通过索引位置获取元素的时候，忘记使用 len 函数获取列表的长度。
+     字符串与非字符串连接时，必须把非字符串对象强制转换为字符串类型
+  列表对象的索引是从0开始的，第3个元素应该是使用 spam[2] 访问

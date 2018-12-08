@@ -1,0 +1,103 @@
+b'\xe9\xa6\x96\xe6\x88\x98Kaggle\xe4\xb9\x8b\xe5\xae\x9e\xe6\x88\x98\xe6\x95\x99\xe5\xad\xa6'  泰坦尼克号是 kaggle 的比赛入门项目之一，网站
+https://www.kaggle.com/c/titanic/leaderboard。
+ 不要听书新手比赛就小瞧他，抛开其中的历史含义与其中的代价，这个数据集是个非常经典的数据集。经典道什么程度呢？
+1.他基本包含了你建模过程中的所有变量类型和数据处理方法
+2.891个训练样本，418个测试样本，那么所有关于模型的想法、组合与测试，都可以在这个数据集上得到快速反馈
+3.9725个参赛队伍，你很容易知道你与别人的差距，快速进步
+ 下面开始正文，首先是老司机教你们怎么玩转kaggle。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6xAxmHIFV7rzbSJWx16sv52CtAErUPcPAkPMndtncImCJzJh7YuRXrQ/640?wx_fmt=png
+ 共9725个队伍，先看rules。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6Iu5usPwd8bNn6ooTecrvEGxiaVCG4xH5rluibs6P1nVAaWibHqTcvibR9A/640?wx_fmt=png
+ 提交限制：每天最多提交10次
+ 比赛时间：Start Date:
+9/28/2012 9:13 PM UTC 
+ ，End Date:
+1/7/2020 12:00 AM UTC
+ 所以这是一个正在进行中的比赛，我们可以参加。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6AVMsxcar3zbmaNHWcEUbafDiaa3EQFv7H9gtehaI2FCQk3KXcKFTalw/640?wx_fmt=png
+ 在Evaluation中，我们看见评价指标是 accuracy，不是ks，不是auc，所以之后模型调优的时候，调优指标不要选错了。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6ICrXWxMZw7cXvgRAibb0D8KEyMn5gFOOxBZ0YmIPyDKelfnlNB8MY2Q/640?wx_fmt=png
+ 在Data里，有训练集和测试集，还有提交示例。我们用训练集训练模型，在测试集上预测，预测的结果按照示例提交给kaggle。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6K09PxGVvUqHnyRSMN7rp5tbjDkCxyW51O9loticG3COVpK4LXatVKMw/640?wx_fmt=png
+ 提交示例是这样的，左边是id，右边是标签。
+ 预测出结果后，在提交页面点击提交：Submit Predictions，ok，然后等打分和排名。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6DOiaLAkpic3U3gHuvPduLAxh5Gm8PqogQIOd7ia0c0udeeTQLXNTXJfeA/640?wx_fmt=png
+  现在开始代码：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6jXgHZ4ds8Pk32icpfuCMLGoXM8icVY2g82YDX1Eskg4wzb3XFtnEBw1Q/640?wx_fmt=png
+ 预览：<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6ib6xeAHoibv7libnamwJLc8Zror3M8ALCVNQ6o3ria5cIkdgDvfKh21mvQ/640?wx_fmt=png
+ 原先的变量名不符合我的习惯，变量重命名：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf69cbrkjpNq0kt4obazicQSqfibBics8x9Ir4ibUx9xfRKtVllggn8QxJ1aA/640?wx_fmt=png
+ 缺失值可视化：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6yZ8VZhBSx8XLQFhYM07rUzicWd01KdRqWaBSp9KGcUJFj3ykXFhRZgw/640?wx_fmt=png
+  删除缺失比例0.5以上的特征
+ 看目标变量分布：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6799rKoCw3jLBE792x0Cd2sWdwDu9abyOElzMkrAIZbf0uMGkfSuwNA/640?wx_fmt=png
+ 1是生存，0是死亡。
+ 接下来把变量分成分类变量与连续变量，先单变量可视化。
+其中 name:
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6icWADdosZjyFkiawsh0oceesa7A8VCJeTZnxpauX8Mvj3YlNsib2JOhEQ/640?wx_fmt=png
+ ticket_info:<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf646sdAsBwzQXzGgho7gBY7UTzLtNnbxjau6DFDx4icfnxpONLzIOkfEw/640?wx_fmt=png
+ 有大神说这可以特征衍生，我在这里就不做了，直接删除。
+ brothers_sisters 是兄弟姐妹的数量：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6XvAo8YLlKxNfA6PkVJhiaAueH0DHq0yAoXVXiaA2J4ic3oGRRc4hgqqYg/640?wx_fmt=png
+ parents_children 是父母子女的数量：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6QEQpZronnLuN2xgCsjdCIYFqcJDEibLUFX2LL0W1Ubibsiac21sjYC3LA/640?wx_fmt=png
+ 大神也说可以衍生，但是我看到的水平分布严重不平衡，我在这里就简单的合并一下，水平2以上的，合并为2+。
+ 单分类变量处理好后，我们看分类变量与目标变量的关系。可视化：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6uMo78g2QlTibpQKXIujBeW9pHUibDCWK4v9qullNibodUbrMAibxDN9Frw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6retiakaw6lSVyZGvBSZCWNfic3Iz0ru41oQs5SxYEPlcoiaT44gdb8zGA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6mQZRLVbe5mTOfRjsHhwbWFib6yHNdxUTxbkdCYgoMty8Sf6UyIbmBDw/640?wx_fmt=png
+ 敏锐的人应该发现：
+一等乘客、女性、兄弟姐妹少、父母子女多的人，生存概率较大，至于港口，C港口的存活大，为什么呢？现在不知道。
+ 再看连续变量与目标变量之间的关系，可视化：<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf67E6Ej9S806WIPzxtVrKFeClQOLBNG97oaecwq0NhVYmzCiaEQBCNwsg/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6D2EImgHyRtqBh8m6tFLtAUdYURdsRjICI7qK4IgQxcEk71xwW3SNicA/640?wx_fmt=png
+年龄和船价是有异常的，我们作了1个简单处理，age 65以上的作为65，船家150以上的作为150。我们发现年龄特别小的人，0岁左右，生存概率大；船价特别高的人，基本都生存了。
+好吧，孩子是希望，富翁是贵族，至于其他，也许是rose，也许是jack呢。
+  https://mmbiz.qpic.cn/mmbiz_jpg/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6BcrSFV78gumr0AscE1yAM9P2Xqv17KicRqbFMX2UGyek1ib9AOX8uOiaw/640?wx_fmt=jpeg
+ 好，保存文件，下面补缺。
+以前我批量补缺一般连续变量随机抽样，分类变量用众数，最近学到了一个建模法补缺，很高逼格呀。但是建模法补缺限制挺多，这里我们只选择了重要变量进行建模法补缺。什么是重要变量，下面告诉你。先是原先的补缺方法：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6Vhibx1UfL5ib4uiaicgciauJbJl9SkDJn0IskbrupWeaYlC9gUKeYhKBjCQ/640?wx_fmt=png
+ 补缺后，连续变量标准话，分类变量哑变量，怎么操作请看我之前的文章。
+ 预览：
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6PpC2XDhwgeahgNqS1iadPBgYdpNs2ZgzEibbVIgrVM3XDxPUVV1FzO7A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6YibcrRfibvBJgq3VXziazPgvQsqOKmy9WicczvokrGwN4CJstNbGZvE1KQ/640?wx_fmt=png
+ 在我看来，重要变量就是我们用随机森林重要性、gbdt重要性删选出的变量。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6Z8PKcydldvCd592Sc3DTyEgG2jzl7WGjujCtOvw6lHw4kvjQibUNcrQ/640?wx_fmt=png
+随机森林重要性中，明显的age、price、sex特别重要
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6UGNpWftcXyibCBia9b2QP6VjiaTsI3YNAY2zxGe6SsIqu6HXRpJ1FVtZA/640?wx_fmt=png
+ GBDT中，price、age特别重要
+ 好，我们选择了最重要的变量col_top 和 相对较重要的变量feature_selection
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf62HMAcfayZGEPsnzAolYy1n3I1VhhOtYlQetnVgkHKBgORhxoNe1RSQ/640?wx_fmt=png
+ 返回前面对
+col_top 进行 随机森林回归建模法补缺。
+ 补缺后，重复上面的数据处理过程，保存文件和变量。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6XqCcyACtp6ceQzaknN5vcbAPoZWa90NXLzCxAAhYaVlDhzWN2fdCaA/640?wx_fmt=png
+ 下面我们开始建模。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6DY9Nms2KicW7U9GTCT56KBJJlXMYJmZHSHMuuNib5zOXchS1tbWqLwlA/640?wx_fmt=png
+ 逻辑回归对共线性、显著性较为敏感，所以我们先共线性筛选变量。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6bZ06KY13ljciazUicLjlYmeicn0EXJAKwpZBxl0riaT7zWkWYXHcrPV85A/640?wx_fmt=png
+有vif是无穷大的，逐个筛选。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6Ba3yRcxicJ5tpVGuIQDbPv6cbKa3wwnERb5x8EKhpUqmTS699Piaicicbg/640?wx_fmt=png
+vif到10以下，我们就暂且不筛了，然后是显著性筛选，最后汇总：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf671AEnEnBhzSZyvkV5PLcou4P0y4VUlShaUiaRs5fMdcsTo4vrfHUz8w/640?wx_fmt=png
+这几个变量都较为显著，权重也较为显著。下面我们再判断下相关性：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6IbteuJriau7hgicPpP8JsxxiajcFp1NYIcWibicmN8RacTRfQ7Wqiceovufw/640?wx_fmt=png
+brothers_sisters_0和brothers_sisters_1十分相关，两个可以删除1个。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6uGIIVfcicO6daAjhZ0a3tgOf5NGHIwuxHRvibCibl5gvsTj6htQibCMsAA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6BAAic2031ia4ic4aibZk0JnmdeSdht2I65az0H5CiaIr7iblibXG0Atcsp57w/640?wx_fmt=png
+ 然后上学习曲线，判断是否过拟合：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6QOZJ2bemZOP2YficB3uTlmeCPicRlliab1bMxteewiceHzs3KX7a6iaibUjw/640?wx_fmt=png
+ 发现还可以。再看ROC和KS
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6rDWpeZHCXrub4nyFPpUpSXYUyAao7Lo8v5x9cyvFKhMAF1c1bTOclg/640?wx_fmt=png
+ 下面介绍一个模型融合之bagging.
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6hibxlDtshmy0O9pefczRVD2ibL5NfibmfbT8kjCBBH8Q63N5n8ZkBmuUg/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6ictGK1iaib4rdSBdbkxlpvYUkKlBibxQ1hfNH20nXVDMCg8w9833RcoA5A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6dTHtBqe7FpBe6UJAYJX7UqeZm5nh08pDVgKATAnZyc9EaOjUtEa5vg/640?wx_fmt=png
+ 觉得没显著变化。
+ 然后我又试验了随机森林rfc、GBDT、Xgbt、vc1和vc2，得出的模型效果如下，score是Kaggle给的分数。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf6eDTo5CSIYN3UnsdgZOfBDFuiatiaXjTNjMQG5BLGhwbkh7bYP917SYYA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjriaezZqXQic4iboGAmuxNAWf68Wrpp218vibZc9yMszibqY0hWV3QTap0GnTJOhicUU2GhicYA4f60Q8YUA/640?wx_fmt=png
+ 然后我把预测结果分别提交：

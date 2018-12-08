@@ -1,0 +1,936 @@
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;">投稿请加小编微信：tspython，备注投稿</strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;"></strong>小编期待你的原创文章~让你的才华公之于众哦~
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);">学习Python<span style="font-size: 14px;letter-spacing: 1px;"><strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;">请加小编微信：tspython，小编拉你进学习群~</strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><span style="font-size: 14px;letter-spacing: 1px;"><strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;"><br  /></strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><span style="font-size: 14px;letter-spacing: 1px;"><strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;"></strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><span style="font-size: 14px;letter-spacing: 1px;"><strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;"></strong>
+
+<strong style="line-height: 1.6;color: rgb(255, 0, 0);">0.Python从零开始系列连载：</strong>
+
+Python从零开始系列连载（1）——安装环境
+
+Python从零开始系列连载（2）——jupyter的常用操作
+
+Python从零开始系列连载（3）——Python的基本数据类型（上）
+
+Python从零开始系列连载（4）——Python的基本数据类型（下）
+
+Python从零开始系列连载（5）——Python的基本运算和表达式（上）
+
+Python从零开始系列连载（6）——Python的基本运算和表达式（下）
+
+Python从零开始系列连载（7）——Python程序的基本控制流程（上）
+
+Python从零开始系列连载（8）——Python程序的基本控制流程（下）
+
+Python从零开始系列连载（9）——Python特色数据类型（列表）（上）
+
+Python从零开始系列连载（10）——Python特色数据类型（列表）（下）
+
+Python从零开始系列连载（11）——Python特色数据类型（元组）（上）
+
+Python从零开始系列连载（12）——Python特色数据类型（元组）（下）
+
+Python从零开始系列连载（13）——Python特色数据类型（字典）（上）
+
+Python从零开始系列连载（14）——Python特色数据类型（字典）（下）
+
+Python从零开始系列连载（15）——Python特色数据类型（集合）（上）
+
+Python从零开始系列连载（16）——Python特色数据类型（集合）（下）
+
+Python从零开始系列连载（17）——Python特色数据类型（函数）（上）
+
+Python从零开始系列连载（18）——Python特色数据类型（函数）（中）
+
+Python从零开始系列连载（19）——Python特色数据类型（函数）（下）
+
+Python从零开始系列连载（20）——Python文件操作（上）
+
+Python从零开始系列连载（21）——Python文件操作（中）
+
+Python从零开始系列连载（22）——Python文件操作（下）
+
+Python从零开始系列连载（23）——Python异常处理
+
+Python从零开始系列连载（24）——Python的time模块简单使用
+
+Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））
+
+Python进阶系列连载（4）——迭代器
+
+Python进阶系列连载（5）——生成器（上）
+
+Python进阶系列连载（6）——生成器（中）
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485159&amp;idx=2&amp;sn=71bba01ef55f1f970776d2481f817258&amp;chksm=ec5ed99adb29508c7fb716be95dc9ddc5414714a73d7adc636863a447491aa2c5624d1daf87a&amp;scene=21#wechat_redirect" target="_blank"></a><br  />
+
+</span></a><span style="color: rgb(255, 0, 0);font-size: 14px;letter-spacing: 1px;"><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485312&amp;idx=2&amp;sn=c15abf0e382d8dd20dd0e220e2f795d2&amp;chksm=ec5ed8fddb2951eb9e4cb52c4edae991b89431d0ba813ef4bae72ab1c9bcc7806cc2a807e7b8&amp;scene=21#wechat_redirect" target="_blank">Python进阶系列连载（8）——闭包（上）</a>
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485480&amp;idx=2&amp;sn=fcee99aeb611502c3229ddb339b3a7e1&amp;chksm=ec5ed755db295e43651f590f85737496149fd4e810861bcac13b4ce5fb8b1c31be7207dacdca&amp;scene=21#wechat_redirect" target="_blank">Python数据结构与算法刷题（1）——害死人不偿命的（3n+1）猜想</a>
+
+<strong style="line-height: 1.6;color: rgb(255, 0, 0);">3. Python网络爬虫：</strong>
+
+使用Python抓取婚恋网用户数据并用决策树生成自己择偶观
+
+Python实现网络爬虫下载天涯论坛帖子
+
+自娱自乐写爬虫 世纪佳缘篇
+
+Python网络爬虫 新浪博客篇
+
+Python爬取github数据
+
+识别山寨不再难！快用Python爬评论，无需再等315
+
+烂片休想糊弄我，Python代理爬虫豆瓣电影数据手到擒来
+
+Python爬虫实战一之爬取糗事百科段子
+
+Python爬虫实战二之爬取百度贴吧帖子
+
+Python爬虫实战三之实现山东大学无线网络掉线自动重连
+
+Python爬虫实战四之抓取淘宝MM照片
+
+Python爬虫实战五之模拟登录淘宝并获取所有订单
+
+Python爬虫实战六之抓取爱问知识人问题并保存至数据库
+
+【Python爬虫实战】为啥学Python，BOSS告诉你
+
+详细步骤+剖码，实战拆解Python爬取智联招聘职位
+
+Python爬取百度图片及py文件转换exe
+
+Python爬虫之九派新闻
+
+建立爬虫代理ip池
+
+Python爬取链家北京二手房数据
+
+Python抓取淘宝女装信息（一）
+
+Python抓取淘宝女装信息（二）
+
+Python网络爬虫入门（二）——百度贴吧
+
+为了找一份Python实习，我用爬虫收集数据
+
+Python数据采集和分析告诉你为何上海的二手房你都买不起！（一）
+
+腾讯动漫爬虫与动态随机加载反爬破解技术实战
+
+免登录新浪微博爬虫系列之第一篇 单博主微博及评论数据
+
+Requests 库学习笔记
+
+BeautifulSoup 库学习笔记
+
+PyQuery 库学习笔记
+
+Selenium 库学习笔记
+
+Selenium 爬取淘宝实战练习
+
+猫眼电影TOP100爬取练习
+
+今日头条街拍爬取练习
+
+使用Tornado+Redis维护ADSL拨号服务器代理池
+
+告诉你中国人最爱喝什么绿茶
+
+免登录新浪微博爬虫系列之第二篇 获取关注用户数据，实现递增爬取
+
+Python3中BeautifulSoup的使用方法
+
+Python3中PyQuery的使用方法
+
+Python3中正则表达式使用方法
+
+利用新接口抓取微信公众号的所有文章
+
+利用虚拟机练手Scrapy分布式爬虫！
+
+Python爬淘宝——300W淘宝文胸说明了什么
+
+Scrapy 爬取伯乐在线实战
+
+爬取 Stackoverflow 100 万条问答并简单分析
+
+Python3中PyMongo的用法
+
+Selenium 抓取淘宝商品
+
+Scrapy对接Selenium
+
+Scrapy对接Splash
+
+爬下几万条数据，聊聊淘宝上的飞机杯
+
+40行代码+奇技淫巧搞定专属电脑壁纸库【附壁纸】
+
+fake-useragent库：值得花2分钟学习的库
+
+HTTP基本原理
+
+爬虫神器PyQuery的使用方法
+
+学爬虫利器xpath，看这一篇就够了！
+
+网络爬虫之Splash负载均衡配置
+
+Python爬虫之微博好友圈
+
+Python爬虫之微打赏爬虫
+
+关于分布式爬虫思考
+
+Python爬虫系列-途家
+
+爬取老树画画全部微博数据：三千诗与画
+
+用Python爬虫爬取去哪儿4500个热门景点，看看国庆不能去哪儿
+
+如何科学地蹭热点：用python爬虫获取热门微博评论并进行情感分析
+
+像开始写小说一样开始编程：用python爬虫整理简书作者文章生成pdf
+
+Python小白如何使用爬虫自动抓取《三生三世十里桃花》豆瓣电影短评
+
+爬取IP代理偷偷给文章刷阅读量
+
+简书推荐作者风云榜（爬取简书app数据）
+
+374名10万+知乎大V（一）：相互关注情况
+
+爬取11088个知乎专栏，打破发现壁垒
+
+关于Python爬虫代理，看这篇就够了
+
+ScrapyRedis源码解析
+
+爬取京东iphone8的异步加载评论看看为啥这么多人买
+
+Python爬虫scrapy入门看这篇就够了
+
+Python程序员如何获取社区用户信息，发现小姐姐
+
+Python爬取起点中文网小说排行榜信息（上海线下培训作业）
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485152&amp;idx=1&amp;sn=4f05b920d100833b4a8b4e9d03a620c0&amp;chksm=ec5ed99ddb29508b7f814a53bf1984c0eea60662f502aafb4071aaae78e86fff3467b48a8468&amp;scene=21#wechat_redirect" target="_blank">最简单的爬虫，连我都会了！python爬取招聘信息</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485182&amp;idx=2&amp;sn=ca18240651762673302879fa18b3e21e&amp;chksm=ec5ed983db295095f6addb6cde1cf8ed66242b4abfc1f6166e2def9c44fddbea244da6765c14&amp;scene=21#wechat_redirect" target="_blank">什么？你了解二手车市场？（含爬虫代码）</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485121&amp;idx=1&amp;sn=5ce34414e80d53f0a1bef101998f801b&amp;chksm=ec5ed9bcdb2950aa0ea37b326d55bf0dfc0d894d033d660b34152aadc21b1b3491ebfde0c946&amp;scene=21#wechat_redirect" target="_blank">【用户案例】深度剖析拉勾网，小白也来玩数据</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485132&amp;idx=1&amp;sn=1d2efa0663cf2c228decece2cb128efd&amp;chksm=ec5ed9b1db2950a734b3cddcc27886b22e271875c0221a71be92d3bc4147032a0090563b5c95&amp;scene=21#wechat_redirect" target="_blank">【含源码+过程】深入剖析拉勾网，小白也来玩数据（二）</a>
+
+【含代码】Python爬虫实战：爬取全站小说排行榜
+
+Python动态网页爬虫技术
+
+跟繁琐的命令行说拜拜！Gerapy分布式爬虫管理框架来袭！
+
+Python网络爬虫的同步和异步
+
+爬虫入门系列（一）：快速理解HTTP协议
+
+爬虫入门系列（二）：优雅的HTTP库requests
+
+爬虫入门系列（三）：用 requests 构建知乎 API
+
+爬虫入门系列（四）：HTML文本解析库BeautifulSoup
+
+爬虫入门系列（五）：正则表达式完全指南（上）
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485251&amp;idx=1&amp;sn=30a6adfb191bfb774c533dcd6c40d098&amp;chksm=ec5ed83edb295128067394c1b2b32259c188da41d1c6cf2b748022abc5a6a61985d99422ad34&amp;scene=21#wechat_redirect" target="_blank">【新年快乐，跨年文章】Python+百度API 画出美美哒热力地图（代码+数据）</a><br  />
+
+8.7万条豆瓣电影数据分析
+
+Python数据挖掘实践—KNN分类
+
+文本分析之网络关系图
+
+Python数据分析：双色球的深度学习预测
+
+数据可视化的种类与应用
+
+数据城堡参赛代码实战篇（一）---手把手教你使用pandas
+
+十分钟入门pandas（上）【解读pandas官方文档】
+
+十分钟入门pandas（中）【解读pandas官方文档】
+
+十分钟入门pandas（下）【解读pandas官方文档】
+
+使用 Python 制作 疾风剑豪-亚索 词云图
+
+Python入门之生成海贼王云图
+
+Python词云图教程——进击的巨人
+
+Python数据采集和分析告诉你为何上海的二手房你都买不起！（二）
+
+入门numpy（上）【解读numpy官方文档】
+
+入门numpy（25%-50%）【解读numpy官方文档】
+
+入门numpy（50%-65%）【解读numpy官方文档】
+
+入门numpy（65%-80%）【解读numpy官方文档】
+
+入门numpy（80%-100%）【解读numpy官方文档】
+
+pandas可视化（1）【官方文档解读】--基础绘图
+
+pandas可视化（2）【官方文档解读】-- 条形图、直方图
+
+pandas可视化（3）【官方文档解读】-- 箱线图
+
+pandas可视化（4）【官方文档解读】-- 区域图、散点图
+
+pandas可视化（5）【官方文档解读】-- Hexagonal Bin Plot（我翻译为六角形箱体图）、饼图
+
+pandas可视化（5）【官方文档解读】-- 有缺失值时候的绘图&amp;绘图工具
+
+Python操作Mysql数据库入门——查看和增加记录
+
+Python操作Mysql数据库入门——数据导入pandas（数据分析准备）
+
+pandas数据保存至Mysql数据库
+
+如何进行随机抽样？
+
+用户画像之标签权重算法
+
+Python可视化——饼图【学习官方文档】
+
+Python数据分析之基情的择天记
+
+大学生恋爱情况分析
+
+Lengding Club——构建贷款违约预测模型
+
+爬取张佳玮138w+知乎关注者：数据可视化
+
+千里挑一的我乎妹子大V排行榜
+
+我乎《窦唯目前在干什么》引发的热浪后分析
+
+Python VS R：双语数据分析——上海租房数据全解析
+
+数据分析视角：咪蒙凭什么写出那么火的文章
+
+数据分析：震惊！双十一80%的商品都不是最低价！
+
+大数据分析：全面分析18亿票房《羞羞的铁拳》传播套路
+
+Python数据分析之简书粉丝敌我差距
+
+七周：第一周数据分析师思维学习笔记
+
+七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）
+
+七周：第三周Excel学习
+
+七周：第四周数据可视化学习笔记
+
+七周：第五周MySQL学习笔记
+
+七周：第六周统计学（基础）笔记
+
+七周：第七周python学习笔记（1）——python基础
+
+Python共享单车数据分析
+
+高逼格可视化：利用Python调取地图打击犯罪
+
+利用Python在地图上显示犯罪和密度图
+
+从零开始学Python数据分析【1】--数据类型及结构
+
+从零开始学Python数据分析【2】-- 数值计算及正则表达式
+
+从零开始学Python数据分析【3】-- 控制流与自定义函数
+
+从零开始学Python数据分析【4】-- numpy
+
+从零开始学Python数据分析【5】-- pandas(序列部分)
+
+从零开始学Python数据分析【6】-- pandas(数据框部分01)
+
+从零开始学Python数据分析【7】-- pandas(数据框部分02)
+
+从零开始学Python数据分析【8】-- pandas(数据框部分03)
+
+从零开始学Python数据分析【9】-- pandas(数据框部分04)
+
+从零开始学Python数据分析【10】-- matplotlib(条形图)
+
+从零开始学Python数据分析【11】-- matplotlib(饼图)
+
+从零开始学Python数据分析【12】-- matplotlib(箱线图)
+
+从零开始学Python数据分析【13】-- matplotlib(直方图)
+
+从零开始学Python数据分析【14】-- matplotlib(折线图)
+
+从零开始学Python数据分析【15】-- matplotlib(散点图)
+
+从零开始学Python数据分析【16】-- matplotlib(雷达图)
+
+从零开始学Python数据分析【17】-- matplotlib(面积图)
+
+从零开始学Python数据分析【18】-- matplotlib(热力图)
+
+从零开始学Python数据分析【19】-- matplotlib(树地图)
+
+从零开始学Python数据分析【20】--线性回归（理论部分）
+
+从零开始学Python数据分析【21】--线性回归（实战部分）
+
+从零开始学Python数据分析【22】--线性回归诊断（第一部分）
+
+从零开始学Python数据分析【23】--线性回归诊断（第二部分）
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485116&amp;idx=2&amp;sn=d61f4026a5f6fca8707d1acecd64fa12&amp;chksm=ec5ed9c1db2950d751f4a08e94114e37d33080972ecbd0f92e38d08f8b078c03fc914a46c655&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【24】--岭回归及LASSO回归（理论部分）</a><br  />
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485126&amp;idx=2&amp;sn=17b03d12a1d93591d544060a89a22478&amp;chksm=ec5ed9bbdb2950ad098e128a35c0a444262d7eae1916ba5df5fb24347ab7f623bde591e0ac54&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【25】--岭回归及LASSO回归（实战部分）</a></p><p style="text-align: justify;line-height: 1.5em;"><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485138&amp;idx=2&amp;sn=9a07922d6122a6db5df8bed88bc707ac&amp;chksm=ec5ed9afdb2950b9f759b42ac5217ba16057056f6d550e32dc458c31d135ef2b5a4c4b8de3e5&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【26】--Logistic回归（理论部分）</a><br  /></p><p style="text-align: justify;line-height: 1.5em;"><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485152&amp;idx=2&amp;sn=0efb6445450f775f652f86a10e631f87&amp;chksm=ec5ed99ddb29508b96406fcdee081a70913adde57bffa027f07908964ba0913110e58a73d803&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【27】--Logistic回归（实战部分）</a><br  /></p><p style="text-align: justify;line-height: 1.5em;"><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485176&amp;idx=2&amp;sn=8ae84e232ccf17f19ceae501361ca22e&amp;chksm=ec5ed985db295093e9c53daccffc1178e21cc2772ee6d87246692eb1c4fbafd941e3de685b3f&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【28】-- K均值聚类（理论部分）</a></p><p><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485188&amp;idx=2&amp;sn=5fa307575340dbf178695e1db748d74a&amp;chksm=ec5ed879db29516fd3e560289843b8669e363d71eb1ecc9ac78facd7a942f1d0c3d0ee2e12de&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【29】-- K均值聚类（实战部分）</a></p><p style="white-space: normal;text-align: justify;line-height: 1.5em;"><span style="font-size: 14px;letter-spacing: 1px;"><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485116&amp;idx=1&amp;sn=5cb754917218d97e883d5b7ae3c0df3a&amp;chksm=ec5ed9c1db2950d71d7857b1f798806b13a073b600734c1c59a9f738b1422b1e6f470b2e5f60&amp;scene=21#wechat_redirect" target="_blank">Python数据分析系列（1）——品味葡萄酒</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485159&amp;idx=1&amp;sn=62f7c819957b916ed23c671d0cbfbec8&amp;chksm=ec5ed99adb29508c72d53ef96dc6b43f8e02f788539d80f74fe6282dce8c317d54c51cb73bde&amp;scene=21#wechat_redirect" target="_blank">Python数据分析系列（2）——美国纽约皇后区空气质量分析</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485126&amp;idx=1&amp;sn=3589d1341ebf735dc153ebd7f5db069d&amp;chksm=ec5ed9bbdb2950add65c5dfaf43c36f4b6872a4cb8f371cb5c2d8855c2df6b74b39a0b353179&amp;scene=21#wechat_redirect" target="_blank">西游记里的社交网络分析与基于网络网络分析的最小社区算法及网络可视化</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485138&amp;idx=1&amp;sn=46e1608cd74defa6a30adea9bcc38114&amp;chksm=ec5ed9afdb2950b90b1ff2f96317c0d626f0bb295863da25a535585546b423b4095245ceb5eb&amp;scene=21#wechat_redirect" target="_blank">从天龙八部小说衍生出的google语义分析与gephi社交网络</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485272&amp;idx=1&amp;sn=dedccbf334241c41045a2d81b30d858f&amp;chksm=ec5ed825db295133977a2c58b49d52796a522135170bbf1db2fb2a6654f466a56c3126f762e9&amp;scene=21#wechat_redirect" target="_blank">Python与Echarts的结合——pyecharts</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485355&amp;idx=1&amp;sn=683aa76ab99ed7321ea01c149b83aeb7&amp;chksm=ec5ed8d6db2951c0da03d0da9350f3eb7f4f8155ac216be4553b356e96380b9c67cf0fbea4cb&amp;scene=21#wechat_redirect" target="_blank">Python三大评分卡之行为评分卡</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485408&amp;idx=1&amp;sn=53366394c2d1d7cd5fc226b62fad066a&amp;chksm=ec5ed89ddb29518b19e059432191d4276e6041b1cc9ba5d0005528b5a08b03e20902fe8591dc&amp;scene=21#wechat_redirect" target="_blank">带你走进图数据库——Neo4j的大门</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485422&amp;idx=1&amp;sn=49f0e58f603180dd0bb949a041416690&amp;chksm=ec5ed893db29518560e3221058306e16053da7537a3d6c94a4e4c8ba9864bdeb4cca22147904&amp;scene=21#wechat_redirect" target="_blank">从数据角度探究《前任3》为什么这么火爆</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485437&amp;idx=1&amp;sn=a8374040e77638fe3abbb6e3f0905d55&amp;chksm=ec5ed880db295196536725302613bfb819382370feec9e6dc8baf6275f2a28dcbe0f6548ecb6&amp;scene=21#wechat_redirect" target="_blank">Python交互式数据分析报告框架~Dash介绍（翻译整理）</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485442&amp;idx=1&amp;sn=a0801c7a2415c9ea1864b7d9140a060b&amp;chksm=ec5ed77fdb295e69b9e2330c26693b9f25c59b7632ac16b9ec485805a2f83bf36da92f675374&amp;scene=21#wechat_redirect" target="_blank">Neo4j与Python结合，实现网页排名算法与最小社区探测</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485475&amp;idx=1&amp;sn=81f5a117335181a9e846b84e20bd921a&amp;chksm=ec5ed75edb295e48538eea0e7c28d4bbbffdd3405784d3019db5f65592424ef4a0fab18f73ab&amp;scene=21#wechat_redirect" target="_blank">Python数据分析与挖掘所需的Pandas常用知识</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485504&amp;idx=1&amp;sn=476c310a59268572436af33cece44e48&amp;chksm=ec5ed73ddb295e2b8d235b8a5a507029f8778ed093d759c419fc37fe5add102780ef152a78e0&amp;scene=21#wechat_redirect" target="_blank">数据采集分析实战：厦门房地产市场初步分析</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485510&amp;idx=2&amp;sn=29a3809421a0a95d72573dc1e1143e12&amp;chksm=ec5ed73bdb295e2d3ee8c5f053651b2f06bbd36c5e7818fd6aaee7ee03c391f5a5c3fb2840f2&amp;scene=21#wechat_redirect" target="_blank">Python驱动下的neo4j</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485570&amp;idx=2&amp;sn=e085f4cf75d560309db930f7adf0157c&amp;chksm=ec5ed7ffdb295ee91ef22a79ab660a8f7528d50a794fd2384d40b08a95a18d4a44ba253ad079&amp;scene=21#wechat_redirect" target="_blank">用Python为直方图绘制拟合曲线的两种方法</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485570&amp;idx=2&amp;sn=e085f4cf75d560309db930f7adf0157c&amp;chksm=ec5ed7ffdb295ee91ef22a79ab660a8f7528d50a794fd2384d40b08a95a18d4a44ba253ad079&amp;scene=21#wechat_redirect" target="_blank"></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485608&amp;idx=1&amp;sn=8fe2d4a8d4cf6ce27140f143628f35b6&amp;chksm=ec5ed7d5db295ec3b16d91a46c2b79ebd9fce3d8447acb7ccfebca6d47e2381fcfb270f6ce63&amp;scene=21#wechat_redirect" target="_blank">【翻译】用python-pandas作图矩阵</a>
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485614&amp;idx=1&amp;sn=f316be01c3acbd60edb3d669c43794ee&amp;chksm=ec5ed7d3db295ec52ae0c9904ffe7557db2d15b9f8a5715a5add2095be2be2fb4ed4124c015d&amp;scene=21#wechat_redirect" target="_blank">为什么plotly被称为“有史以来最牛逼”可视化神器？</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485617&amp;idx=1&amp;sn=08e71068157fd290a1fc7c66b9b3978d&amp;chksm=ec5ed7ccdb295eda610a2c2cf6a05a006b0cd2df510cba19b3c3fa3a5a49857b4d106bad80b4&amp;scene=21#wechat_redirect" target="_blank">有趣的图形：用Python绘制带饼图的散点图兼论marker的隐藏功能</a><br  />
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485620&amp;idx=1&amp;sn=86bf1a1a66ec3486598e0b7e143cfdd6&amp;chksm=ec5ed7c9db295edfb6e2b89c30dfe884161cba9fc3f54b38afc916f4e1bc4e62c5afeaa1f01a&amp;scene=21#wechat_redirect" target="_blank">有趣！如何用Python-matplotlib绘制双层饼图及环形图？</a><br  />
+
+<br  />
+
+隐马尔科夫模型python实现简单拼音输入法
+
+K近邻算法的Python实现
+
+Python中的线性代数运算
+
+使用scikit-learn进行电影评论情感分类
+
+梯度下降算法的Python实现
+
+使用Python进行线性回归
+
+Python · 神经网络（零）· 简介
+
+第一个机器学习样例
+
+Python量化交易教程——因子选股与回测
+
+k-近邻算法的Python实现
+
+自我代码提升之逻辑回归
+
+自我代码提升之K近邻算法
+
+用户画像之标签聚类
+
+自我代码提升之朴素贝叶斯
+
+基于五种机器算法的信用风险评估
+
+使用scikit-learn进行文本分类
+
+使用scikit-learn实现多类别及多标签分类算法
+
+自我代码提升之决策树
+
+机器学习面试题目总结
+
+Python实现PCA降维
+
+构建信用卡反欺诈预测模型——机器学习
+
+手把手教你用1行代码实现人脸识别 -- Python Face_recognition
+
+sklearn数据标准化
+
+TensorFlow MNIST初级学习
+
+TensorFlow MNIST高级学习
+
+自我代码提升之随机森林
+
+Lending Club 实战--利用Python创建申请评分卡
+
+机器学习预测乳腺肿瘤性质（1）
+
+机器学习预测乳腺肿瘤性质（2）
+
+机器学习预测乳腺肿瘤性质（3）——贝叶斯分类器
+
+机器学习预测乳腺肿瘤性质（4）——神经网络
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485111&amp;idx=1&amp;sn=d2e6dac77e19aa94bbb42e5dd4ea1a61&amp;chksm=ec5ed9cadb2950dc035f958b5dfe0c37f77f16210d7f12c982cf81c7ebed6b2b01fa29d146a2&amp;scene=21#wechat_redirect" target="_blank" style="font-size: 14px;letter-spacing: 1px;text-decoration: none;"><span style="font-size: 14px;letter-spacing: 1px;">机器学习预测乳腺肿瘤性质（5）
+
+机器学习预测乳腺肿瘤性质（6）
+
+机器学习预测乳腺肿瘤性质（7）
+
+机器学习算法原理系列详解（含代码） --&nbsp;机器学习基础与实践（一）--数据清洗
+
+机器学习算法原理系列详解（含代码）-- 机器学习基础与实践（二）-- 数据转换
+
+机器学习算法原理系列详解（含代码）-- 机器学习基础与实践（三）-- 数据降维之PCA
+
+首战Kaggle之实战教学
+
+Python机器学习实战 —— KNN算法详解
+
+梯度下降法及其Python实现
+
+机器学习实战之朴素贝叶斯
+
+机器学习实战之决策树
+
+kaggle比赛--罗斯曼商店销售预测，xgboost回归
+
+不会机器学习，你照样可以预测用户流失！
+
+50行代码实现人脸检测
+
+TensorFlow RNN Cell源码解析
+
+基于face_recognition实现人脸识别
+
+【实战案例+代码】梯度下降法求解线性回归的python实现及其结果可视化（一）
+
+梯度【实战案例+代码】下降法求解线性回归的python实现及其结果可视化（二）
+
+梯度下降法求解logisitic回归及其python代码实现
+
+Python机器学习随笔之K-Means聚类的实现
+
+Python机器学习随笔之非线性分类的logistic回归拟合及正则化
+
+【实战+代码+数据】Python机器学习随笔之logistic回归识别手写数字
+
+<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485627&amp;idx=1&amp;sn=27cef019a4d59cb98752653a7b98893b&amp;chksm=ec5ed7c6db295ed02977514af946595062175a4ad06e72ee8c9ccbf919eb9b4482317c8c4b44&amp;scene=21#wechat_redirect" target="_blank"></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485611&amp;idx=1&amp;sn=daa070b996228ffd253c3b7a4b91f917&amp;chksm=ec5ed7d6db295ec0e5706bb07599fe46e1a14ae0e83606af331b84767a3d31067de61c81a71b&amp;scene=21#wechat_redirect" target="_blank"></a>
+
+NLP从入门到喜欢之jieba分词器
+
+挑战年薪百万-自然语言处理入门一
+
+NLP之淘宝商品评论情感分析
+
+用Python对鹿晗、关晓彤微博进行情感分析
+
+【RNG vs SKT】弹幕的自然语言的初步分析
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485239&amp;idx=1&amp;sn=6bfbadb516f9e5c8834f9b1859ce24e2&amp;chksm=ec5ed84adb29515cb8c66f64cc0dfeb6646eadfa4c7d5e2b4c3458bf4eaf8900cd18bbcba5cb&amp;scene=21#wechat_redirect" target="_blank" style="font-size: 14px;letter-spacing: 1px;text-decoration: none;"><span style="font-size: 14px;letter-spacing: 1px;">【万字干货】以虎嗅网4W+文章的文本挖掘为例，展现数据分析的一整套流程
+
+Python面向对象编程从零开始（1）——从没对象到有对象
+
+Python面向对象编程从零开始（2）—— 与对象相互了解
+
+Python面向对象编程从零开始（3）—— 小姐姐请客上篇
+
+Python面向对象编程从零开始（4）—— 小姐姐请客下篇
+
+Python面向对象编程从零开始（5）—— 小姐姐要买房
+
+Django之简化版Pinterest
+
+手把手教你用Django搭建博客（一）
+
+手把手教你用Django搭建博客（二）
+
+手把手教你用Django搭建博客（三）
+
+手把手教你用Django搭建博客（四）
+
+如何七周成为数据分析师
+
+Excel技巧：如何绘制一份优秀的甘特图（项目管理）
+
+数据分析：常见的Excel函数全部涵盖在这里了
+
+一篇文章读懂活跃数据
+
+数据分析：Excel技巧大揭秘
+
+有方向，不迷茫！老司机带队狂飙两小时，助你走上互联网数据分析之路
+
+Excel技巧：好用到哭的多级菜单
+
+数据分析：手把手教你Excel实战
+
+数据可视化：你想知道的经典图表全在这
+
+数据可视化：教你打造升职加薪的报表
+
+数据可视化：手把手打造BI
+
+深入浅出，用户生命周期的运营
+
+站在十字路口的运营
+
+运营容易常犯的五类错误
+
+运营如何快速构建系统性的知识
+
+只要三句话，炼成商业分析能力
+
+快速掌握麦肯锡的分析思维
+
+如何建立数据分析的思维框架
+
+数据分析师的必读书单
+
+数据可视化入门篇
+
+数据科学家成长指南(上)
+
+数据科学家成长指南(中)
+
+数据科学家成长指南(下)
+
+为什么未来的趋势是全栈运营
+
+从零开始，构建数据化运营体系
+
+写给新人的数据库指南
+
+SQL，从入门到熟练
+
+SQL，从熟练到掌握
+
+运营，有时候就是一句话的事
+
+读懂用户运营体系：用户分层和分群
+
+解锁数据分析的正确姿势：描述统计
+
+这可能是一篇数据化运营的大纲
+
+解锁数据分析的正确姿势：描述统计(2)
+
+运营的增长黑客之道
+
+关于运营、关于产品、关于数据、关于融合
+
+我有一个梦想——成为数据分析师
+
+概率论的入门指南
+
+看完后，别再说自己不懂用户画像了
+
+最用心的运营数据指标解读
+
+读了本文，你就懂了概率分布
+
+数据分析必须懂的假设检验
+
+开始Python的新手教程
+
+开始Python的数据结构
+
+了解和掌握Python的函数
+
+Python的数据分析: numpy和pandas入门
+
+用pandas进行数据分析实战
+
+用Python分析用户消费行为
+
+好的运营，应该有两种思维方式
+
+数据分析的职业规划
+
+七周成为数据分析师课程学习指南
+
+看完这篇文章你还不理解 Python 装饰器，只有一种可能...
+
+理解 Python 迭代对象、迭代器、生成器
+
+Python垃圾回收机制
+
+如何正确理解Python函数是第一类对象（First-Class Object）
+
+Lambda函数与群众演员的共性是...？
+
+一步一步教你认识Python闭包
+
+代码这样写更优雅(Python版)
+
+代码这样写不止于优雅(Python版)
+
+告诉你真实的跳跃表
+
+从递归出发思考Google面试题另一种解法+24点游戏
+
+Python 中 "is" 与 "==" 操作有什么区别？
+
+Python 编码为什么那么蛋疼？
+
+那些年，写 Python 犯过的错误
+
+如何优雅的写好Pythonic代码？
+
+Python干货：表达式 i += x 与 i = i + x 等价吗？
+
+简析 __init__、__new__、__call__ 方法
+
+文件的打开与关闭-IO
+
+如何对数据进行各种排序？
+
+在Python应用中使用MongoDB
+
+Python基础之模块之os模块
+
+Python：动态语言与鸭子类型
+
+关于操作 Python 列表，最常见问答Top10
+
+Python 中，字符串"连接"效率最高的方式是？一定出乎你的意料
+
+Python 高效处理字符串的秘密：字符串 Intern 机制
+
+Python：关于高效使用字典的清单
+
+编程零基础，如何学 Python ？
+
+从两道亦可赛艇的算法题看字典的神奇作用
+
+为什么要学习python进阶的知识
+
+一个“牛逼”的 Python 命令行解析库
+
+Python创建可以打开文件的EXE
+
+优雅的实现打印requestId
+
+用 Python 连接 MySQL 的几种姿势
+
+Python奇技淫巧，看看你知道几个
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485132&amp;idx=2&amp;sn=9ca6c078c244c6fd4f0901cf6726c2a0&amp;chksm=ec5ed9b1db2950a7d9f3d492449131e168e3dabb06b6c8ee5c66da4d5032af5752bdb36e7424&amp;scene=21#wechat_redirect" target="_blank" style="font-size: 14px;letter-spacing: 1px;text-decoration: none;"><span style="font-size: 14px;letter-spacing: 1px;">用 Python 处理 HTML 转义字符的5种方式
+
+利用Python读取外部数据文件
+
+关于正则表达式的5个小贴士
+
+Fibonacci 斐波那契数列的几种写法、时间复杂度对比
+
+小白科普：Python代码是编译执行还是解释执行？
+
+什么时候使用 namedtuple
+
+图解Python变量与赋值
+
+Pycharm中一些不为人知的技巧
+
+Python陷阱：为什么不能用可变对象作为函数的默认参数值
+
+基于王者荣耀的Python3入门文档
+
+基于王者荣耀的Python3入门文档（2）
+
+Python程序员都知道的5个彩蛋
+
+Python知识冲顶大会
+
+这10个题，有 68% 的人答不对
+
+Python爬虫知识点梳理
+
+给Python新手的一道面试题：如何正确读写文件
+
+for循环是怎么工作的
+
+Python类中的方法是如何工作的
+
+如何把自己的开源项目发布到Pypi服务器
+
+Python 2 和 Python 3 主要区别有哪些（一）
+
+耐人寻味的 for...else...语句
+
+《import this》背后的故事
+
+@classmethod与@staticmethod的区别
+
+Pycharm自动导入模块小技巧
+
+深夜好文|装饰器为什么难以理解？
+
+送分题：列表与元组的区别是？
+
+它是Python造物主，一篇文章理解最难懂的概念
+
+浅入深谈：一道Python面试题，让我明白了殊途同归，却开始怀疑自己
+
+【算法趣题】Q01 回文十进制数
+
+【算法趣题】Q02 数列的四则运算
+
+【算法趣题】 Q03 翻牌
+
+会变 "魔术" 的 Python
+
+字典对象的Pythonic用法：上篇
+
+字典对象的pythonic用法：下篇
+
+Python赋值一切对象皆传址
+
+最惹销售反感的十种数据分析师，进来看看有没有你
+
+数据分析师如何面对“我早知道了！”这句质疑
+
+数据分析师如何应付“你行你上啊！”的嘲讽
+
+日报没人看，周报全白干！减少无效报表就该这么干！
+
+从一个小问题洞察挣钱秘籍，却被90%的数据分析师忽略
+
+拒绝鸡汤，我要挣钱！用数据分析找到销售成功背后的真正秘密
+
+思路好，下班早！思路混乱，忙到肝颤！多渠道的分析方法
+
+做一个人见人爱的数据分析师，从让销售满意开始
+
+听了煎饼大妈忽悠，你也推着小车上路以后
+
+不懂经营，做啥分析？理解经营模式的七个步骤
+
+五步构建经营指标，拒绝分析不接地气
+
+你是布谷鸟型数据分析师吗？停止整点报时，从理解业务开始
+
+边浪边学习的秘籍！不看又亏一个假期
+
+那些河南美食背后，深藏的经营道理
+
+文武双全！为什么数据分析师需要既懂业务又懂技术
+
+视频下载神器you-get库（一个可以看片的Python库）
+
+Python程序生成平均脸
+
+黑科技，老司机放码开车用Python等QQ邮箱发邮件
+
+左手选R，右手选Python，纠结的我该如何破？
+
+Python实现成语接龙
+
+Python itchat+机器人web api实现个人微信机器
+
+我爬了某宝上4000+网店只为了
+
+Flask之微博单用户画像生成器
+
+获取知乎问题答案并转换为MarkDown文件
+
+Python：秒抢脚本（火车票、秒杀、红包）
+
+Python尝试破解wifi无线密码
+
+Python之二维码换肤
+
+如何使用Python来写游戏——超级玛丽第一关
+
+Python：numba 的基本应用
+
+爬虫界的一股清流——用安卓做一个朋友圈屏蔽检测器
+
+Mac上提升python运算速度-PyPy初体验
+
+Python之区块链简单记账本实现
+
+一道 Google 的面试题
+
+使用Python操作机器人聊天
+
+一道为了撸串的笔试题
+
+Kaggle数据集分享第一篇
+
+如何在电脑上多开微信？（windows）
+
+Python可以做哪些好玩的事 之 自动刷票
+
+Python成为高收入国家增加最快的语言
+
+如何‘熬’过大厂的‘N’轮面试
+
+深入浅出区块链（1）介绍
+
+深入浅出区块链（2）区块链历史
+
+深入浅出区块链（3）区块链历史
+
+Python3 ZIP文件密码破解
+
+40行代码搞定女友日常问候微信机器人
+
+手把手教你用7行代码实现微信聊天机器人 -- Python wxpy
+
+迟到的情人节礼物：做一个与她微信聊天的词云吧
+
+</span></a><a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485402&amp;idx=1&amp;sn=b1101d86332c5d13635b0dba91db3ecc&amp;chksm=ec5ed8a7db2951b10a4220e2f2b7e7ab708e8acd8163406e424991c143bc8b9aadbc25841898&amp;scene=21#wechat_redirect" target="_blank" style="font-size: 14px;letter-spacing: 1px;text-decoration: none;"><span style="font-size: 14px;letter-spacing: 1px;">手把手｜100行Python代码自动抢火车票！（包教包会）
+
+用Python&amp;Tesseract识别图片文字
+
+[Python程序]利用微信企业号发送报警信息
+
+Python调用百度接口，实现ocr识别
+
+手把手|教你用Python换个姿势，送狗年祝福语
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;">投稿请加小编微信：tspython，备注投稿</strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;"></strong>小编期待你的原创文章~让你的才华公之于众哦~
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);">学习Python<span style="font-size: 14px;letter-spacing: 1px;"><strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);"><strong style="line-height: 25.6px;">请加小编微信：tspython，小编拉你进学习群~</strong>
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);">
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);">
+
+<strong style="line-height: 1.6;"><span style="font-size: 14px;letter-spacing: 1px;color: rgb(255, 0, 0);">
+
+<strong><img class="" data-ratio="0.06521739130434782" data-src="http://mmbiz.qpic.cn/mmbiz/ziadDDQxbCJFDq1MaoNclaJOpElczibia6UXtxCadkIvdKUiaLVkuVnhkx32A3JCM6I4howpH175pChoFaXn9gKSicA/640.png?" data-w="690" style="font-family: 微软雅黑;font-size: 15.5556px;text-align: center;line-height: 27.7778px;display: inline;box-sizing: border-box !important;overflow-wrap: break-word !important;visibility: visible !important;width: auto !important;height: auto !important;" title="叶子分割线" width="auto"  /></strong>
+

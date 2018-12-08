@@ -1,0 +1,32 @@
+b'\xe6\xa2\xaf\xe5\xba\xa6\xe4\xb8\x8b\xe9\x99\x8d\xe7\xae\x97\xe6\xb3\x95\xe7\x9a\x84Python\xe5\xae\x9e\xe7\x8e\xb0'博客：http://yphuang.github.io/
+ 我们在求解最优化问题的时候，需要最小化或最大化某一个目标函数。如线性回归中，就需要最小化残差平方和。
+某一向量的平方和函数可定义如下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0PrIZyJoLPDxVnnEOqGyricERmAyernkaM8ElPyxyEwzEsa9efkOUKXw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0FQRVPdy6L3Kwqn3C7j9L2LEgRibjvbRaFaoSwm7stQOg03CIgcoK61g/0?wx_fmt=png
+其中，θ为梯度向量grad
+f(P0)与ll方向上的单位向量l0的夹角。
+从而，当f可微时，ff在P0的梯度方向是ff的值增长最快的方向。
+由于梯度方向是使得函数值下降最快的方向,从而快速求解到目标函数最小值的一种途径就是：
+随机选择一个起点，计算梯度；
+朝着负梯度（即使得该点目标函数值下降最快的方向）移动一小步；
+重新计算新的位置的梯度，继续朝梯度方向移动一小步
+如此循环，直到目标函数值的变化达到某一阈值或者最大迭代次数。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx08e9s4jAfUP3xUFDnKoDuAaB3M87eCKdbrneHbOANq7zPqGnhMeFbTw/0?wx_fmt=png
+以求解目标函数最小化为例，梯度下降算法可能存在一下几种情况：
+当目标函数存在全局最小值时，这种方法可以快速的找到最优解；
+当目标函数存在多个局部最小值时，可能会陷入局部最优解。因此需要从多个随机的起点开始解的搜索。
+当目标函数不存在最小值点，则可能陷入无限循环。因此，有必要设置最大迭代次数。
+梯度的精确计算，需要对目标函数求偏导。
+这里，对于一元函数的梯度计算，我们可以采用如下函数进行估计：
+ 对于多元函数，我们可以如下定义梯度估计函数：
+ 假设我们要求解的目标函数是：Min
+f(X)=XTX,其中，XX为一个三维的向量。则其梯度为2X,不难计算出其最小值点为[0,0,0]
+下面，通过梯度下降法来求解。
+ 以下是几种主流的步长选择方法：
+使用固定步长；
+逐步压缩步长；
+每一步的步长选择通过最小化目标函数来确定。
+最后一种似乎听起来较为合理，但是也是最为耗时的。我们可以退而求其次：每一步的迭代步长通过从几个有限离散的候选步长中来确定。
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0Nd9Sxia8kuYRnzEEh19vuWelRoyHeo3HF7p1kjMOvk5hiatjOWavkgTA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0S1C8Vg7QWh2rf69DL0w77G967WDltS4ict5JCZR3wfkhjvekHtSWvHg/0?wx_fmt=png
+ 如果我们面对的是一个nn非常大的数据集，在每一步的迭代中，由于要计算所有点的梯度▽fi▽fi，这样会非常耗时。

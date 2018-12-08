@@ -1,0 +1,22 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x881\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91--\xe5\x9f\xba\xe7\xa1\x80\xe7\xbb\x98\xe5\x9b\xbe'  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640
+<span style="font-size: 14px; ">点击上图即可限时<span style="color: rgb(255, 0, 0); ">半价</span>购买课程</span>前段时间想学习python的可视化，自己也做过各种探索</span>
+从seaborn（色彩很好看，但是个人感觉调色太专业，底子没打好学起来很累）</span>
+到matplotlib（python基础绘图模块，但是写起来特别麻烦，学的不深入图不好看）</span>
+再到pyplot（交互式很强，学起来难度太大）</span>
+最后由秦路老师推荐，学了pandas的可视化</span>
+有以下两个原因：</span>
+（1）pandas我之前学过，也写过官方文档翻译连载，比较熟悉</span>
+（2）pandas可视化的图风格很好看，很商务风</span>
+ IDE : jupyter notebook</span>
+Anaconda 3.X</span>
+ https://www.joinquant.com/post/441</span>
+      然后使用plot默认画图
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts6P1uAX3Tn6fU1NIN4Bl1MeCo9UG4faHvztb3iblU5dibLLoHr7OQu9B6YFlHo4TsuYib4P9z0ZJH1w/0?wx_fmt=png
+可以看出，这个图非常不规则，因为相邻的两个值也是随机大小
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts6P1uAX3Tn6fU1NIN4Bl1MIu9kWYWkcmibiaURmUNicKCaYp0U2h97gjLgcLLZQnURJRfEKbBjwmLAA/0?wx_fmt=png
+是不是这个累积值看起来规则多了呢
+  划重点啦！因为这里DataFrame中创建了4组数据
+这4组数据都是随机生成的1000个标准正态分布值
+索引是从2000-1-1开始的1000个时间序列值
+并且也是求他们各自的累积值并且画图
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts6P1uAX3Tn6fU1NIN4Bl1MaG8IppuuDxN8hWoFe7SYJ6tLAncCn0wmibsHXuViclxImnBFFQWOChkg/0?wx_fmt=png

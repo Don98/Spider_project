@@ -1,0 +1,22 @@
+b'\xe4\xb8\x83\xe5\x91\xa8\xef\xbc\x9a\xe7\xac\xac\xe5\x85\xad\xe5\x91\xa8\xe7\xbb\x9f\xe8\xae\xa1\xe5\xad\xa6\xef\xbc\x88\xe5\x9f\xba\xe7\xa1\x80\xef\xbc\x89\xe7\xac\x94\xe8\xae\xb0'  以下是七周成为数据分析师课程部分学习笔记（点击<span style="color: rgb(255, 41, 65);">阅读全文</span>可学此课程哦） <br  />   七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）</a>
+七周：第三周Excel学习</a>
+七周：第四周数据可视化学习笔记</a>
+七周：第五周MySQL学习笔记</a>
+
+          http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibibIa1661DquicXFaUtXj56nxzoQtxEic2LSv9opqEWnMbyX3452ozActg/0?wx_fmt=png
+     单纯的时间只是一种属性，隐含的一种关系。<span style="color: rgb(226, 139, 65);">很多销量是跟时间有关系，但是时间的背后是根据用户行为或者一系列因素相关。</span></span><span style="color: rgb(51, 51, 51);">而不是单纯连续日期几号的简单关系。所以将案例数据需要进行初步整理（坦诚讲~这个细节是比较吸引我的，因为在此之前一直是像上面所说，对日期进行简单连续日期进行趋势分析，得到的结果的确不尽人意）添加周数和星期，将其转化成日历形式进行观察。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibRCS0EmIRryaPPXhBBhD6K44JazEib9WuEosJnH03X4E2qzs22b5MYvQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlib6eVusYyc7BPpNUfepdh2iaYPzMg7ZegcObyq5B27ss0QxphfgzUpJsA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibDB9VTH7Hz3aRtQhhd23WSTmEkdpqecQNDMaDTiarxltibTrH7DvR9TKg/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibInQ8wUf43Pt8YA2UpzfjPKiab3KzvViaib8wgDssr5XnkgUEVebKGnDRQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibgRdXyKIGXMUlBAns8QVkDS7vC3XjBtYkyvK1rPUIEgwia8XMt52AxhQ/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibWBzXIGM1drIfgiaBicutJxjoIvM8cX65g3g1bAtZsvACBP2WawMWicOIA/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibPde1Qkd7ibbtSVXzPGuQ6tfEOQQtcUVgQquSKAVgiaAIrk7GABQ6gBkw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlib9DNXKic6C9mVqU8BEr4P0C8fibqcOwVmKF4rHBFdodQ3jjibjjVWoAl9Q/0?wx_fmt=png
+ <span style="color: rgb(32, 147, 97);">【概率推断统计】</span>   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibDqyVC15eZCDvZZs7ZIC7RjSMTqXVyIImrd0WibtbWvaxzvrdAvTa8pw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibkvBEL3eEOBsfLxfyUn5yicHLUmXDrYFfWxYx4bVcibiaUUopV9BV5prhw/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibtskOk53QaGjxfKvn8vficW0OBEuotZVUqaKKocqCo5WT9NnWmD2fsRQ/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlib4ZJyiae28vljS0kc0hia1KDzmGl8o2dy0DkpkaLVQgc7m2fkQlCB80Hg/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttic5nsEyojo5R4CQrhGpvlibsAA50k2gZKWQx4LXD5GvOPnSNhGh5LEw39gL3ljW1KMEpCP8rvhywg/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/9Xne6pfLaewglbEMOYAb4Xe5Ticn6mlQFickNhCl0l0c5ezCONIOianaNvV7ASo7CNNa5Tum5IarHXhGEuibmRC6PQ/640?wx_fmt=png
+ 

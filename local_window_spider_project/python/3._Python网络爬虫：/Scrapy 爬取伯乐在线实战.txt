@@ -1,0 +1,11 @@
+b'Scrapy \xe7\x88\xac\xe5\x8f\x96\xe4\xbc\xaf\xe4\xb9\x90\xe5\x9c\xa8\xe7\xba\xbf\xe5\xae\x9e\xe6\x88\x98'http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+  Scrapy项目的创建
+Scrapy框架Shell命令的使用
+Scrapy自带的图片下载管道
+Scrapy自定义图片下载管道(继承自带的管道)
+Scrapy框架ItemLoader的使用
+Scrapy自定义ItemLoader
+Scrapy中同步将Item保存入Mysq数据库
+Scrapy中异步将Item保存入Mysq数据库
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttDWy3n9VW273VicKE3YA7aKcicYsY9hy1evu6Mwq2DfRfb5BWaFK0XNlzWmlyfRia6tTAJutPIERu0A/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttDWy3n9VW273VicKE3YA7aKfXicuy341WLf6icbeVbkSW7MFiaySVH3qI2X6f9wp12bjoIdxXQv1sSqg/0?wx_fmt=png

@@ -1,0 +1,12 @@
+Python从零开始系列连载（22）——Python文件操作（下）                       文件写入        学习资料.txt</strong>中加入如下内容，并且保存
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiae7lBTqUe65CBoZEorvQsiaS7MskYNVaJKQJiba7SOv8XPRO0BzEzZLbkQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiaehlSnsZAAspMzIQ4v5NFlWEegFyHNktiasPWkeibeLnFcNqGhgxQfDL4Q/0?wx_fmt=png
+学习资料.txt http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiae8WoibPUu1cSqgHKmNkbFnwO0yCEJVDj0T3ffFE6x015r77ia8UPwtxgA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiaexL87TdmPjxkvz8TiakcWlA3sDxVjm2fw8Izpp778yCodoQrgYtNmjew/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiaezr3kuExlt11DnW2elaZKvyrLoyUVADnjuQoy9rrPd54Lqic7nPtFj4w/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiaeZ6vMFzmmFxoCW5YuPq45KpRjdQE3JicJvy5ZZ2YI905oTLYhIuTG7zA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiae1zjaU8icElq2ZCFyLw2NRPpu4qE0b5j5VAFu0dnpqxG6xV0Vdw69M2g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiae6dIVu3wL0DyGIsjicybqpicca0ibWbricmySFzgKPkeKibjBpUMfT5q2BKg/0?wx_fmt=png
+                                     今日作业：自己用Python创建一个文件，写一首（手）诗（湿）并且读出来</strong>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgBibiafOF7ict2aIKPDQIyiaeUVW1kBB7eeZUWg6cY3kkkEwNCncytYa2rALUcP6JIIGLY61JaeJQCw/0?wx_fmt=png
+（阿喂！是用Python读，不是让你用嘴读！）现在还坚持再看连载学习的你们真的很棒棒！入门部分已经学完大部分啦！加油</strong>

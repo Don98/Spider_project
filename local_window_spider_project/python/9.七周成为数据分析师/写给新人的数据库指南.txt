@@ -1,0 +1,36 @@
+b'\xe5\x86\x99\xe7\xbb\x99\xe6\x96\xb0\xe4\xba\xba\xe7\x9a\x84\xe6\x95\xb0\xe6\x8d\xae\xe5\xba\x93\xe6\x8c\x87\xe5\x8d\x97'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）<span style="text-align: justify; ">。</span>
+ 我们进入第四周数据库的内容，在数据分析师的职业生涯中，数据库与SQL会是他们性价比最高的技能之一。
+数据库是逻辑上的概念，它是一堆互相关联的数据，放在物理实体上，是一堆写在磁盘上的文件，文件中有数据。这些最基础的数据组成了表(table)，我们把它想象成一张Excel的sheet。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcACt1HzQX0WVC35wgbbD6mCcib4Xrn89ygGWggnQarHxwYH5S5H051RibA/640?wx_fmt=png
+数据表的抽象概念如上图。
+ID是数据库中重要的概念，叫做唯一标识符／主键，用来表示数据的唯一性。我们把它理解成数据的身份证号。我知道身份证，也就知道数据在哪里了。
+ID不会有现实的业务意义，就是一串单纯的数字，每张表只能有一个主键。
+数据库是表的集合，一个数据库中可以放多张表，我们给每张表命名，表与表之间能互相联系。
+联系就是数据能够对应匹配，正式名称叫联接，对应的操作叫做Join，我们想象成Excel中的vlookup。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcARib32MMb8IJ3wiaI4l30veM4ic7xictCGHzutZ8sXVVyTd31TBXuEV4Xwg/0?
+上面就是两张表，用户和教育背景，看上去能够使用姓名进行匹配，可是这里出现了两个张三，一个是北京大学，一个是上海大学，究竟哪个张三才能和用户表的张三对应上？都不能。
+也许清华大学还有张三，复旦大学，交通大学也有，毕竟全中国姓名相同的人那么多。正确的用法应该是使用ID联接，而不是姓名。ID是产品、运营和数据人员们在工作中接触最多的内容之一，用户ID文章ID商品ID等，如果大家还不了解，这里需要掌握。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcANTsvcXUlueLgDjkBv79XBCWokvIa2EXoFqqRlrwRZjze5b7Td3lqAg/0?
+上图就是正确的用法，用户表和教育表能够通过ID联接，可能有人疑问，用户ID为1和6的，还是不能对应呀？这个不要紧，因为在数据库中，不是所有的表都能一一对应，存在部分匹配的可能性，也许那个叫秦路的，他没读过书，教育背景表中自然没有记录了。
+当然，数据库的设计还要更严谨，一般每张表都会有主键（主键不是必须，但是从效率优化上肯定会加），这个主键也不能是其他表的主键，防止产生冲突。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAVEsNRY7tqaVVLrLTCuBqWJJTNLiaaNcIH9TlVC6GkV6T9KU6EH69f2w/0?
+这样就靠谱了，用户ID是用户表的主键，教育背景ID是教育背景表的主键，我们在教育背景表中加入一个字段叫用户ID，它是专门用来联接用户表的，它不是主键。
+是不是有点绕？实际上，并不是所有名字带ID的都叫主键，这一点要搞清楚。
+数据库中，表的名字和字段应该是英文。如果是主键，只要叫id即可，你要关联其他表，则以「表名_id」作为联接。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA8AjLYUyxf3OFticNapzX7iapZJZ3VtUXAW6iaLDHdgpTVkE7exbg1EqVw/0?
+关联后的逻辑如下，这种方式叫全联接，匹配不上的都用Null表示，匹配上的我用橙色表示。联接是关系型数据库中的核心概念，是操作的基础，现在迷糊不要紧，多练习几次就好了。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAKPbsxQkcfpCb2kBtM5WBm81kxh5k5L7ouH3IhRlgRb3Bhvr96NTowg/0?
+如果现在我有一张新的表，需要关联education，聪明的你也一定想到方法了吧。
+了解上面的概念，你就知道什么叫关系型数据库，简单说，它是由多张能互相联接的二维行列表格组成的数据库。
+关系型数据库是基于关系代数模型发展而来。常用的数据库有SQL Server、MySQL、Oracle等，我们后续学习都以MySQL为主。
+接下来是安装MySQL。
+我们去MySQL的官网下载，版本5.6以上即可。
+按照教程完成后，我们通过命令行查询知否成功，Win和Mac的操作不一样。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAleT6QXYrFzDjjoCwsTC51quphzPvgRjPsdx0sQorbOhPDvJC5pXLWA/0?
+我们当然不会在这么丑的界面上操作MySQL啦，我们还需要安装GUI，这是为我们提供操作界面的。
+Mac用户推荐SequealPro，Win用户推荐WorkBench。后续我会在SequealPro操作。MySQL的默认用户名和密码均是root，建议重新设置一下。
+如果大家有疑问，可以去网上搜索相关教程，<strong style="">不安装MySQL也是可以的</strong>。因为数据分析师大多数情况是用在线数据查询平台操作，安装只是为了方便演示。不想要安装的同学，可以在SQLZoo练习，以后我也会讲解。
+输入账号密码后进入操作界面，数据库我命名为qin。左侧栏是数据库中的Table列表，现在为空。右侧是表相关的操作和信息。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcANbXrFWkh4ahbRKMArd4DVf6lqNAOedWKpnqojibI7cCHVbGRicv7fWQA/0?
+因为现在没有数据，我们加载曾经使用过的练习数据。数据分析师不需要学习如何创建删除增改表的操作，因为用不到，我只会讲解查询，大家有兴趣可以自行了解。

@@ -1,0 +1,95 @@
+b'\xe5\x8d\x81\xe5\x88\x86\xe9\x92\x9f\xe5\x85\xa5\xe9\x97\xa8pandas\xef\xbc\x88\xe4\xb8\xad\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbpandas\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGOI9LrlSqL8dQ7oo8LcUWLUEjIC4YjuRtr2UHoMgL4PicLSKSMibwRxiaw/0
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0
+ 前文传送门：<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484053&amp;idx=1&amp;sn=dc1203e90889372d8968f4b7e7a14a4e&amp;chksm=ec5edde8db2954fed82f9ad7b846abea5d13baed2e38d61238d818309a14b19f5c7195bf848d&amp;scene=21#wechat_redirect" target="_blank">十分钟入门pandas（上）【解读pandas官方文档】</a>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4DN4ygicWn2hxaIx4Gic7jJ1uVIxCTTicBURQVntwz93mzptbibOvOolEfA/0?wx_fmt=png
+重新索引允许您更改/添加/删除指定轴上的索引。 这将返回数据的副本。
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4Y9YZIYYSTx5ToendY3F6rqcFRlKGpBmn9Aq0gCdsEGZnpfYzT518pg/0?wx_fmt=png
+注：增加了一个新列E，并且给E列第一行和第二行数据赋值为1，则没赋值的数据显示不存在。
+ 删除存在缺失值的行：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4nIiaMeq1icFVuy8Jibzck4sia1AfAZzoiaTR8QIX4Zia5VHD1B2Xf8RkUQqA/0?wx_fmt=png
+ 填充缺失值：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4kIbacYXE5QDNISnaKMWHvj7Uy90hTdYBWao6DZ5cscXH5pA2LVupMg/0?wx_fmt=png
+注：这里使用5去填充，实际中，我们做数据分析常用0，中位数，平均数来填充。
+ 查看空值数据：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4uOgfme9UX9HiaQkL2Czq4NvhicCdurbqGxHmCuhtcXicYJzp3nia8AYDuQ/0?wx_fmt=png
+注：返回True的是空值数据
+ 请参阅二进制操作的基本部分：http://pandas.pydata.org/pandas-docs/version/0.20/basics.html#basics-binop
+
+ 操作中一般不包含丢失的数据
+执行描述性统计：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4VibjVp7p19FfCsicPJWVou9m3ClUwHwsH0JLMg02MZyHA37pnczibTMAQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY46ibaNd2X4iavtyibOdWYFuEiaLHKZaY14M28vTdqibCfGp8Sx69BPXAicibeQ/0?wx_fmt=png
+ 将功能用于处理数据
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4wlvZ2dDqffJfSftU70icSWfyTZZVdjenL1AemsoqvEibJXLsRLvKFY6Q/0?wx_fmt=png
+注：列累加，就是第二列的结果等于第一列加第二列数据，依次累加。
+ 使用匿名函数求每列的最大值和最小值的差：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4lcDFDC8xJrdLQXBFp1YDvjdaqHuAngLXqkzYlzSCjVib0FIRrjQMgqA/0?wx_fmt=png
+ 直方图和离散化查看更多资料：http://pandas.pydata.org/pandas-docs/version/0.20/basics.html#basics-discretization
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4vgtt1HwmfibDTic2zsQLmRPD1yN0J4aKNEUVyk3iamI9UBcniaKt5SNA8g/0?wx_fmt=png
+注：在0-7中随机产生10个整数
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4x1FuoeJCWDv0GWlqfBHXv0F4uMBetyae0an5kBZ5ZFIXZAHEItfia3w/0?wx_fmt=png
+ Series中配置了一组字符串处理方法，使其易于在数组的每个元素上进行操作，如下面的代码片段所示。请注意，str中的模式匹配通常默认使用正则表达式（在某些情况下始终使用它们）。 在矢量化字符串方法中查看更多：http://pandas.pydata.org/pandas-docs/version/0.20/text.html#text-string-methods
+
+正则表达式：https://docs.python.org/2/library/re.html
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4abg0NFKR7PIJbx2z1IF9EbrgSNAyyk5TmZWUD7Aq6FNkPCoQ2LAzTQ/0?wx_fmt=png
+注：把其中所有的英文字母变成小写
+ 合并操作更多内容：http://pandas.pydata.org/pandas-docs/version/0.20/merging.html#merging
+将pandas对象用concat()连接在一起
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4CJXMO5gxib1RlJsic29CYYoIOfDaHrch2paiaOaErMGLicPcl9ovgIQXSA/0?wx_fmt=png
+注：产生一个10行4列的标准正态分布
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4eXjtnsgATANiayvvDt2icvnk0lno5B4RQBCXJAwQH0ABHyfWpTznh0wA/0?wx_fmt=png
+注：切成三块
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4GsJ83icSp5KWpo1Jg5Tq6Vzq7K3PTZb8mwKib5PnYxUlOPRiaXZ1tRfzg/0?wx_fmt=png
+注：将碎块合并
+SQL风格合并。 请参阅数据库风格加入：http://pandas.pydata.org/pandas-docs/version/0.20/merging.html#merging-join
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4gtKYuej9FBmrjbLbGqJ3C6uAOuRPhmrRYZ06erK1dCHURZC55gBYsQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4n5Iylyr1C3cfHBwxqLWSgaZzdeuRu9vgsszVCzCwL08Ce41BRArpOQ/0?wx_fmt=png
+注：使用dict的方式创建两个dataframe
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY40xIyibdxTzuiadfTVPjTzpo3WklibRZBWDX1GDhGYx8Tjo0FX02wRxYeA/0?wx_fmt=png
+注：连接之后的效果如上图，有点像笛卡尔积操作。
+ 另外举个例子：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY48KNErqyAQVmTJJtMRObF0O5n7z84cLgbRLchQmpYNb4rP8jO6wbwOA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4kt2UBibkg8HLwic4nIHkSRU2e1IibJ56U73WxUBg9ZT6TPTOZicsCwU5wQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY45gO63CVsxiacq7z8su71pxKMRKuL4LtX8YjFMUVDo8BBpW0hcY6kbNw/0?wx_fmt=png
+给dataframe添加行，参考http://pandas.pydata.org/pandas-docs/version/0.20/merging.html#merging-concatenation
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4vbmfWibW0SXd1L2lJh0ecF1SIJW0IrYW1G5gCTSUvIpia0MjDSweicibcg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4P3a9Khmnd7mM7cMIx157a0osBsMmZictzukWyWYbOru9JFzDPrYhYLg/0?wx_fmt=png
+注：将第三行复制一份添加到了最后一行（增加了一行）
+ 通过“group by”，我们指的是涉及一个或多个以下步骤的过程：
+1.根据一些标准将数据分成组
+2.将功能独立应用于每个组
+3.将结果合并成数据结构
+更多内容参考：http://pandas.pydata.org/pandas-docs/version/0.20/groupby.html#groupby
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4ibu052U89rxRtJwQuwiaLCjIZWZicmeKhp6ZMxuLC5ib4KlEDJwjnDanUQ/0?wx_fmt=png
+注：生成了一个数据框
+分组，然后对结果组应用函数求和：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY42H7Z5AypyukY1iap9EIuAAZBaXgUW5ZZ10GLI3PeCNSDJT5PqvrbAIg/0?wx_fmt=png
+注：通过A列中的数据分组，A列中只有bar和foo，所以分为两组，求和时候因为只有C/D列是数字，所以只应用在C/D列上求和
+ 按多个列分组形成一个分层索引，然后我们应用函数：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4ibHjgF5qzkCWkVnOqTtniaF1KXzL22WL7iaObWVAxnibKCOl8oawHWabUQ/0?wx_fmt=png
+注：相当于在根据A列分组的基础上在B列细分，再求和
+ 请参阅有关分层索引和资料重塑的部分：
+
+http://pandas.pydata.org/pandas-docs/version/0.20/advanced.html#advanced-hierarchical
+
+http://pandas.pydata.org/pandas-docs/version/0.20/reshaping.html#reshaping-stacking
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4qtL5LXaEibEw9C3eqpCNpGByJYy9tTT1aMSvFJyxia9rdBOKBhpEClicw/0?wx_fmt=png
+注：创建了一个list，并且用zip方法整合合并成内部是tuple形式
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4slV1dfddv63tnH8aHeXkNbVpk9iaUVKfGxWrTnEJbT2p82AoMV4foQw/0?wx_fmt=png
+注：将数据转为MultiIndex结构，即从字面上理解为多索引结构
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY48OGbwA1j81IDxN0kWu4dets6TrDYOibaWnKAsWa7lZJ4NDqL0yicibMHA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4oxJic9Y3ERR3BXI654zXbciaicgEfrAkdyjgECA4vjT07ZQ2pBju971OA/0?wx_fmt=png
+注：说实话，这个我也没看懂。。
+使用“堆叠”DataFrame或Series（具有MultiIndex作为索引），stack（）的反向操作是unpack（），它默认情况下解除最后一个级别
+
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4H6cAY5k5suibhce0iajtcq2pGLC3zsgDT4Dag46Nff1y4hLQVr4WIwibg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY4n5DHG687PpLCSdHojfIZ43TQRJ4vSGLEIojRLpHFpCQ8QHNiciahDqQg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsyleRCuESUegXOwOkZIhY49j5fsK5DiavBVxt0vavkNUB4wDiaq0PYeenIFEf4ptTkhndGQs6DYYLQ/0?wx_fmt=png
+通过level指定操作索引的级别
+未完待续~~~~~~~~~~~~~
+http://mmbiz.qpic.cn/mmbiz_png/fgnkxfGnnkRfeUEET3ibCz0eadPptUdZ6A0VJ7LEDJrwkwKKnWRiaBFnicLMlrDaic13y4DSmwW4KHHia2akGGyGxBA/0

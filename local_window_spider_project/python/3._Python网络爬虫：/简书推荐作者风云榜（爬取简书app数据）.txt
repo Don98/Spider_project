@@ -1,0 +1,14 @@
+b'\xe7\xae\x80\xe4\xb9\xa6\xe6\x8e\xa8\xe8\x8d\x90\xe4\xbd\x9c\xe8\x80\x85\xe9\xa3\x8e\xe4\xba\x91\xe6\xa6\x9c\xef\xbc\x88\xe7\x88\xac\xe5\x8f\x96\xe7\xae\x80\xe4\xb9\xa6app\xe6\x95\xb0\xe6\x8d\xae\xef\xbc\x89'    二、爬取简书app 用fiddler软件抓包手机上的简书app数据。找到API，看到返回的JSON数据，格式齐整：</strong>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVgGw1VQenJ1Peqe4sk6vDZ5YxgDEAmJ6RUnvEY0sc7bVqicbXIVr6d3g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVnedjFic9Igs4me6VrBvezibwUKlXsGFicU4icSZuw25Rcj5rloeIMFibeVg/0?wx_fmt=png
+部分数据乱码http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVibkkZQYXXDssB6AYYib4VlX9dVAiaX9laFibPibIrts6yVSd8Pow6s8PTHA/0?wx_fmt=png
+3.1 推荐作者将230名推荐作者“丢到”词云里</strong>，直观地看看都有哪些人：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVz7uYj0iaHqPL74RWPfAD5OicJSVf0LuY16dVgible4AaCzxicJ8IUyI3Fw/0?wx_fmt=png
+以粉丝数为权重http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVXib1iay3PrUib48iaH7VpqTHJru1jZg0eA7qrTZU2lHAAJYHttA7dvWQicw/0?wx_fmt=png
+推荐作者里粉丝数前十的大V有：简黛玉、刘淼、彭小六、江昭和、简书播客、简叔、韩大爷的杂货铺、Sir电影、饱醉豚、冷眼观史 应该把更多位置给其他优秀作者嘛，比如有个非常有才华的作者，叫做@Deserts_X，他略施魔法就使Top 100的推荐作者们动了起来，并且顺带骗走了你8M的流量，这么厉害，还不关注一发：</strong>
+   子曾经曰过：“无图无真相”</strong>，那么把所有作者的头像拼个图来看看，发现人像比重非常大啊，<strong>看来想成为推荐作者，必须要把头像换成帅气的自己才行，不说了，要去换头像了，不对，要去整容了，再见：</strong>
+  按照推荐作者各自的粉丝数降序排列http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVcVwU2zUrZJ9NoPOAgRngSZ70lDibHoyWnV1oq5eNZuWnaTcLvfnSBuQ/0?wx_fmt=png
+所有粉丝共计3975524人次</strong>，如果选取粉丝数<strong>排名前30的作者，可知其粉丝数已经接近总粉丝数的一半</strong>，马太效应明显（是这么用的嘛，有点怕误人子弟）。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV0QxP2tE4q5dF0VCStKhBia22n1I6jD1PSp0EXwVA0miaJJn3fKdZEx8w/0?wx_fmt=png
+这些作者凭什么成为大V，成为推荐作者的呢http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVK67O140cqxlhY8KpTG70JpzTu1fNyFyWJ8VoV1K7NMM6Ew2ialsd4ag/0?wx_fmt=png
+文章数直接几百上千，总字数更是百万级别粉丝数（圆圈颜色）和获赞数（圆圈大小）http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV6QiaJYyrFRILEERL5g1Axn4FZCLic9Re5oT1pzdGqn3sGnSqX9nLc5vQ/0?wx_fmt=png

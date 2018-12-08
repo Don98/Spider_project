@@ -1,0 +1,34 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x883\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91-- \xe7\xae\xb1\xe7\xba\xbf\xe5\x9b\xbe'  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640
+  前文传送门：
+   如绘图过程中，中文字体和负号显示有问题，可以参照如下链接修改配置参数设置正常显示：
+https://www.joinquant.com/post/441
+ IDE : jupyter notebook
+Anaconda 3.X
+    然后将矩阵转为df，给这五列数据栏位命名为A、B、C、D、E，并显示其前五行观察
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKJXj1emLEgpPd6yBnZibGOrQBu2pchxbgj5oDL0zXQAoD6Mrp5KIteSw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKfyZn4lWqWqZ8YlHrF6YFTtShp7wcZJxA1fkyXu05PQpy7ToJPTMyCw/0?wx_fmt=png
+注：这里有A~E五个箱线图放在一张图，理解为5次试验，每次的即为其对应列中的十行（10个数字）的箱线图
+箱线图解释如下图：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKoYcDjyTRuiaAGp9onVwiba2pKdXaibJibY3gODaPMVTKfCJp3kfF4CugTg/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKvZmSaW2LG8whdSMWYB0S02iangmKUBwJhDibQ0WrdGB1loUyQvvcw3oQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKrY6WqZZhjzMSNUiaD5E9IrOfjhoNjTpleRtJ07hMibyZGxBbZ6CXeAQg/0?wx_fmt=png
+注：这里vert = False绘制水平箱线图，并且将幕布竖直方向分为8块等大小区域
+将5个箱线图从下到上依次画在1、4、5、6、8五个位置
+ 可以使用DataFrame.boxplot来绘制boxplot的界面<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKoSS1rnBolUF9EHyUokMzuBjQ1erlMHXFxvVtqOjENXzwfBje45LLcg/0?wx_fmt=png
+注：使用和之前产生df一样的方法产生df，然后用df的boxplot方法画箱线图
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPK3O1KeXMGMp8Asbb2XU8ibXJbYDI29L2fXGicYH52Uu9OLGn45zC5m6Rg/0?wx_fmt=png
+注：在原有的df上增加一栏X，其中包含A，B两种分类，最后根据这种分类分别对col1和col2画箱线图
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKfS5icsNtD6m4gShhuM2fnPS5Ckkxsj0oqRGibcwibZRrDrIhI7Uygc5iaA/0?wx_fmt=png
+注：这里传入两个分类依据，所以2X2有四种分类组合
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKA8P9U3abczII0u1UW1IscJRJR6wP3JzKQUib43icZNtD2fOJzRNXzmNQ/0?wx_fmt=png
+注：这里使用某种随机数种子产生器，随机产生一个50行2列的df
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKrmnyISeyGIDQOPfqpsaSWAZSNgw5I4nm4k2In05HFYIibgbDmGTZyBA/0?wx_fmt=png
+注：然后加一栏g，随机分为A,B两类
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKcpwy2dM5G9icD285m3KjlMQsbq1pzDicaTMJhksEKqZ2Dd4FD3sxBstA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKNk6NxTNibRIvuYVoEdh5o0AKNszwcKQPX4ALwiacGibKkQib71fwTTYRIQ/0?wx_fmt=png
+注：最后按照g栏分类画图，像之前两张图一样
+ 和以下绘图代码注意对比：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvjj6TYBibOea0icia5m3yCxPKG2BDnr2B0fY9asGKibltewNPHwezvdCViaz8TvkWqOAHdKic5wUfLXs3w/0?wx_fmt=png
+注：by有分开的意思，groupby有整合的意思
+ 

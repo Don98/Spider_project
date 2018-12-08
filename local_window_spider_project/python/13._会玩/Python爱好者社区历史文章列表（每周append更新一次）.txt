@@ -1,0 +1,37 @@
+b'Python\xe7\x88\xb1\xe5\xa5\xbd\xe8\x80\x85\xe7\xa4\xbe\xe5\x8c\xba\xe5\x8e\x86\xe5\x8f\xb2\xe6\x96\x87\xe7\xab\xa0\xe5\x88\x97\xe8\xa1\xa8\xef\xbc\x88\xe6\xaf\x8f\xe5\x91\xa8append\xe6\x9b\xb4\xe6\x96\xb0\xe4\xb8\x80\xe6\xac\xa1\xef\xbc\x89'                           1.Python进阶系列连载：                                                                                                                        大数据分析：全面分析18亿票房《羞羞的铁拳》传播套路</a>
+Python数据分析之简书粉丝敌我差距</a>
+七周：第一周数据分析师思维学习笔记</a>
+七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）</a>
+七周：第三周Excel学习</a>
+七周：第四周数据可视化学习笔记</a>
+
+七周：第五周MySQL学习笔记</a>
+七周：第六周统计学（基础）笔记</a>
+
+七周：第七周python学习笔记（1）——python基础</a>
+Python共享单车数据分析</a>
+高逼格可视化：利用Python调取地图打击犯罪</a>
+利用Python在地图上显示犯罪和密度图</a>
+
+  从零开始学Python数据分析【3】-- 控制流与自定义函数</a>
+从零开始学Python数据分析【4】-- numpy</a>
+从零开始学Python数据分析【5】-- pandas(序列部分)</a>
+从零开始学Python数据分析【6】-- pandas(数据框部分01)</a>
+从零开始学Python数据分析【7】-- pandas(数据框部分02)</a>
+
+从零开始学Python数据分析【8】-- pandas(数据框部分03)</a>
+从零开始学Python数据分析【9】-- pandas(数据框部分04)</a>
+从零开始学Python数据分析【10】-- matplotlib(条形图)</a>
+从零开始学Python数据分析【11】-- matplotlib(饼图)</a>
+从零开始学Python数据分析【12】-- matplotlib(箱线图)</a>
+从零开始学Python数据分析【13】-- matplotlib(直方图)</a>
+从零开始学Python数据分析【14】-- matplotlib(折线图)</a>
+
+从零开始学Python数据分析【15】-- matplotlib(散点图)</a>
+
+从零开始学Python数据分析【16】-- matplotlib(雷达图)</a>
+
+                                      从零开始学Python数据分析【22】--线性回归诊断（第一部分）</a>
+从零开始学Python数据分析【23】--线性回归诊断（第二部分）</a>
+
+                                                                                                                                                                  

@@ -1,0 +1,64 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe9\xa2\x84\xe6\xb5\x8b\xe4\xb9\xb3\xe8\x85\xba\xe8\x82\xbf\xe7\x98\xa4\xe6\x80\xa7\xe8\xb4\xa8\xef\xbc\x885\xef\xbc\x89'     前面几次的交叉验证，我们都利用scikit-learn里的accuracy指标来评价分类器在测试集上的性能。
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9L7lKxHBZsibfiayLGngpa7BRW9QHXpKebgWZWFLenl1HEdyjFKBsfm7g/640?wx_fmt=gif
+但是accuracy作为分类器评价指标存在一定局限性，假如我们面临一个二分类问题，测试数据集A（size=100）里有90个样例分类标签是0，还有10个实际分类标签是1。我们构建一个不借助任何机器学习算法的分类器（暂取名zero classifier），无论什么测试数据，zero classifier一直预测分类标签是0。这样的分类器在前述测试数据集A上的表现如何？它也可以达到90%的准确率，与前面人工神经网络的预测水平相当，这说明accuracy在面对比较skewed的数据集时作分类器的评价指标会存在问题。
+其实机器学习领域并非只有accuracy一个评价指标，常用其他指标还有confusion matrix，precision，recall，F1-score，ROC curve等，通过乳腺肿瘤的数据集，我们来对这些指标逐一解读。
+ 首先看confusion matrix，中文翻译为混淆矩阵,sklearn里的函数<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;background-color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">confusion_matrix</strong></span>可以为我们返回混淆矩阵。混淆矩阵的大小为n*n，n表示所有类别的数量，每行表示实际类别数量，每列表示预测出来的类别数量，通过矩阵的形式可以看到分类器在每个类别的预测成绩。
+还是以二分类（0，1）问题举例，下面这个混淆矩阵的解读方法：实际分类为0的数据有50个，其中分类器正确预测了其中48个，把2个错分到类别1，实际分类为1的数据是58个，分类器正确预测了51个，把7个错分到了0类别。在混淆矩阵中，我们希望主对角线（左上至右下）上的数字越大好，副对角线（左下到右上）上的数字越小越好。
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9Cbz8XOcXv2xJ9uI5jyQyyicoa74f5tLJN4RConoh6aehcRNU76icKCJQ/640?wx_fmt=gif
+多分类变量按照同样的方式去解读。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+如果利用混淆矩阵来分析zero classifier在测试集A上的表现：那就是：
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9MTv0kibhB9mUwlYGVeiciaC599JctTNHmTs2Qp3ejNC8TA8fDwsCa5StA/640?wx_fmt=gif
+显然按照混淆矩阵来评判，zero classifier这样的分类器在测试集A上效果并不理想。
+我们利用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;background-color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">confusion_matrix</strong></span>看看前面几个分类器表现
+ confusion matrix for logistical classifier is:
+
+[[71 
+ 
+1]
+
+
+[ 6 
+ 
+36]]
+
+confusion matrix for SVM classifier is:
+
+[[70 
+ 
+ 2]
+
+
+[ 7 
+ 
+35]]
+
+confusion matrix for randomForest classifier is:
+
+[[72 
+ 
+0]
+
+
+[ 4 
+ 
+38]]
+
+confusion matrix for MLP classifier is:
+
+[[70 
+ 
+2] 
+
+[ 6 
+ 
+ 36]]
+可以看到Random Forrest在预测良性和恶性方面都突出一点。
+ 首先看看它们的定义：
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9BRscNTSJroEFuFrmCqoFNUWBCwyo3DzMLnxMjMd0LpmibMHKoibG9gibg/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9ZxBHPgTcqDDnWanxrz64iavqXhEXO890ttxhOVrYp0a6wbSktkI33GA/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM2wEyQrb8BIuf92QXeWrVu9ZMbX82MTzvQmibTmr4LaJOPfSTKP0T2OWFDELQcqLlwJy01gbXnHSqg/640?wx_fmt=gif
+precision 表示精准程度，在分类器预测的阳性中，有多大比例是真阳性，recall表示灵敏程度，即分类器能将所有真阳性中多大比例的样本预测出来，一般来讲，两者之间存在一个折衷，精准度非常高，那灵敏度就相对不那么高，反之亦然。而从F1_score的计算公式来看，它把两个指标综合起来，要precision和recall都相对较高时，才能得到一个较高的F1_score.
+在scikit-learn中也有现成的函数计算<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;background-color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">precision_score，recall_score</strong></span>和<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;background-color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">f1_score</strong></span>.
+  综合得分F1-score来看随机森林要高一些。
+  https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3Lo5LbZl3Rs9RsR1IuSdcicRbMVPthSwicpYznrTEHD7OIVeaBGo8IvSDMbnpzCqRX9Un2cFvMkpTQ/640?wx_fmt=png
+在实际应用中，我们希望特异度和灵敏度两者同时越大越好，即理想情况下，我们希望不管分类阈值多少，灵敏度和特异度都到达1，ROC都落在[0, 1]这个坐标点。但现实情况是，随着灵敏度的增大，特异度会变小，1-特异度变大，出现了图中红色的ROC曲线，但是我们依然希望ROC曲线能逼近坐标图中的左上方，于是我们采用图中红线围成部分的面积AUC（area under curve）来衡量分类器的性能。AUC越大，该分类器的判别价值就越大。（绿色虚线表示完全随机的分类器的ROC曲线）。

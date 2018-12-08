@@ -1,0 +1,13 @@
+b'Python3 ZIP\xe6\x96\x87\xe4\xbb\xb6\xe5\xaf\x86\xe7\xa0\x81\xe7\xa0\xb4\xe8\xa7\xa3' http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0ibvWPkNriabU0ho8C4EEywIVQf5MBl8KLIyyO0Lr4uqeT7SrNvRXxPn1W6s0s4yn2WibEah9ib1rLQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0ibvWPkNriabU0ho8C4EEywTicTfcZrQUYPR23dWicjLrlVEqoPsXnKdSMoA7WydkPJ6BkZBy954tNA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttt0ibvWPkNriabU0ho8C4EEywjlU9MiaQiaS2RNVNaicVJ5s3qkLgwfxvbNctoF4yVrpgELfFOjoqlSfLw/0?wx_fmt=jpeg
+      
+提示我们的pwd的参数编码不对， 
+这是因为在python3中pwd需要的是byte, 
+所以需要我们自己转化 
+
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0ibvWPkNriabU0ho8C4EEywdOsIiaYOMexwo0bRgicXWvXMuuRTxBqQ7OR8zR814aNDlHfskzq8SvhA/0?wx_fmt=png
+    
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0ibvWPkNriabU0ho8C4EEyw43D40zjibm4pTpRzgglHDZL1JphK7EHmTjFH3m4mGRsVxojRvjbBZFw/0?wx_fmt=png
+    

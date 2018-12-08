@@ -1,0 +1,1 @@
+b'\xe4\xbc\x9a\xe5\x8f\x98 &quot;\xe9\xad\x94\xe6\x9c\xaf&quot; \xe7\x9a\x84 Python'   只要它走路像鸭子，叫起来像鸭子，那么你就可以认为它是鸭子                         

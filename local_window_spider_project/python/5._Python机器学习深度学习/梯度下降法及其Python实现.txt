@@ -1,0 +1,21 @@
+b'\xe6\xa2\xaf\xe5\xba\xa6\xe4\xb8\x8b\xe9\x99\x8d\xe6\xb3\x95\xe5\x8f\x8a\xe5\x85\xb6Python\xe5\xae\x9e\xe7\x8e\xb0'  基本介绍 梯度下降法（gradient descent），又名最速下降法（steepest descent）是求解无约束最优化问题最常用的方法，它是一种迭代方法，每一步主要的操作是求解目标函数的梯度向量，将当前位置的负梯度方向作为搜索方向。
+梯度下降法特点：越接近目标值，步长越小，下降速度越慢。
+建立模型为拟合函数<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">h(</span><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);background-color: rgb(255, 255, 255);">θ) :</span>
+https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXVZga6jQeFu6h4KWREFEabec3H6NZNwGhWUI57nEDRg8CBbhQvBt10Q/640?wx_fmt=png
+接下来的目标是将该函数通过样本的拟合出来，得到最佳的函数模型。因此构建损失函数<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">J(θ)</span>（目的是通过求解min
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">J(θ)</span>，得到在最优解下的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">θ</span>向量），其中的每一项
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXxIpn8v4muC6V31P31MTvb7NohaTunrCUufKmp8w4yMe7bY7NfnxXmg/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXHtbwN7U2zNWTzhegbZRkticAQicsPm59lGjIaAjhPPhAnWdSTJVSsevA/640?wx_fmt=png
+要使得最小<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">J(θ)</span>，则对其<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">J(θ)</span>求导等于零。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXEhfCPXwMQfnl5ojLndVIDTmRU99Ert7fALVqDohicfU2gKOReuR68oQ/640?wx_fmt=png
+在处理以下步骤时，可以用批量梯度下降算法（BGD）与随机梯度下降算法(SGD)。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXziaPC2RbTDm77bS9K2llArlo6PjdDuLzcJONGfOkmqk0BKBqJic2Y5rg/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXW9Xmt4t6TZM0lpribuG4bvZ6AotXKjwbc3nS927SX8ftZhdL1kW9aHQ/640?wx_fmt=png
+a为步长，如果太小，则找到函数最小值的速度就很慢，如果太大，则可能会错过最小值，而使得函数值发散。初始点不同，获得的最小值也不同，因此梯度下降求得的只是局部最小值。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+多个特征的迭代如下：
+Repeat until convergence{
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD06O7Ithjibnwdw7uSgzJ4qXWnjY0kMibgSmHJvM6GyIw8VEQmw0bbowahSPTK5cEWFE7AYzW0R3Qsw/640?wx_fmt=jpeg
+}
+当上式收敛时则退出迭代，一开始设置一个具体参数，当前后两次迭代差值小于该参数时候结束迭代。
+使用梯度下降法，越接近最小值时，下降速度越慢。计算批量梯度下降法时，计算每一个θ值都需要遍历计算所有样本，当数据量比较大时这是比较费时的计算。
+为解决数据量大的时批量梯度下降算法费时的困境。随机梯度下降算法，每次迭代只是考虑让该样本点的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(132, 33, 162);">J(θ)</span>趋向最小，而不管其他的样本点，这样算法会很快，但是收敛的过程会比较曲折，整体效果上，大多数时候它只能接近局部最优解，而无法真正达到局部最优解。该算法适合用于较大训练集的例子。

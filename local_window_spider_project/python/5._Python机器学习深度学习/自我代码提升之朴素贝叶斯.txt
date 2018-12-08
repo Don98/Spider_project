@@ -1,0 +1,15 @@
+b'\xe8\x87\xaa\xe6\x88\x91\xe4\xbb\xa3\xe7\xa0\x81\xe6\x8f\x90\xe5\x8d\x87\xe4\xb9\x8b\xe6\x9c\xb4\xe7\xb4\xa0\xe8\xb4\x9d\xe5\x8f\xb6\xe6\x96\xaf'  
+ 
+ 
+ <span style="font-size: 14px; ">
+在机器学习的分类算法的各个门类中，贝叶斯分类方法是一个比较重要的组成部分。而隶属于贝叶斯分类方法的算法，均是以贝叶斯定理为基础的。</span>
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOWQia0H1on0nxicqpIMsqwN4LWCEzOsOmm7wphbekn6SEMTJruc1KZiaQ6Q/640.png
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOWVu4aA3n76tFFEs0d1uO6UBndmOXIGQDvxGK7WZFz5ITzhwOnkMFxKA/640.png
+   http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOW3zDFPKUoIxCmnRiaS64xzR7wUN93lxGrNOrKffQv4BzoQVGH7CuUnJQ/640.png
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOWGOAeklKOXtxq98gmP8Xicn8iaibWg96EOxGlIC3LRhlNpribT9FBjbFlSg/640.png
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOWIWfz3R2q9wdd1jJCLjRfgnzbNhvqoz4ia3wiaWaiajpiaTGjZyFTdch5og/640.png
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOW5lCCoUtYyGicnKKDECsKNc5gnPRaicktmonLRVzywMKLIs5YUvnuBR2Q/640.png
+ 
+ 
+       http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfodgiavGQTNlKqobFkYIMuOWdL6QRmGIR5OlSKah52BcibO9wZwBGYfQxDZZxxv3vkXoBdXgBlOSulw/640.png

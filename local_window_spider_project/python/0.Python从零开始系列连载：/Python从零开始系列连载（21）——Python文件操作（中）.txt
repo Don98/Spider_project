@@ -1,0 +1,15 @@
+Python从零开始系列连载（21）——Python文件操作（中）                      文件的编码文本字符</strong>和<strong>二进制字节</strong>
+
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2nhhBD56IcXsahGRlYvqmfUskkJLGbswu4gEcNe9OG3c4Ql8RTa5cQA/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS23VFUA6OYyvIxh2CZRAfgDVKbmRwaiaNP5XHuMtjXuDIgStbulMwqU4A/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2JhhbMIzyVZ5YvcUENVo9tbKicVrBt5OmT7TdSQyRicXn5dKBj0SaMXSA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2uVc6XOibyGoqytGwJ7SQXicc5LnmjLoDL7cOlKl8HfRa69biakZw3SgkQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2dib8wt1UiboNo5psib8C6eubpcnpRfJ2n02nAg6U8Z55IHBv55B6SrBTg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS24OTBOmJkBapQB3GGUCqiaDe040cJyOiaDwWUtLvXOjpfAmFwhItq4RlQ/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2DG6d0GSBwiaoicpiagdP4TGXTKcDmAI1Niblu8unjSpblAbYhxKEhicJwibg/0?wx_fmt=jpeg
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2KFHriadFPwLRhjgn7Eja7Im6skH4v6c1ic3vgHxVgIP1wpvCrk5gmn2w/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2TOELbtwUiaBvDa8oORbsBJm34mJicU5T1GKBfz6iaiccNkeibXgduWyyjHw/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2TacwkQqukwOZpFl8UpRic30r3HWmBNnCXk7Odo6tc4ibTIxK1xm5aib4g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS23VFUA6OYyvIxh2CZRAfgDVKbmRwaiaNP5XHuMtjXuDIgStbulMwqU4A/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2aGMASlJXfTJTWcSTeic8ibsKibP85uzS9Pv6nTib4XVNXpztBaA6C1PQ4A/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2Py6M41cHJI6RcsQRCiaOpCPQXpF1zWbEF5DlpCCGibrrGjl9X5jOU1GA/0?wx_fmt=png

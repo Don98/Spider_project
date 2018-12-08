@@ -1,0 +1,25 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9018\xe3\x80\x91-- matplotlib(\xe7\x83\xad\xe5\x8a\x9b\xe5\x9b\xbe)'                   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXiawe1IHfGKmC41fr9MK9DH7pnpDdtIwG7tic6FE2AnJBu0ibjHr7EpaZmgUQbiayVVdnXOO7F6KlHVw/640?wx_fmt=png
+ 
+
+
+
+
+
+
+在绘图之前，需要说明一下绘图的数据源，案例中的数据是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">通过爬虫获取的，用的是上海9月份每天的最高气温</strong></span>，即生成两列数据（日期和最高气温）。在有了原始数据的基础上，还需要对<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">数据进行清洗和整理</strong></span>，关于这部分是做任何数据分析或可视化都必经的坎。详细可以通过下面的代码来了解：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXiawe1IHfGKmC41fr9MK9DHeeYoFCSSzLGeqDfv8ffmyG8icBpWUCR4cFA8QGLq2EnyJ0bOmJkSV3g/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXiawe1IHfGKmC41fr9MK9DHAren5iaCKAAzAQAUAyib1JX9zskdHjibhC0FdKJ1YDgRKhdlo1yxHlpYA/640?wx_fmt=png
+到此为止，我们就<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">完成了数据的采集和清洗过程</strong></span>，接下来我们就可以借助该数据完成填充热力（日历）图的绘制。
+
+
+
+
+
+
+
+其实，我<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">需要绘制的是一个数据表</strong></span>，只不过把表中的每一个单元格用颜色填充起来。而<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">表的结构是：列代表周一到周日，行代表9月份第一周到第五周。</strong></span>很显然，我们刚刚完成的数据并不符合这样的结构，故需要通过pandas模块中的pivot_table函数制作一个透视表，然后才可以绘图。关于热力图，我们可以使用matplotlib模块中的pcolor函数，具体我们可以看下方的绘图语句：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXiawe1IHfGKmC41fr9MK9DH69QeibEWibe5h4tYVwCuWib0LldZx44t6Xa5ibUtqibichWNhNDaRCmsDUoA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXiawe1IHfGKmC41fr9MK9DHbmv1dVvH7Z7KOxXt3ejIyENhmDf77CWbIfOYVEP65yrIv8mj6Dpfzg/640?wx_fmt=png
+OK，一张填充表格热力图就奇迹般的显示了，而且看上去还蛮舒服的。从图框看，9月份的第一天是周五，之后的每一天都有对应的颜色显示。但我在<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">绘图过程中发现几个问题</strong></span>：
+1）<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">绘图用的数据，不能包含缺失值</strong>，否则填充图是绘制不出来的，所有需要对缺失值做填充处理；
+2）最终的<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">图例无法实现</strong>，即颜色的深浅，代表了具体的数值范围是什么？

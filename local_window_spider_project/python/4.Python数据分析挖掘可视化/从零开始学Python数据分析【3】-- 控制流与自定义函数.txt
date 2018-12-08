@@ -1,0 +1,49 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x903\xe3\x80\x91-- \xe6\x8e\xa7\xe5\x88\xb6\xe6\xb5\x81\xe4\xb8\x8e\xe8\x87\xaa\xe5\xae\x9a\xe4\xb9\x89\xe5\x87\xbd\xe6\x95\xb0' 从零开始学Python数据分析【1】--数据类型及结构</a>
+从零开始学Python数据分析【2】-- 数值计算及正则表达式</a>
+ 在Python编程中控制流和自定义函数是用的非常频繁的语句，通过控制流完成各种判断、循环等处理；通过自定义函数实现个性化的问题解决。今天我们就来讲讲Python中的控制流和自定义函数。
+     if判断可以处理两分支判断和多分支判断，对于两分支类似于Excel中的if函数、R中的ifelse函数，处理的是某种条件满足时则如何如何，否则又如何如何；而多分支无非是Excel中if函数或R中ifelse函数的多层嵌套而已。接下来看看Python中if语言的语法和例子。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmibluFEzNpoQZyvZAN3oFSZqxbLyz5O7YSbyaaNibDvCJAgchCdw5t8Yic00A/640?wx_fmt=png
+   1）关键词if、elif、else所在行的末尾必须要有英文冒号；
+ 2）冒号的下一行必须要有缩进；
+ 3）else后面不要再写条件；
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmibluh1xHbvIM3InFt8wqicrQwHk1SJGfvCSEpelVyaic0vMCPicVBIzDE96ug/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmiblu4XdicnichG8HSJicqCamzj4lrDGJjlYKHwAgJ00wfiaRJKzgVSQOJT38Kw/640?wx_fmt=png
+   for循环可以对一切可迭代对象（如列表、元组、字典、字符串、序列等）按照指定的方式进行循环处理。在R语言中，也有相应的for循环语句，只是语法上有些不同，实质是完全一致的。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmibluU1cibBWJcLHXaq8kvEUQrFfTYbMBpZqjvtribFAm50rMJnfyp8ib2S1xQ/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmibluCqmf5lOJqPOnGLHCctyDzSZXVaPWOtRqUdbd07icfrsPl2ju98SLLRA/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmiblukDsfiaBJVGiaZicgGKxgqy9gQOmIiaTgyrrFICrI69mQ0Svz0gMPMnvu6A/640?wx_fmt=png
+   while循环与for循环比较类似，两者基本上都是可以互换的，即for循环也可以用while循环完成，反之亦可。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmiblu5dibPaCGzwnfylzNxx2eHvcqJAL1hzzhpuFAw9NHwpgxEzDOUkictelA/640?wx_fmt=png
+   1）对于可知循环次数的while循环，一般需要给一个初始的计数器i，i可以是任何值（这要根据你实际的情况来了，如我只是计算1....100的和，那i可以从0开始也可以从1开始）；
+ 2）<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 25.6px;">对于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 25.6px;">可知循环次数的while循环</span>，有了初始的计数器，也要有循环体内的累加器，即 i+=1，每循环一次则累加记录一次；</span>
+      http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmibluh2qNtMggrAib0MOX9tB61UrFPyeMZz6TBiaIY7CY8uFUKtDlxkRrP9Hg/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXJ7icsuKFJX15VNdoWAmiblu9qUibHXxoIUIrgppTJLntAoZwcFrMY91p4Xgw5RyV9fKpk5BZqNLNlw/640?wx_fmt=png
+     lambda函数又称匿名函数，是一种精简版的小函数，可以非常方便的嵌套在任何地方。先来看一下lambda函数的语法和例子。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWDD6USNq1yxrXFFsdIbbnTf9MicoEwac4azfgIS6RP9HVsBC4alyRUCcCiayI82pVthCFy9OQGV7PA/640?wx_fmt=png
+   1）parameters形参可以是多个，用英文逗号隔开；
+ 2）参数与函数体之间用英文冒号隔开，且不需要换行；
+ 3）函数体expression不可写的复杂，即一个表达式即可；
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWDD6USNq1yxrXFFsdIbbnTAJuIHfIdX61zSySSYszTJuKjgrQyuTV3ceS3r5v4xehcSib9qGPKVDQ/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWDD6USNq1yxrXFFsdIbbnTdy4Ox5dguUkviaGFERuFfhQkicRdDGVqIhWVudyvMziaZLwbTfA5OHUzg/640?wx_fmt=png
+   在实际工作中，你可能觉得Python现有的函数并不能满足你的需求，这就需要你自己构造一个自定义函数完成实际的工作，关于自定义函数是一个必知必会的知识点，下面带你进入自定义函数的说明。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWDD6USNq1yxrXFFsdIbbnTLs8sCkzNQib1Q2OWgDVGz6JQoUYlYluDX9biacSch6NFDCjZq8a3wblA/640?wx_fmt=png
+   1）以关键词def开头，说明准备开始自定义函数；
+ 2）function_name是用户指定要的一个函数名称；
+ 3）形参放在括号内，即使没有参数，括号也保留着；
+ 4）def行末尾记得加上英文冒号，并换行缩进写入函数体
+ 5）一般需要加上关键词return，将函数的运算结果返回出来；
+例如，使用列表解析式，对列表的每一个元素做一个二次函数处理
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWDD6USNq1yxrXFFsdIbbnTYTnQ8mcZGvCoKQn0RmEPusKw36K9KCnZibcdCxB2a9OwkDhgGkszTQw/640?wx_fmt=png
+ Python的自定义函数，有四种类型的形参，分别是必选参数、默认参数、可变参数和关键词参数，我们通过例子一一道来。
+   顾名思义，自定义函数时，传入了某个形参，为保证函数正常运行则必须为其传入实参。举个例子就明白了:
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUM5nFVpiaxuicnvK9uMlYCPxeRCBpaKpPiaHuCpymn6Aib1B2ZTLVwunGCIDJLpH2MDyYAwicKudlaibkA/640?wx_fmt=png
+ 上面的程序运行出错,就是因为没有给c参数传入一个实参导致的。我们再看一个猜数字游戏的代码:
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUM5nFVpiaxuicnvK9uMlYCPxjjmtEibMpRJmZ7zTrhraEALZouuNdb9SMtv7ftWmNLC2uUYomxHJpeQ/640?wx_fmt=png
+   默认参数就是在自定义函数的时候,就已经给了函数一个初始值的参数,那么,在函数运行时,就可以不用为该默认参数传值了,当然也可以根据实际情况为默认参数传入其他值。
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUM5nFVpiaxuicnvK9uMlYCPxHXicCSFpfib4z0ic34pHxBTXRJmIC7Xq3QIiclH9zibnSrYicBKBvFXpicp7g/640?wx_fmt=png
+ 这里的pi参数就是一个默认参数,可以在函数运行时不给该参数传入一个值,从而减少了重复的代码。
+   有的时候,你在构造一个函数时都不知道会有多少参数,即参数是可变的,故衍生出了可变参数。可变参数前面需要加一个星号(*),用来区分必选参数和默认参数,可变参数是以元组的形式传给函数的,还是举个例子说明比较好。
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUM5nFVpiaxuicnvK9uMlYCPx1iaFAMNyO1m6CrC6qGLWmW3Or8hPK7b2ex68icre53koeciaM5IaocodA/640?wx_fmt=png
+ 参数name前面有一个星号,说明该参数就是可变参数,而income,outcome则为必选参数,故给函数func2传入6个参数时,前面两个分别为income和outcome的实参,后面4个则以捆绑的元组作为name的实参。
+      http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUM5nFVpiaxuicnvK9uMlYCPxuRFAaHU57OOUvfnIhbsticM0pE8p788Fgm0AMsYGdy9N99MVvjDDdtw/640?wx_fmt=png
+  

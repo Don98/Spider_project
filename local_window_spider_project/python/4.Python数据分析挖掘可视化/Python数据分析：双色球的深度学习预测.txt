@@ -1,0 +1,26 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xef\xbc\x9a\xe5\x8f\x8c\xe8\x89\xb2\xe7\x90\x83\xe7\x9a\x84\xe6\xb7\xb1\xe5\xba\xa6\xe5\xad\xa6\xe4\xb9\xa0\xe9\xa2\x84\xe6\xb5\x8b'http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfMCPYTweAL8ODSVwxKm2xWAW6q6m3XEOjvibKPBETEzkqCiasRcR6BzUQ/0?wx_fmt=png
+双色球是福利彩票的一种玩法，已经卖了有很多年。之前在支付宝上app可以买的，每天2块钱很有益身心健康，比LOL有积极意义。对于双色球这门游戏，刚开始买的时候是纯粹靠感觉，后来百度又看到了百度预测（虽然尼玛感觉一点都不准）。到底买双色球是纯靠运气，还是也有技术含量呢？
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfQbhPmECTbiccicMBheBgsoGrRvsna4mAiaSI6noLZJG7BUVVZ3cbUE1cA/0?wx_fmt=png
+ 关于双色球的预测，有很多老彩民喜欢研究，有不少流派也看了一些。像黄金分割选号、尾数分布选号、相减排除等等方法就不一一枚举了，有兴趣的自行研究。
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfxicm9TlfdV0CyXCxmrOxCNicrXQAUQsofmRiblwEOfE7ZBwkQJyGNaZ1Q/0?wx_fmt=png
+总之目标就是：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfCzpgD8sIghx426EKACyQsarKZISX4OVNeV9OOGz7pdADUqtL9CNKCw/0?wx_fmt=png
+这里主要说下通过Python捞取双色球的历史数据、回归预测。
+双色球的历史数据URL:http://kaijiang.zhcw.com/zhcw/html/ssq/list_1.html
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfoF0N1YQEgorWmGb7er8ia4icRHWgxeJkmgMbhoXIqW67VP3ib6yISaSmg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfjuIar64bUXAeVMNXwV3zKiaEYrnKjAo2TM0ApY5oS7HsvpLo5ENse3Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfmAkMrlDQe3TFka6Hj3skcibC6tzWUVoYE4jbicmmNvxV9PS2CLJTkFyw/0?wx_fmt=png
+写入到txt文件里，格式如：
+#('2016-05-03', '09,12,24,28,29,30,02')
+#('2016-05-01', '06,08,13,14,22,27,10')
+#('2016-04-28', '03,08,13,14,15,30,04')
+主要是通过LR对每位数字的训练预测概率
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrf0G6twsQsRaTE53wIv2hibZ1qxJ461SV5dScJNtkmRHFUgUke6ia9V7kA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfxX2stMzPJqmaGialNvCoq93KOPhzLKhE5wkyURqiaZcIwRFdNuj4u9MQ/0?wx_fmt=png
+整体上来说比random心理觉得靠谱些。
+三、深度学习训练预测
+时间序列上的RNN可能效果更好点，毕竟多了些记忆的特点。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuawelCamFLxD2DStUmEbrfKva5QuR3gg0QRYWLDbmqMO9lA4hIovZjVZILh6aDqEv8XoWZ32GBiaQ/0?wx_fmt=png

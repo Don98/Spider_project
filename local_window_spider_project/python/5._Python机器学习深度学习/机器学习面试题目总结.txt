@@ -1,0 +1,10 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe9\x9d\xa2\xe8\xaf\x95\xe9\xa2\x98\xe7\x9b\xae\xe6\x80\xbb\xe7\xbb\x93'        def：<strong style="max-width: 100%;">特征选择和降维</strong><br style="max-width: 100%;"  /><strong style="max-width: 100%;">特征选择</strong>：原有特征选择出子集，不改变原来的特征空间<br style="max-width: 100%;"  /><strong style="max-width: 100%;">降维</strong>：将原有的特征重组成为包含信息更多的特征，改变了原有的特征空间<br style="max-width: 100%;"  /><strong style="max-width: 100%;">降维的主要方法</strong><br style="max-width: 100%;"  />Principal Component Analysis(主成分分析)<br style="max-width: 100%;"  />Singular Value Decomposition(奇异值分解)<br style="max-width: 100%;"  />Sammon’s Mapping(Sammon映射)<br style="max-width: 100%;"  /><strong style="max-width: 100%;">特征选择的方法</strong><br style="max-width: 100%;"  />Filter方法
+Chi-squared test(卡方检验)<br style="max-width: 100%;"  />information gain(信息增益)，详细可见“简单易学的机器学习算法——决策树之ID3算法”<br style="max-width: 100%;"  />correlation coefficient scores(相关系数)
+Wrapper方法
+其主要思想是：将子集的选择看作是一个搜索寻优问题，生成不同的组合，对组合进行评价，再与其他的组合进行比较。这样就将子集的选择看作是一个是一个优化问题，这里有很多的优化算法可以解决，尤其是一些启发式的优化算法，如GA，PSO，DE，ABC等，详见“优化算法——人工蜂群算法(ABC)”，“优化算法——粒子群算法(PSO)”。
+Embedded方法
+其主要思想是：在模型既定的情况下学习出对提高模型准确性最好的属性。这句话并不是很好理解，其实是讲在确定模型的过程中，挑选出那些对模型的训练有重要意义的属性。<br style="max-width: 100%;"  />主要方法：<strong style="max-width: 100%;">正则化，</strong>可以见“简单易学的机器学习算法——岭回归(Ridge Regression)”，岭回归就是在基本线性回归的过程中加入了正则项。
+              参考：机器学习面试问题10
+    学习方法上：限制机器的学习，使机器学习特征时学得不那么彻底，因此这样就可以降低机器学到局部特征和错误特征的几率，使得识别正确率得到优化.
+数据上：要防止过拟合，做好特征的选取。训练数据的选取也是很关键的，良好的训练数据本身的局部特征应尽可能少，噪声也尽可能小.
+       

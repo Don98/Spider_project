@@ -1,0 +1,28 @@
+b'Python\xe5\x85\xb1\xe4\xba\xab\xe5\x8d\x95\xe8\xbd\xa6\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90'   首先我们预览下数据
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZLkb5iak6XIZO10BnuONkjbIcPbib5Ir6MwhiaHOhJClBgXv9iaTRt7dAicw/640?wx_fmt=png
+ what is this? 
+
+ 这怎么分析？别怕，有Pandas
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZgrUheWfl1ODEoI8iafPZAoYC38ictwThqbCFqLuehrUQYFrjZYdUHZeQ/640?wx_fmt=png
+ 这就是Pandas的威武！
+ 老规矩，缺失值可视化
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZrdOhqqZbR5A2X6klwzI9R3bLNBX9kCLUSicPubsq90BLAFEvcxSiav9w/640?wx_fmt=png
+ 2列空白？删除！<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZLc2qbvHxMkK2v24e8CAiaejMxNuAVOqvXsflaJCxjg0W2xJPicfWj8rQ/640?wx_fmt=png
+ 整洁多了。
+ 我们看下数据集信息：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZibOI3IPHdNiaSfLEhkia7PnbRheUseDblPBocxoaGUYKpjNbPA1zXIjjw/640?wx_fmt=png
+ 发现Date虽然是日期格式，但不是日期类型，转换！
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZcicgKzbAvqUYKJIkrKiaVNgIRTibaIjr0SpTCECcKE20vKCcIibnEwyuew/640?wx_fmt=png
+ 找茬找茬！
+ 多了2个变量，Weekday 和 Month，分别表示星期几和月份。
+ 然后我们对每行样本求和，计算出每天的骑车人数总和。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZbPJjdBHAqMrWKaricdOMEEQaIbYRFFrAiaOicrTb0Q1DaJD5pGRnHx1Dw/640?wx_fmt=png
+ 接下来，2张图告诉领导，我们发现了什么？！
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZUhelNuASZLnO5FU3GhIQzRlMQDTpD4uFFIy4jOtqnZtyPk7MdKn7SQ/640?wx_fmt=png
+ https://res.wx.qq.com/mpres/htmledition/images/icon/common/emotion_panel/smiley/smiley_13.png
+ 再上图：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjoE0VOicMeq1eicgaIy2sNMmZhxo4GHksxY1DoOpuQzD3gNo5PwnFSQgmkYtLVnrDLDcqEvtCFSTGEg/640?wx_fmt=png
+ 1-4月，哇塞，骑车人数明显增多；
+5-8月，骑车人数达到高峰；
+9-12月，骑车人数有所下降！

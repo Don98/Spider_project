@@ -1,0 +1,22 @@
+b'Python \xe7\xbc\x96\xe7\xa0\x81\xe4\xb8\xba\xe4\xbb\x80\xe4\xb9\x88\xe9\x82\xa3\xe4\xb9\x88\xe8\x9b\x8b\xe7\x96\xbc\xef\xbc\x9f'http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMl4hf8pRl7FoEXhSTiaic7GicfBDmD714T2LoicrYWGYTTtzsKyfDj54v2rFXrm4OdvMD9uzDXJ1Irvicw/640?wx_fmt=jpeg
+据说，每个做 Python 开发的都被字符编码的问题搞晕过，最常见的错误就是 UnicodeEncodeError、UnicodeDecodeError，你好像知道怎么解决，遗憾的是，错误又出现在其它地方，问题总是重蹈覆辙，str 到 unicode 之间的转换用哪 decode 还是 encode 方法还特不好记，老是混淆，问题究竟出在哪里？
+为了弄清楚这个问题，我决定从 python 字符串的构成以及字符编码的细节上进行深入浅出的分析
+计算机存储的一切数据，文本字符、图片、视频、音频、软件都是由一串01的字节序列构成的，一个字节等于8个比特位。
+而字符就是一个符号，比如一个汉字、一个英文字母、一个数字、一个标点都可以称为一个字符。
+字节方便存储和网络传输，而字符用于显示，方便阅读。字符 “p” 保存到硬盘就是一串二进制数据
+<code style="margin-right: 0.15em; margin-left: 0.15em; padding-right: 0.3em; padding-left: 0.3em; max-width: 100%; font-size: 0.85em; font-family: Consolas, Inconsolata, Courier, monospace; white-space: pre-wrap; border-width: 1px; border-style: solid; border-color: rgb(234, 234, 234); background-color: rgb(248, 248, 248); border-radius: 3px; display: inline; box-sizing: border-box !important; word-wrap: break-word !important;">01110000</code>，占用一个字节的长度
+我们用编辑器打开的文本，看到的一个个字符，最终保存在磁盘的时候都是以二进制字节序列形式存起来的。那么从字符到字节的转换过程就叫做编码（encode），反过来叫做解码（decode），两者是一个可逆的过程。编码是为了存储传输，解码是为了方便显示阅读。
+例如字符 “p” 保存到硬盘是一串二进制 01110000 ，占用一个字节的长度。字符 “禅” 有可能是以 “11100111 10100110 10000101” 占用3个字节的长度存储，为什么说是有可能呢？这个放到后面再说。
+Python 编码为什么那么蛋疼？当然，这不能怪开发者。
+这是因为 Python2 使用 ASCII 字符编码作为默认编码方式，而 ASCII 不能处理中文，那么为什么不用 UTf-8 呢？因为 Guido 老爹为 Python 编写第一行代码是在1989年的冬天，1991年2月正式开源发布了第一个版本，而 Unicode 是1991年10月发布的，也就是说 Python 这门语言创立的时候 UTF-8 还没诞生，这是其一。
+Python 把字符串的类型还搞成两种，unicode 和 str ，以至于把开发者都弄糊涂了，这是其二。python3 就彻底把 字符串重新改造了，只保留一种类型，这是后话，以后再说。
+Python2 把字符串分为 unicode 和 str 两种类型。本质上 str 是一串二进制字节序列，下面的示例代码可以看出 str 类型的 “禅” 打印出来是十六进制的 \xec\xf8 ，对应的二进制字节序列就是 ‘11101100 11111000’。
+  http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMl4hf8pRl7FoEXhSTiaic7GicfBARIy7Ya2YpTM3Zf4yvicup1TUvBbFH2kicpqtCpDic9gtQTXm119oJUg/640?wx_fmt=jpeg
+encode
+  encoding always takes a Unicode string and returns a bytes sequence, and decoding always takes a bytes sequence and returns a Unicode string”.
+清楚了 str 与 unicode 之间的转换关系之后，我们来看看什么时候会出现 UnicodeEncodeError、UnicodeDecodeError 错误。
+UnicodeEncodeError 发生在 unicode 字符串转换成 str 字节序列的时候，来看一个例子，把一串 unicode 字符串保存到文件
+ UnicodeEncodeError: ‘ascii’ codec can’t encode characters in position 6-7: ordinal not in range(128)
+为什么会出现 UnicodeEncodeError？
+因为调用 write 方法时，Python 会先判断字符串是什么类型，如果是 str，就直接写入文件，不需要编码，因为 str 类型的字符串本身就是一串二进制的字节序列了。
+如果字符串是 unicode 类型，那么它会先调用 encode 方法把 unicode 字符串转换成二进制形式的 str 类型，才保存到文件，而 encode 方法会使用 python 默认的 ascii 码来编码

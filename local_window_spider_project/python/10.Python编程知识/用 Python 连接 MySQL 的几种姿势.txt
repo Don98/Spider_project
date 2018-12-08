@@ -1,0 +1,2 @@
+b'\xe7\x94\xa8 Python \xe8\xbf\x9e\xe6\x8e\xa5 MySQL \xe7\x9a\x84\xe5\x87\xa0\xe7\xa7\x8d\xe5\xa7\xbf\xe5\x8a\xbf' MySQL-python 又叫 MySQLdb，是 Python 连接 MySQL 最流行的一个驱动，很多框架都也是基于此库进行开发，遗憾的是它只支持 Python2.x，而且安装的时候有很多前置条件，因为它是基于C开发的库，在 Windows 平台安装非常不友好，经常出现失败的情况，现在基本不推荐使用，取代的是它的衍生版本。
+  https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMm8EZ0KLMibibs5Micj5e17Epy9jGJpOqhn95yjia1iclMVy3KRIArdGF3bT2HFvHCRwHER8PY3LqiaqqzA/640?wx_fmt=jpeg

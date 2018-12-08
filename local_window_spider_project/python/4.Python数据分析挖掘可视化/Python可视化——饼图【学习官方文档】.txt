@@ -1,0 +1,85 @@
+b'Python\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xe2\x80\x94\xe2\x80\x94\xe9\xa5\xbc\xe5\x9b\xbe\xe3\x80\x90\xe5\xad\xa6\xe4\xb9\xa0\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'  官方文档是很好的学习资料，我一直深信不疑。
+
+ 
+ 
+ 
+ 
+ 
+ 
+ ——王大伟
+在matplotlib官方文档的example中，我发现了很多漂亮的图
+巧笑倩兮，美目盼兮
+ 我们打开一个看看：
+http://matplotlib.org/examples/pie_and_polar_charts/pie_demo_features.html<br style=""  />
+ 官方代码如下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWL6q3I7ujFp559WP6UzG9Ev4icszRvedwdDjm5xvwIdkcg1iaByjPhQPVw/0?wx_fmt=png
+发现matplotlib画的图 
+ 
+还是挺好看的！
+我们来分析一下她美在哪里？是眼睛、眉毛、还是？
+鬓若刀裁,眉如墨画,面如桃瓣,目若秋波<br style=""  />
+ 其实 
+，官方文档都告诉我们啦，哈哈哈哈
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLBeefnXrX6D1umE6f8VsCA4fMicoNPfHgbNR1D2WxnIdyicDMQOm1IvxQ/0?wx_fmt=png
+ 今天被宝强哥的新闻刷屏了
+宝强哥即官方，那宋喆呢？你懂的
+ 思绪收回。。。
+ 刚才代码里有一段注释：
+ 除了基本的饼图，此演示还展示了一些可选功能：<br style=""  />
+
+ *每块饼打上标签
+
+ *自动计算标记百分比
+
+ *用“爆炸”偏移出一片
+
+ *添加阴影
+
+ *定制起始角度
+ 我们一个个看：
+ （1）每块饼打上标签
+这个很好理解
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLJCLfRccCjJueS5yQCiaibbNjuUwdWCkDtmGMibdQiaiaViazC52tZ4XLQxiaw/0?wx_fmt=png
+每块饼都是有标签的，
+ 完整代码：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLCDLbnCIp0uDaCrNDiaFAolPo2ibJPVIGEMb2dUWrugavymf3RspvU4lQ/0?wx_fmt=png
+这下就没标签了！
+ （2）自动计算标记百分比
+我们看官方代码：
+ 思考：现实数据可能是个数，不是算好的百分比能直接绘图么？
+答案是可以的！
+例如：我们改一下代码这部分为：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLodHtgZ1l5OHwmSZOpYhV1Yiaic7AmVJ5WIPrPeC1ia7tom61h8gOTNGbA/0?wx_fmt=png
+结果是自动算出了百分比，不信你可以自己算算试试哦~
+ （3）用“爆炸”偏移出一片
+我们看出这饼就像pizza一样，被切出了一片
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLJLDNtkMRePzwCiaxqrFtWh7DeCicmfXFUmj9CvKqGap5B8w8xxAXFsag/0?wx_fmt=png
+ 说实话 
+我饿了。。。
+然后一块不够吃啊，我切两块行不行？
+看看官方代码！
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWL6bNwHLExHIJyK9AFzPSyPE7EicpyQk6SNicSPDmD3NPgic3szz8DWia82g/0?wx_fmt=png
+原来这个数字是控制切出的pizza偏移的距离啊！（假装恍然大悟）
+ 不过，我要切的是两片啊！
+宝宝饿，宝宝要吃两片才行
+相信你已经会啦~
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLyjXWRTBiberg0RurNexWe3jTbJ3yUxAAJAdRbQrSsvARtpfJncVub0g/0?wx_fmt=png
+切出两块，偏移还不一样呢~
+ （4）添加阴影
+像爬虫一样定位：
+ 完整代码：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWL9ZYYX6cD7ljVnrd6PskaPd9vzneiaZ6Sr24Ba37t3bias69Xe8UDeLyA/0?wx_fmt=png
+这下就没阴影咯~
+ （5）定制起始角度
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLJFEQBwwHntDOQaCwCmsNp84qx9V57YpatX23amav2npu5oq5g2Mibzg/0?wx_fmt=png
+ 对比发现，0度是x轴正向，90度是y轴正向
+猜想：是逆时针的方向，那120度试试？
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLLSP4gPpr1uyRa7PD7pnZY8ZKpBeiafcdA59e7OBdia63Y3PLpxSJDowQ/0?wx_fmt=png
+果然是这样！
+ 更多参数功能等你发现：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLlrs1QnibYw7I6ib8CVKQ6wX42DdHB2t9pNDad58sDMULmZaUXDXxibNpA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsVeKZ9KplibXW2jbicn5TibWLjdR9bRNmTLylRVRx6Mz4wOLESewYNzEwegiaOPBCbnevibpJicw1Xm13g/0?wx_fmt=png
+ 学习方法你掌握了么？
+这里还有一堆美丽的她等你探索呢~
+来啊，快活啊
+猛戳以下链接：

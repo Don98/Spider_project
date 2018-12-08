@@ -1,0 +1,18 @@
+b'Python\xe7\x88\xac\xe8\x99\xabscrapy\xe5\x85\xa5\xe9\x97\xa8\xe7\x9c\x8b\xe8\xbf\x99\xe7\xaf\x87\xe5\xb0\xb1\xe5\xa4\x9f\xe4\xba\x86'  scrapy中文文档:
+ http://scrapy-chs.readthedocs.io/zh_CN/latest/
+ Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。其最初是为了 页面抓取 (更确切来说, 网络抓取 )所设计的， 也可以应用在获取API所返回的数据(例如 Amazon Associates Web Services ) 或者通用的网络爬虫。
+ scrapy是一个很好的爬虫框架，集爬取、处理、存储为一体，为无数爬虫爱好者所热捧，但个人认为对初学者并不友好，建议初学者打好基础再来看scrapy。
+  本以为自己安装Python库已经有一定的理解和方法了，结果还是栽在了安装scrapy库上，本人是win7系统+Python3.5的环境。先给大家丢个安装Python库的网站:
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+ 你以为这样就结束了，天真，我在运行程序的时候说没有pywin32的DLL，当时我一脸懵逼，用黑窗口导入pywin32结果报错，还好在好友的帮助下解决了
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvvkua0McUtXPR7IPmKX4dfdMlwGXAvniboeq2TRFqYmKL56bAtNU3l6Mw/0?wx_fmt=jpeg
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvFNIlp7hfgVPOIrvHNyxajRol3LibO1ZIl7wzyoqXbzcj0vt8zOaELPA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvvasl8k5dZiaHc3vb0WDjLAibpVaIfHC3SoSmaT3jfqGL71MOF3COyw6CA/0?wx_fmt=jpeg
+  把图三的文件拷贝到C:\Windows\System32
+  创建scrapy项目：<span style="margin: 0px;padding: 0px;font-style: normal;box-sizing: border-box !important;overflow-wrap: break-word !important;outline: 0px none !important;color: rgb(0, 128, 0);"></span>
+ 1 错误一     解决方案代码见下
+ 2 错误二无法导出为csv，看了向右奔跑的导出csv代码，在我本地电脑无法导出
+然来去scrapy文档看了下，对settings.py进行了修改如下：</span>
+ 四、纵里寻他千百度，蓦然回首，那人却在灯火阑珊处（代码运行成功）2 新建xiaozhuspider.py<span style="color: rgb(0, 128, 0);"></span>http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvLTX7F1gVr1BNPrVfGCD8mJEibib0JITA9v02SHyf9EY7VicDFjBTpkjbg/0?wx_fmt=jpeg
+ 五、视频</strong>
+<span style="font-family: 微软雅黑;font-weight: bold;font-size: 15px;"><span style="font-family: 微软雅黑;"><br  /></span></span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 15px;"><span style="font-family: 微软雅黑;"><br  /></span></span><span style="font-size: 16px;font-weight: bold;font-family: 微软雅黑;">文末福利</span><span style="font-weight: bold;font-family: 微软雅黑;"><br  /></span>

@@ -1,0 +1,8 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9010\xe3\x80\x91-- matplotlib(\xe6\x9d\xa1\xe5\xbd\xa2\xe5\x9b\xbe)'           之前在公众号里推送了<strong>《从零开始学Python》</strong>的系列，主要分享了关于<strong>Python的基础</strong>（包括数据结构、正则表达式、控制流、自定义函数等）、<strong>pandas模块应用</strong>（包括数据读取、数据汇总与聚合、数据的关联等）。接下来我们将继续沿着这个系列，跟大家分享如何<span style="color: rgb(0, 82, 255);"><strong>结合pandas和matplotlib两个模块</strong></span>进行统计图形的绘制。在本期内容中，我们先从条形图开始，条形图实际上是用来表示分组（或离散）变量的可视化，可以使用matplotlib模块中的<span style="color: rgb(0, 82, 255);"><strong>bar函数</strong></span>完成条形图的绘制。
+<br  />案例一中国的四个直辖市分别为北京市、上海市、天津市和重庆市，其2017年上半年的GDP分别为12406.8亿、13908.57亿、9386.87亿、9143.64亿。对于这样一组数据，我们该如何使用条形图来展示各自的GDP水平呢？
+ <br  />代码解读rcParams <br  />案例二很多人在买一本书的时候，都比较喜欢货比三家，例如《python数据分析实战》在亚马逊、当当网、中国图书网、京东和天猫的最低价格分别为39.5、39.9、45.4、38.9、33.34。针对这个数据，我们也可以通过条形图来完成，这里使用水平条形图来显示：
+ 代码解读barh函数 以上讲的简单垂直和水平条形图是基于一种离散变量的情况，针对两种离散变量的条形图我们可以使用水平交错条形图和堆叠条形图，下面我们就来看看这两种条形图是如何绘制的。
+案例三利用水平交错条形图对比2016年和2017年亿万资产超高净值家庭数（top5），其数据如下：
+http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVAN3QfAkac1w80rmVDSQ2957ICZ2qAX8LzcBQQpLoDDUAY5cmpyibvCQ23s7ycR3FvTzGnmX60nqw/640?wx_fmt=png
+代码解读  垂直堆叠条形图的绘制思想与水平交错条形图一样，只不过一个是向上偏移，一个是往左偏移，具体我们以案例说明。
+案例四 

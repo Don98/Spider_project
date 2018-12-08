@@ -1,0 +1,30 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x882\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91-- \xe6\x9d\xa1\xe5\xbd\xa2\xe5\x9b\xbe\xe3\x80\x81\xe7\x9b\xb4\xe6\x96\xb9\xe5\x9b\xbe'  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640
+ 前文传送门：<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484206&amp;idx=1&amp;sn=4d2caf14c339732cf4d2607b24fb5f5a&amp;chksm=ec5edc53db295545afbcba1bd6fff00c113f5abdb4519222e257dec7b7c263ffe75ce940d2f0&amp;scene=21#wechat_redirect" target="_blank" style="">pandas可视化（1）【官方文档解读】--基础绘图</a>
+如绘图过程中，中文字体和负号显示有问题，可以参照如下链接修改配置参数设置正常显示：
+https://www.joinquant.com/post/441
+ IDE : jupyter notebook
+Anaconda 3.X
+ 对于标记的非时间序列数据，你可能希望生成条形图：<br style=""  />
+  plt.axhline(0, color='k')指的是在y=0的位置画一条黑色的线<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWQibKJZicYxRNfKj7zH3csibc6hQ8quPxlaenZx9d106Kw5IqmgA0HuLiaw/0?wx_fmt=png
+注：因为是随机产生的值绘图，你的图一般和我不一样，一样就厉害了！
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWZFT43LYTOafTBI2ibDcDgvvBBpxOhXUHWVeic2Q4lglR6rp0dFM3ujoQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWAJpBVqPytINbCZfy4ibwAYE8CQGVdVAVZR6oibawOVFDsNeoJHgQ7J0g/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWodDtjib3SyYt7nPdJLQaqRhY5wicGPMeia3sdh3a4FQ9uTXewmRib5N6dQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGW1muSR1pvStVP8uY7FWur4zbHN8WtwmC1STAXf62ibOwgjneFcNSCYrw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWribL9sDtPsqniaQJm6yuic4AicPxmNlS6HzDcx9MzMuEVoghOUjUVPhRjg/0?wx_fmt=png
+注：以标准正态分布为基础产生一个df4
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWicA9NuQ5liaNRyHVPwpOuia5loTz9ZlvYCg9WvhxrJYDb2P7l2bbuTsTA/0?wx_fmt=png
+注：明明有三列数据，画出有六种颜色，应该是是颜色叠加出了新颜色
+  图中没有显示20个因为正态分布距离中心远处取值可能心很小，可能只有个别值，在图中不明显
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWlobKxDfw6XFmiaSvH4th3vZr2JS0GgkYH2ibK84ImagYpVEIsqicVNwfA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWuwttgeC6o77QYcuWIwWXvovrjJn9wH8yIddaribHicZCumMKiasyNOoqw/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWEiag8iaiao2Rms0VGP568riaRIySFLVoa9kYIRvG6WKTvXvURDV2EV8DBg/0?wx_fmt=png
+注意，第一个值不存在,因为原来的第一个数减去前面一个（第一个的前面一个数不存在），所以为NaN
+差分后绘制的直方图为（默认为十个区段吧）：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWfghSGWDXHuye8trzLvRG27tyIdVA0NZKcsQiaNCdgmgp85Kubs0iaH5w/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsYuQUTXJaWNRf2on7gkuGWibMPmy9NQNLicBX1icd2cDLNWNFMKxMdgyLIN1oY12UJFkn3bHyzcicJ1Q/0?wx_fmt=png
+注：df中四栏（4列）分别绘制一阶差分的图（绿色，半透明，分20区段），有种2x2子图的感觉
+  将原来的1000个正态分布的随机数对应上分组绘制四张图
+图的长宽大小为6x4
+ pandas的绘图真美~~~~~~~~

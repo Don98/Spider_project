@@ -1,0 +1,52 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe7\xae\x97\xe6\xb3\x95\xe5\x8e\x9f\xe7\x90\x86\xe7\xb3\xbb\xe5\x88\x97\xe8\xaf\xa6\xe8\xa7\xa3\xef\xbc\x88\xe5\x90\xab\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x89-- \xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe5\x9f\xba\xe7\xa1\x80\xe4\xb8\x8e\xe5\xae\x9e\xe8\xb7\xb5\xef\xbc\x88\xe4\xba\x8c\xef\xbc\x89-- \xe6\x95\xb0\xe6\x8d\xae\xe8\xbd\xac\xe6\x8d\xa2'           一.标准化的原因 二.适用情况<span style="color: rgb(255, 0, 0);">必须</span>三.三种数据变换方法的含义与应用   四.具体方法及代码一）标准化</strong>
+1.1
+scale----零均值单位方差</strong>
+ 1.2&nbsp;StandardScaler  
+　 2）scale和StandardScaler可以用于回归模型中的目标值处理。</span>
+二）归一化 2.1
+MinMaxScaler(最小最大值标准化)</strong>
+  2.2&nbsp;MaxAbsScaler（绝对值最大标准化）   2.3
+对稀疏数据进行标准化</strong>
+MaxAbsScaler</code>
+和
+<code class="xref py py-func docutils literal">maxabs_scale是专门为稀疏数据设计的，也是常用的方法。但是<code class="xref py py-func docutils literal">scale</code>
+和
+<code class="xref py py-class docutils literal">StandardScaler只接受scipy.sparse的矩阵作为输入，并且必须设置with_centering=False。否则会出现
+<code class="docutils literal">ValueError且破坏稀疏性，而且还会无意中分配更多的内存导致内存崩溃。<code class="xref py py-class docutils literal">RobustScaler不适用于稀疏数据的输入，但是你可以用
+<code class="docutils literal">transform 方法。</code></code></code></code></code>
+scipy.sparse.csr_matrix 和</code><code class="docutils literal">scipy.sparse.csc_matrix</code>）。其他的稀疏格式会被转化成压缩的稀疏行（Compressed Sparse Rows）格式。为了避免这种不必要的内存拷贝，推荐使用CSR或者CSC的格式。如果数据很小，可以在稀疏矩阵上运用toarray 方法。
+2.4 对离群点进行标准化robust_scale</code>
+和
+<code class="xref py py-class docutils literal">RobustScaler
+作为替代。它们有对数据中心化和数据的缩放鲁棒性更强的参数。</code>
+三）正则化3.1
+
+L1、L2正则化</strong>
+  normalize</code>
+和
+<code class="xref py py-class docutils literal">Normalizer
+既接受稠密数据（<strong>dense array-like</strong>），也接受稀疏矩阵（<strong>from scipy.sparse</strong>）作为输入</code>
+ 四）二值化</strong>
+4.1特征二值化</strong>
+sklearn.neural_network.BernoulliRBM</code>.
+   dense array-like 五）对类别特征进行编码</strong>
+    n_values每个特征的数量
+  categorical_features: “all” or array of indices or mask</strong>
+:
+确定哪些特征是类别特征
+  dtypesparsehandle_unknown 六）缺失值的插补</strong>
+并且支持稀疏矩阵。    missing_valuesstrategy</strong>
+: string, 默认为mean，可选则mean、median、most_frequent
+axis</strong>
+:int, 默认为0（axis = 0，对列进行插值；axis= 1，对行进行插值）
+verbose</strong>
+: int, 默认为0
+copy</strong>
+: boolean, 默认为True
+True：会创建一个X的副本
+False：在任何合适的地方都会进行插值。但是以下四种情况，计算设置的copy = Fasle，也会创建一个副本：
+　　1.X不是浮点型数组
+　　2.X是稀疏矩阵，而且miss_value = 0
+　　3.axis= 0，X被编码为CSR矩阵
+ 　　举个实例(在用随机森林算法之前先用Imputer类进行处理)：
+   七）生成多项式特征&nbsp;    八）自定义转换 

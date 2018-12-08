@@ -1,0 +1,10 @@
+Python从零开始系列连载（23）——Python异常处理                                 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm294OuYMjU6tzH3ZJY2b4q9VbropmzQOWM1vvdOGRPkrwTrj9NicYSs9yQ/0?wx_fmt=png
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm2938AkMAWhGquoWIlyQQ7AQLzEv72vhL6AzQ45fibgo5iagbCGbp5tGCAw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm29WmONS2xgrvhKIM1I5rKg4AbGsHNVWUSxU9qpTL2NibEE5OEhCfmHT2g/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm29bo9TKjnNiamB59unyQa0eSSvdia0m8ZL84mXRCiclP0qeUYtoehMVAu3A/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm29pTJ3tR5GClicpeD2B97V11xsol4hmZ24dZckNdoOXkbsqxY2LKOh07w/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm295Ru5YhVHe3qeQnhIFiaBwibP8iayibvaUGlM241blwTklWWH9FhfgKChibw/0?wx_fmt=png
+            http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttXvemgyf4nHSvG8m3ibcm29icTtEQkiaSeUlmsiakxC8ibBpoC66omLiaZvf9jl3FbhLundZGZiak4wWffQ/0?wx_fmt=png
+  今日作业：自己去搜索还有可能出现哪些常见的异常~</strong>
+并找到Python中对应的异常模块</strong>
+现在还坚持再看连载学习的你们真的很棒棒！

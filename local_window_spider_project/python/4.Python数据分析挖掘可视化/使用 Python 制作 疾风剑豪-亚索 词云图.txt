@@ -1,0 +1,32 @@
+b'\xe4\xbd\xbf\xe7\x94\xa8 Python \xe5\x88\xb6\xe4\xbd\x9c \xe7\x96\xbe\xe9\xa3\x8e\xe5\x89\x91\xe8\xb1\xaa-\xe4\xba\x9a\xe7\xb4\xa2 \xe8\xaf\x8d\xe4\xba\x91\xe5\x9b\xbe'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSTDFocdjQHbiaglZS8jsXaflghTMuBm4W7aUdl6u8ay6tAR2pQE7Gg6A/0?wx_fmt=gif
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLS2cwjwl2Wd7jMwicP6lH5QywbAYd2DHFScDO5NTpC9tV2Xb1iacsTMGyA/0?wx_fmt=gif
+<span style="font-size: 18px;">前言</span>写文章的过程其实挺麻烦的，耗费的时间也不少
+但是对自己的表达能力和对代码的认识程度能更上一层楼
+还记得从第一次写文章到现在，写过爬虫、自然语言处理、面向对象、pandas等
+当然，以后会写更多内容哈哈
+前段时间觉得词云这东西挺好玩的，于是就稍微入门看看情况
+老规矩，在cmd下输入：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSlgzJYIqDAFIdoFlCOdTxRQRicKMSAFFN3Ryn3Og9fteCcypZFicNhguQ/0?wx_fmt=png
+ 如上图，我之前已经装好了。
+python3.x版本
+jupyter notebook 编辑器
+
+https://github.com/amueller/word_cloud
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSgvul1WpqJTza3jCTIZSRadVSldQtgSW4EficqTmch0DfDadMUtAMncQ/0?wx_fmt=png
+如果没报错就说明安装完成了
+使用的是特朗普就职演讲内容~
+原图：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLS0JwkRjqkbATxX1k93Rko7WpjnvoavtBYM1FIvzicZOhOMRR1xsc5iaJA/0?wx_fmt=png
+制作词云图之后：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSLllhvS8uxy8PhB65wElXYUakQ0N6CBlUubu7MDJLgjfPP4ej1vrpVg/0?wx_fmt=png
+具体代码如下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSLS8NBS3ibZlkphooV8RN0AftrAdcGdRfgGdW6hIEwYslLibUrRiaA3Qbw/0?wx_fmt=png
+从词云图是不是可以看出疾风剑豪的动作和特朗普有某些相似之处呢~
+注意：当你使用时只需要修改<span style="color: rgb(76, 76, 76); ">yasuo.jpeg和</span><span style="color: rgb(76, 76, 76); ">yasuo.txt的内容和名字，然后可以适当修改词的大小和最多显示个数（要将这两个文件放在默认路径，或者自己写对路径）</span>
+我测试了一下，这个词云图用中文文本不太方便，要先分词，于是可以参照以下代码做中文词云图，有需要的小伙伴可以看看：
+制作中文词云图：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLSxvIj2PvDKicicrYTbK3uq6miaFHGmlDjOZzuOTjClqdkSfdvBTTYn9cFw/0?wx_fmt=png
+字体大家可以自己下载，放在默认目录里就可以咯~
+快开始你的词云图DIY吧
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuC2k3V9mEKQxkBPvcBwfLS8X2nCjdZibf2PFwyNWqocErXicjmevDCg1zAiczL5uKMRJOD4ESYVWH0Q/0?wx_fmt=gif

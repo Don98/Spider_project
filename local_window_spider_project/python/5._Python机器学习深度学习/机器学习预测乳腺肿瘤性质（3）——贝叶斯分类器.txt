@@ -1,0 +1,23 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe9\xa2\x84\xe6\xb5\x8b\xe4\xb9\xb3\xe8\x85\xba\xe8\x82\xbf\xe7\x98\xa4\xe6\x80\xa7\xe8\xb4\xa8\xef\xbc\x883\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe8\xb4\x9d\xe5\x8f\xb6\xe6\x96\xaf\xe5\x88\x86\xe7\xb1\xbb\xe5\x99\xa8'前面的两篇学习笔记<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485055&amp;idx=1&amp;sn=59d94cb0e1e546104f4cd865bc65e33b&amp;chksm=ec5ed902db29501472e1fc1f3607711d78aa876ef899df2e202b1bbea8d4e8895d4eb43adfe6&amp;scene=21#wechat_redirect" target="_blank">机器学习预测乳腺肿瘤性质（1）</a>和<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485066&amp;idx=1&amp;sn=d4f1bf4251504da5afb9fea8e66859ef&amp;chksm=ec5ed9f7db2950e1c5d6529494fec5902da20183a003b7c5b941b6fca4e65f103260c2de1a3a&amp;scene=21#wechat_redirect" target="_blank">机器学习预测乳腺肿瘤性质（2）</a>中，我们撸了一遍SGD，logistic regression，SVM 和Random forest 的代码，今天在这个数据集上再来试试朴素贝叶斯分类器（Naive Bayesian classifier），也是有现成的函数。
+在get your hands dirty之前，我们先来复习一下贝叶斯分类器的原理，看看贝叶斯公式长什么样子：
+依据
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmqa6Vibk2kL02yS2TfRaafBI6vI7Tprlm7ezdVXItNEAGPq69k8y8ibVA/640?wx_fmt=gif
+我们可以得到：
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmmQaGYicGJyG3cCg1KfZ1cjBAFGqxx4QGRTj60nEbyiavibmoHZxcGjx0g/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmQUqYhJ7ZCw5meFyy0XwqQicMXWreqocnpuRKcolcGiapXjnWeTQ7krfw/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmdJBszZWicKOY2UhuuTicBkyhcvSssgYaqjsKb4TXkGT1X7t3pVOibP1Ew/640?wx_fmt=png
+那么，上面的贝叶斯公式（1）就可以简化为这样的形式
+https://mmbiz.qpic.cn/mmbiz_jpg/q5D147hKVM3BY6GTFJs81lSm7nc89ufmfGzPW4ictHHTqXRvMg8gUNkJdXjRYEabj1cdhDYcum1NMVXH1sbJJXg/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufm1YnZEG91fxFpj4ad4ib8XH7VicMJXWoRWxOLQ1vticnCJvgVLyRnEgnyw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_jpg/q5D147hKVM3BY6GTFJs81lSm7nc89ufmHAias6Z1k1N8yg4XCp5u0mibEDtNqZ8wdicicItGqLcfx5ia4ZjDLXqJf0Q/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmQUqYhJ7ZCw5meFyy0XwqQicMXWreqocnpuRKcolcGiapXjnWeTQ7krfw/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmh4SKh8F5aJgjrZeiboHXicthgDKwqfaicPhM6DqY9BEG7zJGdzUJs5C4g/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmeRHqiarMkzR9icMclicfuX6BDIVxGV4kvluCb74EFlxmtTibLJdXic1FmVg/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmxnIiasOpGemG8Niba0ibrN0djGt0l39yTKhTvk4u8OcnMq3G9YD0AH1fw/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmdUPJ7OSVVpNe1LVxkvYP47sCVYU6MJtnoY5Yy1sNic4ZP8H8QLYIuCQ/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmFulYukyNnVkjp7iaDIAGNMWtqzWJBkKGeKuibNibNpkywXRrue5NK0obA/640?wx_fmt=gif
+http://mmsns.qpic.cn/mmsns/q5D147hKVM3BY6GTFJs81lSm7nc89ufmPlpbCRvv2xvkSEV8hXyfLw/0?
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmVZ69uCApJE9dOKnHDry64btPg3QIialr0EbqGRQiacRl1icqRXcbZxqug/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmHWDy1k7K6Hib1hyrUyNic5k0o8nicsW7yZXm7TZtjyn96WKLCvnu0SicfQ/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmRn1wUQFT39lGTHJH2d2k88mhiaNXVxn1VYEQwZUNEG4EibBcpTjIweGw/640?wx_fmt=gif
+https://mmbiz.qpic.cn/mmbiz_png/q5D147hKVM3BY6GTFJs81lSm7nc89ufmVvRRYEXJFicBakWNay67wMOUxhHCFg3eib4TfgaEeyQNxQkXhXsHaTTw/640?wx_fmt=gif

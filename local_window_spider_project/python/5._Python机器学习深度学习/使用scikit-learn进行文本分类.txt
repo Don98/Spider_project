@@ -1,0 +1,54 @@
+b'\xe4\xbd\xbf\xe7\x94\xa8scikit-learn\xe8\xbf\x9b\xe8\xa1\x8c\xe6\x96\x87\xe6\x9c\xac\xe5\x88\x86\xe7\xb1\xbb'  scikit-learn是Python最为流行的一个机器学习库。它具有如下吸引人的特点：<br style=""  />
+简单、高效且异常丰富的数据挖掘/数据分析算法实现；<br style=""  />
+基于NumPy,SciPy,以及matplotlib，从数据探索性分析，数据可视化到算法实现，整个过程一体化实现；
+开源，有非常丰富的学习文档。
+尤其是当我们要进行多种算法的效果对比评价，这种一体化实现的优势就更加能够凸显出来了。
+既然<strong style="">scikit-learn</strong>模块如此重要，废话不多说，下面马上开搞！
+   `<em style="">container_path</em>`:container_folder的路径；
+`<em style="">load_content = True</em>`:是否把文件中的内容加载到内存；
+`<em style="">encoding = None</em>`:编码方式。当前文本文件的编码方式一般为“utf-8”，如果不指明编码方式（encoding=None），那么文件内容将会按照bytes处理，而不是unicode处理。
+返回值：Bunch Dictionary-like object.主要属性有<br style=""  />
+data:原始数据；
+filenames:每个文件的名字；
+target:类别标签（从0开始的整数索引）；
+target_names:类别标签的具体含义（由子文件夹的名字`category_1_folder`等决定）。
+下面，即采用这种方式，使用测试数据集[The 20 Newsgroups data set](Home Page for 20 Newsgroups Data Set)
+https://link.zhihu.com/?target=http%3A//qwone.com/%7Ejason/20Newsgroups/
+进行实例演示。先从网上下载该数据集，再在本地进行数据的加载。
+  Subject: Re: Cubs behind Marlins? How?
+Article-I.D.: agate.1pt592$f9a
+  可见，文件已经被成功载入。
+当然，作为入门的训练，我们也可以使用`scikit-learn`自带的`toy example`数据集进行测试、玩耍。下面，介绍一下如何加载自带的数据集。
+ 常见的做法是将文本转换成『文档-词项矩阵』。矩阵中的元素，可以使用词频，或者TF-IDF值等。
+  如下所示，也可以一步到位进行设置。
+  'OpenGL on the GPU is fast' =&gt; comp.graphics
+ 使用朴素贝叶斯分类器，得到的测试集分类准确率为81.7%，效果还不错！<br style=""  />
+下面，使用线性核支持向量机看看效果如何。
+ `scikit-learn`中提供了更精细化的评价指标，如：各类别的精确度，召回率，F值等。
+下面，我们来看看更详细的指标表现如何。
+ alt.atheism 0.71 0.71 0.71 319
+comp.graphics 0.81 0.69 0.74 389
+comp.os.ms-windows.misc 0.72 0.79 0.75 394
+comp.sys.ibm.pc.hardware 0.73 0.66 0.69 392
+comp.sys.mac.hardware 0.82 0.83 0.82 385
+comp.windows.x 0.86 0.77 0.81 395
+misc.forsale 0.80 0.87 0.84 390
+rec.autos 0.91 0.90 0.90 396
+rec.motorcycles 0.93 0.97 0.95 398
+rec.sport.baseball 0.88 0.91 0.90 397
+rec.sport.hockey 0.87 0.98 0.92 399
+sci.crypt 0.85 0.96 0.90 396
+sci.electronics 0.80 0.62 0.70 393
+sci.med 0.90 0.87 0.88 396
+sci.space 0.84 0.96 0.90 394
+soc.religion.christian 0.75 0.93 0.83 398
+talk.politics.guns 0.70 0.93 0.80 364
+talk.politics.mideast 0.92 0.92 0.92 376
+talk.politics.misc 0.89 0.56 0.69 310
+talk.religion.misc 0.81 0.39 0.53 251
+avg / total 0.83 0.82 0.82 7532
+测试集的精确度和召回率的表现均不错.
+下面看看『混淆矩阵』的结果。
+ 为了不沦落为一个『调参狗』，我们来看看如何使用暴力的『网格搜索算法』让计算机帮我们进行参数寻优。
+ 答案是肯定的。如果你有一台8核的电脑，那就把所有的核都用上吧！
+  tfidf__use_idf: True

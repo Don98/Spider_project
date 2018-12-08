@@ -1,0 +1,45 @@
+b'NLP\xe4\xbb\x8e\xe5\x85\xa5\xe9\x97\xa8\xe5\x88\xb0\xe5\x96\x9c\xe6\xac\xa2\xe4\xb9\x8bjieba\xe5\x88\x86\xe8\xaf\x8d\xe5\x99\xa8\xef\xbc\x88\xe6\x96\x87\xe6\x9c\xab\xe6\x9c\x89\xe9\x80\x81\xe4\xb9\xa6\xe6\xb4\xbb\xe5\x8a\xa8\xef\xbc\x89'http://mmbiz.qpic.cn/mmbiz_gif/cZV2hRpuAPgramZsh4ficWf6uic38nRNRtJckqTR1Qmh6ZxjopRCOBusDICvePic3KdNZ8Aaicbuic2tS6T1Av9oIicw/0?
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0?
+<span style="text-shadow: rgb(0, 176, 240) 2px 2px 10px; color: rgb(255, 0, 0);">明天有送书活动，文末有送书预热活动！！！</span>http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0?
+好久没写文章了，前段时间在准备程序猿考试。
+我今天很认真，就不发表情了！说到做到！
+之前说好的二手房的数据分析也没能如期发出来，因为要查文献了解一下业务知识，所以还在进行中，还欠你们一篇数据分析可视化。
+最近迷上了NLP
+今天介绍一下结巴（jieba）分词框架
+作为一种小规模分词
+效果还是不错的
+接下来我们开始一起看看吧
+运行环境：Python 3.X
+首先：
+cmd下 pip install jieba
+建议使用 pip3 install jieba （特别是那些同时装了Python2和3的朋友，以后装模块可以用pip2和pip3区分）
+安装完成后
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgYntJcqPoOtvtDHh0LewmmibXky5y4B5I7lUk5g38v3CEjPDDp62sIbA/0?wx_fmt=png
+ 如果导入没报错，就表示安装完成了！恭喜
+结巴分词模式1.全模式
+2.精确模式
+3.搜索引擎模式
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgiaCZ8k3Dic8UDgnrzfnribufnMkVUeaz50XPkTTibDRQrrnG16tHsjoAqg/0?wx_fmt=png
+全模式：把句子中所有可以成词的词语都扫描出来，速度非常快，但是不能解决歧义。
+这种全模式，会根据字典，将所有出现的字词全部匹配划分，所以会出现重复，显然，这不是我们需要的。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgoMTkMjNB8YgbgAKicoRZOhOjwXSLfMrQia3xSU2mUK2ePXm2PZUPsDdw/0?wx_fmt=png
+精确模式：试图将句子最精确地切开，适合文本分析（类似LTP分词方式）
+而这种精确模式就比较接近我们想要的了。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgoibibrbbZAhOnnosPlzxXXa7ia5EvRkmwTNuY7KQM1kOQeDJzJibZaawbw/0?wx_fmt=png
+搜索引擎模式：在精确模式的基础上对长词再次切分，提高召回率，适合用于搜索引擎分词。
+这种搜索引擎模式也不错呢，更加细化了。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgnTQdSCKAtPcqQrVevpkhic9QDkCGTrfN2HahE6XLicobJ5S08hc9cOsw/0?wx_fmt=png
+回看精确模式的结果，发现有些新词汇或者专业词汇，例如：天善智能、大数据，这些不应该再被切分，所以在默认词典的基础上，我们可以加载自定义的词典。
+使用闪电搜索软件（强推，超好用）搜jieba
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgGSIGLzUhP0rO3aBm1H3DZ8QwlyRtIk5RibrTVbX5bh0ekAiaQ3qCuQlA/0?wx_fmt=png
+进入我的jieba模块目录
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgh8JB6UXicEHMur8xOspj7LQZibX5jMFZllw1ibh0LAgWuIyBaA4PrwXaw/0?wx_fmt=png
+看到有个dict的词典，打开
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgQEPbCnzGabPSGWktacvdY02WMhAfYCwL3TxA6n12xLkmaXBlvl3btg/0?wx_fmt=png
+发现有 1.词 
+2.数字（代表词频，越高越容易匹配到） 3.词性
+为了方便，我们自己定义添加一个词典命名为userdict.txt
+ 注意：一定要UTF-8编码
+然后保存在同一个目录如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttv9OE5qicPOttjFibn1kBPHgf9MC6jZv6YrjcqnRwYVpc72c3Krn8v54eUicguriancbP9MPcmKGOgWw/0?wx_fmt=png
+接下来就是见证奇迹的时刻了：

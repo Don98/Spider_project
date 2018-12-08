@@ -1,0 +1,48 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9025\xe3\x80\x91--\xe5\xb2\xad\xe5\x9b\x9e\xe5\xbd\x92\xe5\x8f\x8aLASSO\xe5\x9b\x9e\xe5\xbd\x92\xef\xbc\x88\xe5\xae\x9e\xe6\x88\x98\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                         
+
+
+
+
+
+在《<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485116&amp;idx=2&amp;sn=d61f4026a5f6fca8707d1acecd64fa12&amp;chksm=ec5ed9c1db2950d751f4a08e94114e37d33080972ecbd0f92e38d08f8b078c03fc914a46c655&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python【24】--岭回归及LASSO回归（理论部分）</a>》一文中我们详细介绍了关于岭回归和LASSO回归的理论知识，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">其实质就是在线性回归的基础上添加了2范数和1范数的惩罚项</strong></span>。这两个模型的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(172, 57, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">关键点是找到一个合理的lambda系数，来平衡模型的方差和偏差</strong></span>，从而得到比较符合实际的回归系数。本期是基于之前讨论的理论部分，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">采用Python和R语言，完成对岭回归和LASSO回归的实战</strong></span>。文中所利用的数据集来自R语言ISLR包中的Hitters数据集，描述的是关于棒球运动员收入的相关信息，数据集和脚本可以之文末查看链接获得。
+
+
+
+
+
+
+原始数据集存在收入的缺失，我们不妨先把这样的观测删除，同时，数据集中含有离散变量，需要将这些变量转换为哑变量后方可建模，故第一步需要对原始<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">数据集进行清洗</strong></span>。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtr1R5vaQojovhdMO1hcV3mRqF6ib52z8Ew8XLuSc8AJtgWhsG7cWpBJw/640?wx_fmt=png
+上面的数据集清洗完毕，展现的是干净数据的前5行信息，下面要<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">基于这个数据集进行建模</strong></span>。建模之前还需要将数据集拆分为两部分，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一部分用于建模，另一部分用于模型的测试</strong>。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCt1ULuzO1Od9DeWXh6rFgOIbZ6uaF2ibmUTKMfRicHIn2uWxvPLraPtPKA/640?wx_fmt=png
+从上面的图形结果来看，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">alpha在10附近时</strong></span>，所有的自变量系数基本趋于稳定（<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">但也不能完全确定是这个值</strong></span>）。接下来，我们采用交叉验证（CV）方法确定最佳的lambda值。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtPylnJXMY5sh4955Ro3DdSIV8xoe04lLxfp8jyIMlbwrljPwTdIeoiag/640?wx_fmt=png
+不出所料，得到的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda值确实在10附近</strong></span>，这里最佳的lambda值为10。下面，我们要基于这个最佳的lambda值进入岭回归模型的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">创建和模型验证</strong></span>的阶段。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtWica18YhxOuvNNTbrIFfVWxic3A7iaBvSscicqibAArjyQcCXSUqS712Fbw/640?wx_fmt=png
+经过模型的验证，得到的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">RMSE为319.9</strong></span>。接下来，我们利用同样的逻辑，对比一下LASSO回归模型的效果。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtqo7SfJyXQX95mKDYselEpvcicwJa8WVibfxzxMIjVRwIJmF1hV2dCrEQ/640?wx_fmt=png
+从图形结果来看，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda值应该在1附近</strong></span>，此时LASSO回归的系数也基本趋于稳定（<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">但也不能完全确定是这个值</strong></span>）。同样，我们利用CV方法，来寻找最佳的lambda值。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCt7jfd7mQ238odAWA8926eLyTgU0FopzfMb6MuE7MAxR9eOibsibrbiaQiaA/640?wx_fmt=png
+通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">CV方法得到的lambda结果是0.23</strong></span>，这与与我们看图得到的1这个值还是有一点差异的。下面，我们就基于交叉验证得到的最佳lambda值重新构造LASSO回归模型。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtZKJalXO7xODmk9d6H9MoDJnyPiaaBjWWc78wcrqQmNc91tYIL534pSQ/640?wx_fmt=png
+对LASSO回归模型进行验证<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">发现得到的RMSE更小</strong></span>，说明LASSO回归模型的拟合效果会更贴近于Hitters数据集的原貌。
+
+
+
+
+
+
+上面的内容是基于Python工具对岭回归模型和LASSO回归模型的实战，接下来，我们<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">再利用R语言对上面的过程再作一次复现</strong></span>，希望对R语言感兴趣的朋友能够有帮助。
+
+
+
+
+
+
+由于上面的逻辑我们已经通过Python进行了一一说明，这里就不再赘述，只给出R语言代码仅供参考。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtD2QxzibfbGOreBsLxq8Caes9lic4hcAc1yGT3J0ON775c41ANU8YsKrg/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCt7icAblJxUW6PwnmwNPkshM3NDmYeq7tj0icQKNfaia7Cjk4EO6NriaNH5Q/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtMfzvGW6pQNAovnydMBiaEmyZGfI3aHxibyneE244BMx3jQIpqUf39bpw/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtibCJceiask4rHCOrttwEgOSkQPAV4moaF6ibGDAqkt9s5FXNClBibWxfBw/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVWd2SwzIe7RCjhatB5fQCtMTbln723S4BzXXgJc45ep9PNWXo8pT87mibVNYYfMSmPdzd3FiatS4TA/640?wx_fmt=png
+  

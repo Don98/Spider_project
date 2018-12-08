@@ -1,0 +1,132 @@
+b'\xe5\x85\xa5\xe9\x97\xa8numpy\xef\xbc\x88\xe4\xb8\x8a\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbnumpy\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibUo4tq6d3A6EbhGdV8nLiaGwCESMibM28tOhXZylSxicQnLS4nh39ibNTw/0.gif
+之前连载了pandas，pandas作为python做数据分析的一大利器，相信大家都不陌生。
+当然连载部分作为入门是够了，具体提升还要大家多看看官方文档详细内容和做具体项目案例
+之后我也会出一些pandas的数据分析实战案例分享给大家。
+在询问了大家的意见和建议（怎么说的这么官方，不是我的风格啊）之后
+我决定解读一下numpy的官方文档（入门部分）
+让大家能够快速上手numpy
+ 首先，我们看看官方是怎么介绍numpy的：
+'''
+NumPy是使用Python进行科学计算的基础软件包。 它包含以下内容：<br data-filtered="filtered"  />
+(1)一个强大的N维数组对象
+(2)复杂（广播）功能<br data-filtered="filtered"  />
+(3)用于集成C / C ++和Fortran代码的工具
+(4)非常有用的线性代数，傅里叶变换和随机数操作
+(5)除了其明显的科学用途，NumPy也可以用作通用数据的高效多维容器。 可以定义任意数据类型。 这使NumPy能够无缝地，快速地与各种数据库集成。
+'''
+可能大家对"广播"一词不太了解，广播的意思可以这样理解，当我有两个维度不一样的array（数组）运算时，我可以用低维的数组复制成高维数组参与运算（因为运算要符合一定结构）
+numpy官方网站：http://www.numpy.org/
+如果你是一个python初学者，我不建议你直接去python官网下载python3.X或是python2.7版本
+我推荐你直接去anaconda官网下载对应版本的anaconda（建议下载最新的3.X版本）
+下载地址：
+https://www.continuum.io/downloads<br data-filtered="filtered"  />
+如果你是windows用户，直接进入官网下载下图的即可
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIybDNgSmmNSLxGl2sFu2jerJO9m3iamGXhh86ytmn5uqpkzyWWoDx2DEg/0?wx_fmt=png
+ 为什么推荐anaconda呢？
+因为anaconda是python的集成环境，自带了很多python的库（或者认为是包）
+举个栗子:
+如果Python是一个光杆司令的话，anaconda则是一个司令带着一堆军队
+so，你应该知道为什么我推荐你装anaconda了吧
+如果你已经装了原生python并且用了挺久，也pip install 了很多库，类似numpy，scipy，pandas
+那么你一定遇到很多报错，恭喜你，你已经才过了很多坑啦~就像我一样
+有趣的是：
+python是巨蟒的意思
+anaconda是水蟒的意思
+如果你在pip install numpy中由于网速慢安装报错，你可以来这里下载然后本地安装numpy
+https://pypi.python.org/pypi/numpy#downloads<br data-filtered="filtered"  />
+numpy快速入门官方文档：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+python3.X
+  这里是把numpy命名为np
+可以说是行业潜规则，当然是为了之后写代码简写方便
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIylbHnzrL5FmJhY6uB8GZGaC2X37ibwEfOjhr4YRH9oZa4OynDoBRicuLA/0?wx_fmt=png
+注：这里的array（数组）是numpy中特有的类型，首先，使用np.arange(15)产生了一个一维数组，从0-14（注意范围）
+arange不是arrange，arange是numpy的方法，所以写为np.arange()
+然后，使用reshape()方法将这个产生的数组重新造型为3行5列的二维数组，也就有了上图的样子。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyxQAicQzJb2bNzF3ELQ3XcsvwmgSK2UcrJR57xxVepZMpibsgATT5xkFg/0?wx_fmt=png
+注：查看数组格式，显示三行五列
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIycTWQ4flxyDw4EfS4BXFWGjDG1qcvlUZwZoaNqiaXebmZTEho8CaiaaRQ/0?wx_fmt=png
+注：显示数组的维数
+如果你想知道这个方法的含义，可以在jupyter notebook （装完anaconda自带的ide编辑器）里输入：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyr1vuaqic9vMe16f2fpDx5GjkfatoPenjWCdRWABIDjNLSQRWq50zweg/0?wx_fmt=png
+还有举例子帮你理解呢~
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy8NacYMbia8A80MiaYcFoXD9luLs54dia0BGRa34OprWlyuEYVCFrsfSAg/0?wx_fmt=png
+注：a数组中的数值类型<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyRzXc4DDSYRXibTJ8pczbdFgciaGttUz2ub1BkbmiaCga9iat8QeCSA21AQ/0?wx_fmt=png
+注：每个数组元素的字节大小<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIybkapAJ2gyMdMJXsWzSrp5UnONqma72Q47Q8rsc2ic7Lick6elr2sSCqw/0?wx_fmt=png
+注：a数组中的元素个数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyp9rMnhqgcrSu89dSyFbM6P9BnXCysKQmqu7ictcHngMPVNV7picv0oibw/0?wx_fmt=png
+注：a的类型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIypZxiaGuian1aAWVs2tOQXm46WkymHtFMnd32UpQAyOMsVK1kywIrJJdw/0?wx_fmt=png
+注：当然，你可以直接通过直接赋值创建一个数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyKX6m2NNYjxibBClIxotibiauXMpJAliazKLROjSaN4dxOUlW3Q2pjDQqoQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy0oDZDkqRtrQp6xRial6hCBPESCkJ0tmQ0sFYRJfdNoialXdWLpYIcodA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyaPAW4lGj9T47LwDKk2pTOjpjlAuZQbDaiasJeia2pHX9d8tblicEp4LUA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy5yBysROZT4q91JpAOYdOtTIh5NE96QFNbCxFDuXMxXfpTlGRfroA6w/0?wx_fmt=png
+注：可以创建整形和浮点型元素的数组
+常见错误：没有经过list直接用数列创建数组
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIye5D6WhNib5Tusj4FqOJPjFB69ax2dCgG9WtHxLWan8Xque5ibzicL3MgQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyJHl0g4XiaQnGJV1ttFd5McXS9fARuVKYYOtibvA09Y2S5oviaibfC6CkbQ/0?wx_fmt=png
+注：创建二维数组
+ 当然，创建数组的时候，也可以指明类型：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyUkvSapVpF1TmjmrcbQr73Oib5JGMD3gicHczN6Akz2SP8rQZwAEvJR3Q/0?wx_fmt=png
+注：这里指定的是复数类型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyibTARXsGTeibKtBUH2W3vMibVBEJm7W4KicDYfqzy6MbBKGRfBJLURhb2g/0?wx_fmt=png
+注：创建全零数组，默认为float64形式
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyjYzmlibkH0GXWhk9srPlX2U9cKuk5zdF4bLYUUiaGe19icGf6GFk5Ul7g/0?wx_fmt=png
+注：创建一个三维全1的数组，并且创建时指定类型
+你可以认为是一个长方体里有序的充满了1
+观察括号，有层次的
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyJYB9iaStnyL8ZQ64tzE6d9eQEzvLyvhM1oyR2uWAYK2iaIn0REP8AYvA/0?wx_fmt=png
+注：创建一个二维的空数组，电脑不同导致显示不同
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyevWic2bbKojtrpdQI3QngvibmTRQib8oyWbsMhvgJ0H463XMNGLJhlwmg/0?wx_fmt=png
+注：产生一个起始值为10，终止值为30（注意，终止值取不到），步长为5的数组
+有点像c语言中的for循环格式
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy2Mfkk9Kzwux3tAiaicLxFMRWicowHDHC9TbOFZic7uobYkEjPviaIeucAcQ/0?wx_fmt=png
+注：这里想说它接受float的值，不仅仅是int类型的值
+ 当使用浮点参数时，由于有限的浮点精度，通常不可能预测获得的元素的数量。
+
+因此，通常最好使用函数linspace来接收我们想要的元素的数量作为参数，而不是使用步长参数：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyM68LA8lIticajbpWd6K9wrLrfa7v6bSTsickHpu0ss8iaHIicWcz8HbJfg/0?wx_fmt=png
+注：产生0到2之间等间距（步长）的9个元素的数组,<span style="color: #4C4C4C;">linspace和matlab中的用法一样</span>
+  然后通过sin（x）算出对应的y，部分结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyoeicicFEJlPJfdO96oZJzk1CsEBBtFgsackdrvvOdqlMZgXibFTUYQIkg/0?wx_fmt=png
+更详细的操作可以在这里看：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+就是下图这里，链接太多，就不一个个弄出来了
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyW6RL7SgHUxZFh6p4UmUjkJTrtky5R3micEprhhib6Vfh7gqnndIK30iag/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyCuVCthhYa9I347CJALa6ATd9tYuRPs968T7wC8gV1zHbZGHehNYyvA/0?wx_fmt=png
+注：打印一维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyUsssOMIAApXH2PLeeDpxkEKVyKcAfYWeNpb4RbdYGVn6YJc0Otevtw/0?wx_fmt=png
+注：打印二维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy11X6B8iaVz5lNlZgDOia3NrB8dh3x1icHPL2miaLPRzIiaICmXucaU61sqw/0?wx_fmt=png
+注：打印三维数组
+更多reshape方法可以看这里：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html#quickstart-shape-manipulation
+ 如果数组太大而无法全部打印，NumPy会自动跳过中央部分，只能打印出边界部分（首尾）：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyicBq1oAQNDfSC6aTRZw9NZq7ibKSsUZXHNBefib1avQ0iajBIqrUx5EiaXw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyEDJlTXMibfNb913C7WBNlGg0XbwcvpmTS01ovLBpe0nqk2IWqLwlymA/0?wx_fmt=png
+ 要禁用此省略并强制NumPy打印整个数组，您可以使用set_printoptions更改打印选项。<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyJMdRp0Kq1vNnX7R3Rle8Lsd9brhNHpKNAz1aL3OuiaicUibkWhcHrxCYA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy3Ab0ozNprmVInIINlxdhqRVCx7dspibcKHTFViahticPyh44ftbEMJ7Jw/0?wx_fmt=png
+注：数组相减
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIyJouogMVvQsdupiatsnGVibxmLia4KqqQicgBLKRCon1EiaQsrGYNpl08vRw/0?wx_fmt=png
+注：b数组中每个元素平方
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIy6EJUdW1sBP47aEWWyawYJKjXZNqjw9lTgvUmVMBT18DtaFIlauvAMg/0?wx_fmt=png
+注：a数组先进行sin运算，然后结果乘10
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIydtO8WvLe5n7aqibvFR4hJZEaCVdHndYdsmA6ibqANiaSzltia0iaFdghKIQ/0?wx_fmt=png
+注：对a数组中每个元素和35进行比较大小，返回的是一个充满布尔元素的数组
+ 数组的矩阵乘法和对应元素乘积方法：
+原理参考线性代数
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIysJicWicDKrpCSX6icwGatuwqPYkXq2PgtDD6LmBAQJicaAAtnCnPtZJ74Q/0?wx_fmt=png
+注：对应元素相乘
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIybcW7J1FPgamBPvpEiaOcJvUiaW4ibVYbsnAQw45N9G01bWNGW6lzO5XIA/0?wx_fmt=png
+注：A左乘B，也可以写成如下形式：
+  A左乘B 
+和 
+B左乘A是不一样的，详见线性代数课本
+ 某些操作（例如+ =和* =）将作用于修改现有数组而不是创建新的数组：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts9VicwriaqwNCYg2mR0jCqIymmAXaPuLFvEhwKZ8zNeZXTLpKbmlmDW9FlM5nZqdoumThT0OFaPpvw/0?wx_fmt=png
+注：创建一个2行3列全是元素1的数组a，然后将a的元素都乘3
+小插曲：
+（1）
+  同理以下也是：
+  

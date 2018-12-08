@@ -1,0 +1,109 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x9a\xe6\x95\x99\xe4\xbd\xa0\xe6\x89\x93\xe9\x80\xa0\xe5\x8d\x87\xe8\x81\x8c\xe5\x8a\xa0\xe8\x96\xaa\xe7\x9a\x84\xe6\x8a\xa5\xe8\xa1\xa8'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）
+ 前一篇文章列举了常用的分析图表，今天主要围绕Excel常用的图表技巧，以及图表的设计规范展开。相信大家练习后，图表设计能力会从下图：
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw60vDa1eclhk0EYnQPclSG8SOgiaibcjBujhyR6rPxK2md7u6OZZQBejgA/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6l813Qnmvs7U5cxumMFBpmedky6feOscTXAsrlFvZgibXBKyZVwdxBeQ/0?
+数据分析师应该会设计图表和报表。这里并不是要求大家像设计师一样运用Photoshop等软件绘制，而是知道数据元素如何用图表更好的表达，将数据蕴含的信息展现出来。理解数据是分析师的工作，展示数据也是分析师的工作。
+
+对于非数据分析师的岗位，诸如运营、产品和市场，每天也会接触大量的报表，日报周报项目报，用好图表，让枯燥的数据变成丰富的视觉，也是一种帮助。
+重新认识图表好的数据可视化，应该设计和数据并存。数据分析师拿到很多数据，把它们像食材般加工成美味佳肴，但是菜色卖相不好，就让人下不了筷子。可视化就是数据的色香味，也是沟通和汇报的工具。图表给自己看，再难看也无所谓，如果需要汇报给领导和同事，美观和易读至少需要吧，不然大家怎么了解你的分析成果。
+今天的内容倾向于报表化图表的制作，好的图表应该有以下几个要素：
+可读性图表的首要功能是解释，而不是设计，尤其大部分图表都会落入到过度设计的陷阱。
+图表设计，首先应该是没有设计
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw646XK9Td7bYfUeKYgbL0O81oVecm4icjHZQ13DOPRZkS50FcTJHu9IsA/0?
+上图是Excel老版本的默认模板，连直男也无法忍受的酷炫3D渐变阴影风。想当年小鲜肉的我也为此目眩神迷，给翠花完成PPT作业都是用得这类设计……然后就没有然后了。
+当我们使用这类图表，反问一句，这些设计有必要么？我们只需要用到柱形图的对比，那么阴影用来干什么？渐变用来干什么？背景黑色用来干什么？
+这些元素对我们解读数据没有任何帮助，甚至会阻碍读者阅读数据。
+其次，好的图表要能解释数据，不同图表有不同的使用方法，如果我要观察销售额的增长，我就不应该用饼图。如果数据量过少，就不应该使用散点图。图表使用可以看<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484190&amp;idx=2&amp;sn=54619637a4fd0252af752533e9970763&amp;chksm=ec5edc63db29557579859216887e6504c7be1a7b97c15b17548a0aacb77bbd84536825d9e9e7&amp;scene=21#wechat_redirect" target="_blank"><span style="color: rgb(65, 140, 175); text-decoration: underline;">《数据可视化：你想知道的经典图表全在这》</span></a>。
+精准性为了使数据的解读不失真，数据应要求精确到小数位。12.5比12好，尤其在对比数据的情况下。数据若再近一步精确，对解读的意义就不大，反而对解读者进行干扰。
+另外一种情况是单位换算造成的数据失真。例如3145米换算成3.1公里等，虽然是小细节，但不要出现某饼图的各比例相加不等于100%的案例。
+客观性数据的解读因为每个人的观点和视角不同，可以呈现诸多的结果。这也是我们常说统计学会撒谎的原因。
+有经验的数据分析师甚至能够引导分析的结果。
+下图是一张销售额柱形图，看来销售额没有啥特大变化嘛。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6P6Zaa8AJ0BCicslWq3YdyYXnCpkZe28fxmutd5xqx5VQicibnCgngoCicQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6iaBFVl6WQUKmBXb0WetVy1VftnusaIku992Qe5NAkaBc082viclxxXjg/0?
+实际上两张图表的数据没有任何差异，为什么呢？区别只在坐标轴。第一张图的Y坐标轴起始为0，第二张图起始是2.45。第二张是截取了部分的柱形图。
+只是随便动动手脚，数据表达就那么大差异，看来数据分析师也可以是阴险角色啊。其他方法还有销售额细分。看一下不同地区的增长，如果某几个地区的增长好，就单独拎出来作图，美其名曰抽样。
+统一性统一是规范和约束图表，当图表过多时，一个统一标准不会让人眼花撩乱。
+如果图表整体颜色是冷色调，那么就不要再加入暖色。
+如果图表文字是雅黑，就不要再加入宋体。
+如果某地区数据，用了柱形图对比，其他地区也遵循柱形图样式。
+如果某图表，女性使用红色，男性使用蓝色，那么这一规范应该在所有图表体现。除了颜色，其他设计元素同理。
+如果有多张图表，图表元素应该统一，如标题、坐标轴刻度、坐标轴位置等。
+统一性是为了可读性服务的，如果图表样式混乱，解读者会非常困惑。你做一份男女差异的数据报告，前面男性数据都用蓝色表示，突然换个粉色谁会受得了？
+后文的教程，都会遵循以上要素进行设计。
+如何设计好的配色决定了图表整体美观上限，一般只选取两到三种颜色加黑灰白。过多的颜色无法聚焦于图表本身，会让图表变得像玛丽苏。
+配色属于设计领域的技能，分析师就不要学怎么搭配辅色对比色了。直接借助Adobe Color网站的色彩主题选取颜色。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6YbOuZHjWiae0C03HX6lhOsfciaKyoOTc9bEfR1ibI1UWzkJNvLPj4UHdw/0?
+第一个配色方案不错，高贵冷艳的商务风。后续图表我们均用此配色方案，下面是十六制颜色编号：
+
+
+ 
+
+
+404B4F
+
+ 
+
+
+82DFFF
+
+ 
+
+
+CEF2FF
+
+ 
+
+
+416F7F
+
+ 
+
+
+A5C2CC
+利用rand( ) 函数随机生成示范数据，生成一张默认的柱形图。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6QyRwMefwY6JakDCdREYwG61vhkI8TSbz4qmFmJWelv0RS0u2cTx4jQ/0?
+比起酷炫3D渐变阴影风，Excel2016的默认图表更易让人接受，这张图表在设计方面其实已经合格。不过男同胞若要为姑娘们的PPT和Excel排忧解难，我们得再深入设计。
+首先将数据和图表分离在两张sheet。
+新sheet背景涂成灰色，记住是灰色。灰色是一种中立的颜色，它和任何颜色结合都不会显得突兀。
+接下来就是砍砍砍时间，我们将图表上所有与数据表达无关的元素全部删除：销售额标题移除、背景色设置为透明，柱形图颜色调整为配色方案。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6Sloc2MNuShxgmHokwLEBRsLcW5IPwHj0Love2M060kqWer8pw5yndw/0?
+很多人会疑问，为什么连标题、背景色都要删除。它和word的原理近似：设计样式和内容分离。图表只需要聚焦于数据表达本身。标题可以通过Excel的单元格添加，别用图表的元素。
+对第一列单元格颜色填充，拉高，开头空两格，输入配色文字。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6buPNKljjO64vpb5VHiaWP2xiagWbaT6zWON2anxQZmQdx8dicZ7JK3YTQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6JyFjOiabD6QnJoZXYRk5onzy6ibyu5QdNia7f6n8n1j5011rm1hs3kzyQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6iawdiaLgQPfB4Q3Fw627xk6ibSB2OrPKfFDykyX9raiaYF7j8AkZKNTsVw/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6eFE9g0ZoLcvGFHjjwAcFbatd3o3uGntvn5Z3Yf4icWtibZKGCn76OtFw/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6eYoTkP2iaJx2uhVEjb9ANaEbujaBmWv1Iwiam7XficEJuXwNqVFiapVia8Q/0?
+我希望大家看到这里，能了解Excel图表和报表的设计原理，<strong>但日后不要陷入一味追求美观的道路</strong>。图表是最终结果的呈现，作为报告让它美观无可厚非，但是在分析过程中，马马虎虎也就得了，毕竟自己看。在我的工作场景中，除了有需要，我也不会专门设计这类报表。
+
+另外悄悄告诉大家，不要展示太牛逼的图表设计技巧，不然以后老板都会让你设计的……
+ok，了解完图表和报表设计，接下来讲解中高级技巧。
+复合图表复合图表和次坐标轴堪称图表届的vlookup。它能给图表添加更丰富的视觉表达。
+前文中我增加了利润数据，现在我们需要计算利润的变化趋势。因为利润和销售额不是同一个维度，再用柱形图不合适，此时可以用折线图。
+点“选择数据”，添加利润，Y轴选取利润所在数据区域。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6t8pTVMexctl8z68XPGSfry5CTyZwoIPD05qZzulbr7t3Au7iaNsK7ag/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw62p6Gm17WnuEW04PricpOcxicycUeQMOhC8vFIMa5F2Hr5KMqNMuKbFVQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6K1GI6nmWxibldgibfkjRNQibgmRLM1y1lttxdfuYVZraG1TMjwwY0REiag/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6Nhib02YYbLz0RopyhDYg3kxhSribVrtMLFTHpdVIAlmpLzHUXcXicvrZg/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6RUq69pzQeBVKzdicYwZGG5tXp1XlpzuhBM7Glv4gMyPAWrkF057MuLg/0?
+辅助列如果复合图表及次坐标轴堪称图表届的vlookup，那么辅助列就是图表的数据透视表。
+在我之前的文章<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484160&amp;idx=2&amp;sn=bd83c5529c3a5e6607d6a2d552f460ab&amp;chksm=ec5edc7ddb29556bf2995e0dcb879f328b4cbb42e3cd0878296c0b498df9d78271258c31412e&amp;scene=21#wechat_redirect" target="_blank"><span style="color: rgb(65, 140, 175); text-decoration: underline;">《Excel技巧：如何绘制一份优秀的甘特图（项目管理）》</span></a>，里面甘特图的绘制借助了辅助列。
+这里讲解如何利用辅助列绘制漏斗图。
+下图是牛逼逼有限公司电商APP的销售流程转化，每一行代表用户操作类型和对应达成的用户数。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6ehyHDloJK7NVNt2JDPO2fkAO5DFb03y7jRTlXQBphicVLmntpvibYIrQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6icw7yJ4iaHFAxAM2llyc4n0ibJ4alooK2sap40ibZTgLcmMYJxBm3wasiaA/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6NRTyNhc4MP4VyUkb9tic2JDTGJDKsVM6JCd4PbOOP69yfa9rInxfPNA/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6GyDdDhV09BQ7RwPNLDgWyKZ1oicRS5gBsKy7iaQcWFy2obJibtQks5OuA/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6DxY1DXZiafFJJeVkorX5pyajs8xTbxoaZUiaY2qQUVlopIBk7njIYaPg/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw65hIEy0SdQho53TzeIBDzedhYOCcFsmwgyjDVSP0wqlQM4f990VJibxA/0?
+辅助线／误差线辅助线和辅助列不一样，辅助线是图表附加的元素。辅助线能绘制高级图表。
+甘特图在项目管理中用来统筹时间进度。如果我需要在现有的图表基础上增加原计划实际计划，应该怎么做？下图是牛逼逼公司在其APP上准备的双十二促销活动计划表。如何直观的用甘特图表示活动进度？
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6mdE23URSccUibfVEhABGPnu4pelK9IntFzCEGZvdESa1IYu3eibfN3gA/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6QEvKQ6KEWHmSiaNTg23AVV5xwaiaRX5B4YmdUa3wictTfSSKpJTWt0DOQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6Iu0sVGibG7VBwiciaWXOYVIUG6eb3XlBVkuOjbNzjxTFvPiaMXra8LxiaZQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6O37ptUvxkicBlZZ4H5ttJJcaiaVktoibm15Bf0icibMiajJolWGaEYarZtFQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw69X0cOJIpazqKn98UCk94c6cq4LGcFYPwe0Z6NENV3mg55VNhN2m9Og/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6LYuIScvD36o0570Rdm4Th6PlyjYycRloCmlpZgDFOjGOjiayviaMQWKQ/0?
+ 

@@ -1,0 +1,124 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xef\xbc\x9a\xe6\x89\x8b\xe6\x8a\x8a\xe6\x89\x8b\xe6\x95\x99\xe4\xbd\xa0Excel\xe5\xae\x9e\xe6\x88\x98'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）
+  在
+
+<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484172&amp;idx=1&amp;sn=e2400dfa62761f601e01fb7a253526a6&amp;chksm=ec5edc71db29556780e133728ada2c36a002599023918c543da903c97ef15f1633b887a612ad&amp;scene=21#wechat_redirect" target="_blank">《数据分析：常见的Excel函数全部涵盖在这里了》<span style="color: rgb(65, 140, 175);"></span>
+</a>和<span style="color: rgb(65, 140, 175); text-decoration: underline;">
+<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484175&amp;idx=1&amp;sn=96140a622dac81666d149b5ccf0d7aa1&amp;chksm=ec5edc72db295564111e16a2e6f1640997501777c429e829ceae2eb7671844c6ea09bd8ecb47&amp;scene=21#wechat_redirect" target="_blank">《数据分析：Excel技巧大揭秘》</a></span>
+后，今天这篇文章讲解实战，如何运用上两篇文章的知识进行分析。内容是新手向的基础教程。
+曾经有童鞋向我反应没有Excel数据练习，所以这次提供真实数据。为了更好的了解数据分析师这个岗位，我用爬虫爬取了招聘网站上约5000条的数据分析师职位数据。拿数据分析师进行数据分析。
+数据真实来源于网络，属于网站方，请勿用于商业用途。
+操作版本：Excel 2016 Mac版。文件大小约2M。
+原始数据最好另外保存一份，后期数据可视化、SQL、Python的教程都会用到（主要我懒得找其他数据了）。
+
+演示过程分为五个步骤：明确目的，观察数据，清洗数据，分析过程，得出结论。
+这也是通常数据分析的简化流程。
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0.png
+明确目的数据分析的大忌是不知道分析方向和目的，拿着一堆数据不知所措。<strong>一切数据分析都是以业务为核心目的</strong>，而不是以数据为目的。
+数据用来解决什么问题？
+是进行汇总统计制作成报表？
+是进行数据可视化，作为一张信息图？
+是验证某一类业务假设？
+是希望提高某一个指标的KPI？
+永远不要妄图在一堆数据中找出自己的结论，太难。目标在前，数据在后。哪怕给自己设立一个很简单的目标，例如计算业务的平均值，也比没有方向好。因为有了平均值可以想数字比预期是高了还是低了，原因在哪里，数据靠谱吗？为了找出原因还需要哪些数据。
+既然有五千多条数据分析师的岗位数据。不妨在看数据前想一下自己会怎么运用数据。
+数据分析师是一个什么样的岗位？
+它的工资和薪酬是多少？
+它有什么特点，需要掌握哪些能力？
+哪类公司更会招聘数据分析师？
+等等。
+有了目标和方向后，后续则是将目标拆解为实际过程。
+观察数据http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6rkAtgWJ0T4ic3EBmPpTdhTgT0MfnpKjQDFuZhLLgWLNOA4QAzoEpoQA/0?
+拿出数据别急切计算，先观察数据。
+
+字段名称都是英文，我是通过Json获取的数据，所以整体数据都较为规整。绝大部分数据源的字段名都是英文。因为比起拼音和汉字，它更适合编程环境下。
+先看一下columns的含义：
+数据基本涵盖了职位分析的所需。职位中的职位描述没有抓下来，一来纯文本不适合这次初级分析，二来文本需要分词以及文本挖掘，后续有机会再讲。
+首先看一下哪些字段数据可以去除。companyId和positionId是数据的唯一标示，类似该职位的身份证号，这次分析用不到关联vlookup，我们先隐藏。companyFullName和companyShortName则重复了，只需要留一个公司名称，companyFullName依旧隐藏。
+尽量不删除数据，而是隐藏，保证原始数据的完整，谁知道以后会不会用到呢？
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6rMRd5LwL9Ml3iatjP4ojzTCCmD6r0M2WSOsOJgErS18yKW2zmSFPGuQ/0?
+接下来进行数据清洗和转换。因为只是Excel级别的数据分析，不会有哑变量离散化标准化的操作。我简单归纳一下。
+
+数据有无缺失值数据的缺失值很大程度上影响分析结果。引起缺失的原因很多，例如技术原因，爬虫没有完全抓去，例如本身的缺失，该岗位的HR没有填写。
+如果某一字段缺失数据较多（超过50%），分析过程中要考虑是否删除该字段，因为缺失过多就没有业务意义了。
+Excel中可以通过选取该列，在屏幕的右下角查看计数，以此判别有无缺失。
+companyLabelList、businessZones、positionLables都有缺失，但不多。不影响实际分析。
+
+数据是否一致化一致化指的是数据是否有统一的标准或命名。例如上海市数据分析有限公司和上海数据分析有限公司，差别就在一个市字，主观上肯定会认为是同一家公司，但是对机器和程序依旧会把它们认成两家。会影响计数、数据透视的结果。
+我们看一下表格中的positionName
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6VehCHSxD1QXkcKzdZ6NxILuu9OTibGV0tPib3X7mlTaRRzIj2P5usAOQ/0?
+各类职位千奇百怪啊，什么品牌保护分析师实习生、足球分析师、商业数据分析、大数据业务分析师、数据合同管理助理。并不是纯粹的数据分析岗位。
+为什么呢？这是招聘网站的原因，有些职位明确为数据分析师，有些职位要求具备数据分析能力，但是又干其他活。招聘网站为了照顾这种需求，采用关联法，只要和数据分析相关职位，都会在数据分析师的搜索结果中出现。我的爬虫没有过滤其他数据，这就需要手动清洗。
+这会不会影响我们的分析？当然会。像大数据工程师是数据的另外发展方向，但不能归纳到数据分析岗位下，后续我们需要将数据分析强相关的职位挑选出来。
+数据是否有脏数据脏数据是分析过程中很讨厌的环节。例如乱码，错位，重复值，未匹配数据，加密数据等。能影响到分析的都算脏数据，没有一致化也可以算。
+我们看表格中有没有重复数据。
+这里有一个快速窍门，使用Excel的删除重复项功能，快速定位是否有重复数据，还记得positionId么？因为它是唯一标示，如果重复了，就说明有重复的职位数据。看来不删除它是正确的。
+对positionId列进行重复项删除操作
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6ibFe2t93yYDJyyicOhic3XibpehfRbwVas4yVxY78XpJ0Ka4U2XfjlncHw/0?
+有1845个重复值。数据重复了。这是我当时爬取完数据时，将北京地区多爬取一次人为制作出的脏数据。接下来全选所有数据，进行删除重复项，保留5032行（含表头字段）数据。
+数据标准结构数据标准结构，就是将特殊结构的数据进行转换和规整。
+表格中，companyLableList就是以数组形式保存（JSON中的数组）
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw63xmiaFaLBEpMO8cZty5VAb0ibDcCcZh7G0gS2LjEXZqX0GR9evxvBBlg/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw63jj8RUPrHMe4GjiaScNgCFtJ2Rtcv2nFO8zhI9VgrtACU1r0n5RLrlA/0?
+薪水的话用了几K表示，但这是文本，并不能直接用于计算。而且是一个范围，后续得按照最高薪水和最低薪水拆成两列。
+OK，数据大概都了解了，那么下一步就是将数据洗干净。
+数据清洗数据清洗可以新建Sheet，方便和原始数据区分开来。
+先清洗薪水吧，大家肯定对钱感兴趣。将salary拆成最高薪水和最低薪水有三种办法。
+一是直接分列，以"-"为拆分符，得到两列数据，然后利用替换功能删除 k这个字符串。得到结果。
+二是自动填充功能，填写已填写的内容自动计算填充所有列。但我这个版本没有，就不演示了。
+三是利用文本查找的思想，重点讲一下这个。先用 =FIND("k",O2,1)。查找第一个K（最低薪酬）出现的位置。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6jRYJu4KQ6xNDT7qUPsan9P1sqnL3bUJZwHC67icDIe5PZQGZTbficphQ/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6FBxAVDiamDpcG4dT09wUibDvrhiaDliah2r4NQm8ruSWHF7fSJP3CS8M9w/0?
+最高薪水也是同样的思路，但不能使用k，因为第二个薪水位置不固定。需要利用find查找"-"位置,然后截取 从"-" 到最后第二个位置的字符串。
+=MID(O2,FIND("-",O2,1)+1,LEN(O2)-FIND("-",O2,1)-1)
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6MXTkAoGX5DINfdSetZRTZp6dJERoEj2MLyyWYkztYmn3LCophibjC7g/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6AW3hm66kqHOwf2PvLx2dhDgVxP9XFxJwR6dcDLuBKuJpeg0tibicvmxg/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6xeBeIFAtlHhuRbwaaicRToXic9pvlfLOVYRpTdGUfBIy8iafd8RCRAUOg/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6iaAKZu7Fc4Ppx5BGUPiaameia6q8iaaOB96s71ODto02wIibDZ6V8IzO4mA/0?
+原来是大写K，因为find对大小写敏感，此时用search函数，或者将K替换成k都能解决。
+另外还有一个错误是很多HR将工资写成5K以上，这样就无法计算topSalar。为了计算方便，将topSalary等于bottomSalary，虽然也有误差。
+这就是我强调数据一致性的原因。
+companyLabelList是公司标签，诸如技能培训啊、五险一金啊等等。直接用分列即可。大家需要注意，分列会覆盖掉右列单元格，所以记得复制到最后一列再分。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw62WaowMuNjhE4nxmxX9bYzTkVQb1rdHxTpEI2e6dNl2p1RUFU2lcDbg/0?
+符号用搜索替换法删除即可。
+positionLables、positionAdvantage、businessZones同样也可以用分列法。如果观察过数据会知道，companyLabelList公司标签都是固定的内容，而其他三个不是。这些都是HR自己填写，所以就会有各种乱七八糟不统一的描述。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6PLOkbx2fARHJHo2mcZbrZ2eySMESicgvUksKxWffUMvoiaX94Geh1jMg/0?
+这些内容均是自定义，没有特别大的分析价值。如果要分析，必须花费很长的时间在清洗过程。主要思路是把这些内容统一成几十个固定标签。在这里我将不浪费时间讲解了，主要利用Python分词和词典进行快速清洗。
+因为时间和性价比问题，positionAdvantage和businessZones我就不分列了。只清洗positionLables职位标签。某一个职位最多的标签有13个。
+['实习生', '主管', '经理', 
+'顾问', '销售', '客户代表', '分析师', '职业培训', '教育', '培训', '金融', '证券', '讲师']
+这个职位叫金融证券分析师助理讲师助理，我真不知道为什么实习生、主管、经理这三个标签放在一起，我也是哔了狗了。反正大家数据分析做久了，会遇到很多Magic Data。
+接下来是positionName，上文已经讲过有各种乱七八糟或非数据分析师职位，所以我们需要排除掉明显不是数据分析师的岗位。
+单独针对positionName用数据透视表。统计各名称出现的次数。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6CAJ22Z7nz8Bx2ribtOrvESxqdWVgwZxMARS8v1XQg72QXGPSQHFZAMA/0?
+出现次数为3次以下的职位，有约一千，都是各类特别称谓，HR你们为什么要这样写…要这样写…这样写。更改职位名称似乎不现实，那就用关键词查找的思路，找出包含有数据分析、分析师、数据运营等关键词的岗位。虽然依旧会有金融分析师这类非纯数据的岗位。
+用find和数组函数结合，shift+ctrl+enter输入。就得到了多条件查找后的结果。
+=IF(COUNT(FIND({"数据分析","数据运营","分析师"},M33)),"1","0")
+单纯的find 只会查找数据分析这个词，必须嵌套count才会变成真数组。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6nh8FxxSPwLBkmPS509iaWzWkPRVr53XqSYKxwlHP3S0woDaxZ9xIZhA/0?
+1为包含，0不包含。将1过滤出来，这就是需要分析的最终数据。
+当然大家如果感兴趣，也可以看一下大数据工程师，数据产品经理这些岗位。
+分析过程分析过程有很多玩法。因为主要数据均是文本格式，所以偏向汇总统计的计算。如果数值型的数据比较多，就会涉及到统计、比例等概念。如果有时间类数据，那么还会有趋势、变化的概念。
+整体分析使用数据透视表完成，先利用数据透视表获得汇总型统计。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6B4fjss6QyKpkaUvYDyYN91lwbeuuqYODkQkm5GuThibqK5qJDQBXO0g/0?
+看来北京的数据分析岗位机会远较其他城市多。1-3年和3-5年两个时间段的缺口更大。应届毕业生似乎比1年一下经验的更吃香。爬取时间为11月，这时候校招陆续开始，大公司会
+有线下校招，实际岗位应该更多。小公司则倾向发布。这是招聘网站的限制。
+看一下公司对数据分析师的缺口如何。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6lsDpgVu52pZee5Ksn0JmsdbtdRia2BhdbaC2gOgO6bjg740ibibB080uQ/0?
+似乎是公司越大，需要的数据分析师越多。
+但这样的分析并不准确。因为这只是一个汇总数据，而不是比例数据，我们需要计算的是不同类型企业人均招聘数。
+如果北京的互联网公司特别多，那么即使有1000多个岗位发布也不算缺口大，如果南京的互联网公司少，即使只招聘30个，也是充满需求的。
+还有一种情况是企业刚好招聘满数据分析师，就不发布岗位了，数据包含的只是正在招聘数据分析师的企业，这些都是限制分析的因素。我们要明确。
+有兴趣大家可以深入研究。
+看一下各城市招聘Top5公司。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6xGpp0ic0zTzgHSXjjZwoT0MR8ib4oc6ddCfjz3Txtqr3icibITIDj48N0Q/0?
+北京的美团以78个数据分析职位招聘力压群雄，甚至一定程度上拉高了北京的数据。而个推则在上海和杭州都发布了多个数据分析师职位，不知道是HR的意外，还是要大规模补充业务线（在我写这篇文章的时候，约有一半职位已经下线）。
+比较奇怪的是阿里巴巴并没有在杭州上榜，看来是该阶段招聘需求不大，或者数据分析师有其他招聘渠道。
+没有上榜不代表不要数据分析师，但是上榜的肯定现阶段对数据分析师有需求。
+我们看一下数据分析师的薪水，可能是大家最感兴趣的了。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6zCRde4awX1rGbvNR3jyLTL7SXe9nAK4YOzyX1jTPIMDd4XLurahgEw/0?
+我们看到南京、西安在应届生中数据最高，是因为招聘职位不多，因为单独一两个企业的高薪影响了平均数，其余互联网二线城市同理。当工作年限达到3年以上，北上深杭的数据分析师薪资则明显高于其他城市。
+数据会有误差性么？会的，因为存在薪资极值影响。而数据透视表没有中位数选项。我们也可以单独用分位数进行计算，降低误差。
+薪资可以用更细的维度计算，比如学历、比如公司行业领域，是否博士生远高于本科生，是否金融业薪资高于O2O。
+另外数据分析师的薪资，可能包括奖金、年终奖、季度奖等隐形福利。部分企业会在positionAdvantage的内容上说明，大家可以用筛选过滤出16薪这类关键词。作为横向对比。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6sZMw5pelSb3YBAnDYNiaeIRHFBpttk6FzTLZpEtwCL7xOric4jpPozNw/0?

@@ -1,0 +1,94 @@
+Python从零开始系列连载（5）——Python的基本运算和表达式（上） 前文传送门：
+     变量是什么意思？还记得之前讲过的装菜的盘子和碗么？不记得就回去看看咯<br style="max-width: 100%;box-sizing: border-box;overflow-wrap: break-word !important;"  />
+如果你学过其他语言，使用变量先要定义，或者在定义的同时赋值
+而派森的变量不需要单独定义，你直接在赋值的过程中完成了定义
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lNasldEddXWVb3kkpwZLCmiaKLde3ibqwWDpMOhUhY1IAdDobPic6jkQWg/640?wx_fmt=png
+ 当我们直接运行一个没有赋值过的变量，就报错了
+之后我们对变量赋值操作，这时变量就被定义了
+之后我们可以查看变量<br style="max-width: 100%;box-sizing: border-box;overflow-wrap: break-word !important;"  />
+ 如果我们对已赋值的变量再次赋值
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lguMX4iajGicKTpiciaJUnqCJvDaeA0SicA0ibgEVzheiblrGeA50maTFIicRtA/640?wx_fmt=png
+ 可以发现变量的值改变了，使用了最后一次赋值的值，也就是上一次的值被覆盖了
+ 当我们不需要某个变量时候，我们可以'过河拆桥'删掉它，使用del 变量名
+ 来删除
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5ljM1Pc3Y5svCUfsUy47N8IkHPbfZC3cYGfEdQFmg4lSB7mGgThlWyog/640?wx_fmt=png
+ 所以再次查看变量student时候，系统报错了，因为已经删除掉了，tan90°（不存在）了
+ 每一个变量都占据着一定的内存空间，当变量被删除了之后，这段内存空间就被释放了
+ 小明：老湿！定义了太多变量，我的内存不够了岂不是要爆炸！
+ 小明同学的问题很好，不过大家不要慌，Python有自动辣鸡（垃圾）回收机制，会自动释放不再使用的内存空间啦
+ 有时候，我们的变量要进行运算，例如字符串类型的 '233'
+我想让它和整型的 233 相加
+我们试试
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lUGbRCJOKwBtpY0sn7dONBen08ulBokglWgt08uGpkw8D6fZqhk3zPg/640?wx_fmt=png
+ 发现系统报错了，看内容是说‘必须是字符串，不能是整型’
+ 大家还记得我们之前讲过的字符串连接操作么（不记得了酷爱回去看哦）
+ 因为这里我们运算中先写的字符串，所以系统默认是做的字符串连接操作，而系统之后发现后面的不是个字符串
+ 他就炸了，说：说好的字符串连接呢？干嘛给个整型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5luavXzOz2aoe7BjvicgmhGCpR1hYiaaydAwM2D5Oy1GtO8UFBeZfQcHWw/640?wx_fmt=png
+ 为了验证这点，我们换位思考一下
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lLuBH1BmWr86XEVljmAkqWgupeUhbm31gYYnbqWN1vA4LwdGXGXW22A/640?wx_fmt=png
+ 这时候说int和str不能做运算
+ 那怎么办呢，我就想运算
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lJR1qWEibhssiaupWzrOQ5OFh8iaufo5F1O4wq0nfT19wQibfWppvWzqxGQ/640?wx_fmt=png
+ 类型转换闪亮登场！！！！dangdangdangdang
+ float（）函数，将其他类型数据转为浮点数
+str（）函数，将其他类型数据转为字符串
+int（）函数，将其他类型数据转为整型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lg0dbofwVMYzDuaxwcgDzM6ODliaQyMmYLghMp9ia6r6Xt6AH7VvR17Ow/640?wx_fmt=png
+   小明：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l8Cd85SROfxXoIe8dFsvOrSdSxPgziaq2GNZqInynWTibXYq4MkrIZiahw/640?wx_fmt=png
+  于是小明想搞个大新闻，看看自己的幸运数字
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lfck3Hk1xjlv2aubKFEDkqMiaWR92ZibVZvxaQsT48jPOBiak1XaIOD8DQ/640?wx_fmt=png
+ 抱歉，这并不支持
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lVbDwrbWnJXwLV34qp2MicC50wWpIbv6LmxkMlw8vM99Tp0ZjnYbQyCA/640?wx_fmt=png
+ 划重点：int（）强制转换类型时候是扔掉小数点之后的数字，而不是四舍五入
+ 小明：我不服！
+ 不服试试
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lMVicWpkicib0beJlfrdQkXmWXDnT4eCDZKpSdKxgWkc3MRqEyWw34QqbA/640?wx_fmt=png
+ 小明：<br style="max-width: 100%;box-sizing: border-box;overflow-wrap: break-word !important;"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lfCR37ia0S7kaXnPWmsFqXBLRLiacZrjG9g9rBYvH0ykvHACYDXasgziag/640?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lpP1FLicwvLUgaouKuyL21acWXJNK2q9IOya3pRu7xOKYFLxdc4yms0w/640?wx_fmt=png
+ 算数运算符的优先级（按照从低到高排序，同一行优先级相同）
+1. +、-<br style="max-width: 100%;box-sizing: border-box;overflow-wrap: break-word !important;"  />
+2. * , / , // , %
+3. 单目+、单目-
+4.**
+ 我们来看几个栗子：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lCYjsFQ8OTNSkrIPGR8V6cy9MxX6of7C8Gpkf6br2Go6lW6nj39gib4A/640?wx_fmt=png
+ 之前的运算都是整型数据运算，如果是不同类型的数据运算，会发生隐式类型转换。
+转换的规则是：低等类型向高等类型转换
+前提是可以进行算术运算
+等级从低到高是：bool&lt;int&lt;float&lt;complex
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lsCcg7SFez6iaFYlrx5KaKzLNDLuZgh3B8R8m6cAFnYnwpRWVkUVcaBg/640?wx_fmt=png
+   常用的Python的运算内置函数：
+内置（意思就是安装好就有，直接能用）
+举个栗子，还记得以前手机么，买来很多内置游戏和扣费软件，真是让人深恶痛绝
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lwcvUlOYho610icpU8qs5Q6RF5icAYlcKnbWYu7jZJh7oFJpicCQoyoYIA/640?wx_fmt=png
+上表中的long，大家不用理会
+ 我们分别看一下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lHyxvxQ4R1vQ4PumZtS246okOTy7Qeu8ibDW4FW7LD623xKNAbicscCicw/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lyAXribSvWJmibVzH4ic2909j5F4qqHcAoLYGvoCm1cFEciblugibWkmkEZA/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lSW8Jias26zMANiahwZGuo3hAPuhVkhSBwwjHDYlRibmicjjYCTO0UqznPg/640?wx_fmt=png
+ 小明：老师！你的数字近似只会四舍五入么？这个操作过时了！
+ 小明啊，莫激动，虽然内置的没有，我们可以导入一些第三方的模块嘛！就像你新买的手机里没有王者荣耀，你就去应用商店下载个不就能玩了么！
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lxwRFOib3FzEOG4pxQNHtf7cYNKFz9NvPZlUJGtUIGpZ02qyibluryib4g/640?wx_fmt=png
+  导入模块的操作是
+import 模块的名称
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lv5sGkIy53TQYNLHE0ss31sPulQS3d3WtiakrZR1ibyQOIKvmiaHQ9pqkQ/640?wx_fmt=png
+ 我们导入了math这个模块，这个模块是做一些数学运算的
+ ceil（x）方法是返回大于等于x的最小整数
+floor（x）方法是返回小于等于x的最大整数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5libzRPIJkic6hFZib8N3HWmvJTIp9sk5H7J8BItCUwowyP0A9HmDGXRUlg/640?wx_fmt=png
+ 常用的还有几个：
+sqrt（x）返回平方根
+exp（x）返回以e为底的指数
+log（x）对数操作
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5ld3Yc0qovv8slj4uFTKQukqCyJS7CxWOeu1wvKQUA8rOrnrmUQYQFHQ/640?wx_fmt=png
+ 还有常用的数学常量
+π 和 e
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lM0NRMLoF3UQuV18iacVwzdK54NXNX3V8DRJ0L4xmjcy9cfPiblIGMEOA/640?wx_fmt=png
+   如果你要长时间多次使用某个模块的内容
+可以使用：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lYkz99RDhsF50cSgdFxmfdxqBdP3BaS3nxXo2qgN5mW5HHY70CSWkMA/640?wx_fmt=png
+ 则直接可以使用模块里的方法和常量
+     人生苦短，我选Python

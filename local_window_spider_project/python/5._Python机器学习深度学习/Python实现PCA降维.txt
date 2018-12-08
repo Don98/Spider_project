@@ -1,0 +1,76 @@
+b'Python\xe5\xae\x9e\xe7\x8e\xb0PCA\xe9\x99\x8d\xe7\xbb\xb4'     # 导入数据加载器
+&gt;&gt;&gt; from sklearn.datasets import load_digits
+&gt;&gt;&gt; digits = load_digits()
+# 64维，1797条数据
+&gt;&gt;&gt; digits.data.shape
+(1797, 64)
+&gt;&gt;&gt; digits.target.shape
+(1797,)
+# 切割数据，25%测试
+&gt;&gt;&gt; from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.25, random_state=33)<br style=""  /></pre><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><br style=""  /></h3><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"></h3><h2 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;font-size: 20px;white-space: normal;line-height: 1.7;"><strong style=""><span style="font-size: 18px;">直接SVM模型性能评估</span></strong></h2><pre class="" style="margin-top: 1.64em;margin-bottom: 1.64em;padding: 7px 10px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;background-color: rgb(249, 249, 249);overflow: auto;font-size: 0.9em;line-height: 1.5;color: rgb(76, 76, 76);word-break: break-all;border-style: none none none solid;border-left-width: 4px;border-left-color: rgb(218, 218, 218);">&gt;&gt;&gt; from sklearn.preprocessing import StandardScaler
+&gt;&gt;&gt; from sklearn.svm import LinearSVC
+# 标准化数据
+&gt;&gt;&gt; ss = StandardScaler()
+&gt;&gt;&gt; X_dire_train = ss.fit_transform(X_train)
+&gt;&gt;&gt; X_dire_train.shape
+(1347, 64)
+&gt;&gt;&gt; X_dire_test = ss.transform(X_test)
+# 线性核函数初始化
+&gt;&gt;&gt; lsvc = LinearSVC()
+# 训练模型
+&gt;&gt;&gt; lsvc.fit(X_dire_train, y_train)
+# 预测
+&gt;&gt;&gt; y_dire_predict = lsvc.predict(X_dire_test)<br style=""  /></pre><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><br style=""  /></h3><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><span style="font-size: 18px;">直接SVM模型性能评估</span><br style=""  /></h3><pre class="" style="margin-top: 1.64em;margin-bottom: 1.64em;padding: 7px 10px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;background-color: rgb(249, 249, 249);overflow: auto;font-size: 0.9em;line-height: 1.5;color: rgb(76, 76, 76);word-break: break-all;border-style: none none none solid;border-left-width: 4px;border-left-color: rgb(218, 218, 218);"># 使用模型自带的评估函数进行准确性测评 
+&gt;&gt;&gt; print('The Accuracy of Linear SVC is', lsvc.score(X_dire_test, y_test))
+# 导入classification_report模块对预测结果做更加详细的分析
+from sklearn.metrics import classification_report
+print(classification_report(y_test, y_dire_predict, target_names=digits.target_names.astype(str)))<br style=""  /></pre><p style="margin-bottom: 8px;white-space: normal;color: rgb(51, 51, 51);font-size: 14px;">
+显示<br style=""  />
+The Accuracy of Linear SVC is 0.953333333333
+ 		precision    recall  f1-score   support
+  0       0.92      1.00      0.96        35
+  1       0.96      0.98      0.97        54
+  2       0.98      1.00      0.99        44
+  3       0.93      0.93      0.93        46
+  4       0.97      1.00      0.99        35
+  5       0.94      0.94      0.94        48
+  6       0.96      0.98      0.97        51
+  7       0.92      1.00      0.96        35
+  8       0.98      0.84      0.91        58
+  9       0.95      0.91      0.93        44
+
+avg/total  0.95     0.95      0.95        450<br style=""  /></pre><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><br style=""  /></h3><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><span style="font-size: 18px;">PCA特征降维</span><br style=""  /></h3><pre class="" style="margin-top: 1.64em;margin-bottom: 1.64em;padding: 7px 10px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;background-color: rgb(249, 249, 249);overflow: auto;font-size: 0.9em;line-height: 1.5;color: rgb(76, 76, 76);word-break: break-all;border-style: none none none solid;border-left-width: 4px;border-left-color: rgb(218, 218, 218);">&gt;&gt;&gt; from sklearn.decomposition import PCA
+&gt;&gt;&gt; estimator = PCA(n_components=20)   # 初始化，64维压缩至20维
+# 利用训练特征决定（fit）20个正交维度的方向，并转化（transform）原训练特征
+&gt;&gt;&gt; pca_X_train = estimator.fit_transform(X_train)
+&gt;&gt;&gt; pca_X_train.shape
+(1347, 20)   # 维度从64变为20
+# 测试特征也按照上述的20个正交维度方向进行转化（transform）
+&gt;&gt;&gt; pca_X_test = estimator.transform(X_test)<br style=""  /></pre><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><strong style=""><br style=""  /></strong></h3><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><span style="font-size: 18px;"><strong style="">线性核函数的支持向量机分类</strong></span><br style=""  /></h3><pre class="" style="margin-top: 1.64em;margin-bottom: 1.64em;padding: 7px 10px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;background-color: rgb(249, 249, 249);overflow: auto;font-size: 0.9em;line-height: 1.5;color: rgb(76, 76, 76);word-break: break-all;border-style: none none none solid;border-left-width: 4px;border-left-color: rgb(218, 218, 218);">from sklearn.svm import LinearSVC
+pca_svc = LinearSVC()
+pca_svc.fit(pca_X_train, y_train)  # 训练模型 
+y_predict = pca_svc.predict(pca_X_test) # 进行预测<br style=""  /></pre><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><span style="font-size: 18px;"><strong style=""><br style=""  /></strong></span></h3><h3 style="margin-top: 20px;margin-bottom: 10px;font-weight: bold;white-space: normal;line-height: 1.7;color: rgb(51, 51, 51);"><span style="font-size: 18px;"><strong style="">模型性能评价</strong></span><br style=""  /></h3><pre class="" style="margin-top: 1.64em;margin-bottom: 1.64em;padding: 7px 10px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;background-color: rgb(249, 249, 249);overflow: auto;font-size: 0.9em;line-height: 1.5;color: rgb(76, 76, 76);word-break: break-all;border-style: none none none solid;border-left-width: 4px;border-left-color: rgb(218, 218, 218);">&gt;&gt;&gt; from sklearn.metrics import classification_report
+# 自带评价函数
+&gt;&gt;&gt; print('The Accuracy of Linear SVC after PCA is', pca_svc.score(pca_X_test,y_test))
+# 详细评价精确率，回调率，f1指数
+&gt;&gt;&gt; print(classification_report(y_test, y_predict, target_names=np.arange(10).astype(str)))<br style=""  /></pre><p style="margin-bottom: 8px;white-space: normal;color: rgb(51, 51, 51);font-size: 14px;"><br style=""  />
+
+显示：<br style=""  />
+The Accuracy of Linear SVC after PCA is 0.935555555556
+		precision    recall  f1-score   support
+  0       0.94      0.97      0.96        35
+  1       0.88      0.93      0.90        54
+  2       1.00      0.98      0.99        44
+  3       0.91      0.89      0.90        46
+  4       1.00      0.94      0.97        35
+  5       0.94      0.92      0.93        48
+  6       0.96      0.98      0.97        51
+  7       0.95      1.00      0.97        35
+  8       0.90      0.90      0.90        58
+  9       0.93      0.89      0.91        44
+
+avg/total  0.94     0.94      0.94        450<br style=""  /></pre><p style="margin-bottom: 8px;white-space: normal;color: rgb(51, 51, 51);font-size: 14px;"><br style=""  />
+
+相比于将样本数据不降维处理直接拿来训练，PCA降维处理后数据的会损失一点预测准确性(约0.02)，因为在降维过程中，尽管规避掉了大量的特征冗余和噪声，但是也会损失一些有用的模式信息，但是维度的大大压缩不仅节省了大量模型训练时间，也降低了模型的训练难度，对于高维样本来说是划算的选择。
+ 

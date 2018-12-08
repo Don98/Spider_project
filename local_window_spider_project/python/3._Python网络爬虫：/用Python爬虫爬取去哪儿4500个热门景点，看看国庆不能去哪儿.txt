@@ -1,0 +1,52 @@
+b'\xe7\x94\xa8Python\xe7\x88\xac\xe8\x99\xab\xe7\x88\xac\xe5\x8f\x96\xe5\x8e\xbb\xe5\x93\xaa\xe5\x84\xbf4500\xe4\xb8\xaa\xe7\x83\xad\xe9\x97\xa8\xe6\x99\xaf\xe7\x82\xb9\xef\xbc\x8c\xe7\x9c\x8b\xe7\x9c\x8b\xe5\x9b\xbd\xe5\xba\x86\xe4\xb8\x8d\xe8\x83\xbd\xe5\x8e\xbb\xe5\x93\xaa\xe5\x84\xbf'  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnT2L6F6jMiavgBtjdcfGSEBicrtC7LX9nT1Qb8kEyAQHuaTfqKK4DPCjQ/0?wx_fmt=jpeg
+金秋九月，丹桂飘香，在这秋高气爽，阳光灿烂的收获季节里，我们送走了一个个暑假余额耗尽哭着走向校园的孩籽们，又即将迎来一年一度伟大祖国母亲的生日趴体(无心上班，迫不及待想为祖国母亲庆生!)。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnOudo5p3cm6ClXnB5snudxMOWF422Lq6WWTnIiauZDGiaplW1MVRCk12g/0?wx_fmt=jpeg
+那么问题来了，去哪儿玩呢？百度输了个“国庆”，出来的第一条居然是“去哪里旅游人少”……emmmmmmm，因缺思厅。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnAZ2KTlS09VGFVhibaOlpbQrlkbGzPFyK2UNcWl6ibPI5iaGtp89gYcpNw/0?wx_fmt=png
+于是我萌生了通过旅游网站的景点销量来判断近期各景点流量情况的想法(这个想法很危险啊)。
+所以这次的目标呢，是爬去哪儿网景点页面，并得到景点的信息，大家可以先思考下大概需要几步。
+这次正好爬的是数据，我决定用数据的好基友——图表来输出我爬取的数据，也就是说我要用爬取的景点销量以及景点的具体位置来生成一些可视化数据。
+安利一下百度的地图API和echarts，前者是专门提供地图API的工具，听说好多APP都在用它，后者是数据处理居家旅行的好伙伴，用了之后，它好，我也好(隐约觉得哪里不对)。
+API是什么，API是应用程序的编程接口，就好像插头与插座一样，我们的程序需要电(这是什么程序?)，插座中提供了电，我们只需要在程序中写一个与插座匹配的插头接口，就可以使用电来做我们想做的事情，而不需要知道电是如何产生的。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn6ZQ3kpUBKpX2JvVg4Yyv9D5YMM5t7gS28dxzg20UwHcpp1yRia6WuoA/0?wx_fmt=png
+再详细一点讲呢，就好比米酱的小说写完啦！但她还想把小说出成书，可是怎么出书捏？米酱不会呀，这时候米酱发现某出版社提供了出版服务，出版社表示只需要提供小说的正文、以及一个设计的封面就可以啦，于是米酱将小说保存成了word格式，又画了个封面jpg图，发给了出版社，没过多久米酱就拿到了一本装订好的书啦(此段纯属虚构，专业出版人士尽管打我，我不会承认的)。
+在米酱出书的过程中，米酱并不需要知道出版社是怎么印刷这个书的，也不需要知道是怎么装订这个书的，米酱只需要提供出版社所要求的东西即可。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnCthOC3U5wcBd6wRQnfVIAHxgfsOI4uFIac098AZal1sib6m8kiaYyJSQ/0?wx_fmt=png
+有人可能说，我已经懂了api是啥意思了，可是咋个用呢。关于这一点，米酱很负责任的告诉你：<strong style="box-sizing: border-box;">我也不会</strong>。
+但是！
+百度地图提供了很多API使用示例，http://developer.baidu.com/map/jsdemo.htm#c1_15
+有html基础，大致可以看懂，有js基础就可以尝试改函数了(不会jsの我默默地复制源代码)，仔细观察源代码，可以知道热力图的生成主要的数据都存放在points这个变量中。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnIwzvoFGek2Ion1LnFYcNVfe9jAHdsZIGqKCr3o7vuOLicCCoXSv7Hog/0?wx_fmt=png
+这种[{x:x,x:x},{x:x,x:x}]格式的数据，是一种json格式的数据，由于具有自我描述性，所以比较通俗易懂，大概可以知道这里的三个值，前俩个是经纬度，最后一个应该是权重(我猜的)。
+也就是说，如果我希望将景点的热门程度生成为热力图，我需要得到景点的经纬度，以及它的权重，景点的销量可以作为权重，并且这个数据应该是json格式的呈现方式。
+echarts也是一样滴(*^__^*)。
+其实这次的爬虫部分是比较简单的(如果你有跟着我的文爬过网站的话)。
+分析网址(去哪儿景点)→爬取分页中信息(景点经纬度、销量)→转为json文件。
+分析去哪儿景点页的网址可得出结构：
+http://piao.qunar.com/ticket/list.htm?keyword=搜索地点&amp;region=&amp;from=mpl_search_suggest&amp;page=页数
+这次没有用正则来匹配内容，而使用了xpath匹配，肥肠好用。<span style="color: rgb(0, 128, 0);"></span>
+  为了防止代码运行错误，为了维护代码运行的和平，将输出的信息列表存入到excel文件中了，方便日后查阅，很简单的代码，需要了解pandas的用法。
+ <span style="font-size: 18px;">5.百度经纬度api</span> 但是，enhahhahahaha，我怎么会放弃呢，我又找到了百度经纬度api，网址：http://api.map.baidu.com/geocoder/v2/?address=地址&amp;output=json&amp;ak=百度密钥，修改网址里的“地址”和“百度密钥”，在浏览器打开，就可以看到经纬度的json信息。<span style="color: rgb(178, 34, 34);"></span>
+  这样我就可以根据爬到的景点地址，查到对应的经纬度辣！python获取经纬度json数据的代码如下。
+  观察获取的json文件，location中的数据和百度api所需要的json格式基本是一样，还需要将景点销量加入到json文件中，这里可以了解一下json的浅拷贝和深拷贝知识，http://python.jobbole.com/82294/
+最后将整理好的json文件输出到本地文件中。
+   然鹅，就算去掉了复杂信息，还有一些匹配不到的景点地址，于是我使用了嵌套try，如果景点地址匹配不到；就匹配景点名称，如果景点名称匹配不到；就匹配景点所在区域，如果依然匹配不到，那我……那我就……那我就跳过ㄒ_ㄒ……身为一个景点，你怎么能，这么难找呢！不要你了！
+这里生成的三个json文件，一个是给百度地图api引入用的，另俩个是给echarts引入用的。
+将第二章中所述的百度地图api示例中的源代码复制到解释器中，添加密钥，保存为html文件，打开就可以看到和官网上一样的显示效果。echarts需要在实例页面，点击页面右上角的EN切换到英文版，然后点击download demo下载完整源代码。
+根据html导入json文件修改网页源码，导入json文件。
+  这里使用了jQuery之后，即使网页调试成功了，在本地打开也无法显示网页了，在chrome中右键检查，发现报错提示是需要在服务器上显示，可是，服务器是什么呢？
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnRLs8FL08svWAcs7Yuia6wU90PDLQmKdUaOwQQ71qaZVEOKWGnCZicibsA/0?wx_fmt=png
+百度了一下，可以在本地创建一个服务器，在终端进入到html文件所在文件夹，输入python -m SimpleHTTPServer，再在浏览器中打开http://127.0.0.1:8000/，记得要将html文件名设置成index.html哦~
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnyz5FlbicjInx8uNjDnib0OJaiaaHD48fsz0LZWJtOzFqdbBR31YibRX1Bg/0?wx_fmt=png
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnwTCllSzPAM3BgibHVhbttKiaD884o2azHtc8HoAQeOHM0gS4HenAibibHw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnbiamp31Gx5DHhicTfXcb17EzaicicocCwVq0T0QeS2yqXzlthasy8n8iaIg/0?wx_fmt=png
+这些地图上很火爆的区域，我想在国庆大概是这样的
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnkto35hUmr4lUUUviadkMPYu0zkptW0g2b1atrmHEicmqIvyB1ZMQHS2Q/0?wx_fmt=jpeg
+这样的
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn4XWZGuUcHIJnye86apaNia2Iww1zqRS0tm4GFuXOcvqdxtticIjBiaj9g/0?wx_fmt=jpeg
+还有这样的
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnLicjcd2NDPG3eJ2wLQDyuicmmlLGBBhUzicU0tnGFbCAQruarU5HjvNtQ/0?wx_fmt=jpeg
+将地图上热门景点的销量top20提取出来，大多数都是耳熟能详的地点，故宫排在了第一位，而四川则占据了top5中的三位，而排在top20中也四川省就占了6位，如果不是因为地震，我想还会有更多的火爆的景点进入排行榜的~这样看来如果你这次国庆打算去四川的话，可以脑补到的场景就是：人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人人……
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnbnmnzrXUiczebXNKwjZia2wmI3XkmKw980UrHn4yHnz0IWss0yic5XFyA/0?wx_fmt=png
+于是我又做了一个各城市包含热门景点数目的排行，没想到在4千多个热门景点中，数目最多的竟是我大浙江，是第二个城市的1.5倍，而北京作为首都也……可以说是景点数/总面积的第一位了。

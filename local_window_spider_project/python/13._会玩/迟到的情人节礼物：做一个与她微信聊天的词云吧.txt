@@ -1,0 +1,7 @@
+b'\xe8\xbf\x9f\xe5\x88\xb0\xe7\x9a\x84\xe6\x83\x85\xe4\xba\xba\xe8\x8a\x82\xe7\xa4\xbc\xe7\x89\xa9\xef\xbc\x9a\xe5\x81\x9a\xe4\xb8\x80\xe4\xb8\xaa\xe4\xb8\x8e\xe5\xa5\xb9\xe5\xbe\xae\xe4\xbf\xa1\xe8\x81\x8a\xe5\xa4\xa9\xe7\x9a\x84\xe8\xaf\x8d\xe4\xba\x91\xe5\x90\xa7'   原文只是拿了一个大话西游的文本来做成词云，而本文将使用情侣的微信聊天记录作为文本来源，是不是更情深意切，一虐方休。
+ 提取聊天记录数据”文件系统“</strong>。之后，既可以选择最左边的“应用程序”，也可以选择最右边的“备份”。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsvbk6HCx3DJ0VKdNGb9FuoSwQLIdluDhib3n9S5ibDSiat8SlmTVyJjX6khDooPOZsU6w814ppXbTicA/0?wx_fmt=png
+ 先点击“备份”时  存放聊天记录的数据库的位置先点击“应用程序”时    导出数据库    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsvbk6HCx3DJ0VKdNGb9FuoyqGGLDFeDoBsibeobGpjUkqcw8QI0ruoHHB0QSxVVOrFicbv2PtfN2VQ/0?wx_fmt=png
+  以下开始虐狗  注1：选择你跟你女朋友的独特一句对话，用来查找。如果你发现你用”么么哒“、”我爱你“、”亲爱的“（微信会把官方表情以表情名称形式文本化存储，所以用这种词查找的效率不高）等搜出了好几个人的话，劝你还是先好好反省自己。——喔想到这里简直是<strong><em>给程序媛查岗男票的福利啊</em></strong>！</em>
+<em>注2：经过我之前取特例观察，存放聊天记录的表名均为<code>Chat_xxx</code>，而其中的<code>Message</code>一列存放的即是聊天记录。</em>
+   停用词库     其他 

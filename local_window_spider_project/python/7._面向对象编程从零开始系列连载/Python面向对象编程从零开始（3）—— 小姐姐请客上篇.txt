@@ -1,0 +1,64 @@
+b'Python\xe9\x9d\xa2\xe5\x90\x91\xe5\xaf\xb9\xe8\xb1\xa1\xe7\xbc\x96\xe7\xa8\x8b\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xef\xbc\x883\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94 \xe5\xb0\x8f\xe5\xa7\x90\xe5\xa7\x90\xe8\xaf\xb7\xe5\xae\xa2\xe4\xb8\x8a\xe7\xaf\x87'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0?
+ 前文传送门：https://ask.hellobi.com/blog/wangdawei/8429
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://ask.hellobi.com/blog/wangdawei/8446
+上文说到我和小姐姐相互自我介绍了
+今天我们继续讲我与小姐姐的故事：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkVrG1biaPrylic0iba4VFyEFxawIHKibOUiaQHBhkjUJYvgv9JiabSFxsI6dA/0?wx_fmt=png
+注意到，在定义类Car中的三个方法（drive 
+turnover introduce）时，方法里的参数都是self
+<span style="color: #E33737;">注意：self是创建类中的方法时必填的参数</span>例如：
+ 在之后的小姐姐自我介绍中：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkOusGWNEwSvCHIdGkAzYPItHDs1SOe4rkUEGgluhqV3WXvZGJfpicFdA/0?wx_fmt=png
+这里的self系统会调用xiao_jie_jie的name，age，feartures属性作为输入，由print某种格式输出作为自我介绍内容。
+则自我介绍内容（输出）为：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkssxxpoicoDYLSRytD8aRH1Ltkia9hm3kSKKp998v0NoOq1CbaETVbSFw/0?wx_fmt=png
+self也可以写为任意一个变量（非系统关键字），但是大家潜规则（默认）使用self
+
+为了大家相互看代码，交接工作更顺利吧~
+自我介绍结束，我说要请小姐姐吃饭，然后看电影，然后去唱歌，然后。。。（请自行脑补）
+ o(︶︿︶)o 唉，这不是常见的谈恋爱套路么
+不想落入俗套？
+小姐姐给了我一个惊喜
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOk2YSFXznqvR0xaHECEJIaeb99JHyibkEOtcnuHzyyZxPGeZAFrlX467Q/0?wx_fmt=png
+小姐姐说要给我做饭！！！
+我脑中的：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkP7xQzF5rZA2Uib2rn3nxtmIyq5cegT1LBLpebR3ic1uOY5W6t4mtDnfg/0?wx_fmt=jpeg
+ 现实中小姐姐要做的：
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkU2neJCeZapUicp4s5rreO63orQiaG9YbabdEic1hNZ12wb6pzAeF62ChA/0?wx_fmt=gif
+ 我就：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOk2GcsicAtrz0bRrjoIlbGYwbZ6a5HhYKXRicyW2Hzt6UpxgeLzlKgpVibA/0?wx_fmt=jpeg
+不过转念一想，小姐姐煮泡面至少也是她的心意啊，说不定下次就是爱心便当了！
+于是她请我去她家吃饭。。。
+小姐姐在附近<strong>诺大</strong>的超市<strong>轻车熟路</strong>买到了泡面（语文题 
+ Q: 请揣摩作者文中"“偌大“和“轻车熟路”二词的含义？A：”偌大“体现了超市很大，和“轻车熟路”买到泡面形成对比，暗含小姐姐经常过来买泡面吃，呼应上文小姐姐选择煮泡面请我吃，更体现了小姐姐长期不健康的饮食生活。）
+买完泡面，我们来到小姐姐家（这里就她一个人住）
+她开始下面给我吃。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkpibkwOtGCRl2207vbhW4WL3L1oljJyHW1H2j76yuvcUCLmcV33xn7icw/0?wx_fmt=png
+ 注意：这里新定义了两个方法（在类中使用def定义），名字分别是__init__()和__str__()方法。__init__()方法：称为构造方法。在类创建对象时，<strong>自动执行</strong>，进行初始化操作。
+__str__()方法：打印对象相关内容时候需要用到，我们可以简单理解为输出作用。
+在__init__()方法中，定义了泡面初试状态是生的，泡面煮熟状态时0，即还没开始煮泡面。
+在__str__()方法中定义泡面状态的返回。
+ 注意：为了简化，这里状态只考虑煮的时间，不考虑火力大小等其他因素。所以，在方法中传入参数cooked_time
+接下来，创建了一个泡面对象
+注意：这个煮泡面对象命名为instant_noodles，是用Cook_instant_noodles()类创建的对象，所以这个对象可以调用该类中的方法cook()我们可以通过：
+   结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuAK3DzU1UuSnO2ufZamlOkYvBJKfVD7YZcfXGWzIoOMDUVJWIH7nDYr4fePMrNrGkSRfW1Il4BcQ/0?wx_fmt=png
+说明煮了一分钟还没熟（这不是废话么，掀桌）
+接下来小姐姐就给我煮面啦~
+小姐姐告诉我一个事实：她以前都是用开水泡面的，没煮过泡面（害怕火）
+所以她不知道煮多久才熟。。。
+我想：我的天！这也行？
+我说：那你试试吧，反正你买了好几包（她买了这么多泡面估计准备吃一周，好像被我发现了她的意图，害羞的点了点头

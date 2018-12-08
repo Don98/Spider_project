@@ -1,0 +1,8 @@
+b'Lambda\xe5\x87\xbd\xe6\x95\xb0\xe4\xb8\x8e\xe7\xbe\xa4\xe4\xbc\x97\xe6\xbc\x94\xe5\x91\x98\xe7\x9a\x84\xe5\x85\xb1\xe6\x80\xa7\xe6\x98\xaf...\xef\xbc\x9f'http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0.gif
+   http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMnUKtLSwGhb3iaVySBzcbau8Ok0icklDHyNG2iaEtFFt3v8F98bv4c11DY8gjMia91XRbql2x1BBnnBvA/640?wx_fmt=jpeg
+ Python 中定义函数有两种方法，一种是用常规方式
+<code style="margin-right: 0.15em; margin-left: 0.15em; padding-right: 0.3em; padding-left: 0.3em; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 0.85em; font-family: Consolas, Inconsolata, Courier, monospace; white-space: pre-wrap; border: 1px solid rgb(234, 234, 234); background-color: rgb(248, 248, 248); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; display: inline; ">def</code>
+定义，函数要指定名字，第二种是用<code style="margin-right: 0.15em; margin-left: 0.15em; padding-right: 0.3em; padding-left: 0.3em; max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; font-size: 0.85em; font-family: Consolas, Inconsolata, Courier, monospace; white-space: pre-wrap; border: 1px solid rgb(234, 234, 234); background-color: rgb(248, 248, 248); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; display: inline; ">lambda</code>定义，不需要指定名字，称为 Lambda 函数。
+Lambda 函数又称匿名函数，匿名函数就是没有名字的函数，函数没有名字也行？当然可以啦。有些函数如果只是临时一用，而且它的业务逻辑也很简单时，就没必要非给它取个名字不可。
+好比电影里面的群众演员，往往他们的戏份很少，最多是衬托主演，跑跑龙套，他们需要名字吗？不需要，因为他们仅仅只是临时出镜，下次可能就用不着了，所以犯不着费心思给他们每个人编个号取个名字，毕竟取个优雅的名字是很费劲的事情。
+先来看个简单 lambda 函数

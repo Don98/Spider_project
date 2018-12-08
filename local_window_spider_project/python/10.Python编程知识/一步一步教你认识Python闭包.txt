@@ -1,0 +1,9 @@
+b'\xe4\xb8\x80\xe6\xad\xa5\xe4\xb8\x80\xe6\xad\xa5\xe6\x95\x99\xe4\xbd\xa0\xe8\xae\xa4\xe8\xaf\x86Python\xe9\x97\xad\xe5\x8c\x85'http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0.gif
+   http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMmEQuaZyGsENvibSzOEJkIbnKpqJsmBu7QFFiaYsRe7rwF9C2icX7RUzicJAw8Oq7CW5tIDICzDBNMPUg/640?wx_fmt=jpeg
+ 曾经介绍过两篇关于函数的文章，第一篇是 关于
+<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484227&amp;idx=1&amp;sn=710bec026d8a1c7294cd06fd7c59b43b&amp;chksm=ec5edc3edb295528236af46510832d240fe05cdded7040eeac6a9f8341c535b98c8ab558715f&amp;scene=21#wechat_redirect" target="_blank" style="">Python 函数是第一类对象</a>，第二篇是关于
+<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484228&amp;idx=1&amp;sn=a42152bf9c7ddb5f68e88f1c6c0122e9&amp;chksm=ec5edc39db29552f161465de77336346afcd3e9dc2af1a8e353ef5fb4824639513edf61d5572&amp;scene=21#wechat_redirect" target="_blank" style="">Lambda 函数</a>，今天来说说 Python 闭包。
+什么是闭包？闭包有什么用？为什么要用闭包？今天我们就带着这3个问题来一步一步认识闭包。
+闭包和函数紧密联系在一起，介绍闭包前有必要先介绍一些背景知识，诸如嵌套函数、变量的作用域等概念
+作用域是程序运行时变量可被访问的范围，定义在函数内的变量是局部变量，局部变量的作用范围只能是函数内部范围内，它不能在函数外引用。
+定义在模块最外层的变量是全局变量，它是全局范围内可见的，当然在函数里面也可以读取到全局变量的。例如：

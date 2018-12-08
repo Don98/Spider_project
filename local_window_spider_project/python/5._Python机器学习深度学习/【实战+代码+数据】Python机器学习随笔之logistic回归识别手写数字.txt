@@ -1,0 +1,5 @@
+b'\xe3\x80\x90\xe5\xae\x9e\xe6\x88\x98+\xe4\xbb\xa3\xe7\xa0\x81+\xe6\x95\xb0\xe6\x8d\xae\xe3\x80\x91Python\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe9\x9a\x8f\xe7\xac\x94\xe4\xb9\x8blogistic\xe5\x9b\x9e\xe5\xbd\x92\xe8\xaf\x86\xe5\x88\xab\xe6\x89\x8b\xe5\x86\x99\xe6\x95\xb0\xe5\xad\x97'     01数据准备https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVv7kB7IXUnOpbxX351ENcsVib3GNzDE53hsQ7XibQBPsfrPSTGIeTYOkrA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVv0WC8wQBPicBmP8SXLicBZ3ZhM10ELDUTcVgsDia3IyT9NMAM5WHyaXvtA/640?wx_fmt=png
+   <span style="font-size: 14px;letter-spacing: 1px;">02 构建相关函数</span>  03 构建one vs all函数https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvwIoMsLpmQlrflnMwpTUeGR5F17wDibJzxJBVd2Uq1LTpMakQTXwj3Ng/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvsDPxOpV3mrYBuOqYek9RhYSIfOUMSxRONwZViaCicbmeeLwd3d4at8eA/640?wx_fmt=png
+<span style="font-size: 14px;letter-spacing: 1px;">04 得到预测值并与原值比较计算准确率</span>       

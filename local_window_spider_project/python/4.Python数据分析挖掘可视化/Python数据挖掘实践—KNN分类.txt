@@ -1,0 +1,6 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe6\x8c\x96\xe6\x8e\x98\xe5\xae\x9e\xe8\xb7\xb5\xe2\x80\x94KNN\xe5\x88\x86\xe7\xb1\xbb'KNN方法的简单描述：KNN方法用于分类，其基本思想如下。我们已经有一些已知类型的数据，暂称其为训练集。当一个新数据（暂称其为测试集）进入的时候，开始跟训练集数据中的每个数据点求距离，挑选与这个训练数据集中最近的K个点看这些点属于什么类型，用少数服从多数的方法将测试数据归类。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvDzwyFVzHia9gN7Ynaymr1jHf80icpANsHyAR8bX6gcMa7ricibV0kIEoOLvffP1aPVuiaicj3icpboo0XA/0?wx_fmt=png
+ 图示：这里我用一个常见到的图做介绍：1、有三类已知数据集（训练集），它们分别属于w1、w2、w3，这三类数据分别有自己的特征；2、有一个位置类别的数据（测试集）Xu；3、通过求Xu点到所有训练集数据的距离，取距离最近的n个点，查看这n个点所归属的类别，以少数服从多数的方式将Xu归类到已知训练集下
+这里我构造了一个150*5的矩阵，分别代表三类数据。每行的前四个值代表数据的特征，第五个值代表数据的类别。如图：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvDzwyFVzHia9gN7Ynaymr1jibHmOY0Qj2zNofpVYeY97FVEmGo9ad1pfcz9ibngTYLQNzrA8BAvLR8Q/0?wx_fmt=png
+ 

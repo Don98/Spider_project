@@ -1,0 +1,76 @@
+b'\xe5\x85\xa5\xe9\x97\xa8numpy\xef\xbc\x8850%-65%\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbnumpy\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibUo4tq6d3A6EbhGdV8nLiaGwCESMibM28tOhXZylSxicQnLS4nh39ibNTw/0.gif
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+这几天很忙啊，所以也没时间静下心来写文章，现在好点了，我们继续numpy官网之旅
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDoFWaTOmLqrwmSGPCucIeA8PhDMSKdHObAqfpgTj1PM7XW8UC3jEErQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDjfgph8ESdxFJoZooX9GaPhyFibLBtp9Xrto2bJN28wNK6kAfiaBicvOvw/0?wx_fmt=png
+注：改变a数组形状
+ 如果在改变形状操作中将尺寸给定为-1，则会自动计算其尺寸：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDvtOoC2wr1bv9QESEibibg0LFAJBmyBjicxVocN1Rwc3r7F9Q3A1pibUkIg/0?wx_fmt=png
+查看这部分更多更详细的用法可以看：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+下图部分：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDYat6icWLnuJTbUxXkGOpol0Wb5Wcsce5cMDrkOY5ibIrFiakGjfbOwroQ/0?wx_fmt=png
+ 几个数组可以沿不同的轴堆叠在一起：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDkicYKJB5IUZmy8XqUkJSFpd9FiaTt422aTMRiaAtQmRaYO4PZ6hoGeFzw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDzyPWaBxk8kuGN0nI8QA6Y3yvvAmOYJNucicf8M9q017FCGN824mJODA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDiaP7d2hAo6lgRiaNPhQnklQibCqkiatbXqe353H1dpG8iarIgBsO5iadtojA/0?wx_fmt=png
+注：这里v是vertical的缩写，意思是垂直方向，所以这里是按照竖直方向堆叠数组
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDllvZDdY99GVWNT2xhonobicpqiaeg4zVDFBzKcmfzXtxaOKljtt5Adbg/0?wx_fmt=png
+注：这里的h是horizontal的缩写，是水平方向，所以这里是指的水平方向堆叠数组
+ 函数column_stack将1维数组作为列堆叠成2维数组。
+<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDTBmN0aibLTMkia92rty0mgLj7ciaD5iaic2wB6gwOfZ5icpj2PDsezdzWxSA/0?wx_fmt=png
+注：水平方向堆叠成二维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDZ0h6lebthZp4Z4CrszXgI5QTzRgP3a5Xoqian6ibhuXAjRe2evQVpLpg/0?wx_fmt=png
+注：切片出二维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDibDhuRAt2G3wrNt1M6Z5rK8SxHgEicia7AeZxx1zlToiaPUeL0ZVl9542A/0?wx_fmt=png
+注：将两个切片的二维数组组成新的二维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDvTibviaO3y1sduAq1UInWHYyBcN2ro7m0AOn2OnCYPic1jK1AKic2PWaIA/0?wx_fmt=png
+注：竖直方向堆叠出新的二维数组
+ 注意：在复杂情况下，r_和c_对于通过沿一个轴堆叠数字来创建数组很有用。 它们允许使用范围文字（“：”）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDxiaR62icwQaSTl1IACicoUZrORU51tlsiclUxcasACNTqaN5EBvr81hClg/0?wx_fmt=png
+注：1—3，0，4组成数组
+ 当使用数组作为参数时，r_和c_在其默认行为中类似于vstack和hstack，但允许使用可选参数来指定要连接的轴数。<br data-filtered="filtered"  />
+查看这部分更多更详细的用法可以看：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+下图部分：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDdAL5baAKqZ7ibpGnx9Hz4asOcAIpUkrW6Nnd36vqz2NDf0yqS2pibJaQ/0?wx_fmt=png
+ 使用hsplit，可以沿着水平轴拆分数组，方法是指定要返回的等同形状数组的数量，或者指定之后应该进行拆分的列
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUD66LlpTXdyJ8ic8MzNbLt10T822aTeJlqgSA9AlVqgOoBVrFNdHvJF3Q/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDQ3NPoANJ0bicwLJ0cs33tq01TjGKq7x7yDD1pSyg3Hh5gRolSFvyowA/0?wx_fmt=png
+注：将a数组水平方向切分成相等的3份
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDtibibDZHX3VmDjk8SkUiaUrSrS6CbNOL9iblT8ffYkgAia1Uv4Xq7bf2wWg/0?wx_fmt=png
+注：从第三个和第四个后面分别切一刀，水平分成3块新数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDGPvTIFGGJQlTNwtq8sPHkrMFEndNEW1mRJr7EEic6oTa6Pa4CdZfIIg/0?wx_fmt=png
+注：从第三个后面切一刀，水平分成2块新数组<br data-filtered="filtered"  />
+ vsplit沿垂直轴分割，而array_split允许用来指定要分割的轴：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDkr5lIv3XrywaTRgPMV7CBdnLchshYAKb8lapSO8FQhYZfvVhanBoEg/0?wx_fmt=png
+注：从第一行后面切一刀，垂直分成2块新数组<br data-filtered="filtered"  />
+ 当操作数组时，它们的数据有时被复制到一个新的数组中，有时候不会。 这往往是初学者混乱的根源。 有三种情况：<br data-filtered="filtered"  />
+简单的赋值不会使数组对象或其数据被复制<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDAJgDCG1DEHNYjiczwictAhLVrInpuhHRprJ4ILgszNWvPwbD0zndpN7g/0?wx_fmt=png
+注：这里a和b指向的是同一个数组，操作时并没有产生新的复制内容
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDUX2g07UKf5YfY8luXzJk42xGqAibiabGDOD6VMzLAplMzsodBF8WI38A/0?wx_fmt=png
+注：这里改变b数组的形状，a的也发生了变化，说明这里a和b指向的是同一个数组
+ Python将可变对象作为引用传递，因此函数调用不会复制一份新的<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDFwEaPBXmq5Mf40OQYRiaRCkuI25ic4qpsm6udz4sUibt4Kbqic1SPudWDA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDzl2iauugibQfIjPCibaGVXib7EFZC6suDykuQyIPzhzZIjEdYicLibG3XNrA/0?wx_fmt=png
+注：这里函数返回的结果id是相同的，所以函数调用不会复制一份新的内容（id是对象的唯一标识）
+不同的数组对象可以共享相同的数据。 视图方法创建一个包含相同数据的新数组对象<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDNldtHce3DqCteyRSWv2dY8Dj1I4jSXGHEgUL1LpXYNEwHqMcMniahcw/0?wx_fmt=png
+注：通过view方法生成的c已经和a不是同一个了
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDibZMc56jkvZNRhWEFIHENPqfztO1NZkmhuEQcwuFhsNDk50oRHic6Hmw/0?wx_fmt=png
+注：c是基于a的
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDNxHNKLIV7GZZSYhzYEwMcEGcbypUC16n6Ny7N7PdqA78osIum43G6Q/0?wx_fmt=png
+注：c拥有数据？：并没有（因为c是拷贝了a的）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDtLA1toSJYUUicicQQvxmksKzeZPUj41qjJibUK3UaicTLSUicK4Emfvwuibg/0?wx_fmt=png
+注：a拥有数据
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDmJHOm6hlZMq6hWyiaiaS7LdIu2AvIajSjDkOOJumsVf8tVribYGcCXicCg/0?wx_fmt=png
+注：c的形状（3行4列）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUD70Ut8QLph5hzCUOgQUPj5K8uLvBdhdFLGABsZzWNp4jnfLRlHuSbUQ/0?wx_fmt=png
+注：在c中修改会传到a中，因为数据实际保存在a中
+ 切换数组返回其视图：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDpKsCKwP6J1BxibBCFICH2JAHwogeegTWsjAYibk4cshL8bicT38MbkgfQ/0?wx_fmt=png
+注：s[:]是s的视图。注意s=10 和 s[:]=10的不同<br data-filtered="filtered"  />
+ 深层复制方法将完整复制数组及其数据<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUD2xXganuiaaicgKgxNiaiavfKmIkR9ZicdIjyAZu4rHibYtBUTxzHaUfeOGgQ/0?wx_fmt=png
+注：创建了新的数组和新的数据<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttRNJELKibstRrqwO28uuDUDJz97Pb8qpDAGxfkIO8mM07Ytr4bmK11MBbP8736PR0LuHvG9Cz1BgQ/0?wx_fmt=png

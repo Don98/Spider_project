@@ -1,0 +1,21 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9015\xe3\x80\x91-- matplotlib(\xe6\x95\xa3\xe7\x82\xb9\xe5\x9b\xbe)'               
+
+
+
+
+
+
+上一期中，我们通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">折线图</strong></span>可以快速的发现<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">时间序列的趋势图</strong></span>，当然他不仅仅只能用在时间序列中，也可以和其他图形配合使用，正如本期要介绍的，可以<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">将折线图绘制到散点图</strong></span>中。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">散点图</strong></span>可以反映<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">两个变量间的相关关系</strong></span>，即如果存在相关关系的话，它们之间是正向的线性关系还是反向的线性关系？甚至于是非线性关系？在绘制散点图之前，我们任然老规矩，先来介绍一下matplotlib包中的scatter函数用法及参数含义。
+
+
+
+
+
+
+
+matplotlib模块中scatter函数语法及参数含义：
+             https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgX2URhXdnywjqGOKfWK7N7Aicvs2qvVkmQhIQTvDxlS4waO1IWOJ1UgU0dia9wgMrh8YTZxWFFozGag/640?wx_fmt=png
+这样一张简单的散点图就呈现出来了，很明显的发现，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">汽车的刹车速度与刹车距离存在正相关关系</strong></span>，即随着速度的增加，刹车距离也在增加。其实这个常识不用绘图都能够发现，关键是通过这个简单的案例，让大家学会如何通过python绘制一个散点图。如果你需要画的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">散点图</strong></span>，是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">根据不同的类别进行绘制</strong></span>，如按不同的性别，将散点图区分开来等。这样的散点图该如何绘制呢？
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgX2URhXdnywjqGOKfWK7N7Asrhu6Kv72KOKRc4ZLy4JGaib02hDYDE8Nr7OEwROicCtOsMyrNGibvvKA/640?wx_fmt=png
+绘制这样的分组散点图是不是也非常的简单呀，而且关于图的属性，可以想怎么设置就怎么设置。从图中可以发现，三种花的花瓣长度与宽度之间都存在正向的关系，只不过品种setasa的体型比较小，数据点比较聚集。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgX2URhXdnywjqGOKfWK7N7Ab3icd10BiaWDN6YOcia8LrKGjbTtDsvIpldpoFm66MZu7JDaSZdW5iavaQ/640?wx_fmt=png

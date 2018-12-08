@@ -1,0 +1,19 @@
+b'\xe8\xa5\xbf\xe6\xb8\xb8\xe8\xae\xb0\xe9\x87\x8c\xe7\x9a\x84\xe7\xa4\xbe\xe4\xba\xa4\xe7\xbd\x91\xe7\xbb\x9c\xe5\x88\x86\xe6\x9e\x90\xe4\xb8\x8e\xe5\x9f\xba\xe4\xba\x8e\xe7\xbd\x91\xe7\xbb\x9c\xe7\xbd\x91\xe7\xbb\x9c\xe5\x88\x86\xe6\x9e\x90\xe7\x9a\x84\xe6\x9c\x80\xe5\xb0\x8f\xe7\xa4\xbe\xe5\x8c\xba\xe7\xae\x97\xe6\xb3\x95\xe5\x8f\x8a\xe7\xbd\x91\xe7\xbb\x9c\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96'  今天给大家介绍怎么用Python进行社交网络分析，以及基于社区网络网络分析的最小社区算法，并且网络可视化。
+ 数据获取方式：关注<span style="color: rgb(255, 41, 65);">Python爱好者社区</span>后回复<span class="Apple-converted-space">&nbsp;</span><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);">花果山</span><span class="Apple-converted-space">&nbsp;</span>即可 如果把西游记里的所有人物全部构建网络与节点、任务太繁杂了，也没有必要，所以只节选了部分重要人物以及其关系，给大家带来这个思路。
+ 直接上图：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9quKO3nhgPepKAj4Rtoic1TlAQa0iaY19DA4IdX2kXhYUS8icIk7fMEFdA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe96zaVVe5nKGibB74ibFmibcPicTC5W87fDuMvzHIojmSiabR3d4FLtSl3B2g/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9Upl6abAofKIHLpOg39re8DolV60ibyWnU1swCOH8qyWPMrvlkTJoH2A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9K9sN6Tqhb4kYuEfx2ibMBBy2SVAGT2WLbiaNy6XXxMGolrFa4xBccQNQ/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9ZdWut55ibWncOylkshpaIUeojbnibFYMBSTZwkoibtxiaKH3adMI5FGSzw/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9EGHNyyelaicliclvwv32N6NicMV5cL0lbiaZDJ0PYTotA74m9icyW1V4Nvg/640?wx_fmt=png
+ 主要有三种中心性：度中心性、中介中心性与接近中心性，每种中心性的度量方法不一样，这里介绍度中心性
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9sSe4ibpzLerMp8pvktSJdz5qHIL8md9agDklu75KOqTxMhKrfbksWPg/640?wx_fmt=png
+ 下面上社交网络：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9EaCzZUIzZ7F0fZ5O4IibcrTR0Ue0VOLfPxdPScpJ8fK0S842h2LQELw/640?wx_fmt=png
+ 大家发现主要有3个节点：孙悟空、猪八戒、唐僧，如来佛祖、玉皇大帝、观音菩萨、沙和尚与这3个节点都有联通，但它们与外部节点没有联通。
+ 孙悟空有自己的社交圈、猪八戒也有自己的社交圈、嗯，唐僧也有。
+ 下面是基于社交网络的最小社区算法可视化结果：
+ 这里选择了k=3
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpctegrrSYDCUPVNkStxTe9W2vyQVUiaOTYjuajBLib62DWicsvMaxD1SYxKlOeeUgQoOpfSUicZaTBGQ/640?wx_fmt=png
+ 

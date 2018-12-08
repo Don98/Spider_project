@@ -1,0 +1,30 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe7\xae\x97\xe6\xb3\x95\xe5\x8e\x9f\xe7\x90\x86\xe7\xb3\xbb\xe5\x88\x97\xe8\xaf\xa6\xe8\xa7\xa3\xef\xbc\x88\xe5\x90\xab\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x89-- \xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe5\x9f\xba\xe7\xa1\x80\xe4\xb8\x8e\xe5\xae\x9e\xe8\xb7\xb5\xef\xbc\x88\xe4\xb8\x89\xef\xbc\x89-- \xe6\x95\xb0\xe6\x8d\xae\xe9\x99\x8d\xe7\xbb\xb4\xe4\xb9\x8bPCA'机器学习算法原理系列详解（含代码） --
+机器学习基础与实践（一）--数据清洗</a>
+机器学习算法原理系列详解（含代码）-- 机器学习基础与实践（二）-- 数据转换</a>
+
+   　　在数据处理中，经常会遇到特征维度比样本数量多得多的情况，如果拿到实际工程中去跑，效果不一定好。一是因为冗余的特征会带来一些噪音，影响计算的结果；二是因为无关的特征会加大计算量，耗费时间和资源。所以我们通常会对数据重新变换一下，再跑模型。<span style="font-size: 16px;color: rgb(255, 0, 0);">数据变换的目的不仅仅是降维，还可以消除特征之间的相关性，并发现一些潜在的特征变量</span>。</span>
+ <span style="font-size: 16px;color: rgb(0, 0, 255);">一、PCA的目的</span><span style="font-size: 16px;color: rgb(0, 0, 255);"><br  /></span>
+　　PCA是一种在尽可能减少信息损失的情况下找到某种方式降低数据的维度的方法。通常来说，我们期望得到的结果，是把原始数据的特征空间（n个d维样本）投影到一个小一点的子空间里去，并尽可能表达的很好（就是说损失信息最少）。常见的应用在于模式识别中，我们可以通过减少特征空间的维度，抽取子空间的数据来最好的表达我们的数据，从而减少参数估计的误差。注意，主成分分析通常会得到协方差矩阵和相关矩阵。这些矩阵可以通过原始数据计算出来。协方差矩阵包含平方和与向量积的和。相关矩阵与协方差矩阵类似，但是第一个变量，也就是第一列，是标准化后的数据。<span style="font-size: 16px;color: rgb(255, 0, 0);">如果变量之间的方差很大，或者变量的量纲不统一，我们必须先标准化再进行主成分分析</span>。</span>
+二、PCA VS MDA<br  />　　</span>提到PCA，可能有些人会想到MDA（Multiple 
+Discriminate 
+Analysis,多元判别分析法），这两者都是线性变换，而且很相似。只不过在PCA中，我们是找到一个成分（方向）来把我们的数据最大化方差，而在MDA中，我们的目标是最大化不同类别之间的差异（比如说，在模式识别问题中，我们的数据包含多个类别，与两个主成分的PCA相比，这就忽略了类别标签）。
+    三、PCA的过程<br  /> 1.去掉数据的类别特征（label），将去掉后的d维数据作为样本</span>
+2.计算d维的均值向量（即所有数据的每一维向量的均值<span class="MathJax_Preview">）</span></span>
+3.计算所有数据的散布矩阵（或者协方差矩阵）</span>
+4.计算特征值（e1,e2,...,ed）以及相应的特征向量（lambda1,lambda2,...,lambda d）</span>
+5.按照特征值的大小对特征向量降序排序，选择前k个最大的特征向量，组成d*k维的矩阵W（其中每一列代表一个特征向量）</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2UBzmg08U3TGicOXz41cC8LTXkfzlQSEtmZuCFAQvAdY3nlWpVKwnrqug/0?wx_fmt=png
+
+
+ 1.数据准备----生成三维样本向量</span>
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2USXrjdeZP4LiajibDR8u98S3hhPz7BMAaJibmxKCmgSN1RVfHm0fMZqUcQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2Uejvib2ga8DJWU1GS9kKMZ1xicXnLknZC7p6XSgymVvVn4Miatg6ZZjxPg/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2UTib9hqqd37wv9iaGm5aLGW1Cwlf0reuz5nkTGZKKnyXiaibIIzIhQtN4Ag/0?wx_fmt=png
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2UJlfzyrWGJ1Q2ILQ7qx470m5YSP2RicnwzclibYCuf1gNjdDQyMcxZcsw/0?wx_fmt=png
+（第4步已经算出来是mean_vector）
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2UMcEdtgNTaAR6UVkXrD0EKlTX2sxdOUu5hS8fRlfHgaIBHoCzOdOUqQ/0?wx_fmt=png
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvcWDxtuOST6xMIv0oGTE2U0nbmuQibdUP0Y4xwlecvEyHxHXKc1pt2s8Qj73Z1ElEyHEMKSRJS3Zg/0?wx_fmt=png
+        7.根据特征值对特征向量降序排列</span>
+ 　　<span style="color: rgb(0, 0, 0);">我们的目标是减少特征空间的维度，即通过PCA方法将特征空间投影到一个小一点的子空间里，其中特征向量将会构成新的特征空间的轴。然而，特征向量只会决定轴的方向，他们的单位长度都为1，可以用代码检验一下：</span></span>
+    8.选出前k个特征值最大的特征向量</span>
+      中，将样本数据转化为新的特征空间

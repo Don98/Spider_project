@@ -1,0 +1,18 @@
+Python从零开始系列连载（17）——Python特色数据类型（函数）（上）                       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHTzD217sqogY6cEvwiciazETRT6zFrP756FDxb2NEsiasLFo7R60X9ib0Vw/0?wx_fmt=png
+           函数体
+[ return 返回值 ]
+  绿色</span>的）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHwtzyshAYUiaMS3URMSa5uGjE3TBRhfVe2Kj3avNej4GyyWlkGXj3eKA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHgvLKIoEZ9WtbbD8uhF5mYia2kpSRqmYNv5yjeov5IVP6aOicCRZL9aag/0?wx_fmt=png
+                     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAH5Y7ibhJqlDpHz4C4G4tia5kgeKm0QaMpkgnY3WWficwiaCh2iaafctOP3ag/0?wx_fmt=png
+  1.参数按照位置顺序传递http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHZ4pcADUD0bewGX3rV1EzwJUvM5QDJDib5XbzAwp9Sz89HbfdG9N1v5w/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHerfiaGJiaPSdupd3dY0nkV90LkPt9nS5Xk7V0VNPXib3u4hZDL4g3YTcQ/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAH4NZ6dlL0Tib1czkHHsHgXbT62A6n2LFoiaE58YGA0UpOAXnmVxRqCnaQ/0?wx_fmt=png
+4.（难点）元组类型的变长度参数传递   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHh9pJV84BDNm0ACPLBFDHiciaibtgDzdm9ibPb8d0TH8MxPuxRyXgWdZIAw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHl7yQMhOib1icxKAUpicM75mM4iazoMKgvvVeESJf2E33SOlPibVmW72AibLA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHDsYzMBR4uA6TSeianUwrBnBq5l116ic03mtb8SHHbKbibC3NWtFicYMTGg/0?wx_fmt=png
+ 可长可短http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHxKkHNUQs4NdkVOrUEKiapIktjpmINDfge88L8wnoIRUkibgEFFWibMJOA/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHFuxzOUYLJgpGVHskvocKL1ibHF6yLYWsXS5iam34lDJ8iawaMic7OHK02w/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHwegavHrsIvibnicib5aYbsn2cibmp8l6ibL6VTyfoq4pC3GMCjUYcTy1eDA/0?wx_fmt=png
+ 5.（难点）字典类型的变长度参数传递            http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttHZmgKlc0EicE9IiaJsHTWAHaoXmGa08zpGWvIk7OoLd8sbGoycYI3S8hN2cZib858xbQXP5ibauvfCA/0?wx_fmt=png
+    现在还坚持再看连载学习的你们真的很棒棒！入门部分已经学完大部分啦！加油</strong>

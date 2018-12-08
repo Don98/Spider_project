@@ -1,0 +1,8 @@
+b'k-\xe8\xbf\x91\xe9\x82\xbb\xe7\xae\x97\xe6\xb3\x95\xe7\x9a\x84Python\xe5\xae\x9e\xe7\x8e\xb0'http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+          from numpy  import *
+Import  operator
+def  createDataSet():
+     group = array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
+     labels = [¡®A¡¯,¡¯A¡¯,¡¯B¡¯,¡¯B¡¯]
+     return group ,labels</pre><p style="text-align: left; "><br style=""  />
+    

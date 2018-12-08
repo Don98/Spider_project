@@ -1,0 +1,11 @@
+b'Scrapy\xe5\xaf\xb9\xe6\x8e\xa5Splash' http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640?
+   在上一节我们实现了<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484235&amp;idx=1&amp;sn=ce1ab6980c2fdb3c566c145349ddc11e&amp;chksm=ec5edc36db295520161a49dc4da57d1a99cc983e1649726129787e95bf73d0cafd79a205c300&amp;scene=21#wechat_redirect" target="_blank" style="">Scrapy对接Selenium</a>抓取淘宝商品的过程，这是一种抓取JavaScript渲染页面的方式，除了使用Selenium还有Splash同样可以达到同样的功能，本节我们来了解下Scrapy对接Splash来进行页面抓取的方式。
+首先在这之前请确保已经正确安装好了Splash并正常运行，同时安装好了ScrapySplash库。
+接下来我们首先新建一个项目，名称叫做scrapysplashtest，命令如下：
+  修改settings.py，首先将SPLASH_URL配置一下，在这里我们的Splash是在本地运行的，所以可以直接配置本地的地址：
+   接着还需要配置一个去重的类DUPEFILTER_CLASS，代码如下：
+  示例用法如下：
+ 另外我们也可以生成Request对象，关于Splash的配置通过meta属性配置即可，代码如下：
+ 本节我们要做的抓取是淘宝商品信息，涉及到页面加载等待、模拟点击翻页等操作，所以这里就需要Lua脚本来实现了，所以我们在这里可以首先定义一个Lua脚本，来实现页面加载、模拟点击翻页的功能，代码如下：
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttttmZqNibgFIXiaAv2qVoakbW18CKN7sL0vIwygk7eeOpJ2ib1v2LThvp5agS0RO6cEWltO4ibCZPc2JA/0?wx_fmt=jpeg
+可以看到翻页操作也成功实现，如图所示即为当前页码，和我们传入的页码page参数是相同的：

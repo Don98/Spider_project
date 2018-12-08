@@ -1,0 +1,53 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x905\xe3\x80\x91-- pandas(\xe5\xba\x8f\xe5\x88\x97\xe9\x83\xa8\xe5\x88\x86)'      上一期我们介绍了数据分析中常用的numpy模块，从数组的创建、元素的获取、数学+统计函数、随机数的生成、到外部文件的读取。这期我们再来介绍另一个重磅的数据分析常用模块--<span style="color: rgb(2, 30, 170);"><strong>pandas</strong></span>。该模块更像是R语言中的向量、数据框的处理，接下来我们就一一介绍里面的小知识点。
+
+ 序列<br  />序列（Series）可以理解成是R语言中的向量，Python中的列表、元组的高级版本。为什么说是高级版本呢？因为序列与上期介绍的一维数组类似，具有<span style="color: rgb(2, 30, 170);"><strong>更好的广播效应</strong></span>，既可以与一个标量进行运算，又可以进行元素级函数的计算。如下例子所示：
+        除了上面介绍序列功能，再来说说其他序列常用的场景，如序列的索引、成员关系、排重、排序、计数、抽样、统计运算等。
+ 序列的索引：<br  />由于序列是列表的扩张版，故序列也有一套类似于列表的索引方法，具体如下：
+  倒数的方式取元素，序列就显得不是很方便</strong>了，我们推荐使用非常棒的<span style="color: rgb(2, 30, 170);"><strong>iat方法</strong></span>，该方法不管应用于序列还是数据框都非常优秀，主要体现在简介而高速。
+http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXp5ryicIdnghYicOjIslojaAPRiatB9urW7E6RsJQrfFbl48agwrtxfgjbAHcPIRXkibKKCKywWwic4Yg/0?wx_fmt=png
+布尔索引  我们知道，在R语言中一个向量的<span style="color: rgb(2, 30, 170);"><strong>元素是否包含于另一个向量</strong></span>，可以使用%in%函数进行判断，同理，Python中也有类似的方法。对于一个一维数组，<span style="color: rgb(2, 30, 170);"><strong>in1d函数</strong></span>实现该功能；对于一个序列，<span style="color: rgb(2, 30, 170);"><strong>isin方法</strong></span>可实现该功能。
+   如果手中有一离散变量的序列，想查看该序列都有<span style="color: rgb(2, 30, 170);"><strong>哪些水平</strong></span>，以及各个<span style="color: rgb(2, 30, 170);"><strong>水平的频次</strong></span>，该如何操作？
+  unique函数排序  抽样也是数据分析中常用的方法，通过从总体中抽取出一定量的样本来推断总体水平；或者通过抽样将数据拆分成两部分，一部分建模，一部分测试。pandas模块提供了<span style="color: rgb(2, 30, 170);"><strong>sample函数</strong></span>（与R语言的sample函数一致）帮我们完成抽样的任务。
+ n：frac：</strong>指定抽取的样本比例；
+replace：</strong>是否有放回抽样，默认无放回；
+weights：</strong>指定样本抽中的概率，默认等概论抽样；
+random_state：</strong>指定抽样的随机种子；
+http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXp5ryicIdnghYicOjIslojaApcMdvlrEsiam8WkTbh7nicnCoBgoDIyQeib4SbGAbM5ULrI49VvyAADVQ/0?wx_fmt=png
+  统计运算<br  />pandas模块提供了比numpy模块更丰富的统计运算函数，而且还提供了类似于R语言中的summary汇总函数，即<span style="color: rgb(2, 30, 170);"><strong>describe函数</strong></span>。
+  元素是否为缺失呢http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXp5ryicIdnghYicOjIslojaAjgXUJURtC9sSqbNTibickR59YywjYeQFbUKt6HWbuia9iabcia22TS0ibibKA/0?wx_fmt=png
+  s.min() 
+<span style="font-size: 14px;"># 最小值</span></span>
+s.<span style="font-size: 14px;color: rgb(0, 0, 0);">quantile(q=[0,0.25,0.5,0.75,1]) <span style="font-size: 14px;"># 分位数函数</span></span></span>
+s.median()<span style="color: rgb(214, 168, 65);font-size: 14px;line-height: 25.6px;">
+<span style="font-size: 14px;line-height: 25.6px;color: rgb(0, 0, 0);">
+# 中位数</span></span></span>
+ s.mean()<span style="color: rgb(214, 168, 65);font-size: 14px;line-height: 25.6px;">
+
+<span style="font-size: 14px;line-height: 25.6px;color: rgb(0, 0, 0);"># 平均值</span></span></span>
+s.mad()<span style="color: rgb(214, 168, 65);font-size: 14px;line-height: 25.6px;">
+</span></span><span style="font-size: 14px;color: rgb(0, 0, 0);">
+# 平均绝对误差</span>
+s.max
+
+# 最大值</span>
+s.sum()
+
+# 和</span>
+s.std()
+
+# 标准差</span>
+s.var()
+
+# 方差</span>
+s.skew()
+
+# 偏度</span>
+s.kurtosis()
+
+# 峰度</span>
+s.cumsum()
+
+# 和的累计，返回序列</span>
+s.cumprod()
+
+# 乘积的累积，返回序列</span>

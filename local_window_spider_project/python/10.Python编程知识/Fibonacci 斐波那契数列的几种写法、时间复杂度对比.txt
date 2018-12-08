@@ -1,0 +1,17 @@
+b'Fibonacci \xe6\x96\x90\xe6\xb3\xa2\xe9\x82\xa3\xe5\xa5\x91\xe6\x95\xb0\xe5\x88\x97\xe7\x9a\x84\xe5\x87\xa0\xe7\xa7\x8d\xe5\x86\x99\xe6\xb3\x95\xe3\x80\x81\xe6\x97\xb6\xe9\x97\xb4\xe5\xa4\x8d\xe6\x9d\x82\xe5\xba\xa6\xe5\xaf\xb9\xe6\xaf\x94'https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN3P9fiaVtPr0bLS188QibIwGrbibgq8Mfnh8IcI9qAGTZxBNl0ic7FZGLcQQ/640?wx_fmt=jpeg
+ https://mmbiz.qpic.cn/mmbiz_png/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN3X7icE5UCjibzazwxeg0swcyj2Dv4wLzqh1iasAtPialib9pEsXLOXWicO4Gg/640?wx_fmt=png
+数列从0和1开始，之后的数由前两个数相加而得出，例如斐波那契数列的前10个数是：0, 1, 1, 2, 3, 5, 8, 13, 21, 34。
+用 Python 实现斐波那契数列常见的写法有三种，各算法的执行效率也有很大差别，在面试中也会偶尔会被问到，通常面试的时候不是让你简单的用递归写写就完了，还会问你时间复杂度怎样，空间复杂度怎样，有没有可改进的地方。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+所谓递归就是指函数的定义中使用了函数自身的方法
+ 递推法就是从0和1开始，前两项相加逐个求出第3、第4个数，直到求出第n个数的值
+ 上面两种方式都是使用分而治之的思想，把一个大的问题化小，然后利用小问题的求解得到目标问题的答案。
+《线性代数》是大学计算机专业的一门课程，教的就是矩阵，那时候觉得这东西学起来很枯燥，没什么用处，工作后你才发现搞机器学习、数据分析、数据建模时大有用处，书到用时方恨少。其实矩阵的本质就是线性方程式。
+斐波那契数列中两个相邻的项分别为：F(n) 和 F(n - 1)，如果把这两个数当作一个2行1列的矩阵可表示为：
+https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN3vXojovZlGb5M0Cic8U2wNm8vSjcRUctpam2AALDiawe3iaXuHM9Mb0GibA/640?wx_fmt=jpeg
+因为 F(n) = F(n-1)+F(n-2)，所以就有：
+https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN3qjsEnLy6Ml5jAgaDfshMBZ6Wwr4XxoNuU7AE1dS13GcJJs4miaQ97JQ/640?wx_fmt=jpeg
+通过反推，其实它是由两个矩阵的乘积得来的
+https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN3e1L3rSiahCDbEh21yTd1AskB3icpLajTkeOXjnFKv9tP3qiaVHNjLBykA/640?wx_fmt=jpeg
+ https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN35KKnjAj5ymN1uAEBOtgfRvnwrLhUp0WyWFmRicYpLpWGI58ktgJoXwg/640?wx_fmt=jpeg
+ https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMlFH6ibyfBJf7TG4H8DtGHN32Q34v24NhIlQUhzjr2SWtUA8hT7vGtQ5uxyia98BDicKBFFicXgLMvPLw/640?wx_fmt=jpeg
+因此想要求出F(n)的值，只要能求出右边矩阵的n-1次方的值，最后求得两矩阵乘积，取新矩阵的第一行的第一列的值即可，比如n=3时，

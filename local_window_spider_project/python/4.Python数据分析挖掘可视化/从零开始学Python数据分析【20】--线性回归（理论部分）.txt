@@ -1,0 +1,66 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9020\xe3\x80\x91--\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92\xef\xbc\x88\xe7\x90\x86\xe8\xae\xba\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                    
+ 
+
+
+ <span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">从本期开始</strong></span>，我们将给各位网友<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">分享有关数据挖掘的理论与实战知识</strong></span>，实战部分将结合Python和R语言完成模型的落地。在这一期，我们将从统计模型中的回归开始入手，回归堪称是经典中的经典，很多现实问题都可以通过回归思想来解决。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ 
+
+
+
+
+从有监督、无监督和半监督的角度来看，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">回归其实是有监督的算法模型之</strong><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一</strong></span>，反映的是根据某些已知变量(解释变量或自变量)去预测某个未知变量(被解释变量或因变量)。例如根据国民生产总值，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">预测人口的失业率</strong>；根据房屋的面积，朝向，交通状况等信息，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">预测房价</strong>；根据田地的面积，施肥状况，稻谷的品种，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">预测粮食产量</strong>等。你会发现，对于类似<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">数值型的因变量预测，我们就可以借助于回归来完成</strong></span>。关于回归有很多种类，如多元线性回归、岭回归、Lasso回归等，本期开始，我们就介绍多元线性回归，后面也会分享到岭回归和Lasso回归。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkJuOPf4rGeqh9RmMtT4e2EXrZe5B1XCBH6TOoujkiaTzCIEe8Pz1Ibxg/640?wx_fmt=png
+
+
+
+
+
+
+既然我们知道了多元线性回归模型中y与X的组合关系，那接下来关心的就是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">如何求出模型的偏回归系数</strong></span>。由于误差项是服从正态分布的，而误差项又是关于偏回归系数的表达式，即
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQk0j68kDgG9ZIXTP4ZaksgU2j6ps3PMNFoqpXWsTqzick7sLbMb2Dhemw/640?wx_fmt=png
+
+ 
+
+
+
+
+<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">首先</strong>来看一下正态分布的概率密度函数：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkLLI3LjrnIhSeL6Qt2FicHwy3tJqSk23spvFGicRPs23ztcQUCHBDkFrg/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkDAYh7xyIhsoSZvK9oaYUDcXiauTUC7rwud9dia0Mz4xFLY8R0JrbBQng/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkqoN3kGZ2KjCpju2Tye4fYH0iaaF6iaGNxwjGCSl1QvP3rJo0icvwul1fg/640?wx_fmt=png
+
+ 
+ 
+ 
+ 为了求解的方便，我们在<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(172, 57, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">等式两边取对数</strong></span>：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkagMtJHEG4lvuPX3vhS01MOeToibmicOc20SAemBpbM3T7VNlyhpRlvRQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkEUIibdfbsXMEou10ZSANehuntBlOCESOGtsTcR4RtjSyaumoJQvPicew/640?wx_fmt=png
+
+ 
+
+
+
+
+根据上面的极大似然函数的推导可知，要实现最优化问题的解决，就是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">求解误差平方和最小</strong></span>。这也很容易理解，即要想求得合理的偏回归系数，得到回归模型，就要保证该模型尽可能的拟合好真实的数据，而是否很好的拟合，不就是用误差来度量吗？误差越小，则预测的越接近于现实，否则就越偏离现实。接下来，我们就借助于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">最小二乘法的思想再来推导如何求得偏回归系数</strong></span>。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ 
+
+
+
+
+在推导之前，需要了解一些基本的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">线性代数知识</strong></span>，具体在下面给出：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkeL9gdEAYSknibS6kQvicSJeQ65FHISxSLpvIdfgRGYM5aZDBJmN2BJIA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkufwpMyRNibW3H1iaicRyHRWDV06hOWiaTpGyr2pH5XvPO4BwdVkGbfG9Mg/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkI0MQfDAiaW5iclCckhz6nxWDWP6dusfreLv4bgX7ZfwUViaibmHWGg5knA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQk3Nd1HpPUDX6nMZtjm79q9VhWCic8jXfBAl3quzDKsUZUEfwXXUbDp8w/640?wx_fmt=png
+要想求得上面目标函数的最小值，可以通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">求偏导数，然后使偏导数为0</strong></span>即可：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkI2csiaZWHARo5jpQdwHZwvqvlr39hGmPMDSNSMOnWXuKEXKgVf5Vb8A/640?wx_fmt=png
+
+ 
+
+
+
+
+根据上面的推导就可以得到多元线性回归模型的偏回归系数了。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">如果你也一步步的推导一遍，我相信对你理解多元线性回归模型是有一定的帮助的</strong></span>。但是，上面的普通<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">最小二乘有一个小小的瑕疵</strong></span>（这个瑕疵发生的概率还是非常小的），并<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">不能确保方阵X’X是可逆的</strong></span>，即X’X的行列式一定不为0，如果自变量之间存在高度共线性的话，那就会导致X’X是不可逆。这里，我们再分享一种利用“梯度下降”的方法实现偏回归参数的求解，该方法就可以很好的避免上面的瑕疵。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkZusTDROEGJDVp348zTTWAZ3JqP3PCKYH5HZnxIC3w1MrOgRdhUpyFw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkiaKZx4NdSY7Xd1iau294j64P397d6gMBqWszHX0y0SKHUOIhm2QggNOQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVhQpdJG1tEFgbCbjPsRpQkPY66eaIOHw9KNzric2aTOiboI4j4AZVu5lTFSjOCqw4RcjzibciaxhUhVw/640?wx_fmt=png

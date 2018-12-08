@@ -1,0 +1,59 @@
+b'Python\xe9\x9d\xa2\xe5\x90\x91\xe5\xaf\xb9\xe8\xb1\xa1\xe7\xbc\x96\xe7\xa8\x8b\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xef\xbc\x881\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe4\xbb\x8e\xe6\xb2\xa1\xe5\xaf\xb9\xe8\xb1\xa1\xe5\x88\xb0\xe6\x9c\x89\xe5\xaf\xb9\xe8\xb1\xa1'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0
+最近在写关于自然语言处理的文章，but，没对象啊，这可是个大问题。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy56hqUq7hNVwx651Bvw3wDKicIFswR1BKmJAYBPS6p3sT0IOAmIf5OJ5A/0?wx_fmt=png
+莫慌，看完本文，你就能有对象了。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy5uzO4JZykpJD17JuiaBiaPCJiaDrakyWNHvz5EHvDuS4lGl7YVrgRz1ngQ/0?wx_fmt=png
+人生苦短，我选Python，其他空余的时间可以和对象一起玩耍。。。（此处省略n字）
+当然，此对象非彼对象。
+360百科对对象的描述如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy5O1UGZ7Z6iadpYjickoeLFicTIwUFa5aWBGLMGAT14cMSIGxu6F79IAm3Q/0?wx_fmt=png
+还记得小时候玩过的印章么，hellokitty那种印章：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy55IOAN1DicCvV6uEhwZ0fUh2suXDDsS3UWYrOCESEZaT52oJh9LU9BBA/0?wx_fmt=png
+360百科我表示看不懂，那就举个栗子。
+如果对象是一个具体的存在，而类是产生对象的模版（为了帮助理解，描述的可能不是那么准确）
+就像印章是类，对象则是印出来的图形。
+
+所以类是对对象的抽象。
+我们一开始，例如大学学的C语言，是面向过程的，总的执行流程是顺序的，任何功能等的实现都是自己要写代码的。
+现在说的面向对象和之前熟悉的面向过程可用下面的例子解释：
+假如你想吃烤鱼：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy57BT86lHTiaQ5sP4BvtSXzQO8g40pFGicwMibz4yCOFhah2w44icIExXVyA/0?wx_fmt=png
+面向过程：自己动手，从买鱼，洗鱼洗菜，烤鱼，加调料，装入盘子，端上桌，吃！！！（还要洗碗）
+
+ 
+ 
+ 
+while（没吃腻）：
+体重++
+面向对象：来到烤鱼店，点菜单，吃！！！，结账走人。
+
+ 
+ 
+ 做人做要紧开心~
+ 所以可以总结如下：
+面向过程：自己靠双手按照流程解决问题。
+面向对象：找个对象，让她做，自己轻松了。
+两者都是解决问题的一种思路，但这个总结总是感觉哪里不对。
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy5vZqKMVcJJOTNQBGw97Ef8aPkrlHrvpkm7Rz1ISgh4DLicbkUKKUwoaA/0?wx_fmt=png
+类的描述：类名，属性，方法
+ 属性：类的属性
+方法：类的方法
+这解释。。。【掀桌
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy5Vsdd4JjCIicVgroYic4UnUMnlicfN1HwibKJbicxVzf4vnWWbLdJ7DOaZqA/0?wx_fmt=png
+类的属性可以认为是在类里对象里定义的变量。
+这里的方法，注意到是def 定义的，可以理解为函数！！！
+ def定义的是类的方法（理解为类里的函数），这里定义了两个方法，开车和翻车。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy5oelezBXfYrnicRbRUJ5pd3RmRWE1exnClT7UL3wRTalNEyX8wvdgt9g/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy50N5ocKCwmXPiadbiceTFZ5vgrjxG77hR0kicbcPDznU2B1gQYORrLWuzQ/0?wx_fmt=png
+年轻人，听说你没对象？
+没事，我们自己创建一个。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy55jfOofe3m5YRlF1Q9sVH0QK3ny4m079kxXSBMuCguz1t2YOSpmbPxA/0?wx_fmt=png
+   这里属性有name和age，或许可以有那啥？？？算了，怕被河蟹。
+运行一下程序
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuvdiaeWMIxuZ7ItW4rS5vy59QklrkLIRnUf4taZhRPTL8csOyy79Z7icUtGAKzicnicZNicBwT21ia1nTw/0?wx_fmt=png
+是不是发现程序竟然可以这样写，很好玩吧，之后会连载的啦~想知道女司机的后续故事么，请持续关注！
+ <span style="color: #FF0000;">说到做到，新福利来啦：</span>关注公众号，在公众号菜单点击"<span style="color: #FF0000;">免费听课</span>"，即可参与活动免费听19.9元收费课程，当然，壕大大可以直接购买听课啦。壕大大入口：https://edu.hellobi.com/course/186，点击文末<span style="color: #FF0000;">本次主打课程：</span>http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC6NkTeTjOdFBhxdSdSWicfCSric32MZLYibBWribSUWLzFIZscSpk2ibygz50ehxc16HodQPG7D5IfZg/640
+课程名称：自然语言处理之-基于深度学习技术的聊天机器人实现
+课程背景：NLP是一个很大的领域，自成一系，本次课程通过一个企业级案例（聊天机器人）带领大家从了解项目场景开始一步步搭建，最后演示聊天机器人实例。通过本课程的学习，让你一举打开NLP的大门。
+主讲老师：

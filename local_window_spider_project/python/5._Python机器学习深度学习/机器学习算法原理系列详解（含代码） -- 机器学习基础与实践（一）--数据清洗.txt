@@ -1,0 +1,17 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe7\xae\x97\xe6\xb3\x95\xe5\x8e\x9f\xe7\x90\x86\xe7\xb3\xbb\xe5\x88\x97\xe8\xaf\xa6\xe8\xa7\xa3\xef\xbc\x88\xe5\x90\xab\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x89 --\xc2\xa0\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe5\x9f\xba\xe7\xa1\x80\xe4\xb8\x8e\xe5\xae\x9e\xe8\xb7\xb5\xef\xbc\x88\xe4\xb8\x80\xef\xbc\x89--\xe6\x95\xb0\xe6\x8d\xae\xe6\xb8\x85\xe6\xb4\x97'                                  
+
+                        <span style="color: rgb(0, 0, 255);">一.分析数据</span>http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttssP5ic59nCia7KYic57JAKVLAZ3ZzkY46OXbyWr6S7lYjlkX5ibPDGKysNTUsicOiahVUGHOen2PJk6J2g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttssP5ic59nCia7KYic57JAKVLAMRIgM4x61Wk7IoBV7buibNgrZyic8MUhicYAiciaPEHYdr7eWTI4DaTZzvg/0?wx_fmt=jpeg
+二.缺失值处理<br  />　　缺失值在实际数据中是不可避免的问题，有的人看到有缺失的数据就直接删除了，有的人直接赋予0值或者某一个特殊的值，那么到底该怎么处理呢？对于不同的数据场景应该采取不同的策略，首先应该判断缺失值的分布情况：</span>
+               <span style="color: rgb(0, 0, 255);">三.异常值处理</span>             
+
+处理方法：1.删除异常值----明显看出是异常且数量较少可以直接删除
+2.不处理---如果算法对异常值不敏感则可以不处理，但如果算法对异常值敏感，则最好不要用，如基于距离计算的一些算法，包括kmeans，knn之类的。
+3.平均值替代----损失信息小，简单高效。
+4.视为缺失值----可以按照处理缺失值的方法来处理
+
+
+四.去重处理   五.噪音处理      1.分箱法   2.
+ 回归法</strong>
+ <span style="color: rgb(0, 0, 255);">六.一些实用的数据处理小工具</span><span style="color: rgb(0, 0, 255);"><br  /></span>去掉文件中多余的空行</strong>
+ 如何判断文件的编码格式文件编码格式转换，gbk与utf-8之间的转换

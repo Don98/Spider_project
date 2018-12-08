@@ -1,0 +1,12 @@
+b'\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe5\xae\x9e\xe6\x88\x98\xe4\xb9\x8b\xe5\x86\xb3\xe7\xad\x96\xe6\xa0\x91'    https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczyc3bJrxzBhd2Mw8D24N5diaibqzrN6CJ1Q1zqjts9oRIgzaicl0yR9yKr9Q/640?wx_fmt=png
+  <span style="font-size: 14px;letter-spacing: 1px;">1、信息熵</span>https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycAUj7nq10bSO1dLMG4icudKDudTLgBkDagic3MJsUkjWU39IragVzz7wQ/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycymZC0icVMpmzUyKPTrV29rzj8Xl97dxZHbTCjofltYmKmqwFZawVOlw/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycbiajSzXlUTwo9ibqhXTN72mj7FdHr4ecRo4e3Ficy7evbmZWicTRficMCBw/640?wx_fmt=jpeg
+ https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycD4BWYI6qz0MtU67MHgAwLtTtEVjBSLSvib3NXib82YSu1x0MTsib4gcTg/640?wx_fmt=png
+ <span style="font-size: 14px;letter-spacing: 1px;">2、信息增益</span>https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycJnKicTnwzAayuibSUt2GwKr48MlsBYT1nLXogZpLKVBiacYKJzxG5Uib7Q/640?wx_fmt=jpeg
+https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycAkJ1iahM3Vab16BibI9DOiaghx6WJnkzianwOZ0icPmOTJNhZsZMM3ibVWeg/640?wx_fmt=png
+ <span style="font-size: 14px;letter-spacing: 1px;">3、信息增益率</span> https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycEUicA7dVUcbt32nuEeLBCHlSiarvScHT8cPs9zgDqBXsAgjg7fMibp14A/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_jpg/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczycfp3Ud1whOrNYDYiatLibT2vgZeCLspPfAzsFhiaP2BMFgibv3hz5rhttyQ/640?wx_fmt=jpeg
+ <span style="font-size: 14px;letter-spacing: 1px;">4、基尼指数</span> https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczyceP91dSKQ2nz16TTmY0jUpjJtrK57ZDEbCVH8FAOZfyc2wG4mPtsxYA/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/J9rT6MJZsD2R5GcnOGgR1hjlDarLiczyc9nUsfj77O3BiaJIlr5ia9W3jWDCibHIf9ibOiaKKdbG51G1HcQYicImNibYzQ/640?wx_fmt=png
+        

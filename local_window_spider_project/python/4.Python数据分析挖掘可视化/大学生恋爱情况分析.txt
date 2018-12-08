@@ -1,0 +1,126 @@
+b'\xe5\xa4\xa7\xe5\xad\xa6\xe7\x94\x9f\xe6\x81\x8b\xe7\x88\xb1\xe6\x83\x85\xe5\x86\xb5\xe5\x88\x86\xe6\x9e\x90' http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnI8XS8zMVfUjG47uPPAlPoicicUBlFaQIkF4dnlmZDPYaobOCjt3hDGr1A/640.png
+特别申明：
+ 1、本数据来源于网络，且数据量较小，故分析结果可能不具有普遍性，对于结果大家了解一下即可，不需要太在意，重点是分析过程。
+ 2、本文图片较多，篇幅较长。
+     %matplotlib inline
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+df=pd.read_csv("F:\\datasciene\\exercisedata\\data.csv",encoding="gbk")
+print df.columns#查看有哪些索引值
+df.head(2)#显示数据的前两行，查看数据呈现方式
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIvMvZlw3zuty1bkfN3Wtho5SppygnGKicziaqNeoibvnKiaBUql1CLltkeQ/640.png
+     如果有缺失值，则进行缺失值处理，可以选择填充或删掉。通过下面的截图看出没有缺失值，所以我们就跳过这一步。<br style="max-width: 100%;"  />
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIKC1iaVlQ4RLp9U0US4NC1JNUszf4UT11WINNyNQ3uvfkXEjRDIHwmiag/640.png
+ 2、值替换
+ 为了便于后续的研究，需要把一些属性值替换成机器容易识别的符号。
+   df[u"性别"].replace([u"女",u"男"],["female","male"],inplace=True)#将性别男女替换成英文
+df[u"年级"].replace([u"大一",u"大二",u"大三",u"大四"],["freshman","sophomore","junior","senior"],inplace=True)
+df[u"眼镜"].replace([u"戴眼镜",u"不戴眼镜"],["wear","not_wear"],inplace=True)
+ 值替换根据需要随时进行替换，有的一些属性值可能刚开始没想到会用到，在需要用的时候进行替换就可以。
+       grouped=df.groupby([u'恋爱次数']).count()[u'年级']
+print "平均恋爱次数：",df[u'恋爱次数'].mean()
+print "恋爱次数的中位数：",df[u'恋爱次数'].median()
+grouped.plot(kind="bar",color="gray",align='center')
+plt.xlabel('Times')
+plt.ylabel('counts(person)')
+       http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIu3BWhK1nfQXsDKx1Rp0SYgCeRpMFwib53jhSkxticH4Vb5TJCwibwCQWg/640.png
+     grouped1=df.groupby([u'被追人数']).count()[u'年级']
+print "平均被追人数：",df[u'被追人数'].mean()
+print "被追人数的中位数：",df[u'被追人数'].median()
+grouped1.plot(kind="bar",color="gray",align='center')
+plt.xlabel('Times')
+plt.ylabel('counts(person)')
+       http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnISrjmYjELQjvibLdKxyHUPXUEOrEzduK7H5ohMZibYJbzXbLhVibFdFGiaQ/640.png
+     grouped2=df.groupby([u'追过人数']).count()[u'年级']
+print "平均追过人数：",df[u'追过人数'].mean()
+print "追过人数的中位数：",df[u'追过人数'].median()
+grouped2.plot(kind="bar",color="gray",align='center')
+plt.xlabel('Times')
+plt.ylabel('counts(person)')
+       http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIOyEeNFtaVyUTNHBRrEfJXZQiatic3IhQsY0GzQQaXBiccic3Kiaib1bnPwMQ/640.png
+   接下来探索一下恋爱情况与性别的关系，所以先确认一下样本数据的男女比例是否一致。
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIiaCEv5NF4wrRnqyf1ticsnRTaEpUzkpX4aKAL6eibeOA9bzibVXP95JR3Q/640.png
+ 结果显示男女比例几乎接近1：1，所以可以看成两者的比例是一致的。
+ 1、恋爱次数与性别的关系：
+   grouped3=df.groupby([u'恋爱次数',u'性别']).count()[u'年级']
+grouped3.plot(kind="bar",stacked="True",color=['r', 'g'],label=("female"))
+plt.xlabel('Times&amp;sex')
+plt.ylabel('counts(person)')
+plt.legend()
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnI2beUymwibePTVPvRYTaux5HwMYnHicvEQEjgUDqBTdY7FaDCIBiaJT94A/640.png
+          grouped4=df.groupby([u'被追人数',u'性别']).count()[u"年级"]
+grouped4.plot(kind="bar",stacked=True,color=['r', 'g'],label=("female"))
+plt.xlabel('Times&amp;sex')
+plt.ylabel('counts(person)')
+plt.legend()
+  http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIo0B3QC0KwPV3mspyh9ic8C8hK9WbXviaTTjI2R3vaymxdYgDE1Nxw1lw/640.png
+   男生中有34.7%未被人追过，女生中有16.7%未被人追过。
+      grouped5=df.groupby([u'追过人数',u'性别']).count()[u"年级"]
+grouped5.plot(kind="bar",stacked=True,color=['r', 'g'],label=("female"))
+plt.xlabel('Times&amp;sex')
+plt.ylabel('counts(person)')
+plt.legend()
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnI1fIx4ViaInpuRNFJCuVKBapsGajh1dcWCgSqp0gka34oaZdZ2tf89dg/640.png
+   除了追过人数为0次时对应的女生人数要多于男生，追过次数为1-4次中男生对应的人数都要高于女生，而5次以后又被女生反超。
+这个其实也是可以理解的，大部分女生相比于男生都比较害羞，不太好意思主动去追求，所以在1-4次时男生要明显多于女生，但是也有一些比较open的女生，会在5次以后对应的人数多于男生。
+       zero=df[df[u"恋爱次数"]==0]#筛选出恋爱次数为0的同学
+zero.head(2)
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIK3ZAsPQb2Vjnt9qw7OIfbibLV5IyrJ7GUpFhrXibSsX72p8dBT4BIUmA/640.png
+ 1、恋爱与男女比例关系：
+ 有没有可能是这个学校本身男女比例的问题导致单身的存在，接下来看看单身群体中男女比例结构。（有的学校男女比例7：1，会是影响恋爱次数的一个重要原因）
+   grouped7=zero.groupby([u"性别"]).count()[u"年级"]
+grouped7.plot(kind="bar",color="gray")
+plt.xlabel('sex')
+plt.ylabel('counts(people)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIH8KJBI4hQ9zQ58tmQ9YguoH3oFZDy8H5rseOXtZG1kh0EmwZLRx5eA/640.png
+   通过柱状图可以看出，单身群体中，男女比例接近于1:1,看来男女本身比例问题这个原因可以排除。
+ 2、恋爱与年级关系
+   grouped8=zero.groupby([u"年级"]).count()[u"性别"]
+grouped8.plot(kind="bar",color="gray")
+plt.xlabel('grade')
+plt.ylabel('counts(people)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIL6iaREHxP1gK5I2eXVPbdbs5c1vONxAN9Ie9ibMn129GdXgkGH0ONicDQ/640.png
+   恋爱和年级还真有点关系，大二中恋爱次数人数最少，这可能是大二已经经历了一年的大学生活，开始对这个学校慢慢熟悉起来，再加上也认识了一些人，具备了基础条件，所以恋爱的就会多起来。
+大三中恋爱次数为0的最多。
+ 3、恋爱与追过和被追的关系：
+   grouped9=zero.groupby([u"追过人数",u"被追人数"]).count()[u"性别"]
+grouped9.plot(kind="bar",color="gray")
+plt.xlabel('Active and passive')
+plt.ylabel('counts(people)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIChtluwL0JYzXormMWjHjFREfMUrXFYiaiaibez6QP7fNwic3FGBkrboeOg/640.png
+   在恋爱次数为0的群体中，约一半的人追求人数和被追人数均为0，所以<strong style="max-width: 100%;">不主动可能至今是恋爱次数为0的主要原因吧。</strong>
+还会有一些主动追求过两次，被追求过10次这样的群体存在，这种群体可能是本身条件很好，所以追求人数很多，但是择偶标准也比较高，所以这么多人追求，依然保持恋爱次数为0。
+还有一些群体是主动追求过6、7次，被追求0次，恋爱次数依然为0。<span style="max-width: 100%;color: rgb(178, 178, 178);">（好心疼他们）</span>
+   学生组织是我们结交人脉的一个重要渠道，如果我们没有加入学生组织，可能不会认识很多人，会没有追求目标，这可能是恋爱次数为0的一个原因。具体看看。
+   grouped10=zero.groupby([u"学生组织个数"]).count()[u"年级"]
+grouped10.plot(kind="bar",stacked=True,color="gray")
+plt.xlabel('counts')
+plt.ylabel('counts(person)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnI5ScO5eSpxXMyYMj6hKSbNN4gw1BVfz15vAmYKlmDQdQb7Z8Frcwlqg/640.png
+   在恋爱次数为0的群体中，大部分人还是至少有参加一个学生组织的，只有10%左右的人没有参加学生组织。所以可以排除这点原因。
+ 5、恋爱与颜值的关系：
+   grouped12=zero.groupby([u"颜值"]).count()[u"年级"]
+grouped12.plot(kind="bar",stacked=True,color="gray")
+print "恋爱次数为0对应的平均颜值：",zero[u"颜值"].mean()
+plt.xlabel('Beauty')
+plt.ylabel('counts(person)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIbt3z4YxDxA7VuvRIFDFC54pgPo9YDgSN8Dn65VskIOZwpnf8ibvEicPw/640.png
+   恋爱次数为0的群体的平均颜值为5.5（满分为10），众数为5。
+恋爱次数为0的人大部分颜值为中等水平，一部分是中等偏上，这一部分可能就是那些被追很多次,但是恋爱次数为0的人。
+ 6、恋爱与身高的关系：
+  age_train_p=zero[u"身高"]
+ages=np.arange(150,200,10) 
+#150~200岁，每10厘米一段（年龄最小153，最大为192） 
+
+age_cut=pd.cut(age_train_p,ages) 
+#待分组值，分组条件
+age_cut_grouped=age_train_p.groupby(age_cut).count()
+age_cut_grouped.plot(kind="bar",color="gray")
+plt.xlabel('height')
+plt.ylabel('counts(person)')
+ http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6MqeLgGtDlVIfx2biaHdb3SnIHfMm9Q4A3LdFuJkrenEqSrgwonlznyXNToPneN3F9NKiaBAM3FQoNPw/640.png
+   恋爱次数为0的群体中，大部分人的身高集中在（160,170），其次是（170,180）。个人觉得这个身高差不多了，所以就先判定恋爱次数与身高没有关系。
+ 7、恋爱与寝室舍友情况的关系：
+   grouped13=zero.groupby([u"寝室同学情况"]).count()[u"年级"]

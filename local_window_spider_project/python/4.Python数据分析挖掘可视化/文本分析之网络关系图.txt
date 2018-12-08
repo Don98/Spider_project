@@ -1,0 +1,21 @@
+b'\xe6\x96\x87\xe6\x9c\xac\xe5\x88\x86\xe6\x9e\x90\xe4\xb9\x8b\xe7\xbd\x91\xe7\xbb\x9c\xe5\x85\xb3\xe7\xb3\xbb\xe5\x9b\xbe'   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1KAstWhEyEJgtpia9dcc1YqicLOicXYrTqibXGbaqGjIlbnt1IYGPPXyuKQ/0?wx_fmt=png
+ 目前简单的文本分析已经满足我人物需要，所以还不会去学机器学习，任务导向是最好的学习方法。希望大家也能找点有意思任务，python下。
+今天给大家带来我写好的脚本，用来分析社会网络关系。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1tGP1NRxmooTSUq5VTynobheJDJ9yeg91ZEYhROsm9HSae12mXW0PQw/0?wx_fmt=png
+这个图我没有用到gephi或者其他的工具，是我用python纯脚本运行出来的。简单的实现了封装，大家有兴趣可以下载下脚本，运行下。
+我就简单说下原理吧，先刻画一个简单的图A
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1EG2pE7prj1PRIln1rs7b2kQNvcKt27zEMOdjn2icfwjzVw5lrAoCHzA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1DGBsqyosef0hM53LfxwqWwxILZwWhGKOUGbe8qibxCgSrOBYZMmFuoA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1GqYfTn72PwDGUL3TWFADaRqYNmEV5vdgdJNaWnXGku8VJOhybJO1Mg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1tGP1NRxmooTSUq5VTynobheJDJ9yeg91ZEYhROsm9HSae12mXW0PQw/0?wx_fmt=png
+ 这篇文章写的很好（希望不要黑我，我也是觉得真心好）。我基本上借鉴了这篇文章思路写今天这个脚本，实现了自动生成关系网络图。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1cK4llrXtL7t1apl0x0zUdQCbIRddtKicUPJxHficQVZG1fk0a5vu8t7w/0?wx_fmt=png
+你下载后脚本<strong style="box-sizing: inherit;">文件夹名</strong>为：人民的名义
+其中的relationship.py就是大邓写的库（直接能调用的哦）
+ 1、读入小数数据和角色词典后，对数据分词后生成角色关系数据（有向关系数据）
+2、无需gephi绘图即可制作绚丽角色关系网络图。
+ 1、运行脚本前，文件夹中只保留<em style="box-sizing: inherit;">角色名单.txt 人民的名义.txt 和 relationship.py</em>
+2、要想图片好看点，一定要联网啊。里面我写了个爬虫，爬取一个配色网站的配色值。
+如果你们想单机也可以画出好看的图，可以修改下代码，将代码爬虫部分改成读取本地颜色数据
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttul2Ao92ppP2JSlVvAw4lU1TFu2jqsQxttW0YibV90AFKU5zoHYE9zxzzojkWhWtlWicEV4HofWicD7w/0?wx_fmt=png
+   

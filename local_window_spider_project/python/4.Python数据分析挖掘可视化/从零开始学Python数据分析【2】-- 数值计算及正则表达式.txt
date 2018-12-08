@@ -1,0 +1,11 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x902\xe3\x80\x91-- \xe6\x95\xb0\xe5\x80\xbc\xe8\xae\xa1\xe7\xae\x97\xe5\x8f\x8a\xe6\xad\xa3\xe5\x88\x99\xe8\xa1\xa8\xe8\xbe\xbe\xe5\xbc\x8f'      我们接着上一期的Python，继续跟大家分享有关Python中常用的数值计算和正则表达式。
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswgvQkicQRIq2dJaT1N4Z7D3XZnGnRS45laaq8EcIPmUpa4cVibGAveLQA/0?wx_fmt=png
+                 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrsw86BJibuiaXdibHNUKEGdlCIeWWiciajcdlmK8Oa1oebTJpPPwGRxibic5JRmQ/0?wx_fmt=png
+                    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrsweaicSy4ABrB3j7dk3NxiblDg7GYp1LAbC0rlGgnEyI9XFvhia9lia7IMQQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswaA6ickmwCSpKBpuorF3ZNIuyyFhgW1c2Yib1gKwNN9YsGZG4m3M1PhCw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswPlMjpCsQvjgseQEJCbdDXlvRIkj98HsBZ6XNjETtJjdje295ZMicueQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswujGsk11TNCzH2YHibibOPoOIPZdDg8oSJNLWsMSSibEyVia3dqPwVibqf6w/0?wx_fmt=png
+                     2）<span style="max-width: 100%;color: rgb(0, 0, 0);"><strong style="max-width: 100%;">结合re模块完成字符串的匹配</strong></span><br style="max-width: 100%;"  />
+       http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuslhZACadPC4GiapKI8qrswDUsffTvR4zkAmmpOY6XHqrPQBaHGFLwsYOEc65vOsToCQZxXfdpGibg/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswpThLGxumKTq4D9kYia2icljZ21dY2ryHQP9ZEop3szqYbKPVgOMic7LKQ/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswPCMS2kjGu4v4ALEibicuTibu3GozMTUZ4MfzGDYTDLgnkKaZXLmxnRSiaw/0?wx_fmt=png

@@ -1,0 +1,24 @@
+b'\xe5\xa6\x82\xe4\xbd\x95\xe4\xbd\xbf\xe7\x94\xa8Python\xe6\x9d\xa5\xe5\x86\x99\xe6\xb8\xb8\xe6\x88\x8f\xe2\x80\x94\xe2\x80\x94\xe8\xb6\x85\xe7\xba\xa7\xe7\x8e\x9b\xe4\xb8\xbd\xe7\xac\xac\xe4\xb8\x80\xe5\x85\xb3'http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+作为一个从小就爱玩游戏的孩纸，小时候对游戏最深的印象就是魂斗罗、超级玛丽，一不小心就暴露年龄了。最近发现GitHub上一个非常Nice的项目，使用Pygame来写了一个超级玛丽
+地址：https://github.com/justinmeister/Mario-Level-1
+多的不说，来体验试试<span style="font-weight: 700;">，</span>下载
+git clone https://github.com/justinmeister/Mario-Level-1.git
+   可以选择一人游戏还是两人游戏
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOarFQZJyh40D4I6SqGklBbJW8eV5icmML7qWoic4fYEA5OZicjpZEnpvELw/0?wx_fmt=jpeg
+“Enter”开始游戏，响起了熟悉的音乐，右上角有时间记录
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaOtemAkibRWyl9ibJnw8gzJIaLOcAjRmltLdF1S7snhbArztIy9mwzY7w/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaBm2RGKKX5g9WJVOI1fpPZEkc3EA9LGStQ2l5uWefKJPKqsSnvjy05g/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaOGYfCXH0qicwo08TIa9JxpGw9Md9VJ6FWpKmGKTb02RyHXZwzt17Htg/0?wx_fmt=jpeg
+可以看到，这款游戏和以前玩的基本一致，包括画面、音乐、成长等等。因为目前作者只写了第一关，所以过了第一关就会显示“GAME OVER”。
+然我们看看源码中的文件， data目录下是游戏运行的代码，resources则是游戏运行的资源，字体、图片、音乐等。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaCHAPof30THRia9jsWVItS8MRMMm5icCHEr9oXLsHn0RLIAAB8qF2P5qw/0?wx_fmt=jpeg
+关于跳跃，作者是这样写的
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaTfberQuB6efAkciapNkOEPsNgFcqMaRoISRh7WLpg24Fn04224YzSEw/0?wx_fmt=jpeg
+创建当马里奥触摸旗杆时出现的点
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOamZSOtjuxCBjRJib3ocibJxia4XN11ufSsJ0MJxEuueOX3ic2kN5xL85Aew/0?wx_fmt=jpeg
+游戏设计元素
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOa8ZOmg10m7eiawXrISSgjGXxW8QYTDicYVXgIJWicddsGSwXHoHJsOibRww/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOakZt4ib9StFXqur8VpibyectKpYtKa2xggs179lIP8rszmWxYOcgic4ib2A/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttibAdGABB9Qibb774DfEiczOaKiaXt4dNcQCwx2Q1dv39Zw5MRM0ibKAoDbRw2BPdPTlZQvFVibCiaskX9Q/0?wx_fmt=jpeg
+作者还录制了视频 https://www.youtube.com/watch?v=HBbzYKMfx5Y
+还有一个mini-RPG，https://github.com/justinmeister/The-Stolen-Crown-RPG

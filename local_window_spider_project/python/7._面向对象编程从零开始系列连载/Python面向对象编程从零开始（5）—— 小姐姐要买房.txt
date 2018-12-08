@@ -1,0 +1,16 @@
+b'Python\xe9\x9d\xa2\xe5\x90\x91\xe5\xaf\xb9\xe8\xb1\xa1\xe7\xbc\x96\xe7\xa8\x8b\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xef\xbc\x885\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94 \xe5\xb0\x8f\xe5\xa7\x90\xe5\xa7\x90\xe8\xa6\x81\xe4\xb9\xb0\xe6\x88\xbf'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGOI9LrlSqL8dQ7oo8LcUWLUEjIC4YjuRtr2UHoMgL4PicLSKSMibwRxiaw/0?wx_fmt=gif
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGxrKa5ECYcdouF1rP6ddshk4gA4HddCVEcMvv2LUHtSSKOuhucGcW3w/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSG8QibaN5lYlOIXD1ibf0iclwZ6HeQojKiakeCeJTcIuibora6xkVyS3LVpkA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSG0qfViaEIId6TwjfXyg8OpsxMWIQnhLA6bS0ShhIZ3nXbEtzIl6ounQA/0?wx_fmt=jpeg
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGpsDEyZKshmoMwePoaIYQQwAcEaEIqnGAraLtKm7mkibVtoibibeECVWJQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGPTGju22moH6vYOdvAibNaQY3l11J9WD2bEdYL4uh7gegrbd9cNXvYoQ/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGLBOiccVWK1Xj9GtAam9EeqibEy9Spf8HOyDG8266pH7qZVzHwNpv8WTQ/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGuKV1GplhW2grECcq2g3vEtlSJSPm1mXvddBYFYCjnM9tU5EeSXQflA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGTonIXkgZUpvXGqHymC6rvplwLicia7kSlZ3RKwkEv8D3kJf7rag5upOQ/0?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGtdX3jkMPmz7zjmUszqv0aVNo84cWicgQXhXiaAhaw2YJDuVT5xcV5QOw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGlXNUVhREzW3bGMskz5ZroRjmskuCEycyT6VQvpQaViaUOiapPjNNxibCA/0?wx_fmt=png
+              http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGuiaYTZw5X7frBlPCJ0BIqJp1rDYbtkjsqarlXcaZU4tqSicxnQUNvwaQ/0?wx_fmt=png
+     <span style="color: rgb(227, 55, 55); font-size: 14px;">注意：因为self.contain_items是列表，要转化为str字符串输出，所以要强制转换类型&nbsp;str(self.contain_items)</span>     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGK9ywj8KgEOYEIoXMPnaV4qKISH1j4aLwryKWPsib4rEdplynhDDnf7Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGfyzxiafzIsQhJicJeC5afialtLkwdSF65CmgVz16azJLmdOTqHkrWaPwg/0?wx_fmt=png
+   

@@ -1,0 +1,82 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xef\xbc\x9aExcel\xe6\x8a\x80\xe5\xb7\xa7\xe5\xa4\xa7\xe6\x8f\xad\xe7\xa7\x98'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）
+  上一篇文章<span style="color: rgb(120, 172, 254);">《数据分析：常见的Excel函数全部涵盖在这里了》</span>教了大家常用的函数，今天讲解Excel的技巧。
+本次讲解依然是提纲，图文部分引用自百度经验。如果有疑问或建议，可以留言给我，也可以网上搜索。内容方面照旧会补充SQL和Python。
+快捷键Excel的快捷键很多，以下主要是能提高效率：
+Crtl+方向键，对单元格光标快速移动，移动到数据边缘（空格位置）。
+Crtl+Shift+方向键，对单元格快读框选，选择到数据边缘（空格位置）。
+Ctrrl+空格键，选定整列。
+Shift+空格键，选定整行。
+Ctrl+A，选择整张表内容。
+Alt+Enter，换行。
+Ctrl+Enter，以当前单元格为始，往下填充数据和函数。
+Ctrl+S，快读保存，你懂的。
+Ctrl+Z，撤回当前操作。
+如果是效率达人，可以学习更多快捷键。Mac用户的ctrl一般需要用command替换。
+格式转换Excel的格式及转换很容易忽略，但格式会如影随形伴随数据分析者的一切场景，是后续SQL和Python数据类型的基础。
+
+通常我们将Excel格式分为数值、文本、时间。
+数值常见整数型 Int和小数/浮点型 Float。两者的界限很模糊。在SQL和Python中，则会牵扯的复杂，涉及运算效率，计算精度等。
+文本分为中文和英文，存储字节，字符长度不同。中文很容易遇到编码问题，尤其是Python2。Win和Mac环境也有差异。大家遇到的乱码一般都属于中文编码错误。
+时间格式在Excel中可以和数值直接互换，也能用加减法进行天数换算。
+时间格式有不同表达。例如2016年11月11日，2016/11/11，2016-11-11等。当数据源多就会变得混乱。我们可以用自定义格式规范时间。
+这里了解一下时间格式的概念，列举是一些较通用的范例（<strong>不同编程语言还是有差异的</strong>）。
+YYYY代表通配的四位数年格式
+MM代表通配的两位数月格式
+DD代表通配的两位数日格式
+HH代表通配的的两位数小时（24小时）格式
+hh代表通配的两位数小（12小时制）格式
+mm代表通配的两位数分格式
+ss代表通配的两位数秒格式
+例如2016/11/11可以写成：yyyy/MM/dd
+2016-11-11 23:59:59可以写成：yyyy-MM-dd HH:mm:ss
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6OtWLFmicSyrbBxaaHAGZN42QIkwA8FxFNIQmjH9D2Mwp4Qqmq0ZCmqw/0?
+数组数组很多人都不会用到，甚至不知道有这个功能。依旧是数据分析越往后用到越多，它类似R语言的Array和Python的List。
+数组由多个元素组成。普通函数的计算结果是一个值，数组类函数的计算结果返回多个值。
+数组用大括号表示，当函数中使用到数组，应该用Ctrl+Shift+Enter输入，不然会报错。
+先看数组的最基础使用。选择A1:D1区域，输入={1,2,3,4}。记住是大括号。然后Ctrl+Shift+Enter。我们发现数组里的四个值被分别传到四个单元格中，这是数组的独有用法。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6nmMV5EGPWLuryrg6r5DIQVFuyGCxqQ28TgQ53p8dgUQTDaF2t4ibicFg/0?
+我们再来看一下数组和函数的应用。利用{}，我们能做到1匹配a，2匹配b，3匹配c。也就是一一对应。专业说法是Mapping。
+=lookup(查找值,{1,2,3},{"a","b","c"})
+
+Excel的数组有同样强大的玩法，大家可以搜索学习，提高一定的效率。但是Python的数组更为强大，重点就不放在这块了。
+
+分列Excel可以将多个单元格的内容合并，但是不擅长拆分。分列功能可以将某一列按照特定规则拆分。常常用来进行数据清洗。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6eKpjxKictzYQex37Olyp54VHazWc3qaXbXmbVDYiaZAlCnD2d7ofeSow/0?
+上文我有一列地区的数据，我想要将市和区分成两列。通常做法是可以用mid和find函数查找“市”截取字符。但最快做法就是用“市”分列。
+
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6xkQOYzk3EJZQdlyK5NDUs31rpa6uXfOKjAhxXVTwYraaZctGeGIrpg/0?
+出一个思考题，如果市和区都存在应该如何分列？
+SQL和Python中有类似的spilt ( )函数。
+合并单元个格单元格作为报表整理使用，除非是最终输出格式，例如打印。否则不要随意合并单元格。
+一旦使用合并单元格，绝大多数函数都不能正常使用，影响批量的数据处理和格式转换。合并单元格也会造成Python和SQL的读取错误。
+数据透视表数据透视表是非常强大的功能，当初学会时惊为天人。
+数据透视表的主要功能是将数据聚合，按照各子段进行sum( )，count( )的运算。
+下图我选择我选择想要计算的数据，然后点击创建透视表。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6BySPd6bicF2pawmpbbKhhFaCZbRuZOJX5X1Gy5RBoSUBDTqickTiaErjA/0?
+此时会新建一个Sheet，这是数据透视表的优点，将原始数据和汇总计算数据分离。
+数据透视表的核心思想是聚合运算，将字段名相同的数据聚合起来，所谓数以类分。
+列和行的设置，则是按不同轴向展现数据。简单说，你想要什么结构的报表，就用什么样的拖拽方式。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw65DnEBxqxb33MtWP70Zzua5XhFbn1doujJmD3iacWqd24XJjZNvUeyLA/0?
+聚合功能有一点类似SQL中的gorup by，python中则有更为强大的pandas.pivot_table( )。
+删除重复项一种数据清洗和检验的快速方式。想要验证某一列有多少个唯一值，或者数据清洗，都可以使用。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6AGhS98oVRic9dGIliad2rRMk5zEGzrlFFQZs4bibyjeLep4yNHsKiaiavTQ/0?
+功能类似SQL中的distinct ,python中的set。
+条件格式条件格式可以当作数据可视化的应用。如果我们要使用函数在大量数据中找出前三的值，可能会用到rank( )函数，排序，然后过滤出1，2，3。
+用条件格式则是另外一种快速方法，直接用颜色标出，非常直观。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6RjwsJEHDN1ib60HwMfDSZVOf5O8dxYvYukwwS13xIgNkUbibMeHFB4jA/0?
+冻结首行首列Excel的首行一般是各字段名Header，俗称表头，当行数和列数过多的时候，观察数据比较麻烦。我们可以通过固定住首行，方便浏览和操作。
+Header是一个较为重要的概念。在Python和R中，read_csv函数，会有一个专门的参数header=true，来判断是否读取表头作为columns的名字。
+自定义下拉菜单（数据有效性）数据有效性是一种约束，针对单元格限制其输入，也就是让其只能固定几个值。下拉菜单是一种高阶应用，通过允许下拉箭头即可。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6VyUqvwPhH27Ob4rrySsdmhiczYicLLv2baQ3r0So9Np7GL9TCejX8zyw/0?
+自定义名称自定义名称是一个很好用的技巧，我们可以为一个区域，变量、或者数组定义一个名称。后续要经常使用的话，直接引用即可，无需再次定位。这是复用的概念。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6c7UHQd6NLXrYAibWOX29Kan3swwtibkjsW5w5ClsyyzbqPbTCd4LA1dw/0?
+我们将A1:A3区域命名为NUM。
+直接使用=sum(NUM) ，等价于sum(A1:A3)。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6uu7kxcYOBvvGC0NdapTiaC055D0SOD9Od8icicqJqaWMAZU0MNHhGI0zQ/0?
+新手们理解数据库，可以将其想象成无数张表sheet。每一张表都有自己唯一的名字，就像上图的NUM一样。数据库操作就是引用表名进行查找、关联等操作。使用sum，count等函数。
+查找公式错误公式报错也不知道错在哪里时候可以使用该功能，尤其是各类IF嵌套或者多表关联，逻辑复杂时。查找公式错误是逐步运算的，很方便定位。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6LfojIFXjz3YibYWiabvAYGdOIjP7usMZ0z0IUS6RpNVibiaZKHAe8jbptg/0?
+分组和分级显示分组和分级显示，常用在报表中，在报表行数多到一定程度时，通过分组达到快速切换和隐藏的目的。越是专业度的报表（咨询、财务等），越可以学习这块。在数据菜单下。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6jdop6SM2h3n6c9gg9TibqBJ9oVkqEb9cQqLEI3pMS6cSyxFJnRjBCwQ/0?
+分析工具库分析工具库是高阶分析的利器，包含很多统计计算，检验功能等工具。Excel是默认不安装的，要安装需要加载项，在工具菜单下（不同版本安装方式会有一点小差异）。

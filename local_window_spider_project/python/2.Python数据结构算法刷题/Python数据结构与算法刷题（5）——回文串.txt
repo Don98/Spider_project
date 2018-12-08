@@ -1,0 +1,3 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe7\xbb\x93\xe6\x9e\x84\xe4\xb8\x8e\xe7\xae\x97\xe6\xb3\x95\xe5\x88\xb7\xe9\xa2\x98\xef\xbc\x885\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe5\x9b\x9e\xe6\x96\x87\xe4\xb8\xb2' 前言       题目描述： <br  />输入： 输出： 样例输入： 样例输出：  https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv8RRkpmsviaKFHmibRNe7A4x5ew4ceicFAe9xhibiaEFHOSaIbibabKslMzL1YlAvma38icHicmTx0tkTqkg/640?wx_fmt=png
+注意点：<br  />   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv8RRkpmsviaKFHmibRNe7A4xaUCqibEoVWhtrKosIX4Ficic1697W0fYMIggUyNCRlnHItnYRcAWqIFow/640?wx_fmt=png
+ 

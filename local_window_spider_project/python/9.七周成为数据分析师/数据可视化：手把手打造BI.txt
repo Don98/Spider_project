@@ -1,0 +1,102 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x9a\xe6\x89\x8b\xe6\x8a\x8a\xe6\x89\x8b\xe6\x89\x93\xe9\x80\xa0BI'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）<span style="text-align: justify;">。</span>
+ 本文是<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484105&amp;idx=1&amp;sn=855a86e93df6e96393335a96f42840e0&amp;chksm=ec5eddb4db2954a26780d7e552e91546f3bad38d29e60b9d80dc03bf26ae768a24f94abef0de&amp;scene=21#wechat_redirect" target="_blank"><span style="color: rgb(65, 140, 175);">《</span><span style="color: rgb(65, 140, 175);"><span style="text-decoration: underline;">如何七周成为数据分析师</span>》</span></a>的第六篇教程，相关视频教程：【<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484109&amp;idx=1&amp;sn=73644d888c6f470477ef2ecad9eabbe6&amp;chksm=ec5eddb0db2954a6254eb97a18f2cb6e3ece0786c66c802ee29529fbd2c6c773bc8303684d0a&amp;scene=21#wechat_redirect" target="_blank">秦路主讲，七周成为数据分析师</a>】如果想要了解写作初衷，可以先行阅读七周指南。温馨提示：如果您已经熟悉BI，大可不必再看这篇文章，或只挑选部分。
+前言我们上一篇<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484193&amp;idx=1&amp;sn=7158abace86a71de8f173a2407230dfa&amp;chksm=ec5edc5cdb29554af33d8effb1d4bceb5500af2c2a6c4211ef5339c923dccd82dc353ae93e3e&amp;scene=21#wechat_redirect" target="_blank"><span style="color: rgb(65, 140, 175); text-decoration: underline;">《</span><span style="color: rgb(65, 140, 175); text-decoration: underline;">数据可视化：教你打造升职加薪的报表》</span></a>教大家如何制作清晰美观的报表以及相应技巧，但是报表是结果的呈现，并不是数据分析的过程。
+数据分析师更多用到的报表是BI。
+BI全称商业智能（Business Intelligence），在传统企业中，它是一套完整的解决方案。将企业的数据有效整合，快速制作出报表以作出决策。涉及数据仓库，ETL，OLAP，权限控制等模块。
+今天的学习我们只着重于数据分析过程，使用Power BI打造数据分析师Dashboard报表。为了更好的学习和实践，我们依旧会使用<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484188&amp;idx=2&amp;sn=c938487023f767566a6a39ae968a5429&amp;chksm=ec5edc61db295577e76d0b7ab18a5e660646d62382306a53c8e48dd8001308f5202d13517173&amp;scene=21#wechat_redirect" target="_blank"><span style="color: rgb(65, 140, 175); text-decoration: underline;">《</span><span style="color: rgb(65, 140, 175); text-decoration: underline;">数据分析：手把手教你Excel实战》</span></a>的数据进行操作。这是做出的简单作品。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6ahPCJJxaYBjUUcf1jp7lsewmtC0qvekhOE9QHR2exnhOYvwwjjPZgg/640?wx_fmt=png
+ Power BI在微软官网有下载（注不注册无所谓的），只需要下载Desktop桌面操作版，大小约120MB。暂时只推出Win版本。
+大家如果在下载过程中出现CAB文件损坏错误，大概是某软哪方面又出错了，可以换浏览器下载，也可以下载中文繁体版。反正我是一直报错。
+为了方便大家偷懒，可以在<span style="color: rgb(0, 0, 0);">公众号：qinlu中</span>会话页发送关键词「<span style="color: rgb(255, 76, 65);">BI下载</span>」获取官网下载地址。
+什么是Power BIBI工具主要有两种用途。一种是利用BI制作自动化报表，数据类工作每天都会接触大量数据，并且需要整理汇总，这是一块很大的工作量。这部分工作可以交给BI自动化完成，从数据规整、建模到下载。
+另外一种是使用其可视化功能进行分析，BI的优点在于它提供比Excel更丰富的可视化功能，操作简单上手，而且美观，如果大家每天作图需要两小时，BI会缩短一半时间。
+BI作为企业级应用，可以通过它连接公司数据库，实现企业级报表的制作。这块涉及数据架构，就不深入讲了。
+Power BI是微软家的。如果大家熟悉Excel，应该会知道微软推出的Power Query、Power Pivot、Power View和Power Map，是Excel上非常强大的四个插件。Power BI则是微软将它们作为集合推出。
+Power Query是用于数据提取、整合、搜索的插件。它偏向数据模型的建立，而不是单元格的使用。
+Power Pivot是数据透视表的高级应用，使用DAX能进行大量的科学计算。性能方面，比Excel函数要快两个量级，百万级的处理不成问题。
+
+Power View是图表的高级应用，实现了过滤、联动、拖拽等功能。
+
+Power Map是可视化地图。
+
+如果大家熟练掌握以上四个插件，那么在Excel上也能实现部分BI。毕竟Excel是企业中人手一款的工具，和BI相比有轻量级的好处，虽然数据分析师需要掌握的工具更多。
+BI的步骤市面上有很多丰富的BI工具，Tableau，QlikView，BDP等，各有侧重，也各有价格。但是操作过程都是相似的，大体分为五个步骤：数据源读取、数据清洗、数据关联、图表制作、Dashboard整合。熟悉了其中一个，再学会另外的就不难。
+因为我工作用的BI是私有化部署到服务器，直接连接生产环境的，演示不方便。所以才用Power BI演示，实际我也说不上熟练。
+我们打开Power BI，它会让我们登录，不用管它。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6pxFLG3ETUZHa5lr6I9cKfVHOJ0qFOUibxyyy7IBhswE4ZcOMLxib1PMQ/0?
+界面和Office软件比较接近。上面是操作工具项，左侧栏是导航栏。
+Power BI 的左侧导航栏对应三个模块：仪表板、报表和数据集。仪表板或报表需要数据才能操作，我们先读取数据集。
+
+点击工具栏的取得资料（奇怪的翻译）。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6C2HYTVHK93jZQ4gRfmzEF20icKibhciatIIbk0lQbVzUKXqa62Qd3l3EQ/0?
+Power BI支持各类丰富数据源（市面上绝大部分BI都支持，只是读取方式略有差异），除了Excel和CSV 文件，它还支持Acess、SQL数据库、Hadoop／HDFS、Spark、第三方API等。
+这是新手教程，连接CSV即可，选择载入练习数据DataAnalyst。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw696d6LdcNofHKzNIU9c9BzXuqqExtPV9n5bqxMJja3u2xhuMPBsCrHQ/0?
+这里可以针对数据编辑，先略过，选择载入。
+自动跳转到数据报表页，数据报表（Report）是数据规整和清洗过程。
+
+大家还记得实战篇中演示的数据清洗吗？之前我们体验了一遍Excel函数清洗的过程。这次需要用BI再进行一遍清洗。数据清洗是分析师最蛋疼且耗时持久的工作，没有之一。
+数据清洗Power BI有一个高级功能叫DAX（Data Analysis Expressions），它是整个 Power BI 使用的公式语言。
+DAX近似Excel函数（大多数第三方BI，函数均接近Excel），故它针对新手非常友好。如果大家已经熟悉Excel函数，上手速度会很快。基本上函数名字都一样，如果不熟悉，可以查阅官网提供的文档。
+我们先清洗报表中的薪水salery，和实战篇过程一样，需要将其拆分成两个新列，并且计算平均值。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6HN43lXJKI1g7TF7YWicpQzvexfKN0FfkAfQ22Xu75n4MWfbxZEXQesg/0?
+点击模型项的新建资料行（这里的翻译应该不对，应是column列，后文我都用列表示），此时新增加的列没有任何内容。我们需要做的操作就是以salery生成两列。
+
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6n71CEbqA92oZ2hBaadpaSZOsdNZzLydWJwvt4iaAd1oJNuf95TC6ukg/0?
+这里需要用到DAX。当成函数使用它就行，不过Excel是单元格级别的引用，而DAX中的任何引用、计算、汇总等，都是以列为单位的。
+ 这是最简单的引用，Table Name是我们这张报表的名字，我载入的csv叫DataAnalyst，那么报表就叫做DataAnalyst，ColumnName是我们需要引用的列，名字叫做salary。下图公式就是范例。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6ibuY14XnmjgecWURwqYYTicic3QddJBPkkePCyO8Z4TdTlRzNjbGBYqpQ/0?
+如果表名中有空格，需要加引号，如果没有则不需要。如果是跨表引用，TableName是必须的，否则只需要ColumnName。DAX支持自动填充，可以通过模糊输入+回车快速输入。
+我说过它近似Excel，那么Excel加减乘除的习惯可以直接使用在上面。
+ 接下来继续清洗步骤，我们查找k所在的字符串位置。
+ 利用left函数截取工资下限。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw67hJNznCFwOB5Jl7MuoELo6R8EJDKI105VR8ibZD8aVtUtGiaXSwZjvhg/0?
+搞定。资料行重命名为bottomSalery。接下来是工资上限topSalery，使用"-"截取的时候报错了。
+ 检查一下发现原来是有“10K以上”这类字符串。DAX查找不到“-”，这时需要返回一个出错时表达的值。因为10k以上的描述无法确定工资上限，那么我们就把返回的值限定为bottomSalery。
+在这里请记住，DAX的容错性比Excel低，只要DAX中有一行返回Error，那么整列都是Error。我们需要用Iferror函数保证容错性。
+这里给出topSalary的计算，比较繁琐。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6ibCnibnjibeCog2tqALPicuAKSliaFsbCeBDiaibly7EL2bbKBKtlibzGPzJaA/0?
+之后新建一列使用(DataAnalyst[bottomSalery]+DataAnalyst[topSalery])/2 计算该岗位的平均工资。
+大家看到这里，是不是觉得DAX公式非常长？新手可以多增加辅助列来进行计算。
+Excel中有比较方便的分列功能，那么Power BI中是否拥有呢？答案是肯定的，右键点击列，选择编辑查询选项。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6Jjx6TePdvoh4eqcQhL4iawzWyhicXDAMSStRNgjL0Lv0SIoOIJZXz3kw/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6O17nXe1UCGkrgOJ506oDKKWibict5QHD3mCAgl2PAZ1LHd3VsZgc0ALQ/0?
+实战篇提到过，我们的北京数据是有重复值的，那么我们通过positionId这职位的唯一标示，来删除重复项。右键点击移除重复项目即可。
+
+我们再看一下查询编辑的其他功能。
+
+分组依据可以认为是数据透视表。可以选择多个字段进行分组。对结果进行求和、计数等操作。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw62hic8VUA98ZqJ4rwOX9uV3esvOKnKo8G2SicU5ibwcPSPV3zORCprPTLg/0?
+如果是订单、用户行为、用户资料等大量数据，一般会以分组形式进行计算。不同分组字段，会生成不同的维度，像范例中的城市、工作年限，教育背景都是维度，也是图表的基础。如果生成的维度足够多，我们能利用维度组成数据模型，这是OLAP的概念。
+
+除此以外，也能利用过滤直接筛选数据。我们选择出含有数据分析、分析的数据。排除掉大数据工程师等干扰职位。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6jAKR2cbUYOmjicYZQMGXk6IXSTUnl5H9RN1Rr1I9zzwwXedticibNdHGQ/0?
+这里支持多条件复杂逻辑筛选。
+
+到这里，我们已经完成实战篇中的清洗过程中，我这次简单化了。以上步骤都能通过右侧的套用步骤还原和撤销。这里不会出现bottomSalery这类列。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6KOrAT63zMLcqk1iaXfkHPoGMOq4M045jUC02opP6oOV9mb6Z7yIWibOQ/0?
+之后选择工具栏的关闭并套用，报表数据就会更新。最后数据2300多行。
+ 通过数据查询和报表DAX公式，我们就能完成数据清洗和规整的步骤。主要思路是：移除重复值、过滤目标数据、清洗脏数据、数据格式转换。
+数据关联我们工作中会用到很多数据，不可能依靠一张表走天下。若是在Excel中，我们经常用Vlookup函数将多张表关联汇总。Power BI则用拖拽关联数据，更方便。一般是先关联再清洗。
+因为我的数据只有一张表，用不到关联，以官网截图为例。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6oDBJNhg6FS6lmicUuaFoZBiagTl0AJlWq8gibLoFYHDrRicofBERqbcmlg/0?
+很简单，用拖拽将Product的manufactureId和Manufacturer的manufactureId关联，我们可以理解成做了vlookup引用，也可以想成SQL的Join。
+
+分析会涉及到很多复杂因素，这些因素相关的数据不会安安静静给你呆在一张表里，而是不同的表，所以需要用到数据关联。
+数据关联在学习到SQL后会更加清晰，这是SQL的核心概念之一。
+图表进入图表设计阶段，点击侧边栏第一个项。BI比Excel好的地方在于，它只要拖拽就能设计和生成。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw61n204fibTnGWEO7Ou1pIkibAWcZflPnq7piafVUfpBbB2Wq49sPUN6LibA/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6aPrwl1zwA5FycYWAv60QvzGrS3sfohBqztLkztibdmonyCBFcjO9u1w/0?
+视觉效果下有设计选项，可以将图表调整的更美观，这里不详细介绍了。
+
+点击新增视觉效果（继续吐槽翻译），可以继续在画布上增加图表。绝大部分BI，都是支持联动的，所谓联动，通俗讲，就是点击图表上的维度元素，其他数据也会按此维度相应变化。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6RZdO80AHXMLd7O60Ytdaa636ut6FN30D8qDEqlNrXffetPZS9oguQg/0?
+上图就是一个很好的联动例子，点击城市维度的北京，其他图表都变了，平均工资由14.23变成15.23。而学历则变成突出显示，显示出了北京的博士们薪水远高于平均水准。
+
+图表联动带来更好的数据洞察，将不同数据维度的组合和选取，为分析师带来决策能力的提升。当然我最喜欢的特点之一是省时间。
+通过不断的图表组合，就能生成数据分析师自己的分析画布。这块画布叫作Dashboard。当然图表好看与否，就取决于分析师的设计品味了（这个我教不了你们，哈哈）。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6wHtic2FMibqkgWetY49wJiaXaGhhsTsoXNoLSAWhJfTqlIcWvKSplwMvw/0?
+如果维度过多，大家可以插入视觉选项中的交叉筛选器，添加过滤功能，常用于精细化的分析，例如时间维度。图表右上角按钮，还能选择导出数据，导出一份该图表的csv数据。
+
+我们也能将其发布到网上，作为同事和企业间协作，或者手机端浏览数据用。当然这里需要注册账号，就看大家意愿了。

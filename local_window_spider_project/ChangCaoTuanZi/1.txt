@@ -1,0 +1,1159 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" data-pc>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="长草颜团子图片来了！拿走不谢！"/>
+    <meta name="description" content="最近小编有点忙碌，为了赔礼道歉以后每天都会发1～2篇表情！ -生肖（有些生肖没找到，就用别的动物来">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel='canonical' href='https://www.meipian.cn/5ltjdi6'/>
+    <title>长草颜团子图片来了！拿走不谢！ - 美篇</title>
+    <link rel="shortcut icon" href="https://ss2.meipian.me/official/resource/favicon.ico">
+    
+        
+
+    <!-- <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_337312_lspf9tjs6u.css" /> -->
+    <link rel="stylesheet" type="text/css" href="//ss2.meipian.me/third/fonts/article/1.0.0/font.css" />
+    <link rel="stylesheet" type="text/css" id="style" href="//ss2.meipian.me/theme/v2/css/000.css?201810101516" />
+    
+    <script src="https://ss2.meipian.me/cdn/fore/wap/hook/index.js"></script>    
+    <style>a[title="站长统计"]{display:none}</style>
+    <style>
+    html[data-pc] body {
+        overflow: auto;
+    }
+    html[data-pc] .root.meipian {
+        position: relative;
+        width: 750px;
+        margin: 110px auto 0 120px;
+    }
+    html[data-pc] .avatar-stand-alone, html[data-pc] .music-icon {
+        position: absolute !important;
+    }
+    html[data-pc] .main-box {
+        position: relative;
+        max-width: 1230px;
+        margin: 110px auto 0;
+        position: relative;
+    }
+    .main-box {
+        height: 100%;
+    }
+    html[data-pc] .main-box {
+        position: relative;
+        max-width: 1230px;
+        margin: 110px auto 0;
+        height: 100%; /* 动态模板必须这么设置，不影响普通模板 */
+    }
+    html[data-pc] .img-caption {
+        bottom: 128px;
+    }
+    video::-webkit-media-controls-current-time-display, video::-webkit-media-controls-time-remaining-display {
+        display: none;
+    }
+   
+    .main-box .main-box .section .text a{
+        display: inline;
+        padding: 0 5px;
+    }
+    video::-webkit-media-controls-fullscreen-button { display: none;}
+    video::-webkit-media-controls-play-button {display: none}
+    video::-internal-media-controls-download-button {display:none;}
+    video::-webkit-media-controls--download-button {display:none;}
+    video::-webkit-media-controls-enclosure {overflow:hidden;}
+    </style>
+    <script>
+        window.maskId = "5ltjdi6";
+        var _czc = _czc || [];
+        _czc.push(["_setAccount", "1264684606"]);
+        window.themeId = "0";
+        window.authorId = "4283536";
+    </script>
+    <script>var sharesrc =  "https://ss2.meipian.me/default/static/api/js/share.js?cdnversion=15";var sharejs = document.createElement("script");sharejs.src = sharesrc;document.head.appendChild(sharejs);</script>
+
+    <script>
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+
+            var r = window.location.search.substr(1).match(reg);
+
+            if (r != null) {
+                return unescape(r[2]);
+            }
+
+            return null;
+        }
+
+        var isWX = navigator.userAgent.indexOf('MicroMessenger') > -1
+
+        function pushHistory() {
+            if (history.length < 2) {
+                var beforeUrl =  "c/4283536"
+                if(window.configData && window.configData.article_column_topic_back && window.configData.article_column_topic_back.link_url ){
+                    beforeUrl = window.configData.article_column_topic_back.link_url
+                }
+                var state = {
+                    title: "下载页面",
+                    page: "download",
+                    url: beforeUrl.indexOf("?") > -1  ? beforeUrl + "&"+ window.location.search.replace(/\?/ig,"") : beforeUrl + window.location.search
+                }
+                var url = location.href
+                window.history.replaceState(state, null, state.url)
+                window.history.pushState({ page: 'detail' }, null, url)
+            }
+        }
+        if (isWX && getQueryString('from') !== 'minaapp' && getQueryString('from') !== 'timeline') {
+            pushHistory()
+            window.addEventListener('popstate', function (e) {
+                var temp = e.state
+                if (temp && "download" === temp.page) {
+                    location.reload()
+                }
+            })
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="main-box">
+            <script src="https://ss2.meipian.me/third/jquery/2.2.0/jquery.min.js"></script><script src="https://ss2.meipian.me/default/static/api/js/share.js?cdnversion=15"></script>
+<link rel="stylesheet" href="https://t-ss2.meipian.me/theme/v2/css/seo/seo_header.css?112sdf3">
+
+<div id="seo-header">
+    <div id="nav-left">
+        <a  href="https://www.meipian.cn/hot" target="_blank">热点</a><a  href="https://www.meipian.cn/photo" target="_blank">摄影</a><a  href="https://www.meipian.cn/tour" target="_blank">旅行</a><a  href="https://www.meipian.cn/beauty" target="_blank">女神</a><a  href="https://www.meipian.cn/life" target="_blank">生活</a><a  href="https://www.meipian.cn/fiction" target="_blank">美文</a><a  href="https://www.meipian.cn/baby" target="_blank">亲子</a><a  href="https://www.meipian.cn/hobby" target="_blank">兴趣</a><a  href="https://www.meipian.cn/food" target="_blank">美食</a><a  href="https://www.meipian.cn/fiction" target="_blank">影视</a><a  href="https://www.meipian.cn/baby" target="_blank">情感</a><a  href="https://www.meipian.cn/hobby" target="_blank">赏花</a><a  href="https://www.meipian.cn/food" target="_blank">诗词</a>    </div>
+    <div id="breadcrumb">
+        <div class="box">
+            <a href="https://www.meipian.cn/" target="_blank" id="logo"></a>
+            <a href="https://www.meipian.cn/hot" target="_blank">&nbsp;&nbsp;频道&nbsp;&nbsp;</a>
+            <span>/</span>
+            <a href="https://www.meipian.cn/hot" target="_blank">&nbsp;&nbsp;其它&nbsp;&nbsp;</a><span>/</span><span id="title">&nbsp;&nbsp;&nbsp;&nbsp;长草颜团子图片来了！拿走不谢！</span>        </div>
+    </div>
+    <div id="block"></div>
+</div>
+<link rel="stylesheet" href="https://ss2.meipian.me/theme/v2/css/seo/seo_topBar.css">
+<div id="side-bar" class="side-bar only-pc" style="bottom: 320px; z-index: 2;">
+    <div id="toTop" class="item bg"></div>
+    <div class="code code_android item bg" style="background-image: none; color: #fff; font-size: 14px; line-height: 1.15; display: flex; justify-content: center; align-items: center;">下载<br>美篇
+        <div class="bigCode bg"></div>
+    </div>
+    <div class="code code_wechat item bg" style="background-image: none; color: #fff; font-size: 14px; line-height: 1.15; display: flex; justify-content: center; align-items: center;">访问<br>美篇
+        <div class="bigCode bg" style="background-image: url(https://ss2.meipian.me/official/resource/img/xiaochengxu_rare.png)"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var bar = document.querySelector('.side-bar');
+        var toTop = document.getElementById('toTop');
+
+        if (toTop) {
+            toTop.onclick = function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 400)
+            };
+        }
+    })
+</script><style>
+    #leftshare{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 110px;
+        margin-left: 10px;
+        text-shadow: none;
+        z-index: 11;
+    }
+    #leftshare ul {
+        margin: 0;
+        padding: 0;
+    }
+    #leftshare ul li{
+        margin-bottom: 12px;
+        height: 36px;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 36px;
+        position: relative;
+        cursor: pointer;
+        list-style: none;
+    }
+    #leftshare ul li a{
+        color: #333333;
+    }
+    #leftshare ul li img{
+        display: inline-block;
+        height: 36px;
+        width: 36px;
+        margin-right: 6px;
+        vertical-align: top;
+    }
+    #leftshare ul li .qrcode{
+        display: none;
+        position: absolute;
+        width: 173px;
+        height: 186px;
+        background-image: url(https://ss2.meipian.me/theme/v2/img/pctowexin.png);
+        background-size: 100% 100%;
+        top: -184%;
+        left: 68%;
+        box-sizing: border-box;
+        padding-left: 37px;
+        padding-top: 22px;
+    }
+    #leftshare ul li.wechat:hover .qrcode{
+        display: block;
+    }
+    #leftshare ul li .qrcode::before{
+        content: '';
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #fff;
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        left: -9px;
+        top: 45%;
+        z-index: -1;
+    }
+    #leftshare ul li .qrcode .qrcodetitle{
+        font-size: 16px;
+        color: #5C5E61;
+        letter-spacing: 0;
+        line-height: 16px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div id="leftshare">
+    <ul>
+        <li id="qzone"><img src="https://ss2.meipian.me/theme/v2/img/article_Qzone.png" alt="">Qzone</li>
+        <li id="weibo"><img src="https://ss2.meipian.me/theme/v2/img/article_weibo.png" alt="">微博</li>
+        <li class="wechat">
+            <img src="https://ss2.meipian.me/theme/v2/img/article_wechat.png" alt="">微信
+            <div class="qrcode">
+                <div class="qrcodetitle">扫码分享到微信</div>
+                <div class="qrcodecontent" id="qrcodecontent">
+
+                </div>
+            </div>
+        </li>
+        <li><a href="#comment"><img src="https://ss2.meipian.me/theme/v2/img/article_comment.png" alt="">评论</a></li>
+    </ul>
+</div>
+<div class="bdsharebuttonbox" data-tag="share_1" style="display: none;">
+    <a class="bds_qzone" data-cmd="qzone" href="#">qq空间</a>
+    <a class="bds_tsina" data-cmd="tsina">微博</a>
+    <a class="bds_baidu" data-cmd="baidu"></a>
+    <a class="bds_renren" data-cmd="renren"></a>
+    <a class="bds_tqq" data-cmd="tqq"></a>
+</div>
+<script src="//ss2.meipian.me/third/jquery/jquery.qrcode.1.0.min.js"></script>
+<script>
+    $("#qrcodecontent").qrcode({
+        width: 112, //宽度
+        height:112, //高度
+        text: "https://" + window.location.host + window.location.pathname //任意内容
+    });
+
+    window._bd_share_config = {
+        //此处添加分享具体设置
+        common : {
+            bdText : '长草颜团子图片来了！拿走不谢！',
+            bdDesc : '分享自美篇',
+            bdUrl : 'https://www.meipian.cn/5ltjdi6',
+            bdPic : 'http://static2.ivwen.com/users/4283536/6a297b4ba5c94b35b817dcfa310bd330.jpg-thumb2'
+        },
+        share : [{
+            "bdSize" : 16
+        }],
+//        slide : [{
+//            bdImg : 0,
+//            bdPos : "right",
+//            bdTop : 100
+//        }],
+    }
+
+    $("#weibo").click(function () {
+        document.querySelectorAll(".bds_tsina")[0].click();
+    })
+    $("#qzone").click(function () {
+        document.querySelectorAll(".bds_qzone")[0].click();
+    })
+</script>
+<style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style: none;
+    }
+    .pc_right_bar{
+        width: 324px;
+        position: absolute;
+        left: 50%;
+        margin-left: 285px;
+        text-shadow: none;
+        z-index: 1;
+    }
+    .pc_right_bar>div{
+        background: #F5F6F7;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+    .autherdata{
+        padding: 18px;
+        overflow: hidden;
+        padding-bottom: 0;
+    }
+    .autherdata .authermessage{
+        overflow: hidden;
+    }
+    .autherdata .authermessage .autherheader{
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        float: left;
+        position: relative;
+        margin-right: 12px;
+        margin-bottom: 0;
+        background-position: center;
+        background-size: cover;
+    }
+    .autherdata .authermessage .autherinfo .authernickname{
+        font-size: 18px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 20px;
+        margin-top: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .autherdata .authermessage .autherinfo .autheruserid{
+        font-size: 14px;
+        color: #AAAAAA;
+        letter-spacing: 0;
+        line-height: 14px;
+        margin-top: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .autherdata .authermessage .autherinfo .autherdesc{
+        font-size: 14px;
+        color: #AAAAAA;
+        letter-spacing: 0;
+        line-height: 14px;
+        margin-top: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .autherdata .authercount{
+        margin-top: 36px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #dddddd;
+        height: 84px;
+        font-size: 16px;
+    }
+    .autherdata .authercount ul {
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .autherdata .authercount ul li {
+        width: 33.333%;
+        float: left;
+        border-right: 1px solid #dddddd;
+        text-align: center;
+    }
+    .autherdata .authercount ul li a{
+        font-size: 14px;
+        color: #AAAAAA;
+        line-height: 14px;
+    }
+    .autherdata .authercount ul li:nth-child(2) a{
+        cursor: default;
+    }
+    .autherdata .authercount ul li a p{
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+        margin-top: 8px;
+    }
+    .autherdata .authercount ul li:last-child{
+        border-right: 0;
+    }
+
+    .rightside.authernewarticle{
+        padding-top: 31px;
+    }
+
+    .rightside{
+        padding: 18px;
+    }
+    .rightside>a {
+        float: right;
+        position: relative;
+        z-index:1;
+        font-size: 14px;
+        color: #AAAAAA;
+        letter-spacing: 0;
+        line-height: 14px;
+        padding-right: 14px;
+        background-size: 8px 100%;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAwCAYAAAALiLqjAAAAAXNSR0IArs4c6QAAAyxJREFUWAnVlrFrU1EUxpvGlgx2DC2Ii5gpaUHo5CLiUFpwEDO4lE4ObjZQ679ghegqTtKlQ8ChoHQQcXEqCEk6pXQRh+JYhWBo4u977Qn3JXkv9yVZmiHn3nPv/b57zr3fO3dq6qr/Ugrg6Ohotd1uv+t0OtP8nhUKhf1JBTYtoPPz8/eA36R5A1uB8MFECVKpVNsAIZglmo+Q3DHfODaIgLSUIOkYECRzkHyuVqu3zDeqDQjy+XwFgpILAsk8voNGo5F1/UnbwSHbolqttgPwlvVlITkkwvts4o/r920HEdhkbs82gLvWl4VwmXRVsDOu37cdiuAScKZer+8DuOKCiJgNbGC7Z+WOR7VDEWgSAK1sNvsYe+gugnAd4leuz6fdR6BFCwsLfzOZzBokxy4IJFuQPHd9w9oDCbQol8v9VpogOXVB8JUheeL64tp9Z9A7WYLjkL8BPGdjkP7jZq1xs76YL8oOJdBCfTog+QTJrAFBcgbJPUh+mG+QjUyRO1k7BTB0gxSRj9q9CETGFd2DJLHavVLkRpNU7d4RGElStSeOQETk31vtiSMQAWfR4gYVsUPVPlIEItFPn/Jms/mdiG5feC7+Id8klW/VGykCA4tTO9opjk0ggKWlpRN2vEq6zoyYiFLU+TcTITDQKHstasDXr7otRUvZtoZo9P7ZVH+sM9AhA3YA+LyBy+Ir8XmpqD0yAYd4nRukD2DoBoG5YzdoZAJAZ0iL6vSyQOzHzncXFxdfWl82sQ4ATVFwPmDXQ0Ckip0/hKTl+hOnSHV5APjhZR0PgYsoEYHqMeC976Zj1W/VcXfn1vYmUB0GvGwLZUnHKb4VKdr1u22vMxinZA4lAHysoh+boiiVkpoNnxeFUhVJEKdSruOem+e49sAUSaUI6SsH2Cuk1wjpRRxg71hfBIBGqpSdb/cCDOuHIgA8kUqHgWs8FEGUSi/rb59KfQi6EUil5D2oQraQ2yKV3o0Tks2NskEEHGqR9CRWaRSo6w8qGjsvK/82wM71sF3lrp+Yb1QbRAB49ywA19P8EeCxr2ZfwgA4nU4/Bfgni35hi74q9SW52vP+Aw+PulCx5/dUAAAAAElFTkSuQmCC");
+    }
+    .rightside h2{
+        font-size: 18px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 18px;
+        padding-left: 10px;
+        position: relative;
+    }
+    .rightside h2::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #2887F0;
+        border-radius: 6px;
+    }
+    .rightside ul{
+        padding: 12px 0;
+    }
+    .rightside ul li{
+        height: 70px;
+        margin-bottom: 18px;
+    }
+    .rightside ul li:last-child{
+        margin-bottom: 0;
+    }
+    .rightside ul li a{
+        color: #333333;
+    }
+    .rightside ul li a .img{
+        float: left;
+        margin-right: 12px;
+        margin-bottom: 0;
+        width: 70px;
+        height: 70px;
+        background-position: center;
+        background-size: cover;
+    }
+    .rightside ul li a .articleinfo{
+        box-sizing: content-box;
+        width: 100%;
+        height: 32px;
+        font-size: 16px;
+        line-height: 16px;
+        padding-top: 16px;
+        display: block;
+    }
+    .rightside ul li a .articletitle{
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        height: 38px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-height: 1.2;
+        font-weight: 200;
+    }
+    .rightside ul{
+        padding-bottom: 0;
+    }
+    .pc_right_bar div.autherdata {
+        margin-bottom: 0;
+        border-radius: 8px 8px 0 0;
+    }
+    .pc_right_bar div.authernewarticle {
+        border-radius: 0 0 8px 8px;
+    }
+</style>
+<div class="pc_right_bar">
+    <div class="autherdata" style="border-radius:8px;margin-bottom:30px;">
+        <div class="authermessage">
+            <a href="https://www.meipian.cn/c/4283536">
+                <div class="autherheader" style="background-image: url(https://ss2.meipian.me/users/4283536/0e2dbb67da0e47fdb2ee8300beb2f648.jpg)"></div>
+                <div class="autherinfo">
+                    <div class="authernickname">🍰 Jessie 🎀</div>
+                    <div class="autheruserid">4283536</div>
+                    <div class="autherdesc">Meow!</div>
+                </div>
+            </a>
+        </div>
+        <div class="authercount">
+            <ul>
+                <li><a href="https://www.meipian.cn/c/4283536">文章<p>8</p></a></li>
+                <li><a href="javascript:void(0);">被浏览<p>8038</p></a></li>
+                <li><a href="https://www.meipian.cn/user/followers/4283536">粉丝<p>3</p></a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <style>
+    #rightads{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 220px;
+        z-index: 1;
+    }
+    #rightads a{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    #rightads a img{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    #rightads #close_pc_ads{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        top: 10px;
+        background-image: url("https://ss2.meipian.me/web/ads/close_pc_ads_right.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @media screen and (max-width: 1024px) {
+        #rightads{
+            display: none;
+        }
+    }
+</style>
+
+<div id="rightads">
+    <a target="_blank" id="to_pc_ads" >
+        <img src="https://ss2.meipian.me/config/a5467e690deaf3a9f00638aee20ecfd1.jpg" alt="">
+    </a>
+    <div id="close_pc_ads"></div>
+</div>
+
+<script>
+    // $.ajax({
+    //     url: 'https://www.meipian.cn/app/stat/article_count_new.php',
+    //     data: {anchor: 'sta_pc_side_ad_anchor_5', event_type: 'click'},
+    //     success: function (res) {
+    //         console.log(res);
+    //     }
+    // })
+    // $("#to_pc_ads").click(function () {
+    //     $.ajax({
+    //         url: 'https://www.meipian.cn/app/stat/article_count_new.php',
+    //         data: {anchor: 'sta_pc_side_ad_anchor_5',event_type: 'clicked'},
+    //         success: function (res) {
+    //             console.log(res);
+    //         }
+    //     })
+    // })
+    $("#close_pc_ads").click(function () {
+        $("#rightads").fadeOut(.4);
+    })
+    $("#to_pc_ads").click(function () {
+        try {
+            window.Hook.buriedPoint.sendParams({
+                'view_name':'pc_ads',
+                'click_name':'click'
+            })
+        } catch (error) {}
+
+        setTimeout(() => {
+            window.location.href = "https://jumpluna.58.com/i/2c8218t1n97pnc4f21";
+        }, 300);
+    })
+    if("https://ss2.meipian.me/config/a5467e690deaf3a9f00638aee20ecfd1.jpg"){
+        try {
+            window.Hook.buriedPoint.sendParams({
+                'view_name':'pc_ads',
+                'click_name':'show'
+            })
+        } catch (error) {}
+    }
+</script>
+
+    <div class="clumnrecommend rightside">
+        <h2>栏目推荐</h2>
+        <ul>
+            <li><a href="https://www.meipian.cn/1nyx7bee"><div class="img" style="background-image: url(https://ss2.meipian.me/users/4719949/2884e5cc3ac7482daf32aa8010062fb2.jpg);"></div><div class="articleinfo"><span class="articletitle">路途遥遥，让我们一起吧！</span></div></a></li><li><a href="https://www.meipian.cn/1ny721mo"><div class="img" style="background-image: url(https://ss2.meipian.me/users/3236875/877a7e66d72e48b4b0998a9d6459af9e.jpg);"></div><div class="articleinfo"><span class="articletitle">自驾西藏摄影行【天上阿里】风光图片</span></div></a></li><li><a href="https://www.meipian.cn/1kjd5b4h"><div class="img" style="background-image: url(https://ss2.meipian.me/user/6799974/c820ba8d70b000017d27de701e00181b.jpg);"></div><div class="articleinfo"><span class="articletitle">咏梅||诗图原创‖七绝等15首新韵</span></div></a></li><li><a href="https://www.meipian.cn/1nynnbm8"><div class="img" style="background-image: url(https://ss2.meipian.me/users/21484190/ba2bdfd882fe4c83991c49e96d408912.jpg);"></div><div class="articleinfo"><span class="articletitle">《豳风·东山》：我的课堂实录</span></div></a></li>        </ul>
+    </div>
+
+
+
+</div>
+
+                <script>
+                    try {
+                        window.Hook.buriedPoint.sendParams({
+                            view_name:"client_type",
+                            click_name:"pc"
+                        })
+                    } catch (error) {}
+                </script>
+                        <div class="main-box">
+<script>window.visitorId = ""</script>
+<div class="root meipian" data-mask-id='5ltjdi6'>
+
+    
+    
+            <div class="top-download__root">
+            
+            <top-download visitor-id=''></top-download>
+            
+        </div>
+        
+
+     
+<!-- <div class="focus__root">
+        <author-link class="auth-link1" author-id='4283536' author-name='🍰 Jessie 🎀' author-url='https://www.meipian.cn/c/4283536' author-signature='Meow!' 
+            author-head-img='https://ss2.meipian.me/users/4283536/0e2dbb67da0e47fdb2ee8300beb2f648.jpg' :show-footer='true'></author-link>
+    </div>
+ -->
+<div class="cover">
+    <div class="article-meta">
+        <div class="well">
+            <h1 class="title">长草颜团子图片来了！拿走不谢！</h1>
+            <p class="time-read">
+                <span>2016.09.01</span>
+                <span class="nickname" data-author-id='4283536' data-author-url='https://www.meipian.cn/c/4283536'>🍰 Jessie 🎀</span>
+                <span class="read">阅读&nbsp;<span class="read-count">7915</span></span>
+                <span class="sign__root">
+                    <sign mask-id='5ltjdi6' :version='0'></sign>
+                </span>
+                            </p>
+        </div>
+    </div>
+</div>
+
+    <div class="music-icon__root">
+         
+        <music-icon music-url="" music-name="音乐" :auto="true"></music-icon>
+        
+    </div>
+     
+
+    
+     
+    <div class="pop_up_ads">
+        <popup-ads visitor-id=''></popup-ads>
+    </div>
+    
+    
+    <div class="content_foot">
+        <div class="mp-content">
+             
+<div class="content-container">
+
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/a1732fe9644c419b9301a85d300e6b76.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9hMTczMmZlOTY0NGM0MTliOTMwMWE4NWQzMDBlNmI3Ni5qcGc=/sign/67ac88786c22deacbd3376f7acdd760c.jpg" src="https://ss2.meipian.me/users/4283536/a1732fe9644c419b9301a85d300e6b76.jpg-mobile">
+                                                            </div>
+                        
+                                                <div class="text well">最近小编有点忙碌，为了赔礼道歉以后每天都会发1～2篇表情！
+
+
+-生肖（有些生肖没找到，就用别的动物来替代了）</div>
+                                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/169507191f8a4d95b4bba43616e876b5.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8xNjk1MDcxOTFmOGE0ZDk1YjRiYmE0MzYxNmU4NzZiNS5qcGc=/sign/d127e72c6c28357080e3b89e1c40d41a.jpg" src="https://ss2.meipian.me/users/4283536/169507191f8a4d95b4bba43616e876b5.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/353acc729ac64c0599142640ae6baf32.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8zNTNhY2M3MjlhYzY0YzA1OTkxNDI2NDBhZTZiYWYzMi5qcGc=/sign/9dadc83ef0a7231c41f3330637968361.jpg" src="https://ss2.meipian.me/users/4283536/353acc729ac64c0599142640ae6baf32.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/551a7f7ea01c4bcc9214111b6c628200.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi81NTFhN2Y3ZWEwMWM0YmNjOTIxNDExMWI2YzYyODIwMC5qcGc=/sign/d618d741f47991d1eca4be68e82abc12.jpg" src="https://ss2.meipian.me/users/4283536/551a7f7ea01c4bcc9214111b6c628200.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/cecb4f383198455a9a4d56839e45b120.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9jZWNiNGYzODMxOTg0NTVhOWE0ZDU2ODM5ZTQ1YjEyMC5qcGc=/sign/4c2f4e02d1965493c6b08d52484b260f.jpg" src="https://ss2.meipian.me/users/4283536/cecb4f383198455a9a4d56839e45b120.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d91d3915516f4087b68350f7272dbdfd.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kOTFkMzkxNTUxNmY0MDg3YjY4MzUwZjcyNzJkYmRmZC5qcGc=/sign/96dfa9e6ad033982e7de2ca82a610db2.jpg" src="https://ss2.meipian.me/users/4283536/d91d3915516f4087b68350f7272dbdfd.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/0877d2fa3f294a729786e5be8b60b7ec.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8wODc3ZDJmYTNmMjk0YTcyOTc4NmU1YmU4YjYwYjdlYy5qcGc=/sign/91d0cd8df673362007eae4bf21a2df24.jpg" src="https://ss2.meipian.me/users/4283536/0877d2fa3f294a729786e5be8b60b7ec.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/40fcd2167cee4b2ba346175ef58fca31.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi80MGZjZDIxNjdjZWU0YjJiYTM0NjE3NWVmNThmY2EzMS5qcGc=/sign/aefeecc1ef958737695e683a6e36b0a1.jpg" src="https://ss2.meipian.me/users/4283536/40fcd2167cee4b2ba346175ef58fca31.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/2ca13d70f2024575874f30e4cafd96ef.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8yY2ExM2Q3MGYyMDI0NTc1ODc0ZjMwZTRjYWZkOTZlZi5qcGc=/sign/1939426c21520762d173dfdbffbdfbc8.jpg" src="https://ss2.meipian.me/users/4283536/2ca13d70f2024575874f30e4cafd96ef.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/c55dbb041c834c9784bf6cc26b64aea3.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9jNTVkYmIwNDFjODM0Yzk3ODRiZjZjYzI2YjY0YWVhMy5qcGc=/sign/aa458ed85f8a230a8bd4aa5669b52096.jpg" src="https://ss2.meipian.me/users/4283536/c55dbb041c834c9784bf6cc26b64aea3.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d7d41d4e24fa4ca8ada513ae2576ffa4.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kN2Q0MWQ0ZTI0ZmE0Y2E4YWRhNTEzYWUyNTc2ZmZhNC5qcGc=/sign/0cdabd12cb047c951c8ab849ff2c3700.jpg" src="https://ss2.meipian.me/users/4283536/d7d41d4e24fa4ca8ada513ae2576ffa4.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/06deb27c023e458ba2fff67078086422.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8wNmRlYjI3YzAyM2U0NThiYTJmZmY2NzA3ODA4NjQyMi5qcGc=/sign/c89ef8ea2a0bf4d40bc9331a1da9f967.jpg" src="https://ss2.meipian.me/users/4283536/06deb27c023e458ba2fff67078086422.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/561bb8abf194431ea1b530cfb6154acf.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi81NjFiYjhhYmYxOTQ0MzFlYTFiNTMwY2ZiNjE1NGFjZi5qcGc=/sign/3af53c8f987b83b52447245b95b950d2.jpg" src="https://ss2.meipian.me/users/4283536/561bb8abf194431ea1b530cfb6154acf.jpg-mobile">
+                                                            </div>
+                        
+                                                <div class="text well">-表情</div>
+                                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/e0bf734b32c948f4b8b463edb0f68ee1.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9lMGJmNzM0YjMyYzk0OGY0YjhiNDYzZWRiMGY2OGVlMS5qcGc=/sign/bba02ff0861be570eef36d786462c521.jpg" src="https://ss2.meipian.me/users/4283536/e0bf734b32c948f4b8b463edb0f68ee1.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d2c0647499c44b828b3870356f9747fc.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kMmMwNjQ3NDk5YzQ0YjgyOGIzODcwMzU2Zjk3NDdmYy5qcGc=/sign/d06741aa9dc8c3fabe9a48604b36b5ea.jpg" src="https://ss2.meipian.me/users/4283536/d2c0647499c44b828b3870356f9747fc.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/314e2aa3cf794a7d94c8d56a90a18d05.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8zMTRlMmFhM2NmNzk0YTdkOTRjOGQ1NmE5MGExOGQwNS5qcGc=/sign/d9372161b9db3a5b57178dd525d29464.jpg" src="https://ss2.meipian.me/users/4283536/314e2aa3cf794a7d94c8d56a90a18d05.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d546b6545ce543a491bc3219a1de6c36.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kNTQ2YjY1NDVjZTU0M2E0OTFiYzMyMTlhMWRlNmMzNi5qcGc=/sign/7b853141ac5b841263bd60604c6c7f75.jpg" src="https://ss2.meipian.me/users/4283536/d546b6545ce543a491bc3219a1de6c36.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/c49dc9aa79b644fe9eb398fec00ac4b2.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9jNDlkYzlhYTc5YjY0NGZlOWViMzk4ZmVjMDBhYzRiMi5qcGc=/sign/0a3d9295fdc9a16e4c419943a837757c.jpg" src="https://ss2.meipian.me/users/4283536/c49dc9aa79b644fe9eb398fec00ac4b2.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/e8d7d74f694049a2a62eb01359583c9c.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9lOGQ3ZDc0ZjY5NDA0OWEyYTYyZWIwMTM1OTU4M2M5Yy5qcGc=/sign/f599b54c4b818e3bf179b3fa2b0f2aac.jpg" src="https://ss2.meipian.me/users/4283536/e8d7d74f694049a2a62eb01359583c9c.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/95e337f3221c4414b84e4b5d2c164ed1.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi85NWUzMzdmMzIyMWM0NDE0Yjg0ZTRiNWQyYzE2NGVkMS5qcGc=/sign/247de68c33dc71c416f04bb62cf001d3.jpg" src="https://ss2.meipian.me/users/4283536/95e337f3221c4414b84e4b5d2c164ed1.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/47d8b58343ab495bb02bdbed3a89e629.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi80N2Q4YjU4MzQzYWI0OTViYjAyYmRiZWQzYTg5ZTYyOS5qcGc=/sign/78c28a94bd0ad4f258f23e315c573ce7.jpg" src="https://ss2.meipian.me/users/4283536/47d8b58343ab495bb02bdbed3a89e629.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/23d5b819507e44789b99bd0e7f796a82.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8yM2Q1YjgxOTUwN2U0NDc4OWI5OWJkMGU3Zjc5NmE4Mi5qcGc=/sign/b8885e81b843a686d71cb5faf83b14e4.jpg" src="https://ss2.meipian.me/users/4283536/23d5b819507e44789b99bd0e7f796a82.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/478f69301ce94313b67004eb67b7101d.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi80NzhmNjkzMDFjZTk0MzEzYjY3MDA0ZWI2N2I3MTAxZC5qcGc=/sign/c4b27fcb8476d13398873ccb46e5fd14.jpg" src="https://ss2.meipian.me/users/4283536/478f69301ce94313b67004eb67b7101d.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d887a9685ffb4d57a79a2c0a0a124489.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kODg3YTk2ODVmZmI0ZDU3YTc5YTJjMGEwYTEyNDQ4OS5qcGc=/sign/14ff60172fff45ed12ddf642ca215a85.jpg" src="https://ss2.meipian.me/users/4283536/d887a9685ffb4d57a79a2c0a0a124489.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/f4e95b26492e407abf5619011716f06a.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9mNGU5NWIyNjQ5MmU0MDdhYmY1NjE5MDExNzE2ZjA2YS5qcGc=/sign/0c448b00e302766aae03f8a8cd52fd9a.jpg" src="https://ss2.meipian.me/users/4283536/f4e95b26492e407abf5619011716f06a.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d6d51ea43669460fbf11bc42d07f79aa.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kNmQ1MWVhNDM2Njk0NjBmYmYxMWJjNDJkMDdmNzlhYS5qcGc=/sign/8db362cb064a51a5a1abb4d8e924aee6.jpg" src="https://ss2.meipian.me/users/4283536/d6d51ea43669460fbf11bc42d07f79aa.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/13b9ca5d353349cf806419416c696cb3.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8xM2I5Y2E1ZDM1MzM0OWNmODA2NDE5NDE2YzY5NmNiMy5qcGc=/sign/a27185c7e03ac0107f6b5e97c6ce4dc3.jpg" src="https://ss2.meipian.me/users/4283536/13b9ca5d353349cf806419416c696cb3.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/0755957f98f949f49066c3c3d2d48606.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8wNzU1OTU3Zjk4Zjk0OWY0OTA2NmMzYzNkMmQ0ODYwNi5qcGc=/sign/ed1fe2aa176089ccaf0b9e9f0a1f158d.jpg" src="https://ss2.meipian.me/users/4283536/0755957f98f949f49066c3c3d2d48606.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/200a426f92fe4bf396022c3cb34d61ce.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8yMDBhNDI2ZjkyZmU0YmYzOTYwMjJjM2NiMzRkNjFjZS5qcGc=/sign/5074756d3e65b092d8bf558e36a18c85.jpg" src="https://ss2.meipian.me/users/4283536/200a426f92fe4bf396022c3cb34d61ce.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/40251ce9e2ff46cc95b63cb169e569eb.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi80MDI1MWNlOWUyZmY0NmNjOTViNjNjYjE2OWU1NjllYi5qcGc=/sign/b3165b9a9db517c0389b34eb2d4af617.jpg" src="https://ss2.meipian.me/users/4283536/40251ce9e2ff46cc95b63cb169e569eb.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/08a4878ea12f484eafe421aa71352429.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi8wOGE0ODc4ZWExMmY0ODRlYWZlNDIxYWE3MTM1MjQyOS5qcGc=/sign/31e04f478eac2ead30050a5730b2d3d5.jpg" src="https://ss2.meipian.me/users/4283536/08a4878ea12f484eafe421aa71352429.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/6a297b4ba5c94b35b817dcfa310bd330.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi82YTI5N2I0YmE1Yzk0YjM1YjgxN2RjZmEzMTBiZDMzMC5qcGc=/sign/8477df7a63f4c39e8710d656fc1fc056.jpg" src="https://ss2.meipian.me/users/4283536/6a297b4ba5c94b35b817dcfa310bd330.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/605fb4b47bfe4a04ad3c44689723c0d6.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi82MDVmYjRiNDdiZmU0YTA0YWQzYzQ0Njg5NzIzYzBkNi5qcGc=/sign/814665e42fb5852663b0804a6c0da09f.jpg" src="https://ss2.meipian.me/users/4283536/605fb4b47bfe4a04ad3c44689723c0d6.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/8ccb5ae383c343949d4d77613b653421.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi84Y2NiNWFlMzgzYzM0Mzk0OWQ0ZDc3NjEzYjY1MzQyMS5qcGc=/sign/05c299e26aebfdfcb3484e733f84d4ec.jpg" src="https://ss2.meipian.me/users/4283536/8ccb5ae383c343949d4d77613b653421.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/cb0c766c601c4e9db61aa2815517baa6.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9jYjBjNzY2YzYwMWM0ZTlkYjYxYWEyODE1NTE3YmFhNi5qcGc=/sign/6f847d05aa23a0b741171436c199143d.jpg" src="https://ss2.meipian.me/users/4283536/cb0c766c601c4e9db61aa2815517baa6.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/a6f2d2a1366a4f38abb35ec2bd307501.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9hNmYyZDJhMTM2NmE0ZjM4YWJiMzVlYzJiZDMwNzUwMS5qcGc=/sign/5e16b90c9a2d7a260e60b2a24bcc09fc.jpg" src="https://ss2.meipian.me/users/4283536/a6f2d2a1366a4f38abb35ec2bd307501.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/653165b86c5b441591f428594acfc70a.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi82NTMxNjViODZjNWI0NDE1OTFmNDI4NTk0YWNmYzcwYS5qcGc=/sign/b6b131c88fab297a15b9179da4af9eaa.jpg" src="https://ss2.meipian.me/users/4283536/653165b86c5b441591f428594acfc70a.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/e6a364afbcd34fcd948066e184a7eb46.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9lNmEzNjRhZmJjZDM0ZmNkOTQ4MDY2ZTE4NGE3ZWI0Ni5qcGc=/sign/4c41230978a864850ae05b4dbcf7a111.jpg" src="https://ss2.meipian.me/users/4283536/e6a364afbcd34fcd948066e184a7eb46.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/6a38db968dd740379ac55ffd7384c030.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi82YTM4ZGI5NjhkZDc0MDM3OWFjNTVmZmQ3Mzg0YzAzMC5qcGc=/sign/1f510383b9e00513ce74befe52a1191c.jpg" src="https://ss2.meipian.me/users/4283536/6a38db968dd740379ac55ffd7384c030.jpg-mobile">
+                                                            </div>
+                        
+                                                <div class="text well">热</div>
+                                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/d0e215fa04184d6bb347b021e42f7f05.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9kMGUyMTVmYTA0MTg0ZDZiYjM0N2IwMjFlNDJmN2YwNS5qcGc=/sign/fde267b85d7a8a819f4f4f6c951c907f.jpg" src="https://ss2.meipian.me/users/4283536/d0e215fa04184d6bb347b021e42f7f05.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                    <div class="img-box well img-box-bg offline-preview">
+                                                                        <img show-img="https://ss2.meipian.me/users/4283536/b8fbd96b31234ed395418b4aa7299424.jpg?meipian-raw/bucket/ivwen/key/dXNlcnMvNDI4MzUzNi9iOGZiZDk2YjMxMjM0ZWQzOTU0MThiNGFhNzI5OTQyNC5qcGc=/sign/07caf48bebb5a046c7786670a5a4b44c.jpg" src="https://ss2.meipian.me/users/4283536/b8fbd96b31234ed395418b4aa7299424.jpg-mobile">
+                                                            </div>
+                        
+                                                                        </div>
+            <div class="section">
+                                                
+                                                <div class="text well">小编在此向大家赔礼道歉！顺便随手点个赞呗～👇🏻</div>
+                                                                                        </div>
+    
+</div>
+
+            
+
+             
+            <div class="readmore">
+                <a href="javascript:;">
+                    <div>展开阅读全文</div>
+                    <i class="iconfont icon-arrow"></i>
+                </a>
+            </div>
+            
+        </div>
+
+        
+
+
+
+        <div class="footer__root">
+            <read-packet-new visitor-id=''></read-packet-new>
+             
+                <reward author-id='4283536' :reward='"eyJzaG93IjpmYWxzZSwid29yZCI6Ilx1NTk4Mlx1Njc5Y1x1NTU5Y1x1NmIyMlx1NjIxMVx1NzY4NFx1NGY1Y1x1NTRjMVx1ZmYwY1x1OGJmN1x1OGQ1ZVx1OGQ0Zlx1OWYxM1x1NTJiMVx1NTRlNlx1ZmYwMSIsInVzZXIiOltdLCJ1c2VyTGlzdFVybCI6Imh0dHA6XC9cL3d3dy5tZWlwaWFuLmNuXC9zdGF0aWNcL3Jld2FyZF91c2Vycy5waHA\/YXJ0aWNsZWlkPTVsdGpkaTYiLCJ1cmwiOiJodHRwczpcL1wvcGF5Lm1laXBpYW4uY25cL3d4cGF5XC9pbmRleF9uZXcucGhwP2FydGljbGVfaWQ9NWx0amRpNiZvcGVuaWQ9IiwiYXBwX3VybCI6Imh0dHBzOlwvXC9wYXkubWVpcGlhbi5jblwvXC93eHBheVwvcmV3YXJkX2luX2FwcC5waHAiLCJjb3VudCI6IjAifQ=="' mask-id='5ltjdi6' visitor-id='' :show-footer='true' :version='0' :reward-config='{&quot;btnText&quot;:&quot;\u8d5e\u8d4f&quot;,&quot;tip&quot;:&quot;&quot;}'></reward>
+                  
+
+             
+                <report :read-num='7915' :praise='false' :praised='false' 
+                :praise-count='2' report-url='https://www.meipian.cn/resources/components/report.php?id=5ltjdi6' visitor-id='' mask-id='5ltjdi6' red-packet-type=''></report>
+            
+
+             
+                 <share :version='0' :theme='0'></share>
+            
+
+    
+            <!--              
+                <circle-link author-id='4283536' :version='0'  mask-id='5ltjdi6' author-url='https://www.meipian.cn/c/4283536' :show-footer='true'></circle-link>
+            
+         -->
+
+             
+
+                <author-link class="auth-link2" author-id='4283536' author-name='🍰 Jessie 🎀' author-url='https://www.meipian.cn/c/4283536' author-signature='Meow!' 
+                author-head-img='https://ss2.meipian.me/users/4283536/0e2dbb67da0e47fdb2ee8300beb2f648.jpg' :version='0' :show-footer='true'></author-link>
+            
+            
+             
+                                    <qrcode-banner self-ads-img='https://ss2.meipian.me/config/1530193744211.jpg' self-ads-url='https://gio.ren/oevMPRB' ></qrcode-banner>
+                    
+                <ads-in-app link-url='' anchor='' http-url='https://www.meipian.cn/app/stat/article_count_new.php' img-url='' :show-footer='false'></ads-in-app>
+            
+          
+
+                        
+                 
+                    <div id="comment">
+                                                    <comment :comment='[{&quot;id&quot;:&quot;1509920&quot;,&quot;comment&quot;:&quot;\u53ef\u80fd\u4e0d\u662f\u6240\u6709\u4eba\u90fd\u770b\u5f97\u61c2,\u56e0\u4e3a\u8fd9\u662f\u6211\u521b\u9020\u7684\u6e38\u620f\u91cc\u9762\u7684\uff5e\u4e0d\u8fc7\u8fd8\u662f\u5e2e\u5fd9\u70b9\u4e2a\u8d5e\u5427\uff01\uff08\u2267\u2207\u2266\uff09&quot;,&quot;create_time&quot;:&quot;1472714689&quot;,&quot;member_type&quot;:&quot;0&quot;,&quot;stick&quot;:&quot;0&quot;,&quot;user_id&quot;:&quot;4283536&quot;,&quot;nickname&quot;:&quot;\ud83c\udf70 Jessie \ud83c\udf80&quot;,&quot;head_img_url&quot;:&quot;https:\/\/ss2.meipian.me\/users\/4283536\/0e2dbb67da0e47fdb2ee8300beb2f648.jpg&quot;,&quot;bedge_img_url&quot;:&quot;&quot;,&quot;relative_time&quot;:&quot;2016-09-01&quot;}]' visitor-id='' default-head-img='http://static2.ivwen.com/web/a/default_head.png' mask-id='5ltjdi6'
+                            author-id='4283536' :version='0' :is-share="0" :show-footer='true' :allow-comment='true' red-packet-type=''></comment>
+                                            </div>
+                
+                
+                
+                <div id='h5-banner'>
+                    <ads-banner  visitor-id='' ></ads-banner>
+                </div>
+                 
+                
+                <recommend :show-footer='true' author-id='4283536' :recommend='"W10="' ad-stat-url='https://www.meipian.cn/app/stat/article_count_new.php'
+                :article-rcmd-district-ad-show='false'
+                :article-rcmd-district-ad-action-type='2'
+                bottom-link-visit-url='https://www.meipian.cn/app/stat/article_bottom_link_visit.php'
+                article-rcmd-district-ad-img-url=''
+                article-rcmd-district-ad-title=''
+                article-rcmd-district-link-url=''
+                article-rcmd-district-ad-js=''
+                article-rcmd-district-ad-anchor='' user-id='MmTeAiwpMiAaO0O0OnO0O0Oa' :version='0' ></recommend>
+                
+                       
+           
+             
+            
+            
+
+            
+             
+                <wx-config app-id='' author-name='🍰 Jessie 🎀' title='长草颜团子图片来了！拿走不谢！' mask-id='5ltjdi6' share-domain='https://www.meipian.cn' visitor-id=''
+                cover-thumb='http://static2.ivwen.com/users/4283536/6a297b4ba5c94b35b817dcfa310bd330.jpg-thumb2' abstract-share='' timestamp='' nonce-str='' signature='' red-packet-type=''></wx-config>
+            
+
+             
+                <replace-color :theme='0'></replace-color>
+            
+        </div>
+    </div>
+                        
+            </div>
+<script type="text/javascript">
+window.wechatId = "";
+window.maskId = "5ltjdi6";
+
+</script>
+
+
+    
+    <script>
+        window.music_url = '';
+        window._music_first = true;
+        window.musicStop = function() {
+            document.getElementById('music-icon').setAttribute("play","stop");
+        }
+        window.musicOn = function() {
+            document.getElementById('music-icon').setAttribute("play","on");
+        }
+    </script>
+    <script>
+                    if(document.getElementById('meipianshubtn2')){
+                document.getElementById('meipianshubtn2').onclick = function(){
+                    $.get("print/portage/bottom_btn_stat",{inapp: 0,mask_id: "5ltjdi6"}).then(function(res){console.log(2222)});
+                    callApp({type:'store',id:'shop'});
+                }
+            }
+            if(document.getElementById('bookhelp')){
+                document.getElementById('bookhelp').style.display = "none";
+            }
+                
+
+
+        function callApp(_ref2) {
+            var u = navigator.userAgent;
+            var isAND = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; // 安卓
+            var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            var isQQBrowser = u.indexOf('MQQBrowser') > -1;
+            var isWX = u.indexOf('MicroMessenger') > -1;
+
+            var _ref2$type = _ref2.type,
+                type = _ref2$type === undefined ? '' : _ref2$type,
+                _ref2$id = _ref2.id,
+                id = _ref2$id === undefined ? '' : _ref2$id,
+                _ref2$weburl = _ref2.weburl,
+                weburl = _ref2$weburl === undefined ? '' : _ref2$weburl,
+                _ref2$params = _ref2.params,
+                params = _ref2$params === undefined ? '' : _ref2$params;
+            // 类型 id 是否去应用宝
+            if (id) {
+                if (false) {
+                    if (isIOS) {
+                        var a = document.createElement('a');
+                        a.style.display = 'none';
+                        a.href = weburl; //打开app
+                        document.body.appendChild(a);
+                        a.click();
+                    } else {
+                        window.location.href = '' + weburl + (params ? '?' + params : '');
+                    }
+                } else {
+                    if (isIOS) {
+                        type = type === 'article' ? '' : type;
+
+                        if (isQQBrowser || isWX) {
+                            window.location.href = (window.location.host.indexOf('t-') > -1 ? 'https://t-a.meipian.cn' : 'https://a.meipian.cn') + (type ? '/' + type : '') + '/' + id; //  + (params ? '?' + params : '')
+                        } else {
+                            window.location.href = weburl
+                        }
+                    } else if (isAND) {
+                        if (isQQBrowser || isWX) {
+                            if(getQueryString("v")){
+                                var androidSchema = 'meipian://main.app/' + type + '/' + id;
+                                window.location.href = window.location.origin + '/app/http/download.php?android_schema=' + androidSchema + '&v=' + getQueryString("v") + (params ? '&' + params : '');
+                            }else{
+                                window.location.href = '' + weburl + (params ? '?' + params : '');
+                            }
+                        } else {
+                            window.location.href = '' + weburl + (params ? '?' + params : '');
+                            // callAppIframe('meipian://main.app/' + type + '/' + id, '' + weburl + (params ? '?' + params : ''));
+                        }
+                    } else {
+                        window.location.href = '' + weburl + (params ? '?' + params : '');
+                    }
+                }
+            } else {
+                window.location.href = '' + weburl + (params ? '?' + params : '');
+            }
+        }
+        function getQueryString (name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i')
+
+            var r = window.location.search.substr(1).match(reg)
+
+            if (r != null) {
+                return unescape(r[2])
+            }
+
+            return null
+        }
+
+
+                window.addEventListener('load',
+        function(){
+            var mask_id = "5ltjdi6";
+            if(mask_id == "v8kpm3d" || mask_id == "1f06oacm"){
+                var target = document.querySelectorAll(".img-box img")
+                if(target.length){
+                    target[target.length - 1].removeAttribute("show-img")
+                    var str = target[target.length - 1].parentElement.innerHTML;
+                    str = "<a style='display:block;' href='http://open.ximalaya.com/site/index/16/e19ed6c3d9e4abfc7ac1fb9a97805b92'>" + str +"</a>"
+                    target[target.length - 1].parentElement.innerHTML = str;
+                }
+            }
+            
+        })
+
+        
+
+    </script>
+
+<script type="text/javascript" src="https://ss2.meipian.me/theme/v2/js/manifest.8d254a9c.js"></script><script type="text/javascript" src="https://ss2.meipian.me/theme/v2/js/common.6100d97f.js"></script><script type="text/javascript" src="https://ss2.meipian.me/theme/v2/js/tpl-vendor.76ff5694.js"></script><script src="https://s19.cnzz.com/z_stat.php?id=1264684606&web_id=1264684606" language="JavaScript"></script><script>window.visitorId = "";</script></div>
+        <!--<script src="//msite.baidu.com/sdk/c.js?appid=1584641275406514"></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+            "@id": "https://www.meipian.cn/5ltjdi6",
+            "appid": "1584641275406514",
+            "title": "长草颜团子图片来了！拿走不谢！ - 美篇",
+            "images": ["http://static2.ivwen.com/users/4283536/6a297b4ba5c94b35b817dcfa310bd330.jpg"],
+            "description": "最近小编有点忙碌，为了赔礼道歉以后每天都会发1～2篇表情！ -生肖（有些生肖没找到，就用别的动物来",
+            "pubDate": "2016-09-01T13:09:25"
+        }
+        </script>-->
+        </body>
+        </html>

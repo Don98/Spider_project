@@ -1,0 +1,4 @@
+Python从零开始系列连载（19）——Python特色数据类型（函数）（下）                    匿名函数    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2Q8nWja35PJaw190JVXJ6zY6H7IfQPt56m5cGOcaXmIMktsXPvOGEI8a9rrRWiaxnZ7Fgh4hCMUw/0?wx_fmt=png
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2Q8nWja35PJaw190JVXJ6PTu3jlu4iaJlviczu2PFF54l1Ze3ic8qh9ZRG7j21XgkK014vZL0KhRCA/0?wx_fmt=png
+                 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2Q8nWja35PJaw190JVXJ6ibz8QucLMgmaYF1ErTrc94Vu7Zo28zTKdsMnduDaialiboRSOzVtOqzNA/0?wx_fmt=png
+            现在还坚持再看连载学习的你们真的很棒棒！</strong>

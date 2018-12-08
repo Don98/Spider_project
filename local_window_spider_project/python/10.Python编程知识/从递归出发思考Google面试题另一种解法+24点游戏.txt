@@ -1,0 +1,32 @@
+b'\xe4\xbb\x8e\xe9\x80\x92\xe5\xbd\x92\xe5\x87\xba\xe5\x8f\x91\xe6\x80\x9d\xe8\x80\x83Google\xe9\x9d\xa2\xe8\xaf\x95\xe9\xa2\x98\xe5\x8f\xa6\xe4\xb8\x80\xe7\xa7\x8d\xe8\xa7\xa3\xe6\xb3\x95+24\xe7\x82\xb9\xe6\xb8\xb8\xe6\x88\x8f'       
+
+    
+
+     def fun1(x,y,z):
+    if x&lt;z and y&lt;z:
+        print('目标水量大于两杯容量，无解')
+    elif x&gt;y:
+        x,y = y,x
+    if y%x==0 and z%x!=0:
+        print('两杯容量为倍数关系，且与目标水量不为倍数关系，无解')
+    else:
+        print('将容量为%s的杯记为杯A'%x)
+        print('将容量为%s的杯记为杯B'%y)
+        fun2(x,y,z,y,z)</pre><p style=""><span style="font-size: 15px; ">fun2（x0,y0,x,y,z）:用来实现整个操作过程的递归函数，思路如下：</span>
+      def fun2(x0,y0,x,y,z):
+    if y0 &gt; x0:
+        print('将杯B中的水倒入杯A直至杯A装满，然后倒掉杯A中的水，杯B中剩余水量为：%s'%(y0-x0))
+        if (y0-x0==z):
+            print('成功！')
+        else:
+            fun2(x,y0-x0,x,y,z)
+    if y0 &lt; x0:
+        if y0==z:
+            print('成功！')
+        else:
+            print('将杯B中的水全部倒入杯A，然后将杯B装满，杯A中水量为%s'%y0)
+            fun2(x0-y0,y,x,y,z)</pre><p style=""><strong style=""><span style="font-size: 18px; ">代码测试</span></strong>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGPY7QKZZ8TJmZoD4HuHias8S5CHWqVHNBQ4stqacKTrJTtvkV2icvVX5ow/0?wx_fmt=png
+        
+
+            

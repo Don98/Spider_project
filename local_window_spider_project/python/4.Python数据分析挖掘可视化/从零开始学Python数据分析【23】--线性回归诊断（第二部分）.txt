@@ -1,0 +1,75 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9023\xe3\x80\x91--\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92\xe8\xaf\x8a\xe6\x96\xad\xef\xbc\x88\xe7\xac\xac\xe4\xba\x8c\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                      
+
+
+
+
+
+我们接着上一期，来继续讲讲关于线性回归模型的另外两个假设前提的验证（即回归模型的残差满足方差齐性（即方差为某个固定值）和残差之间互相独立性）。
+
+
+
+
+
+
+在线性回归建模中，如果模型表现的非常好的话，那么<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">残差与拟合值之间不应该存在某些明显的关系或趋势</strong></span>。如果模型的残差确实存在一定的异方差的话，会导致估计出来的偏回归系数不具备有效性，甚至导致模型的预测也不准确。所以，建模后需要验证残差方差是否具有齐性，检验的方法有两种，一种是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">图示法</strong></span>，一种是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">统计验证法</strong></span>。具体Python代码如下：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCRnoP0nBP6iclRD4wDNbgEibWaRY98vy7MwRwf3MW2P4WTDHwpicNoYojw/640?wx_fmt=png
+ 从图中看，并<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">没发现明显的规律或趋势</strong></span>（<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">判断标准</strong></span>：如果残差在参考线两侧均匀分布，则意味着异方差性较弱；而如果呈现出明显的不均匀分布，则意味着存在明显的异方差性。），故可以认为没有显著的异方差性特征。
+
+
+
+
+
+
+除了上面的图示法，我们还可以通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">White检验和Breush-Pagan检验</strong></span>来完成定量化的异方差性检验，具体操作如下：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCK8V4ukTFXibA9goQ4icoXaLH2wH99vZLmSfc1PMMBribNfgcFUkiaUJtLQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCHov9ZTicdUTVo4ianS6Vt7ia7PtRTF35T2n4DMuLX0nMLnmbR75ph1EqQ/640?wx_fmt=png
+ 从检验结果来看，不论是White检验还是Breush-Pagan检验，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">P值都远远小于0.05这个判别界限，即拒绝原假设（残差方差为常数的原假设），认为残差并不满足齐性这个假设</strong></span>。如果模型的残差确实不服从齐性的话，可以考虑两类方法来解决，一种是模型变换法，另一种是加权最小二乘法。
+
+
+
+
+
+
+对于模型变换法来说，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);">主要考虑残差与自变量之间的关系</span></strong>，如果残差与某个自变量x成正比，则原始模型的两边需要同除以sqrt(x)；如果残差与某个自变量x的平方成正比，则原始模型的两边需要同除以x。对于加权最小二乘法来说，关键是如何确定权重，根据多方资料的搜索、验证，一般会选择如下三种权重来进行对比测试:
+残差绝对值的倒数作为权重；
+残差平方的倒数作为权重；
+用残差的平方对数与X重新拟合建模，并将得到的拟合值取指数，用指数的倒数作为权重；
+ 
+
+
+
+
+
+首先，我们通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">图示法</strong></span>，来观测自变量和残差之间的关系，来决定是否可以用模型变换法来解决异方差问题：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCkRicXlHWIsic1Lz19e5myHXfJplCKGXfeAUicfib8QkicxA47AgKsc07Zeg/640?wx_fmt=png
+从图中结果可知，不管是自变量x本身，还是自变量x的平方，标准化残差都均匀的分布在参考线0附近，并不成比例，故无法使用模型变换法。接下来我们尝试使用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">加权最小二乘法</strong></span>来解决问题：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCqjWU6UWaZ8ILogIc5A4T9I1Hf7Piaag0poDYXiauhm2tMDia5mHXcjbog/640?wx_fmt=png
+通过对比发现，尽管我们采用了三种不同的权重，但都没能通过残差方差齐性的显著性检验（<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">还请高手指点</strong></span>），但似乎fit4模型更加理想，相比于fit2来说，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">AIC信息更小</strong></span>（当然也可能产出过拟合问题）。
+
+
+
+
+
+
+之所以要求残差是独立的，说白了是要求因变量y是独立的，因为在模型中只有y和残差项是变量，而自变量X是已知的。如果再配上正态分布的假设，那就是独立同分布于正态分布，关于残差的独立性检验我们可以通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">Durbin-Watson统计量</strong></span>来测试。其实，在模型的summary信息中就包含了残差的Durbin-Watson统计量值，如果<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">该值越接近于2，则说明残差是独立</strong></span>。一般而言，在实际的数据集中，时间序列的样本之间可能会存在相关性，而其他数据集样本之间基本还是独立的。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCspAMEwqMyjfxjCJPfZd12uRrfMMoC6kt0JjA8sxuhsth3NImseYyCA/640?wx_fmt=png
+
+
+
+
+
+
+从fit4模型的summary信息可知，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">Durbin-Watson统计量值几乎为2</strong></span>，故可以认为模型的残差之间是满足独立性这个假设前提的。到此为止，我们就以fit4模型作为我们最终的确定模型，基于这个模型就可以对新的数据集作预测。
+
+
+
+
+
+
+下面对fit4模型产生的预测值和实际值作散点图，如果散点图与预测线特别紧密，则认为模型拟合的非常棒：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCMbZcEYYaiaxVibHyuTOroUUSFiaq5iclKC9ARKXK94eDxmHjyGl2YzsBmA/640?wx_fmt=png
+对于上面的操作，我们再次使用R语言进行一次复现：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCkANDby7WuGZaZBe6ia0AfGePo8OY1IEy7AVDSjrhYK5JFhaNGqianGqA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCeTzLoibb2qickeKNp6XCc2jZ5GOLicvKVpazfzic8OBm5vzJl0v3icVJnqw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCfBIwne7prUs962JkueKmEl4U02sATGfVP1vuoAYoZ1qdEB7uQxricoA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWB3JDSm6gOJOSCV8Mh8TZCeSiawh8eQr7Oz773bWa3K6eia8Ribaq5852tVeFxyggcuqUf2CI8pasnQ/640?wx_fmt=png

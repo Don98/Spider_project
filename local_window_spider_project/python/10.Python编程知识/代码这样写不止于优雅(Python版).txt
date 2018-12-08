@@ -1,0 +1,14 @@
+b'\xe4\xbb\xa3\xe7\xa0\x81\xe8\xbf\x99\xe6\xa0\xb7\xe5\x86\x99\xe4\xb8\x8d\xe6\xad\xa2\xe4\xba\x8e\xe4\xbc\x98\xe9\x9b\x85(Python\xe7\x89\x88)'  http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0.gif
+   http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMnskBxQouzQzuRUO6z50c7CMDdjibl7qQRPznat8uicWP1vVsSDGLxRkyQZnZUvyoALfWotkayOlpxA/640?wx_fmt=jpeg
+Martin(Bob大叔)曾在《代码整洁之道》一书打趣地说：当你的代码在做 Code Review 时，审查者要是愤怒地吼道：
+“What the fuck, is this shit?”<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />“Dude, What the fuck！”
+等言辞激烈的词语时，那说明你写的代码是 Bad Code，如果审查者只是漫不经心的吐出几个
+“What the fuck?”，
+那说明你写的是 Good Code。衡量代码质量的唯一标准就是每分钟骂出“WTF” 的频率。
+http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMnskBxQouzQzuRUO6z50c7CXH1SDSUbKpyz9QHQtADpdALy9qnluIyKl4cibBiaUT6ntSDoVYp3GFsg/640?wx_fmt=jpeg
+ 一份优雅、干净、整洁的代码通常自带文档和注释属性，读代码即是读作者的思路。Python 开发中很少要像 Java 一样把遵循某种设计模式作为开发原则来应用到系统中，毕竟设计模式只是一种实现手段而已，代码清晰才是最终目的，而 Python 灵活而不失优雅，这也是为什么 Python 能够深受 geek 喜爱的原因之一。
+    “There should be one— and preferably only one —obvious way to do it. ”。
+能够用 if/else 清晰表达逻辑时，就没必要再额外新增一种方式来实现。
+检查某个对象是否为真值时，还显示地与 True 和 False 做比较就显得多此一举，不专业
+  http://mmbiz.qpic.cn/mmbiz_png/rO1ibUkmNGMnskBxQouzQzuRUO6z50c7COLMLkDqo0bpcItlwZo3UTMTLYbCsDC1hx1sxMrnSXzCzgsNDRaeYhg/640?wx_fmt=png
+for else 是 Python 中特有的语法格式，else 中的代码在 for 循环遍历完所有元素之后执行。

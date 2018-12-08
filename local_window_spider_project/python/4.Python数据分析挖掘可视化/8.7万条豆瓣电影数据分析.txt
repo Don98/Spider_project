@@ -1,0 +1,10 @@
+b'8.7\xe4\xb8\x87\xe6\x9d\xa1\xe8\xb1\x86\xe7\x93\xa3\xe7\x94\xb5\xe5\xbd\xb1\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90'这篇文章主要分两部分来聊，第一部分讲数据的抓取，第二部分对电影数据进行一些简单的分析。好，我们这就进入正题...
+
+1.构造链接http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttf5bRTl1upJhC6Jt0YVvh3ticwBzDhQsVbkuGxLiaz1iaTvGPGaXOVeia51PMCKZcicWVyqpichY0FbWtg/0?wx_fmt=png
+ 这里我通过一个theme_page的类，获取所有主题下的全部链接地址：
+2.信息抽取这块的工作也比较常规，由于豆瓣电影信息的页面不是动态加载，给抓取数据的工作减小了很大难度，使用lxml工具先抓到列表页中的电影简介信息和链接，然后进入到每部电影的链接里抓取详情信息。
+抓取列表页信息：
+ 3.让程序run起来 前人们对豆瓣的分析已经很多了，这里的画风简单带过，主要是最后有一个最受欢迎与最受吐槽的电影榜单，大家可以乐呵一下...
+1.电影类型分布http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttf5bRTl1upJhC6Jt0YVvh34pZgyM6QsoK7LNFxmpmNt3BadF4hecAWcvvoGZmju0GApYxbUgt02g/0?wx_fmt=png
+我们可以看出，各种类型的电影分布相对来说还是比较均匀，比例上的略微差异或许是电影题材本身数量上的差异 ( 比如说科幻的电影相对爱情片来说是少一些 ) 。so,豆瓣上的电影还是可以相对客观地反应出市场上电影总体类型的比例。
+2.人们参与评分情况

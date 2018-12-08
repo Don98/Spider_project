@@ -1,0 +1,30 @@
+b'\xe5\xa6\x82\xe4\xbd\x95\xe8\xbf\x9b\xe8\xa1\x8c\xe9\x9a\x8f\xe6\x9c\xba\xe6\x8a\xbd\xe6\xa0\xb7\xef\xbc\x9f' 有这样一个问题：
+ 随机的选取容量为N的数组中的k个元素，要求是不能重复选取，并且不能删除数组中的元素，只能够进行交换。其中 k≤N
+。
+ 看到这个题目，你想到了什么？
+ 我先想到的就是抽签算法。当由 k 个人抽 K 张签，无论先后顺序，每个人抽中的概率都是1/K
+。同理，<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">
+k 个人抽 N 张签，无论先后顺序，<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">每个人抽中的概率都是1/N
+。</span></span>
+ 可以简单说明一下：
+1、当k=1时，由于是从 N 张签中抽取，所以<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">抽中的概率是1/N，</span>成立。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+2、<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">当k=2时，</span>在剩下的 N-1 个中随机选：1/(N-1)，由于第1次没有选中它， 而是在另外N-1个中选：(N-1)/N，因此概率为：(N-1)/N
+* 1/(N-1) = 1/N。
+3、当k=3时，概率为 (<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N</span>-1)/<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N</span>
+* (<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N</span>-2)/(<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N</span>-1) * 1/(<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N-</span>2) = 1/<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">N。</span>
+  既然如此，我们可以对N个数，进行k次抽签操作，算法代码如下：
+  这个算法实现的缺点就是依赖了数据总数N。如果不知道N有没有办法呢？
+ 那就是蓄水池算法。蓄水池算法是大数据抽样常用的算法，在不知道数据总数目的情况下可以完成随机抽样。
+ 先从最简单的蓄水池抽样算法说起，即蓄水池中数据的数目为1。先把第一个数据以概率1/1放入蓄水池，第二个数据以1/2的概率替换蓄水池中数据，第三个数据以1/3的概率替换蓄水池中数据，第k个数据以1/k的概率替换蓄水池中数据，如此重复，直至遍历完所有的数据。
+ 这样完成后，每个数据被抽中的概率是相等的，即使不知道数据总数目。下面，就用数学归纳法完成证明：
+ 只需要证明当遍历至第k行时，前面k行中的任意一行被抽取的概率均为1/k。
+证明:（1）当i=1时，第一行被抽取的概率为1/1，成立。
+（2）假设当i=k时成立，则前面k行中的任意一行被抽取的概率为1/k。现证明i=k+1时成立。
+当i=k+1时，第k+1行替换原有样本的概率为1/(k+1)，所以第k+1行被抽取的概率是1/(k+1)。
+前面k行任意一行被抽取的概率为 1/k*k/(k+1)=1/(k+1)，
+即当i=k+1时成立。证毕。
+ Python代码实现如下：
+  那么，如何以等概率选择k个数呢？跟单个数类似，实现方法如下：
+ 先把前k个数据放入蓄水池，对第k+1个数据，我们以 k/(k+1)概率决定是否要把它放入蓄水池，放入时随机的选取一个作为替换项。对第n个数据，我们以 k/n概率决定是否要把它放入蓄水池，放入时随机的选取一个作为替换项。这样一直做下去，直至遍历完所有的样本空间。可以证明，对于任意的样本空间N，对每个数据的选取概率都为k/N。
+ 也可以通过数学归纳法完成证明：
+ 只需要证明当遍历至第n(n&gt;=k)行时，前面n行中的任意一行被抽取的概率均为k/n。

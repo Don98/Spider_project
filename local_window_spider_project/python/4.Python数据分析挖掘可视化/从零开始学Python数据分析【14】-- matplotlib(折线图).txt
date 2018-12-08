@@ -1,0 +1,19 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9014\xe3\x80\x91-- matplotlib(\xe6\x8a\x98\xe7\xba\xbf\xe5\x9b\xbe)'              
+
+
+
+
+
+
+我们接着上一期matplotlib绘图内容，讲解一下关于折线图的绘制，折线图一般是用来表示某个数值变量随着时间的推移而形成的趋势，这种图还是比较常见的，如<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">经济走势图、销售波动图、PV监控图</strong></span>等。在Python的matplotlib模块中，我们可以调用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">plot函数</strong></span>就能实现折线图的绘制了，先来看看这个函数的一些参数含义。
+
+
+
+
+
+
+
+matplotlib模块中plot函数语法及参数含义：
+            https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXALfL2tGNvJEhHZfEsbZ8l3WFSvVcXdhBSibHBibGxSktbJia8djPmsuiclmFlrTib7l5nHecUL0YibBWw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXALfL2tGNvJEhHZfEsbZ8lIgu8JLE5raNwYrpiaAGOQA29eciaDRK2JtSqz9plamicKpsHnTxHiay90g/640?wx_fmt=png
+ 

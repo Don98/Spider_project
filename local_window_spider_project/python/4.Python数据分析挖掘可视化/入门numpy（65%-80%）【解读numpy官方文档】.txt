@@ -1,0 +1,87 @@
+b'\xe5\x85\xa5\xe9\x97\xa8numpy\xef\xbc\x8865%-80%\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbnumpy\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640
+<span style="font-size: 14px;">点击上图即可限时<span style="color: rgb(255, 0, 0);">半价</span>购买课程</span>  1
+索引与指数索引
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzadxJicwqh38M1uhhgrL9KrQOSWVib7EO8rWfGyfwDqHjz39KuFgrAZdtQ/0?wx_fmt=png
+注：产生0-11的平方组成一个数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzamxGnclvicAs73daIib3DmC8gCTMXyWDg0p1HlnUEy2u4ia2QTChtUL4nQ/0?wx_fmt=png
+注：产生一个数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzapW1Eze3xjplgZKjibibA9nxaia3PGUiaAaHKD8ordIFrTzicTzvy1Oexd4g/0?wx_fmt=png
+注：以数组i为索引，取a数组中的数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaBVvE6Lt0xNXJQMicsqDRiacWoDEISUrVRs8AklYa3VicCEU4icNrFzGCRw/0?wx_fmt=png
+注：以j数组为索引，取a数组中的数，根据j数组的格式（二维）产生新格式的a数组
+ 当索引数组a为多维时，单个索引数组指的是a的第一个维度。 以下示例通过使用调色板将标签的图像转换为彩色图像来显示此行为
+
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaHc8koYIFfy9FtaIFzEU4yGJDNgwFBnITnvbGgjexX6pqfrG5ib54gIg/0?wx_fmt=png
+注：以<span style="color: #4C4C4C;">image数组为索引，取对应数组</span><span style="color: #4C4C4C;">palette中的值（最后的数组格式与image数组格式一致）</span>
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza82icqIPiaVoucFzO6bzdHMOqjnTHYdW4UwQTicsqz2Ku81PnUfibBCL00w/0?wx_fmt=png
+注：创建一个数组，再将其变形为3行4列
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaN9GDMQsFGNp3iaTU3vHaNuKj7mBa5sUbh6Nmicy8zGp1aibVjpFkqhQAA/0?wx_fmt=png
+注：为第一维创建索引数组做准备
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaACXk3kbhyYuibHjPUicXTl799BSeozGibteDicQcw19ECicXLeRaCPoOdtg/0?wx_fmt=png
+注：为第二维创建索引数组做准备
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaqP3F6keBP0IXmANAd9D0oRK3XMicdkH30C1dT7MdOAy6pqmyzLSkgKQ/0?wx_fmt=png
+注：以i，j数组成对作为索引，取出对应a数组的值（i，j数组必须同形状）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaKatedcQSoIyg4laR9x3nibIicFicxVoAK9BEONME5voKCdR6nedrtu1tQ/0?wx_fmt=png
+注：以数组i为行索引，以2为列索引，在a数组中取值
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza2Xlv31H3OYjLNMACmEd20ppB9woI45OBPZe1wnoue4B4EibxiaCYxhsg/0?wx_fmt=png
+注：以j数组为列索引，在a数组每行分别取值
+ 当然，我们可以把i和j放在一个序列中（比如一个列表），然后用列表进行索引。
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaia0eEof1dclEfCLdZexdiaJPHZkiayrUe3B5LP9myf3PibPbfWialXAjXIw/0?wx_fmt=png
+注：将i，j数组合并为l列表作为索引
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaf77Vot2vpF3ewD7oK8QTGR8Ixl3aicV2zvbdNn4ZS6bF89d9T1jictxQ/0?wx_fmt=png
+注：以列表l作为索引在a数组中取值
+ 但是，我们不能将i和j放入数组中(可以放在列表中），因为这个数组将被解释为索引a的第一维，如下图会报错：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzanmt5zWncmQMLkicI9BvHSicx5VYEzgMbSP5HQG49SER1PuE3ibYf4YALw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaMC69dntlYUZ5bvgmZjHt72uEEPuCZ7aOZtSCaibjxVyKlLgGy1IfcAA/0?wx_fmt=png
+注：转化成元组和列表类似作为索引，也是可以的
+ 使用数组索引的另一个常见用途是搜索时间相关序列的最大值：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzab1FdCLusO85I92sFYnhl78Ciatx5ZbH8JH4aLXhfogPfiaXUV5hoHHcA/0?wx_fmt=png
+注：在20到145之间等间隔产生5个数（包括两个端点）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzamb2YbPBhziaw5WaMczZkxuHLYgRFuyU7DyfbP5Jj83wBoKNJTTO9N1A/0?wx_fmt=png
+注：产生一个5行4列的正弦函数数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaXdC9JkA9GiaW6VUHT0mnDuibbMalkGzicTbiaibsrqjwNS61Vj7CgGYCdmg/0?wx_fmt=png
+注：返回data数组每列最大值的索引
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzacficvdzwlUxAOk2eOficudmZm3A8UD9zznz3p3rr0WnWR2Hg2pvRZRzw/0?wx_fmt=png
+注：返回data数组每行最大值的索引
+这部分之后有一些官方文档代码在我的电脑上运行错误，我的是Python3版本
+ 也可以使用索引作为目标分配给数组
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaT3C1koTSGF7Z2NaBQnuz2FiaBpkENE1kvjntlOZSmUiaQ9VMibYVYzIEw/0?wx_fmt=png
+注：创建一个a数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaBdW6ALMy9YbmNMUHMK6Z0PUbv9GSPtw8P0OU19Qe75NQYnHjCVgwzQ/0?wx_fmt=png
+注：通过传入索引对a数组的给定位置元素重新赋值
+ 但是，当索引列表包含重复时，完成多次赋值操作，留下最后一次操作的值：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzanGe3yFIO0o8fHtibHEQ6aY02ywUwXylesDJ6bPIrlDPSoLNtdArotSw/0?wx_fmt=png
+注：这里的索引0位置被两次赋值，我们保留的是最后一次赋值的2
+ 这是足够合理的，但要注意，如果你想使用Python的+=构造，它可能不会做你期望的：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaZJuRoTicZfga1eDSibAT5JICIF9sKTiaVniaGmscaNTqhJ2e82AWOv3eeA/0?wx_fmt=png
+注：索引2的值确实加2了，但是索引0的只并没有像预期加2，而只加了1
+ 2
+使用布尔数组进行索引
+ 当我们使用整数索引的数组来索引数组时，我们提供要选择的索引列表。 使用布尔索引的方法是不同的; 我们明确地选择了我们想要的数组中的哪些项目以及我们不需要哪些项目。
+使用布尔索引的最自然的方式是使用与原始数组相同形状的布尔数组：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzas4GPcyUNgGkKllclRctaKZQpNCnyQdfkYbG0iaLricWqNe4Cn1BfCYHA/0?wx_fmt=png
+注：b为和a形状一样的布尔数组（a中对应元素与4比较得出）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaGcgh6yx1pYD7p25SbmJC9bWnM2ia9Bo0yOibok0hD2WtZKor5ibkQQkag/0?wx_fmt=png
+注：取出a数组中，索引为b数组中True的值
+ 此属性在非常有用：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppzaDjemWIpwmBnf7w3Gia8hibFSIJtxDC8hV6glDUABPnlr0WkyBGJqAVIA/0?wx_fmt=png
+注：a数组中比4大的元素都赋值为0
+ 你可以查看以下示例来了解如何使用布尔索引生成Mandelbrot集的映像：
+Mandelbrot集的wiki解释：https://en.wikipedia.org/wiki/Mandelbrot_set
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza2iaSVPWE2FVkHxZSQ5pG0CHxeCvh0HHwbclHWiaMYY0vtC2vGTV7EAFQ/0?wx_fmt=png
+ 布尔索引的第二种方式更类似于整数索引; 对于数组的每个维度，我们给出一个选择我们想要的切片的一维布尔数组：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza7C1liap3iaVg6SqbWaGtJiall4J8ibmtx2DRChLwawNpPy7hCib8w36gkrg/0?wx_fmt=png
+注：a是3行4列数组，使用b1切片出后面两行（因为b1中后两个元素是True，即True对应的a中的行被切出来）
+ 这同样可以写为：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza3A74IB23cLa02FEYsMWeI0qYcuVYUiaf02ibkgiboibpic3bozcXGYoaAFQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumO4pibicuMcgjGrmQ07ppza6Ln1ErPr2U3vicGm14l81yjyTwufbEAfb7KXW4WT6aE1ia6t3jAxmG0g/0?wx_fmt=png

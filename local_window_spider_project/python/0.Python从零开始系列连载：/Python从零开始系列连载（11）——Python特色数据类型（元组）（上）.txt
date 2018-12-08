@@ -1,0 +1,47 @@
+Python从零开始系列连载（11）——Python特色数据类型（元组）（上）                 元组是Python的另一种特色的数据类型
+元组和列表是相似的
+可以存储不同类型的数据
+  用逗号隔开的就是元组，但是为了美观和代码可读性，我们一般加小括号
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY9FQLeEbm5CrUFY1Ae60xte3Jl6GNITT5WZYm7Qriaf5oyayMGRg6kgQ/0?wx_fmt=png
+ 注意：上面的元组包含了列表，所以元组允许嵌套【俄罗斯套娃】
+而且元组包含了可变类型（因为列表是可变的数据类型：我们能对列表值修改，所以说列表是可变类型）
+ 特殊情况：
+创建一个元素的元组时必须加逗号
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYOyq72YbCIweeDfPcDVNicCV5BpI4OADcjpsicGMZBYLAJ0XEEdOvO7vg/0?wx_fmt=png
+ 注意：上面的只加了小括号的，创建出来的是int整型
+而在加了逗号基础上，是否使用小括号都是ok的，都创建的是元组
+ 创建空元组
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY5QveWJlobDY8IsiaXtudmYzZz9WnSpTG1ZGXmx9hKp6zfKG0icyY2s7w/0?wx_fmt=png
+  和列表类似，元组也有很多基本操作：
+ 1.索引
+2.切片
+3.连接
+4.复制
+5.对内部元素循环
+6.查找元组中是否有某元素
+7.删除元组
+8.返回元组中最大值和最小值<br style="box-sizing: border-box;"  />
+ 快速演示一下:
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYGpGY4RbdRZAVpbX1npVSauawnAkfRbTQyDcn9QSRxqBptRuT64W2Hw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYwotakAs08Zic0vrqry2Tuo9BaiclRwiabwqouRHhApfrEsIiaTNLupAykg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYReJn4EokAu6ssnjGgtHDFLicl8LDuF42qkZeVWwy8FD2kZU6upMpicGQ/0?wx_fmt=png
+ 可以同样使用len（）来查看元组长度：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYMUyB6Hu7Q4WibiaMNKQynW8yfDzzABxZWm00X3NicRHayGEnhtgTXdUKQ/0?wx_fmt=png
+ 注意：后一个是对空元组执行长度操作，显示长度为0
+ 之前也说了，元组和列表不同之处就是元组创建后不可修改：
+ 我们尝试修改：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYicVdoALOZaicxrSAcBicafDBBUjzdvwXC7OaEgJx2EYNLG6nk35Ddn9rQ/0?wx_fmt=png
+ 果然报错了
+ 除此之外，在列表可行的
+pop（）
+append（）
+extend（）
+remove（）
+index（）
+都在元组中不可用
+ 今天作业是自己跟着操作一遍~
+自己不敲代码永远学不会写代码
+下课
+人生苦短，我选Python
+未完待续，连载中......
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswBruib1TaSICP4Z7eXM9T20mkxG4bRNel1uyGNujDCqjoC3rj7m6gm9w/640?wx_fmt=png

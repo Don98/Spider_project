@@ -1,0 +1,16 @@
+Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））                               http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtia3FZD7zWUCqkiaqskTYntQHBQiaiafBo9B6ysnGTZobcQ39IPhMiaTk7yQ/0?wx_fmt=png
+   random.sample()
+
+
+ 是从指定序列中随机获取指定长度的片断</span>
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtXxdKfK6s9LHV6CEx9oQoFVghic4UVL73xt27AabdA6UDM8Sb5Rj08fQ/0?wx_fmt=png
+  人生苦短，我选Python
+ 今日作业：自己去阅读random的官方文档学习
+https://docs.python.org/3.6/library/random.html
+
+
+ Python入门连载已经结束坚持看到现在的你们真的很棒棒！你们已经成功入门了Python！ 本人计划在之后（11月中旬）开始写Python的进阶部分（更地道的Python代码）</strong>
+ 之后可能还会写到Python的数据结构算法连载、Python面向对象编程连载、Python机器学习连载、Python数据分析挖掘案例分析等方面内容</strong>
+ 如果觉得入门部分很合你的口味，请保持关注</strong>
+ 如果有什么学习感悟，<span style="color: rgb(227, 55, 55);"><strong>一定在本文下评论留言没有感悟也留言打个卡呗~让我感受到泥萌的存在，让我之后能写的更有激情！<br  />或者想入门以上所说的Python相关方向<span style="color: rgb(227, 55, 55);"><strong><span style="color: rgb(227, 55, 55);"><strong>在本文下评论留言我会给予指引（可能我的资格也不够，我就我的经验谈谈看法）<br  /> 谢谢大家一路的陪伴，我们还会再次扬帆起航~</strong>

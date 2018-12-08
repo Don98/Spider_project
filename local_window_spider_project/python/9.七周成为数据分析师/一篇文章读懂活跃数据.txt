@@ -1,0 +1,45 @@
+b'\xe4\xb8\x80\xe7\xaf\x87\xe6\x96\x87\xe7\xab\xa0\xe8\xaf\xbb\xe6\x87\x82\xe6\xb4\xbb\xe8\xb7\x83\xe6\x95\xb0\xe6\x8d\xae'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）
+       http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6u48ibFNavYiceIibiaibyMPY5pNoDkSaFpib7viaaUr65WqCLbyF93SWiaJBhA/0?
+产品专注的市场领域不同，活跃用户数天差地别。一款小众的垂直领域产品和泛社交类产品，单纯看活跃用户数，你很难界定它们好坏。
+
+<strong>好的数据指标，都应该是比例或比率。</strong>
+
+我们设定一个新指标，活跃率：某一时间段内活跃用户在总用户量的占比。
+
+按照时间维度引申，有日活跃率DAU，周活跃率WAU，月活跃率等MAU。
+例：月活跃，本月活跃用户在截止月末的总注册用户中占比。
+一般而言：活跃用户数，看的是产品的市场体量。活跃率，看的是产品的健康度。
+
+实际得承认，不同产品，用户需求（高频或低频）不同，活跃率也有差异。用户运营更多的职责是监控活跃率的变化，并且提升它。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6A5NQvK6cMj03IXHSmIjPaSfPkQIDMiaB6Sltqj1m7mov7N51r1xlxzw/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6g2DUn02YqHTclC0nA549XtPrLWgibrqHFlQOHR9QNK1bHu8RVTpicia9Q/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw61QeL96KkGmibw6aIdgRiaQuTXMjLK2HXibPb3uu338icJ2N2K3tGvkias2Q/0?
+指标拆分后，我们发现老用户的活跃率比预期低。
+实际在产品早期、渠道投入资源推广、或一次成功的病毒营销后，因为新增用户数量的暴涨，总是会带动活跃数的上升。
+
+A产品打算在五月份做大投入，在APP上进行活动，希望用户大力参与，同时在B渠道进行推广。在常规的统计指标中，发现活跃数据上升。事后分析发现活跃为新增活跃，老用户的活跃数据没有显著上升。配合其他活动数据，证实活动效果较差。
+C产品获得投资后，通过大规模的烧钱推广，获得一个正向的活跃数据反馈。此时活跃有不小可能是由新增用户撑起的。产品自身的打磨若不好，老用户活跃率不会提高，这也是我们常说的留存概念。导致钱白白浪费不少。
+产品进入稳定期后，有了一定用户规模，新增活跃一般对活跃数据就不会有大的影响了。
+那么以新老用户区分活跃统计就够了？我们简单定义三个场景：
+
+用户A下载产品后，把玩了一段时间，发现这是他想要的功能，爱不释手，成为发烧用户；
+
+用户B下载产品后，看了几眼就不再使用。产品2.0发布后，觉得有个新特性不错，于是回来继续使用，逐渐成为活跃份子；
+用户C从网上看到随便下载的，用了产品觉得一般，吐槽几句并且卸载，不再使用；
+用户包含各种类型，反应了不同群体的特征和想法。在使用整个产品的周期中，我们应定义更全面的指标：
+
+<strong>流失用户：</strong>有一段时间没有再打开产品，那么我们就视为流失用户，根据产品的属性，可以按30天，60天，90天等划分。
+
+<strong>不活跃用户：</strong>有一段时间没有打开产品，为了和流失区分开来，需要选择无交集的时间范围。比如流失用户是60天以上没打开产品，那么不活跃则是0～60天没打开。
+
+<strong>回流用户：</strong>有一段时间没用产品，之后突然回来再次使用，则称为回流用户。回流用户是活跃用户，且是由流失用户或不活跃用户唤回而来。
+
+<strong>活跃用户：</strong>一段时间内打开过产品。
+
+<strong>忠诚用户：</strong>也可以叫超级活跃用户，长期持续使用产品，比如连续四周，或者一个月内15天等。
+
+现在我们发现，不论是活跃用户还是不活跃用户的维度，都一下子丰富了起来。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw651LibAibARfytJuC94YQqibYktLXqiaxX6sEuO9ribUaHyXQy33PRxouF6A/0?
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6NfekmgHRwLMTHqicp7RBMLcjE0SoDpzh8HZc2GRYhoeiabn3mMFvRQpA/0?
+     http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6yls8WsXkdsCSH682xm0iadw6vbOBv3Ll4F9ibVbaiawXs869I9ibLgVmGkcjL3iae2U7WUdicXfbpSvcWcg/0?

@@ -1,0 +1,32 @@
+b'\xe4\xb8\x83\xe5\x91\xa8\xef\xbc\x9a\xe7\xac\xac\xe4\xb8\x83\xe5\x91\xa8python\xe5\xad\xa6\xe4\xb9\xa0\xe7\xac\x94\xe8\xae\xb0\xef\xbc\x881\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94python\xe5\x9f\xba\xe7\xa1\x80'  以下是七周成为数据分析师课程部分学习笔记（点击<span style="color: rgb(255, 41, 65);">阅读全文</span>可学此课程哦） <br  />   七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）</a>
+七周：第三周Excel学习</a>
+七周：第四周数据可视化学习笔记</a>
+七周：第五周MySQL学习笔记</a>
+
+七周：第六周统计学（基础）笔记</a>
+
+         http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibthogicLic4eibE4sibYK7fjRbRUDz8TjdmVSjicpfbPM1pHetezuUyAs2r1g/0?wx_fmt=png
+ 【python基础】</span>
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtw3ssxusy6B41dmULkJYu61ZZORW5yJ0HgJmxibTY3JsAibrRaNQ9eBkw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtRTtx5Wjq69E11cChIVVF3lghd63h3ibBpkR5uA9kD5TeSNqUv8FRp4g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtt7fJQPHiaXUOQL79YNhg07IB4DXALEGsichWN5eYibHPzu5Yg4svTE54g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibt6XTsxaGoFrXfNwNfNia4Ew4CC1oUnbA1xxBm6FDicAyia0Gib3DYib4VfLw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtbiaxlkKISiaica55XaosN5PAcbSD0icic4xcSPGpqnQxNTy4G7CMB8YnhXw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtGhXa9yDuGm2gu1mFkh5ibzH0EQjdILmxzIjfhA20lLcfUTp0gibgKic2Q/0?wx_fmt=png
+  字符串</span>：字符串同样不能直接进行计算，可用int转换成数字进行计算。
+bool数组（ture默认为1，false默认为0）：</span><span style="color: rgb(51, 51, 51);">是可以进行与数字加减运算的</span>
+          http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibticW4NC6y7q7Q93eR3AxeWnOvHmXYnloIHibpYkYXo2vqk41LLj7g8ibkA/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtpxiaiaXVVsvRe4DN6qPtjSOicVnFczhYoXkicn5JvmcYlTbKkn9Rsc2HZA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibt20chkVXUEwYVX9KXaEOIcZIwG0kDfQV7vq4JL8cFVls2hhicy4Po2ibA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtNibCUUovkPDJnAIo1TTdiaEagqsH2NIJY8PjZEjQp9UgaYjWhTnUYYEw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtlcia1e10z3QQtjUg6cMEHsYP5ZEJowRJsJ3q7IqyxXPfXPicnBG6mf7g/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtdiaeWj6mzR51r4teRSEDIRMNI6ARgwEvyiaLGdesvRrHIajticFJEXhKw/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtgiaRia2v1C50amI5GPQBFoOibtMr3QOJnzMNmrzFRpSPT2ByVfyKnmRNQ/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibthYZOHia9iauoUIiag5IVezkExQWB0rbXBAJW9uKGCMUoslJjsfXKppXrw/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibticOqqcaoGmKwGfzn22aqffGIg5icEgEJLZBaazC7ZOuEeEwRkXPuHxicA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttfaboichAboQGEHJ5t91jibtl7XL8fCZQoXbm2UdIbn0OnXlxRcuGgrTNCSWXicGJJ8XvdoZQJ3Bib9w/0?wx_fmt=png
+  下期内容o(*￣︶￣*)o：</span>
+【Numpy和Pands】这两个是常用于统计分析，可以帮我们处理上千条数据</span>
+ Numpy包进行加载</span>
+  http://mmbiz.qpic.cn/mmbiz_png/9Xne6pfLaewglbEMOYAb4Xe5Ticn6mlQFickNhCl0l0c5ezCONIOianaNvV7ASo7CNNa5Tum5IarHXhGEuibmRC6PQ/640?wx_fmt=png
+ 

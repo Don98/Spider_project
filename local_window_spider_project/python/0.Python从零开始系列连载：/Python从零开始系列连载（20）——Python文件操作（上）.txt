@@ -1,0 +1,20 @@
+Python从零开始系列连载（20）——Python文件操作（上）                      文件http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvvc0MuAorGfzFBzibSgHZWB17rgkL4VpTjjibE6iadH1yOPAtmib4VYmHo2w/0?wx_fmt=png
+   绝对路径与相对路径 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvvls6icLB3hswwSouV52QROtT93ucGWAhMwcnVCWTIwibsZajydtOqBpcg/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvwRna5TUoekalh6ibxrialcHoelqnvGMJdfyicAvP6Dx6rQQqwibrGSkKmA/0?wx_fmt=jpeg
+       绝对路径   绝对路径 学习资料文件夹学习资料.avi 这真的是学习资料文件夹/学习资料.avi 爬取某社区高清无码大图 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvQia1qkW3o7APMRv64DXzTicJP2sZSztDNibHvYYkFibGch4mHibCMxkPeeg/0?wx_fmt=png
+Python绝对路径写法：    Python相对路径写法：</strong>
+
+编程学习资料   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvxDRWxjy6xrHNzOXDsJk5xaicic4TczO8qIXKOsl8nwhexYgyibHXfhnfA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvdXUJb00FcDFFH6fbBpcJzGmrejtgx6lo03YBsyL9I0mq5OicDgvwXew/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvvbw1ABYFMrrh7AJvrzKtg8PasfgJoia0ERQFsGLL1hWichTYa09Uerjibw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvVXuicv5OZmURopib4GKrklmbGRzt0oFAZPGORicibFZic00u3797RO76buw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvQ66b9B2RVEUnn39fAAkVdibKV5BicicG1icWvhAYAiaYjUKD1FYkd0wdq3g/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvZ9ZoGdOvYbvBAut6VjWGp9X6cnc0UQCMXY23aIkIgE33FQB2Ve6PaQ/0?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvv7xRykTwlThKCgc8U6npkmbaCdzK4jhzOjE9uIwUhDuhkJqDjgjmiciag/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvVxQPI8SQnUaTyUTEDaXcAe7IVdMEoaIiaeKC712R29hSNRWCsssaObw/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvWPyvSg1iawLIsVIJeb1mFBiaKc8P2fZpicMTycSxmVkpOKvwEU2RhYWsA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7Ldvv8scY6niaKFpXj4sZrnGxXKBte8hhBGFu7KvaWVvZW89u6BBDdGwjqMQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvIJicwvzBicvFQZ5G0u7LdvvuSmoMFyfhYnuysR1MoHcibzGt0QvlMXMtOsW4knfWarU5ht7icyKmKEA/0?wx_fmt=png
+   现在还坚持再看连载学习的你们真的很棒棒！</strong>
+入门部分已经学完大部分啦！加油</strong>
+ 小编的上海站线下爬虫课程要开始啦~就在这周末两天零基础Python？零基础网络爬虫？没关系我们帮你搞定！具体内容扫码下图

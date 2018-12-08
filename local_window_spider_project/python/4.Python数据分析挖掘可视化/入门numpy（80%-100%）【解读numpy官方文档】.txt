@@ -1,0 +1,55 @@
+b'\xe5\x85\xa5\xe9\x97\xa8numpy\xef\xbc\x8880%-100%\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbnumpy\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylU5mFvIAWV1Dl0a03DO63n1qy4AJsNAqb45Ery7Crgibr65WBxzatOI2bibLMeicwk4F4zC2yOcqvEQ/640
+<span style="font-size: 14px;">点击上图即可限时<span style="color: rgb(255, 0, 0);">半价</span>购买课程</span>  ix_函数可以用于组合不同的向量，以获得每个的结果。 例如，如果要计算从每个向量a，b和c中获取的所有三元组的所有a + b * c：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJB1HYAlbw3xzJYwOXX2wsUo2Z1Ta9qrrGQDDVucUY4GVDRN6vWbiagyA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJt2yCanvkrF7EwSEWDrlHK44vGsP5bFx60YNxmMdrSRDAL12NOPZo2Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJdBZpjxiaCTPQwyhLa31T68xlN9MaYwjhH425bZDvxh7WtqgHAfzibNiag/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJSOz0YZd5vHp16lW4JG2ibcO7ic9xibZmjcRYs2oSFHsefADibdBfq0nqhA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJsvs4uiakqZYDFpkxZWSzKR6NvpiaZ2fpDIpR99F0nS0oDvW16LY26TEQ/0?wx_fmt=png
+注：通过函数将原来的一维数列组合都变成可以做某种运算的三维数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJmEWdJD89oy2BBfBpoiaEuSCx4wVQFia9lhiafIgDtQjwUibfPXdBYdVYew/0?wx_fmt=png
+注：两种等效的索引到三位数组的某元素
+<span class="135brush" data-bcless="darken" data-brushtype="text" style="border-bottom: 4px solid #787461; border-top-color: #787461; border-right-color: #787461; border-left-color: #787461; border-radius: 3px; line-height: 36px; margin-right: 7px; margin-bottom: 11px; padding: 5px 10px; text-align: center; background: #AAA695;">用字符串进行索引</span>参阅结构化数组：https://docs.scipy.org/doc/numpy-dev/user/basics.rec.html#structured-arrays
+ 基本的线性代数运算
+有关更多信息，请参阅numpy文件夹中的linalg.py
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJX86AMdBickK1C4hllliaTyg3wu8oroC2EkkHBStSQj34rBElllR2WAibA/0?wx_fmt=png
+注：创建一个矩阵a
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJ3j6FBXhd2gKzUP1nIlhwzgiar9oWhQEcRZ8ronTOicsqhWsDYoA40MOA/0?wx_fmt=png
+注：求a矩阵的转置
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJL8hXuQbL7UqCdVTMnpdqouemvQiapQMpOUk6HESeQKXE2ibJ9gqrbkgw/0?wx_fmt=png
+注：求a矩阵的逆矩阵
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJVUolVkk7h5Im5iaRc3jUNbgHPPv7Yfmm22JCXW1Th7MZibOq7XdkiaqNQ/0?wx_fmt=png
+注：产生二阶单位矩阵
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJPEIxCbl0eVIOrN01jP8XvoB0okVbLGA25EicXFezqQRREHCS37VSc0w/0?wx_fmt=png
+注：矩阵乘法
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJeApLFibGSce4ho0XuMTlPH2Uh7BiadratRBd4EyzGEicXb6bMs9Ls1rcg/0?wx_fmt=png
+注：trace轨迹，这里指矩阵的迹，矩阵主对角元素之和
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJp394Ua7hk3fHBHoiah3icRE58x7icSQnboDe9ch4m4HdJ1lY8hVYpmTeQ/0?wx_fmt=png
+注：解形如ax=y的线性方程组所得的x
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJXufV1GB1xVEAialCv12w5LVO1ERI6ZT9rloeLv1bGx7IHl4v0CicnfwA/0?wx_fmt=png
+注：求j矩阵的特征值和特征向量
+ 这里我们列出一些简短有用的提示。
+
+要更改数组的尺寸，可以省略其中一个尺寸，然后自动推导出：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJfjvIf9NzQibFrWpiaTu5Kx34QIar1RBOA7eo7LnictuicyvYDWDfwmMrOg/0?wx_fmt=png
+注：将a数组变形，参数-1表示根据情况自动计算出值
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJ49YusZldZR0rsP9WJgTCPEba73C7HsdO2cA6cuRssgnwhyroribn2Kw/0?wx_fmt=png
+注：打印a矩阵
+  在NumPy中，这可以通过函数column_stack，dstack，hstack和vstack来实现，具体取决于要进行堆叠的维度。
+例如：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJ2cxe9AIH9UessSOsRhNcicCNq8bZTfIrrIK5KicMCTq66qoppM0qT3ug/0?wx_fmt=png
+注：vstack意为vertical 
+stack按照竖直方向堆叠
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsfXA4xDk2T5JiaL9KAniatqJANbuicuWytnSXH1ewEQQYWuG8LFGibBSiabp52Ia3TwSgRpLyxib8bZOcg/0?wx_fmt=png
+注：hstack意为horizontal 
+stack按照竖直方向堆叠
+ 学matlab的学者对照学习numpy参考：
+https://docs.scipy.org/doc/numpy-dev/user/numpy-for-matlab-users.html
+ 应用于数组的NumPy直方图函数返回一对向量：数组的直方图和bins的向量。
+注意：matplotlib还具有构建与NumPy不同的直方图（称为hist，如在Matlab中）的功能。
+
+主要区别在于pylab.hist自动绘制直方图，而numpy.histogram仅生成数据。

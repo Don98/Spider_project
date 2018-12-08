@@ -1,0 +1,128 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9024\xe3\x80\x91--\xe5\xb2\xad\xe5\x9b\x9e\xe5\xbd\x92\xe5\x8f\x8aLASSO\xe5\x9b\x9e\xe5\xbd\x92\xef\xbc\x88\xe7\x90\x86\xe8\xae\xba\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                        
+
+
+
+
+
+在《<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485055&amp;idx=2&amp;sn=6e44ecf9029d1775a63a25c39430a09f&amp;chksm=ec5ed902db295014a32d955d94dfffeda5c3a28ab0a6bbafa7d9a83dca0927d6805644830864&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python【20】--线性回归（理论部分）</a>》一文中我们详细介绍了关于线性回归模型的理论知识，包括<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">模型参数求解的推导、模型的显著性检验、偏回归系数的检验和偏回归系数期望和方差的推导</strong></span>。我们再来回顾一下线性回归模型的偏回归系数的表达式：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClakcT06dQBEfICHquuCVPT62ndny4wDzUDB3jQibVFntRYeCtzYqIPzw/640?wx_fmt=png
+要能保证该回归系数有解，必须确保<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;white-space: normal;">X’X</strong>矩阵是满秩的，即<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">X’X</strong>可逆，但在实际的数据当中，自变量之间可能存在高度自相关性，就会导致偏回归系数无解或结果无效。为了能够克服这个问题，可以根据业务知识，将那些高自相关的变量进行删除；或者选用岭回归也能够避免<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">X’X</strong>的不可逆。
+
+
+
+
+
+
+岭回归一般可以用来解决线性回归模型系数无解的两种情况，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一方面</strong></span>是自变量间存在<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">高度多重共线性</strong></span>，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">另一方面</strong></span>则是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">自变量个数大于等于观测个数</strong></span>。针对这两种情况，我们不妨设计两个矩阵，来计算一下<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">X’X</strong>的行列式。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClsK3ibFxSIsfPiaSsVYSsoAjibicXia2wjqHhcm3CEVic8RaticgWkwVmyug0g/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClyd74FJQkHrWNg6QxS4G7x8TWw1ibWYNpXiadPSJsrXy65GKAffeNdL5A/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLCljicoicA3vFuj8XRIVR8wXcTkricicFMj2KlOHch7DaJgaN6BNQQPXV9ickw/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLCldtGMm4EkVDcBBMGRTMGuic7LmZbJnnkR5RhMx9L4hkuVz0dmUiabgseA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLCl81mI7jibNicxBxFwr4pSIvBAddiaxdBzianb2NMBzFk02W5qcTQicmhb17w/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClmXibzLlPMO3NiaWAXAD6ib1YWvsASagTlPg9dzXuIlm1qMFyNfbK1CqpA/640?wx_fmt=png
+ 
+
+
+
+
+
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">所以</strong></span>，不管是高度多重共线性的矩阵还是列数多于观测数的矩阵，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">最终算出来的行列式都等于0或者是近似为0</strong></span>，类似于这样的矩阵，都会导致线性回归模型的偏回归系数无解或解无意义（因为矩阵行列式近似为0时，其逆将偏于无穷大，导致回归系数也被放大）。那如何来解决这个问题呢？1970年Heer提出了<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">岭回归方法</strong>，非常巧妙的化解了这个死胡同，即在<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">X’X</strong>的基础上加上一个较小的<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda</strong>扰动 ，从而使得行列式不再为0。
+
+
+
+
+
+
+根据Heer提出的岭回归方法，可以将<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);">岭</span></strong><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">回归系数的求解表达式</strong></span>写成如下这个式子：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClFicLrMmICr9ibqUoAZDp24FBqicplIG7JmVa84U8BymBTxHRBEPUbzYyw/640?wx_fmt=png
+不难发现，回归系数<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">beta</strong>的值将随着<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda</strong>的变化而变化，当<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda=0</strong>时，其就退化为线性回归模型的系数值。
+
+
+
+
+
+
+实际上，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">岭回归系数的解</strong></span>
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLCl1RyXbGVUicdDRsASXLuXq5YgobammEGsvlLKoLop8FD3BBwRbbUqWCg/640?wx_fmt=png
+是依赖于下面这个<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">最优化问题</strong></span>：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClQEB0Lc1bjmWuwO8iajo6j6wku4AM6MlxImLZNc5rz4efqWxxdn7AibHA/640?wx_fmt=png
+其中，最后一项
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClvz5qI36ZpYFPmpuWALS6JWCCrOTPAytEmfPbPiaB24CGjZ6RmgwMV6w/640?wx_fmt=png
+被称为<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">目标函数的惩罚函数</strong></span>，是一个<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">L2范数</strong></span>，它可以确保岭回归系数<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">beta</strong>值不会变的很大，起到收缩的作用，这个收缩力度就可以通过<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda</strong>来平衡。之所以用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">“平衡”</strong></span>这个词，我们可以通过下面这幅图（源于《机器学习实战》）来描述：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClDjFYsVxeib5b4umvodSDsFLcIkxFZA6tHVXSeZWC6BgoXY0LSdJhG0A/640?wx_fmt=png
+ 
+
+
+
+
+
+这幅图的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">横坐标</strong></span>是模型的复杂度，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">纵坐标</strong></span>是模型的预测误差，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">绿色曲线</strong></span>代表的是模型在训练集上的效果，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">蓝色曲线</strong></span>代表的是模型在测试集的效果。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">从预测效果的角度来看</strong></span>，随着模型复杂度的提升，在训练集上的预测效果会越来越好，呈现在绿色曲线上就是预测误差越来越低，但是模型运用到测试集的话，预测误差就会呈现蓝色曲线的变化，先降低后上升（<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">过拟合</strong>）；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">从模型方差角度（即回归系数的方差）来看</strong></span>，模型方差会随着复杂度的提升而提升。针对上面这个图而言，我们是希望平衡方差和偏差来选择一个比较理想的模型，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(61, 167, 66);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">对于岭回归来说，随着lambda的增大，模型方差会减小（因为矩阵X’X行列式在增大，其逆就是减小，从而使得岭回归系数在减小）而偏差会增大</strong></span>。故通过<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda</strong>来平衡模型的方差和偏差，最终得到比较理想的岭回归系数。
+
+
+
+
+
+
+上面我们讲解了关于岭回归模型的参数求解，参数解是依赖于一个目标函数，该目标函数还可以表示为：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClV57pzesBicCueS91ZUPsDficSlkT6BIKEjGg7lkKoLxSCicaTNoZQpk7w/640?wx_fmt=png
+ 
+
+
+
+
+
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">为什么要添加这个岭回归系数平方和的约束呢？</strong></span>我们知道，岭回归模型可以解决多重共线性的麻烦，正是因为多重共线性的原因，才需要添加这个约束。你可能觉得这说的跟绕口令一样，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">我们举个例子</strong></span>，也许你就能明白了。例如影响一个家庭可支配收入(y)的因素有收入(x1)和支出(x2)，可以根据自变量和因变量的关系构造线性模型：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClEhicFPIDgI9KJsic3jROzR9hlee4IHn174jhvQPw4FJlsOrordEic7EuA/640?wx_fmt=png
+假如收入(x1)和支出(x2)之间存在高度多重共线性，则<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">两个变量的回归系数之间定会存在相互抵消的作用</strong></span>。即把beta1调整为很大的正数，把beta2调整为很小的负数时，预测出来的y将不会有较大的变化。所以为了压缩beta1和beta2的范围，就需要一个平方和的约束。
+
+
+
+
+
+
+如果把上面的等价<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">目标函数展示到几何图形中</strong></span>的话，将会是（这里以两个变量的回归系数为例）：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClgibCv1Gbpnz7iaicNwFeCyF5ZicESibGJeJ4CA4ryJZmOJ7w6EuNk1nzm8Q/640?wx_fmt=png
+其中，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">半椭圆体</strong></span>表现的是
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClibOpyt3bgG6ztlf239y6LA15kicFFHOjDb5LABKqXiaeFumVlyjKSuexg/640?wx_fmt=png
+这个目标函数（因为目标函数是关于两个系数的二次函数）；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">圆柱体</strong></span>表现的是
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLCl5gYGLaQ3oibBzgibLcyTIOKlvDLFte3BAxrLC2GoJEesywvxUXBh8l8w/640?wx_fmt=png
+；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">黄色的交点</strong></span>就是满足目标函数下的岭回归系数值。进一步，可以将这个三维的立体图映射到二维平面中，表现的就更加直观了：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClyVOaNs4DJCyrVwzSjhmSCGWdUmLA79e1ApO8N1G5iaib6GwMOejutrjg/640?wx_fmt=png
+
+
+
+
+
+
+如上分享了关于岭回归系数的求解及其直观的几何意义，接下来推导一些关于岭回归系数的几点性质：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClCt8XibJnqF08jkD2T1IvkgGU2EGRzWVm7IfJ6TJXapaTYy0ibC2yJNcA/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClnjWh8RsxbLnetRonlIqlkPfqXQFL52NOPgaickZqAByEl1H0wFfialsg/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClqVjaVaWQqvogyOsHbfhvENaggpCsMBnic9leKnkUpJBeUpEjT0MxkXA/640?wx_fmt=png
+  
+
+
+
+
+
+由于推导过程过于复杂，会引起部分朋友的不适，这里就不详细写了，如果你对推导比较感兴趣，可以查看<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">万丽颖写的《岭回归分析及其应用》论文</strong></span>，其中有详细的推导过程。该性质说白了就是如下这个结论：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClq9OYBAmvickxVq9JibhozrEPpKAEMc4Eicj5E229Xdk4Vqj8Qwibic1zXnQ/640?wx_fmt=png
+
+
+
+
+
+
+我们知道岭回归系数会随着<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">lambda</strong>的变化而变化，为保证选择出最佳的岭回归系数，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">该如何确定这个lambda值呢</strong></span>？一般我们会选择定性的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">可视化方法</strong></span>和<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">定量的统计方法</strong></span>。对这种方法作如下说明：
+1）绘制不同lambda值与对应的beta值之间的折线图，寻找那个<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(61, 167, 66);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">使岭回归系数趋于稳定</strong></span>的lambda值；同时与OLS相比，得到的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(61, 167, 66);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">回归系数更符合实际意义</strong></span>；
+2）方差膨胀因子法，通过选择最佳的lambda值，使得<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(61, 167, 66);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">所有方差膨胀因子不超过10</strong></span>；
+3）虽然lambda的增大，会导致残差平方和的增加，需要选择一个lambda值，使得<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(61, 167, 66);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">残差平方和趋于稳定</strong></span>（即增加幅度细微）。
+
+
+
+
+
+
+最后我们再来介绍一下LASSO回归，其实该回归与岭回归非常类似，不同的是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">求解回归系数的目标函数中使用的惩罚函数是L1范数</strong></span>，即
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClTH1jJdVDfOwAGyGmPKb5B8ggZxcYM4FajrLDZcDBSIuicTVOiajkdv2A/640?wx_fmt=png
+同理，该目标函数也可以转换成：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWXpVkQkDWia5yfRQRYxMLClJ7iawGcVTIwtaFZkesOjLV18N7KaGEx1ia4oE6nXxSsiartFWCu6Ccx0w/640?wx_fmt=png

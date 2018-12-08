@@ -1,0 +1,22 @@
+b'Python\xe7\x88\xac\xe8\x99\xab\xe7\xb3\xbb\xe5\x88\x97-\xe9\x80\x94\xe5\xae\xb6'     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYRzW4cj6uBNElrGbrjvd6lR95PFc8mZo5dD0ztdYcIzUPZibKQjmRKVA/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYHraseoUmPdLia4rTpRIHXRsLXia1aUBDy9mVMRNG6mgYVeDRaiccf5AYg/0?wx_fmt=png
+  city_data=requests.get(url='https://www.tujia.com/Common/CityInfo/').content.decode('utf-8')
+city_data=str(city_data).replace('var cityInfo = ','').replace(';', '')
+
+print(city_data)
+city_info=json.loads(city_data)
+print(city_info['hotgroup'])</pre><p style="box-sizing: border-box;margin-bottom: 8px;color: rgb(51, 51, 51);overflow-wrap: break-word;"><span style="font-size: 15px;">
+</span>
+  city_data=str(city_data).lstrip('var cityInfo = ').rstrip(';')</pre><p style="box-sizing: border-box;margin-bottom: 8px;color: rgb(51, 51, 51);overflow-wrap: break-word;"><span style="font-size: 15px;">
+</span>
+  city_data = str(city_data)[len('var cityInfo = '):-1]</pre><p style="box-sizing: border-box;margin-bottom: 8px;color: rgb(51, 51, 51);overflow-wrap: break-word;"><span style="font-size: 15px;">
+</span>
+    city_id='sanya'
+url='http://www.baidu.com?{}.html'.format(city_id)
+print city_url</pre><p style="box-sizing: border-box;margin-bottom: 8px;color: rgb(51, 51, 51);overflow-wrap: break-word;"><span style="font-size: 15px;">
+</span>
+  city_id='sanya'
+url='http://www.baidu.com?%s.html'
+city_url=url % city_id</pre><p style="box-sizing: border-box;margin-bottom: 8px;color: rgb(51, 51, 51);overflow-wrap: break-word;"><span style="font-size: 15px;">
+</span>
+  

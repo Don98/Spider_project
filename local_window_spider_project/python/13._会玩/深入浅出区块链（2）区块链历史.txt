@@ -1,0 +1,20 @@
+b'\xe6\xb7\xb1\xe5\x85\xa5\xe6\xb5\x85\xe5\x87\xba\xe5\x8c\xba\xe5\x9d\x97\xe9\x93\xbe\xef\xbc\x882\xef\xbc\x89\xe5\x8c\xba\xe5\x9d\x97\xe9\x93\xbe\xe5\x8e\x86\xe5\x8f\xb2'            区块链技术是一个很年轻的技术，起源于21世纪。
+ 在2008年的一天，一个天才，中本聪发表了一篇白皮书《比特币：一种点对点的电子现金系统》，该文提出了一种完全通过点对点技术实现的电子现金系统，它基于密码学原理而不基于信用，使得在线支付能够直接由一方发起并支付给另外一方，中间不需要通过任何的金融机构。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYWGAVAw6MemtXA3U8iaSPQs4lMsXoMgcyo7MHXDgk7M6ibYMBdYibgACPg/0?wx_fmt=jpeg
+ 在下一年，2009年，又是这个天才，在他的服务器上挖出了比特币的第一个区块，区块中的内容是当天泰晤士报头版一则关于救助银行新闻标题，该区块也称为创世区块，并因此获得了得了第一批的50個比特币。<br style="box-sizing: border-box;"  />
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYRiah5CLlA1zxy3um9APelbW8ricRicaEsUuaibKh99iasMK7745Ip0ZaHOg/0?wx_fmt=jpeg
+ 在接下来的时间里比特币的快速发展阶段，最初比特币的价值是由用户相互协商的。其中毕竟有名的是2010年5月21日，一个弗罗里达的程序员用1万个比特币购买了价值25美元的披萨。想想现在1万个比特币可以购买上百万个披萨，不知那位程序员现在心情如何？<br style="box-sizing: border-box;"  />
+ 到2010年底前，比特币对经济总值已超过百万美元。
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYCVc0ibMqgQv4p2G7MWBp2380HwMk0RI3hUFXpd4zWZknHL7Y6eVuHiaA/0?wx_fmt=jpeg
+ 在区块链2.0阶段，区块链技术的应用不再只是数字货币，而扩展到了一个去中心化的应用平台，该阶段的标志就是以太坊的出现。以太坊是一个開源的有智能合约功能的公共区块链平台，允许用户在上面搭建各种应用。
+ 2013年，创始人发布了以太坊初版白皮书《以太坊：下一代智能合约和去中心话应用平台》，以太坊要做的是将区块链怎样应用于货币以外的领域。目标就是提供一个带有内置的成熟的图灵完备语言的区块链，用这种语言可以创建合约来编码任意状态转换功能，用户只要简单地用几行代码来实现逻辑，就能够创建以上提及的所有系统以及许多我们还想象不到的的其它系统。这种合约称之为智能合约。
+ 2014年4月， Gavin发表了以太坊黄皮书，作为以太坊虚拟机的技术说明。按照黄皮书中的具体说明，以太坊客户端已经用7种编程语言实现（C++, Go, Python, Java, JavaScript, Haskell, Rust）。并且做筹集资金开始预售以太币。以太币是以太坊货币单位。
+ 2015年，正式启动，第一个版本名为前沿。开始用的是工作量證明（proof-of-work）POW的算法，但未来可能考虑轉換成权益證明（proof-of-stake）POS。
+ 以太坊最重要的技術貢獻就是智慧合約。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYj3U2ia0VmdWIkbhXFUbyxXviaHNud0vEw6xyThHq5LL2see1HyqDvHAA/0?wx_fmt=jpeg
+  随着区块链的发展，去中心化的模式变得越来越复杂。人们利用这一技术，在全球各地构建去中心化的组织或社区。这些去中心化的组织或社区不是完全的公有链，也称为联盟链或私有链。私有链，组织或社区构建的，只能得到内部少数人可以使用，信息不公开。联盟链则介于公有链和私有链之间，由若干组织或社区一起合作维护一条区块链，该区块链上有权限的管理，在若干组织之间公开。
+ 超级账本项目是首个面向企业的开放区块链技术的重要探索。在 Linux 基金会的支持下，吸引了包括 IBM、Intel、摩根等在内的众多科技和金融巨头的参与。超级账本在之前的区块链技术基础上实现了完备的权限控制和安全保障。
+ 超级账本包括多个框架项目，其中广为人知的是Fabric项目，Fabric 致力在一个共识网络内，对指定资产资产的信息进行互换、维护和调阅。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYNAIh8bGKMkicSQ6jJiarLB5BJ7syXl3GIGldUIicD9OonEAeYMfibs3E9w/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswBruib1TaSICP4Z7eXM9T20mkxG4bRNel1uyGNujDCqjoC3rj7m6gm9w/640?wx_fmt=png
+  

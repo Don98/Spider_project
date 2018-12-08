@@ -1,0 +1,37 @@
+b'Python \xc2\xb7 \xe7\xa5\x9e\xe7\xbb\x8f\xe7\xbd\x91\xe7\xbb\x9c\xef\xbc\x88\xe9\x9b\xb6\xef\xbc\x89\xc2\xb7 \xe7\xae\x80\xe4\xbb\x8b'射命丸咲，Python
+与
+机器学习
+爱好者
+
+
+知乎专栏：https://zhuanlan.zhihu.com/carefree0910-pyml
+ 由于神经网络听上去最厉害（？），所以打算先讲一讲这部分
+题图算是最终结果中 CNN 的一个比较简易的呈现；可能有些童鞋还不知道是什么意思，可能有些大神已经看出了一些端倪。总之，我个人的习惯是先说明最终能干什么、然后再来说怎么实现，这样也能避免一些不必要的信息筛选。所以，这一部分主要用于让已经知道一定的基础知识的童鞋知道最后能走多远，如果是想从头开始学的话可以无视这一章直接看第一章：https://zhuanlan.zhihu.com/p/24477817
+图文并茂是个不错的选择（废话
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKcgsddE3DTibcguJ48JyibXJPrqBD1ybB1XfBniaqt5YCxWow6zibDZ2BNw/0?wx_fmt=png
+题图就是一个例子；当然题图那种结构不怎么用于实际（其实也可以用但更多是觉得好玩才定义了诸如 (3, 1) 和 (1, 3) 这样的 Filter……）（但其实这种 Filter 有时很厉害的，这里按下不表）。有如下三个功能是值得一提的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKNU9sDROA4wnoy6St14bYKLUj8kpgvb1NT1EhKkruG9u84XEt1Yg6kQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKRQ8eeiaMRdIzVO7ficCUqJFzpMbyYrBkB95Z4Ihjbc7XR2sGuSAV7tPw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKVPfbNngiaLAevRGtB83P2LYEibhIiagH69LUYNCYzALiaxibbW6WiaoThmbg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKYBJuIkkxSZRwLjqian7rciaM9iar864AOO7hhs5HKttTqABGHbng2cHuA/0?wx_fmt=png
+不妨将我们新的激活函数叫做 CF0910，它返回的值同样是 min(max(x, 0), 6) ：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKlG42GhTIqDTQEvT9AdI2e8R3fXNkoiamJDVjEPCFZyiaWbbUH71xLDWg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKib5mIw0lvsqswCqtDaJ7YRNBSqLOL5ksvsI3q8nS3gPyqRysN9DyI5w/0?wx_fmt=png
+ 有些细心的观众老爷可能会发现：咦你这不是只定义了普通的神经网络层吗？那如果我想把这个激活函数应用到 CNN 里面呢？
+嗯，为此你可以这样做：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVK9SpYsZibU4au43YQGDgLwhECrsbG20gjRHibcHb6xiaYOEx0SvVK3Tibsg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKmRDovjDypSjs7BiaOpYIRA2eUH2fkyKeLjKria9enZrk7iczjw2rGlvXQ/0?wx_fmt=png
+ 夸我吧！赞我吧！！GitHub 上面 star 我吧！！！（喂
+那么怎么应用呢？方法是一样一样的：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVK0Vr9nx2vPWYElJd7KX5xBrBwBvEXHs7oGsLlGwFC2zOIAAyA8PpP5g/0?wx_fmt=png
+Again，建议不要真的去跑这个结构……
+如果想要了解我自己造的那个自由度很高的轮子的话，欢迎私信或者等我以后的附加章节~
+此外，1. 和 2. 的结构是可以保存下来的（3. 的还没写因为感觉好麻烦）（喂）：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKvjZKbiahdG1nWFj9Ig9hOYNBLhqw4l6MUqsWiaWD1CYiacFrvPzcX7wkw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVK30MA4fQjabCj31tON5s4wOhWPm5BYhqkjic2xtJkYbHMtmjgG3chVAQ/0?wx_fmt=png
+然后可视化也做了一定的工作、包括但不限于：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKibjzf42H8XD2CE6Co65O4QlMZEkhpMibIhwibiaWzs38t6Gu5aOicvjGAGQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKqb24GE2g4ViaCxr6kfJA31OvGMonTtTpgDQm00fRsbtYFiaBDhqb1gcA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKboMt3PlhlnnQRoWNF5sP48rcKiaf4cqOedAdaiby0wgTIPWloV03w01Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttseHELTicmtxz76AhP539OVKIAjveEgvhHMuAuTUsEBowlNRLb8tbYaRdvJiaSv4CEWYialUlv06WyIA/0?wx_fmt=png
+ 

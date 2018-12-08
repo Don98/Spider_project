@@ -1,0 +1,34 @@
+b'Python\xe7\xa8\x8b\xe5\xba\x8f\xe5\x91\x98\xe5\xa6\x82\xe4\xbd\x95\xe8\x8e\xb7\xe5\x8f\x96\xe7\xa4\xbe\xe5\x8c\xba\xe7\x94\xa8\xe6\x88\xb7\xe4\xbf\xa1\xe6\x81\xaf\xef\xbc\x8c\xe5\x8f\x91\xe7\x8e\xb0\xe5\xb0\x8f\xe5\xa7\x90\xe5\xa7\x90'   双十一马上就要来了，在举国一片“买买买”的呼声中，单身汪的咆哮声也愈发凄厉了。作为一个Python程序员，要如何找到小姐姐，避开暴击伤害，在智中取胜呢？于是就有了以下的对话：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2KiaHc2OvspHvaibsFCn1qoTZRJoP2ujMsArdKGLiak7swGovAibI9As6Qg/0?wx_fmt=jpeg
+so~今天我们的目标是，爬社区的小姐姐~而且，我们又要用到新的姿势(雾)了~scrapy爬虫框架~
+在写过几个爬虫程序之后，我们就知道，利用爬虫获取数据大概的步骤：请求网页，获取网页，匹配信息，下载数据，数据清洗，存入数据库。
+scrapy是一个很有名的爬虫框架，可以很方便的进行网页信息爬取。那么scrapy到底是如何工作的呢？之前在网上看了不少scrapy入门的教程，大多数入门教程都配有这张图。
+  当我们想吃东西的时候，我们会出门，走到街上，寻找一家想吃的点，然后点餐，服务员再通知厨房去做，最后菜到餐桌上，或者被打包带走。这就是爬虫程序在做的事，它要将所有获取数据需要进行的操作，都写好。
+而scrapy就像一个点餐app一般的存在，在订餐列表(spiders)选取自己目标餐厅里想吃的菜(items)，在收货(pipeline)处写上自己的收货地址(存储方式)，点餐系统(scrapy engine)会根据订餐情况要求商铺(Internet)的厨房(download)将菜做好，由于会产生多个外卖取货订单(request)，系统会根据派单(schedule)分配外卖小哥从厨房取货(request)和送货(response)。说着说着我都饿了。。。。
+什么意思呢？在使用scrapy时，我们只需要设置spiders(想要爬取的内容)，pipeline(数据的清洗，数据的存储方式)，还有一个middlewares，是各功能间对接时的一些设置，就可以不用操心其他的过程，一切交给scrapy模块来完成。
+安装scrapy之后，创建一个新项目<code class="language-text" style="box-sizing: inherit;margin: 0px;padding: 0px;border-radius: 3px;">
+</code>
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS29WibqA57g3ibQbzHiaGxyicFzHzl73dbSJZy2lx5muYp1PwXjVrfBzP0KQ/0?wx_fmt=jpeg
+我用的是pycharm编译器，在spiders文件下创建zhihuxjj.py
+ 创建好了项目，让我们来看一下我们要吃的店和菜…哦不，要爬的网站和数据。
+我选用了知乎作为爬取平台，知乎是没有用户从1到n的序列id的，每个人可以设置自己的个人主页id，且为唯一。所以采选了选取一枚种子用户，爬取他的关注者，也可以关注者和粉丝一起爬，考虑到粉丝中有些三无用户，我仅选择了爬取关注者列表，再通过关注者主页爬取关注者的关注者，如此递归。
+  
+分析一下个人主页可知，个人主页由'<span class="invisible" style="box-sizing: inherit;font-style: normal;font-variant: normal;font-weight: normal;font-size: 0px;line-height: 0;font-family: a;color: transparent;text-shadow: none;background-color: transparent;">https://www.</span><span class="visible" style="box-sizing: inherit;">zhihu.com/people/'</span><span class="invisible" style="box-sizing: inherit;font-style: normal;font-variant: normal;font-weight: normal;font-size: 0px;line-height: 0;font-family: a;color: transparent;text-shadow: none;background-color: transparent;"></span><span class="Apple-converted-space">
+</span>+ 用户id 组成，我们要获取的信息是用callback回调函数(敲黑板！！划重点！！)的方式设计，这里一共设计了俩个回调函数：用户的关注列表和关注者的个人信息。
+ 将鼠标放在用户名上。
+     在items.py文件中，按照spider中设置的目标数据item，添加对应的代码。<code class="language-text" style="box-sizing: inherit;margin: 0px;padding: 0px;border-radius: 3px;">
+</code>
+     emmmmmmm，看完法则了吗，很好，然后我们在setting.py中，将ROBOTSTXT_OBEY 改成 False。(逃
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuviaafFPkbEUUqhATLMlyS2sibyibuaILdnxBLN1MTxUhh67oVj5HqjtL1HZD8Me68fTHCs1fVRpWXA/0?wx_fmt=jpeg
+写到这里你会发现，很多我们需要进行的操作，scrapy都已经写好了，只需要将注释去掉，再稍作修改，就可以实现功能了。scrapy框架还有很多功能，可以阅读官方文档了解。
+写好scrapy程序后，我们可以在终端输入<code class="language-text" style="box-sizing: inherit;margin: 0px;padding: 0px;border-radius: 3px;">
+</code>
+  但也可以在文件夹中添加main.py，并添加以下代码。
+ 经过了X天的运行，_(:зゝ∠)_爬到了7w条用户数据，爬取深度5。(这爬取速度和数据量让我觉得有必要上分布式爬虫了…这个改天再唠)
+有了数据我们就可以选择，同城市的用户进行研究了……
+先国际惯例的分析一下数据。
+在7w用户中，明显男性超过了半数，标明自己是女性的用户只占了30%左右，还有一部分没有注明性别，优质的小姐姐还是稀缺资源呀~
+再来看看小姐姐们都在哪个城市。(从7w用户中筛选出性别女且地址信息不为空的用户)
+看来小姐姐们还是集中在北上广深杭的，所以想发现优质小姐姐的男孩纸们还是要向一线看齐啊，当然也不排除在二三线的小姐姐们没有标记处自己的地理位置。
+emmmmm……这次的分析，就到此为止，你们可以去撩小姐姐们了。(逃
+  让我再举个栗子~来研究一个小姐姐。(知乎名：动次，已获取小姐姐授权作为示例。)

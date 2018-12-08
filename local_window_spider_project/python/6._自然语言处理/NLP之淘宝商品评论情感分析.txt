@@ -1,0 +1,37 @@
+b'NLP\xe4\xb9\x8b\xe6\xb7\x98\xe5\xae\x9d\xe5\x95\x86\xe5\x93\x81\xe8\xaf\x84\xe8\xae\xba\xe6\x83\x85\xe6\x84\x9f\xe5\x88\x86\xe6\x9e\x90' http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0?
+最近学习NLP，还在初级阶段，上次jieba分词那篇写完，还在学习哈工大的pyltp。
+发现一个比较有趣的中文类库：<strong>snownlp</strong>
+ Python3
+中文分词（Character-Based Generative Model）
+词性标准（TnT
+3-gram 隐马）
+情感分析（现在训练数据主要是买卖东西时的评价，所以对其他的一些可能效果不是很好，待解决）
+文本分类（Naive Bayes）
+转换成拼音
+繁体转简体
+提取文本关键词（TextRank算法）
+提取文本摘要（TextRank算法）
+tf，idf
+Tokenization（分割成句子）
+文本相似（BM25）
+支持python3
+在cmd下输入：pip3 install snownlp
+(ps:为什么用pip3而不用pip，在之前的文章中已经说过原因）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttpxzjRr2T3hibaP647qsNCqIkg5C0wbQaWiaokxuwE0icaQPJ6ic95brZ7U8YjTs6h5EmnzCBrmyGmnA/0?wx_fmt=png
+如图，我之前已经安装过
+ PS:这里使用的是它自带的词典
+这里的情感分析结果是【0，1】区间上的一个值，越接近1，情感越积极，越接近0，情感越消极。
+或者可以理解为positive的概率。
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttpxzjRr2T3hibaP647qsNCqJmB0RxzHiapGibAeVyRhJN3AwXTYz8c5KcOicz3mCPyBJBra4xsjarRhA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttpxzjRr2T3hibaP647qsNCqqmFibaibgpOVuCNcgo7HbrkF69uoRdcicswL7qP5kEfqENsPzwrw2SggA/0?wx_fmt=png
+ 这些训练内容是自己找的，可以是情感积极消极词库，也可以是爬到的淘宝积极消极情感文档。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttpxzjRr2T3hibaP647qsNCqFzqnXuToicUkwOT0AgIQZgibZq9vnk2D0EXpVSfg1kRNdCr7h5sDlq4g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttpxzjRr2T3hibaP647qsNCqicghSAicMwCQB0sicQhEuyGxMicxL9OyEqiaQFJxfAZtfnuBrQHiahASFYJw/0?wx_fmt=png
+ 训练好了就可以计算情感啦~
+        最后这个不科学。。。【捂脸】
+一定是训练集太小啦~，还需要扩充训练集
+http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0?
+<span style="color: #FF0000;">说到做到，新福利来啦：</span>关注公众号，在公众号菜单点击"<span style="color: #FF0000;">免费听课</span>"，即可参与活动免费听19.9元收费课程，当然，壕大大可以直接购买听课啦。壕大大入口：https://edu.hellobi.com/course/186，点击文末<span style="color: #FF0000;">本次主打课程：</span>http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC6NkTeTjOdFBhxdSdSWicfCSric32MZLYibBWribSUWLzFIZscSpk2ibygz50ehxc16HodQPG7D5IfZg/640?
+课程名称：自然语言处理之-基于深度学习技术的聊天机器人实现
+课程背景：NLP是一个很大的领域，自成一系，本次课程通过一个企业级案例（聊天机器人）带领大家从了解项目场景开始一步步搭建，最后演示聊天机器人实例。通过本课程的学习，让你一举打开NLP的大门。
+主讲老师：

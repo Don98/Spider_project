@@ -1,0 +1,8 @@
+b'\xe7\x88\xac\xe5\x8f\x96IP\xe4\xbb\xa3\xe7\x90\x86\xe5\x81\xb7\xe5\x81\xb7\xe7\xbb\x99\xe6\x96\x87\xe7\xab\xa0\xe5\x88\xb7\xe9\x98\x85\xe8\xaf\xbb\xe9\x87\x8f'  一、前言把爬下来的IP用来给CSDN博客里的文章刷阅读量，于是就刷了1k+的阅读量......</strong>
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttticB6qff6fTAp9C0WdnMibHmjg1PtAblILGTV3rx8jYRF1EvxPoYWMxEZ4jUy1lWfIGgXMnGnwzthA/0?wx_fmt=jpeg
+ 二、代码将ip提取部分修改了下，并将用来测试IP是否可用的百度url改成了CSDN博客里文章的url</strong>。
+   CSDN</strong>，发现阅读量蹭蹭上涨后，也是有点害怕，不知道会不会被封IP和账号，后续也还是不敢放开地刷数据，只能算是娱乐下。（两篇文章分别从20+和120+阅读刷到了现在的数据，请不要举报我）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttticB6qff6fTAp9C0WdnMibHmvWicWNVLDGicwaA8dNh1WeYGnlOSoDsLV5HZgKgHcQnIlVBcxScbLiblQ/0?wx_fmt=png
+豆瓣</strong>......嗯，立马就“403”，上不去了，所以<strong>看了本文想刷其他网站数据的朋友，还是三思而行，如果账号被封，概不负责哦</strong>。==。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttticB6qff6fTAp9C0WdnMibHmB8CTIvInZCfrSuB5rqQFK7kdEdvEaDDeoNjsFISq0tnUticts6TzHMA/0?wx_fmt=png
+   

@@ -1,0 +1,9 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x883\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe9\x82\xa3\xe4\xba\x9b\xe5\xae\xb9\xe6\x98\x93\xe8\xa2\xab\xe5\xbf\xbd\xe7\x95\xa5\xe7\x9a\x84\xe9\x97\xae\xe9\xa2\x98\xef\xbc\x88\xe4\xb8\x8b\xef\xbc\x89'  Python进阶系列连载（1）——那些容易被忽略的问题（上）</a>
+Python进阶系列连载（2）——那些容易被忽略的问题（中）</a>
+
+ Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文 收集分散 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuEIKQEqFuVvpF4QbMth3sk8gM3AxBwasuROpgYHCEnf76cP0xiaDj72juibzlFNVSI3KbS66ibfa4qQ/0?wx_fmt=png
+     分散，也就是今天要学的新内容 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuEIKQEqFuVvpF4QbMth3skW3pFwO9L8ibyrsPJkspCIywLaQxOuYdF6ST8ibX78mTon2Hh4S8QrlsQ/0?wx_fmt=png
+                                       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuEIKQEqFuVvpF4QbMth3skewicH7u70ozDCGJTTa2zMiaDxyoRia61ibJcibVOImJMgGVYAOPOErHptlw/0?wx_fmt=png
+   

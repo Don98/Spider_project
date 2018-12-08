@@ -1,0 +1,200 @@
+b'\xe5\x85\x8d\xe7\x99\xbb\xe5\xbd\x95\xe6\x96\xb0\xe6\xb5\xaa\xe5\xbe\xae\xe5\x8d\x9a\xe7\x88\xac\xe8\x99\xab\xe7\xb3\xbb\xe5\x88\x97\xe4\xb9\x8b\xe7\xac\xac\xe4\xb8\x80\xe7\xaf\x87 \xe5\x8d\x95\xe5\x8d\x9a\xe4\xb8\xbb\xe5\xbe\xae\xe5\x8d\x9a\xe5\x8f\x8a\xe8\xaf\x84\xe8\xae\xba\xe6\x95\xb0\xe6\x8d\xae' <span style="color: rgb(51, 51, 51); font-size: 14px; line-height: 25.2px;">崔庆才</span>2017.05.04 更新：
+感谢哥本哈根小树对于获取containnerid的指教，多谢。<span style="font-size: 15px; background-color: #FFFFFF;">
+</span>
+
+
+
+
+<em><strong>大家好，我是新人四毛，大家可以叫我小四毛，至于为什么，在家排行老四，农村人，就是那么任性。</strong></em>
+
+
+
+ 好，自我介绍完毕，开始今天的学（zhuang）习（bi）之路。
+说明：本文针对的是有一些爬虫基础的同学，所以看不太懂的同学先补一下基础。本文的全部代码并没有上传到GITHUB中，而且本文的code部分给出的代码也是指导性的，大部分还是要靠大家自己动手完成。待后几篇博客出来以后，代码会放到上面。大家如果有问题交流的话，欢迎在下面进行评论，或者可以加我QQ:<span style="color: #FF0000;">549411552</span>(加的话麻烦注明来自静觅)，欢迎大佬拍砖指错，大家共同进步。
+
+
+ 前几天，大才发布了一个视频，主要讲的是通过维护一个新浪微博 Cookies池，抓取新浪微博的相关数据，爬取的站点是weibo.cn。相关的代码在大才的Github里【大才的视频教程真的很用心，视频高清无码，希望大家可以支持大才，毕竟写了那么多精彩的教程真心不易】。
+
+
+
+ 然而，如果你只是想简单的搞点数据，对技术一点兴趣都没有，又或者某宝搜来搜去都没有买到账号，又或者装个模拟登陆需要的模块都想跳楼，有没有除此之外其他的办法呢？你有没有想过在免登陆的情况下就可以获得你想要的数据呢？如果你这么想过而又没有做出来，那么接下来，让我们一起搞（qi）事（fei）吧。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuSrvOoAkOuicw7ibUOL8ZYK67f88y6FK8Iswp2yicOhUOkcWkhYD6rDKzzbX7wXpUH2AiaSk1gz01Ysg/0?wx_fmt=jpeg
+本文重点提供解决问题的思路，会把最关键的点标示出来，代码基本没有。有什么不对或不足之处，还望大家指出，共同进步。
+
+
+
+
+ 代理IP。虽说本文介绍的方法不需要Cookies，但是代理IP还是需要的，要不然也是被新浪分分钟的403（我测试的时候会出现）。如果你连403都不知道是什么，那么还是去看看大才的爬虫基础课程，或者不想看文字的话直接来报大才的视频课程课，哈哈（大才，今晚得加两个菜啊，我这吆喝的）。
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuSrvOoAkOuicw7ibUOL8ZYK6G8wOD8OJ8jgF2kF4yD7lv3pzibxtw11czYg1eRAXSezXb8yGoDNDG4Q/0?wx_fmt=gif
+
+
+
+ 一般做爬虫爬取网站，首选的都是m站，其次是wap站，最后考虑PC站。当然，这不是绝对的，有的时候PC站的信息最全，而你又恰好需要全部的信息，那么PC站是你的首选。一般m站都以m开头后接域名，试一下 就好了，实在找不到，上网搜。
+
+
+
+ 所以本文开搞的网址就是 m.weibo.cn。但是当你在浏览器中输入这个网址时，你得到的应该是下面这个页面，如果不是，说明你的浏览器保留了你最近登录微博的cookie，这个时候，清空浏览器保存的数据，再次打开这个网页，就应该也是这个界面了：
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuSrvOoAkOuicw7ibUOL8ZYK6BGFosrZ69mfrHYn8RqLRgKw0BCBqgJC0YIibpwNzXicrZzpoP7rAH0Mw/0?wx_fmt=jpeg
+
+
+
+ 哈哈，其实一开始我也不知道，后来经人指点，才发现只要在后面加入一些东西之后就不会看到这个界面了。那么是什么呢？
+<span style="color: #0000FF;">当当当当！！！！！！！！！！</span>http://m.weibo.cn/u/1713926427 
+
+
+
+<strong>用心去感受，真的。</strong>
+
+ 
+ 对了，上面网址最后的数字是博主的数字ID，在weibo.com的源码里可以找到，这里不做说明了。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttu5BCn4qdNYpVmrPRH17ZibnQ20U0zoxGuNJbZpG57AwFHCaGKTicus57Z15me2xZjTS6NzZ51gr5dQ/0?wx_fmt=jpeg
+
+
+
+ 这就是本文爬虫的入口，没错，就说牛逼的榜姐，入口选一些质量高的，比如你想爬新闻方面信息，那么你就去找澎湃新闻，新浪新闻之类的。
+
+ 
+ 通过该入口，我们可以抓取该博主的所有微博及评论信息，以及该博主关注的人的微博及评论信息，依次往后，循环不断。
+
+
+
+ 在这里谈一点经验：
+&nbsp;&nbsp;&nbsp; 其实做爬虫，最基础的当然是写代码的能力，抓包什么的都不是什么困难的事，抓包很简单很简单。我觉得最难的是找到入口，找到一个最适合的入口。怎么定义这个最适合呢？就是要去尝试，依照一般的顺序，先找找M站，再找找wap站，最后再去看PC站，找到一个合适的入口，往往会事半功倍。前几天抓取途牛网的相关游记信息，爬PC站分分钟的302，但是爬M站，全是接口，全程无阻。<br  />
+
+
+ 因大多数人都是采集微博信息以及评论信息，所以下面将以这两方面为主。
+
+
+
+ 剧透一下，在这里可以抓到的信息：
+
+
+
+ (1)
+<strong>博主信息 （没发现有价值的信息，下面抓包过程不讲）
+</strong>
+
+
+
+ (2)
+<strong>博主微博信息（下文抓包讲解）</strong>
+
+
+
+ (3)<strong>
+微博评论信息（下文抓包讲解）</strong>
+
+
+
+ (4)
+<strong>热门微博信息（小时榜，日榜，周榜，月榜）（下文抓包未讲解，大家可以摸索一下）</strong>
+
+
+
+
+
+
+
+
+
+
+ 。。。。。。还有很多我没有细看，等待各位细细研究吧。
+
+
+
+ 首先，得会抓包，一般的浏览器的Network够用了。
+&nbsp;&nbsp;&nbsp; (1) 微博正文抓包
+
+
+ 点击 上图中的微博然后往下拉，抓包出现下图：
+分析：
+
+
+ 可以看到，服务器返回的数据为json格式，这个是做爬虫的最喜欢的了。返回的数据包括很多的字段，图中也以及做了标示，相信大家都能看的懂，看不懂那也没办法了。
+
+
+
+ 最后放上抓包的数据：
+Request URLhttp://m.weibo.cn/api/container/getIndex?type=uid&amp;value=1713926427&amp;containerid=1076031713926427&amp;page=2
+Request MethodGET
+Query String Parameterstype: uid
+value: 1713926427
+containerid: 1076031713926427
+page: 2
+
+
+
+
+<strong>(2) 微博评论抓包</strong>
+
+
+
+ 单击微博内容，就可以抓包成功，如下图：
+ &nbsp;&nbsp;&nbsp;&nbsp; 分析：
+
+
+ 从上面可以看出，这里的数据依然还是很好获取的。
+
+
+
+ 最后放上抓包的数据：
+Request URLhttp://m.weibo.cn/api/comments/show?id=4103388327019042&amp;page=1
+Request MethodGET
+Query String Parametersid: 4103388327019042
+page: 1
+&nbsp;&nbsp;&nbsp; 再次分析：
+
+
+ 通过抓包的数据可以发现，获取微博评论必须首先获得这条微博的ID。所以，目前还是要对微博正文的抓包过程进行分析。
+
+
+
+ 在上面的微博正文中发现需要提交以下数据：
+type: uid
+value: 1713926427
+containerid: 1076031713926427
+page: 2
+
+
+
+ 其中：<strong>type</strong>(固定值)、<strong>value</strong>(博主微博ID)、<span style="color: #FF0000;"><strong>containerid</strong></span>(意义不明确，但是带了个id在里面，应该代表的是一个唯一性的一个标识)、<strong>page</strong>(页码)。页码在返回的数据中可以获得。
+
+
+
+ 那么分析到这里，containerid就是我们要找的最重要的信息。这个字段信息是不会凭空出现的，肯定产生于某一个请求之中，所以这时候，我们再回到开头，回到我们的初始。刷新入口网址，抓包发现了下面3个网址，见下图：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 分析：
+
+
+ 这3个网址的格式一模一样，所以点进去看一下里面到底什么情况。
+
+
+ 下面的先点开<strong>网址1</strong>看看：
+ &nbsp;&nbsp;&nbsp;&nbsp; 分析：
+
+
+ 从返回的数据中，可以看到第1个网址的主要内容为 user_Info，即博主的个人信息，相关的字段在图中已经标示出来。最令人惊喜的是查找我们需要的containerid时，发现数据竟然就在其中，那么可以肯定我们需要的containerid就是在这个请求的返回值中，那么问题再次出现，这个请求的网址中又出现了一个containerid，我们似乎又回到了原点，而且在用户的首页抓包中，在这个请求之前，也没有什么有意义的请求了，到这里是不是就进入死胡同了呢？其实不然，在这里我们就要进行多方面的尝试了，当我们将第一个网址中的containerid删掉以后，重新请求一次，发现返回的依然是这些数据，具体见下图：
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttu5BCn4qdNYpVmrPRH17ZibnSts4SgiaE1RrCSubcK0RcZYzQvkyWkWuh59bgKJDfTNibmclC1jxJLGw/0?wx_fmt=jpeg
+&nbsp; 分析：
+
+
+ 而当我将第三个网址，也就是微博正文的网址中的containerid去掉后，返回的数据就是博主的个人信息了，而不是我们需要的微博正文，所以可以肯定第一个网址中的containerid并不是必须的，而对于网址3，这个字段则是必须的。
+
+
+
+ 为了让这个爬虫可以顺着一个初始用户爬取到其他用户的相关信息，甚至全网的信息，那么我们就需要让爬虫自己去添加待爬任务。本文选择的初始用户有3000多万的粉丝数，就是人们常说的微博大V。在做这一类的信息爬取时，我们往往关注的是数据的质量，所以我们选择初始用户的关注用户作为下一级的用户。在下一级中，这些用户将被作为初始用户。这样周而复始，最理想的情况当然就是可以把微博全站的质量还不错的博主的微博以及下面的评论都抓取了。但是在实际的操作过程中会发现微博的用户质量真的是参差不齐，所以我们在筛选后面的用户时，可以加一些限制条件，如用户的粉丝数等等。在这里找寻初始用户关注用户信息的这一过程就省略了，留给大家探索一下，很简单。
+所以到这里，我们的整个流程就理清了（单个博主，如需循环，则只需要找到下一级用户的ID即可，相信这对于聪明的大家肯定不难的）：
+请求用户主页网址–&gt;得到containerid，请求微博正文网址–&gt;保存博文相关信息，取出博文ID，请求评论网址–&gt;得到评论信息
+
+
+
+ 思路已经理清了，那么下面就是CODE TIME了，毕竟:
+TALK IS CHEAP,SHOW ME YOUR CODE
+
+
+
+ 本文采用scrapy编写，重写个proxy中间件，即可实现每一个request带一个随机IP，减少被封禁的概率，同时尽量把重试的次数设置大一些。
+
+
+
+ 想要保存哪些信息，根据自身的业务需求而定，具体的信息，能找到的都可以在每一个请求返回的内容中找到，都是json格式的，所以这里的代码只是将上面讲的流程实现了一遍，其他的都没有实现。
+                                    

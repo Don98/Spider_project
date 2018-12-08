@@ -1,0 +1,5 @@
+b'\xe7\x94\xa8\xe6\x88\xb7\xe7\x94\xbb\xe5\x83\x8f\xe4\xb9\x8b\xe6\xa0\x87\xe7\xad\xbe\xe6\x9d\x83\xe9\x87\x8d\xe7\xae\x97\xe6\xb3\x95' 接下来的几篇文章想和大家分享下关于用户画像的一些东西。今天我们先从用户画像的标签权重开始聊起吧。</span>
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEYoMM87VfXEWoud6mysaVicesUun7ppgISkiakFm2wQCPV4dOEoNuQISK0ztcDOlGAG2VnibtLiaORw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEYoMM87VfXEWoud6mysaVTYTYp2CxmN2H0H0amoY9EZLrq35wL9r6jX3avLlhJHXCDoyCibM9LvA/0?wx_fmt=png
+  TF-IDF算法是什么思想，这里不做详细展开，简而言之：一个词语的重要性随着它在该文章出现的次数成正比，随它在整个文档集中出现的次数成反比。</span>
+  

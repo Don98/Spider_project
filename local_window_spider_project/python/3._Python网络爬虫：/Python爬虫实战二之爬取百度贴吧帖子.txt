@@ -1,0 +1,28 @@
+b'Python\xe7\x88\xac\xe8\x99\xab\xe5\xae\x9e\xe6\x88\x98\xe4\xba\x8c\xe4\xb9\x8b\xe7\x88\xac\xe5\x8f\x96\xe7\x99\xbe\xe5\xba\xa6\xe8\xb4\xb4\xe5\x90\xa7\xe5\xb8\x96\xe5\xad\x90'大家好，上次我们实验了爬取了糗事百科的段子，那么这次我们来尝试一下爬取百度贴吧的帖子。与上一篇不同的是，这次我们需要用到文件的相关操作。
+1.对百度贴吧的任意帖子进行抓取
+2.指定是否只抓取楼主发帖内容
+3.将抓取到的内容分析并保存到文件
+首先，我们先观察一下百度贴吧的任意一个帖子。
+比如：http://tieba.baidu.com/p/3138733512?see_lz=1&amp;pn=1，这是一个关于NBA50大的盘点，分析一下这个地址。
+ 例如，上面的URL我们划分基础部分是
+http://tieba.baidu.com/p/3138733512，参数部分是
+?see_lz=1&amp;pn=1
+熟悉了URL的格式，那就让我们用urllib2库来试着抓取页面内容吧。上一篇糗事百科我们最后改成了面向对象的编码方式，这次我们直接尝试一下，定义一个类名叫BDTB(百度贴吧)，一个初始化方法，一个获取页面的方法。
+其中，有些帖子我们想指定给程序是否要只看楼主，所以我们把只看楼主的参数初始化放在类的初始化上，即init方法。另外，获取页面的方法我们需要知道一个参数就是帖子页码，所以这个参数的指定我们放在该方法中。
+综上，我们初步构建出基础代码如下：
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttt1L6aia7icLx5PtNiaD4FeEibQ7cavA9Fiao6vz3TJeDxNBAzmTGW504jHxTJNLpm9sQAsohpLsZCjnoQ/0?wx_fmt=jpeg
+首先，让我们提取帖子的标题。
+在浏览器中审查元素，或者按F12，查看页面源代码，我们找到标题所在的代码段，可以发现这个标题的HTML代码是
+ 正则表达式如下
+     http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttt1L6aia7icLx5PtNiaD4FeEibQNFdpK0BuOg2V4goPt6N9PfVLX1cnqWI3Yz0Hwc0mibWiavURQicD3PicdQ/0?wx_fmt=jpeg
+真是醉了，还有一大片换行符和图片符，好口怕！既然这样，我们就要对这些文本进行处理，把各种各样复杂的标签给它剔除掉，还原精华内容，把文本处理写成一个方法也可以，不过为了实现更好的代码架构和代码重用，我们可以考虑把标签等的处理写作一个类。
+那我们就叫它Tool（工具类吧），里面定义了一个方法，叫replace，是替换各种标签的。在类中定义了几个正则表达式，主要利用了re.sub方法对文本进行匹配后然后替换。具体的思路已经写到注释中，大家可以看一下这个类
+ 现在整体代码是如下这样子的，现在我的代码是写到这样子的
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttt1L6aia7icLx5PtNiaD4FeEibQ9yeU21slaSV6yzkodo8b5q9DWTOU2DlHKsvEwgxvx65ffCPAibZGANQ/0?wx_fmt=jpeg
+至于这个问题，我感觉直接提取楼层没什么必要呀，因为只看楼主的话，有些楼层的编号是间隔的，所以我们得到的楼层序号是不连续的，这样我们保存下来也没什么用。
+所以可以尝试下面的方法：
+1.每打印输出一段楼层，写入一行横线来间隔，或者换行符也好。
+2.试着重新编一个楼层，按照顺序，设置一个变量，每打印出一个结果变量加一，打印出这个变量当做楼层。
+这里我们尝试一下吧，看看效果怎样
+把getContent方法修改如下
+ 

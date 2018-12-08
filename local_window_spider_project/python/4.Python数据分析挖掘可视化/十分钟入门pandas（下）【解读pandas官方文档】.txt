@@ -1,0 +1,183 @@
+b'\xe5\x8d\x81\xe5\x88\x86\xe9\x92\x9f\xe5\x85\xa5\xe9\x97\xa8pandas\xef\xbc\x88\xe4\xb8\x8b\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbpandas\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibUo4tq6d3A6EbhGdV8nLiaGwCESMibM28tOhXZylSxicQnLS4nh39ibNTw/0?wx_fmt=gif
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1AeObEmlsZvDv0n37FVu3rDl3WeyZgXG9xFw8BbkiaewTibPrGSNIOO2w/0?wx_fmt=png
+注：创建了一个dataframe
+我们可以很容易地从这些数据生成数据透视表：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic16Tor2ddMJOmCf2TltmvWibrb6ORVf5DHvxPD2jg8iagpyxbeEPkybyhQ/0?wx_fmt=png
+注：数据透视表玩法很多，大家通过帮助文档好好研究下
+ pandas具有简单，强大和高效的功能，用于在频率转换期间执行重采样操作（例如，将数据转换为5分钟数据）。 这在金融应用中非常常见，但不限于此。 请参阅时间序列部分：http://pandas.pydata.org/pandas-docs/version/0.20/timeseries.html#timeseries
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1XVpTXOnxqfqdrDnaTLETkh5aJtD0QiaVtlPfdIx4UeKOJIs0f1w9EibA/0?wx_fmt=png
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 。。。。。。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ic7jloamCW0ZvoN0fA56o6khG2YKNyjicO2FibPk1spcQ6o3zxSrwh9icw/0?wx_fmt=png
+首先创建了一个100秒时间戳的系列，s为second的意思。
+
+频率：字符串或pandas偏移对象，可选
+一个pandas日期偏移字符串或相应的对象
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1o15qFxbLPvIDlHiaOhy5hcniaIVSTa45FiaS51TMyjIk9XP5eVHB4Vibpw/0?wx_fmt=png
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 。。。。。。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1kzz5wApOmKc4kWppKr4Pes31QibsMbP1Rp6DZowMoib2sFTcg4IPJ0Tw/0?wx_fmt=png
+ 将该系列缩小为5分钟,就是五分钟采样一次，并对其值进行求和：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1iavQFYib0jicibvY9xaEFwdb8q0l44k9R59h30MkFrUO6jzGnZxmUxwr6w/0?wx_fmt=png
+注：产生5个数的时间序列，偏移量为D：Day，日期
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ib8OFeFUFkolymsfNMDazjC9wJeK6Fp3q6ZDR3lCxiaGRsltjyfhPOKg/0?wx_fmt=png
+注：将产生的日期作为索引，产生日起数量（5个）的标准正态分布的数值
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1GLMxNqTCcelOoOUPnvfTD5s4MGQiajia2ghJgXgRxzZJjTFcichwx5HgQ/0?wx_fmt=png
+转换成其他时区：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic19W323yHnvVjGNwVPUmUodpR1qXBValOlNC7epMrzYUJY5KXveE7ISQ/0?wx_fmt=png
+在时间跨度表示之间转换：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1z0crra1lEKzJs7nPFcmuucUHxKdpgabFF1YoTtsjFB7otzGWJg9Z4w/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1JicXFom1vSR2ra9vSBm4bAuUoLriayXmbGcTyRshh8599W5104CTg7aA/0?wx_fmt=png
+注：将时间日期索引转化为时间阶段索引（这里是用月份表示）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ZH6mLLYiboFXhq0cdvZEuRwiaSzcwm7hxaFcwqv2zGBPmUyls5enbGdA/0?wx_fmt=png
+注：用月份的初始日期表示
+ 自版本0.15以来，pandas可以在DataFrame中包含分类数据。 有关完整文档，请参阅分类介绍：http://pandas.pydata.org/pandas-docs/version/0.20/categorical.html#categorical
+和API文档：http://pandas.pydata.org/pandas-docs/version/0.20/api.html#api-categorical
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibvqRHRHgIsia9ybjpXqjO03E3Jg1aOCougjp85eJOVQsu7olT2dyXGQ/0?wx_fmt=png
+将原始成绩转换为分类数据类型：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1bGErpMXKpnvXrQ2SAwib8YmBYrLFRvAEJVVjicOWZAysWSlIF2UbPEvw/0?wx_fmt=png
+注：显示成绩可以分为三类
+ 将类别重命名为更有意义的名称
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1IqbrbsGANBlCviatHO8FmcqaB2RNibIfc12YEHZTKfF7RM1WDvicGNYaQ/0?wx_fmt=png
+注：显示的就是分类信息了
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic19BicN6Ht6icKOEG8bc4rmsvPH0nmdUibjp9ssDgUoVylnkaeYVnHXyRwg/0?wx_fmt=png
+注：显示的就是分类信息了
+ 排序是按类别中的顺序排列的，而不是词法顺序
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic12GveuvlEegIQjP6IQGjZic0Mj0qYYFlmcjvD8nBcLgibPDiarSy4ZNTqQ/0?wx_fmt=png
+注：根据成绩排序
+ 按分类列分组还显示空类：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1xiav6hj2y46jkia1mcHfPWnGibmiappibUpPXrdnhgtBGnVOTNLKRsibhpnQ/0?wx_fmt=png
+注：统计分类后每类元素个数
+ 绘图更多用法：http://pandas.pydata.org/pandas-docs/version/0.20/visualization.html#visualization
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1uSTxrYa6cbvXeXc7WFiaqu05A2BOrBECTlJJE8MIsa3smlbmgicFIjMA/0?wx_fmt=png
+注：绘制时间序列图形，<span style="color: #4C4C4C;">ts.cumsum()为累积值，绘图必须使用show()方法才能展现出来图。</span>
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1HRwGL5MlMcsYcdRtC0pwTPue9meB1nRSUkKiaKI28TibZRiaP5mPCOr8g/0?wx_fmt=png
+ 写入csv文件：http://pandas.pydata.org/pandas-docs/version/0.20/io.html#io-store-in-csv
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1rxJxQWiaQnG7r9piaHqoYU5icsFXhJUW9T7lrUFtjkyLu5ia3mAP3vyhfQ/0?wx_fmt=png
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 。。。。。。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1icjibdrOqgHic4RM6sRP42Uv08rtc5fcPicd7vteXgjj4WszjHkevp0znQ/0?wx_fmt=png
+ 读取和写入Excel文件：http://pandas.pydata.org/pandas-docs/version/0.20/io.html#io-excel
+写入Excel：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic125brg3eAJekwnouKPGCTGyexrlpB4NkLibIicxKibOWtYFXEUVaqXc8vA/0?wx_fmt=png
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+。。。。。。 
+ 
+ 
+ 
+ 
+ 
+
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1PJRdFibEjqhMWg4sibTmpDvE5EcFLfpV4aGGJeptErvGE8ClScg6vg4A/0?wx_fmt=png
+ 如果你操作时遇到类似这种问题：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1Ifoom2DJ0x9IBB4jOcCBot74gfMm7BVSr5H0onwndHmkibjUGzkia1tQ/0?wx_fmt=png
+你可以看看这里的解释寻求帮助：http://pandas.pydata.org/pandas-docs/version/0.20/basics.html#basics-compare
+也可以参考这里：http://pandas.pydata.org/pandas-docs/version/0.20/gotchas.html#gotchas
+花了一天半时间把10分钟入门pandas官方文档解读了一下，大家有兴趣可以深入了解官方文档的内容，或者用到某部分再去查文档也是很ok的，哈哈。
+感谢你的阅读~

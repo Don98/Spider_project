@@ -1,0 +1,9 @@
+Python从零开始系列连载（12）——Python特色数据类型（元组）（下）               http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgoKl27yunaLkTlpFiaW0uXIUibwbWl3K7u5vRAOC7L2267UBgSO8afyzA/0?wx_fmt=gif
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgdMSpWbibYsLQj9KppWZWajfzLcgDMwBryhc9mSebl3bHULQHkEbMHwA/0?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgvG9WuIzpc8pAQiaa3rqVthQKjurGKhia8lkaUz0HMfJoYdoaoWIiaicYfg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgwyiaD8yYqZZNLdBgWwvw2auQzxjicu8c9ia3RNR0b89iaVRia3TkX2roXuw/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHg7t6BuaK8wSUqdiaZmVueVzzE7L1KiaBcZ2usOUvnm9upQXQEshrvxayA/0?wx_fmt=png
+     元组解包   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHglwZc2TlEN0yu5O3XZTBYfytLC5xXOB6WpMwVGakANDmbXgictazR1xg/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgWLZS9nZVibUJvP6Xr23T17gtyr9ZibR8nLdLekogo0wCp5CU7ib8tOXFQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuuwZbSI7bibp1Qic5osia9xHgx9UWmkKsHMTzia3TGNWYiaRZJ4OXUYJ1jC1ymflGhmUEiamam7SjYdMlw/0?wx_fmt=png
+         现在还坚持再看连载学习的你们真的很棒棒！ 

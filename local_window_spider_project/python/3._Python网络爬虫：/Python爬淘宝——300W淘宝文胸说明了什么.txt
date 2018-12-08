@@ -1,0 +1,6 @@
+b'Python\xe7\x88\xac\xe6\xb7\x98\xe5\xae\x9d\xe2\x80\x94\xe2\x80\x94300W\xe6\xb7\x98\xe5\xae\x9d\xe6\x96\x87\xe8\x83\xb8\xe8\xaf\xb4\xe6\x98\x8e\xe4\xba\x86\xe4\xbb\x80\xe4\xb9\x88' http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsLmWkyWia8VUffBjfXy03rIns5s8jTq7YZW0ESzVIUntlhp476biaOzt18FhLkGusrbkXRUogcRrLw/0?wx_fmt=png
+ 测试环境：腾讯云主机一台
+操作系统：ubuntu-14.04
+数据库： mongodb
+      

@@ -1,0 +1,10 @@
+b'Python\xef\xbc\x9a\xe7\xa7\x92\xe6\x8a\xa2\xe8\x84\x9a\xe6\x9c\xac\xef\xbc\x88\xe7\x81\xab\xe8\xbd\xa6\xe7\xa5\xa8\xe3\x80\x81\xe7\xa7\x92\xe6\x9d\x80\xe3\x80\x81\xe7\xba\xa2\xe5\x8c\x85\xef\xbc\x89' http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuwkBZWSHGTqyHzibERgtBna0j9acdIUjfRR4l57QA5aiblcVS3CWGMzUvHECzyShygPx7jI5KuO3oQ/0?wx_fmt=gif
+最近在写风控方面的内容，涉及到一些怎么设置网站的用户登陆安全、投资安全、运营安全方面的内容时，正好想起来去年的“月饼门”事件。对于码农来说，写个程序实现脚本抢标，这样的事情其实很简单。正好借着最近Python折腾代码的机会，整理下怎么通过Python来实现抢火车票、红包这些。
+浏览器驱动ChromeDriver
+（http://chromedriver.storage.googleapis.com/index.html?path=2.20/）
+Python 3.5
+Splinter 执行：pip install splinter安装Splinter即可
+&gt;&gt;&gt; from splinter.browser import Browser
+&gt;&gt;&gt; xx = Browser(driver_name="chrome")
+&gt;&gt;&gt; xx.visit("http://www.zhihu.com/")
+1. 输入：xx.fill("wd", "dataman")即可在搜索栏搜索dataman。

@@ -1,0 +1,27 @@
+b'Python\xe5\x85\xa5\xe9\x97\xa8\xe4\xb9\x8b\xe7\x94\x9f\xe6\x88\x90\xe6\xb5\xb7\xe8\xb4\xbc\xe7\x8e\x8b\xe4\xba\x91\xe5\x9b\xbe'本教程适合于有一定编程经验的同学，使用Python3，在Jupyter进行调试开发。涉及的Python基础包括：
+变量和函数的定义和使用
+列表和字典等数据结构的使用
+条件和循环语句，if、for等
+模块的导入和使用，import语法
+需要安装以下依赖库：
+jupyter - 交互式笔记本
+matplotlib - Python2D绘图库
+jieba － Python中文分词组件
+pillow - Python图像处理库
+wordcloud － Python词云库
+从海贼王的歌词中提取出关键词，然后生成乔巴形状的云图，最后效果如下：
+http://mmbiz.qpic.cn/mmbiz_png/D6uFCrqdrMp8XtQyB0PdVp9mzYxUiaoqk0PXNnHIzfCbibr3VTLrFKNJ1XGBV3u6Tk6yA11jpiaDVRX0pc3EtTtzA/640?
+a. 事先我已准备好15首海贼王的歌词文本文件, 放在本地的data目录下。
+In
+[1]:
+ In
+[2]:
+  In
+[4]:
+http://mmbiz.qpic.cn/mmbiz_png/D6uFCrqdrMp8XtQyB0PdVp9mzYxUiaoqkgGTicvXg61JkP3EEB6Pdxic3Cv7DufMzcDBpokDlm7qrJjDVqMmCVVXg/640?
+http://mmbiz.qpic.cn/mmbiz_png/D6uFCrqdrMp8XtQyB0PdVp9mzYxUiaoqka8icMxaOdHMWFG4vkIKYQBKRrkwIpBVic3dXsSUpibQ6SZVZ6jgV5Oj3w/640?
+http://mmbiz.qpic.cn/mmbiz_png/yqVAqoZvDibGpfYS2cC4YzbozH31oekibOpLFWEQicW5ufOeKMJQ9qoh8sCyjrX9k8Wm9ibic0quI4XDdTGKd0OjKBA/0
+<span style="color: #FF0000;">说到做到，新福利来啦：</span><span style="color: #FF0000;">快来听课~今晚不见不散~</span>关注公众号，在公众号菜单点击"<span style="color: #FF0000;">免费听课</span>"，即可参与活动免费听19.9元收费课程，当然，壕大大可以直接购买听课啦。壕大大入口：https://edu.hellobi.com/course/186，点击文末<span style="color: #FF0000;">本次主打课程：</span>http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC6NkTeTjOdFBhxdSdSWicfCSric32MZLYibBWribSUWLzFIZscSpk2ibygz50ehxc16HodQPG7D5IfZg/640
+课程名称：自然语言处理之-基于深度学习技术的聊天机器人实现
+课程背景：NLP是一个很大的领域，自成一系，本次课程通过一个企业级案例（聊天机器人）带领大家从了解项目场景开始一步步搭建，最后演示聊天机器人实例。通过本课程的学习，让你一举打开NLP的大门。
+主讲老师：

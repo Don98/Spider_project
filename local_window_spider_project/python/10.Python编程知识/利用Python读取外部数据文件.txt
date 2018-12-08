@@ -1,0 +1,36 @@
+b'\xe5\x88\xa9\xe7\x94\xa8Python\xe8\xaf\xbb\xe5\x8f\x96\xe5\xa4\x96\xe9\x83\xa8\xe6\x95\xb0\xe6\x8d\xae\xe6\x96\x87\xe4\xbb\xb6' 在本期的Python学习中，我们将针对Python如何获取外部数据做一个详细的介绍，从中我们将会学习以下4个方面的数据获取：
+1、读取文本文件的数据，如txt文件和csv文件
+2、读取电子表格文件，如Excel文件
+3、读取统计软件生成的数据文件，如SAS数据集、SPSS数据集等
+4、读取数据库数据，如MySQL数据、SQL Server数据
+   大家都知道，Python中pandas模块是专门用来数据分析的一个强大工具，下面我们就来介绍pandas是如何读取外部数据的。
+      https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5HiabclxBd8NyVcDiaI5nMlEAW8mBN3IdEVdicONlr6RrVcHhbjun4RqsdsX2A/640?wx_fmt=png
+1）当原始文件txt或csv的数据不是uft8格式时，需要另存为utf8格式编码；
+2）如果原始的数据文件就是uft8格式，为了正常读入，需要将read_csv函数的参数encoding设置为utf-8
+      https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5Hiabcop4XL0bIAoWgKYtXHeelN8mpTDL4aCx8YdIvoBpcMdC0qh08sNvDkw/640?wx_fmt=png
+很顺利，txt文本文件数据就这样进入了Python的口袋里了。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+   csv文本文件是非常常用的一种数据存储格式，而且其存储量要比Excel电子表格大很多，下面我们就来看看如何利用Python读取csv格式的数据文件：
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5Hiabc3iapWeicSzKwQQV7N2TeeyiaNq1vgqzicrKc7m1PibIpyel3LiciaRPJ6UAqg/640?wx_fmt=png
+如果你善于总结的话，你会发现，txt文件和csv文件均可以通过pandas模块中的read_csv函数进行读取。该函数有20多个参数，类似于R中的read.table函数，如果需要查看具体的参数详情，可以查看帮助文档：help(pandas.read_csv)。
+   这里所说的电子表格就是Excel表格，可以是xls的电子表格，也可以是xlsx的电子表格。在日常工作中，很多数据都是存放在Excel电子表格中的，如果我们需要使用Python对其进行分析或处理的话，第一步就是如何读取Excel数据。下面我们来看看如果读取Excel数据集：
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5HiabcyicMkWQ4PWFThlWK3mY7fyWcU0j8o8DhQicP3ZUcP0exqiagIR4VG44WA/640?wx_fmt=png
+   往往在集成数据源的时候，可能会让你遇到一种苦恼，那就是你的电脑里存放了很多统计软件自带的或生成的数据集，诸如R语言数据集、SAS数据集、SPSS数据集等。那么问题来了，如果你电脑里都装了这些软件的话，这些数据集你自然可以看见，并可以方便的转换为文本文件或电子表格文件，如果你的电脑里没有安装SAS或SPSS这样大型的统计分析软件的话，那么你该如何查看这些数据集呢？请放心，Python很万能，它可以读取很多种统计软件的数据集，下面我们介绍几种Python读取统计数据集的方法：
+   SAS数据集的读取可以使用pandas模块中的read_sas函数，我们不妨试试该函数读取SAS数据集。下图是使用SAS打开的数据集，如果你的电脑中没有安装SAS，那你也可以通过Python实现数据的读取。
+ https://mmbiz.qpic.cn/mmbiz_jpg/yjFUicxiaClgWjcrgib9OfYTMFr65t5Hiabc4CCDGGyAJc3t9bZXScX1FAhAuVkMVEibxicQC60vPHRRYS8WXY0mmIHw/640?wx_fmt=jpeg
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVsRH7Lb1yvP83cBh1zeldYdLVJdaUicV2WThiapiagxcGZBI1DXHBIc8SXGUC5XWy4joiaPpdM6JtPog/640?wx_fmt=png
+   读取SPSS数据就稍微复杂一点，自己测试了好多次，查了好多资料，功夫不负有心人啊，最终还是搞定了。关于读取SPSS数据文件，需要为您的Python安装savReaderWriter模块，该模块可以到如下链接进行下载并安装：https://pypi.python.org/pypi/savReaderWriter/3.4.2。
+      https://mmbiz.qpic.cn/mmbiz_jpg/yjFUicxiaClgWjcrgib9OfYTMFr65t5HiabcbKKMB8CT5ib2bHiaehO2wtsKwRw3LO9WwA09k1e5o32PKaxKf1fCVK7A/640?wx_fmt=jpeg
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVsRH7Lb1yvP83cBh1zeldYBnNxVVJUTTE3joiabrrl796RTCftrwYRJVyJLtP1sLYwBnN7lAIJsCA/640?wx_fmt=png
+       企业中更多的数据还是存放在诸如MySQL、SQL Server、DB2等数据库中，为了能够使Python连接到数据库中，科学家专门设计了Python DB API的接口。我们仍然通过例子来说明Python是如何实现数据库的连接与操作的。
+   MySQLdb模块是一个连接Python与MySQL的中间桥梁，但目前只能在Python2.x中运行，但不意味着Python3就无法连接MySQL数据库。这里向大家介绍一个非常灵活而强大的模块，那就是pymysql模块。我比较喜欢他的原因是，该模块可以伪装成MySQLdb模块，具体看下面的例子：
+     使用Connection函数联通Python与MySQL
+       使用conn的游标方法(cursor)，目的是为接下来的数据库操作做铺垫。
+  执行SQL语句
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5Hiabchicjbk5jIewKKPetOLibXDiao2g2b9m6o2S9432pTqDLwyCMHjicFpeOvA/640?wx_fmt=png
+我们发现<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">data中存储的是元组格式</strong></span>的数据集，我们之前讲到，构造DataFrame数据结构只能通过数组、数据框、字典、列表等方式构建，但这里是元组格式的数据，该如何处理呢？很简单，只需使用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">list函数</strong></span>就可以快速的将元组数据转换为列表格式的数据。
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5Hiabcsrkib8dLBSnxx9Lxq4NHCyawbXqW5wqicSlPGnyaKITJicZrNicfklOBGQ/640?wx_fmt=png
+下面我们就是要pandas模块中的DataFrame函数将上面的data列表转换为Python的数据框格式：<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWjcrgib9OfYTMFr65t5HiabcNBon41OHWKeAnvLiaClh4HKRheiapxXRLKlW9lrpiag6T8icYwHvrIJXFA/640?wx_fmt=png
+最后千万千万注意的是，当你的数据读取完之后一定要记得关闭游标和连接，因为不关闭会导致电脑资源的浪费。
+     使用Python连接SQL Server数据库，我们这里推荐使用pymssql模块，该模块的语法与上面讲的pymysql是一致的，这里就不一一讲解每一步的含义了，直接上代码：
+                 

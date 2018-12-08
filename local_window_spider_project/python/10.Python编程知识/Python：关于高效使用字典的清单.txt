@@ -1,0 +1,19 @@
+b'Python\xef\xbc\x9a\xe5\x85\xb3\xe4\xba\x8e\xe9\xab\x98\xe6\x95\x88\xe4\xbd\xbf\xe7\x94\xa8\xe5\xad\x97\xe5\x85\xb8\xe7\x9a\x84\xe6\xb8\x85\xe5\x8d\x95' http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvPg3PNibSLeynibqKYAwMaXVab68SAkBdPBzO8s1QNRNaTGGOhnTQlqNA/0?wx_fmt=jpeg
+ 字典（dict）对象是 Python 最常用的数据结构，社区曾有人开玩笑地说：”Python 企图用字典装载整个世界”，字典在 Python 中的重要性不言而喻，这里整理了几个关于高效使用字典的清单，助你代码更加 Pythonic。
+Python之禅中有一条开发哲学是：
+There should be one— and preferably only one —obvious way to do it.
+尽量找一种，最好是唯一种显而易见的解决方案。Python2 中判断某个 key 是否存在字典中可使用
+<code style="margin-right: 0.15em;margin-left: 0.15em;padding-right: 0.3em;padding-left: 0.3em;max-width: 100%;font-size: 0.85em;border-width: 1px;border-style: solid;border-color: rgb(234, 234, 234);-moz-border-top-colors: none;-moz-border-right-colors: none;-moz-border-bottom-colors: none;-moz-border-left-colors: none;background-color: rgb(248, 248, 248);border-radius: 3px;display: inline;">has_key</code>
+方法，另外一种方式是使用
+<code style="margin-right: 0.15em;margin-left: 0.15em;padding-right: 0.3em;padding-left: 0.3em;max-width: 100%;font-size: 0.85em;border-width: 1px;border-style: solid;border-color: rgb(234, 234, 234);-moz-border-top-colors: none;-moz-border-right-colors: none;-moz-border-bottom-colors: none;-moz-border-left-colors: none;background-color: rgb(248, 248, 248);border-radius: 3px;display: inline;">in</code>
+关键字。但是强烈推荐使用后者，因为 in 的处理速度更快，另外一个原因是 has_key 这个方法在 Python3 被移除了，要想同时兼容py2和py3两个版本的代码，用 in 是最好的选择。
+bad
+  Simple is better than complex.<br style="max-width: 100%;"  />Flat is better than nested.
+好的代码应该是简单易懂的，扁平的代码结构更加可读。我们可以使用 get 方法来代替 if … else
+bad
+   bad
+  如果 key 存在于字典中，那么直接返回对应的值，等效于 get 方法
+如果 key 不存在字典中，则会用 setdefault 中的第二个参数作为该 key 的值，再返回该值。
+如果不希望 d[x] 在 x 不存在时报错，除了在获取元素时使用 get 方法之外，另外一种方式是用 collections 模块中的 defaultdict，在初始化字典的时候指定一个函数，其实 defaultdit 是 dict 的子类。
+      推导式是个绝妙的东西，列表推导式一出，map、filter等函数黯然失色，自 Python2.7以后的版本，此特性扩展到了字典和集合身上，构建字典对象无需调用 dict 方法。
+bad

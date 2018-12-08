@@ -1,0 +1,14 @@
+Python从零开始系列连载（14）——Python特色数据类型（字典）（下）               （划重点：这篇我不发表情，我是认真的！） 1.dict.keys() http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVOrARwvu6zXUI0LsaNQlqsRs8RTM8lV8egWJuDMXjrKu0MVLHWQVBLQ/0?wx_fmt=png
+2.dict.values() http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVMRDfXpRwtOrATibiaTnQ0sJdic4Bj0bUxtky7Bjx6tHDAxtvPc07Nq2Aw/0?wx_fmt=png
+3.dict.items() http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVZia8RE3zuFwlbhzRjUoz5pye89tKXvSoT5l9ag8NElAlyqxKAvdMPfA/0?wx_fmt=png
+4.dict.clear() http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVU6fEacBhZ5zWb82U0nDMYsicEC2j1YRsK9uwt5Mou0MZ1cQQCTlBWtw/0?wx_fmt=png
+5.dict.get(key , default=None) http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV6ywjPUWrgVeIr12U6ovTJczWu9tTOb6hkvshbjvKYQZABgicg1XKH5Q/0?wx_fmt=png
+6.dict.pop(key [,default]) http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV6DSbmnv69CqCYuTJYzeXP5Um4T0IR3kvjhafvIRxzDOiaaAHHkgJvicQ/0?wx_fmt=png
+7.dict.setdefault(key , default = None) http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV1IA2g9gN74snQ2nrByfeZdN1yiaJvC6EHxH9gibAE22uI8DNEuBxB7icw/0?wx_fmt=png
+8.dict.update(adict)&nbsp; http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVKfj0ONmhn95gibEIvSiasfrTb9Lj5VEGcu8RibjEE2RHYmiaqhc1ia6Eia5g/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeV7Ikv1vKDHkauLsUbrrTeDK7Fpco48g5gGX0F8m4TjhbcyUIibMwALWw/0?wx_fmt=png
+（重点）字典的复制：  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVEKlsqibSicVCDZeXkvZUqzraxLialnlay9bicdc2uIRVXy2aMzFhFBOBdQ/0?wx_fmt=png
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVF3aQzmmRo7QTe75m8x8S7mWicPQO5ibjRcU1prsjQvQvvx0ghlyeBC2w/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsU5icbG0CRykCBQUYeChPeVoCpyalRk4nEBicJzQ4gsme663icgwT9e5uMDeLZbqXsOJfe6iaCcvLJSg/0?wx_fmt=png
+          现在还坚持再看连载学习的你们真的很棒棒！入门部分已经学完大部分啦！加油</strong>
+ （划重点：这篇我不发表情，我是认真的！）首尾呼应的修辞手法

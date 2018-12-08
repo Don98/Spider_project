@@ -1,0 +1,3 @@
+b'\xe4\xb8\x80\xe4\xb8\xaa\xe2\x80\x9c\xe7\x89\x9b\xe9\x80\xbc\xe2\x80\x9d\xe7\x9a\x84 Python \xe5\x91\xbd\xe4\xbb\xa4\xe8\xa1\x8c\xe8\xa7\xa3\xe6\x9e\x90\xe5\xba\x93'https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMmV0VGGBfg5eJqTSYdF4B7D1ia4p2EmhPxhXicaZqnwLoTONSib0pxLGqEUibngXm9ZcVuTFKVPcRQk5Q/640?wx_fmt=jpeg
+ 在 Python 中，命令行解析库有非常多的选择方案，系统自带的 模块有 argparse，有 Flask 作者写的 click，但是 argparse 使用起来啰嗦， 要经历解析器初始化、参数定义、解析一套流程。例如：
+       

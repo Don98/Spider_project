@@ -1,0 +1,9 @@
+b'\xe3\x80\x90\xe5\xae\x9e\xe6\x88\x98\xe6\xa1\x88\xe4\xbe\x8b+\xe4\xbb\xa3\xe7\xa0\x81\xe3\x80\x91\xe6\xa2\xaf\xe5\xba\xa6\xe4\xb8\x8b\xe9\x99\x8d\xe6\xb3\x95\xe6\xb1\x82\xe8\xa7\xa3\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92\xe7\x9a\x84python\xe5\xae\x9e\xe7\x8e\xb0\xe5\x8f\x8a\xe5\x85\xb6\xe7\xbb\x93\xe6\x9e\x9c\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x88\xe4\xb8\x80\xef\xbc\x89' 一、梯度下降法与回归分析https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmSoTdsuC7dn8V5LN5SqyZ5cLqdAjUoslNOMoFCHBp25T8EziaZAD0EqvA/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmSSyDgqQYEFmEWu4p6j3RsuNjzObGkX15Xhmn1kwJDworwJNiczljaWBw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmSFt2w99rbSNGaV62MwpdQeC22vmhAJ9ibaLPrMPJ3hk1kG0cs2dsleVQ/640?wx_fmt=png
+<span style=""><br  /></span><span style="font-size: 14px;letter-spacing: 1px;color: rgb(0, 128, 255);">三、数据处理——构建X、Y变量</span><span style=""><br  /></span>    https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmS93F0gVTF6MtKszfyjLyicgm0xmLJfjMS3mibznbISibNF2gyXRayS6QSQ/640?wx_fmt=png
+ 四、先用最小二乘法求解回归并计算损失函数 https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmSoqqC7zhLv0NCVc42IfTqFTLEIaJoo3oO9LQia1c5P6I4voBbTibH6neA/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttslhtvIRjaKPCLiaQkhdwWmSmqMJYRBd4COgj3m5R9Vt928JiaszSk8huzTuI4yCwlAbibEN0UEJbhNQ/640?wx_fmt=png
+   参考文献  http://www.johnwittenauer.net/machine-learning-exercises-in-python-part-1/** 
+</span>
+     

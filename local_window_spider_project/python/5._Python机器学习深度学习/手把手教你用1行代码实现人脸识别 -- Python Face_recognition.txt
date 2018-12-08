@@ -1,0 +1,6 @@
+b'\xe6\x89\x8b\xe6\x8a\x8a\xe6\x89\x8b\xe6\x95\x99\xe4\xbd\xa0\xe7\x94\xa81\xe8\xa1\x8c\xe4\xbb\xa3\xe7\xa0\x81\xe5\xae\x9e\xe7\x8e\xb0\xe4\xba\xba\xe8\x84\xb8\xe8\xaf\x86\xe5\x88\xab -- Python Face_recognition'环境要求：Ubuntu17.10</span>
+Python 2.7.14</span>
+环境搭建：       http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsAmw7JlxQibny4ib3n0UMOyicicuCK9x3mkb2UYSUcR4YbrFjrjBcaRtYrLZPHh4oBfwnRFicvAungibCA/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsAmw7JlxQibny4ib3n0UMOyicFHZVRLqPSjBTWQcuibcgsXsbaFUNT25PVdhIIzJLEWYJDoBibEcSarHQ/0?wx_fmt=jpeg
+     http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsAmw7JlxQibny4ib3n0UMOyicicuKicic1kOFoJW656xrFJq4GLlib96M9Be9PcVh05IFxBQFicmFkKdxSFw/0?wx_fmt=jpeg
+    

@@ -1,0 +1,30 @@
+b'\xe8\x87\xaa\xe6\x88\x91\xe4\xbb\xa3\xe7\xa0\x81\xe6\x8f\x90\xe5\x8d\x87\xe4\xb9\x8bK\xe8\xbf\x91\xe9\x82\xbb\xe7\xae\x97\xe6\xb3\x95'专注R、Python数据分析挖掘、可视化、机器学习等
+
+
+
+
+
+
+
+
+在机器学习和数据挖掘常用的方法中，常规的建模思路是输入给定的训练数据集（类别标签已知），通过一系列的训练建立预测模型，通过将需要预测的数据输入到训练完成的模型中得到预测结果。然而，并非所有的方法都包含了训练过程，K近邻算法就是其中之一。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM609UjFrC4HXpnL4XLGibaD1UiagH0maicQdQafVkh5gic6sKCG7hajxvZo1Q/0?wx_fmt=png
+
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM604CfzOfW1P1Uvaqq9HoqQ2ZK3K4rB36HPsOX0muvp1hFqGI4N8VgCVQ/0?wx_fmt=png
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM604dLZznSgueDuhXfwNlwwkA9GSb4Yo09M4ZRxW1oQmcZlctIGTxcNvg/0?wx_fmt=png
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM60WXO6viboL1swXf8VjdlFwWicmT5RnYm0B1iapw8GB0UicWO5lQCol9ia70g/0?wx_fmt=png
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM60gj2s5zLJiaoda52mwUOYl9NicZ5gicQTvm5kXz8KzjBKOuIKZkIl4jrGg/0?wx_fmt=png
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrialP3sZaJeDqMI3bSERM600YmhCJWicVeIXEiclNK6lc8iacJjwJG0aWTvb3UGN8ryMiakC7wStTrCKA/0?wx_fmt=png
+
+
+
+
+        http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrialP3sZaJeDqMI3bSERM60OCJzv3CrulUqMLqc1pdPrnCRsCianDmd5QveXlPynSMQv1gHIwDNXXg/0?wx_fmt=jpeg
+
+ http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrialP3sZaJeDqMI3bSERM60HSOEJvJHcH7kJ8WnGrcyXV0XE63p6PfGgkTgbMcKicPtoeS4kL4tHhA/0?wx_fmt=jpeg

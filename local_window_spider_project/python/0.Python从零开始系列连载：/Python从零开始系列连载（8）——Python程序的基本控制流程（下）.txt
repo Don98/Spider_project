@@ -1,0 +1,128 @@
+Python从零开始系列连载（8）——Python程序的基本控制流程（下）前文传送门：
+       循环结构，很好理解，就是一直做某件事情，直到满足某种条件
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ZvoAY3WsuYtWGr4Eevibx5bXKbxvGJS2g5nP9H0sxZg7VF1howJv4Mw/0?wx_fmt=png
+ 就像玩游戏，做任务，觉醒20个式神，当完成之后，循环就结束啦
+  我们举个栗子看看：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6D37ibRq4b7Yy991YLUia7z7Uat8Omc77Rr7P5YVKXJ5XRKwsywNWlKUA/0?wx_fmt=png
+ 这是1~10求和，使用while循环
+首先，count作为计数器，每次加1，初值设为1
+sum作为累加器，初值设为0，每次加上count
+然后循环的终止条件是count&lt;11 ,也就是count等于10 是最后一次循环
+每次循环打印sum和count的信息
+ 这里使用了之前讲到的 += 
+和 print多个值的知识点
+ 在上一个循环中，当循环条件count&lt;11不再满足时（此时count = 11）
+就不会继续循环了
+ 但是有种循环是会不断进行的，不会停止!
+ 我们想想，当循环条件一直满足，是不是就死循环了
+ 死循环中的‘死’指的不是循环死掉或者结束，指的是陷入了不断地循环之中，想被<strong style="box-sizing: border-box;">捆绑固定<span style="box-sizing: border-box;color: rgb(227, 55, 55);">死</span></strong>这种
+ 捆绑，你懂的【坏笑
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6xHMKwpFa5ibfmtbiaZicG7gfSubCSsjOBC9XLEtTLSJ2NeWiaWce1cl0aA/0?wx_fmt=png
+ 举个栗子：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ohhcT1a6F8OszNiaT54wUMW02rp4undKFhPVfeIxSGrWHOEhNPr0dmA/0?wx_fmt=png
+ 大家注意，这里使用True作为真的条件
+所以一直打印内容
+ 大家注意到那个红圈的星号了么
+ 指的是程序还在执行（有时是程序卡死）
+ 怎么让他停止呢？
+ 还记得刚开学时候讲的下图么：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6QiakicUUW2DJOAKRkmeTBlgrO6Lxc0sGEib74f7rvA4bnnC4C4sLQia3pQ/0?wx_fmt=png
+ 按下去后等一会就好了，实在不行就restart kernel 
+或者重启jupyter
+ 当然，死循环的条件改为任何真的值都行，例如'a' 
+ 或者是 1 都可以
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x66NOCLxtK2k6PRevF8egDCQGNUdm1uUqribwrwK7ZLxRZyQxoMZpO0rA/0?wx_fmt=png
+ 除了while循环，还可以用for循环
+ for循环的格式：
+ for 循环变量 in 对象：
+循环语句
+ 这里的对象可以是我们学过的字符串，也可以是我们将要学的列表，元组，字典等
+ 我们举个栗子：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6np6xJlcKIwxa30iak5LuX5SoyC7MdCicjabIINCBicblCoNeD6aZEUg0w/0?wx_fmt=png
+ 这里的变量是 i ，我们习惯用 i ，当然，你换成 iphonex 也是可以的
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6VLQSWdoFxicYicfOrPxpY0jfYCKp89qLzEic1YwRfeZCnjib7ZUqssqtAQ/0?wx_fmt=png
+ 这里相当于去循环'Python'这个字符串里的每位字符
+然后依次打印
+ for循环经常和range（）函数配合使用
+ range（）函数的用法：
+ range（起始值，终止值，步长）
+ 这里的起始值就是起点的意思
+   举个栗子：
+我站在0点位置，一步可以向前跨2m，则下一次我就在2m处了
+ 小明：老湿，你怎么能一次跨两米？！震惊！
+ 小明啊，你是不是羡慕我大长腿
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6QCnxaEncz1N1HfdUFribOhH26icibicphia4cQUZX4yKn0v0OiazKYibH8hhQ/0?wx_fmt=png
+ 好了，那下次的循环位置就是2m处了，然后是4m，以此类推。。。
+ 好了，我们来看看具体程序：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6aSIdficqcMibJYySGhnFcn0NFo3OUbyl7Fxug8XUiawHic6N3mVxDV0VNA/0?wx_fmt=png
+ 注意：这里的循环结束位置10并没有打印出来
+也就是刚才说的range（）函数的结束位置的值是取不到的
+ 循环语句嵌套指的是，在一个程序中，存在这多个循环，而且这多个循环是相互嵌套的
+还记得分支语句那节我们说的分支语句的嵌套么
+还记得俄罗斯套娃么
+ 形式是一样的
+ 我们来玩一下学编程很喜欢打印输出的九九乘法表
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6s34PialneicXdHeIcicEDLicZ3l1w6zkUCzPiarJjXUQG2zyFkybLgiapVJw/0?wx_fmt=png
+ 我们尝试用派森实现一下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6NREEEfnDqEmXZv6qjiax2mrxXye2wDqhM4KpcfqXT7o62ZyffDeicAfw/0?wx_fmt=png
+ 内容结果是对了，但是这个格式不是我们熟悉的三角形的
+ 我们调一下格式,让它每次输出print时候不要自动换行，我在print（）函数里加了个参数end=''：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6l4YpHffiaIqrddMBD94yHXY5sACiaw6YRSJcecR0vPV9owU2SnDaKVSQ/0?wx_fmt=png
+ 但是我们见到的是 i 结束一轮，应该换行的
+ 外面 i 的循环叫做外循环，里面的 j 循环叫做内循环
+ 内循环循环一轮，外循环才循环一次
+ 所以大家试一下的时候发现这个执行速度还是不快的
+ 所以在Python中，能不用双层循环就不用，会拖慢执行速度
+ 我们继续调整一下格式，在每执行一次外循环之前，换一行：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6Io7ZafhxCj1aIiatsV7gUXGhQZpIicCcpp1VZHtmTUBb7A6Sn2Piaw5mQ/0?wx_fmt=png
+ 看上去样子已经很ok了，细心观察发现，运算式子之间靠的太近，我们使用空格隔开：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x66yE0W3XqQicblQhNlGwuBG2rh1CaLMDXsVficfKLZ3q8daWmicicGKkcpQ/0?wx_fmt=png
+ 终于成功打印啦~
+  循环的中断就是，比如你在做游戏任务，要击杀20个河妖，然后你就循环在击杀，眼看着就要完成任务了！
+ 突然！你的班主任无声无息出现在窗口
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6oktLibGdRm82eOv5LMjbjtaEmfJcqtN0jecia4f5AIKHpfKR39zB35rA/0?wx_fmt=png
+ 然后，你懂的，可能下次年级大会就要被警告处分了【这是后话了】
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6ru3rPBXUh4cuB5KDko1U3WoPaPKLQDl3JKVlSEaMCxgXcfUVkdtZhQ/0?wx_fmt=png
+ 当前的影响就是，你的手机被没收了，游戏没法打了，河妖还没循环杀满20个，循环提前结束了
+ 咳咳，小明，你低着头双手在有所动作，是不是在刷怪升级！！！
+ 当然，还有其他可能，毕竟小明前段时间被我发现在看《那些年，我们一起追的女孩的》
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x60fN4aV50UIiciacdhcXpomzBllGlONKlIURS3eyqrQYZxSEFQTzdkw5Q/0?wx_fmt=png
+ 好了，我们今天讲的循环的中断就是提前结束了循环【循环的终止条件还没达到】
+ 循环结束有break和continue两种
+  break是中断当前循环，跳出本次循环
+跳出，你懂么，就是和本次循环没关系啦
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x614ZaTeibUWyJokbTgyiaRVvRczicqyvpK2m2qCIPHca2Rlz3b3ZSJOEow/0?wx_fmt=png
+ 上面是一个用break结束死循环的例子
+ continue结束本次循环，继续进行下一次循环
+ 这就像，抓娃娃，在地铁站，商场经常有抓娃娃的机器
+我也是非常喜欢的
+我就抓到过一只熊本熊和一只小火龙
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6wqWrSTlHNljQAic81ibYou0AE0AYB8olhHNWd9rgyenmMUicW2wYEh8Gg/0?wx_fmt=png
+ 抓过的人都知道，每次都是有几十秒的计时，当你投了几个硬币或者扫码支付了几次
+这几次就是循环次数
+准备大展身手的时候
+你在游戏里目测着，心里做着受力分析
+时间过得很快
+当你没有按去抓的按钮时候，时间到了
+爪子自动抓了下去，本次循环执行结束，没抓到！！！
+
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6xP5viaj5oIa3zdVgibXH2PdWEpnL4WeibeHJjribaSj9srqUEfickseYuvg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6Dq3ibT87tEp6uibfJaMt9JGV1RkAibica4OWLN6KPNX4uicys6rNKNjzKrA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x60LyacuGn2IygwW2qOYDJPU4LxBsibYFqW4Lx5qURHtFSGIWrILqPDNg/0?wx_fmt=png
+ 下一次循环开始，注意，上一次你没有操作，就结束了本次循环开始了下次循环<br style=""  />
+ 这就和continue很相似
+和break不同之处就是，不是结束整个循环，而是结束了这次
+如果抓娃娃，一次没在给定时间操作就让你后面的支付都作废
+那我肯定要砸了机器，把娃娃拿走了
+ 我们通过代码演示一下
+ 每次都会让你输入一个数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6fyPoGIZ7Q7UbU32lbgudll1GBatqsf1bTVRSXic7DDo3X6jseomYT4A/0?wx_fmt=png
+ 我们加入continue：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu164ichpx3PrOBH3EWVo7x6voLUpIOZN8FzCQMHDW8ETl48wdyIGqURNIPkjb61UjYSlRdR8LQSRA/0?wx_fmt=png
+ 注意：这里没有用else，当超过30秒，执行if的内容，然后跳过本次循环，之后的打印也就不输出了
+如果没到30秒，if不执行，最后一句打印会执行
+是不是很巧妙【自我陶醉中】
+  1.统计打印出1~5000中同时能被5和7整除的整数
+2.编写一个最多猜10次数字的游戏，猜测范围1~100，根据input内容提示猜大或者猜小，如果猜中，结束循环
+ 下课

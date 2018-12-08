@@ -1,0 +1,192 @@
+b'\xe8\x85\xbe\xe8\xae\xaf\xe5\x8a\xa8\xe6\xbc\xab\xe7\x88\xac\xe8\x99\xab\xe4\xb8\x8e\xe5\x8a\xa8\xe6\x80\x81\xe9\x9a\x8f\xe6\x9c\xba\xe5\x8a\xa0\xe8\xbd\xbd\xe5\x8f\x8d\xe7\x88\xac\xe7\xa0\xb4\xe8\xa7\xa3\xe6\x8a\x80\xe6\x9c\xaf\xe5\xae\x9e\xe6\x88\x98'http://mmbiz.qpic.cn/mmbiz_gif/cZV2hRpuAPgramZsh4ficWf6uic38nRNRthicun330zQAk0orkicia72wyOx7XL1zByehXJZPaO3aSUibaaMAFYFibCtg/0?
+ 有时，我们想爬取腾讯动漫中的漫画，比如，我们不妨打开腾讯动漫中某一个动漫的网址http://ac.qq.com/Comic/comicInfo/id/539443，如下图所示：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j5Wm97pynJSLIqtENrdhIh0dEohMB7zgiaziculKCiakJjYnyGvvYpAw6WA/0?wx_fmt=png
+然后，我们点击“开始阅读”，出现如下所示界面：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j50AsFZnGn5C9Hsvt90UxX3RQJAnxH8gvuxF51eUEMkakyyMnQbib5picw/0?wx_fmt=png
+可以看到，在此有一副漫画，我们可以按常规方式尝试进行处理，我们查看该网页对应的源代码，可以发现在源代码中并不能找到这副漫画的图片地址，并且，当我们鼠标往下滑动的时候，才会触发加载后续的漫画，所以，我们可以初步断定，这种数据是通过异步加载动态触发出来的。
+按照一贯的解决思路，我们接下来尝试使用抓包分析进行解决这个问题，所以我们打开Fiddler。
+打开Fiddler之后，我们再次打开动漫页拖动触发出相应的漫画，与此同时，Fiddler中会依次出现新触发的资源信息，如下所示：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j5URHiaibVspURVy3H1tbH431FmKZ1gN3Z9GeyPPFabtLEicbxElibZJiazhg/0?wx_fmt=png
+我们依次分析这些网址，并把漫画相关的网址整理复制出来，放到word中，如下所示：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j5nWcD2Zd52Iib09KPOwS4nHk2gyibd2e7wM83m8bYiaJnU3jgd80XuxvHA/0?wx_fmt=png
+通过对比观察，我们可以看到漫画资源的网址规律。
+对应的规律如下：
+ 我们可以看到，其地址中有一段是随机数，这一段网址我们很难通过以往的网址构造的方法构造出来，所以，即使分析出了网址规律也无济于事，因为这个网址的规律中有一部分是随机数，即无规律的字段。
+所以，显然，这种网址动态触发+资源随机存储的反爬策略我们采用以往的反爬攻关技巧很难解决，这一点大家可以先按常规的方法尝试写一遍便会有深刻感触。
+问题的解决办法总是有的，只要我们思考，接下来，我们就为大家讲解这一种反爬策略应该如何攻克解决，今天我们的主要需求与目的是使用Python自动爬取腾讯动漫里面的各个漫画，实现自动加载触发漫画并得到随机地址的功能，以此为例为大家讲解网址动态触发+资源随机存储的反爬策略的攻克方式。
+
+由上面的介绍，我们可以知道，目前问题的难点在于：
+1、漫画图片动态触发，异步加载，无法通过漫画的主网址获得这些各漫画图片的网址，而没有漫画图片的网址，我们无法爬取这些漫画图片。
+2、漫画图片网址中含有随机参数，即使我们通过抓包分析分析出各漫画网址的规律，也无法主动构造出这些漫画图片的地址。
+这些问题其实我们可以解决，先为大家介绍一下解决思路，解决思路如下：
+1、通过PhantomJS（无界面浏览器）自动触发出漫画图片。
+2、通过JS代码实现页面滑动，以自动触发出剩下的多张漫画图片。
+3、触发出漫画图片之后，将漫画地址通过正则表达式提取出来。
+4、交给Urllib或者Scrapy普通爬虫，对相关资源进行自动爬取，在这里我们使用Urllib模块编写相关爬虫。
+在这里稍微解释一下，PhantomJS虽然可以触发相关的数据，因为其本质就是浏览器，但是其效率是比较慢的，所以，一般情况下，我们会将主要爬虫处理部分交给Urllib或者Scrapy等常规爬虫，这样效率高，而如果常规爬虫不能处理的部分，我们可以将这一部分交给PhantomJS等处理，处理完成后交由常规爬虫处理，也就是不同的技术负责不同的部分，整合起来写，这样可以让爬虫的效率更高，并且不影响爬虫的功能。
+
+接下来，我们就来编写实现相关的项目。
+首先，我们导入相关模块：
+ from selenium import webdriver
+import time
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+ 然后，我们需要基于PhantomJS创建一个浏览器，并且设置一下用户代理，否则可能出现界面不兼容的情况，如下所示：
+ dcap = dict(DesiredCapabilities.PHANTOMJS)
+
+
+dcap["phantomjs.page.settings.userAgent"] = ("Mozilla/4.0 (compatible; MSIE 5.5; windows NT)"
+ )
+
+
+browser = webdriver.PhantomJS(desired_capabilities=dcap)
+ 然后，我们通过PhantomJS打开相关动漫网页，将相关动漫图片地址触发出来，如下所示：
+ #打开动漫的第一页
+browser.get("http://ac.qq.com/ComicView/index/id/539443/cid/1")
+#将打开的界面截图保存，方便观察
+a=browser.get_screenshot_as_file("D:/Python35/test.jpg")
+#获取当前页面所有源码（此时包含触发出来的异步加载的资源）
+data=browser.page_source
+#将相关网页源码写入本地文件中，方便分析
+fh=open("D:/Python35/dongman.html","w",encoding="utf-8")
+fh.write(data)
+fh.close()
+ 随后，我们运行相关代码，运行完成后，会发现对应的截图D:/Python35/test.jpg如下所示：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j5IlAN1TAwVjGyOFiahUgfYkqmjMK31ia70hgApdIlTkGyPiaLTk6CDgCAA/0?wx_fmt=png
+可以看到，前面几幅漫画图片成功加载，可是后面的漫画图片却没有加载出来，为什么呢？
+显然后面的漫画图片我们需要触发才能加载，所以我们可以使用JS代码实现自动拖动触发后面的漫画的功能。
+在没有触发后续的漫画图片之前，我们不妨看一下此时的网页源代码，我们在源代码中搜索“ac.tc.qq.com/store_file_download”，即搜索满足漫画图片资源的网址格式的地址，看看源码中有没有，如下所示：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j52rKaM11icQd1Vt2eOjCq4b20ddia53pxXyUyKKUnWJTtN0WjFS25ro0A/0?wx_fmt=png
+可以看到，此时只有4各匹配的网址，说明此时确实没有加载出相关的剩下的动漫图片资源网址。
+接下来，我们可以通过window.scrollTo(位置1,位置2)实现自动滑动页面，触发后续的网址，我们可以在上面的：
+ browser.get("http://ac.qq.com/ComicView/index/id/539443/cid/1")
+ 代码下面插入如下补充代码：
+ for i in range(10):
+
+ 
+ js='window.scrollTo('+str(i*1280)+','+str((i+1)*1280)+')'
+
+ 
+ browser.execute_script(js)
+ 
+ 
+ time.sleep(1)
+ 通过该循环，我们可以依次进行自动滑动，模拟滑动后自然会触发后续的图片资源。
+随后，我们再次执行代码，执行完代码后，截图中你可以看到剩下的动漫图片资源已经加载出来了，并且源码中，匹配的网址也变多了，源码中网址的匹配情况现在如下所示：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j51oFQInibcoYXfnjjD9I73S70y8AJ0aSQsDZca5fsI3cc7lz35W3kr3w/0?wx_fmt=png
+可以看到，此时符合规律的网址已经变成了25个，所以，现在，当前页面中的所有图片资源已经加载出来了。
+显然，我们通过PhantomJS已经实现了异步资源触发与随机网址获取的功能了。接下来我们将需要提取出相关动漫图片的网址，并交由Urllib模块进行后续爬取。
+结束了PhantomJS的使用之后，我们需要关闭一下浏览器，所以，我们在代码后添加如下一行代码：
+browser.quit()
+
+随后，我们继续编写该爬虫项目。
+我们可以通过正则表达式'&lt;img src="(http:..ac.tc.qq.com.store_file_download.buid=.*?name=.*?).jpg"'将所有动漫资源图片网址提取出来，提取出来之后，通过urllib对这些图片进行爬取，爬到本地。
+具体代码实现如下：
+
+ import re
+import urllib
+#构造正则表达式提取动漫图片资源网址
+pat='&lt;img src="(http:..ac.tc.qq.com.store_file_download.buid=.*?name=.*?).jpg"'
+#获取所有动漫图片资源网址
+allid=re.compile(pat).findall(data)
+for i in range(0,len(allid)):
+
+ 
+ #得到当前网址
+
+ 
+ thisurl=allid[i]
+
+ 
+ #去除网址中的多余元素amp;
+
+ 
+ thisurl2=thisurl.replace("amp;","")+".jpg"
+
+ 
+ #输出当前爬取的网址
+
+ 
+ print(thisurl2)
+
+ 
+ #设置将动漫存储到本地的本地目录
+
+ 
+ localpath="D:/Python35/dongman/"+str(i)+".jpg"
+
+ 
+ #通过urllib对动漫图片资源进行爬取
+
+ 
+ urllib.request.urlretrieve(thisurl2,filename=localpath)
+ 随后，我们运行该代码，便可以在本地目录D:/Python35/dongman/下看到如下信息：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttumQxLOewOzAwlJ3zicy15j5BlPRqA1brK3ichHngbe0ExdWHnYzh5A5zA6uF2MPDK0JeClcibx4Qmag/0?wx_fmt=png
+可以看到，相关动漫图片资源已经爬到本地了。
+为了方便大家调试，我们提供完整代码，完整代码如下所示：
+ from selenium import webdriver
+import time
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import re
+import urllib.request
+dcap = dict(DesiredCapabilities.PHANTOMJS) 
+
+dcap["phantomjs.page.settings.userAgent"] = ("Mozilla/4.0 (compatible; MSIE 5.5; windows NT)" 
+) 
+
+browser = webdriver.PhantomJS(desired_capabilities=dcap)
+#打开动漫的第一页
+browser.get("http://ac.qq.com/ComicView/index/id/539443/cid/1")
+for i in range(10):
+
+ 
+ js='window.scrollTo('+str(i*1280)+','+str((i+1)*1280)+')'
+
+ 
+ browser.execute_script(js)
+
+ 
+ time.sleep(1)
+#将打开的界面截图保存，方便观察
+a=browser.get_screenshot_as_file("D:/Python35/test.jpg")
+#获取当前页面所有源码（此时包含触发出来的异步加载的资源）
+data=browser.page_source
+#将相关网页源码写入本地文件中，方便分析
+fh=open("D:/Python35/dongman.html","w",encoding="utf-8")
+fh.write(data)
+fh.close()
+browser.quit()
+#构造正则表达式提取动漫图片资源网址
+pat='&lt;img src="(http:..ac.tc.qq.com.store_file_download.buid=.*?name=.*?).jpg"'
+#获取所有动漫图片资源网址
+allid=re.compile(pat).findall(data)
+for i in range(0,len(allid)):
+
+ 
+ #得到当前网址
+
+ 
+ thisurl=allid[i]
+
+ 
+ #去除网址中的多余元素amp;
+
+ 
+ thisurl2=thisurl.replace("amp;","")+".jpg"
+
+ 
+ #输出当前爬取的网址
+
+ 
+ print(thisurl2)
+
+ 
+ #设置将动漫存储到本地的本地目录
+
+ 
+ localpath="D:/Python35/dongman/"+str(i)+".jpg"
+
+ 
+ #通过urllib对动漫图片资源进行爬取
+
+ 
+ urllib.request.urlretrieve(thisurl2,filename=localpath)

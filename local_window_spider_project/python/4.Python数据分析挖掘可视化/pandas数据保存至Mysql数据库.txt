@@ -1,0 +1,31 @@
+b'pandas\xe6\x95\xb0\xe6\x8d\xae\xe4\xbf\x9d\xe5\xad\x98\xe8\x87\xb3Mysql\xe6\x95\xb0\xe6\x8d\xae\xe5\xba\x93' 好久没写文章了，你们想我了没【我就是这样，你习惯就好】
+前段时间写了两篇mysql和python交互的文章
+第一篇局限于导入一条数据进入数据库【主要讲的是面向对象编程和Python数据库操作基础】
+传送门：<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484240&amp;idx=1&amp;sn=d4c43666182b4dad29104f5be9fb14a5&amp;chksm=ec5edc2ddb29553b722dfde0baf8c8ebd89db5b9089f0b110ccdb36efeb1ab4d2205fe3e1237&amp;scene=21#wechat_redirect" target="_blank" style="">Python操作Mysql数据库入门——查看和增加记录</a>
+第二篇讲的是从数据库读取数据到pandas【为数据分析做准备】
+传送门：<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484249&amp;idx=1&amp;sn=c2b9f6ad219724b7361f4ec1a02758d1&amp;chksm=ec5edc24db295532acbadda71f46bc2e591f71346732079c00a7ec0c866ee90231898ce66731&amp;scene=21#wechat_redirect" target="_blank" style="">Python操作Mysql数据库入门——数据导入pandas（数据分析准备）</a>
+因为最近又在写爬虫，所以想把爬到的数据（dataframe格式）存在mysql里
+终于在今天下午成功了
+     这里我创建了一个简单的df用于测试：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvjPAJH8zERyoyLicicIvPYTqLicibbCticYhXt7tzHuQibDnicyWbj5M0o5OUg/0?wx_fmt=png
+ 结果运行成功：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvvTlKOojPMCxMxXJ1XXsQOFsshORmy2uPvTLRk9dicW0Pw0iaz9TicwDeA/0?wx_fmt=png
+本地数据库自动新建了一个test1表，数据成功写入，（我用的mysql客户端软件是：Navicat）
+ 当然，我们平时数据清洗好的df或者爬虫爬到的数据做成df怎么保存到mysql呢？
+其实现在看起来就很简单了
+当然，在这里，我只教会大家怎么保存df到mysql
+如果大家对爬虫和数据分析清洗有兴趣，可以看我以前写的文章
+ 我打开了一个爬虫爬到的房地产数据，如下图：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvVReBr3Nu5RvhcKJt1xARicrbf3VpiaOEHPa18C3rOvr7Gjlnr8b9hKHw/0?wx_fmt=png
+ 我们看一下数据的df：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvJvMuav09Pk5KRNjib56DljXBhHWMBKrlbmBjAIa2SpLoqUcsDYfnYEA/0?wx_fmt=png
+ 我们现在要将这个df写入mysql，就好比爬到的数据或者清洗完的数据写入mysql：
+     运行结果是，捕获到了异常：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvlgCXBaqW2j6ATn2zTYg2Ylsib4jTRBdCsmYoPBcSwavic1vQ9NibUd3YQ/0?wx_fmt=png
+ 意思大概是：一部分拉丁无法编码，所以我们设置一下编码方式：charset=utf8
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvkUfKbRBBzn8Gr6H4vOsBNcNk0XmkO53BDviar9DTtayNcQt3eZQK1cw/0?wx_fmt=png
+ 已经可以看到，数据已经写入mysql了
+大家想要加其他功能可以参考：
+http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_sql.html<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuanNiaLF9pksL2Rr7U8KZIvHaDRrTEgsBbGhbfGoPvyB4AJow253bGXUNiaa66YblVlDfmCYyRAjUg/0?wx_fmt=png
+ 如有错误之处，请留言评论指出，谢谢~

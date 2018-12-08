@@ -1,0 +1,47 @@
+b'SQL\xef\xbc\x8c\xe4\xbb\x8e\xe7\x86\x9f\xe7\xbb\x83\xe5\x88\xb0\xe6\x8e\x8c\xe6\x8f\xa1'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）<span style="text-align: justify; ">。</span>
+ 我们在上一篇《<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484232&amp;idx=2&amp;sn=9b97498c0d92bf5b7973e9ad0890cb24&amp;chksm=ec5edc35db2955233a5937d2aed88047e27ab7b89412bb7befed913ff2e8b79bf2d574f96483&amp;scene=21#wechat_redirect" target="_blank" style="">SQL，从入门到熟练</a>》文章已经掌握了除Join外的常用语法和函数，今天会通过一系列的练习彻底掌握SQL。
+我们知道，数据库由多张表组成，表与表之间可以实现关联。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAL7HBcXIuDMa7oQq3fQYy5GyVbHHZI3wePejiaDqpDvPuOCXnhWdhicIQ/640?wx_fmt=png
+上图就是一个简单的关联模型：
+ 那么，如何在SQL查询语句中将两个表联接起来？我们将运用最重要的语法Join。
+ 上面语句，join将Students和Address两表关联，关联需要一个或多个字段作为联接桥梁。例子中的桥梁就是addressid，我们使用on语句，将Students表的addressId字段和Address的id字段匹配。
+这里需要注意的是，因为字段可能重名，所以一旦使用了Join，字段前应该加上表名，如Students.addressId和Address.id ，这种用法是为了字段的唯一性，否则遇到重名，系统不知道使用哪个字段，就会报错。
+ 上图是更优雅的写法，将表命名为一个缩略的别名，避免了语句过于冗余。不要使用拼音做别名，不是好习惯。
+Join语法有很多不同的变形，Left Join，Outer Join等，新人很容易混淆。这个我们可以用数学中的交集和并集掌握。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA1KtpNcPduV49owQkiaqC7njZ1miawjxLlKvAoPF6YP43ZJ2zJfgBlibjA/0?
+上图很清晰地解释了各Join语法。
+Inner Join最常见，叫做内联接，可以缩写成Join，找的是两张表共同拥有的字段。
+Left Join叫做左联接，以左表（join符号前的那张表）为主，返回所有的行。如果右表有共同字段，则一并返回，如果没有，则为空。
+我们以W3School上的数据为例：
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAyCbIUJTVlSMs2IrG88oZ3FR2w4Xp4AKiczb8UzAndwRMn3BqOMb4NSA/0?
+ 于是输出结果为：
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcABUSVdrlBySarTRT3IyiaicfEcmTeNwO73m4JmguXDaA1usPT6Z6Qcwtg/0?
+结果集中，Bush那一行的OrderNo为空，就是因为Id_P无法匹配上，返回了Null。如果改成Inner join，则不会返回整个Bush所在行。这是Inner Join和Left Join的区别，也是面试中经常会问到的题目。
+Right Join和Left Join没有区别，A Left Join B 等价于 B Right Join A。
+Full Join叫做全联接，也叫做Full Outer Join，意思是不管有的没的，只要存在，就返回。<br style=""  />
+还是以之前的例子演示，下面是Full Join：
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAof7iafkQibCW6tFibTBvATYDUj8riasPBUp8BPZvEhSX1hnae2D53JXPzQ/0?
+最后两行就是所谓的「不管有的没的，只要存在字符串，就返回」的结果，它们Id_P并没有匹配上，但还是给出了返回，只是为空字段不同。
+这三者的关系，我们可以理解为：A Full Join B = A Left Join B + A Right Join B - A Inner Join B，这就是数学上的集合运算，虽然SQL的表并不能加减法。如果还一知半解，看最上面的Join示例图，用面积的角度看也明白了。
+通过上面的例子，我们已经掌握了Join的主流语法，其他无非是变种。比如加约束条件 where XX is null，这里的XX可以是结果为空的字段。拿上文Left Join的例子演示：
+    上图就是一个简单的适用场景，将用户姓名和手机号进行多项关联。它也可以加入其他的条件判断。
+     http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAh435ZAFyVZ7usfdkpTS5Vt93fHjAFf2jwMvan6pZucRibu01b2sK2sA/0?
+我们从Easy开始，选择题目Combine Two Tables。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAR4J4YGianaZuwUtGLbuTdUBXs3gZSJwWB7iakSGx2toPqD2Nqee4X7icA/0?
+红色字符是表名，第一列是字段名，第二列是数据类型。题目希望我们通过两张表输出：FirstName, LastName, City, State四个字段。
+单纯的Inner Join就能完成了。记住噢，答案需要完全一致，也就是说最终的结果必须是四个字段，不能多不能少，顺序也不能乱，大小写要严格。这一题大家自己做吧。通过后会有个绿色的Accepted提示。
+接下来选择Medium难度的Department Highest Salary。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA0coydhh5E8NUuMRxWvKCf7GdQf3pnwxDys1HicD88gpaZHwz1Pmw0vA/0?
+这里有两张表，员工表和部门表，我们希望找出各个部门的最高薪水。<br style=""  />
+部门信息单独为一张表，首先我们需要Join关联起来，将部门分组求出最大值：
+ 上述的查询语句找出了最高薪水的部门，我们是否能直接使用其作为答案？不能。这里有一个逻辑的小陷阱，当最高薪水非单个时，使用max会只保留第一个，而不是列举所有，所以我们需要更复杂的查询。
+因为已经有了各部门最高薪水的数据，可以将它作为一张新表，用最高薪水关联雇员表，获得我们最终的答案。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAcfwh4bRM1oMOxMWQSLsuePOlKU22PsoCEFT9FRIbSPotsOPgrLlIIQ/0?
+上面就是最终解法（#是解释给你们看的，中文会报错的），当然解法应该不是唯一的，大家有兴趣可以继续研究。
+最终，我们选Hard模式的Department Top Three Salaries。
+范例数据没有一丁点变化，它需要我们求出各部门薪水前三的数据。如果最高薪水只有两个，则输出两个。<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAzVDK7SHZ9gvJRoxvG6KgGvN6ZlcXu79phMFKoAhBqbJppYSa9kuA1A/0?
+上图是给的范例结果。
+排名前三的数据，我们可以使用order by 降序排列出来，然后通过limit 限定为3，但是新的问题是：既要各部门前三，也存在排名并列的情况。此时order by就无能为力了。
+如果是SQL Server或者Oracle，我们可以使用row_number分组排序函数，但是MySQL没有，其中的一种思路是利用set语法设置变量，间接应用row_number。我们还能使用另外一种思路。

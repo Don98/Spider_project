@@ -1,0 +1,13 @@
+b'\xe7\x94\xa8\xe6\x88\xb7\xe7\x94\xbb\xe5\x83\x8f\xe4\xb9\x8b\xe6\xa0\x87\xe7\xad\xbe\xe8\x81\x9a\xe7\xb1\xbb' http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt82ZAAYbSayo7x9DS8boQjjov1mCYGicRiaxoGKZ2VRWiaVicxkQDFdYf2DPicuEL7pSxCof11XTYTVvA/0?wx_fmt=png
+大家好~
+这次想继续和大家聊聊用户画像。用户画像是个体系性比较强的内容模块，分一两次博客也写不完，我争取分多次博客把各个模块都搭建起来。上次把用户画像方面的内容开了一个头，讲了关于标签权重的计算方法，这次就聊聊标签聚类的方法。其实聚类不限于方法和形式，只要能将同类物品 / 内容进行准确聚类的，都是好的方法。好啦，开篇结束啦，下面让我们进入正题吧：
+继上一篇中提到的用户标签表，存储了用户在平台上每次操作（来自日志数据）、购买（来自业务数据）等行为带来的标签。随着时间的累计，各用户在平台上积累的标签数以亿计，如何对这些不同类型的标签进行归类，找到每个标签所属的某一类别，是本次讲述的重点。
+Step1：从用户标签表抽取数据
+用户标签表结构长这个样子（字丑 ╥﹏╥）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt82ZAAYbSayo7x9DS8boQjLjbNm4cdzmUja7lqsUcHawxtlIicvItFVRZO71F0UfjIoRzmSgryqTw/0?wx_fmt=png
+首先从用户标签表抽取两种类型的标签（我们暂命名为A类标签和B类标签），
+创建临时表1，抽取A类标签：
+  这里用到了共现矩阵的思想，即两个标签上同时拥有的用户人数。即用户甲身上既有A类标签，又有B类标签则记为数字1，两两标签之间拥有的用户数越多，说明用户在平台上的行为在带来A类标签的同时也带来了B类标签，即两个标签之间的相关性越大。在HQL中的逻辑如图：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt82ZAAYbSayo7x9DS8boQjykhGnoeoQkYNKfQ9csTF8dvzxEyl6EhS7rYKqeyGn9td8rZWzPwUdQ/0?wx_fmt=png
+创建临时表3，计算A类标签下每个标签对应的用户人数：
+   

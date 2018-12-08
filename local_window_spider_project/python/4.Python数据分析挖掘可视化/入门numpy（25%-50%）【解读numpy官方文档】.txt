@@ -1,0 +1,130 @@
+b'\xe5\x85\xa5\xe9\x97\xa8numpy\xef\xbc\x8825%-50%\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbnumpy\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibUo4tq6d3A6EbhGdV8nLiaGwCESMibM28tOhXZylSxicQnLS4nh39ibNTw/0.gif
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibG6wlFUVibvvuoCyK8g203xOro3M0heA85f2zcGjmesNG0T3EOll2iaZmETKyGbbumLT6wRor227Mmw/0
+最近在学习入门python可视化，先后初步探索了seaborn、matplotlib、plotly和ggplot
+发现还是pandas的绘图最容易上手，样式也很商务化，学完官方文档之后和大家一起分享
+言归正传，今天继续连载numpy入门系列
+前文传送门：https://ask.hellobi.com/blog/wangdawei/8708
+当使用不同类型的数组时，结果得到的数组的类型对应于更一般或精确的数组（称为upcasting的行为）。<br data-filtered="filtered"  />
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8RqPnS6Z0IM6YfuLXGlnkZxkGaOeZRliaGUrQcCFHgPYRznGbDBheIHw/0?wx_fmt=png
+注：创建一个一行三列的矩阵（元素都是1）<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8x4bLDrLpwqUmpuuDQulS6qJ3ubia676yyApgEdCkWrjdkABLpWj8pBA/0?wx_fmt=png
+注：在0-π之间均匀产生三个等间隔的数字，b的类型是浮点型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8qwHtMs8wicR1ekDNLn445QsRvwGgnXgbG9yjbjnCnvhICykRq4JV7XA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh85NGyIEyknicZo3GluWrhXUCFqy7hC9Brbloa3hKp83JJBOpeKaDqlyQ/0?wx_fmt=png
+注：得到的c的类型为浮点型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8AfyKkkGXWb7f8BdRMqxjcWJ1YbFMlAlv9maWrm0M6dVkB9oPTXnsZg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh86s4qiaFoY1y0eYxPbCKricwUuae07cuF5IjKOnLIYc1uH392AExe0FPw/0?wx_fmt=png
+注：得到的是复数
+ 许多一元操作，例如计算数组中所有元素的总和，都被实现为ndarray类的方法<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8pB57iaAibHUe6a2DmXwyL4ex3G4kUiaS1cwmxMNaQE8jicuFpFrGz6HcPA/0?wx_fmt=png
+注：产生2行3列的随机数组（元素值为0-1之间的随机数）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8zjICO0PhtF1BYxzwVUxItVGBytDqKXBcTpE9tZmA6kO6KVE4ml1ibrA/0?wx_fmt=png
+注：将a数组所有元素求和
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8pWxnQNHINJ8FslROdTGa1eEWPg8dL8SicGuI9MtvKsAR5eZXIyW6Oxw/0?wx_fmt=png
+注：返回a数组中最小的元素值
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8gw9dkzDeHjuVdnKN3EVM1UyDGuqJQmmQAjX3cDhyRd1UGt22xfjOGQ/0?wx_fmt=png
+注：返回a数组中的最大值
+注意：我们看到的数组和单独取出的最大值保留的小数位数不同<br data-filtered="filtered"  />
+ 默认情况下，这些操作适用于数组，就像它是数字列表一样，不管其形状如何。 但是，通过指定轴参数，您可以沿着数组的指定轴应用一个操作：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh866Ziawh979fu3dpXHRbJA5ocwsoT4gur3Y1uWc0JUs9axFTh6WLTvqw/0?wx_fmt=png
+注：通过reshape将产生的1行的数组转变为3行4列
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8S4KOicuQTwr3wc6icVD3rsxRHIB9sc97TxPzxDyMAqmp4XFfnOnZJRhA/0?wx_fmt=png
+注：将每一列求和，因为指定了参数axis = 0
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8X9sREDickG7gZaKayoaXZicjx6TNp9sRzwInsE0DoYRyWHYTiac7PbnRQ/0?wx_fmt=png
+注：按行求和
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh81BgkgbdgrlGhhdKSnotfjldKWsPgibXhFBDkLgV4NMJKD8harJyrn4w/0?wx_fmt=png
+注：不加axis参数则是所有元素求和
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8pYj1h06MoNjx12Z9oAmWq5NQ4SJhAlK22vkpUMSiaFlKmIB6CqsR7Wg/0?wx_fmt=png
+注：求每行的最小值
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8UwarAVF8UyI8WFtPicXBFIz9m2zFc3iadt927FyzfiazibvloO77GFd33A/0?wx_fmt=png
+注：要学会自己查帮助文件
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8jn9ibz6C9oGqfpUENkfFEx6miapQtmREy4Z0bXtxGg6sPicY6TI2RYxicQ/0?wx_fmt=png
+是返回沿给定轴的元素的累加和<br data-filtered="filtered"  />
+这是什么意思呢？画个图很好理解：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8dTAu4ZhFtvp9xfDY3P5ibCcxvwL0zBWAaXEEAvfOdEoWArGcGKqIexQ/0?wx_fmt=png
+就是把前面所有的加上自己当前的值得到的结果放在当前位置，就是数列前n项累加和的意思
+注意这里是按行累加
+ NumPy提供熟悉的数学函数，如sin，cos和exp。 在NumPy中，这些被称为“通用函数”（ufunc）。 在NumPy中，这些函数在数组上以元素方式运算，产生一个数组作为输出。<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8L2S8CFoFicyNgW4YbKeiamBZStY6OBIogLweEJziajf8lpVMZcJDLvk2Q/0?wx_fmt=png
+注：创建一个数组
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8kUPEeKAe2C8HhvtvC9HEt9vQtT5Hmgs4lN9dfm1beQCHl1r6zjfPvQ/0?wx_fmt=png
+注：对每个元素求e的某次方
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8ibicM7MKia6EBg9E07YmqCAAOmhXVBq2vDwicwr4Ct4icRoQNiaWZ44yPSQQ/0?wx_fmt=png
+注：对每个元素开方
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh85dmbLWY4zR97nQ6WcvPwUV1cuFIKthpj7FuoKWzELITsDEwnbqgdDg/0?wx_fmt=png
+注：将两个数组相加（要求数组形状相同）
+如果形状不同，则会报错如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Rr4EBu8hrjdNicYUBxK3Nfs0XyicFPLWYiaGlMibXjEh7aKU7BXXX4t1Mw/0?wx_fmt=png
+查看这部分更多更详细的用法可以看：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+下图部分：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8gFtTwibmYMOSStTThoZjENYduANCPTc9WXvML89lNVgHKibP71tvMic1w/0?wx_fmt=png
+ 一维数组可以被索引，切片和迭代，非常像列表和其他Python序列。<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Trk4EPKLuUFgMhnPkM0J7RoIm5YIpUhFECW8k1k2Ku9tggW5GpkAfQ/0?wx_fmt=png
+注：对数组中每个元素求3次方
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh88A8ah8WsUVutPotU9cmD1RtI4ajsibOGFHybznL4VibM5LTzVgLPEfHw/0?wx_fmt=png
+注：取出序列为2的元素
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Gd4gqdkjhe2wJLwJ4rpVqXJSNSiaFAKXvhNH6PytCQM6ZJ8wMrXqicGQ/0?wx_fmt=png
+注：切片操作
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8XibrLEvHKvJ6HicOYMBU9ItZqbg6SX6zcw3ErXQLEt4RrnAkEVblOziaQ/0?wx_fmt=png
+注： 和 a[0:6:2] = -1000相同; 从最初到序列号6（6取不到）,步长为2，将-1000赋值相应的元素。<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Ybv1eRKgdyo990u4rPiayHWjBtdQcM3onNckLqibK9ahEQnvkgAcYibgw/0?wx_fmt=png
+注：数组元素逆序排列
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8j4iboSYYtxjF8FDnCdhQPg1l9tt9VJrvmbTdKdNsgwU7d2kwkZVeMCg/0?wx_fmt=png
+注：对a数组中每个元素，求1/3次方
+结果是nan的我有些不解，-10的3次方不是-1000么
+于是我试了试：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8siaibAqrLBk9T6OC6trAluwj40JR2zarXIDWLcZUaINf0Lf7hj1O8lNQ/0?wx_fmt=png
+希望有了解的大神留言评论指导一下，这个nan暂时跳过吧
+ 多维数组每条轴可以有一个索引。 这些索引以逗号分隔的元组给出：<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Rp3gWDtN4V1w1CJhGwic8ABLzH5fFvzIMd2w4IkFXwiah7vGq5ZrJzSw/0?wx_fmt=png
+注：我们看一下帮助：
+ 计算函数值10*2+3=13，所以返回13，其他同理。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh83hQBx6kqStFsetaGfSVocYAqOQjSTAegyVBS0Fw4ZGdwqiaoclOqPRg/0?wx_fmt=png
+注：我们可以取出数组中的元素值，注意行和列索引是用逗号分隔，而不是冒号（冒号是切片）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8tJb4iaENrJu8k38gEGgTRicA0Wl2Bicw9xsZ1uleTPx38s72vx10aQyGg/0?wx_fmt=png
+注：按照下标索引切片
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8KyIeFxe4yvpicEO3mx6icC8BeUBoYS8kBVIiaLGAVDkvRNMroZ2e7KLjQ/0?wx_fmt=png
+注：按照下标索引切片
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8GNVPwo4dm6FwRngJibaZDVqXetsx3gdZKLHvFava66GiamkFWK2NUHzg/0?wx_fmt=png
+注：按照下标索引切片
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8jrQPkezM0pd4tqaR3ichfpsdtZVbbOwfuADk6xnwxSVWRlXe2hJ70wA/0?wx_fmt=png
+注：这个相当于<span style="color: #408090;">b[-1,:]</span>
+ 一些省略记法：
+例如五维的数组：
+x[1,2,...]与
+x[1,2,:,:,:]等价
+x[...,3]
+与
+x[:,:,:,:,3]
+等价
+x[4,...,5,:]
+与
+x[4,:,:,5,:]等价
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8ib0W8ensk0r8GTxbwhN6j7RZ7aDngeIy65oHhybZGHTkwfWnia3liazUw/0?wx_fmt=png
+注：这是一个三维数组，并显示行、列、高的信息
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8Uib8jia2zc0NEUWLXwkeiaMAlLEfltyPOdpTMibELtQQQ8THuY3X3yxqTg/0?wx_fmt=png
+注：等同于c[1,:,:] 或c[1]，有点像切蛋糕的感觉，切出一片二维的。<br data-filtered="filtered"  />
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8I2fBwIqwMmZdq4sicBryY5v1rm4eXJrsXsawwYFPXyzibTlkJHFvbibxw/0?wx_fmt=png
+注：等同于c[:,:,2]、
+ 相对于第一轴完成多维数组迭代：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8icPNmrvAs2dCVVhXcNKvQ76OxcicY1iakvDDVT73n7S5zVyQBGy2MX9nA/0?wx_fmt=png
+注：有点像三位数组降维成多个一维的感觉
+ 但是，如果要对数组中的每个元素执行操作，可以使用flat属性，该属性是数组的所有元素的迭代器：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8VxXBPGfdD2zSWiaQr17XS8b1De9RicPZ8OYjuFib9DvM7K96k0ZSbc0MA/0?wx_fmt=png
+注：这是取出多维数组中所有元素的一个不错方法
+ 查看这部分更多更详细的用法可以看：https://docs.scipy.org/doc/numpy-dev/user/quickstart.html
+下图部分：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh84CLDQgetLnTuny72IPPOkfhOZb3ibcP09T0FzW9vRcBvyMY8adZ475Q/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8FMhwADq5a2fMyoq2B7uWqs2BxicOAAmugCrK6Zu4dmiaOnxNJjib18aCg/0?wx_fmt=png
+我们只到，该方法是向下取整的意思
+例如：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh89SLicgkFfcvNasST4taYh78AMianmsfVFJoqXiaaktaDib2K40gNkiaVaOw/0?wx_fmt=png
+向下取整就是指一个数字往减小的方向取到最近的值，例如上面例子的-1.7变成-2.0
+所以这是产生随机整数的方法，但这里的数字是float不是int类型
+ 可以通过各种命令改变阵列的形状。 请注意，以下三个命令都返回一个修改的新数组，不更改原始数组：<br data-filtered="filtered"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh8fvbxXI04WMD4tGficHwOIm7G4yvoAKwPmVHEEf6ckEUdEBquBlCcJAg/0?wx_fmt=png
+注：将数组改成一维
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsrttlibAnhibpbQSLdo9iaAh88pC5hUUYwzmDsANtrWkfvNAVeRYQepKicvm2tr2BZjtnClXCHgr59Yg/0?wx_fmt=png
+注：将数组转化为指定形状
+ 

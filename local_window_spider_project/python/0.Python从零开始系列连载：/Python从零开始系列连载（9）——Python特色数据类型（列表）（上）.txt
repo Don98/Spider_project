@@ -1,0 +1,65 @@
+Python从零开始系列连载（9）——Python特色数据类型（列表）（上）前文传送门：
+         列表，可以是这样的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswJlB6f7Yo6ibaDBUtibbYwOicJu1alL0OtQML6Ee07mHFmYrHPgg1qxeQw/0?wx_fmt=png
+ 分享了一波我的网易云音乐列表
+ 今天开始讲Python的特色数据类型，注意，是特色
+ 说到特色，我先想到的是吃的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswmPQ5WibtXvvLKXD288gtianBsS60CNX13iaADYNAPqhS7A8PiaabB0nRDQ/0?wx_fmt=png
+ Python提供了列表这种数据类型来存储由多个值构成的序列
+ 用逗号将不同数据项分隔开，整体放在一个方括号 [ ] 里就创建了列表
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswkryJLuqSyhfgEVhzVguJWRRqic6DibE2YxOFMOy4uUvnUib8oWcH5T26Q/0?wx_fmt=png
+ 列表中的数据类型可以是相同的（如上面的int和str类型）
+也可以是不同的
+如：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrsw15hrHsrcvgn6YVxsC6SK4mhicOJsTExL6vYwIKplGoR3g56X3icxq3Fg/0?wx_fmt=png
+ 更厉害的是，列表里还可以嵌套列表
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswpqsJ1F0gA81VHjERLJ7ekQk3wRCkBc61bicHtd9HG87Pocr93YnzYpQ/0?wx_fmt=png
+ 我又想到俄罗斯套娃【捂脸】
+ 空列表定义：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswnYVItUbe7HPHjykS0Y82bqUo14an0Ey7AjyXDewNWKiaMWpzgbQhLlA/0?wx_fmt=png
+ 结合空字符串理解
+ 查看列表类型：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswBgNIVVYFdoQQ3BHdnIHBBAprEjUiazD1PeiaicQcphaurvoUZklxjLFkw/0?wx_fmt=png
+   方法：
+列表名[索引数字]
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswNagIhe6CkpWlyibTjUZoBDGg8Oa6bic370tUlrLzJiavQw95gCL6uPWNw/0?wx_fmt=png
+ 取出列表list1的第0个位置的元素
+ 注意：这里索引编号是从0开始，到4结束，（索引4对应着5这个元素值）
+ 所以取索引5的时候会报错：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswwicvQcQNgerBFegdPWyV0tb3zg0GdbTAVmXlUdvmLuwKNsNreHVklhw/0?wx_fmt=png
+ 报错信息提示索引超出列表范围
+   使用方法：
+列表1+列表2
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswxQA3NS0aYsfyqNXQliafLO006W6frkZDs9SgPEv59iaIQATrQOqNX1pA/0?wx_fmt=png
+   使用方法：
+列表*次数
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrsw19PIOOhqzZcTiaSeHUbcVQXItYJyu1DSfVsvwicXN5SYVC3aecq8rggw/0?wx_fmt=png
+    使用方法：
+len(列表)
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswyzicXq9HM5IAHmTtJrq8ic6s59bxzr35uGTyJickKPUOAbyR64uNO0ImQ/0?wx_fmt=png
+   使用方法：
+for 变量 in 列表：
+print（变量）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswyE62npH12K7mjvjaDk3pH82yCwwWGwZ9e2oNkODcZqjbnPWK9TkWtg/0?wx_fmt=png
+   使用方法：
+元素 in 列表
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswAibh2glEDexcPScWgOgichdvSiadcFKaPzMyN2suH12aY0Om3zt1CaXKA/0?wx_fmt=png
+   使用方法：
+del 
+列表名
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswjSrbMUiaoAgs82D7WqUaPnb6KcDfMSWh4784FtM4yLq85dr2mb4ic0gw/0?wx_fmt=png
+ 删除之后，就不能显示list1了
+   使用方法：
+del list1[i]
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswr0geIh6YtYOHQyibY2fEV9dicVfE85evNiaOC8LCmetwqpQcNfFpMwjiaw/0?wx_fmt=png
+ 索引为2的元素‘c’被删除了
+   使用方法：
+max（列表名）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswDFeD4h4Pv08iavmNRRcBvNRn1X2ibSlGKNLsFb29QvMeqWKc2E8SibbgA/0?wx_fmt=png
+ list2 中的字符串可以比较大小
+但是list4 中的取最大值报错了，提示是str和float不能比较大小
+   使用方法：
+min（列表名）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrswjBBibfVKLok8MO1mlDUZOfhtbO3A5q6YoGh42PiblRAZ4GlfPfj7Muicw/0?wx_fmt=png
+ 今天没有作业！
+惊不惊喜？开不开心？

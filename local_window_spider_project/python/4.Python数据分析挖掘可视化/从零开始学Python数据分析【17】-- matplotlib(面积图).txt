@@ -1,0 +1,19 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9017\xe3\x80\x91-- matplotlib(\xe9\x9d\xa2\xe7\xa7\xaf\xe5\x9b\xbe)'                  
+
+
+
+
+
+
+我们之前写过一篇文章是关于折线图的可视化《从零开始学Python【14】—matplotlib(折线图)》，一般来说，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">折线图表达的思想是研究某个时间序列的趋势</strong></span>。往往一条折线图可以根据某个<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">分组变量进行拆分</strong></span>，比如今年的销售额可以拆分成各个事业线的贡献；流量可以拆分为各个渠道；物流总量可以拆分为公路运输、铁路运输、海运和空运。按照这个思路可以将一条折线图拆分成<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">多条折线图</strong></span>，直观的发现各个折线图的趋势，但遗憾的是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">不能得知总量的趋势</strong></span>。为了解决这个问题，我们可以<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">借助matplotlib中的stackplot函数绘制面积图</strong></span>来直观表达分组趋势和总量趋势。
+stackplot(x,*args,**kargs)
+       
+
+
+
+
+
+
+以我国<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">2017年的物流运输量为例</strong></span>，来对比绘制折线图和面积图。这里将物流运输量拆分成公路运输、铁路运输和水路运输，绘图的对比代码见下方所示：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgU8TRdoHKomk7IwyQSofYiccT3PicJL9iaAKlmSHYKTIJhgg8STRHLrJzfxCbLiboicFgoVWQYRic9zM6sQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgU8TRdoHKomk7IwyQSofYiccrpibHxtLsuR2l1X6T3ibqc5JrqCd4pbZaMK7tJveRceOSqlia84dichRgQ/640?wx_fmt=png

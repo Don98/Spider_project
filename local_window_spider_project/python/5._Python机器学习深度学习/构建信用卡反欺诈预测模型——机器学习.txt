@@ -1,0 +1,38 @@
+b'\xe6\x9e\x84\xe5\xbb\xba\xe4\xbf\xa1\xe7\x94\xa8\xe5\x8d\xa1\xe5\x8f\x8d\xe6\xac\xba\xe8\xaf\x88\xe9\xa2\x84\xe6\xb5\x8b\xe6\xa8\xa1\xe5\x9e\x8b\xe2\x80\x94\xe2\x80\x94\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0'项目介绍http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEenjfp4aaLk2F446hVu82XBPSe3QoWZsYvPIQWmVRnSL2HU1fblyFnw/0?wx_fmt=jpeg
+ 本项目需解决的问题</strong>
+ 构建信用卡反欺诈预测模型</strong>，提前发现客户信用卡<strong>被盗刷</strong>的事件。
+建模思路http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEbCPEFYsfaIicByu9l4WiazJf5Q0iaMhPpBfETDN1BunC64NbSYN8GR87g/0?wx_fmt=jpeg
+ Kaggle</strong>官网对本数据集部分介绍（谷歌翻译），关于数据集更多介绍请参考<strong><span style="text-decoration: underline;">《Credit Card Fraud Detection》</span></strong>。
+ 二元分类问题 交叉验证的方法总结如下逻辑斯蒂回归（Logistic Regression）算法特征缩放http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEbYuOfHo7VY1UVXbotCnRYDiaknLqQPKquLqV3OFsHN6Q1bLAubPRQxA/0?wx_fmt=jpeg
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEbAibUbib0Zk7foF93dS1jsrmJ5ia1MwUPuG8DSpJRccRobsVSwNqNYdyw/0?wx_fmt=jpeg
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEFVG5kgribuolzTtxv9wUnmk6ZSuV1aRnRyFuic2BumsIsyBK20t9Bc5g/0?wx_fmt=jpeg
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEJamozlUCiaTFpicz9KBwSu4hzqib0UPib79JScAhp5icIDTYnj14wFmlYVw/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuER4RhPrqcZORibRpRhtSUqVE9ZofloicXOD0xI9NothMdqvD7lVDA6evw/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEDl1LVoGUQudZjNKEsyYnGibNtdj3XsVsKKribiaRUfcyhV4d1rKknVbFw/0?wx_fmt=jpeg
+ 3 特征工程（Feature Engineering）http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEpFACjWvORIFEHQ96Fl1zUrTNYN0c1e6pFbiaCy9bEdz8UWWQ4f0OudQ/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEkmOQ9l9klPN03VMGEXpJbQVVzyAwpf5ngXSoHShrr1htibrjTib6KW6g/0?wx_fmt=jpeg
+0.17% 特征衍生</strong>
+  特征选择（数据探索）         小金额消费</strong>。
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEsf5xOj0fUZlCvKGOCiaGlqAr4tcGjYXh0m5sdKDMWqJhery73eY9V0Q/0?wx_fmt=jpeg
+早上9点到晚上11点之间    http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEGqSH6bDibamcjibeJ3KqyiaIMBwNk33siaXgpJpacJdDXNEiboa0v7XnNIQ/0?wx_fmt=jpeg
+案发最高峰http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEHL3uONfG5CDdanMprZ26nE8GPWGRxWRRcQic2U8oJzoah2SOnqRZsTw/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEbQ6cUneia18A9GTlRMsqUFPxtfEYADXPuhSMw9jFhlGJ0oZLuEqZBYw/0?wx_fmt=jpeg
+   <br  />特征缩放</strong>
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuERLDsKs5ZrYhE5hExr5g7FWWbKYC9selLN52fZVKU3S9AnTiajDhawSw/0?wx_fmt=jpeg
+ 对特征的重要性进行排序</strong>
+    http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuE9QWBC1yN6ZlialkYeyRtTRoSCw9AtiaEtiaWxccWzsiaibvgmZYaupKAaDA/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEllnwNehHmGwqwR9zM6z1icAXZUn7lkxSpiajo63F6FudNjKwo8OLSLUw/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEpdia6XibEeNQThydrqTl5qFgTgDBQfmicbPQ0vnMYxFEUsJFQOaN4XdmQ/0?wx_fmt=jpeg
+ 处理样本不平衡</strong>
+ <span style="text-decoration: underline;">《Lending Club——构建贷款违约预测模型》</span> http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEdyvPib2UpxPQlhNBI48ibeJ3DPqSfuXnMp8Ev5RU5kewWz4yfoWMZPRQ/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEIIl4kSgEicbCIASwWQAl6Ca7ztE4dwLOQgD8hz3etMrbUnVha2T077A/0?wx_fmt=jpeg
+ 构建分类器进行训练</strong>
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEqbW1tFPKgEHPuPQmy8x4d2HdtKvmJA69Jsic6rR8te0Ks1CibYzgb2Iw/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuEPxT8bZXSaDVQKT50ibZu2usQmfkrmMvNbIppFLGJOj9o2hXeVVdcktg/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuESnkrIBdse5aDsJ0NQxXQK1hMsdln6vurgmIdxlt5LmJaWOR3z31tPw/0?wx_fmt=jpeg
+  5 模型评估与优化 交叉验证法网格搜索调优参数（grid search）cross-validationcross-validation+grid search http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuE5lrxQ1OJuzUDricP53f2Fa9Smd5I6zMyhl6khnJFE5MahYnNAvIQAHw/0?wx_fmt=jpeg
+      http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvgU0kxk7OefqnFVwF3FxuESzXh3ZZycmheKQj8sNKMcK04OgZkJ8icpA6Wib7rAtGKkEialyiaX1QAOQ/0?wx_fmt=jpeg
+      达到16.25%</strong>。
+ 模型评估</strong>
+ 漏发现</strong>癌症为恶性比发生<strong>误判</strong>为癌症是恶性更为严重。
+ 

@@ -1,0 +1,27 @@
+b'\xe8\x87\xaa\xe6\x88\x91\xe4\xbb\xa3\xe7\xa0\x81\xe6\x8f\x90\xe5\x8d\x87\xe4\xb9\x8b\xe9\x80\xbb\xe8\xbe\x91\xe5\x9b\x9e\xe5\xbd\x92'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuXemFWZN1AUXLCqDLVJI9rWDypWibk8iaoPOTZsdPFyucevicmmuhDUPiaiaVnkicgP9PRAeoGo9jR578w/0.gif
+  http://mmbiz.qpic.cn/mmbiz/ziadDDQxbCJFDq1MaoNclaJOpElczibia6UXtxCadkIvdKUiaLVkuVnhkx32A3JCM6I4howpH175pChoFaXn9gKSicA/0.png
+
+ 
+ 
+ 
+对于数据挖掘或是机器学习等相关算法的学习，用代码将之实现是从理论到实践的有效途径，而目前在数据科学应用领域，很多成熟的工具（诸如python的sklearn模块或是各种各样的R包），为我们的学习和工作提供了便利。但这并不意味着自己动手去实现算法失去了意义，在学习阶段，自我去实现算法的过程不仅仅是对理论的一种提升，更是对自己coding实践能力的一种历练。
+
+
+http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCMN4BWWMXv5eX69BFuT2MA3STew8b2CqOicia4qLa5PNFE9wNR29H5OaA/640.jpeg
+
+
+
+
+http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCZPD1DS0Q6pvYeJlibOEdTyIvBQ09p3ErdbOHMsYN8hevDjvb8NAFURA/640.jpeg
+
+http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCbfVlRX8QtWD6LDcmcHee4T4iakQtSZtQ6fFvrc59rU4SFzViaC4LGovg/640.jpeg
+
+
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCrBfJHMsibSVN7semXnkETzbEB8I6ozoicgWTUQ1ZqyO9JXu3qk5qt5BQ/640.png
+
+
+   http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCJsV6aEssps4qic9xpM7oexalic8szicVDJmmPwtr5TZp3xGNOAhbDKnqw/640.jpeg
+
+ http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfrG6ETEXEskNeYXLVLegbzCQkkR6wbQlvQpACABELPKSiaGQReIPGuMIGUQxYv36sUOdrxWLyRI2pA/640.jpeg
+
+

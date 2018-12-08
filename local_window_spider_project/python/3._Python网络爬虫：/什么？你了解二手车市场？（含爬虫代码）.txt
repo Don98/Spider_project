@@ -1,0 +1,59 @@
+b'\xe4\xbb\x80\xe4\xb9\x88\xef\xbc\x9f\xe4\xbd\xa0\xe4\xba\x86\xe8\xa7\xa3\xe4\xba\x8c\xe6\x89\x8b\xe8\xbd\xa6\xe5\xb8\x82\xe5\x9c\xba\xef\xbc\x9f\xef\xbc\x88\xe5\x90\xab\xe7\x88\xac\xe8\x99\xab\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x89'                             
+
+
+
+
+
+
+先来看几张截图，然后基于这个截图再来介绍在整个爬虫中需要经过的步骤：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYjJtEpFXFCkDEnAqepBunES4Y518ibveAaq1kF8RzOaUjQNERic0NAqEw/640?wx_fmt=png
+在这个二手车主页中，只显示了50页，以每页50辆车来算，顶多只能抓取2500辆二手车的信息。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">为了能够尽可能的抓取更多的二手车信息</strong></span>，我们对二手车的各个品牌按字母展开，如上图所示。所以，在这一步中，我们需要获取各品牌二手车的链接URL；
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUY8JswTfSwqHk0GgLLXTStNomiaIXoMQ6icExYDS7kgW19RLxtZiahD0rkA/640?wx_fmt=png
+以奥迪品牌为例，我们需要知道这种品牌的二手汽车大概有多少辆，说白了就是要获取奥迪<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">二手车一共有多少页信息</strong></span>。所以，我们需要获取各个品牌车辆各有多少页，然后再根据页数生成要抓取的链接URL；
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYYIVMKmOUbNulQwIQtGkb9sJG1rFoNB71IfOLYZZXUyDVeXS0SFWRTg/640?wx_fmt=png
+有了这些个URL，就可以根据URL的内容，获取每一辆车的上牌时间、表显里程等指标数据；
+ 最后需要将搜集来的数据进行存储，本例中我们就将数据存放到csv文件中，如下图所示。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYlo7kyz1ZUUr19wavAKnicxuS0fIMdb5kGrTUrlN9Jqn6RKAmHWP4HPA/640?wx_fmt=png
+
+
+
+
+
+
+
+接下来，我们就根据上面的四个步骤，展开某二手车平台数据的搜集。
+ 
+
+
+
+
+
+
+我们来到二手车的主页，并<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">按下电脑的F12键</strong></span>，根据下图框出来的1,2,3几个步骤，就可以获取4的结果。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYTrQujw3Nu9dwg23mhR9Jy86VJouRlU9emZglTcNntia7Gtd8Jj4g9Hg/640?wx_fmt=png
+ 说明：
+      
+
+
+
+
+
+
+根据第一步获取的urls，即各个品牌的第一页链接，接下来需要把各品牌的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">所有页面的链接全部解析出来</strong></span>。以奥迪品牌的url为例，根据下图的1,2几个步骤获取每个品牌的总页数。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYDRVfjR8IOyfkr6OyRCJuQicQ1hXd4O8KPoLmeIGBJvv5o0JiaQWI8oBw/640?wx_fmt=png
+ 说明：
+     
+
+
+
+
+
+
+第二步已经获取了所有目标链接(一共308条)，接下来需要针对这些链接，进行目标数据的抓取，包括二手车的上牌时间、表显里程、排放标准、二手价等信息。以“奥迪A6 2013款 40 hybrid”为例，根据下图的1,2几个步骤获取每个二手车的详细数据：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUCy88dcuRrAqN6ica8BKjUYjJIrbD8O4lol4kzPyLxC5bTM8gia38lRhia2jrVeTIKAVujtbSCqNQ3Q/640?wx_fmt=png
+ 说明：
+   
+ 
+ 
+ 
+上图所示，源代码中的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">红框abc对应了前端显示的ABC内容</strong></span>，这样就可以借助已知的标记解析出想要的数据内容，具体可以查看下面的代码。

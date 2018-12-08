@@ -1,0 +1,64 @@
+b'\xe5\xa6\x82\xe4\xbd\x95\xe7\xa7\x91\xe5\xad\xa6\xe5\x9c\xb0\xe8\xb9\xad\xe7\x83\xad\xe7\x82\xb9\xef\xbc\x9a\xe7\x94\xa8python\xe7\x88\xac\xe8\x99\xab\xe8\x8e\xb7\xe5\x8f\x96\xe7\x83\xad\xe9\x97\xa8\xe5\xbe\xae\xe5\x8d\x9a\xe8\xaf\x84\xe8\xae\xba\xe5\xb9\xb6\xe8\xbf\x9b\xe8\xa1\x8c\xe6\x83\x85\xe6\x84\x9f\xe5\x88\x86\xe6\x9e\x90' 前言：本文主要涉及知识点包括新浪微博爬虫、python对数据库的简单读写、简单的列表数据去重、简单的自然语言处理(snowNLP模块、机器学习)。适合有一定编程基础，并对python有所了解的盆友阅读。<br  />甩锅の声明</span>
+1.本数据节选自新浪热门微博评论，不代表本人任何观点</span>
+2.本人不接受任何非技术交流类批评指责(夸我可以)</span>
+3.本次分析结果因技术问题存在一定误差(是引入的包的问题，不是我的)</span>
+4.本次选取热门微博为一个月以前的(翻译一下：热点已经冷了，我只是个写教程的)</span>
+4.顶锅盖逃</span>
+ 继上次更完“国庆去哪儿”文之后，被好多编程相关的公众号翻了牌子_(:зゝ∠)_，让我过了一把v的瘾，也让我更加努力的想要装(消音)。</span>
+在我埋头学习mysql、scrapy、django准备下一波吹水的时候，有人说，你去爬下老薛的微博呀，还能蹭个热点，这让勤(mo)奋(mo)学(kou)习(jiao)的我停下了寄几敲代码的手。</span>
+  https://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibRqqNb3Ap1zzHgzicz72qVe9PnklwT3ZdscMA9p3QrRic5frV8Uyb4qoA/0?wx_fmt=jpeg
+  然后我赶紧去关注了一下最近老薛的新闻…在感受了剧情的复杂和案情的扑朔迷离之后…我默默地学习了如何阅读合同…如何利用ELA分析图片…如何写作文…如何查别人的银行流水…知识点有点多…让我缓一会…</span>
+ 所以呢，这次的主题是分析老薛最新微博的评论，分析评论粉丝们的心情状态，且听我娓娓道来。</span>
+  http://blog.csdn.net/gamer_gyt/article/details/51839159</span>
+下面是通过登录App_key和App_secret方式访问微博API的代码，代码是基于py2的。py3对weibo模块使用存在一定问题。</span>
+    http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI,</span>
+微博API有声明调用微博评论API需要获取用户授权，但是捏，只要知道单条微博的id，就可以调用这个API了，关于单条微博的id如何获取在后面会说(小声一点，千万别让微博知道，万一封了呢)。</span>
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibRvRgj8QOhxDAfwPfx5KcCzMib1uPYFatxyEiacnxuGpXUDyqTDrGVxOA/0?wx_fmt=png
+ 文档中也给出了关键数据的json接口名称。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibpcCib8ic7wr9vtkdliaej3zMl2k1oNjOCsXnPcppLSuOlcnRDicvvypymg/0?wx_fmt=png
+ 如果我们要获取微博评论的内容，只需要调用text接口即可。</span>
+ <span style="font-size: 15px;">2.微博爬虫</span>通过调用新浪微博API的方式，我们就可以简单获取单条微博的评论信息了，为啥说简单呢，因为人红信息贵啊！你以为大V的微博就这么免费的给你API调用了吗，非认证应用开发者单日只能请求几千次API，这对像老薛这样单条微博几十万评论的大V来说…太少了(ＴＴ)</span>
+ 所以捏，还是要写微博爬虫。</span>
+ 正所谓，知己知彼百战不殆，新浪作为大厂，怎么说也是身经百战，必定是经历了无数场爬虫与反爬之间的战争，必然有着健全的反爬策略。正所谓，强敌面前，绕道而行，有位大佬说得好，爬网站，先爬移动端：</span><span style="font-size: 15px;">https://m.weibo.cn/</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibzwAvU9PTWsbAqTXrStG4O6gNyHWPvtagCLCvoHySzjibiaKm3Y1LOz3Q/0?wx_fmt=png
+登录微博后，进入到老薛回应P图事件的微博中去，_(:зゝ∠)_老薛啊，怪我，怪我来得太晚了，点进去的时候已经有70w+的评论了(截止至发文当天已经100w+的评论了)，可以看到安静的微博下粉丝们不安的心…</span>
+ 移动端微博的网址显得肥肠简单，不似PC端那么复杂而不明逻辑</span>
+ 多点几条微博就可以知道status后面的数字，就是单条微博的id了。</span>
+ 评论里包含了热门评论和最新评论俩种，但无论是哪种评论，继续往下翻网址都不会变化。江湖惯例(不懂江湖惯例的去看我之前的文)，chrome浏览器右键“检查”，观察network变化。</span>
+ 从network的xhr文件中，可以得知热门评论的变化规律是：</span>
+    打开https://m.weibo.cn/single/rcList?format=cards&amp;id=4154417035431509&amp;type=comment&amp;hot=1&amp;page=1 就可以看到热门评论的json文件。</span>
+ 接下来就是套路了，伪装浏览器header，读取json文件，遍历每一页…这都不是重点！而且这些我以前都讲过~直接上代码~这里开始是py3的代码了~</span>
+  这里有几点说明：</span>
+ 1.设置爬取间隔时间之后，微博爬虫被禁的概率降低了很多(特别是晚上)
+2.新浪每次返回的json数据条数随机，所以翻页之后会出现数据重复的情况，所以用到了数据去重，这会在后面说。
+3.在text和source中添加了去除emoji表情的代码(折腾了很久写不进数据库，差点就从删库到跑路了/(ㄒoㄒ)/)，同时也去除了掺杂其中的回复他人的html代码。
+4.我只写了读取数据，没有写如何保存，因为我们要用到数！据！库！辣！(这是重点！敲黑板)</span>
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibh2vHsgyhy71zByvZ0J2pwrKTAQQn7tYTrzacNCJxvHygpI83n2kUVg/0?wx_fmt=jpeg
+ 但是如果爬一会，保存一次数据，这数据量要一大起来…冷冷的文件在脸上胡乱地拍…我的心就像被…这时候我们就需要用到数据库了。</span>
+ 数据库，顾名思义，就是存放数据的仓库，数据库作为一个发展了60多年的管理系统，有着庞大的应用领域和复杂的功能……好了我编不下去了。</span>
+ 在本文中，数据库的主要作用是<strong>AI式的excel表格</strong>(●—●)。在爬虫进行的过程中，爬到一个数就存进去，爬到一个数就存进去，即使爬虫程序运行中断，中断前爬到的数据都会存放在数据库中。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ib03sk0QxiagvOSoI0ReKHnsQibfl9YFibt6RNBzBWB2cvUd08JVYslvSEw/0?wx_fmt=png
+ 大多数数据库都能与python对接使用的，米酱知道的有mysql、sqlite、mongodb、redis。这里用的是mysql，mac上</span><span style="font-size: 15px;">mysql的安装</span><span style="font-size: 15px;">，管理数据库的软件</span><span style="font-size: 15px;">Navicat使用帮助</span><span style="font-size: 15px;">，其他系统自己找吧，安装使用过程中有啥问题，请不要来找我(逃</span>
+ 根据上面的代码，在navicat中创建数据库、表和域以及域的格式。在Python程序中添加代码。</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibGHLMia4X6s7FXzx76icMfuwWFt6PY2b214Vd1rr3Pmt4icEqdAHM9lMSA/0?wx_fmt=png
+  
+ 在进行下一步研究之前，我们还要将数据库中的内容读取出来，python中数据库的读取代码也很简单。</span>
+  这样之前爬取的信息就被读取出来了，但是前面也说了，微博爬虫翻页时返回数据条数随机，所以会出现重复的状况，所以读取之后，需要用</span><span style="font-size: 15px;">if…not in</span><span style="font-size: 15px;">语句进行一个数据去重。</span>
+  完整代码在文末。</span>
+   我参(ban)考(yun)了一些现成的情感分析算法，对爬取的评论进行分析，错误率肥肠高_(:зゝ∠)_，这可肿么办？难道要重新设计算法？米酱仿佛遇到了人生中第一个因为语文没学好而引发的重大问题……</span>
+ 当然像米酱这样灵(lan)活(duo)的姑娘，自然是很快发现了python中较为出名的一个中文NLP库：</span><span style="font-size: 15px;">snowNLP</span><span style="font-size: 15px;">。snowNLP调用的方法比较简单，源码中详细解释了调用方法，和生成结果。</span>
+  这段代码中获取了读取数据库后由评论主体text生成的列表文件，并依次对每一个评论进行情感值分析。snowNLP能够根据给出的句子生成一个0-1之间的值，当值大于0.5时代表句子的情感极性偏向积极，当分值小于0.5时，情感极性偏向消极，当然越偏向俩头，情绪越明显咯，让我们来看看测试评论的结果。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibokniboCqia1wINKBSXgKGcmJg0mQZ9rp48VWJjF0nJaedttNwSNGo6BQ/0?wx_fmt=png
+ 第一条:恶心 呸 给出了0.01的分值，最后一条:力挺薛之谦 
+给出了0.99的分值。看其他几句基本符合语境的态度，当需要评测单个商品的评价态度时就可以使用snowNLP。但是由于老薛的评论中涉及到三个人，他自己，李雨桐，高磊鑫，算法无法判断评论是关于谁的情感值，又因为微博评论可以粉丝之间互相回复，这让判断评论的主体是谁更加扑朔迷离(机器表示我学习不能啊…)。</span>
+ 
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibyo6UFsTEzIIvC3gfOWSmoP63OznrCONFvRU17icyQFJ8csO2NY4mlXA/0?wx_fmt=gif
+    对上节经过处理得到的情感值列表进行统计，并生成分布图。下图数据采集时间9月27日19时，采集评论2w条。</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibt9792Xukso02ibmTiaLK1aUcd07iaR6y3Q9pK3AYr5POc1icv6BK468iaow/0?wx_fmt=png
+我还顺便(真的是顺便，正经脸)爬了李雨桐将网友转账捐款的微博的2w条评论。</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibTaz29oDQRfo0LTT3277Qh5tmmg8CNo0UHzDUnTUl1tTTPJYtUMf8TQ/0?wx_fmt=png
+我又顺顺便(真的顺便，看我真诚的眼神)爬了陈赫出轨时发表我错了博文的微博评论。</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttup21tRm0AGWXCSI7hea39ibvjqaqRqlvh4PlNXqLx9dYKOQ3cl6oGDpMe8vqsIU5HVlIZGNl1fMwA/0?wx_fmt=png
+根据这三张图，可以看到情感值在接近0、1两端以及0.5左右位置频率较高，说明粉丝们对于此类事件的情绪无论是积极还是消极都是比较明显的。但也可以从图片中看到一些微妙的差别，老薛的微博中情感值接近1的数量高于接近0的数量，但都没有超过700，李雨桐微博中情感值接近1的数量远低于接近0的数量，甚至接近0的数目到达了1000以上，但二者都超过了700，而陈赫的微博分析结果，俩者则都接近800。由于算法存在一定误差，不代表真实评论结果，我就不再多分析了(你们懂的)。</span>
+   我又对评论中出现的微博表情进行了统计。</span>
+  

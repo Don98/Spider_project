@@ -1,0 +1,116 @@
+Python从零开始系列连载（2）——jupyter的常用操作 前文传送门：<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484449&amp;idx=2&amp;sn=810839dc14c3782062f6b45a9bb1072c&amp;chksm=ec5edb5cdb29524ac988452e276b24397fe37a6700f147d8a8357bb7a046d7e67f3cccff8d5d&amp;scene=21#wechat_redirect" target="_blank">Python从零开始系列连载（1）——安装环境</a>
+
+ 前文说了学Python先安装anaconda的环境
+我们现在来看看安装完之后怎么用
+ 我已经迫不及待写代码了
+洋洋洒洒几千行
+ 喂，烙铁，你的口水都流出来了，快醒醒【用力拍
+ 不积跬步无以至千里
+请背诵下一句：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6D5TibkIoiasENjPzslB7ofcia50KOXHW1R3ebbOAsXGjdKwLwECmfaUaA/0?wx_fmt=png
+ 好吧 
+原谅你了 
+咱们还是继续学Python吧
+ 上课了哈【敲黑板
+在弹出的网页（怎么弹出的请看上文）中
+按照红圈操作：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6CW4GebSpkaRYWSUmnLQEMM5A9bdNUbfLsRdSJu5IbU0QQXlIHUouJw/0?wx_fmt=png
+ 弹出一个新的页面：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6M231iboFNPHIw4kfWuiahkCtHMm4tcLfymVibH2px2n8DrwUl8Vwg0GiaQ/0?wx_fmt=png
+ 什么，你想写代码了？不想先学各种操作？好吧，我们来写点代码
+ 【邪魅一笑
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6UcKhU3suPdIYc9EAibefQhvqHYHsibFgFbYYAyf2YDILEs7j62Z6NwqA/0?wx_fmt=png
+ 1.在框里输入相应代码
+  2.点击切歌按钮
+ 然后打印出了一行Hello World!
+ 好了，你的第一次没了~
+ 接下来我们还是静下心来学习常用操作吧，和我一起把知（姿）识（势）都解锁一下。
+ 下课【你可能上了一节假课
+ 这节课好短啊，我开心就好，你随意
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6RkhCFw1z1FrmBmfgLlAH6k8KNb1WPKGR3zhzw0vibciaxjCfTPrvBcCQ/0?wx_fmt=png
+ 好的，我布置一下作业，大家把jupyter安装好
+打印一下<strong>
+乐子好帅</strong>
+ 上课啦，我们继续学习常用操作
+我们先从菜单说起
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq68JGjqmk4H0lfxibujqpFJAanC1ONeBDyykH4hJnhHGibTeN9fofeeDdQ/0?wx_fmt=png
+ 看得我都饿了
+ 菜单是这样的
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6FFDnxD9EtqECBhXkYZtc7wI6tvQAoXdh1gCyuaHKdLuo9q3SOgdNLg/0?wx_fmt=png
+<br  />1. FileFile里面比较常用的就是将代码另存为其他格式
+特别是.py 格式
+因为有些人喜欢用其他编辑器
+例如Pycharm
+而jupyter保存的内容是 .ipynb 格式的
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6ic19GPPXXzCYl6j0zHj7PmUkxmUE0QAbPdJEmvcX1auxOPQpcHjxlEw/0?wx_fmt=png
+ 2.Edit说实话，这个里面的功能我从未用过
+ 3.View说实话，这个里面的功能我从未用过
+
+ 4.Insert说实话，这个里面的功能我从未用过
+ 5.Cell说实话，这个里面的功能我从未用过
+
+ 没错 我就是复读机！
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6H3WOWibdsSaAxUAZ95fRDbxwgDIic0aaA9WyKQBp5bBYicl2MiaaTmSbjQ/0?wx_fmt=png
+ 小学时候都用他【暴露年龄了
+ 6.Kernelhttp://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6tO4j3Uc4K1IaJuA2vjwZuFP6o1WzZSLicevaZQMlSfwCLN3iadSgRkjQ/0?wx_fmt=png
+ 这个很有用的！
+Interrupt可以打断正在执行的程序【说实话，我用的时候经常打不断
+Restart可以在Interrupt执行没效果的时候使用，可以重启一下核心（Kernel）
+Restart&amp;Clear Output可以重启同时清空原有的运行结果（例如上节课我们打印显示的"Hello World！"）
+
+ 7.Helphttp://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6cRvkqjLDKIvPpcpsdXYiayRNUvTPS3JxXJ9SWSD3fqaK0NZPqbH8Hqg/0?wx_fmt=png
+ help可以链接到很多相关的官方文档，例如做数据分析常用的numpy pandas
+
+做数据可视化使用的matplotlib
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6qS0dM3IVSW4Ribialjiah58fFckUNMukPlvbJo4ofgUNyLTEf3iatcNUug/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6oQsmDvDQpkxX9UMMUp3AbJ04OyhCMgepblPIwYOLMjAVtVYzw19DbA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq61OrE6VQeKiah8tJhVRXI940qbEaGdNB5ib3YItpdEZ5tl1JycN56OkvA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6EIKf8vicdhb9cZOXc0ljec9rs92Uw4jD0U1rxXPawn2PmDFLXgkG3SQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq60PuGc83icvvKmRecyiad21Gp44aZyJ3fxNbYfsPll00oeA3ek0gTb7rg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6Vk9iachvPNlH9uFKU2gTNNRgDibwCcmv7MOJPndJowEsQIyofXVwJNOg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6TkLYiaLOicRMpXWFzCe0Gk70MKgUx4wGKH7fLBDTGs2CO6f0ZZxibkkAQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6EYK4n13pAWA4JdTJD5dxTDSnMkRy98D2SwI1ibYvBAB6F3XPogYRQwQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq62oNPUVWHsxHqHAibBSvgxwP9KAfM2Gm7udfHcHu8yQxzu1NicIQf1z5A/0?wx_fmt=png
+ 可能这样说你也不理解，我示范一下：
+               好了，下课【突如其来的下课】
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq60iax1y449ceencSSAaLcY3iao5PRH8QFFRwEJlicm2WhaQK2jqcW8eRVA/0?wx_fmt=png
+ 什么，又要作业？？？
+这个真没有，我又不是搞应试教育
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6ZQfUtHqF3LoQYiafEvHKRdsPrOOwRTyW0QgZeyRf6GEeBd0knwkefDw/0?wx_fmt=png
+ 接着上文：
+可能这样说你也不理解，我示范一下：
+
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6et3os38icVv30t2aibgIcXFItq5ZlD1hk7e4ATB3mGtWoMbr46ZMRIEg/0?wx_fmt=png
+ 我们在栏位中输入 1+1，然后点击切歌键
+显示计算结果是2
+ 我们选中1+1这部分，然后选择Markdown
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6X9qdI7mbsyrknKnqPqSaic5tfyzsxGBzkK99iaOSicjxwrYpSlib1aUib1w/0?wx_fmt=png
+ 发现结果2不见了，重新定位到1+1
+然后按切歌键，好像什么都没发生，除了光标移到下一行，1+1部分和背景融为一体了
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6jjFg15wkX5JfT2JXF540Rtj5TBDS1QFSuzTqdePL8uRW09iaaLpUyDQ/0?wx_fmt=png
+是的，Markdown的内容，系统是不当做代码执行的，我们可以写注释，文档说明等
+ 如果需要修改Markdown内容，我们双击该部分，就可以变成原来可编辑模式
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6AY2DgcqJKRkSicZ1LWTuBtnkqPIlmO3UVwr2AwiaJRRnibpczkX5DyfVg/0?wx_fmt=png
+ 我们在1+1前方加上井号和空格，就会像旺仔一样比你聪明比你强
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6um8gX8yNxojltcbScSNTAN6rOJ4PSjRLPXCIJ5IuYD2LhvEcHVj09w/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6BUW2kXclUxFHV4hJTaxO7zX4TStGfsibSVmFIe3Zahkc9mHyVdufJYA/0?wx_fmt=png
+ 然后按切歌键
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6ZSB8ibD6I8JUScgMrCDGEhRWwBSfxF4BuuicUZqE2j1JdOOibTGfpa0Og/0?wx_fmt=png
+ 可以得到一个大的标题（如上图），等同于Heading的作用
+ 划重点：切歌（运行本栏位代码光标跳到下一栏）的快捷键：Shift+Enter运行本栏位代码光标不跳到下一栏的快捷键：Ctrl+Enter 什么，你不信？你自己试试
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq63M9XWNSpKysZBX1mdyLu192Niby5VicKYxtiaSDFau9XWnibElN0hb1mOw/0?wx_fmt=png
+ 让你练习的目的达到
+ 什么？怎么关闭？这还要我教你么...你懂的！
+ 划重点：在使用jupyter时一个黑色的类似命令提示栏窗口（记录着你的操作）千万别关了不写代码再关掉 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttkS4UNbkFnaYEyf1Cegyq6JMvw6xEG9JCIQBbbvhR3Licg3n8M6oh1rcNIpyRSnSy6OLo5dMicRuyQ/0?wx_fmt=png
+ 如果不小心关了jupyter的浏览器页面，自己打开浏览器
+输入
+http://localhost:8888/tree
+
+即可，前提是jupyter黑色窗口没关闭
+
+ 今天作业：按照我的操作走一遍
+
+ 下课
+ 人生苦短，我选Python
+未完待续，连载中......
+ 

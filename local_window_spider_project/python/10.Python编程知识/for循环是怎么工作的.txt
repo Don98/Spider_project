@@ -1,0 +1,2 @@
+b'for\xe5\xbe\xaa\xe7\x8e\xaf\xe6\x98\xaf\xe6\x80\x8e\xe4\xb9\x88\xe5\xb7\xa5\xe4\xbd\x9c\xe7\x9a\x84'      for 循环是对容器进行迭代的过程，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 65);">什么是迭代？迭代就是从某个容器对象中逐个地读取元素，直到容器中没有更多元素为止。</span></strong>那么，哪些对象支持迭代操作？任何对象都可以吗？先随便自定义一个类试试，看行不行：
+   那么 for 语句又是如何循环的呢？到这里，恐怕你也猜到了，它的步骤是：

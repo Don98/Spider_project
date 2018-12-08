@@ -1,0 +1,27 @@
+b'Python\xe7\x88\xac\xe8\x99\xab\xe5\xae\x9e\xe6\x88\x98\xe4\xb8\x89\xe4\xb9\x8b\xe5\xae\x9e\xe7\x8e\xb0\xe5\xb1\xb1\xe4\xb8\x9c\xe5\xa4\xa7\xe5\xad\xa6\xe6\x97\xa0\xe7\xba\xbf\xe7\xbd\x91\xe7\xbb\x9c\xe6\x8e\x89\xe7\xba\xbf\xe8\x87\xaa\xe5\x8a\xa8\xe9\x87\x8d\xe8\xbf\x9e'最近山大软件园校区QLSC_STU无线网掉线掉的厉害，连上之后平均十分钟左右掉线一次，很是让人心烦，还能不能愉快地上自习了？能忍吗？反正我是不能忍了，嗯，自己动手，丰衣足食！写个程序解决掉它！
+假若你不能连这个无线，那就照照思路啦～
+首先我们看一下那个验证页面是咋样滴，上个图先
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts1Yh7XUwGPraC09qxu14BiadImbZ18DFhzI6d93gib5QuKOhricCRV8pbrrw2OVc6Ho8rAGIgAJkBzA/0?wx_fmt=png
+嘿，这界面还算可以把，需要我们输入的东西就是俩，一个就是学号，另一个是身份证号后六位，然后就可以登录，享受免费的无线网啦。
+不过不知道谁设置了个登录时长，一段时间后就会掉线了，于是，自动模拟登陆系统就要应运而生啦。
+来，我们先点击一下连接，看一下浏览器怎么工作的。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts1Yh7XUwGPraC09qxu14BiaYibVxmYQ7eNCCtBUYdaySUr3WRvudT4g9C1BAU4K7KfB3CnY20rZmoA/0?wx_fmt=png
+ClientIP：当前客户端的IP地址，在山大软件园校区这个地址是211.87开头的
+timeoutvalue：连接等待时间，也就是俗话说的timeout
+StartTime：登录时间，也就是在你登录的那一刻的时间戳，这个时间戳是13位的，精确到了毫秒，不过一般是10位的，我们加3个0就好了
+shkOvertime：登录持续时间，这个数据默认是720，也就是12分钟之后，登录就失效了，自动掉线，我们可以手动更改
+username：学号
+password：密码，也就是我们身份证号后六位
+我们需要在登录的时候把form表单中的所有信息都POST一下，然后就可以完成登录啦。 万事俱备，只欠东风，来来来，程序写起来！
+说走咱就走啊，天上的星星参北斗啊！
+登陆地址：Request URL:http://192.168.8.10/portal/login.jsp?Flag=0
+首先，我们需要验证一下IP地址，先写一个获取IP地址的函数，首先判断当前IP是不是211.87开头的，如果是的话，证明连接的IP是有效的。 首先我们写一个获取本机IP的方法：
+  如果大家对此不熟悉，可以参见
+Urllib的基本使用：http://cuiqingcai.com/947.html
+这样，登录后的结果就会保存在result变量中，我们只需要从result中提取出我们需要的数据就可以了。
+接下来，我们就分析一下数据啦，结果有这么几种：
+1.登录成功 2.已经登录 3.用户不存在 4.密码错误 5.未知错误
+好，利用result分析一下结果
+ 增加循环检测 既然是检测网络是否断开，那么我们只需要每隔一段时间检测一下就好了，那就10秒吧。
+因为这个10秒是可配置的，为了方便配置，统一配置到__init__方法里面。
+  

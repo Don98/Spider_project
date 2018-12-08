@@ -1,0 +1,67 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xe5\x85\xa5\xe9\x97\xa8\xe7\xaf\x87'数据取经团（公众号：zlx19930503）
+专注R、Python数据分析挖掘、可视化、机器学习等
+ 01、数据可视化是什么<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+02、数据可视化的一般流程
+03、常见的数据种类
+04、通过可视化你想表达什么信息
+05、选择具体的可视化形式
+06、图表设计原则
+07、常用的可视化工具
+数据可视化主要旨在借助于图形化手段，清晰有效地传达与沟通信息（来源于百度百科）。也就是说可视化的存在是为了帮助我们更好的去传递信息。
+首先我们需要对我们现有的数据进行分析，得出自己的结论，明确要表达的信息和主题（即你通过图表要说明什么问题）。然后根据这个目的在现有的或你知道的图表信息库中选择能够满足你目标的图表。最后开始动手制作图表，并对图表进行美化、检查，直至最后图表完成。
+这里我们容易犯的一个错误是：先设想要达到的可视化效果，然后在去寻找相应的数据。这样经常会造成：“现有的数据不能够做出事先设想的可视化效果，或者是想要制作理想的图表需要获取更多的数据。”
+为了更好的进行可视化，我们将数据分为分类数据、时序数据、空间数据、多元变量数据四大类。
+1、分类数据
+分类数据是指针反映事物类别的数据。如：用户的设备可以分为Iphone用户和andorid用户两种；支付方式可以分为支付宝、微信、现金支付三种等。诸如此类的分类所得到的数据被称为分类数据。
+2、时序数据
+时序数据也称时间序列数据，是指同一统一指标按时间顺序记录的数据列。如:每个月的新增用户数量、某公司近十年每年的GMV等。诸如此类按时间顺序来记录的指标对应的数据成为时序数据。
+3、空间数据
+空间数据是指用来表示空间实体的位置、形状、大小及其分布特征诸多方面信息的数据，它可以用来描述来自现实世界的目标，它具有定位、定性、时间和空间关系等特性。空间数据是一种用点、线、面以及实体等基本空间数据结构来表示人们赖以生存的自然世界的数据。
+4、多变量数据
+数据通常以表格形式的出现，表格中有多个列，每一列代表一个变量，将这份数据就称为多变量数据，多变量常用来研究变量之间的相关性。即用来找出影响某一指标的因素有哪些。
+表达某个什么结论（平台上的用户中哪个地区的用户较多、数据分析领域最具有权威的人物是谁、2016年的GMV环比去年是增加类还是降低了）。
+阐述某种现象（学生成绩好坏可能与家庭背景是否具有一定的相关性、应届生收入和毕业院校是否有一定的相关性）。
+明确了我们要借助图表传递什么信息以后我们就可以着手选择合适的图表了，这里我们借助于《数据之美》作者提出的观点，不是列举什么柱状图、折线图等具体的图表，而是介绍一些组成这些图表的零部件。比如说柱状图就是有长度和直角坐标系组成的。我们只需要选择所需的零部件进行组合即可。接下来具体看一下这些零部件。
+基于数据的零部件有：视觉暗示、坐标系、标尺、背景信息以及前面四种形式的任意组合。
+1、视觉暗示：
+是指通过查看图表就可以与潜意识中的意识进行联系从而得出图表表达的意识。常用的视觉暗示主要有：位置（位置高低）、长度（长短）、角度（大小）、方向（方向上升还是下降）、形状（不同形状代表不同分类）、面积（面积大小）、体积（体积大小）、饱和度（色调的强度，就是颜色的深浅）、色调（不同颜色）。
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6Mr2xuCOlx1AL24E8YpSbOFMyJoeiaW8NtaYnPm37Nk6ibwfO2REwKOZvjI26PsclVtHG2J5Q1r1ialxw/640?
+2、坐标系：
+这里的坐标系和我们之前数学中学到的坐标系是相同的，只不过坐标轴的意义可能稍有不同。常见的坐标系种类有：直角坐标系、极坐标系和地理坐标系。
+http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6Mr2xuCOlx1AL24E8YpSbOFMGmA0TWZlG9MAWb7t5woXHmpIOtTsM3Bt8v3JJhXIfY7ZOCmWkjNhmg/640?
+大家对直角坐标系、极坐标系比较熟悉，这里说一下地理坐标系。
+地理坐标系是使用三维球面来定义地球表面位置，以实现通过经纬度对地球表面点位引用的坐标系。但是我们在进行数据可视化的时候一般用投影的方法把其从三维数据转化成二维的平面图形。
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6MpmSib1fklkPojBwH3NXg4VsXvSRbBkibxyibnvoyKHN6QdNp4edAA2EhibbiaLB5P9mq7UzPuBagdcLBg/640?wx_fmt=jpeg
+3、标尺：
+前面说到的三种坐标系只是定义了展示数据的维度和方向，而标尺的作用是用来衡量不同方向和维度上的大小，其实和我们熟悉的刻度挺像。
+4、背景信息：
+此处的背景和我们在语文中学习到的背景是一个概念，是为了说明数据的相关信息（who、what、when、where、why），使数据更加清晰，便于读者更好的理解。
+5、组合组件：
+组合组件就是根据目标用途将上面四种信息进行组合，就是我们最后要呈现的图表样式，具体如何组合视你的目标而定。
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6MpmSib1fklkPojBwH3NXg4VsicaLdZIQlczia2wFRbn6wzqDbeMQc5CYdSxQ9bVNKSWJYh1nXboDCZoA/640?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6MpmSib1fklkPojBwH3NXg4Vsia6sROVNCJpCxPCODsQlUEVXSM3oQictfd2K9mbkcibo0fjGMrluyoFrA/640?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6MpmSib1fklkPojBwH3NXg4VsJqX2sovq7TGr30OibBkQGrauHJTSYlLOjT4Oa6OWWPNOSNSibGkopwXA/640?wx_fmt=jpeg
+图表设计原则其实也可以看作是图表美化的一部分，因为我们之所以遵循设计原则就是为了让图表更好看一点。关于图表的设计我们可以分为三部分，分别为整体的排版布局、色彩搭配和字体。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+1、排版布局
+排版布局里面我们又可以分为两个。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+（1）最大化数据墨水比
+是指在墨水数量一定的情况下最大化数据墨水所占的比例。先来了解一下什么是数据墨水，什么是非数据墨水比。
+数据墨水是指为了呈现数据所用的墨水，在图表中主要是指柱状图的那些柱子，折线图的那根线之类的。而非数据墨水就是除了这些数据以外的元素所用的墨水，在图表中主要指网格线、坐标轴、填充 背景等元素。
+这个原则就是告诉我们在设计的时候尽可能多的重点突出数据元素而淡化非数据元素。
+（2）CRAP原则
+是指对比（Contrast）、重复（Repetition）、对齐（Alignment）、亲密性（Proximity）这四大基本原则。
+对比（Contrast）<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />对比的基本思想是， 要避免页面上的元素太过相似。 如果元素（字体、 颜色、大小、 线宽、 形状、 空间等） 不相同， 那就干脆让它们截然不同。 要让页面引人注目， 对比通常是最重要的一个因素， 正是它能使读者首先看这个页面。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+重复（Repetition）<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />让设计中的视觉要素在整个作品中重复出现。 可以重复颜色、 形状、 材质、空间关系、 线宽、 字体、 大小和图片， 等等。 这样一来， 既能增加条理性， 还可以加强统一性。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+对齐（Alignment）<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />任何东西都不能在页面上随意安放。 每个元素都应当与页面上的另一个元素有某种视觉联系。 这样能建立一种清晰、 精巧而且清爽的外观。<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />
+亲密性（Proximity）<br style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "  />彼此相关的项应当靠近， 归组在一起。 如果多个项相互之间存在很近的亲密性， 它们就会成为一个视觉单元， 而不是多个孤立的元素。 这有助于组织信息， 减少混乱， 为读者提供清晰的结构。
+2、配色
+在配色里面也主要有两种方案。
+（1）第一种就是模仿，去找一些看起来比较专业好看的图表配色，然后把该配色方案拷贝过来供自己所用。这里可能会用到RGB获取的工具，可以利用windows自带的画图工具进行获取，详情点击：https://jingyan.baidu.com/article/cbcede0728258002f40b4d27.html
+或者是现在有一些专业的色彩搭配网站，不过这种的前提是你得事先确定了其中一种色调，然后依据这一种去匹配其他的颜色。（我现在就是用的这种）
+（2）第二种相比第一种就比较难点，需要自己去学一些基础的色彩理论。这个对于非专业的可能有点难度。
+3、字体
+字体分为有衬线和无衬线两种。
+http://mmbiz.qpic.cn/mmbiz_png/TR2XGABn6Mr2xuCOlx1AL24E8YpSbOFMAjz376xm5VHAdVdKNUgblnRVMZVO5JWd4SJib88E6JI1Oo27aezxglw/640?wx_fmt=png
+中文常见的衬线和非衬线的两种字体分别是宋体和黑体，而英文对应的是Times New Roman和Arial。
+http://mmbiz.qpic.cn/mmbiz_jpg/TR2XGABn6Mr2xuCOlx1AL24E8YpSbOFML4VV8XKtSlUWG1ibvAky1C75M27QCYVuqUoVzsJ9jjoFGgsn6bicf7lA/640?wx_fmt=jpeg
+在图表中我们一般使用无衬线字体，而为了方便我们一般默认使用Arial字体，8-10磅大小。

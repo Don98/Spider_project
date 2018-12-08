@@ -1,0 +1,64 @@
+b'\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe5\xb8\x88\xe7\x9a\x84\xe5\xbf\x85\xe8\xaf\xbb\xe4\xb9\xa6\xe5\x8d\x95'作者：秦路，天善智能特约专家。资深数据分析师，数据化运营专家。擅长结合运营和数据，建立数据化运营体系。
+个人公众号：秦路（微信ID：tracykanc）<span style="text-align: justify; ">。</span>
+ 有不少人留言希望我推荐数据分析的书单，刚好即将春节，无论是假日学习还是年后，都值得充电。读书最好的时候是学生时期，其次是现在。内容按照 <a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484105&amp;idx=1&amp;sn=855a86e93df6e96393335a96f42840e0&amp;chksm=ec5eddb4db2954a26780d7e552e91546f3bad38d29e60b9d80dc03bf26ae768a24f94abef0de&amp;scene=21#wechat_redirect" target="_blank" style="">《如何七周成为数据分析师
+》</a>
+的顺序。
+数据分析是一门专业且跨越多个领域的学科，虽然我每篇公众号都足够篇幅（乃至我自己觉得啰嗦），可我还是得承认存在缺漏。如果有好书作为参考，对数据分析能力的成长更有帮助。
+这份书单权作入门级推荐，如果大家有更好的欢迎留言说明。我不能保证全部看过，毕竟基础书没必要看几本，但我尽量做到客观。建议大家根据自己基础挑选，不要贪多。
+大家多支持正版。
+  http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAwMUp6Z2hF4A8JEuU9Pcfek1GhQOI3skVBV96hxAKzP27URtr8iaiczug/640?wx_fmt=png
+知名度比较高的一套书，适合新手，优点是它和数据分析结合，而不是单纯地学习函数。学会函数适用的场景和过程比它本身更重要。
+是否需要学习VBA是仁者见仁的答案。我个人不建议。Excel VBA的最大优势是适用性广，哪怕去其他行业其他职位，都离不开Excel，这时候它就是一个工作加分的亮点。但是在互联网行业，对数据分析师，VBA的性价比就不高了。
+这里只推荐一本，因为我就翻过上面这本，还没全看…
+ 数据可视化的书不多。市面上多以编程为主，面向新手和设计的教程寥寥无几。 如果只是了解图表，看Excel的书籍也管用。
+http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAiax5OMCeQiaFgkjROhoYkmGAcWIamID0Levc59hbYlN74tI6HEMK0kmQ/0?
+内容很丰富，涉及可视化的方方面面，也囊括更类编程语言和设计软件：Python+JS+R+Excel。作者还有另外一本书《数据之美》。
+可视化是一门侧重灵感的学科，有一种入门技巧是从他人设计中学习，从模仿开始，了解他人是如何设计的，这个网络上有大量的信息图可以参考。当然数据分析师更需要的是如何发现，别只学习展示。
+英文足够好，可以看Edward Tufte的著作：《The Visual Display of Quantitative Information》、《Envisioning Information》、《Beautiful Evidence》。他是数据可视化的领军人物，他的理念是反对为艺术效果而混淆或者简化数据。暂时没有中文版。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA4r2usOAlQFcEf4ibRm6rPC2X7iblibkr2nQXvxa3JCaTDTM9QYGNWYbgQ/0?
+ 分析思维首推《金字塔原理》，金字塔原理有些人说它晦涩难懂，我认为是芭芭拉这个老太有骗稿费之嫌，本书包含了报告、写文、演讲等诸多内容。可以细看可以快看。另外还有一本同名案例集，有兴趣可以买。
+另外麦肯锡相关的书籍还有《麦肯锡意识》《麦肯锡工具》《麦肯锡方法》等。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA8YibLvlliayqiaLrwKWfDWZVpmWg2ZONQC4YUoEn9Gr2Hd9bcibXHvJaxQ/0?
+ 深入浅出系列是对新手非常友好的丛书，用生动但啰嗦的语言讲解案例。厚厚的一本书翻起来很快。本书涉及的基础概念比较广，包含一点统计学知识，学下来对数据分析思维会有一个大概了解。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAjvFTtCW2woUq8EpBjsicxiashC4aGMvj3xnIJMKbBssMgxXDQNEFxmdA/0?
+ 国外的精益系列一直以互联网创业作内容导向，本书也属于此类。如果是互联网行业相关，可以看看。它介绍了不同领域的指标，以及产品不同时期的侧重点。案例都是欧美，这部分做参考用。
+接下来的几本，是兴趣向读物。《黑天鹅》能拓展思维，讲叙了不确定性。《思考的技术》，大前研一的著作，也是咨询类经典。如果对咨询向的分析感兴趣，还可以看BCG系列，或者刷CaseBook。《批判性思维》，则是教你如何形成理性思维。
+数据库有很多种，常见有Oracle，MySQL，SQL Server等。我推荐学习MySQL，这是互联网公司的主流数据库。以后学习Hadoop生态时，MySQL也是最接近Hive语法的语言。
+MySQL不需要专门看书学习，因为数据分析师以查询为主，不需要考虑数据性能、数据安全和架构的问题。使用搜索引擎能解决90%的问题，我就是w3cschool学的。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAIpZNIT1lbPgp13xN8LJd3dnQNm7YojIbGIC1HTmjzCSsRzY8wBib7oA/0?
+ 如果真想买书看，可以看这本，适合新手向的学习，看基础概念和查询相关的章节即可。网络上大部分MySQL都是偏DBA的。
+如果想深入，可以看《高性能MySQL》，对分析师没啥用。至于另外一个方向NoSQL，对入门者还是小众了些。
+如果有余力，就学习正则表达式吧，清洗数据的工作就靠它了。
+统计学是比较大的范围，分析师往后还需要学线性代数和矩阵、关系代数等。初学者不需要掌握所有公式定理的数学推导，懂得如何应用就行用。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA1MCLHocgLOW30syooZRT5o3C7AU0icwAz0hFLljUjw1QYxCzPv67jWw/0?
+ 大概是最啰嗦的深入浅出系列，从卖橡皮鸭到赌博机的案例，囊括了常用的统计分析如假设检验、概率分布、描述统计、贝叶斯等。书本注重应用和趣味性，数学推理一般。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcASMiaicdfH4FyzrezDJuP2MJyIkQIMn1TfbBnx1NL870wCuL0J7VqWOeA/0?
+ 国外的经典教材，已经出到第十二版了。国外教材都有丰富有趣的案例，所以读起来会比国内的轻松不少。如果你还在读书，不妨买这本看一看。
+名字既然有商务与经济，所以书中辅以了大量的相关案例。书内容很多，看起来不会快，适合细读。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAsLmnWJv6dNotzTLg3CqEQZ4DpfwszvChbODJvGA58DUPas9IyTjBiaw/0?
+ 稍微有一些难度的英文书籍，属于进阶版统计学，国外很推崇。如果要往机器学习发展，这本书可以打下很好的基础。
+以上书籍的难度是逐步递增的。统计学是机器学习的基础，是概率、矩阵等实际应用。现在已经有很多统计工具，Excel的分析工具库、传统行业的SPSS、SAS以及R、Python等，使用过程都不用计算推导，大学考试才会考，现在都是计算机解决，轻松不少。
+不同领域的业务知识都不一样，这里以互联网举例。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAlZPCPMXdmJdibCZYjdib3Ip4I8fxrreseuibl9FDCESPB68omsngCtw7Q/0?
+增长黑客的概念就是随着这本书的畅销传播开来。增长黑客在国内即是数据分析+运营／产品的复合型人才。这本书好的地方在于拓展思路，告诉我们数据能够做什么，尤其是连AB测试都不清楚的新人。
+实际涉及的业务知识不多，我推荐，是希望新人能够了解数据驱动的概念，这本算是我走上数据化运营的启蒙读物了。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAD1zuDEuSwJAyEcSzbmtAl4mL67ib83PaL97w9jMUfQXjubGKIvicdEXg/0?
+ 知乎亮哥的书籍，互联网所有的数据都是和运营相关的，如果是新手，就以此学习业务知识。如果已经工作很多，就略过吧。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAhq1ykJPuIdVS39shngskOQcND67wtibbI0mDfrZVzK41BoAHb9FkZ5Q/0?
+ 互联网不再是网站的天下，但是移动端依旧有Web，我们在朋友圈看到的所有H5活动、第三方内容等，都是依托网页实现。网站的数据分析依旧有存在空间，网站的数据指标还是能够指导我们运营。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcABMm4ia2dXqmsq2meWe41NB0uy3E6TLvKhj3K4cy7iarBZM9jZ61KDqRQ/0?
+ 这本书涉及了数据挖掘，但是比较浅，可以作为数据分析师视野的承上启下，了解数据化运营的高级应用。特点是以阿里的实际工作相结合，可又因为保密原则不够详尽。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcABfLWFcB2XdXD51A0T3JmQeDbiahhosODribxzagzQgMx0yrZ8uH2iaGZQ/0?
+是各领域专家众筹完成的书本，比起传统的书籍，囊括范围更广。虽然没有深度讲解技术，但是各领域的案例都是一手资料，对业务的触类旁通理解有帮助。
+业务知识我不再多推荐，以后我会通过公众号文章的形式讲解。因为从我看来，市面上也没有详尽介绍数据角度下的用户行为、产品运营的书籍，都是点到为止。这一块内容，尽量从工作中去学，收获才是最大的。
+欢迎来到数据分析的最后殿堂，Python和R都是大分支，基本是前面所有内容的实现。Python的学习以PY3为前提，毕竟2017年了，我实在想不出不用Python3的理由。
+除了书籍，Python/R更多依靠博客和文档学习。Python的学习路径不陡峭，新手水平取决于查询能力，所以也请学会如何高效搜索。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAsvjssSRtsoFsU6rSQVYYicLY5l9bAsZaI4ctX3QBLHcB3ibr9dbD7ZRw/0?
+还是深入浅出系列，完全适合零基础的新人。需要注意的是，编程学习不同于其他知识，如果计算机基础不稳固，在使用中会遇到各类问题。知其然不知其所以然，这是本书缺点：能掌握，但是Bug比较多。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAe8YGwlYnZTCULWJ5gIlZH6cJsNQziadv59QoGPYibtUqbhaBpTyicD7gw/0?
+ 对于拥有编程基础的人，这本书系无巨细的有些啰嗦，不过对新人，可以避免不必要的坑。把它当作一本工具文档吧，当遇到不理解的内容随时翻阅。这是纸质书比电子书好的优势之一。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcAzh5pjePEiaDwYuBqliaPVX5zMjG6A8icdof6aeiapbAQtHDUzEyyxlsoHg/0?
+非新手向的书籍，成书较早，部分内容比较老旧。虽然学习中不会有问题，但很多Pandas函数已经有更优雅的写法了，例如df.query。每段代码都敲打一遍，千万行的数据清洗基本不会有大问题了。
+ http://mmbiz.qpic.cn/mmbiz_png/egDQPiaUh6ylR8hKGkiafBBU4VL6KZZXcA8EslhvwS8TW63bCSsHE5LK2SLwLWPPz5mu00kranqczEicWMgia3wQJQ/0?
+Python的进阶书，如果想要掌握更好的编程能力，这是一本经典，值得时时翻阅。注意，它更偏向程序员。
+ 

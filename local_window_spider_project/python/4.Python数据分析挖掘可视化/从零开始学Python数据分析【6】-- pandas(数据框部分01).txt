@@ -1,0 +1,27 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x906\xe3\x80\x91-- pandas(\xe6\x95\xb0\xe6\x8d\xae\xe6\xa1\x86\xe9\x83\xa8\xe5\x88\x8601)'               https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aicwUX94XfNdM42ZTW6jcVQmibAdsQqW5l0WxP92VWLGicEJibcY3nib3Rfg/640?wx_fmt=png
+ 发现，这样创建数据框的话，没有变量名称。该如何创建的时候加上列名称呢？
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5a8UyPPyJCZJAmhRtFxnYC7882mWzS2StxRhILSsSuwAO4mKGu9lgEJA/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5akgIRJcR1l7Tt2UqmOvPnbwDbwib0eLeap2YbcaYAgpYhwHmmiahhDuew/640?wx_fmt=png
+ 发现输出结果中列名称顺序与构造时的数据不一致，这是因为字典并非是一种序列，而是一种特殊的键值对关系的对象。如果你需要按照指定的列顺序排列，仍然可以通过columns参数实现。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aRD5ZHAmySlsAKaC3cmQORib7icVIDPLdRnawibmlxJ0icmfWpZP1IibiabMw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aZBb6qicFzWhYJYs2dp3TibzV3icaoqVTLIoDbyw95QUpy3Ffqn2HD950g/640?wx_fmt=png
+   在更多的场景下我们是读取外部数据，然后基于外部数据进行数据分析、可视化、数据挖掘等研究。这里跟大家介绍一下文本文件、电子表格和MySQL数据库的读取。
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5a1PzPo9Kf9q1XteZDqUuHFUFF2fbts35a5FV4LJLfUm0lLicwbHM4EwA/640?wx_fmt=png
+   由于原始数据文件books.txt没有字段名称，故设置header=None，并用names参数给表字段加上名称，usecols则是设置读取原始数据的哪些列。下面再来看看使用read_table函数读取csv文件。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aEhoZxW6kNlVgQ7R0jJuXDJD1cJkAFzjr5tYQn25BO7KdBRP5OdgibJw/640?wx_fmt=png
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aDYCQWBGgNtmxv9w5qnHn3Z6zCq9SrcxA9hWw0qoqWWyxHELNWjEHrA/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5axeNoK3HSiaOlQVk3rzCJiakHhmz9nnSAViboDIibqyiaampddG9fHMr21aA/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5awLJEviaw2XXH6o1NaSjHE3aIPaHffM4qia00HViaWVaHn7z7iaoBmfd2VA/640?wx_fmt=png
+   使用Python读取MySQL数据库，还需要<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">结合pymysql模块</strong></span>一起使用。这里我们就在本地的MySQL创建一个数据集，并用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">Python和<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">R实现数据库数据的读取。</span></span>
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aSrsUDQPibXhg14K6sf6vH7xSjnfvhefibER5gRLyTHcgAbvYGGX0me1w/640?wx_fmt=png
+ 运用<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">Python与<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">MySQL创建连接</span></span></strong><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;"><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">,并读取数据；</span></span>
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aWEHlhcZ4Yl7Nfh3JRpoSBOicpUicj4ynalqFDMeMawr2ibczYt4EwWMuQ/640?wx_fmt=png
+    https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5a6oLAbZOGyDPTyLX3CzWyqYE6RPTsOjEicibsyiaibKicKiapWicSDkMatjCmg/640?wx_fmt=png
+   外部数据读取到Python或R语言中，往往对数据需要做一些大概的了解，如最小值、最大值、平均值、各变量都是哪些数据类型、数据量如何等。我们来看看这些问题是如何解决的：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5acWSzsZgnVwV7ibze7Dst3PoNak5G7kCFm6QvljCHF0iag9vxD7Oibotiag/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aqAcm9KdfGGFvvqYCjialW1u4qibXZ1DaYibLTByDlOHfsud4Of5pSaM0g/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5a2icuxfmB5ric1R239UUUZav0YZKvIb6GmnPJmurUdFeBo5LyJlDunHZg/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aO8y6Z4B5bAVWX03uh0AxHHM5hxiaQqvf0ZajicTaFqpFlWl2KtIJmAIA/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5a9qFd1gjOeY9kMnxaEfJpbv1F6I2LS5ic0viacFn5CZglpb1cl8nOYDkQ/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUMpcZV10efrQvp1ZngzR5aXzzJB8A9Sx7lwWd0S6ae3NuO3HnO6NlIRQHAHPLlhGPpKyWgpnhknw/640?wx_fmt=png
+ 

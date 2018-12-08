@@ -1,0 +1,77 @@
+b'Python\xe9\x9d\xa2\xe5\x90\x91\xe5\xaf\xb9\xe8\xb1\xa1\xe7\xbc\x96\xe7\xa8\x8b\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xef\xbc\x884\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94 \xe5\xb0\x8f\xe5\xa7\x90\xe5\xa7\x90\xe8\xaf\xb7\xe5\xae\xa2\xe4\xb8\x8b\xe7\xaf\x87'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0?
+ Python面向对象编程从零开始（1）——从没对象到有对象：https://ask.hellobi.com/blog/wangdawei/8429
+Python面向对象编程从零开始（2）—— 与对象相互了解：https://ask.hellobi.com/blog/wangdawei/8446
+Python面向对象编程从零开始（3）—— 小姐姐请客上篇：https://ask.hellobi.com/blog/wangdawei/8463
+分割线---------------------------------------------------------------------------------------------------------------------------
+上次故事说到小姐姐请我吃大（pao）餐（mian），在煮泡面的过程中出了点问题，就是，不管煮多久泡面还是生的。
+于是，意识到是代码写的有问题，我们开始修改代码。
+ 原因在于：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icr5q9W6GS2EfrqiajxibvtYY8iaDtmE0aN9Fldoqyft4Q7XcfsibibIp5L0w/0?wx_fmt=png
+程序执行的流程可以理解为这样：
+1.创建了一个对象
+2.初始化
+3.打印状态
+4.打印信息调用（这时候输出的是初始化的信息，所以显示生的）
+5.对象调用cook方法，煮20分钟
+6.改变属性（cookedState）（这时候属性被改变为 煮糊了）
+所以，问题出在，我们改变了属性，却没有把改变后的属性显示出来。
+所以在最后加上一句即可：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icwXqZIb8IZlCpAQ3RCZfib4gfEK79z13gXj8HD2CIfVZbsuSicwcI1MMw/0?wx_fmt=png
+观察结果，虽然第二次煮了20分钟煮糊了，状态得到改变了，但是，时间却还是显示0分钟，这是为什么呢？
+我们回看代码：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icvxtmcXUw4V4PFdFwRToyS369ficzukMJHhBmz11FHicicS2Fjq1zuibPRw/0?wx_fmt=png
+我们在cook方法中，通过传参改变的只有cookedState，却没改变cookedLevel的值，所以cookedLevel一直保持初始值为0
+为了解决这个问题，我们要找个变量，就像累加器一样，每次调用cook方法，我就加上相应的值
+那么，在类中，变量其实可以认为用属性替代
+我们将cookedLevel这一属性作为累加器
+ 但两者并不是完全相同，以后可能会讲到
+这样，每次煮的时间就能累加存储进去了
+注意：对象多次调用某个方法，则要想用到上次的结果则要找到当前对象的一个属性，让属性值变化，因为属性值在对象结束时才消失（即理解为关掉程序则消失）http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icB2DZlp00d0d4Nhy3SxxDmx4zSGMrLdJO2nvLgstoDf7s85NNtQAa8w/0?wx_fmt=png
+ 这下，问题总算是解决了
+
+虽然煮面功能完成了，但是小姐姐提出了新问题，她表示之前都是泡面，没煮过面，所以不知道一次煮多久才能保证煮熟（不是生的也不煮糊）
+so easy，我说，接下来就是体现面向对象的高端之处了。
+因为之前20分钟煮糊了，所以在1~19分钟煮一分钟看一下面的状态就好
+可是这怎么实现呢
+如果你之前认真阅读并且有点小聪明，则应该看出来了吧
+什么？你没看出么
+好吧，我来详细分析一下：
+我们之前累加了状态并且输出状态，当我们把19分钟划分为1分钟一次依次看泡面状态是不是就ok了
+接下来撸起袖子干！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ic0BOtBjlibDr0WZjFPfAqNGXKHXmdjSL5vEyrtXmC9iaO3b4TlMicGrX9Q/0?wx_fmt=png
+ 我们看看结果
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icmczkx5seVY1oUbBGDlX3zCFUUEX1KrODpntmKiaEL5icwuD26LDKdKqQ/0?wx_fmt=png
+完了，又煮不熟了
+回看程序，发现我们最后是不是应该根据总的累积cookedLevel判断状态，而不是一次的cooked_time
+所以修改代码，将
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icJJbI7etKntGCpAKUeP7JZPm9cvibQRn401clABPvLhkmeialwoJXadaA/0?wx_fmt=png
+中的cooked_time改为self.cookedLevel
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ic0Qw7QNlvFcRTcPXdXBqMg2rnBmdC1FXzEP7oHxfJJcLtttoCCJwFIw/0?wx_fmt=png
+大功告成！通过观察结果，为了节约时间和煤气，5分钟就能煮好泡面。
+小姐姐请我吃她煮的面
+但我发现！尼玛，怎么没放调料。。。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ick3JvShSVZKhTKmvHIxoefkNegTOMdGEsaia0hwVG6nMdI7S4HOHjVVw/0?wx_fmt=png
+她解释说，第一次，有点紧张
+（旁白：前文说到过，小姐姐第一次煮泡面）
+
+这就是你不放调料的理由？？？
+好吧，我只能：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icbJJqa03xkrsntU4BiazPib54NJal0icxialQwr1qgsicvEVmuejOBHDKVwA/0?wx_fmt=png
+ 看来只能先上车后买票了
+啊呸，是 先煮面后加调料
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icH9RPSDcSXGze25CSYRMmYmXMBgkIqhuQaaxm1rsgbLNRFGy6zAJQgg/0?wx_fmt=png
+加调料怎么加，这是个问题。
+我：先加什么，后加什么？
+小姐姐：难道不是一次加进去的么，你当你吃拌面啊！？
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icwDvfpGQqnrKfa22qy3NYnu968xAW6ktm3dA98YcSNYnwyTvd0E8GWw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9icXgJ9PUZLEN4ibjc9Cn7d0ZyMZLMpxOxHJXpAgU9AkxOrO8iclPK6ibNcg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ic2SyhIRGibbBUPydwDc0JicEDHibXowEgAn0bPfjeg2iamTbjia1JFiaShwaQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ic34fJZLVfQK1AcJCwLe4QWCYFGGxd4ZS5yNn1Gkpdb7R7koFmyooXnw/0?wx_fmt=gif
+于是需要将调料加到面里面：
+调料作为一些值需要保存在变量里，在面向对象中，则是保存在属性里，又因为有很多种调料，所以我要找个能存放多种调料的容器
+在这里我们选择list（列表）作为容器
+在属性里定义一个空列表：
+  由于要显示出状态中包含调料，所以要修改__str__()方法
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX8jWoicIR7xzEx2U4Y1j9ic9Bru3IQtB2V8TyewtVTicAwZOMU7DGQXWPs8NHwKYxPCFLOJpAktp5w/0?wx_fmt=png
+这里的列表元素（调料）要转成字符串输出下面，小姐姐开始煮第二碗面给她自己，第一碗面是之前忘加调料煮完的，我默默调料加进去了拌了拌。

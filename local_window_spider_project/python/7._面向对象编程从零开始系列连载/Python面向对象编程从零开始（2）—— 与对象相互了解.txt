@@ -1,0 +1,33 @@
+b'Python\xe9\x9d\xa2\xe5\x90\x91\xe5\xaf\xb9\xe8\xb1\xa1\xe7\xbc\x96\xe7\xa8\x8b\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xef\xbc\x882\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94 \xe4\xb8\x8e\xe5\xaf\xb9\xe8\xb1\xa1\xe7\x9b\xb8\xe4\xba\x92\xe4\xba\x86\xe8\xa7\xa3'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0
+ 咳咳，接着昨天的故事继续
+昨天的传送门：<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247483947&amp;idx=1&amp;sn=851d90d6742d3454ca89276be9636087&amp;chksm=ec5edd56db2954405bcd048373a577fa3de33e3b05294fecbf44ef01afcf267de668cf359543&amp;scene=21#wechat_redirect" target="_blank" data_ue_src="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247483947&amp;idx=1&amp;sn=851d90d6742d3454ca89276be9636087&amp;chksm=ec5edd56db2954405bcd048373a577fa3de33e3b05294fecbf44ef01afcf267de668cf359543&amp;scene=21#wechat_redirect">http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247483947&amp;idx=1&amp;sn=851d90d6742d3454ca89276be9636087&amp;chksm=ec5edd56db2954405bcd048373a577fa3de33e3b05294fecbf44ef01afcf267de668cf359543&amp;scene=21#wechat_redirect</a>
+昨天我们说了以下几点：
+面向对象和面向过程的区别
+对象和类
+创建类
+定义对象
+类的三要素
+今天继续来和对象（小姐姐）一起玩耍。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuNEL5APKII0XSHDFVOmicGPGNjdibb75EWtGRtPKcI4DGsJ7G3yKNRw9g32QbBMwgibiaG6Ip7dSPZQA/0?wx_fmt=png
+目前我们只知道小姐姐的姓名，芳龄，除了她喜欢开车，我不了解其他什么了。
+所以我想让她做个自我介绍，然后可以<strong>深入</strong>了解。
+让小姐姐（对象）自己介绍一下自己，她比较害羞，不想说一大串，她让我直接问她问题她回答。
+所以我先要优化原来定义的类（接着上文结尾代码）：
+注意：是不是感觉，面向对象很有优势。
+运行结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuNEL5APKII0XSHDFVOmicGPrElGvELTOTYD3A5qSf6CibMibKicdbaPXn4JZDqC7n9TOCkRajMCOXTbA/0?wx_fmt=png
+ 注意： 既然小姐姐都自我介绍了，为了表示相互尊重，我也要介绍一下自己。
+ 然后同样介绍了我的姓名和年龄
+因为我不像小姐姐一样害羞啊
+所以我自我介绍就多说了几句‘大实话’，并擅自帮小姐姐补充了一下自我介绍。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuNEL5APKII0XSHDFVOmicGPsAsOauZVsGDlTAxZhqM9EkMzZZEqqISB7DXqicFDqXuRs40bB2sW9bg/0?wx_fmt=png
+ 注意：http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuNEL5APKII0XSHDFVOmicGPzlYKm8ckQDZyticpIibo6rE9UicFN7hYag4g88ibNpe0E3jF3U1rPGplKA/0?wx_fmt=png
+用self代替原来的xiao_jie_jie，self可以通俗理解为，谁调用了方法传的就是谁的参数进去，这里两次调用（小姐姐和我相互自我介绍，相当于传了xiao_jie_jie和myself进去）
+这样，我们的自我介绍就完成了。
+今天时间不多，只能更新这么多了。
+想了解我与小姐姐的更多故事，请持续关注。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuNEL5APKII0XSHDFVOmicGPsns62VYXW61Ue879LGH4ByCdrkpmia5CU3DMxZczjAAUJN323hDTiaWQ/0?wx_fmt=png
+  <span style="color: #FF0000;">说到做到，新福利来啦：</span>关注公众号，在公众号菜单点击"<span style="color: #FF0000;">免费听课</span>"，即可参与活动免费听19.9元收费课程，当然，壕大大可以直接购买听课啦。壕大大入口：https://edu.hellobi.com/course/186，点击文末<span style="color: #FF0000;">本次主打课程：</span>http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuC6NkTeTjOdFBhxdSdSWicfCSric32MZLYibBWribSUWLzFIZscSpk2ibygz50ehxc16HodQPG7D5IfZg/640
+课程名称：自然语言处理之-基于深度学习技术的聊天机器人实现
+课程背景：NLP是一个很大的领域，自成一系，本次课程通过一个企业级案例（聊天机器人）带领大家从了解项目场景开始一步步搭建，最后演示聊天机器人实例。通过本课程的学习，让你一举打开NLP的大门。
+主讲老师：

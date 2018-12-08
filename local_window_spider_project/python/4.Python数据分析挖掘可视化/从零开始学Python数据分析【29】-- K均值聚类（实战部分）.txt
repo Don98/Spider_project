@@ -1,0 +1,18 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9029\xe3\x80\x91-- K\xe5\x9d\x87\xe5\x80\xbc\xe8\x81\x9a\xe7\xb1\xbb\xef\xbc\x88\xe5\xae\x9e\xe6\x88\x98\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                             
+
+
+
+
+
+我们接着《<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485176&amp;idx=2&amp;sn=8ae84e232ccf17f19ceae501361ca22e&amp;chksm=ec5ed985db295093e9c53daccffc1178e21cc2772ee6d87246692eb1c4fbafd941e3de685b3f&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python【28】--K均值聚类（理论部分）</a>》一文，继续跟大家分享一下<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">如何借助于Python和R语言工具完成K均值聚类的实战</strong></span>。本次实战的数据来源于虎扑体育（https://nba.hupu.com/stats/players），我们借助于NBA球员的命中率和罚球命中率两个来给各位球员做一次“人以群分”的效果。
+
+
+
+
+
+
+首先，我们使用pandas中的read_html函数读取虎扑体育网页中的球员数据表，然后再对数据作清洗（主要是数据类型的转换、变量的重命名和观测的删除）：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXxDJqWrcxWkySO8a4ELDwZI76QPoxfOq79iawl5U8R3fJl8PZZcV3PfMyFmmukYPkKY3QQvyia2pmg/640?wx_fmt=png
+本次<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一共获得286名球员的历史投篮记录</strong></span>，这些记录包括球员姓名、所属球队、得分、各命中率等信息，下面我们仅使用球员的命中率和罚球命中率来做聚类，主要是为了方便展现聚类效果的图形。首先，我们来看看这两个指标下的散点图：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXxDJqWrcxWkySO8a4ELDwZ8GYhLfNuxbU1W7EUvEmI0INWYup9trFRveXZP5NSkWM0plicctFCJgA/640?wx_fmt=png
+通过肉眼，似乎还无法对这286名球员进行聚类（画圈），如果画圈的话，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">该划为几类合适呢</strong></span>？一般我们可以<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">通过迭代的方式选出合适的聚类个数</strong></span>，即让k值从1到K依次执行一遍，再查看每一次k值对应的簇内离差平方和之和的变化，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">如果变化幅度突然由大转小时，那个k值就是我们选择的合理个数</strong></span>。具体我们通过图形展现来说明上面的文字：

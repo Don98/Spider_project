@@ -1,0 +1,25 @@
+b'\xe7\x88\xac\xe5\x8f\x96\xe8\x80\x81\xe6\xa0\x91\xe7\x94\xbb\xe7\x94\xbb\xe5\x85\xa8\xe9\x83\xa8\xe5\xbe\xae\xe5\x8d\x9a\xe6\x95\xb0\xe6\x8d\xae\xef\xbc\x9a\xe4\xb8\x89\xe5\x8d\x83\xe8\xaf\x97\xe4\xb8\x8e\xe7\x94\xbb'   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnryXpA0szmIJoWZQFYBB5Q5iafrDw1C0KStVRXjpianxSrLe0ibXp2CapQ/0?wx_fmt=jpeg
+1、项目介绍用fiddler抓包移动端（ipad）微博，再用python爬虫获取老树画画微博几乎全部内容</strong>。因为老树画画发布的微博结构较为简单，几乎都是：一幅画，配上一段文字，所以在忽略转发内容后，<strong>获取画作、诗、发布时间、转发数、评论数、点赞数等内容，共计3395条数据</strong>。<strong>再用PIL库拼接图片，并用Echarts进行数据可视化。</strong>
+   老树画画（刘树勇）</strong>的人，可以看看一席的视频：全程笑点不断，有很多值得思考的地方。演讲最后也播放了一些作品，可作为初步了解。
+  有种难以描述的“江湖气”</strong>，这是我以前在所谓大学老师身上，乃至其他人身上蛮少看见的。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnI5b0h47jEM4HRKZ9SPQAslWyu198LXgMD0Gicj0RMqld8PKzbaXJibCA/0?wx_fmt=jpeg
+<span style="font-size: 18px;">二、图片拼接</span>爬取张佳玮138w+知乎关注者：数据可视化</a>》里放上爬取北美帝国大厦亮灯图后，拼接制作的“ZJU 120”logo。
+用PIL库拼接图片http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn7wHBwFIoCeBPTS1BGRcB96d86aR8rXiabT6NatToq3oKtnUTibPdMM7Q/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnu8xUNNPocgL8e5amjYDbcibqfbafmiacwB6PHn6IwgH0q9wA04NNibuEg/0?wx_fmt=jpeg
+ 不知道大家比较喜欢哪一张，存图的一定记得点个赞或打个赏，鼓励下哈</strong>。这里挑选的图主要是草木、蔬果的图，也是老树画画作品里占比不少的系列，另外几个系列是什么，留给大家自己去“探宝”了！
+<span style="font-size: 18px;">三、数据可视化</span>截止20170805中午11点，其关注数：1130，粉丝数：1492599，微博数：3467。其中第一条微博始于2011年</strong>。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnwIsTYueZ697qOLfgSUQicPyL2kUjeLZicMMu4grlV04Zq6cCtk2uZyPQ/0?wx_fmt=png
+发布时间格式为：“Fri	Feb	8	21:38:54 +800	2013”1、发布微博之年度情况  温州动车追尾事故 ECharts 小例子：实现日历图Echarts绘制calendar heatmaphttp://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnTib68XFvoVX9nlLQldibXicOBptAUBHRx7IdJvfiavh6AYQljRK316y6gQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn2JIqRiavRiaQbCDgJxB1gAqoEPPNbkQAqamSgNqAHpyGGz2Vyooibxn2A/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnE7icInv2ls8Icx6pNQV3e0wH2ItoWZV0UPwXVBEqEV7Nc019X4KJkdg/0?wx_fmt=png
+  眼前两碗米饭，心中一粒飞鸿。</strong>”结合此处数据，可以算作另类的解释了，又或许只是饭点前后掏出手机水会罢了。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnJxpENZhywb6gGrPfbnm5qLeAWLiaYGWh8t31dLtlhzicLrmKCibiajSCPw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnZvEQDwkAktOHtjDeUicQs2HKd89gR3b5VCrV4EbQEmLvPicUVia5j53Qg/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnZPl2aI5JMPeqILwJzTmT3Z0gfO3oCAUTian1XaILRt6a9JP7I97kM1A/0?wx_fmt=png
+纵坐标处附近，点赞数寥寥，但转发数1w，评论数几千一个泄露国家机密的人！http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnlssIDDqunfyvaqzHGrGmGL8WaUDO9jhZOXZPXozibeMCQAtOkfplB8g/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn3xeZtT6tQutDPGoShNmYoYYu5magkfuQibNCfsq2ntmlotzIfTwKnfg/0?wx_fmt=jpeg
+有时心情糟糕，真想死掉拉倒。折腾半天睡去，醒来不想死了。——《有时候》系列之五 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnoMXYZ3uzBQv7KERGJ0JIAqFibGu4kEqE7FQ7MG1TCUv6HpCd5rcpfGg/0?wx_fmt=png
+ 天色将晚，抱鱼上床。世间破事，去他个娘。 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUncEFXePy4KGIpeN7VGwjibJicLaFIpZONaP9yGtNIIjO7NjlRvxRHb2icg/0?wx_fmt=png
+ 【清明】烟雨十里春深，落花轻覆草痕。陌上青青柳色，心中念念故人。   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUnjbJZMibqRAGUD2Ud6MDAuLssSVDtoE5icf1F295RSeicGGvgPibBbQOuzA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsP1hAeRdjia0caZLZr4rcUn2GQCoGaCQNZRByHlic4rGWuAtT8yY16SNVAj62eCsmyxdg7LyBSJtLw/0?wx_fmt=png
+ 五、小结

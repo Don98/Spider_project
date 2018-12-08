@@ -1,0 +1,157 @@
+b'Lengding Club\xe2\x80\x94\xe2\x80\x94\xe6\x9e\x84\xe5\xbb\xba\xe8\xb4\xb7\xe6\xac\xbe\xe8\xbf\x9d\xe7\xba\xa6\xe9\xa2\x84\xe6\xb5\x8b\xe6\xa8\xa1\xe5\x9e\x8b'http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84NLfQWfkMLclYB6UDE4fajw7VjLPAQt5gmXJVypIQkricK9qibsRbLUkA/0?wx_fmt=jpeg
+ 本项目通过利用P2P平台Lending Club的贷款数据，进行机器学习，<strong style="box-sizing: inherit;font-weight: 700;">构建贷款违约预测模型</strong>，对新增贷款申请人进行预测是否会违约，从而决定是否放款。
+建模思路</strong>
+以下是本次项目机器学习工作流程，实际操作中，其实每个步骤都是反复迭代的过程。
+ http://link.zhihu.com/?target=https%3A//www.huxiu.com/article/41472/1.html
+若想了解Lending Club 2017年Q2业务情况也可以参考我上一个项目的报告<strong style="box-sizing: inherit;font-weight: 700;">《<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>。
+https://zhuanlan.zhihu.com/p/29651069
+贷款申请人向Lending Club平台申请贷款时，Lending Club平台通过线上或线下让客户填写贷款申请表，收集客户的基本信息，这里包括申请人的年龄、性别、婚姻状况、学历、贷款金额、申请人财产情况等信息，通常来说还会借助第三方平台如征信机构或FICO等机构的信息。通过这些信息属性来做线性回归 ，生成预测模型，Lending Club平台可以通过预测判断贷款申请是否会违约，从而决定是否向申请人发放贷款。
+通过以上的业务逻辑和上一个项目报告<strong style="box-sizing: inherit;font-weight: 700;">《<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>的数据探索，下面进行场景解析。
+1）首先，我们的场景是通过用户的历史行为（如历史数据的多维特征和贷款状态是否违约）来训练模型，通过这个模型对新增的贷款人“是否具有偿还能力，是否具有偿债意愿”进行分析，预测贷款申请人是否会发生违约贷款。这是一个监督学习的场景，因为已知了特征以及贷款状态是否违约（目标列），我们判定贷款申请人是否违约是一个<strong style="box-sizing: inherit;font-weight: 700;">二元分类问题</strong>，可以通过一个<strong style="box-sizing: inherit;font-weight: 700;">分类算法</strong>来处理，这里选用逻辑斯蒂回归（Logistic Regression）。
+2）通过上一个项目报告<strong style="box-sizing: inherit;font-weight: 700;">《<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>
+
+可以看到，部分数据是半结构化数据，需要进行特征抽象。
+现对该业务场景进行总结如下：
+逻辑斯蒂回归（Logistic Regression）算法</strong>。
+特征抽象</strong>。
+ 前期准备</strong>
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ZWbCicNgbGSX7vuFjiclfHcS5fa4bpqAX88HN8kxyavU59xpAbSrfR9w/0?wx_fmt=jpeg
+统计每列属性缺失值的数量。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84xMicicbB598sAT23fWw7C4v4xzibdBicKq88GWpxMjic6aqia0m67xR8nIeQ/0?wx_fmt=jpeg
+数据是否有缺失值或乱码一般是判断数据质量的主要因素。
+对于缺失值的处理，一般来说先判定缺失的数据是否有意义。从上面信息可以发现，本次数据集缺失值较多的属性对我们模型预测意义不大，例如id和member_id以及url等。因此，我们直接删除这些没有意义且缺失值较多的属性。此外，如果缺失值对属性来说是有意义的，还得细分缺失值对应的属性是数值型变量或是分类类型变量。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU845Dyicd2lOOkzxEEOqYfXg3Kuia92B4ibBgqQRicEhSKiaXP7qsb8EicwwY3g/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84UhrlM55g07wjcRyLPrGIhIRZoFCTQ02CL7hnw1lI0EEt98ptkWQNjA/0?wx_fmt=jpeg
+我们通过Pandas的nunique方法来筛选属性分类为一的变量，剔除分类数量只有1的变量，Pandas方法<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">nunique()</span>返回的是变量的分类数量（除去非空值）。
+  首先，我们查看分类变量缺失值的情况。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84fmTiaBibL8caDf4qhY9Ul92Zq7oBSuznx3ugspTIYRDbR83MRcLKOsZQ/0?wx_fmt=jpeg
+我们注意到分类变量中，"int_rate"、"revol_util"、“annual_inc”的属性实质意义是数值，但pandas因为它们含有“%”符号或数字间有逗号而误识别为字符。为了方便后续处理，我们先将他们的数据类型重分类。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84qX4khHnnzGPtN20tFc3DRmOxqLf1LESKEicicG3n5OPZJMTTDicUtpR2w/0?wx_fmt=jpeg
+从上图可以直观看出变量“emp_title”、“next_pymnt_d”缺失值较多，同时图的右边分别反映了缺失值最多和最少的行数，分别是第25行和第0行。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84dibkAvk5krlTbGf03v5oh61Z41BUou9oVXWwntOeNZ1SfbM3fDN5upQ/0?wx_fmt=jpeg
+上图显示了缺失值之间的相关性，当相关性为0时，说明一个变量与另一个变量之间没有影响。相关性接近1或-1说明变量之间呈现正相关或负相关。但我们从图中发现，并不完全如此。policy_code和其他变量之间的相关性比较强，这与我们的期望相反，zop_code一般来说和其他变量没什么关系，有可能表明数据某些行的记录是不完整的。<br style="box-sizing: inherit;"  />
+这个热图对于选择变量对之间的数据完整性关系非常有用，但是当涉及到更大的数据关系时，它的视觉能力是有限的，而且对于非常大的数据集没有特别的支持。
+我们使用pandas.fillna()处理文本变量缺失值，为分类变量缺失值创建一个分类“Unknown”。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84HXjuXYewAlA0oetq8P9vlYxFtKZkWjkkIqNjRrUVWI2QWmiaR4jZz3g/0?wx_fmt=jpeg
+缺失值处理——数值型变量</strong>
+查看数值型变量的缺失值情况。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84O5AL8ICwjRWFJrJ1IsXagoAFgIyQP3gnQnvhiaHRKrBdEHYhX4cQHcQ/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84NsQa3PhQWVd7hg9ByOS13KpUdHKWu7c0q0qEAIt79v8Psql8LJOSdA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ribI8dcMsIBEoBw7CVSLIIk0MP3DdsQjFKevdfOoVWwUS84UHxyEEVw/0?wx_fmt=jpeg
+从表格发现，第105,451行至105,454行的属性值<strong style="box-sizing: inherit;font-weight: 700;">全为NaN</strong>，这些空行对我们预测模型的构建没有任何意义，在此先单独删除这些行。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84fZvqfIyjZq8znUtyLCicL0YcvzCSks6hd6yDHqJ5COgqnutcFO2l5Sg/0?wx_fmt=jpeg
+对数值型变量的缺失值，我们采用均值插补的方法来填充缺失值，这里使用可sklearn的Preprocessing模块，参数strategy可选项有median或most_frequent以及median，具体详见官方文档<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">sklearn.preprocessing.Imputer</span>。
+http://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Imputer.html
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84PJwu1cibMzrEJw6PlvaANYPtibjJeIicfKsibog4PqhCRJg3Q4EU4NuRxg/0?wx_fmt=jpeg
+数据过滤</strong>
+对于同一份数据基于不同的数据挖掘目的，很多时候不需要把所有数据进行训练。冗余特征重复了包含在一个或多个其他属性中的许多或所有信息。例如，zip_code对于我们借款人的偿债能力并没有任何意义。grade和sub_grade是重复的属性信息。下一步，我们对数据进行过滤。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84jzMkSXBRzTNV9RlDjXibCDnMzax0CHqOqFnT88PGxIOktmUU2M93oeA/0?wx_fmt=jpeg
+      
+</span><br style="box-sizing: inherit;"  />
+将以上重复或对构建预测模型没有意义的属性进行删除。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ic6N1ib44bt8nW7uk2A6UXc4egPy62GAxUEWdDcuRgQpSW19doKlg7aA/0?wx_fmt=jpeg
+不同算法模型需要不同的数据类型来建立。例如逻辑回归只支持数值型的数据，而随机森林通常对字符型和数值型都支持。由于在场景分析中，我们判定本项目预测贷款违约是一个二元分类问题，我们选择的算法是逻辑回归算法模型，从数据预处理的过程中也发现数据的结构是半结构化，因此需要对特征数据作进一步转换。
+ 特征工程是机器学习中最重要的步骤。实际工作中，特征工程是个反复迭代的过程，大部分时间也是在分析业务、分析case，不断地找特征。更好的特征意味着只需要用简单的模型，更好的特征也意味着能够获得更好的依据去预测结果。2014年天池比赛，第一名团队的模型并不复杂，但他们特征更贴近业务，对业务场景理解比较好，出来的结果比淘宝负责做推荐的准确率提升16%。
+本次项目特征工程主要分4大部分：1、特征衍生 2、特征抽象 3、特征缩放 4、特征选择
+5.1 特征衍生</strong>
+ 而Lending Club平台中，"installment"代表贷款每月分期的金额，我们将'annual_inc'除以12个月获得贷款申请人的月收入金额，然后再把"installment"（月负债）与（'annual_inc'/12）（月收入）相除生成新的特征'installment_feat'，新特征'installment_feat'代表客户每月还款支出占月收入的比，'installment_feat'的值越大，意味着贷款人的偿债压力越大，违约的可能性越大。
+ 特征抽象是指将数据转换成算法可以理解的数据。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84v8PHOssXFuNCzt5VKnhqibEEjnZS7Zj3zuJ3rYyn77s1AZz96nE7tLA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84x9kYiaoGOoFGuyicibZ9oIq3AFPsOgLBzeye4GTZ2cyicOWmpmpjDj38Lg/0?wx_fmt=jpeg
+从上一篇报告<strong style="box-sizing: inherit;font-weight: 700;">《<span class="Apple-converted-space">
+</span><span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>也提到，平台贷款发生违约的数量占少数。贷款状态为正常的有103,743个，贷款正常状态占比为98.38%。贷款状态将作为我们建模的标签，贷款状态正常和贷款状态违约两者数量不平衡，绝大多数常见的机器学习算法对于不平衡数据集都不能很好地工作，稍后我们将会解决样本不平衡的问题。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84xnk2kcPjGiaEap2kKVcmsBQDBhk8IocgotkKKjraAGBaXanj8P0pB8Q/0?wx_fmt=jpeg
+对变量“delinq_2yrs”、“total_acc”、“last_pymnt_amnt”、“revol_bal”的数据类型重分类。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84icaNS0JkXwibXcuXL80ovjYric6ur7Fh8YZ5miavHcO2tggLsH3zrW3ckw/0?wx_fmt=jpeg
+将变量类型为"object"的数量从30个缩减至7个。
+ 多值有序变量也称顺序数据（rank data），有序多值变量是某一有序类别的非数字型数据。有序多值变量虽然是类别，但这些类别是有序的。比如将产品分为一等品、二等品、三等品、次品等；在上一篇报告中<strong style="box-sizing: inherit;font-weight: 700;">《<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>，我们得知Lending Club对贷款申请者信用等级分类——A至G，相应地按照不同信用等级匹配贷款利率——等级为A的客户信用评分比等级为B的客户好。
+ 多值无序变量又称分类数据（categorical data），多值无序变量是某一类别的非数字型数据。它是对事物进行分类的结果，数据表现为类别，是用文字表述的。例如，借款人按照性别分为男、女两类；分类数据中的分类是无序的，意味着我们并不能像多值有序变量那样将多值无序变量（“purpose”）进行排序。
+ 多值有序变量</strong>
+ 多值无序变量</strong>
+   有序特征的映射</strong>
+首先，我们对变量“emp_length”、"grade"进行特征抽象化，使用的方法是先构建一个mapping，再用pandas的replace( )进行映射转换，pandas的DataFrame.replace的具体用法，详见<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">官方文档</span>。
+http://link.zhihu.com/?target=http%3A//pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.replace.html%3Fhighlight%3Dreplace%23pandas.DataFrame.replace
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU849gib4DEKWwQscJuuDAzicu1Cnh7FHyMIiaLRW97jNIhsjpzsWGkVGEHyg/0?wx_fmt=jpeg
+从上面表格可以看出多值有序变量经过处理后的效果，已经将“emp_length”，“grade”转化为算法可以理解的数据类型。
+独热编码（one-hot encoding）</strong>
+接下来，对多值无序变量进行独热编码（one-hot encoding）。<br style="box-sizing: inherit;"  />我们使用pandas的<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">get_dummies( )</span>方法创建虚拟特征，虚拟特征的每一列各代表变量属性的一个分类。然后再使用pandas的<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">concat()</span>方法将新建虚拟特征和原数据进行拼接。
+get_dummies返回的一组数据是一个稀疏矩阵，但这组数据已经可以带到算法中进行计算。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU847xEm2kFhomcY7Z8MmFZnIicMGEOMicXfPNdPQVw2ib6ZVTHArNDlRTzxg/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84NzaXBMnmtR9o13hQLjzuicQsrJjG77GBsGLnJwmGB0gJDlg2icySkJkQ/0?wx_fmt=jpeg
+5.3 特征缩放（peature scaling）</strong>
+特征缩放（peature scaling）是指将变量数据经过处理之后限定到一定的范围之内。特征缩放本质是一个去量纲的过程，同时可以加快算法收敛的速度。目前，将不同变量缩放到相同的区间有两个常用的方法：归一化（normalization）和标准化（standardization）。
+我们采用的是标准化的方法，与归一化相比，标准化的方法保持了异常值所包含的有用信息，并且使得算法受到异常值的影响较小。想了解归一化和标准化的比较详见<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">Standardization VS Normalization</span>。
+http://link.zhihu.com/?target=http%3A//scientificdg.com/index.php/en/2017/01/07/standardization-vs-normalization/
+变量标准化的具体操作可以采用scikit-learn模块preprocessing的子模块StandardScaler，具体用法详见<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">scikit-learn官网</span>。
+http://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/modules/preprocessing.html%23encoding-categorical-features
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84oweHq43KhicE1saAZpibZB3iaRdJZxZibDNh9A9GQ2pibSkgbKcaSeOAElg/0?wx_fmt=jpeg
+目前为止，我们已经对特征进行进行抽象化处理，使得变量的数据类型让算法可以理解，同时也将不同变量的规格缩放至同一规格。接下来，我们需要了解不同特征对目标变量的影响程度并对特征进行选择。
+5.4 特征选择（feature selection）</strong>
+维基百科对<strong style="box-sizing: inherit;font-weight: 700;"><span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">Feature selection</span></strong>的定义：“特征选择是从给定的集合中选择出相关特征子集的过程。”
+通常来说，对特征集合做选择主要有2个原因：首先，<strong style="box-sizing: inherit;font-weight: 700;">优先选择与目标相关性较高的特征</strong>，不相关特征包含对于数据挖掘任务完全没用的信息，不相关特征可能会降低分类的准确率，因此为了增强模型的泛化能力，我们需要从原有特征集合中挑选出最佳的部分特征。其次，<strong style="box-sizing: inherit;font-weight: 700;">去除不相关特征可以降低学习的难度（less is more）</strong>，能够简化分类器的计算，同时帮助了解分类问题的因果关系。
+在上一个报告<strong style="box-sizing: inherit;font-weight: 700;">《<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">注册会计师带你探索风险分析（EDA）</span>》</strong>中，我们对Lending Club平台2017年Q2的业务数据进行了EDA，通过不同维度的变量分析，探索数据的过程可以指导我们选择特征的方向，而我们这次选用另一种方法来选择特征。
+ 过滤方法（filter approach）:<span class="Apple-converted-space">
+</span></strong>通过自变量之间或自变量与目标变量之间的关联关系选择特征。
+嵌入方法（embedded approach）:<span class="Apple-converted-space">
+</span></strong>通过学习器自身自动选择特征。
+包装方法（wrapper approacch）:</strong><span class="Apple-converted-space">
+</span>通过目标函数（AUC/MSE）来决定是否加入一个变量。
+对于三种特征选择的方法，scikit-learn官网也有相应的工程实现方法，具体详见<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">Feature selection</span>。
+http://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/modules/feature_selection.html
+本次项目，我采用Filter、Embedded和Wrapper三种方法组合进行特征选择。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84M5g4qDqZqrw270G7Dicy5o4LWsYftFjNYKrvWfTrWyPm35Kjm7HwUNg/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84owKFiaxU7PBj0oqVphzUZqjmicoYxnMLWg7FVD3hc3Ycv63QCUwvrfhg/0?wx_fmt=jpeg
+Wrapper</strong>
+首先，选出与目标变量相关性较高的特征。这里采用的是Wrapper方法，通过暴力的<strong style="box-sizing: inherit;font-weight: 700;">递归特征消除 (Recursive Feature Elimination)</strong>方法筛选30个与目标变量相关性最强的特征，逐步剔除特征从而达到首次降维，自变量从104个降到30个。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84FDWBndpgNvGpDtDVg8cVtdibEHTjNVljrdyOLMKAQU53sEozXibicr8Hg/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ic29fcwtiaN0ibjtQQNUzMDBlyFDubBJh1pXjYCAoMJSFYUJXv0d0Io8A/0?wx_fmt=jpeg
+Filter</strong>
+正常情况下，影响目标变量的因数是多元性的；但不同因数之间会互相影响（共线性 ），或相重叠，进而影响到统计结果的真实性。下一步，我们在第一次降维的基础上，通过<strong style="box-sizing: inherit;font-weight: 700;">皮尔森相关性图谱</strong>找出冗余特征并将其剔除；同时，可以通过相关性图谱进一步引导我们选择特征的方向。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84IWqpPicWXbFFfnooEziaNvCHJ4S1UNQASZwZSEgUrcH0WAoF6PP9kGgA/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84P4CqGlTyUEuARLZwAMsBqqxKboA6UAX4bwYy3TChlOEBZNtWvaVnXA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84psUtciaF4MdE2kiaJxTb1RYvoJDIDdAicAtSicWwmL9soIh31YjCsZqv8A/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84bl4wAn4Vx61Eia4NTrnXyN6zkbXHTXmzXf89aicHPd1SpmzK78xrXLfg/0?wx_fmt=jpeg
+Embedded</strong>
+很多时候我们需要了解每个特征对目标的影响程度，在特定的业务场景下，不同的特征权重对业务的决策带来不同的影响。例如，在Lending Club的业务数据中，能够反映借款人资产状况或现金流的特征都对我们构建预测违约贷款模型十分关键。因此，我们需要对特征的权重有一个正确的评判和排序，就可以通过特征重要性排序来挖掘哪些变量是比较重要的，降低学习难度，最终达到优化模型计算的目的。这里，我们采用的是<strong style="box-sizing: inherit;font-weight: 700;">随机森林算法判定特征的重要性</strong>，工程实现方式采用scikit-learn的<strong style="box-sizing: inherit;font-weight: 700;">feature<em style="box-sizing: inherit;">importances</em></strong><span class="Apple-converted-space">
+</span>的方法，具体操介绍详见官方文档<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">Feature importances with forests of trees</span>。
+http://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU849W7MwkrumYNH1fHsv916rRXib0PLibvL5ib2oOVqdypAraCBW2uEMMJVg/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84UC8LSdut1hhea7K95L8iaP9pr1oXtLSpKFZMCLJlcL4KnpwDCuZib2Jw/0?wx_fmt=jpeg
+上图是根据特征在特征子集中的相对重要性绘制的排序图，这些特征经过特征缩放后，其特征重要性的和为1.0。
+由上图我们可以得出的结论：基于决策树的计算，特征子集上最具判别效果的特征是“loan_amnt”。贷款金额约高，意味着借款人固定流出的现金也越多，随着借款人偿还债务压力增大，贷款违约的风险也随之增加。
+ 前面提到，目标变量“loans_status”正常和违约两种类别的数量差别较大，会对模型学习造成困扰。举例来说，假如有100个样本，其中只有1个是贷款违约样本，其余99个全为贷款正常样本，那么学习器只要制定一个简单的方法：所有样本均判别为正常样本，就能轻松达到99%的准确率。而这个分类器的决策对我们的风险控制毫无意义。因此，在将数据代入模型训练之前，我们必须先解决样本不平衡的问题。
+非平衡样本常用的解决方式有2种：1、过采样（oversampling），增加正样本使得正、负样本数目接近，然后再进行学习。2、欠采样（undersampling），去除一些负样本使得正、负样本数目接近，然后再进行学习。
+本次处理样本不平衡采用的方法是<strong style="box-sizing: inherit;font-weight: 700;">过采样</strong>，具体操作使用<strong style="box-sizing: inherit;font-weight: 700;">SMOTE（Synthetic Minority Oversampling Technique）</strong>，SMOET的基本原理是：采样最邻近算法，计算出每个少数类样本的K个近邻，从K个近邻中随机挑选N个样本进行随机线性插值，构造新的少数样本，同时将新样本与原数据合成，产生新的训练集。更详细说明参考CMU关于<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">SMOTE: Synthetic Minority Over-sampling Technique</span>的介绍。
+http://link.zhihu.com/?target=http%3A//www.cs.cmu.edu/afs/cs/project/jair/pub/volume16/chawla02a-html/chawla2002.html
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84Sl6vQ0MsTI975qgs4nXr6OZkJbhk8T3fiaHL0t5NZAqHAKCnbCNLfjg/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU8486jiaawFTiaGpicgFYyVZgJ96XdnIicwTCvV5INS4vZeFAD2LcI1Kypawg/0?wx_fmt=jpeg
+构建分类器进行训练</strong>
+初始化分类器。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84KPEkoDMWjxibGP9yfAoun4iaBlINCkwm12y4sSTLY2VOLIpwg5jGMNog/0?wx_fmt=jpeg
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU843aajib9gh4BIE32Rlg0yFdcwnibIsWdLX0rKLNNxsHrh8YpE8s3MnntQ/0?wx_fmt=jpeg
+借助混淆矩阵进一步比较。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ZyrmPibgjouZTOefBAB6PXlNpAsD6taetibR2kaCNVEzMODibSn4h56sQ/0?wx_fmt=jpeg
+上面是混淆矩阵对分类器产生不同类型的正误数量的统计。为了更加直观，我们对混淆矩阵进行可视化。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84gtN4pX7KwUhNzKIiclKIucCKw0DMsoz9iciacmrTRx4gibrZVJDNW5Woyg/0?wx_fmt=jpeg
+热图颜色越浅代表数量越多，从上图可以看出真阳性的数量最多，而假阳性的数量最少。根据混淆矩阵，我们可以分别计算precision、recall、f1-score的值，这里我们采用sklearn.metrics子模块classification_report快速查看混淆矩阵precision、recall、f1-score的计算值。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84a7wP0SFibzfk99pOVfexmphjWiaY1LjqMRb35pCxsCLp9oYNUsD9vPgA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU8496cniaibU2twWibrUaiaGhupXYIt2Cbm5E9RUa7jzIiceL3OamRtxerIk6w/0?wx_fmt=jpeg
+以上只是一个baseline模型，接下来我们继续优化模型。
+在上一个步骤中，我们的模型训练和测试都在同一个数据集上进行，这会产生2个问题：
+1、很可能导致学习器把训练样本学得“太好”，把训练样本自身的特点当做所有潜在样本都会具有的一般性质。<br style="box-sizing: inherit;"  />2、模型在同一个数据集上进行训练和测试，使得测试集的样本属性提前泄露给模型。<br style="box-sizing: inherit;"  />
+以上2个问题都会导致模型的泛化能力下降，这种现象我们称之为<strong style="box-sizing: inherit;font-weight: 700;">“过拟合”（overfitting）</strong>。因此，我们需要将数据集划分为测试集和训练集，让模型在训练集上学习，在测试集上测试模型的判别能力。
+通常来说，将数据集划分为训练集和测试集有3种处理方法：1、留出法（hold-out），2、交叉验证法（cross-validation），3、自助法（bootstrapping）
+本次项目我们采用<strong style="box-sizing: inherit;font-weight: 700;">交叉验证法</strong>划分数据集，将数据划分为3部分：<strong style="box-sizing: inherit;font-weight: 700;">训练集（training set）</strong>、<strong style="box-sizing: inherit;font-weight: 700;">验证集（validation set）</strong>和<strong style="box-sizing: inherit;font-weight: 700;">测试集（test set）</strong>。让模型在训练集进行学习，在验证集上进行参数调优，最后使用测试集数据评估模型的性能。
+ 结合<strong style="box-sizing: inherit;font-weight: 700;">cross-validation</strong>和<strong style="box-sizing: inherit;font-weight: 700;">grid search</strong>，具体操作我们采用scikit learn模块model_selection中的<strong style="box-sizing: inherit;font-weight: 700;">GridSearchCV</strong>方法。具体可以参看sklearn官网关于<span style="box-sizing: inherit;border-bottom: 1px solid rgba(64, 64, 64, 0.718);text-decoration: underline;">GridSearchCV</span>的介绍。
+http://link.zhihu.com/?target=http%3A//scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+自己做了个GridSearchCV的流程图：
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84n5ibP4GH9xqY3KicekY7FBzuKHwAXWcjZvYu9NF0wG4hSgN8lxIia3QzQ/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84jTnKNsAuicezz8SNoyHfaP9JQL0EFYmWxA6eUElN71K8DibQ5GyrAnYA/0?wx_fmt=jpeg
+从上面能够直观可出，模型最<strong style="box-sizing: inherit;font-weight: 700;">优参数组合为l2和C=1000</strong>。
+模型性能评估</strong>
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84PNON0u07u8eGCB6LibOxq1LQZfH9TfnNJ5JY4CgVb4TyoQwj8icqVthg/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84ibTgztInXOvTicc3MOycRGVHblEgAznZAQmkYwG6xGVBdtBFwg48czibA/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU842LsjwBicdy7XaYoK0XMBvmJAUvQxpKCJbwtUaEl6CKwflR6uaNEOpUQ/0?wx_fmt=jpeg
+上图模型在不同参数组合下跑出的分数热力图，我们可以从热力图明显看出，l2比l1的表现普遍要好，当C小于1时，模型表现较差。同时，我可以利用热力图来寻找参数调优的方向，进一步选择更优的参数。而实际操作中，模型调参是一个反复迭代的过程。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvs9uhuklnASGlm4fUztU84p5l9RFfdFwk5E7OFdtKWSTkTBwicTp8BAqQ6MBia8ZEz2ibDofzP8IQ5w/0?wx_fmt=jpeg
+现在，我们使用经过训练和调优的模型在测试集上测试。

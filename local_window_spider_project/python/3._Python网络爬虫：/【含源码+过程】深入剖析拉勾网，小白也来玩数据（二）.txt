@@ -1,0 +1,23 @@
+b'\xe3\x80\x90\xe5\x90\xab\xe6\xba\x90\xe7\xa0\x81+\xe8\xbf\x87\xe7\xa8\x8b\xe3\x80\x91\xe6\xb7\xb1\xe5\x85\xa5\xe5\x89\x96\xe6\x9e\x90\xe6\x8b\x89\xe5\x8b\xbe\xe7\xbd\x91\xef\xbc\x8c\xe5\xb0\x8f\xe7\x99\xbd\xe4\xb9\x9f\xe6\x9d\xa5\xe7\x8e\xa9\xe6\x95\xb0\xe6\x8d\xae\xef\xbc\x88\xe4\xba\x8c\xef\xbc\x89'  【用户案例】深度剖析拉勾网，小白也来玩数据</a>
+
+源码分析拉钩网因其json格式的结构化数据，
+<span style="text-decoration: underline;">成为几乎所有“爬者”必经的练手场</span>。
+ 一、一般爬取策略 http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuk0OFthdMwNpALS4KFQnGDFlMjWvic4XOdqbRZgztg3XuwpNCiaIzxyq6vwABubdynUGwJLAV2ufcA/0?wx_fmt=jpeg
+ 二 、爬虫新思路其反爬机制经常变动，爬取难度逐渐增加</strong>。
+   最后重新构造URL，get方式解决      http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuk0OFthdMwNpALS4KFQnGD0EkmjdyUa4AdbDe0HRicoN36GJpqia097b5AQ6XbIaXtonVicFVIEgC2g/0?wx_fmt=jpeg
+   我们用form提交的表单，其实最终会变成上面那样的格式</span>。（用不用post基本差不多）
+用Cookies模拟登录</strong>）
+代码如下，还是放个完整版：
+    如果先遍历获取最大页数，后面又得遍历一次，抓取次数多了，难保不被网站发现被封IP。  直接pn构造URL实现翻页，加上cookies伪装浏览器，用get方式获取</strong>
+     <br  />原来IP被封 了</strong>，难怪。
+ 可又得设计爬虫抓代理，不免麻烦。
+后面想到之前爬图片网站时，注册的vpn。
+  1、设置代理池（可以网上抓代理，不过稳定性是问题）<br  />2、使用vpn（原理同上）<br  />3、分布式抓取（这个我也没学到&gt;_&lt;）<br  />4、设置等待时间，放慢抓取速度<br  />5、修改请求头（ user_agent、cookies）<br  />6、模拟登录四、数据分析 — 一些感悟词云用的标签一栏，直接丢BDP自动生成。
+后面发现有欠妥当，因为有些数据标签那一块什么都没有。
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuk0OFthdMwNpALS4KFQnGDydfuico5xY75ibpiatPg7kxENSOjcBLHGTWboNBpzw9QSIs3OWy2QH8tA/0?wx_fmt=jpeg
+  具体的数据分析以及应用转化 </strong>单单抓个几十万烂在excel表里，没有任何意义。
+五、源码剖析 — 新发现 可是真的是这样么？  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuk0OFthdMwNpALS4KFQnGDjZiaLQCoU0WES9a6hvfdEjvOFxawFZ8rzBWeZQdQKRRKkTMMSRq8Omg/0?wx_fmt=jpeg
+  障眼法</strong> 啊！！！
+难为了拉钩的前端工程师 [摊手]
+既无聊又聪明又有耐心</strong>的人才会发现了
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuk0OFthdMwNpALS4KFQnGDqGmL23MaFM3icUNBThBcsxEQtUvJEpF0AgqxK4dA1ud5gI6U3f1sB2A/0?wx_fmt=jpeg

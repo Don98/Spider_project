@@ -1,0 +1,104 @@
+Python从零开始系列连载（4）——Python的基本数据类型（下）   前文传送门：
+    字符串，通俗的说就是字符组成的一串内容，例如'Python大法好'、'Y45160100'、'PG one'
+ 字符串是不可变对象，至于什么是不可变对象
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwxs06etI3nxHl67ZlB5gQMGyj3aqTGDXBuV5ichVic5cq3aYyuSMMrDHw/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwlN2POnIpUjQeWgmib6x80ytGb9wYZhywxjBcCA7t2Of5bxiaa2SnfFuQ/0?wx_fmt=png
+       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwzVbI2dgk4T0qBaUxFm6pL4ibLqticichhGiaRYjftsz9QDAxnnIib4UkxKA/0?wx_fmt=png
+         注释，是对书籍或文章的语汇、内容、背景、引文作介绍、评议的文字。<br style="box-sizing: border-box;"  />
+说得通俗一点就是多写点内容帮助理解
+ Python中的注释分为<strong style="box-sizing: border-box;">单行注释</strong>和<strong style="box-sizing: border-box;">多行注释</strong>:
+ 单行注释
+在每行代码前写一个井号，则这行代码不会被运行
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwkq7UwLrPdIS7ohUx5GNfhiaQThP1Eut9OppsxPu4Z4Cw4vrIVLdLk9A/0?wx_fmt=png
+ 运行之后发现报错，看一下报错信息，意思是a这个变量没被定义（因为你a=1定义的这行前面有个井号，是被注释了，程序不会执行）
+ 其实大家发现没，之前上课讲到的Markdown和这里的注释好像功能相似
+没错！就是这样！
+ 如果我连续很多行都要注释呢？
+小明：我知道，每行前面加一个#不就行了么，hhhh，我真是个天才
+ 小明啊，如果我有10000行，你还这样做么？
+ 小明无语凝噎。。。
+ 好了，我们讲一下多行注释怎么弄
+还记得刚才我们嫌弃的三个引号么
+它就可以多行注释
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwHnOSJyBYiao2QW5IPBeoo18MbN3ZlVpY1EAxcMgEW21wF3LUOuk2DrQ/0?wx_fmt=png
+ a的内容确实被注释掉了，所以打印a的内容会报错
+ 当然，除了三个单引号，三个双引号也是ok的
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFww4D6tbicHk949uTlGjAfVkUp5HpuIkNuTdqBRkSXZ35n9bOAXqShsJQ/0?wx_fmt=png
+ 一直看报错的不太舒服，虽然我们是将用法
+来看个正常运行的（没有注释）：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwdOVuZrEvqh4fKLQak9IsK6DicJCyRZYgicsDmk6ZQvMvsmkfAvBaA1Gg/0?wx_fmt=png
+     转义转义，顾名思义，就是转换含义
+通俗的说就是意思变了
+ Python用反斜杠（\）来转义字符
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwo7vR6N3jMy8seZA4wFXkxnXNqf2W5uiaJibf2daBKGnE6KODk4hUZk2A/0?wx_fmt=png
+ 我们举几个例子理解一下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwh9f1WNxRIIibpkibicjlHtFs8oDqoMtSTxgtO5mqFGgVsNRGfBA5ktfiag/0?wx_fmt=png
+ 这里的 \t 是横向制表符，也就是空出四个空格的长度
+而 \n 则是换行符
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwgERl2tK1ZZ9cpao6eBBFoOIygfaQrrw8gjjS59g68fUgXpZicbvXPtg/0?wx_fmt=png
+ 这里的\b是退格，也就是我们键盘上常用的Backspace
+
+I 被退格键删除了
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwIkmNpsaUDRqtmwGoic13nbUyfKFfs1Op1j7NqW8gTzjKMvd0h520UCA/0?wx_fmt=png
+ 退格键只会删除前面一个字符，而不是所有字符
+We中只删除了e
+ 还记得我们上节课说的单引号双引号同时使用的例子么
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwWIt9dPibTIE1w7Rz2cE7iatHY3AJ3rqae3CceNxtuXOibqOrw69LibrEtw/0?wx_fmt=png
+ 
+ 有时，我可能想打印 \t
+虽然一般不会
+ 这时候我怎么样让这个转义不生效呢
+ 可以采用两种措施：
+1.字符串前面加r
+2.再加一个反斜线
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwWWu68ur3zXicGU5ET2IUKteDQg1bDMjKqyIkH77Ohj83mSRHuyEI8wg/0?wx_fmt=png
+   用len（）函数，可以查看字符串的长度
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFw0WLibkcZiaVFfrqr7TVfdj0NmD1b2pah3rEWHvsicmNGEWiam4YgeeVCEw/0?wx_fmt=png
+   中文，字母，数字，符号都是占一个长度
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwJ3IgibNHpROPvNianZCGib4iaZ2fJmpHY7pgEHjvGgEN4yz3qx3142kd4w/0?wx_fmt=png
+ 包含转义字符的字符串长度是把每个转义字符当成一个字符，即 \t 是一个字符长度，而不是看上去的两个<br style="box-sizing: border-box;"  />
+  可以通过加号连接字符串<br style="box-sizing: border-box;"  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwHn9LN8Yx3u4HPBH6d8gc2b08OicEvgicrbXLdFT25Mq3icg9XsotQOHSA/0?wx_fmt=png
+ 直接连接显示很不友好，我们加一下空格
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwAvIwylgicz7QOhKLdGKWKjvBRr1Gpb6gD9wzibNWaShKJ3PlMpG9KZJg/0?wx_fmt=png
+ 这样就好多啦~
+  索引是什么，举个栗子吧
+ 我们这学期还没上几次课吧，我就记住了小明和小红，我们班一共40个人吧
+咦，我数了一下怎么就15个好像，奇怪
+我不是针对其他同学，我是想说，在座的其他人我都不知道名字
+ 好了，学号是1~40，点个名吧
+3号
+（安静5秒钟）
+4号
+（安静五秒钟）<br style="box-sizing: border-box;"  />
+5号
+到
+小明，你是5号啊
+-------------------------------------------------
+每个同学都有一个学号，通过学号这个标签我们能找到对应的同学，这就是索引
+ 小明：那索引学了有什么用呢？感觉没用啊！
+
+
+小明啊，你不还没开始学么。。。
+ Python有两种索引方式：
+（1）从前往后的正向索引：有m个字符长度的字符串，索引值是0~m-1（计算机很多都是从0开始标序号的）
+（2）从后往前的负数索引：有m个字符长度的字符串，索引值是-1~-m
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwJaibHf0vlVrHB4prfjIZKibUTDhibQxYvk0eibFHVaRy5uppBv4cpzGXzg/0?wx_fmt=png
+ 如果我们下标索引越界了（超过了以上规定的范围），则会报错：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwibcXKFffOF4VzjYYDibag3NWYRicbD6OpfDvF2e19DicLIibhxibZ0AEVMag/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwLnPcPaKvH0QDgX2Riapvh5zicDAJlmhYPicQHRcGjGgE7lSl4ReMZ5ibeA/0?wx_fmt=png
+ 切片：顾名思义，把东西切成片，如果把字符串看成一根黄瓜，切出一部分下来是不是就是切片呢
+说的专业一点就是，取出字符串中的子串！
+ 切片最标准的写法是用两个冒号分割三个数字<br style="box-sizing: border-box;"  />
+ 第一个数字表示切片的开始位置（索引）
+第二个数字表示切片的截至位置，但是不包括这个位置，也就是切到它的前一个位置结束（索引）
+第三个表示切片的步长（切片的厚度），当省略步长时候，默认为1，可以省略后一个冒号
+ 吃点栗子理解一下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwS4MpXeKmUQzFaFPDKH7xP3Va9p3ocjolkpgzGcbp7wrh1EWB5TCkKg/0?wx_fmt=png
+ 如果还是看不懂，可以留言评论哦
+ 当然，如果越界了，不会报错哦~
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwbh5hOuuuks4Ke1HNlKNBMVOTcXfEictVRcge9R1y54epHOGwLOUqNfQ/0?wx_fmt=png
+     人生苦短，我选Python
+未完待续，连载中......
+http://mmbiz.qpic.cn/mmbiz_png/yqVAqoZvDibGpfYS2cC4YzbozH31oekibOpLFWEQicW5ufOeKMJQ9qoh8sCyjrX9k8Wm9ibic0quI4XDdTGKd0OjKBA/0.png
+  

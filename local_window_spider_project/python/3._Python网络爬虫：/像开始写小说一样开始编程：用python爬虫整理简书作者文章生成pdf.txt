@@ -1,0 +1,83 @@
+b'\xe5\x83\x8f\xe5\xbc\x80\xe5\xa7\x8b\xe5\x86\x99\xe5\xb0\x8f\xe8\xaf\xb4\xe4\xb8\x80\xe6\xa0\xb7\xe5\xbc\x80\xe5\xa7\x8b\xe7\xbc\x96\xe7\xa8\x8b\xef\xbc\x9a\xe7\x94\xa8python\xe7\x88\xac\xe8\x99\xab\xe6\x95\xb4\xe7\x90\x86\xe7\xae\x80\xe4\xb9\xa6\xe4\xbd\x9c\xe8\x80\x85\xe6\x96\x87\xe7\xab\xa0\xe7\x94\x9f\xe6\x88\x90pdf' 前言：本文有俩个目标读者，一是不懂编程，想了解编程“介究竟是个嘛(第四声)”的人；二是有编程经验，不会python，但希望学习python或者需要使用题目所示功能的人。<br  />PS：长(luo)文(li)多(luo)图(suo)，流量党慎入<br  />PPS：要直接看编程部分的请直接阅读第三章前半部分和第四章之后   
+
+
+
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvUJurs3dztaz4ywHkYYoVBm1Pzp0iaMJ9WBvN1LZ0vu6dZY9aicjicL2ug/0?wx_fmt=jpeg
+ 开始在简书写作快一个月了，看了不少知名作者分享自己的写作经验，可到了自己要写的时候，却发现文思如癫痫，下笔如瘫痪(真相是文思和下笔都瘫痪了)，这可怎么办呢，这岂不是离写作的梦想更远了？于是我决定用python把喜欢的作者的所有文章全部爬下来仔细阅读研究，看看有没有什么写作的技巧(感觉我要火啦！好激动！)。</span>
+ 会不会很多人一看到要写程序来研究就准备关掉页面了？(废话，好多人看标题就掠过了)根据</span><span style="font-size: 15px;">分享爬取简书数据</span><span style="font-size: 15px;">推测</span>
+http://www.jianshu.com/p/e152c9e85cfe</span>
+简书大约有235w的用户，其中关注程序员栏目的有近44w，占总用户的18%，每11个人中就有2个人在关注编程相关信息，说明简书中程序员\对程序员感兴趣的人比重不在少数，可不知道有多少人，看着栏目里的大佬们写得天书一样的编程经验，望而却步。</span>
+ 专家盲点（expert blind spot）就是对一个事物知道的越多，就越发不记得“不知道这个事”的情形。</span>
+ 
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvIreFBhZtOyY7Euqo9E9ST0swMFtCSeyhNlvBF2kbokQ46YJcVeVSXA/0?wx_fmt=png
+  所以在我学习python的过程中，想要用更简单易懂的语言告诉不会编程的你编程是怎样的。（快！毫无保留地夸我！）</span>
+     编程语言的逻辑是基本相同的，就像不管是写新闻，还是写日记，还是写小说，都是人吃饭，不会是饭吃人(灵异小说除外O__O "…)。</span>
+ 编程语言的语法会有各自的特点，就像中文说我今天很开心，而英文说I'm happy today(直译“我是开心今天”)。</span>
+ 编程语言的功能侧重点也不同，objective-c主要用于ios开发，php用于web开发，python主要用于写爬虫(我编的)，就像用认真的语气写思想汇报，用严谨的语气写论文，用逗比的语气写python教程一样(逃)。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvwqzlAkB95klBmia6kCLJIraXUXlPqJ5E2ib4W8H76REKNbOn31466K1w/0?wx_fmt=png
+简书的大V作者们在写作经验分享中不断地强调着，不管你想写什么，先写起来，多尝试多练习，渐渐就找到方向了。</span>
+ 不过毕竟在写作之前也说了几十年的大白话了，就算文笔再差只要认识字自然可以直接开始写，可是编程语言零基础的话是什么都不知道，就算想写，怕也是无从下笔，可编程语言知识又看不懂(碎碎念……</span>
+ 来自日本已经82岁的若宫正子老奶奶成为了2017年苹果全球开发者大会年纪最大的开发者，因为她发现ios平台没有适合老年人使用的app，所以开始自学编程，进行ios开发。</span>
+ 在不了解编程语言的时候，看编程语法是肥肠枯燥的(我都快枯萎了)，而且很容易学完就忘，可为什么老奶奶都能够学会呢，因为她要开发老年人用的app，有了目标，就有了动力，所以就需要明确目标，你希望通过编程做什么。</span>
+ 推荐python一则因为它的语法自由度高，语言简洁清晰，适合初学者学习；二则因为…当然是因为它可以做很多肥(ke)肠(yi)有(zhuang)趣(bi)的事情啦！每次看到别人拿着什么大数据，各种图表、分析，快告诉我你真的一点也没有羡慕吗？！</span>
+ 零基础开发一个app可能需要几个月，但零基础学python到做点小爬虫可能只需要几天(诱不诱人？心不心动？)，而在互联网强大的开源环境下，写出大爬虫也是指日可待啊(快醒醒)。</span>
+ 好了，不废(zuo)话(meng)了(擦口水)，写作没题材无从下笔我帮不了你，爬虫的目标已经选好啦，来爬一爬简书大V们写的文。</span>
+   就像写小说一样，分段，分章节，分情节，是为了搭建故事的框架，为了更好的讲故事，也是为了防止自己写着写着就想不起来自己为什么要这么写了(我承认我是最后一种)。</span>
+ 在写提纲这件事上，编程比写小说简单多了，因为“代码是凝固的文字，而小说是有张力的文字”(引自知乎</span><span style="font-size: 15px;">无色方糖</span><span style="font-size: 15px;">)，一旦你知道自己要用编程做什么，代码的堆砌是有迹可循的，但即使你知道小说剧集的终点是什么了，怎么写得精彩绝伦，那就不得而知了，这样想是不是觉得编程比写小说容易多啦？</span>
+ 我以前曾经说过，爬虫是模拟用户上网行为的一种程序，所以我们需要思考的就是在得到作者文章合辑pdf之前，我们都做了什么？</span>
+    黑字就是一个对我们要人肉完成生成作者文章为pdf这个目的时需要做的。</span>
+紫字是从机器角度去思考爬虫需要做的。</span>
+红字是编程中的<strong>函数</strong>，每一个功能都是有一个一个<strong>函数</strong>运行完成的。</span>
+蓝字是从外部引入的<strong>功能模块</strong>。</span>
+是不是已经蒙圈了？</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHveYTXn0TzKVB93iajSxDzjP2VQZJnFbnDGficQ4HGqC3MQzbia4oHXuqJw/0?wx_fmt=gif
+我们换个角度来解释。</span>
+ 本米打算写一部惊世骇俗的史诗级小说，“拥有绝世美颜的女主因不堪继母的百般刁难发奋图强一举考入清华大学飞禽系脱离家庭并靠自己不畏艰苦的精神一边兼职神奇动物饲养员一边读书最终以优异的成绩进入动物城青眼白龙村母龙联合会工作并在那里好巧不巧地因为养殖经验丰富受到了有着童年阴影的魔法界公众人物也就是男主角的崇拜男主盛情邀请女主参观他的妙蛙种子试验田的时候附近地面遭到了外星飞船的撞击女主被外星人附身失去原本记忆男主远走他乡为其寻找解救之法却不小心穿越至石器时代又在疯狂原始人的帮助下被神仙发现神仙了解男女主的故事后大为感动仙杖一挥赶走了外星人并许了他们三生三世的兄妹情缘”……</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv1xRWLCPOGibpB6ftcUADRaBQMAKFbUcva1icjr6A8zjQJWee42J5Umtg/0?wx_fmt=png
+听到<strong>神奇动物</strong>、<strong>青眼白龙</strong>、<strong>妙蛙种子</strong>这些词的时候，有没有觉得很熟悉，有没有直接脑补出一段记忆深处早已存在的剧情？这就是类似于编程中外部引入的功能模块，这个模块早已存在了，它也并非我写的，刚好它拥有我需要的功能，所以我就将它引入到我正在编写的代码中，这样它本身包含的功能我就可以直接使用了。</span>
+ 仔细分解故事，大致可分为女主家庭篇、女主大学篇、女主工作篇、男主篇、男主女主相识篇、外星事故篇、千里解救女主篇、大团圆篇，这里的人物角色，代表着程序中的参数；每一个故事的章节，就代表着一个的函数。不同的函数代表着不同的功能，函数与函数之间相互联系，完成程序的任务(类似于展示故事的情节)，传递共同的参数(可以理解为角色贯穿整个故事)。</span>
+ 程序语言中还有一些内置函数，内置函数是程序本身自己就有的函数，就像中文写吃东西用吃饭，英文用eat，日文用食べる。</span>
+ 通过对内置函数的使用，模块的调用，以及函数功能的搭建，就组成了一个完整的程序。</span>
+  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvGNsG381IuHhiaibACwLdagcthur2EPsECoibRlcXY3b2T2SJribpJtrI0w/0?wx_fmt=jpeg
+  user-agent</span><span style="font-size: 15px;">可以理解为爬虫的浏览器马甲，披上了这个浏览器马甲，爬虫就会像我们平常上网时打开浏览器输入网址就可以看到网页一样得到需要的网页内容，这是为了应对低阶的反爬虫技术所采取的措施，关于爬虫和反爬虫的战争，改天再唠。</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv3tWQeiayv1flZlXkwM3MaONk5zPgRQnlTUmsI0Hb2iaGGqjTdFuOzBjA/0?wx_fmt=png
+  简书个人主页内包含了作者的信息，文章总数，也包括了文章的标题，往下拉页面，会发现文章不断的加载出来，应该一直往下翻可以翻到第一篇文章，但如果右键查看源代码，就只能看到已经加载出来的文章源码。</span>
+ 文章是动态加载的，需要在chrome浏览器右键检查，在弹出窗口中选择network，这时继续下拉页面，观察左下角的列表变化，里面有一个包含page字样的链接文件，不一定在xhr分类下，不过一般就那几个分类里。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvD8NULEAe1vibcyKreuNwVRVUMribBWERbJxdzqIz0pkS0aspF2ia8lIxw/0?wx_fmt=png
+     作者的姓名在title.name下，</span><span style="font-size: 15px;">正则表达式</span><span style="font-size: 15px;">为：</span>
+  节选个人页源代码</span><code><span style="font-size: 15px;"> 
+</span></code>
+  文章数隐藏在info.meta-block下，但meta-block下会匹配到的值不止一个，用于区别值的几个href都是根据作者生成，不适用于所有作者，所以选择将匹配的值保存在list中，查看源码可推出需要的值在list中第三个，于是返回list[2]的值。</span>
+  节选个人页源代码</span>
+  这里匹配的是文章的标题，可以看出前面的href中的值"/p/c2a4a3b3490e"对应着文章链接的尾部，一并保存并转为网址形式，将匹配到的值存入1个list中（下面的代码还匹配了发表文章的时间）</span>
+    hiahiahiahia~这就要介绍一个引入的模块，一个神器！</span><span style="font-size: 15px;">wkhtmltopdf</span><span style="font-size: 15px;">是一个可以直接将网页转化为pdf的模块，也可以通过相应的函数设置网页指定部分转化为pdf。</span>
+ 当然我们还是要读取文章内容哒，但不需要单独设置函数读取文章了，在转为pdf的函数中直接读取，此处参考了</span><span style="font-size: 15px;">Python 爬虫：把廖雪峰教程转换成 PDF 电子书</span><span style="font-size: 15px;">。
+</span>
+https://foofish.net/python-crawler-html2pdf.html</span>
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvUIDYsAuMRwnZibYtCp5ibQhH5Mq8sdvRRDsfoLRt7YiaxxWahA88FsXGg/0?wx_fmt=png
+  Mac字有点小QAQ，看下windows的。</span>
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvzzHmTRVNet2ic9OibcDDWic2w0FzIpSFsM1SbjIWKKC4LHgVqoTPmKU1g/0?wx_fmt=jpeg
+  (*^__^*)</span>
+   思路是根据在4.3节中提取的文章链接，读取文章中文本内容，输出到txt文件中，再使用python的第三方模块</span><span style="font-size: 15px;">jieba</span><span style="font-size: 15px;">(这个模块中文翻译是结巴？结巴！结巴……哈哈哈哈哈哈嗝)，通过这个模块，就可以将大段的文本按照词汇分开，而且支持中文分词！不要问我这个分词有啥用，计算机不是学过中文的，在它看来中文都是@！#￥%…&amp;*。</span>
+  得到经过分词后的文件，使用python的第三方模块</span><span style="font-size: 15px;">wordcloud</span><span style="font-size: 15px;">输出词云，wordcloud模块可以引入自定义图片，并根据图片的轮廓生成词云，同时支持引入字体。</span>
+  我曾想过以作者头像为背景图生成词云，但发现有些作者的头像生成词云的效果并不好，于是我选择了固定图片作为词云背景，生成了怀左同学的词云。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvF7jpsEniaElmdGxt17fdSC7maicNjtqE4HXSEPE9ibSIfQ3UZstukJibMw/0?wx_fmt=png
+  怀左同学果然是学霸呀(●─●)，努力、生活、写作、读书、学习……</span>
+ 好！我也决定要努力学习编程，努力工作(flag*MAX)，不说了！我去努力了！（逃</span>
+我又回来了，</span><span style="font-size: 15px;">gayhub</span><span style="font-size: 15px;">源文件已上传，随意下载</span>
+https://github.com/otakurice/jianshutopdf</span>
+代码均设置了时间间隔，虽然只是很小的爬虫，但是也不要给简书叔叔增加服务器压力啦~对啦，代码是基于Python2.7哒~</span>
+ 关于python基础入门的学习资料，我推荐这本书，</span><span style="font-size: 15px;">Python 2.7教程</span><span style="font-size: 15px;">，里面也有python3的教程。</span>
+ https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000
+</span>
+ 如果有什么关于代码的疑问欢迎质询，我会本着科♂学的态度认真回复的：<strong>在我的电脑上跑是好的</strong>。(再逃</span>
+ 我会读取json文件啦。</span>
+ 情况是这样的，之前程序的设定是输入所需要作者的个人主页链接，但我希望程序是只需要输入作者的名字就可以运行。</span>
+ 于是我分析出搜索页的网址："</span><span style="font-size: 15px;">http://www.jianshu.com/search?q=</span><span style="font-size: 15px;">怀左同学&amp;page=1&amp;type=user"，查看源代码，发现源代码中没有搜索结果的显示(和说好的不一样啊！这不科学啊！)。</span>
+ 查了很多资料，大概知道这是网页的异步加载，于是又要动用chrome的另一个神器，检查-network了。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvB4BM7yCzErP8rtFzicGI4739AQJXV68xELZhQzKsicicpY5zq499ibyLIw/0?wx_fmt=png
+ 与4.2节相同，在搜索结果页中刷新页面，发现在xhr分类下多了俩个文件，点击第一个文件，查看右下角的preview，列表里不正是我们需要的搜索结果吗？那么怎么把它提取出来呢？</span>
+ 一般情况下我是查看preview旁边的headers选项卡中的requests URL:</span><span style="font-size: 15px;">http://www.jianshu.com/search/do?q=%E6%80%80%E5%B7%A6%E5%90%8C%E5%AD%A6&amp;type=user&amp;page=1&amp;order_by=default</span><span style="font-size: 15px;">，但点击这个URL之后发现没有任何内容。</span>
+ 一开始我以为我努力的方向错了，在散发着大神之光的程序员小哥哥前辈的指点下，我下载了一个chrome插件：postman，将刚刚的网址粘贴到postman的浏览器中，发现打开之后就是我需要的内容！</span>
+   经过一番努力，知道了用这个链接直接在浏览器请求无法得到正确的网页内容是因为没有带正确的headers。</span>
+ 

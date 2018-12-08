@@ -1,0 +1,22 @@
+b'\xe5\x9f\xba\xe4\xba\x8e\xe4\xba\x94\xe7\xa7\x8d\xe6\x9c\xba\xe5\x99\xa8\xe7\xae\x97\xe6\xb3\x95\xe7\x9a\x84\xe4\xbf\xa1\xe7\x94\xa8\xe9\xa3\x8e\xe9\x99\xa9\xe8\xaf\x84\xe4\xbc\xb0'  http://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XPghXWO0HEEuFOMmwAN78BJqBpQY11mYWxEEibFoSqFaibzvsMPOiaC58g/640.jpeg
+   http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XCExNHfs4V7woLjbSToy4fTtY2BrEq2BhTsFZyIcgibpPDtYeZIKNNrA/640.png
+      http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XJicbIp8B6pclRoQTJiaBZKkTX32zmhDj5M1mic0xibrgErhu5mjQpElfOQ/640.png
+    
+ 
+<span style="font-size: 15px;"> 如何在这些字段中提取出模型要使用的特征变量实际上决定了模型的上限，数据预处理显得十分重要，一般对信用评分的模型数据采用以下预处理步骤：</span>
+        
+ <span style="font-size: 15px;">
+ 变量graduated.years(离散型)和marriageStatus(离散型)存在缺失数据，已经用-1补齐，-1将按照单独一类来处理。</span>
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4X8jPYJ8Z3diaLO8icnXLMibrsNic2ROtM3KvX1kCDiaz8MawfNDgcfs7Tnpw/640.png
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XdGmZdxepiagIMllicfdv9bribhd7BYaQLZNloYZ2B34c80FA0n5Ku8DLg/640.png
+    http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XTtQ4Q215dvD25lv6ibiaFX17JRyWiakBK7tVM6NoT3yM0BGm6o9I4f1icg/640.png
+    
+ <span style="font-size: 15px;">
+我们可以简单地看下部分变量的分布，比如对于age变量，如下图：</span>
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XMSwF7COWY0PA2rFNzmBT7zXExicEeoWR7FI1Kj3m1Ohwr5iaia5gr1ppg/640.png
+   http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XjVSJ9C7ias0rC08ypGaw0juDJB9ovstaI9oVRtRNUVm0GBYicwDITmPg/640.png
+   
+ 
+ <span style="font-size: 15px;">建模之前首先得检验变量之间的相关性，如果变量之间相关性显著，会影响模型的预测效果。下面通过corrplot函数，画出各变量之间，包括响应变量与自变量的相关性。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpib1OOgGsNLcRrSNebkjW4XD9lx4gjfBDV5Q8Gq9dNeUOfLQmHlXSsLECTFGbbNHdeEb2aJhPWm5w/640.png
+   

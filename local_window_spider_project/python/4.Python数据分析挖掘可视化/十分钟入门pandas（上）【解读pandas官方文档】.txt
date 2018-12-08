@@ -1,0 +1,139 @@
+b'\xe5\x8d\x81\xe5\x88\x86\xe9\x92\x9f\xe5\x85\xa5\xe9\x97\xa8pandas\xef\xbc\x88\xe4\xb8\x8a\xef\xbc\x89\xe3\x80\x90\xe8\xa7\xa3\xe8\xaf\xbbpandas\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe3\x80\x91' http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttIxQCRdCDoWcmicGG6M8mSGOI9LrlSqL8dQ7oo8LcUWLUEjIC4YjuRtr2UHoMgL4PicLSKSMibwRxiaw/0?
+http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0
+ 有人会说，我零基础，看不懂啊！
+也有人会说，我英语差，看不懂啊！！
+还有人会说，我想学实战案例，不想看的这么详细！！！
+ 是的，官方文档说的面面俱到，像是查字典似的，对于初学者是很不友善的
+所以大部分人选择了:拒绝！
+其实，我以前也是不看官方文档的，但有些问题百度不到，看的书里没讲到，那我就被迫去看官方文档了
+此举给我打开了学习Python的一扇窗
+我发现，官方文档其实有很多例子和入门学习内容，比如我们今天要说的
+很多人讨厌看官方文档，今天我就用中文简单解读一下，争取让大家看懂，能入门Pandas
+官方文档说想要详细了解Pandas的更多用法可以看它的cookbook：http://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook
+ 请参见“数据结构简介”部分：http://pandas.pydata.org/pandas-docs/version/0.20/dsintro.html#dsintro
+
+通过一个列表的值创建一个系列，让pandas创建一个默认的整数索引：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2OWI80srLCibkd6nPGFialGuoicfmicpErjwBGibGFzVqRvVib9XcMVAic5RDw/0?wx_fmt=png
+注意：np<span style="color: #666666;">.</span>nan表示不存在
+通过numpy创建的数组，可以创建一个pandas中特有的dataframe，使用datetime作为索引和标记列名。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2HV9H2MdNibvuKvd8EAhgsricCB5BlwgO7IJOGBJ2Hdek2j376B1P1Hrw/0?wx_fmt=png
+这里的date_range()是pandas下的一个方法，可以在jupyter notebook下使用如下方法查看使用说明：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2XxIrznlUEQ4sicQO14RpzSr9qaabF0ZbXvI4wIZvZ6lxf3C2pPVbP2Q/0?wx_fmt=png
+ 我们可以看到这个方法的使用说明和各个参数的作用
+看到这个方法是返回固定频率日期时间索引，返回连续的六个日期信息
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2jE9ZFYd5RlsLo7ZKicxFvTdKziam6mvYq7aiawKKbsKjicbDlknKBFpTsQ/0?wx_fmt=png
+ 注：这里使用ABCD为列标签，之前生成的日期序列为行标签，6行4列标准正态分布数据为内容的dataframe
+ 使用字典来创建dataframe
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2qibb3pf3rSnmBdOe9UGtQxp38YbiaFzkc5cp4ZJEPovE68IP0tRNExbw/0?wx_fmt=png
+ 查看dataframe的类型信息
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2ibNngG1w6W5TnshHlv3zLRBpzPVs6ictRc0kuWQrXGmRiajibeADsT2h9w/0?wx_fmt=png
+更多内容请参阅基础部分：http://pandas.pydata.org/pandas-docs/version/0.20/basics.html#basics
+
+查看dataframe顶部和底部的行（默认五行）
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2yTYlBicTDBjKOD3QN1IT7QsdrvWPVvfWw0kByUaU0IQ2KKDJibjTJ4fQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2QicgShk3n5NYsquA9IJq714G6cNbibBQibtVbLX0QOaKk0F5FCibOFDMEg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2IibiciaalmbWwvntHN5dbLBdicQvzk7L9ZgC5GYVEohwYzpfoLeabztObA/0?wx_fmt=png
+显示索引，列和底层numpy数据
+
+显示索引：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2WDWWXkRIFaxmZCdHc6RL9mghlkicObTvRWVk6v0Tr57SQKj6yjibAKng/0?wx_fmt=png
+显示列名：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2HGqtEJNaDa0vRpiaicickGbGpprEQVvBcDg66AYUiaCwMD3gYt8ysf635w/0?wx_fmt=png
+ 查看底层numpy数据：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2cclZBV81ibqDOUFLgXrMa96zww8VL6eibAf7FVZzX3ao4BYB65JxH7nw/0?wx_fmt=png
+ 对数据的描述性统计信息
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2BYzR7icr5mPNiaWo28o7KdtEzTGaxjogMdPBhlr2gPC4FabCNVdYgRIg/0?wx_fmt=png
+注意：数据需要是数字类型（float，int等)
+ 转置调换数据
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2ia2oZlSywT1eRb60Sdt4q5MzWxwQp3RDrCT2GIZLs0z5ico27W30iaGWg/0?wx_fmt=png
+注意：就像线性代数里面的转置矩阵
+ 按轴排序
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2ZwOABDq09mM3GHdSu0iaYA8s5EbCmEYQf69CxMKKicJJjfibbGYrmqiaYA/0?wx_fmt=png
+可能你还看不太明白这是什么方法
+我们help一下
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2FtJrNiaAmegDXlR35q2LrJUvl2DFFJjRnfia35nNyNhic8qo84yxZm0xg/0?wx_fmt=png
+ 这说明axis可以取0或者1，我们试试看0：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2CbEcJ6PMMsDBhJ8z5DqmUAUIKz3qMSZtUlUqkicrSdlt1b3mlicfDT2A/0?wx_fmt=png
+可以看出两者的区别
+深入挖掘其中的参数作用还得你自己慢慢看呢
+ 按值排序
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2BoRJwwJR6gbvwb3R4uSB6d27jx56fshFC0T0wWA3oiahBfaekshtcZQ/0?wx_fmt=png
+这是<span style="color: #4C4C4C;">B列数据排序，并且其他数据参照</span><span style="color: #4C4C4C;">B列数据变化。</span>
+更多内容请参阅索引文档索引：http://pandas.pydata.org/pandas-docs/version/0.20/indexing.html#indexing
+和选择数据和多指标/高级索引：http://pandas.pydata.org/pandas-docs/version/0.20/advanced.html#advanced
+ 选择一个列，返回一个Series，相当于df.A
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2XIWf6ACl0BLcxxCmQHQZcWXopaAElUg4HC7sKKxqMlLTyBEicicg2yrQ/0?wx_fmt=png
+ 选择通过[]，切片出行数据
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2ptgsfE5faAUsdcVQ3biaEmHYNib2M7G0IJwGYogSjDHevTSOH4dR1FIQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2RugIxvejjVqW62nqJicfpTogEzAXIQVIYV7ibSia4fWnzc6GCkEtqepHw/0?wx_fmt=png
+ 在标签选择中查看更多内容：http://pandas.pydata.org/pandas-docs/version/0.20/indexing.html#indexing-label
+
+ 使用标签获取一块数据：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2tGgFm1QbfEJUgBNic2dJHEhMia2nV5dcwRiapWExbUnwCx2OzN1r4sA3Q/0?wx_fmt=png
+通过标签选择多列：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2KibicLVWkacic501mWjOf51zFYNMYMT56ejIIRtr4gpibIImds8hFTpHPg/0?wx_fmt=png
+ 显示标签切片：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2m1MbMoxdzsCQV85lNecz8qlWyjyzia8RQvDb6T70mLzRicQiaccJSDfeg/0?wx_fmt=png
+ 减少返回对象的维度：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2mc5UibTicZRc9UnGJzgCic4R89o8YzZiaB7LxM0bicO2lGn4BAh6xibMGBtQ/0?wx_fmt=png
+ 获得标量值（就是定位一个具体的值）：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2iaHFBiavYkgAtFg30a69O40Obs5QBR3kP4actrRJQ5gUicc5icHbrCryMw/0?wx_fmt=png
+ 快速访问标量（等同于先前的方法）：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2RAMmQVGzss8kibEuMk9ga1wBmad0C1pabxfibJttr0MUW8LFmv6OicNVg/0?wx_fmt=png
+更多按位置选择内容：http://pandas.pydata.org/pandas-docs/version/0.20/indexing.html#indexing-integer
+通过传递的整数的位置进行选择：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2clcQaJACF1XemcX2Uic2bPcicaNzOaGkksIdu861qADHEEjUcGwp8lXg/0?wx_fmt=png
+通过整数切片，类似于numpy / python：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq27IfMyRo3iba79lvqrliaicEGbQfDoIuZoAQjyRVmtZsxiaoWoGlnmKyaEg/0?wx_fmt=png
+切出3-4行，1-2列一块区域
+通过整数位置列表切分，类似numpy的/ Python的风格：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2YV3ycbysys7WMD50vBia62EfCldrBPlZlHWhcy6rBMDYtlWN6mNiaYLQ/0?wx_fmt=png
+切分出某些行：
+df.iloc[1:3,:]
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2RMHgKa32CGaBfZ1IENCrOgjaha1K9wkPrVzTz0UO0yrHtfkbiaS46bw/0?wx_fmt=png
+ 切分出某些列：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq29dZTCiaDYO8rDGswPL1J1GZics0euzBKxXwsQ65cWp7c6p1alWDt9Hsw/0?wx_fmt=png
+
+获取某个值
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2NcKAy19GLB9D9FADzD4xL8sjYECO8D0sTshWsmM8CytyGzadibymWoA/0?wx_fmt=png
+快速访问某个值（等同于先前的方法）：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2WmEG6Y66TFFffl18PXVbThicnDaKZu91ErUH6ELN9haAkZsp3Egic3PQ/0?wx_fmt=png
+使用单列值选择数据
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2pMVKuNduA68lz1k8b5xXQfrrd2PVkGkckib5IlE8S3ODM1ibeeFUjthQ/0?wx_fmt=png
+注意：先判断A栏中大于零的数，然后把这些行取出来
+从满足布尔条件的DataFrame中选择值：
+
+ 使用isin（）方法进行过滤：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2OBmwBnKBwLkqpqcBGqc8kayB5OFc2vxwEPOlfTkculfhmIohkXgibfw/0?wx_fmt=png
+注：copy了一份dataframe，然后新加了一列E
+ DataFrame显示每个元素是否在DataFrame包含在值中,返回boolean.
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq24srMsCYKSNLRibVQwJpLA1zGvm1dUhWbfbicjy7sMC7AJoibZA9QjZwNA/0?wx_fmt=png
+相当于判断two和four两列是否在df2中，在的话返回True，然后将参数传入df2，返回这两列的值。
+置新的列会自动使索引对齐数据：
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2694d4pqAKMibuYscjbpUo01hnKt7vxFicc7lPSBVePmLeiasSMWicdic3YQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2MDv004C6iasXWypiaqf5CDKicaq5OkbdLDdfv3MIdhKBVPbDQic8Bahpjg/0?wx_fmt=png
+这里用和原来一样的索引（时间）为原来的dataframe增加了一列数据
+ 通过使用numpy数组分配进行设置:
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2nOuxgUic5G1zoG56Xnia7d67LyqjPwH79pJkzbV4ZicBNQqiahaMNd2aLQ/0?wx_fmt=png
+注：产生一个数组，每个元素值为5，长度为df的行数，替换在原来df的D列
+ 按位置设定值：
+
+  设置操作：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsIck5vxTKFibxM3DGVZUXq2xH5W3trHdNb8ZgZFonqEdF7hy4IGOSO1lTy5t9yeqziakxAU7h6dxRg/0?wx_fmt=png
+参考文献:http://pandas.pydata.org/pandas-docs/version/0.20/10min.html#selection
+http://mmbiz.qpic.cn/mmbiz_png/fgnkxfGnnkRfeUEET3ibCz0eadPptUdZ6A0VJ7LEDJrwkwKKnWRiaBFnicLMlrDaic13y4DSmwW4KHHia2akGGyGxBA/0?

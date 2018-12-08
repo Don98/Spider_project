@@ -1,0 +1,62 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9021\xe3\x80\x91--\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92\xef\xbc\x88\xe5\xae\x9e\xe6\x88\x98\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                     
+
+
+
+
+
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">线性回归</strong></span>一般是用来<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">预测连续因变量</strong></span>（目标变量）的模型，同时，它也可以用来<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">选择核心变量</strong></span>（即真正影响因变量的自变量有哪些）。关于如何构建并求解多元线性回归模型的理论部分我们已经在《<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247485055&amp;idx=2&amp;sn=6e44ecf9029d1775a63a25c39430a09f&amp;chksm=ec5ed902db295014a32d955d94dfffeda5c3a28ab0a6bbafa7d9a83dca0927d6805644830864&amp;scene=21#wechat_redirect" target="_blank">从零开始学Python数据分析【20】--线性回归（理论部分）</a>》中做了详细的梳理，包括模型的偏回归系数的计算、模型的显著性检验和偏回归系数的检验。如果你对理论部分还不是很明白的，建议你先看一下我之前写的文章。
+
+
+
+
+
+
+在本期的推文中，我们将<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">手把手的分享如何使用Python和R语言实现多元线性回归模型的落地</strong></span>。如果你对这篇文章感兴趣，希望能够看完下面的内容，相信对你有一定的帮助，同时，文末部分也会给出相关脚本和数据集的下载链接。
+
+
+
+
+
+
+如果市场的运营部门给了你一份数据，数据包含了不同广告渠道的成本及对应的产品销售量。现在的问题是：
+哪些渠道的广告真正影响了销售量？
+根据已知的渠道预算，如何实现销售量的预测？
+模型预测的好坏，该如何评估？
+
+
+
+
+
+
+哪些渠道的广告真正影响了销售量？对于这个问题的回答，其实就是在构建多元线性回归模型后，需要对偏回归系数进行显著性检验，把那些显著的变量保留下来，即可以认为这些变量对销售量是存在影响的。关于线性回归模型的落地，我们这里<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">推荐使用statsmodels模块，因为该模块相比于sklearn</strong></span>，可以得到更多关于模型的详细信息
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCv0rPXwial3HLsEdaFIgIcVNLm5icAIibbibbNInn6X6qQx1qua92rpd54iaQ/640?wx_fmt=png
+通过数据的描述性统计分析，我们可以得到这些数值变量的基本统计值，如<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">均值、最小值、最大值、下四分位、上四分位、标准差</strong></span>，而这些统计值有助于你对数据的理解和分布的解读。接下来需要根据读取进来的数据构造回归模型，但建模之前，我们一般需要将数据集<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">拆分成训练集</strong></span>（用于建模）<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">和测试集</strong></span>（用于模型的评估）两个部分。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvm2XBYSzCmXBMLWhfd9E7s3x5TQVawXbDjXdR5GeQmOo2sRaibKkwVicQ/640?wx_fmt=png
+通过模型反馈的结果我们可知，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">模型是通过显著性检验</strong></span>的，即F统计量所对应的P值是远远小于0.05这个阈值的，说明需要拒绝原假设（即认为模型的所有回归系数都不全为0）。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvlmZzhAkfGKEYQAd2YLc4MadMz6qlC5ZmUWNpMjniaV3icZSPD4yltAog/640?wx_fmt=png
+
+
+
+
+
+
+在上一期的文章中，我们说过，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">模型的显著性通过检验的话，并不代表每一个自变量都对因变量是重要的</strong></span>，所以还需要进行偏回归系数的显著性检验。通过上图的检验结果显示，除变量newspaper对应的P值超过0.05，其余变量都低于这个阈值，说明<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">newspaper这个广告渠道并没有影响到销售量的变动</strong></span>，故需要将其从模型中剔除。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvFf81EcnO4KssvVkkfpE3QZrDxcHUKnP0Q1D5bPibicdTRLA7REy2ibYXg/0?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvr7CibdkZXQ9C5icZNSYrMQIJs76JMw4NUPNzuY9uibp6iakVyyIf9bzfJQ/0?wx_fmt=png
+ 通过第二次建模（模型中剔除了newspaper这个变量），结果非常明朗，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一方面</strong></span>模型通过了显著性检验，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">另一方面</strong></span>，所有的变量也通过了显著性检验。那问题来了，难道你剔除了newspaper这个变量后，模型效果确实变好了吗？<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">验证一个模型好不好，只需要将预测值和真实值做一个对比即可</strong></span>，如果模型越优秀，那预测出来的结果应该会更接近与现实数据。接下来，我们就基于fit和fit2这两个模型，分别在Test数据集上做预测：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvqk9NGnSbZia36LSGca7LXYdwFyX0MNYJ7NQkMcgO05klwKXSJV46Z8w/0?wx_fmt=png
+ 对于连续变量预测效果的好坏，我们可以借助于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">RMSE</strong></span>(均方根误差，即真实值与预测值的均方根）来衡量，如果这个<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">值越小，就说明模型越优秀</strong></span>，即预测出来的值会越接近于真实值。很明显，模型2的RMSE相比于模型1会小一些，模型会更符合实际。最后，我们再利用可视化的方法来刻画真实的观测点与拟合线之间的关系：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvb9rLSgzLDRsk2D20W4hFPsv7W3V4IzO3ArtU14THIdppDia9bibs9H4g/0?wx_fmt=png
+从上面的关系图来看，模型确实拟合的还是蛮不错的，这些真实点基本上都在拟合线附近，并没有产生太大的差异。
+
+
+
+
+
+
+以上所分享的案例，全都是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">通过Python工具完成分析和建模的落地，接下来我们再利用R语言复现一遍</strong></span>，这里只贴上脚本，就不作详细的介绍了，如果有任何疑问都可以在公众号的后台给我留言。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCv5icfxVJYtbcV62vBqIOKtkaicxZhRqEDk10666XzxfXWMVkF4s46SBicw/0?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvp8xPlNTeYWjfNzxicwVK0IvZgibuCiajL9ia9QwgqDaqwEpPSyfIRWicDXQ/0?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvqLdkGcUtSh0ZcQPjFDSfpJwV37Wzc6WOMibSdlwiaPW8tgwkbabpf6zg/0?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCvkLPm0SF5k1MjL066uXftN1uXwn5WCB5RHdD6HIPbgg5jfT1SPnD9kQ/0?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWCfdibKZJAlg80S4z9KHxCve6h7L5bvYbDOfXj2c83toeIXGTicypmib2PZ2fyBsUtVZa5ACUNgwKWg/0?wx_fmt=png

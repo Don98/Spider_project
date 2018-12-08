@@ -1,0 +1,4 @@
+b'\xe5\xb0\x8f\xe7\x99\xbd\xe7\xa7\x91\xe6\x99\xae\xef\xbc\x9aPython\xe4\xbb\xa3\xe7\xa0\x81\xe6\x98\xaf\xe7\xbc\x96\xe8\xaf\x91\xe6\x89\xa7\xe8\xa1\x8c\xe8\xbf\x98\xe6\x98\xaf\xe8\xa7\xa3\xe9\x87\x8a\xe6\x89\xa7\xe8\xa1\x8c\xef\xbc\x9f'https://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMnCtTvW9nlk4gZbWesMElntSPxURDAQTe4Mlutvian99CGhKz3wTyCamhpSsMX52GGKnvQhL3QZ0WQ/640?wx_fmt=jpeg
+ 有人在讨论 Python 代码是编译执行还是解释执行？这个问题还可以换一种说法： Python 是编译型语言还是解释型语言？回答这个问题前，我们先弄清楚什么是编译型语言，什么是解释型语言。
+所谓编译执行就是源代码经过编译器编译处理，生成目标机器码，就是机器能直接运行的二进制代码，下次运行时无需重新编译。不过它是针对特定CPU体系的，这些目标代码只能在特定平台执行，如果这个程序需要在另外一种 CPU 上面运行，这个代码就必须重新编译。它不具备可移植性，但是执行速度快，C、C++这类语言属于编译型语言。
+https://mmbiz.qpic.cn/mmbiz_png/rO1ibUkmNGMnCtTvW9nlk4gZbWesMElntoYURP3LA7sxHOOs2ibwjehOVXnTTwe72iarJtRichUbhy6KXFXicYcgLWA/640?wx_fmt=png

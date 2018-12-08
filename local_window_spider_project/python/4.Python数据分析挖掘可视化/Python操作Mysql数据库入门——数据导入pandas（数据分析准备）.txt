@@ -1,0 +1,16 @@
+b'Python\xe6\x93\x8d\xe4\xbd\x9cMysql\xe6\x95\xb0\xe6\x8d\xae\xe5\xba\x93\xe5\x85\xa5\xe9\x97\xa8\xe2\x80\x94\xe2\x80\x94\xe6\x95\xb0\xe6\x8d\xae\xe5\xaf\xbc\xe5\x85\xa5pandas\xef\xbc\x88\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe5\x87\x86\xe5\xa4\x87\xef\xbc\x89'  上一篇写到了mysql与python的简单交互
+还讲到了一些基础的面向对象设计
+这两天探索了一下，发现如果是用pandas做数据分析
+简单的几行代码即可将mysql的数据导入pandas进行分析
+前文传送门：<a href="http://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484240&amp;idx=1&amp;sn=d4c43666182b4dad29104f5be9fb14a5&amp;chksm=ec5edc2ddb29553b722dfde0baf8c8ebd89db5b9089f0b110ccdb36efeb1ab4d2205fe3e1237&amp;scene=21#wechat_redirect" target="_blank" style="">Python操作Mysql数据库入门——查看和增加记录</a>
+ Python 3.X
+IDE : juyter notebook
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGPObRH21RnLBY3YwicGYKbSTxytcylvp2dh7QjYHSoycAt65AMD36QaGg/0?wx_fmt=png
+ 一般来说，学sql增删查改基础中，查用的比较多，接下来我们简单使用一些sql查询
+ 查找cate_id=3的记录：<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGPceusRgSP257vEKXhmakZibTmwWzj9gQ06luHiaqJ1lGhJn8HVnjLcqPw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGPYN7q9oicjTn1rKUicpRq9qWRfjicdXWc2538QymNTXJdmAWlZFOTfVosg/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGPwLDBNAIgVqzgx38DPv2HUxf8ibPprWd44oEv4XsHbE8J0ANolmb4wXQ/0?wx_fmt=png
+ sql默认的是按照升序排列，如果想按照降序排列，可以这样写：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsQV9dbM2QWOJib5BXPxaXGP9l0DGr9RqnDLnnSVZjKdXgZPsQibcHRezpR3KFfN8l4JmBiacOuaHKQg/0?wx_fmt=png
+ 查找所有的平板电脑：

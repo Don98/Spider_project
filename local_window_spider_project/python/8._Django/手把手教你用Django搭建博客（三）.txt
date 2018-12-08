@@ -1,0 +1,53 @@
+b'\xe6\x89\x8b\xe6\x8a\x8a\xe6\x89\x8b\xe6\x95\x99\xe4\xbd\xa0\xe7\x94\xa8Django\xe6\x90\xad\xe5\xbb\xba\xe5\x8d\x9a\xe5\xae\xa2\xef\xbc\x88\xe4\xb8\x89\xef\xbc\x89' <span style="color: #C00000">5、让 Django 完成翻译：迁移数据库</span>                                       在
+让 Django 完成翻译：迁移数据库 - 追梦人物的博客（<span style="color: #0070C0">http://zmrenwu.com/post/6/</span>）
+的评论区留言。</span>
+将问题的详细描述通过邮件发送到 djangostudyteam@163.com，一般会在 24 小时内回复。</span>
+ http://mmbiz.qpic.cn/mmbiz_png/fgnkxfGnnkTHSWEib5nFy0OtxsFq9K2Fgpgo9Q8jL6Sk3hCAVkSNJlFnHhq8ric7Yc4dhamddXKK02kxhycpBKXA/0
+ <span style="color: #C00000">6、Django 博客首页视图</span> 我们打开浏览器，在地址栏输入想访问的网址，比如 http://zmrenwu.com/（当然你也可能从收藏夹里直接打开网站，但本质上都是一样的）。</span>
+浏览器知道我们想要访问哪个网址后，它在后台帮我们做了很多事情。主要就是把我们的访问意图包装成一个 HTTP 请求，发给我们想要访问的网址所对应的服务器。通俗点说就是浏览器帮我们通知网站的服务器，说有人来访问你啦，访问的请求都写在 HTTP 里了，你按照要求处理后告诉我，我再帮你回应他！</span>
+服务器处理了HTTP 请求，然后生成一段 HTTP 响应给浏览器。浏览器解读这个响应，把相关的内容在浏览器里显示出来，于是我们就看到了网站的内容。比如你访问了我的博客主页 http://zmrenwu.com/，服务器接收到这个请求后就知道用户访问的是首页，首页显示的是全部文章列表，于是它从数据库里把文章数据取出来，生成一个写着这些数据的 HTML 文档，包装到 HTTP 响应里发给浏览器，浏览器解读这个响应，把 HTML 文档显示出来，我们就看到了文章列表的内容。</span>
+ Django 如何接收 HTTP 请求？</span>
+Django 如何处理这个 HTTP 请求？</span>
+Django 如何生成 HTTP 响应？</span>
+                              html
+
+&lt;!DOCTYPE
+html&gt;
+
+&lt;html
+lang="en"&gt;
+
+&lt;head&gt;
+
+
+
+
+
+&lt;meta
+charset="UTF-8"&gt;
+
+
+
+
+
+
+
+
+
+
+&lt;title&gt;{{
+title
+}}&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;{{
+welcome
+}}&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</pre><p style="margin-top: 15px; margin-bottom: 15px; color: rgb(62, 62, 62); line-height: 25.6px; white-space: normal; border-width: 0px; border-style: initial; border-color: initial;"><span style="font-size: 14px">这是一个标准的 HTML 文档，只是里面有两个比较奇怪的地方：</span><code style="border-width: 1px; border-style: solid; border-color: rgb(234, 234, 234); font-size: 12px; white-space: nowrap; border-radius: 3px; background-color: rgb(248, 248, 248);"><span style="font-size: 14px">{{ title }}</span></code><span style="font-size: 14px">，</span><code style="border-width: 1px; border-style: solid; border-color: rgb(234, 234, 234); font-size: 12px; white-space: nowrap; border-radius: 3px; background-color: rgb(248, 248, 248);"><span style="font-size: 14px">{{ welcome }}</span></code><span style="font-size: 14px">。这是 Django 规定的语法。用 {{ }} 包起来的变量叫做模板变量。Django 在渲染这个模板的时候会根据我们传递给模板的变量替换掉这些变量。最终在模板中显示的将会是我们传递的值。</span>
+  它的内容是这样的：

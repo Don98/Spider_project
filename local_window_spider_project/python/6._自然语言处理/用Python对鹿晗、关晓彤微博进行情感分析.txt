@@ -1,0 +1,16 @@
+b'\xe7\x94\xa8Python\xe5\xaf\xb9\xe9\xb9\xbf\xe6\x99\x97\xe3\x80\x81\xe5\x85\xb3\xe6\x99\x93\xe5\xbd\xa4\xe5\xbe\xae\xe5\x8d\x9a\xe8\xbf\x9b\xe8\xa1\x8c\xe6\x83\x85\xe6\x84\x9f\xe5\x88\x86\xe6\x9e\x90' 前言：本文主要涉及知识点包括新浪微博爬虫、python对数据库的简单读写、简单的列表数据去重、简单的自然语言处理(snowNLP模块、机器学习)。适合有一定编程基础，并对python有所了解的盆友阅读。  http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzvgDCGf7VfeO2wcRMZQHncMjKXlhp1wfEZeZJicTf0icoiaNqQU8EeAibXQ/0?wx_fmt=jpeg
+   http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzhcJ6DOdqqgicxLsqJz6gySEz2Uc6PQ3l9MxhlAwC52S7UEnDPHvc2bg/0?wx_fmt=jpeg
+   <br  />全球的女鹿饭们一起失恋了。</strong>
+           http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzA63rrqMs2tDRpGjPYczZ2NAI0GibvCQWK5OosJEPkBBibgLKBiayXrowg/0?wx_fmt=png
+       <span style="font-size: 16px;">2.微博爬虫</span>   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzScdZ32ZzMKErKrzibIIib62icopxKqWScYb2q0atCJ5s4ShsOhADkz5oA/0?wx_fmt=png
+            http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzwTBgG3870Pr1CorAU6xG7t5j12kOf6R2TJicu8CXVuCWbDpIhhibEQag/0?wx_fmt=jpeg
+  AI式的excel表格http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzzFxibMFicUE9UkSoiaWXu0wPLvpEDnYLDa5POloyM8slvO5Dvbx2Jm0Qw/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzWvHsPL2g91Lon9MhAKEp4swFTyo451z0eLoHhaHSGmqM61oz61ACFA/0?wx_fmt=png
+    4.自然语言处理NLP    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzyJ9vAkhWjNUI0HxNIQRyffbUb7eMYn4WqFeiczicsBU5XPdrKmMyrjoA/0?wx_fmt=png
+ <span style="font-size: 16px;">5.分析结果</span>  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzAVBrmibxtK8bl6cSbribQ7H1qJ6LicCkysYMRNibA3qqtMzTZibHgjiayl8g/0?wx_fmt=png
+   
+~关晓彤对应微博评论情感值分布~
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjzA4y5QdYutPMkQ4QsxA3JFMRGBeEv3hHEQJXd3ODdmlrWZuFYiaT3Iog/0?wx_fmt=png
+[加油] http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvEefPrtHiap2W1SG5glZDjz6OK3evZHVW7P8XXH2YplLXIxQ5wymAL054uKiajuibibCEib3Ns38ZIfEQ/0?wx_fmt=png
+ 
+

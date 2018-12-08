@@ -1,0 +1,45 @@
+b'Python\xe6\x93\x8d\xe4\xbd\x9cMysql\xe6\x95\xb0\xe6\x8d\xae\xe5\xba\x93\xe5\x85\xa5\xe9\x97\xa8\xe2\x80\x94\xe2\x80\x94\xe6\x9f\xa5\xe7\x9c\x8b\xe5\x92\x8c\xe5\xa2\x9e\xe5\x8a\xa0\xe8\xae\xb0\xe5\xbd\x95'   https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHMnxPF4vwD96Ry9PVPibEOFWliavNBvibY2hqXuUuGAHxceoibkT5QsuTBQ/0?wx_fmt=png
+  最近学了一下sql，因为做数据分析不会sql真不行。
+平时学的都是Python，所以如果要用pandas做数据分析，数据除了导入excel和csv文件，
+应该还要会从数据库中导入数据到Python中，于是我进行了以下的学习和探索。
+Python 3.X
+IDE : juyter notebook
+mysql
+首先安装好
+进入：
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHdvK9B1nm6PfoD76U3RRyK25wNBGcAiaribiaiaAXEALmVsMcUdyK4Yqrgw/0?wx_fmt=png
+找到适合自己的版本
+下载到本地（我的下载到e：盘根目录）
+然后打开cmd如下图安装
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHCbItMmUy3qbzeL7tDaLluAPA0Viby4vWy8w6d7MHpjDvqAibJLO3uhow/0?wx_fmt=png
+这里推荐本地安装
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHNia56o96lHdL0DdywJW3MQXc7CnDuiblIXzDSx8jutK8wD3JuwQSPmCw/0?wx_fmt=png
+如果导入模块没报错，恭喜你，安装模块成功了！
+ 首先，我们要创建一个游标
+ 游标就相当于一个缓冲区，存放暂时的结果（这是我的理解）
+就像去超市买买买，你可能要推一个手推车，这里的手推车就像游标，推着手推车去对应的货架完成挑选操作，而手推车最终会在出超市时候清空。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHCcGcrw794T25E9qHH4gxxkI5FWnibo62Nl0PrHO77bLdFZPHFCgCY6g/0?wx_fmt=png
+我本地的数据库test中有个tdb_goods的表
+表的内容如上图所示
+有商品的id，名称，种类id，品牌id，是否在售和是否下架几个字段
+一共有23条记录
+我们使用select语句可以获取数据
+ 然后使用游标的fetchone方法取出其中一条记录并且展现出来
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVH32kMDib6WKxyS47mjDytZl0p7vR0ILwvkxzZQ8QwZxV0WBicic6eyxmyQ/0?wx_fmt=png
+如上图，我们取出的数据是元组形式
+当然，我们应该养成打开后关闭的好习惯，所以，在操作结束，应该断开与数据库的连接
+ 那么我们就要加入异常处理模块
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHSvvAXw9DLzhRovycRJV2JiaEibia8vgoaTfZWS0tuQMO92icuBicpXW772A/0?wx_fmt=png
+这里异常时，就将异常的信息告知我们了
+我们将以上代码整理一下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHexIBXSZx6UjjCMwCmo8ssmYleA5hzNMo9GE5tAXuuiaAicds8iaJ7E5ug/0?wx_fmt=png
+当我们将fetchone改成fetchall时候，就是取出所有信息了
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVHaiaf0eticAnU6ReezvjXamjdDJ3icZcOgjQxzBft5WWnWvbcJPUuBJBwQ/0?wx_fmt=png
+如果你熟悉面向对象编程或者看过我写的面向对象编程入门系列（小姐姐系列）
+传送门：
+     如果你还没接触过面向对象编程，看完以上5篇至少对接下来的内容理解上不存在问题
+ 创建了一个叫object的对象，使用对象的get_a方法从数据库tdb_goods中选出cate_id=1的一条记录，在get_a函数最后位置断开数据库连接
+结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuX9ttiaHKFQQ3J4eROA4ibVH4lHHtA6Zibe56g8SxebIecVvlyEl9nA21DafAuGnTxHd3CFrsZVXPjg/0?wx_fmt=png
+ 刷新数据库并没有新增一条记录

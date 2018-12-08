@@ -1,0 +1,17 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9019\xe3\x80\x91-- matplotlib(\xe6\xa0\x91\xe5\x9c\xb0\xe5\x9b\xbe)'                   
+
+
+
+
+
+
+用<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">可视化</strong></span>的方法来表达<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">离散变量</strong></span>的数值情况，不仅仅<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">可以使用条形图、饼图、热力图</strong></span>，我们还可以借助于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">树地图</strong></span>来完成。树地图的思想就是通过方块的面积来表示，面积越大，其代表的值就越大，反之亦然。今天要跟大家分享的就是如何通过Ptyhon这个工具，完成树地图的绘制。
+
+
+
+
+
+
+
+在Python中，可以借助于squarify包来绘制，即squarify.plot函数。首先，我们来看一下这个函数的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">语法及参数含义</strong></span>：
+         

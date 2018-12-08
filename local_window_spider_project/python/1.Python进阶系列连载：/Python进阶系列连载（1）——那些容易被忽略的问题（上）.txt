@@ -1,0 +1,9 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x881\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe9\x82\xa3\xe4\xba\x9b\xe5\xae\xb9\xe6\x98\x93\xe8\xa2\xab\xe5\xbf\xbd\xe7\x95\xa5\xe7\x9a\x84\xe9\x97\xae\xe9\xa2\x98\xef\xbc\x88\xe4\xb8\x8a\xef\xbc\x89' 前言    Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicia2EXNLDcyCX7wsLMxFNH8sI10EMdGVBXM8Vh2vkgnpqt3Lby22eHRg/0?wx_fmt=png
+  int（）强制转换浮点数       http://mmsns.qpic.cn/mmsns/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicdRGathMKHRtzpfRrHyNmQQ/0
+   绕来绕去你怎么还没解决问题，你是要上天么！<br  />http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicSiaBsBL3icDz0nDUUuEoyn8pgm3J6YZdDB3H4sJHd8X9kefNZAIZOm4A/0?wx_fmt=png
+ <span style="color: rgb(51, 51, 51);">！</span><br  />字符串是不可变的     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicTj1j9I8icIibC4PC3b7KdtkY1W5zI0ibbib0KSMEH5REQHjY3dOO32XVMQ/0?wx_fmt=png
+ 一些遗漏的字符串方法     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeicc8qYyGmhc2UKWvL9wXYEF36FlS0fkjTe5kS7cCNBnHVcXuhAQDjCCQ/0?wx_fmt=png
+     注意操作的返回值  接盘 </span>， 啊呸！<strong>接收</strong>来自print的返回值，发现a是NoneType，所以print是没有返回值的
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttteWqol8IFZs70ekpgGtzeiciaj6D87y4TTMeFicK6cJI4JDFNjwOMmzJic0icHcMjsI0To1L4E8A6AIvA/0?wx_fmt=png

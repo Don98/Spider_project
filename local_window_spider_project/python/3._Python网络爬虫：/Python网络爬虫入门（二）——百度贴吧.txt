@@ -1,0 +1,34 @@
+b'Python\xe7\xbd\x91\xe7\xbb\x9c\xe7\x88\xac\xe8\x99\xab\xe5\x85\xa5\xe9\x97\xa8\xef\xbc\x88\xe4\xba\x8c\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe7\x99\xbe\xe5\xba\xa6\xe8\xb4\xb4\xe5\x90\xa7'可是光光获取评论文字也是忒无聊了，咱们来点图片。
+然鹅，找哪儿的图好吶，翻来覆去，一个偶然的机会，让我看到了这个：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPibHqd5n5YCSNdVuC11ib1f5DehPkibHWfccKePPBtGFuILC1ZxvCqibXfg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPbhSMva8XOzmb1ibnh05wFN0H1dgnUHprmsSMWoR8Kw5EbGLsiazsOoBg/0?wx_fmt=gif
+能拿来晒的东西，敢情应该不会差到哪去（至少比一般的百度图片要好一些吧）
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPlDcOictGo8W2j4OAf0ffWqR7k5HeCWwJJObhVsd7IeOWw5aXmgrKiaUg/0?wx_fmt=jpeg
+好了不多胡扯回归正题，几行代码，带足不出户的你，走遍万水千山！
+先随便搜了个贴，好吧就是这个了
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPA98iapGRMM6uTBsIBWibXvlm1ibPiaJnHSXvf9vAXb02s2vUTUW1RTzQpA/0?wx_fmt=png
+ 开发环境和之前一样。
+1、获取帖子标题、总页数、评论、图片
+2、图片写入文件并保存
+3、将各种信息实现打印（也算<a target="_blank" style="color: rgb(66, 152, 186); cursor: pointer; word-break: break-all;">测试</a>追踪）
+4、输入帖子号便能实现以上操作（即亦适用于其它帖子）
+1、获取源码。2、获取标题、总页数、评论标题的正则
+  3、获取晒图。http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKP5E3xyelsz9JERIAzwpib6zHXa3sSUozglp9ianwNQTMY1pgYOIaEClaA/0?wx_fmt=png
+龙蛇混杂呀，不仅包括各种旅行晒图，还有链接中包含'head'的头像图，含'emoticon'的表情图等等，宝宝内心是崩溃哒。
+如何洗出我们想要的内容呢？
+别着急，仔细观察这些个链接，逐个点开一试就会发现，凡是属于'晒图'的，接带有属性class='BDE_Image'。
+我的天，直接find_all()限定范围，再循环打出item['src'],分分钟搞定链接！要有多简单就有简单，最后将链接保存至一个list中。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPAstS2ciaGfKtx0r3ic11InPCFpqQY1kSD2a9sOkOauT9NSAjNicCOuoAw/0?wx_fmt=png
+4、创建目录。5、保存晒图。6、集合各操作并获取多页。观察可发现规律，网页URL格式为：'<a style="color: rgb(66, 152, 186); cursor: pointer; word-break: break-all;">http://tieba.baidu.com/p</a>'+帖子号+'?pn='+页数，所以可以设置：
+<span style="color: rgb(204, 0, 0);">三、奉上源码</span>输入帖子号获取一些列信息
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPevbgCgbejg8xgjq1hjBESy8a1ic9rjUVPB7J6Ggo4JsunObAakLlWgA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPbbxtlZrNicnGxWpWYbiarvBic9tdiclf4UR7G8siaiapdR1td6zDd7Ieyk9A/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPbhSMva8XOzmb1ibnh05wFN0H1dgnUHprmsSMWoR8Kw5EbGLsiazsOoBg/0?wx_fmt=gif
+打印链接
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPPq6Pf5zLZgI4ToQiaL3tiaC0ulWlgdKFsobrabSzFL7T012hSB5rJWDQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPq5dibyo2kyqiaYibSwwRsFKiaIegCLfamZYGytcb09gZHNXYVZSx5GTiahg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPjwSHJIGHyTJ5qU2dt2NxnGWucjbUhruN267qdjSRnEkxibWuAVAbDVg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKPTc3uOlh0RqxuEGO5FaQqvus6b6laLrWtwCAn0aygRYYDKtib7drpKLg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttiawtIyiaSSh2MjycXqDJJKP2nds9annBTVsszicibzmt4vpzTtNP1HwXanDGfibjtNsqRe4anAQZ4Eng/0?wx_fmt=png
+ <span style=";color: rgb(204, 0, 0);;color: rgb(0, 0, 0);">图片已经全部保存到指定文件夹啦~<br  /></span>五、题外（可不看）爬完上面这个贴，又去胡乱搜寻，发现两有趣的贴。
+一个是：国外朋友的世界一周旅行记1，Uca姐的摄影好美(献给所有爱旅者)（http://tieba.baidu.com/p/4074902068）

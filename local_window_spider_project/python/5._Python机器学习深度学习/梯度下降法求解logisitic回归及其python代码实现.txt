@@ -1,0 +1,12 @@
+b'\xe6\xa2\xaf\xe5\xba\xa6\xe4\xb8\x8b\xe9\x99\x8d\xe6\xb3\x95\xe6\xb1\x82\xe8\xa7\xa3logisitic\xe5\x9b\x9e\xe5\xbd\x92\xe5\x8f\x8a\xe5\x85\xb6python\xe4\xbb\xa3\xe7\xa0\x81\xe5\xae\x9e\xe7\x8e\xb0' <span style="font-size: 14px;letter-spacing: 1px;">01 logisitic回归与梯度下降法</span> https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvVVxmgCiacr0LKOkibTuMsnU7Vue7DWgVSe0q75KBvSC9fKjbtibfq08ag/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvhI0vQrLQic3uFWZvxAtgGD6v79auKLOLl0yXZcvBwP0eFtibqhYnaGIw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvwOZZtqozraH0wedqOEZibATw0wES18licHD1LvJu6SMaNzD4mqF2iauag/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvTP12wAq0sFIKJAOMmlyytrdX2fia0wLcPwYrgJ9otEtAVyODBNgTBjg/640?wx_fmt=png
+<span style="font-size: 14px;letter-spacing: 1px;color: rgb(0, 128, 255);">02 用梯度下降法求解logisitic回归</span>https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVv0SzQjYWjTrnC05FY5yOyMYXvP7DI3FqDToLiasbbVjseKnZEadUrmtQ/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvHJLfcn9FW3MPiaHE0FUDT4qyBDfcrlhyP62RZzjiaYVBosP6hxQMya6A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvAquZTAjbtuFZiaDgibf4DkMZZUt2nUIMyGiaW2Ipr0awxmSv5hJ8G8QxA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvLC2b0vX8l2ZP0BvYcpeuB12pm66S7hj1QzA2dTmjNMeUrYx3H348cA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvZwJ2YoVg9lEcklO3jXgCJta2Gx7CLR4CUHeibFY6bSqbIr8XEyxtIXQ/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvJfkICUJtYqu1f3Ms7ReAXnK2uliblykdJyNHgtXDQTmRkLTk9zIP5bw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvPPrDccgjSeOrtKIE16sVvSlqupUtQ2WgtjIkq1puh9o7YIuAyQrh4pf8sBUKrsiaG3I5qzWfc3bw/640?wx_fmt=png
+<span style="font-size: 14px;letter-spacing: 1px;"><br  /></span><span style="font-size: 14px;letter-spacing: 1px;">（2）梯度下降法求解最小值</span>  

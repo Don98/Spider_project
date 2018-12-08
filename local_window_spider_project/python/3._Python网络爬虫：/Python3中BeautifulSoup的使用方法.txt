@@ -1,0 +1,62 @@
+b'Python3\xe4\xb8\xadBeautifulSoup\xe7\x9a\x84\xe4\xbd\xbf\xe7\x94\xa8\xe6\x96\xb9\xe6\xb3\x95'http://mmbiz.qpic.cn/mmbiz/yqVAqoZvDibGMEA8vvxgFGXlBuKlBYGsGMpJCYbdz93Xtz6hsukWCHkyogaXLscNTLNRvVQ8yvreo9y79DkAY8w/0
+我们学习了正则表达式的相关用法，但是一旦正则写的有问题，可能得到的就不是我们想要的结果了，而且对于一个网页来说，都有一定的特殊的结构和层级关系，而且很多标签都有id或class来对作区分，所以我们借助于它们的结构和属性来提取不也是可以的吗？
+所以，这一节我们就介绍一个强大的解析工具，叫做BeautiSoup，它就是借助网页的结构和属性等特性来解析网页的工具，有了它我们不用再去写一些复杂的正则，只需要简单的几条语句就可以完成网页中某个元素的提取。
+废话不多说，接下来我们就来感受一下BeautifulSoup的强大之处吧。
+简单来说，BeautifulSoup就是Python的一个HTML或XML的解析库，我们可以用它来方便地从网页中提取数据，官方的解释如下：
+BeautifulSoup提供一些简单的、python式的函数用来处理导航、搜索、修改分析树等功能。它是一个工具箱，通过解析文档为用户提供需要抓取的数据，因为简单，所以不需要多少代码就可以写出一个完整的应用程序。BeautifulSoup自动将输入文档转换为Unicode编码，输出文档转换为utf-8编码。你不需要考虑编码方式，除非文档没有指定一个编码方式，这时你仅仅需要说明一下原始编码方式就可以了。BeautifulSoup已成为和lxml、html6lib一样出色的python解释器，为用户灵活地提供不同的解析策略或强劲的速度。
+所以说，利用它我们可以省去很多繁琐的提取工作，提高解析效率。
+使用之前，我们当然需要首先说明一下它的安装方式。目前BeautifulSoup的最新版本是4.x版本，之前的版本已经停止开发了，推荐使用pip来安装，安装命令如下：
+  好，安装完成之后可以验证一下，写一段Python程序试验一下。
+  注意在这里我们虽然安装的是beautifulsoup4这个包，但是在引入的时候是引入的bs4，这是因为这个包源代码本身的库文件夹名称就是bs4，所以安装完成之后，这个库文件夹就被移入到我们本机Python3的lib库里，所以识别到的库文件名称就叫做bs4，所以我们引入的时候就引入bs4这个包。因此，包本身的名称和我们使用时导入的包的名称并不一定是一致的。
+BeautifulSoup在解析的时候实际上是依赖于解析器的，它除了支持Python标准库中的HTML解析器，还支持一些第三方的解析器比如lxml，下面我们对BeautifulSoup支持的解析器及它们的一些优缺点做一个简单的对比。
+解析器使用方法优势劣势
+Python标准库BeautifulSoup(markup, "html.parser")Python的内置标准库、执行速度适中 、文档容错能力强Python 2.7.3 or 3.2.2)前的版本中文容错能力差
+lxml HTML 解析器BeautifulSoup(markup, "lxml")速度快、文档容错能力强需要安装C语言库
+lxml XML 解析器BeautifulSoup(markup, "xml")速度快、唯一支持XML的解析器需要安装C语言库
+html5libBeautifulSoup(markup, "html5lib")最好的容错性、以浏览器的方式解析文档、生成HTML5格式的文档速度慢、不依赖外部扩展
+
+所以通过以上对比可以看出，lxml这个解析器有解析HTML和XML的功能，而且速度快，容错能力强，所以推荐使用这个库来进行解析，但是这里的劣势是必须安装一个C语言库，它叫做lxml，我们在这里依然使用pip安装即可，命令如下：
+  下面我们首先用一个实例来感受一下BeautifulSoup的基本使用：
+  那么接下来我们就可以通过调用soup的各个方法和属性对这串HTML代码解析了。
+我们首先调用了prettify()方法，这个方法可以把要解析的字符串以标准的缩进格式输出，在这里注意到输出结果里面包含了<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">&lt;/body&gt;</code>和<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">&lt;/html&gt;</code>标签，也就是说对于不标准的HTML字符串BeautifulSoup可以自动更正格式，这一步实际上不是由prettify()方法做的，这个更正实际上在初始化BeautifulSoup时就完成了。
+然后我们调用了<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">soup.title.string</code>，这个实际上是输出了HTML中<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">&lt;title&gt;</code>标签的文本内容。所以<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">soup.title</code>就可以选择出HTML中的<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">&lt;title&gt;</code>标签，再调用string属性就可以得到里面的文本了，所以我们就可以通过简单地调用几个属性就可以完成文本的提取了，是不是非常方便？
+刚才我们选择元素的时候直接通过调用标签的名称就可以选择节点元素了，然后再调用string属性就可以得到标签内的文本了，这种选择方式速度非常快，如果单个标签结构话层次非常清晰，可以选用这种方式来解析。
+下面我们再用一个例子详细说明一下它的选择方法。
+  接下来我们又尝试选择了head标签，结果也是标签加其内部的所有内容，再接下来选择了p标签，不过这次情况比较特殊，我们发现结果是第一个p标签的内容，后面的几个p标签并没有选择到，也就是说，当有多个标签时，这种选择方式只会选择到第一个匹配的标签，其他的后面的标签都会忽略。
+在上面我们演示了调用string属性来获取文本的值，那我们要获取标签属性值怎么办呢？获取标签名怎么办呢？下面我们来统一梳理一下信息的提取方式
+可以利用name属性来获取标签的名称。还是以上面的文本为例，我们选取title标签，然后调用name属性就可以得到标签名称。
+    其实这样的写法还有点繁琐，还有一种更简单的获取方式，我们可以不用写attrs，直接节点元素后面加中括号，传入属性名就可以达到属性值了，样例如下：
+  可以利用string属性获取节点元素包含的文本内容，比如上面的文本我们获取第一个p标签的文本：
+  在上面的例子中我们知道每一个返回结果都是<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">bs4.element.Tag</code>类型，它同样可以继续调用标签进行下一步的选择，比如我们获取了head节点元素，我们可以继续调用head来选取其内部的head节点元素。
+  最后输出了一下它的string属性，也就是标签里的文本内容。
+我们在做选择的时候有时候不能做到一步就可以选择到想要的节点元素，有时候在选择的时候需要先选中某一个节点元素，然后以它为基准再选择它的子节点、父节点、兄弟节点等等。所以在这里我们就介绍下如何来选择这些节点元素。
+选取到了一个节点元素之后，如果想要获取它的直接子节点可以调用contents属性，我们用一个实例来感受一下：
+  注意得到的列表的每一个元素都是p标签的直接子节点，比如第一个a标签里面包含了一层span标签，这个就相当于孙子节点了，但是返回结果中并没有单独把span标签选出来作为结果的一部分，所以说contents属性得到的结果是直接子节点的列表。
+同样地我们可以调用children属性，得到相应的结果。
+  如果我们要得到所有的子孙节点的话可以调用descendants属性。
+  如果要获取某个节点元素的父节点，可以调用parent属性。
+  注意到这里输出的仅仅是a标签的直接父节点，而没有再向外寻找父节点的祖先节点，如果我们要想获取所有的祖先节点，可以调用parents属性。
+  上面说明了子节点和父节点的获取方式，如果要获取同级的节点也就是兄弟节点应该怎么办？我们先用一个实例来感受一下：
+  在上面我们讲解了关联元素节点的选择方法，如果我们想要获取它们的一些信息，比如文本、属性等等也是同样的方法。
+  前面我们所讲的选择方法都是用<code style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">.</code>这种运算符来选择元素的，这种选择方法非常快，但是如果要进行比较复杂的选择的话则会比较繁琐，不够灵活。所以BeautifulSoup还为我们提供了一些查询的方法，比如find_all()、find()等方法，我们可以调用方法然后传入相应等参数就可以灵活地进行查询了。
+最常用的查询方法莫过于find_all()和find()了，下面我们对它们的用法进行详细的介绍。
+ find_all，顾名思义，就是查询所有符合条件的元素，可以给它传入一些属性或文本来得到符合条件的元素，功能十分强大。
+我们可以根据标签名来查询元素，下面我们用一个实例来感受一下：
+  因为都是Tag类型，所以我们依然可以进行嵌套查询，还是同样的文本，在这里我们查询出所有ul标签后再继续查询其内部的li标签。
+  接下来我们就可以遍历每个li获取它的文本了。
+    对于一些常用的属性比如id、class等，我们可以不用attrs来传递，比如我们要查询id为list-1的节点，我们可以直接传入id这个参数，还是上面的文本，我们换一种方式来查询。
+  text参数可以用来匹配节点的文本，传入的形式可以是字符串，可以是正则表达式对象，我们用一个实例来感受一下：
+  除了find_all()方法，还有find()方法，只不过find()方法返回的是单个元素，也就是第一个匹配的元素，而find_all()返回的是所有匹配的元素组成的列表。
+  另外还有许多的查询方法，用法与前面介绍的find_all()、find()方法完全相同，只不过查询范围不同，在此做一下简单的说明。
+find_parents()返回所有祖先节点，find_parent()返回直接父节点。
+find_next_siblings()返回后面所有兄弟节点，find_next_sibling()返回后面第一个兄弟节点。
+find_previous_siblings()返回前面所有兄弟节点，find_previous_sibling()返回前面第一个兄弟节点。
+find_all_next()返回节点后所有符合条件的节点, find_next()返回第一个符合条件的节点。
+find_all_previous()返回节点后所有符合条件的节点, find_previous()返回第一个符合条件的节点
+BeautifulSoup还提供了另外一种选择器，那就是CSS选择器，如果对web开发熟悉对话，CSS选择器肯定也不陌生，如果不熟悉的话，可以看一下<a style="color: rgb(66, 152, 186); cursor: pointer; word-break: break-all;">CSS选择器参考手册</a>。
+使用CSS选择器，只需要调用select()方法，传入相应的CSS选择器即可，我们用一个实例来感受一下：
+  最后一句我们打印输出了列表中元素的类型，可以看到类型依然是Tag类型。
+select()方法同样支持嵌套选择，例如我们先选择所有ul节点，再遍历每个ul节点选择其li节点，样例如下：
+  我们知道节点类型是Tag类型，所以获取属性还是可以用原来的方法获取，仍然是上面的HTML文本，我们在这里尝试获取每个ul节点的id属性。
+  那么获取文本当然也可以用前面所讲的string属性，还有一个方法那就是get_text()，同样可以获取文本值。
+ 

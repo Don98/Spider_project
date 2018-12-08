@@ -1,0 +1,4 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe7\xbb\x93\xe6\x9e\x84\xe4\xb8\x8e\xe7\xae\x97\xe6\xb3\x95\xe5\x88\xb7\xe9\xa2\x98\xef\xbc\x881\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe5\xae\xb3\xe6\xad\xbb\xe4\xba\xba\xe4\xb8\x8d\xe5\x81\xbf\xe5\x91\xbd\xe7\x9a\x84\xef\xbc\x883n+1\xef\xbc\x89\xe7\x8c\x9c\xe6\x83\xb3' 前言        https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvtzRREPZ7JUk3KichqaS5wJqia46o9r4xFxWdMtL9icIxPsqDqAptZNAdnefLTkYA36L8el9cJNpn0A/640?wx_fmt=png
+       阅读原文 https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvtzRREPZ7JUk3KichqaS5wJsnnpbQ5aQ11kZ18O2ibrojicem8QOBZf51WdnpBPXoaHM1wUgtLB7NoQ/640?wx_fmt=png
+                  害死人不偿命的（3n+1）猜想      输入格式：输出格式：输入样例： 输出样例：  https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvtzRREPZ7JUk3KichqaS5wJ2HDgSFqyhPjz3ZmUcMZnXk8vKfn9Cm8eLRR4EQho9oLj05es5VfqQg/640?wx_fmt=png
+   <span style="font-size: 14px;letter-spacing: 1px;">注意点：</span>    

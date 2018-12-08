@@ -1,0 +1,7 @@
+b'\xe4\xb8\x83\xe5\x91\xa8\xef\xbc\x9a\xe7\xac\xac\xe4\xb8\x89\xe5\x91\xa8Excel\xe5\xad\xa6\xe4\xb9\xa0' 以下是七周成为数据分析师课程部分学习笔记（点击<span style="color: rgb(255, 41, 65);">阅读全文</span>可学此课程哦） <br  />   七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）</a>
+
+ http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttud58YKtOliaOqibmicibOKjHUbEhwBXHibiaOwDKnpYBUSZnEAFc8Bm61r5ko3KR1VtK4LOzygmcnWOIxQ/0?wx_fmt=jpeg
+    Excel常见函数</strong>
+     【Excel函数使用多年，个人觉得主要还是在于实践当中的灵活运用，作为学习，掌握有什么样的函数用来做什么就可以了，工作中遇到的时候可能忘了怎么拼，但是能直接搜索把函数找出来用知道在哪里面找就好。当然，记得更多的函数好处就是能迅速的通过函数的用法把函数灵活的组合去解决问题。其实最重要的也是通过</span><strong><span style="color: rgb(32, 147, 97);">逻辑关系</span></strong><span style="color: rgb(32, 147, 97);">把各种函数进行组合去解决问题。</span>
+日常工作中，总会有一些函数是自己常用到的，可能一个问题能用到N多个函数方式都能决绝，个人认为学习函数的时候找到自己熟悉的上手快的就好。等熟练之后去尝试别的方法，当自己去尝试别的方法的时候主要也是考虑到新的方法是否更能优化原有函数组合性能。】</span>
+                                        http://mmbiz.qpic.cn/mmbiz_png/9Xne6pfLaewglbEMOYAb4Xe5Ticn6mlQFickNhCl0l0c5ezCONIOianaNvV7ASo7CNNa5Tum5IarHXhGEuibmRC6PQ/640?wx_fmt=png

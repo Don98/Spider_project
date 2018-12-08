@@ -1,0 +1,24 @@
+b'\xe4\xb8\x83\xe5\x91\xa8\xef\xbc\x9a\xe7\xac\xac\xe5\x9b\x9b\xe5\x91\xa8\xe6\x95\xb0\xe6\x8d\xae\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xe5\xad\xa6\xe4\xb9\xa0\xe7\xac\x94\xe8\xae\xb0'  以下是七周成为数据分析师课程部分学习笔记（点击<span style="color: rgb(255, 41, 65);">阅读全文</span>可学此课程哦） <br  />   七周：第二周业务学习笔记（内附练习汽车经销店整车销售分析模型）</a>
+七周：第三周Excel学习</a>
+
+<span style="color: rgb(65, 140, 175);">美丽的图表，应该是有用的图表</span>     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4eectxibLicc1T1Ze1VpzEJC7x8KNLZmFKywFunR7b7w2nTHDv3c3TaH5w/0?wx_fmt=png
+  1.散点图-----核心：展现数据之间的规律</strong>
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4edbwQ1elZpJG6Uvd1or1I1KPDYtEZvmqElDbWvr4dxHes9VIQCg01Fw/0?wx_fmt=png
+        2.折线图 3.柱形图</strong>
+ <br  />4.饼图</strong>
+   5.漏斗图</strong>
+ 6.雷达图</strong>
+  <br  />【不常见的高级图表】<br  />1.树形图---适合数据量比较大的情况</strong>
+   2.桑吉图</strong>
+  3.热力图   4.关系图----社交，社会媒体，微博的传播，用户和用户之间的关注等</strong>
+ <br  />5.箱线图---揭示分布的规律</strong>
+ 6.标靶图（子弹图）----通常与销售业绩KPI目标挂钩</strong>
+   7.词云图</strong>
+  8.地理图----数据和空间的关系</strong>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4eibbswZGFMYgbLjM8H61bG1jUSU96pkqK9L9oWEdYGVALL199aqiaKwsg/0?wx_fmt=png
+<span style="color: rgb(32, 147, 97);">【图表绘制的工具】</span>  <span style="color: rgb(32, 147, 97);">【绘制技巧】</span>                   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4eBTcoLicUtcibEqQALiaDSBfH0yaoA1vHjRyibXg0B6khrlAtRzia7gWpVHw/0?wx_fmt=png
+    <span style="color: rgb(32, 147, 97);">【Dashbord的设计】</span>   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4eOuSibeuf27CiciaY5Isfeloo5e3a9QIqjQPZ8AkeARvjzdonGOc5n8C8g/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuDKweAfmpZwOwwvYtkpl4eCiak8ibtF2gYRibKloWQul0bcK89yoBUQ27ap9ehsPFcKWdYGR1Se0h6w/0?wx_fmt=png
+ 【Dashbord是一个不断迭代的设计过程】-----重实操</strong>
+ http://mmbiz.qpic.cn/mmbiz_png/9Xne6pfLaewglbEMOYAb4Xe5Ticn6mlQFickNhCl0l0c5ezCONIOianaNvV7ASo7CNNa5Tum5IarHXhGEuibmRC6PQ/640?wx_fmt=png
+   

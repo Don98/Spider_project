@@ -1,0 +1,35 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe4\xb9\x8b\xe5\x9f\xba\xe6\x83\x85\xe7\x9a\x84\xe6\x8b\xa9\xe5\xa4\xa9\xe8\xae\xb0'  人一生都可能无法逆天改命，但你却是要去奋斗一把
+本文章主要通过最简单的共线性关系，利用gephi工具绘制择天记的人物关系图。
+https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lJLz4zcAjpUicXKwOVqFjbmjQJu2Os7IbfA9QNGLLUXfW6YJ5G6gnrwg/0?wx_fmt=png
+ 注意：安装路径不能有中文字；需要安装java环境，不然无法使用gephi。
+import jieba
+names = {}
+relationships = {}
+linenames = []
+all_names = []</pre><p style="margin-bottom: 8px;color: rgb(51, 51, 51);font-size: 14px;white-space: normal;">names用于存入小说人物和出场次数；relationships保存人物关系的有向边，该字典的键为有向边的起点，值为一个字典edge，edge的键是有向边的终点，值是有向边的权值，代表两个人物之间联系的紧密程度；linenames存入每行小说出现的人物；all_names是小说所有人物。
+jieba库分词可能并不能把小说的人物都切开，我们需要把这些人名添加到词库中，以便成功分词。
+https://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l7kGp0GsXIvic1hRp40PBHStgTs7IYvX0HFW0VhGK7qwOuyeWR0aHyiaA/0?wx_fmt=png
+ for line in linenames:
+    for name1 in line:
+        for name2 in line:
+            if name1 == name2:
+                continue
+            if relationships[name1].get(name2) is None:
+                relationships[name1][name2]=1
+            else:
+                relationships[name1][name2] += 1
+
+import codecs
+with codecs.open('tian_node.txt','w','utf-8') as f:
+    f.write("Id Label Weight\r\n")
+    for name, times in names.items():
+        f.write(name + ' ' + name + ' ' + str(times) + '\r\n')
+
+with codecs.open('tian_edge.txt', 'w', "utf-8") as f:
+    f.write("Source Target Weight\r\n")
+    for name, edges in relationships.items():
+        for v, w in edges.items():
+            if w &gt; 3:
+                f.write(name + ' ' + v + " " + str(w) + "\r\n")</pre><p style="margin-bottom: 8px;color: rgb(51, 51, 51);font-size: 14px;white-space: normal;">
+
+   

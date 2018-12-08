@@ -1,0 +1,17 @@
+b'\xe8\x87\xaa\xe6\x88\x91\xe4\xbb\xa3\xe7\xa0\x81\xe6\x8f\x90\xe5\x8d\x87\xe4\xb9\x8b\xe5\x86\xb3\xe7\xad\x96\xe6\xa0\x91'                                              本期将为大家带来决策树算法的介绍和实现，在机器学习领域、决策树为代表的一系列算法是不可忽视的一部分。当前在实际应用中较为主流的几种算法，如随机森林（RF）、梯度迭代决策树（GBDT）和XGBoost等，均是以决策树作为基础模型。<br style="max-width: 100%;"  />
+决策树是一种基本的分类和回归方法，在本章中主要介绍的是运用于分类问题的决策树。决策树的基本模型结构是树形结构（可以为二叉树也可以非二叉树），包含了一系列节点和向边。节点按照所处于的位置和输出内容，可以分为内部节点和叶节点（居于底部）。<br style="max-width: 100%;"  />在决策树的分类流程中，从最顶部的根节点开始从输入数据的各个变量中的某一特征进行测试，根据测试结果，将实力分配到其下属的一个子节点中，在到达叶节点之前，该过程将会持续递归，知道输出叶节点的类别结果。决策树的基本结构如下图：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL8WTFBfiaHicxZ78XfsmicqavMNaH5BLsibooIlJOy2tcCP99VrfettYhqFQ/640.png
+可以看出，每一条从根节点到叶节点的路径对应的是一条规则，即记录在各个对应字段上应满足的若干条件，这些规则有一个重要的性质：互斥且完备。
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL8dY5lKyGVBVIr6xicosibCUrJKRDoIbvd1ASBP5ibSeu54iakrNsOw4wnBg/640.png
+
+决策树算法的性质决定了，当特征信息了足够的情况下，可以实现对训练集精确的拟合（理论上特征足够多的决策树可以实现对训练集的完美分类），但随着决策树的深度的增加，模型越加复杂，在对其他数据集的预测上，效果可能就会有所下降，即模型的泛华能力不够，产生过拟合问题。<br style="max-width: 100%;"  />对于此类问题的解决方式是剪枝。即去掉一些决策树的分支来降低过拟合问题。剪枝处理可以分为“预剪枝”和“后剪枝”。“预剪枝”指的是在决策树的训练过程中，在每个节点划分前就进行估计，若当前节点的划分不能带来泛化能力的提升，则停止节点划分并产生叶节点。<br style="max-width: 100%;"  />后剪枝指的是从训练以后得到的完整决策树，自底向上对内部节点进行考察，若将当前内部节点替换为叶节点可以使得泛化能力提升，则将改子树替换为叶节点。<br style="max-width: 100%;"  />为了测度当前模型的泛化能力，决策树训练之前会考虑将数据集划分出一部分作为“验证集”，这部分数据不参与模型训练，而是用于对模型预测效果的考察。
+作为一种常用的基础方法，决策树的优点非常明显。第一、决策树便于理解，相比于其它算法，通过生成的规则，在业务上具有良好的可解释性；第二、常成熟的决策树算法可以同时处理连续性和离散型数据，也可以很好地避免缺失值等影响；第三、决策树对数据量的要求不大；第四、决策树能够处理多输出问题；第五、在运算速度上，单决策树所花的时间相对较短。<br style="max-width: 100%;"  />决策树的缺陷在于：首先、常规的单一决策树模型容易陷入过拟合（可用剪枝等手段改善），泛化能力有限；其次、随着数据维度的增长，决策树的效率和预测效果会受到显著影响，及决策树不适合高维数据建模；再次、当决策树的规则中产生异或和复用的情况时，会影响对模型的理解。最后、单一决策树模型并不稳定，容易受到异常值的影响。当样本分布不均衡时，决策树的分类容易偏向多数类样本。
+接下来，我们尝试用Python实现简单的ID3决策树算法。本次测试的数据集依旧为马疝病的生存预测数据，首先加载数据集
+       http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL88XyNb0wxsVeJoiaslLXyq2P0fxt7n3ibheej0HY7DSOmqxs8Y7qSeV8w/640.png
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL8FSwaM0nlXm7R9hygdDRAHb0pnlUDzVibRCRbEUQubp4mIjYI1D9ZicicQ/640.png
+CART是一种二叉树决策树模型，顾名思义，这种决策树的每个内部节点的特征只有两条向边连接两个子节点，取值分别为是和否，这样的决策树等价于递归二分每个特征。
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL88o0aTEr8usAn6kPJgmRTmOsSW45EbmvpSYqnQ94ibBB5feCmnWCzIsw/640.png
+下面给出CART分类决策树的建模流程<br style="max-width: 100%;"  />输入:训练数据集各个字段A和目标字段Y，停止计算的条件。<br style="max-width: 100%;"  />输出：CART决策树模型<br style="max-width: 100%;"  />(1)判断当前节点是否满足停止条件，若满足则生成叶节点；<br style="max-width: 100%;"  />(2)对当前节点，计算A中线有特征对该数据集的基尼指数，对于任一特征X，对其可能的每个取值x，根据样本点X=x测试为是或否将数据集分割为两部分，计算X=x时候Y的基尼指数；<br style="max-width: 100%;"  />(3)在所有特征A以及他们的可能切分点x中，选择基尼指数最小的特征和对应的且分店作为最有特征和最优切分点。对应地，此节点根据切分以后的最优特征生成两个子节点；<br style="max-width: 100%;"  />(4)递归上述步骤，直到停止而生成模型。<br style="max-width: 100%;"  />对于CART决策树的实现，为节约篇幅，参见本文的附件代码。
+运用python实现了CART决策树，该模型可以直接用于数值型变量进行建模而不需要预先进行分箱。因此，直接采用马疝病生存预测的数据集进行测试：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfpGsUuwhGE0Zeypkqz9qbL8EXRcyzbTfvuvPdkpOXBUuKBSV8AyXsg9D0bZE4qKOOhpzY04t7o8vg/640.png
+机器学习库Sklearn中已经包含了很多决策树类的算法，其中tree.DecisionTreeClassifier函数包含了一系列决策树的建模参数，如特征选择的依据，最大数的深度（即垂直方向上内部节点数），每个内部节点的最小样本数等。在默认情况下，该函数采用基尼系数作为变量选择的依据，即为CART决策树模型。利用该函数进行建模测试：

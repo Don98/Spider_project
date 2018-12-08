@@ -1,0 +1,20 @@
+b'Django\xe4\xb9\x8b\xe7\xae\x80\xe5\x8c\x96\xe7\x89\x88Pinterest'  Django框架的核心包括：一个映射器，用作数据模型（以Python类的形式定义）和数据库间的媒介；一个基于正则表达式的URL分发器；一个视图系统，用于处理请求；以及一个模板系统。 核心框架中还包括：
+   其架构如下：http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu2JVLYnHb5HxD8EiaLY3Zrp0NmyABm5sNshcrVRQcgZxGfZC8cib4bJfB6goI6tlWWeuicIsLqOkkJw/0?wx_fmt=png
+Django的请求处理流程    Pinterest是最近流行的一个图片分享网站，它使用Django进行开发。这里用Django实现一个简化版的Pinterest网站。效果如下：
+<span style="color: rgb(255, 0, 0);">动态图片无法添加进来，建议复制链接观看：</span><span style="color: rgb(255, 0, 0);">http://101python.cn/static/images/mini_pinterest_prettify.gif</span>1.安装Django先新建一个django_tutorial的文件夹，并切换至该目录
+ 2.初始化mini_pinterest项目建立mini_pinterest项目
+ 3.创建Pinterest应用   4.创建数据模型结构Django默认使用Sqlite数据库。SQLite，是一款轻型的数据库，以单个文件的形式存在，简单方便无需安装。这里不用做修改。它在Django的配置如下：
+创建模型在pinterest/models.py文件中建立一个Image模型，内容如下：
+建立数据表为了创建模型对应的数据表，需要先生成对应的数据迁移脚步(migrations)，执行命令如下：
+ 5.创建管理后台Django默认已经内置了一个管理后台，要使用它需要先创建一个超级用户(superuser)。执行如下命令：
+ 注册模型为了将模型添加到管理后台，需要将模型注册到管理后台，在admin.py文件中添加相应的模型。
+    6.实现展示页面完成上述代码后已经可以进行图片的增删改查功能，接下来就是实现最后的展示页面。这里需要做的是在Django中建立一个视图(view)和模板(template)。
+建立视图视图其实就是一个特殊的函数，用来处理网络请求并返回结果。它以请求对象(request)为参数，返回一个HttpResponse对象。在pinterest下的views.py创建一个名为index的函数。index函数中获取所有的图片对象，然后将这些图片数据渲染到一个模板中。函数代码如下：
+配置URL视图函数创建完成后还需要进行URL配置，这样Django才能知道一个请求地址过来该执行哪个视图函数。配置是通过urls.py文件中urlpatterns加入一个url函数，该函数接受两个参数(一个URL正则表达式和一个视图函数）。代码如下：
+创建模板现在URL已经配置OK，对应的视图函数也已完成，最后就剩下渲染需要的模板。所有的模板一个会放在一个名叫templates的文件夹下以方便管理。在mini_pinterest文件夹下创建一个名叫tempates的文件夹。
+  这个模板本质上可以说是一个html文件，在其中加入了一下Django的变量和标签。其中变量就是视图中传入模板的数据，可以动态的生成不同的内容。标签类似于Python的语法，Django有许多内置的标签，可以让模板中支持逻辑判断、循环、格式化等功能。这里在index.html文件中循环显示管理后台的所有图片，内容如下：
+查看效果模板完成后让我们来看下效果，在浏览器中输入http://127.0.0.1:5000/
+进行访问，发现显示结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu2JVLYnHb5HxD8EiaLY3ZrpeY3XK6vYSPHq2fHDaQY3G4tLOESzUQia9CPE6uAU3WecLpIjPWcCkGw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttu2JVLYnHb5HxD8EiaLY3ZrpwLVd2JJvhXMibmh5MADj9HSjuVArsia9WIibt3HHiaZCQONAWbdepntNnA/0?wx_fmt=png
+可以发现，访问日志中都返回了404(资源未找到)。难道是图片上传失败了？！！ 进入项目文件夹，用命令看下当前文件夹中内容：

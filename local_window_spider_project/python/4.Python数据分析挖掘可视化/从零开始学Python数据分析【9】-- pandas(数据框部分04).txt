@@ -1,0 +1,44 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x909\xe3\x80\x91-- pandas(\xe6\x95\xb0\xe6\x8d\xae\xe6\xa1\x86\xe9\x83\xa8\xe5\x88\x8604)'             如果你手中有多张数据结构一致的excel表格，你需要将这些表格合并到一起，你会怎么做？复制粘贴？是不是太慢了，这里教你使用Python完成数据的批量合并。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ 例如，我的D盘中有这些个结构一致的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;text-indent: 32px;">excel表格：</span>
+  https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEJ3wPQ8TzYAUiaE2ocq1JkgB4AgJzIVJvVMmtMzMUibIGCEpUx70P2CDw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEub1Fk3LiblWasqyoiau6BSZv7vKwrjTeoficxKLcP3ZdLic1H7ZuiayhgPA/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicERBPOmpgf1hic2hOttibmfychWx5HIGsLzbMVN00GUMQRThcIr6deVib1w/640?wx_fmt=png
+ 我们看看<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">R语言</strong></span>的环境下，是如何完成数据集的纵向合并：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEecWTnklAEasfMHsOubCNPsnhQz6Obnh9ibKNJdAg3UZaV4oTOVE5fvw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicErMTkbBx365tCpzLmYJOp2G2SQH9lC9xH1uI3n6d0DrzhEibZV764tIw/640?wx_fmt=png
+   如果你所需的数据集来自于多张表，而这些表之间存在一些公共的字段用于观测行的匹配，换句话说，你需要在excel使用vlookup这样的函数完成数据的连接。要想实现该功能，在Python中应该如何实现呢？
+ 先来看一下需要join的数据长啥样：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEd9GoQFksTXVe6cibjibbBEUGF2ibAScSTeH6YHUaEXNZUIyTKrC8E7uTw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEpibs1jGXwPoTEuwspkkR7Qick9KZMcdaPuHU9cfwV2diaAWJAVSxx2jZw/640?wx_fmt=png
+ 接下来，借助于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 0, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">pandas中merge函数</strong></span>完成两个数据集的连接，即将economy_info表中的字段合并到user_info表中，形成一张宽表。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ 我们先来看一下merge函数的几个重要的参数：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicE9JhSkAmz9GOVw8lX0GY4AKVgzcjB49ckVicFRKl7v9iaEjndZHBIFx6w/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicE5wmcKibHKRsaibqv04b4rTxY3gibjFFOZM3tIHic4Ge1a5iceDT0HNibcJWg/640?wx_fmt=png
+ 如果你的两张表有<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">公共字段</strong></span>，而且字段<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">名称完全一致</strong></span>，merge函数会自动查询这些字段，并以这些字段作为连接的依据。如果两张表中含公共字段，但<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">名称不一致</strong></span>，如Id与id，这个时候就需要<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">left_on和right_on</strong>两个参数的使用了。
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicE3ssoSrcByC7EpOzvbOkUfm3ibcHRwfaryoBaHn8ibicsD6Xic6vV1pjmHw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEZFb4If4xnKKS5sKt4f1gtjmevmG7be1HjoDfhvPGSluJ6kA2n1nRsg/640?wx_fmt=png
+ 发现表中含有两个id，这个时候需要你手工再删除一下，可以通过drop函数删除其中一个变量。关于变量的删除你可以参考这篇文章：
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEBDfPDBc1bMkYGvR7iclVia1zFX7icBE34bqgVicajrlwG69YdIAtC61uxw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEHBSIjdmot1tOXFss2yTzAKo23ApQoXQtIKbEcwsyhzGtRsibLw5pib8A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEa4mYrqqiag0EBnhIQSJ7c7ibul1cHicvPAAdgkJX692o58tCKomibZNJ6g/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEApqd71WkVSRgW4Czxb9tLFQeEndu83THHJVia40GZcPdAMLI4aOEwXw/640?wx_fmt=png
+   在建模过程中，往往会有一些离散变量，如学历、收入等级，用户会员等级。这些变量直接放入到模型中（如回归模型）是有问题的（即使你已经用1,2,3...等数据表示），为解决这个问题，我们通常是将这些变量进行<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">哑变量处理</strong>。如果离散变量有N种水平，就需要构造N-1个变量，每一个变量均用0和1的值来表示。那这样的0-1编码，如何使用Python来实现呢？如果你使用了<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">pandas模块中的get_dummies函数</strong></span>，问题就会显得非常容易。下面我们举例说明：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicETuNB7FMULIkEllQsbyibyVjA0s9U2jFicvBWe7WRHJaMudofs7G7bU0w/640?wx_fmt=png
+ 该数据集中的gender变量和level变量都属于离散变量，需要将这两个变量进行哑变量处理。
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEwmoraibPNoaic7ocOGAeYcqvzHtV0LkWfaKyVFDJmHmC6usX1EdxfX6Q/640?wx_fmt=png
+ 是不是很方便。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">千万记得</strong></span>，如果你的变量进行了哑变量处理，建模时要记得删除原离散变量中的某一个水平，如性别中删除gender_F，等级中删除level_V1。删除的变量，就表示性别中，以女性(F)为参照组；等级中，以V1为参照组。如下是变量的删除：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEicDvMnsEm0fEErA4ahBLicWk4iboMQe7Fgq4A2vYJAVg7ibeqMOS9R8S1A/640?wx_fmt=png
+      https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEQEWJvA9NGPfRc922xqWsiaEMokGiaJYMJQDVwkPTXBDbADoxkGXcezDw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicE5J2GuPibGLsbhMQU7jXlVGsHB0GoWaJ6fcuMW3kgYe8MvfaqyuE0Vaw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEz657icxsXpAl57AHUkhHA5MoZfibkfNpF4uxo0L7cqAic0QxRR6zibZA2A/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEj8ZKrCasEktg7e1GJpUzYDIRmCnITFJKf12eS0bnBPhyW9FeYPjG5w/640?wx_fmt=png
+ 删除某个哑变量
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEn0bIlwOHtdVj6sCe3sPeJbELz6JGl2L6LSTK00OJXyMfmTdHOZyMUw/640?wx_fmt=png
+     这里我们随机生成一列数据表示年龄
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicE2oKZwIA2Tenibjriaka4iaqc0g8O0NLgicnfiaLicqBRGxl5jh9DXaicwkDkg/640?wx_fmt=png
+      https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEJRdGXbTx6yfAI6ambWoeg8Io4zSIskKv5tqqzjUR7HLziaFiarKMbxGA/640?wx_fmt=png
+ 图中<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 65);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">right参数设置为False</strong></span>，表示分段的数据<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">区间不包含上限</strong>。
+原始年龄数据如下，查看与分段的年龄组对比：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgVKhyq6HtP47Lib4HXcEicmicEa78LKU1c7PGUvCicpraCtYUYick8uVqTSSibVaW7DWO1vmaZuMQW2aDibQ/640?wx_fmt=png
+ 同样的问题，看看<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">R语言</strong>是如何解决的：
+   

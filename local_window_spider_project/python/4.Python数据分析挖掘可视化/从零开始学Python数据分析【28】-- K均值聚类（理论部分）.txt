@@ -1,0 +1,66 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9028\xe3\x80\x91-- K\xe5\x9d\x87\xe5\x80\xbc\xe8\x81\x9a\xe7\xb1\xbb\xef\xbc\x88\xe7\x90\x86\xe8\xae\xba\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                            
+
+
+
+
+
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">聚类是一种无监督的挖掘算法</strong></span>，其目的就是将N个样本按照特定的变量划分为K个簇<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">（K&lt;N)</strong></span>，而这个簇所表现的特征是：<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">簇内样本相似度高（方差小），而簇间的相似度低（方差大）</strong></span>。关于聚类算法有很多，如K均值聚类、K中心聚类、密度聚类、谱系聚类、最大期望聚类等。本文我们介绍的是K均值聚类，它是公认的十大挖掘算法之一，其优点是计算速度快、原理易于理解及聚类效果理想。
+
+
+
+
+
+
+K均值算法是通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">样本间的距离来衡量它们之间的相似度</strong></span>，如果两个样本聚类越远，则相似度越低，否则相似度越高。一般，相似度S可以是距离的倒数或距离平方的倒数，它们之间是成反比的。最常用的距离计算方法是曼哈顿距离和欧氏距离，它们的公式分别如下所示：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXibqjB3oE7xUEMn6TkauHQmMp8H0do8HC6Vosc9M0P2rZFr9xuQbCIAjib5UffXIT5pK23RibTZfbAQ/640?wx_fmt=png
+
+
+
+
+
+
+不妨我们就以欧氏距离为例，来看看K均值算法是如何完成聚类任务的，其聚类步骤如下：
+在n个观测中<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">随机挑选K个观测</strong></span>，每个观测代表一个簇；
+计算剩余的每个对象到各个簇的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">欧式距离</strong></span>，将他们<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">分配到最相近的簇中</strong></span>，并计算<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(172, 57, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">新簇的均值</strong></span>；
+使用新的均值作为新簇的中心，再重新分配所有对象，计算簇均值
+ 具体实现过程可以如下图所示：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXibqjB3oE7xUEMn6TkauHQmrozy2hpuUQZex3qFkZcrZZzZ5jCguhRtthqtJ1gkZeScsXG9uhYjHQ/640?wx_fmt=png
+
+
+
+
+
+
+从刚刚上面说明的几个步骤中，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">你是否有一些疑问呢？</strong></span>例如初始的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">K值如何确定</strong></span>，即聚类之前我必须清楚我应该聚为几类；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">什么叫分配稳定</strong></span>，即在聚类的迭代过程中，什么时候算完。为了解答这两个问题，接下来我们详细的说明一番。
+
+
+
+
+
+
+设想，如果我们能够非常合理的将N个观测聚为K类（簇），根据前面提到的簇内样本相似度高（方差小）这个思想，我们可以<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">构造一个目标函数</strong></span>，来说明聚类效果能够<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">使各个簇内离差平方和之和达到最小</strong></span>。首先来看一下各个簇内离差平方和之和的表达式：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXibqjB3oE7xUEMn6TkauHQmx2fm7tAVQt3fiaiba4duEcZaJLKia93eOtsSuWMFTZbiaaTWetsEH9kN6Q/640?wx_fmt=png
+
+
+
+
+
+
+其实，我们就是要求这个和的最小值。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">你可能会问</strong></span>，当簇的个数与样本个数一致（每个样本都代表一个类，簇中样本与其均值相等）时，不就可以得到最小值0了嘛，好吧，那就不是聚类了。所以，为了实现聚类，如何求得这个目标函数的最小值呢？仍然<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 82, 255);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">通过微分（对簇的个数j求导）的方法</strong></span>来实现，具体推导如下：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXibqjB3oE7xUEMn6TkauHQmbKmSsydOAMPpDpnVuNDQQsGr1iacsgJtDl7YOUal7beqlLaUTyUxogA/640?wx_fmt=png
+哎？是不是很好玩，这个最优化的结果就是计算簇的均值哎！这不就正好和K均值聚类算法的簇中心不言而合了嘛。
+
+
+
+
+
+
+<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">第二个问题</strong></span>，迭代啥时候算个完呢？一般如下两种情况时，将会停止聚类的迭代过程：
+   
+
+
+
+
+
+尽管K均值聚类算法具有计算速度快、原理易于理解及聚类效果理想这些优点，但他还是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 104, 39);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">存在一些缺点</strong></span>的，如：
+ 

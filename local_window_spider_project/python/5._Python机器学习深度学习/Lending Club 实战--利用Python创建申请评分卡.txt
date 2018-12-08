@@ -1,0 +1,101 @@
+b'Lending Club \xe5\xae\x9e\xe6\x88\x98--\xe5\x88\xa9\xe7\x94\xa8Python\xe5\x88\x9b\xe5\xbb\xba\xe7\x94\xb3\xe8\xaf\xb7\xe8\xaf\x84\xe5\x88\x86\xe5\x8d\xa1'             https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7y7ySp4lygZYXQ6oOdZEWyI6Vqq2km9SEBZaVweHNbu19wiahK8sSmmA/640?wx_fmt=png
+     https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7rodbT64zBjpEuDJXoguj5iageRFFkib5nt7WqdrMqBYvGt1sO05RrnxQ/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7xf97eD1IXeE5DQXcMC8voZBuXhMGzf10lee9IPMWUENd6j2pfOOgYg/640?wx_fmt=png
+ 再继续看看下数据集形状，发现特征从145变成了102
+  数据集中很多特征是关于投资人的数据，与建模无关，所以我需要过滤变量；同时为了便于大家理解，我把特征重命名为中文。
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7mGN8a0kREFHj1egSicj1wPO36srdcwplTWZeD4CDSWpHlrte3xy9Zwg/640?wx_fmt=png
+ 再次预览数据，此时剩余26个特征
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7zswp7vnpb8s4rc7icMGjSaxeIw77kmFQMpNZs2icfCRlDr4hXzn1mwhA/640?wx_fmt=png
+    我先把变量分为连续变量与分类变量，发现有11个连续变量，15个分类变量
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7md1Wl3V7icOptZKIqzRkcvzlCfia8Qdlf1uDIgx8icGE0dLrLjju1vxkw/640?wx_fmt=png
+ 接下来可视化作图
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR75Iria8l2hzNuibsTSiblZZAojzfoFfZNiaLDkk8cZeibxWdsVdRgKEI3F2g/640?wx_fmt=png
+ 发现目标变量有点乱，没关系。
+特征抽象：把目标变量各水平转为我们所需要的0、1形式。
+处理后发现正常客户17731，违约客户6816
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR76BwlS4IH9xxMrVXhiahrlQounGHiaoTibSgPXibKgn9aFc1JpGI6IcXebA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7flicA2yVQxzDsOB1HVWs5RBHKscFIJicpuL0AWM6V49Mqq6RbOaUJVaw/640?wx_fmt=png
+ 特征中有时间变量：信用报告最早日期、放款日期。
+ 我们知道美国的征信数据是比较完善的，那我想知道会不会开启“信用报告天赋”越早，表现越好呢？
+这里稍微做了个特征衍生，创建了新变量days，含义是放款时，客户拥有信用报告的天数
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7jCdRZvrNEn8VI2JKf0QJXShbuN7jiaJIUpEibaRxic129uqlLIwTnMYmA/640?wx_fmt=png
+  在做过分类变量水平合并和删除严重不平衡的分类变量后，接下来就是可视化了：让我们看一下各变量的分布以及与目标变量的关系吧
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ia6iabeB5WOJoibwaXq0383qDiac8NYKLRhk1iahGcDvnhMexh4KkHLEtfQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7Hupe9p1ad4BKTIfZwgRfGEWn1nCyib7UfGc6hK2THwyZdQ6AQTwVDjQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR77K7M2nm0uBdiaHTKibpvc7X8vBYRXsKH4MjCYBSSQPqf1w1N9N8ibnWKw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7G03fpCwiaKudibgfxr9tYJvlZaOZ14bZjW2ZWPcuNIqYHUeCrtbPYMWw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7h53klpKIlD4rLxQOSmSXu9iaLUibXC3sibMuJbiciakGW0RyPL2fl4Oeavg/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7axEET03KiarkNrbJK1ZPvr7p13gKM49XFiaA1NlDCQSNfcTDguShtHEQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7A1JvCpoibwFWh3xl8bzoLnvlEBbyYS4G5Hibkvt2rHib9hGF11JpZ6jjQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7Wj4MswDwFYkgm3iaEeHrZ0B4z7icxyhIXLapkYTK2MKFw2AqcrSbr8gw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR79YEIP1icsqYzaSyDsWC7kJe03Nk39BGJ0Y2zzuVu6YicH2Icm6VvcLQw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR78poqNAGicLA39pcpA4kEWViaN8HG5T6j1T3Tfk0OHLPGLl7QgianpfiaIQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7MibdWRHWynx8XhB8licdOXhpSBFibKyEIFjWXZcsKjmgfIf3gqz1zA21g/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR74oqKURYWmgtIicJVMm4KsuvrD59gdAlYZvicEXocRZxCpqPGrU9WQVYQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7Pl2ib04fbzYw6o50FRrAg2YGIUKOKMEvbjrOdAUlibPBQO2XIbZ5NTUg/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7vPo9wS157z9kyu0QTibWiaB8OiazicEJAlwDdrPSlNhC1bd0ZibPVkquJnQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7BrXZfG0pL8TlFibXbQrGhcMQmica8IW3pcs34vsVVQUobLyyF3KBqic4w/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7Xticf1nbfnLeLfOm3vSNxWXWJmqr1QdnxehhKj4ul0DSibW2Shm3ib5xA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7QZUyuvodP78ia1ycRrCS7WYia13V6IkM8JYUialQ9rfA2er4ibQLdmHU8A/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7BI9M0yUr8HzYicEawt3uBCmicXp1Rg68loS4zibjeiczvanLp9s7WaO0Ew/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR70ictjsotlbiawcicytfV1HRTlUibITE3dicibAQZIqTC8V5W14ibFds7HFgvA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ibSKneXJ5xBkV4t24WZyvSiaEgvZ8yHNhywAgX8uOkovm2eymyVehatA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7eNbq9lDNgsbmuQzia5hXsloVjLyJsvO9RaicqlN4dPGgZhvEvOIpDF8g/640?wx_fmt=png
+ 有一句话叫：老板看不懂代码，但能看得懂图。get可视化技能很重要哦！
+ 对于以上图片相信大家都能看懂，我就不赘述了，接下来<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 25.6px;">再次预览数据，还剩下22个特征</span>
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR71A0XiawbwZ1byqR5KXUHaib84CcQnTzyYZGy3LFREclbQadUVZRAT2IQ/640?wx_fmt=png
+    https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR73RibsXcaicPu51jtWv9BW5dKkcHBJ11nBMAoIhxoA9TFFsEaKsxecHRg/640?wx_fmt=png
+    https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7vvuHYcnqsSf4EfWibzz7THic6oLMb37Sv5VT0tCMMep4XflEXIrL5T3Q/640?wx_fmt=png
+    为了创建申请评分卡，我们不用One-hot、不用归一化，而是选择卡方分箱和WOE编码。
+  https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7MqicgPn5D2UnBNLBf4vLZkwPM35UqicGWbrU4a1UyOZEic1WhE21zOIlA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7sa1NynhKPowzRyZ476VeYgdGcQGlqCglKW9AHe0E4Pcq2DKRNXtCFA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR77ibbb13Rlh7BpLzSFgS0jQzfeWHMOCsib8q6cvZNw3wcg7XGDBnxSiaoQ/640?wx_fmt=png
+    https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7sl2g0suibRqWQEcHKNianP7bbT65Rxy8cDiaCaXt8nuLLPoZ3OjcJdHOg/640?wx_fmt=png
+  虽然分箱前只有22个特征，但还是要筛选变量的，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 1.6;">经过IV筛选和相关系数筛选后，剩余9个变量</span>
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR77jldZmLic0g29byd6cMv1pADwINpgqz5eclhgpibwx0PcUbT1dTXryDw/640?wx_fmt=png
+  2016Q4数据中，逾期坏样本比例28%，我们可以不用"过抽样"。本着探讨的精神， 我会用逻辑回归，XGBOOST 这2个模型，未SMOT抽样，SMOTE抽样这2种情况，共训练4个模型；
+ 之后这4个模型会在在2017Q1数据中分别加载，看看效果。
+ 先看smote抽样方法：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7nNOtia1n6J632wg6mMBCfxbffLJo4CRz8558D34DArVwahPdsxtSyicA/640?wx_fmt=png
+ 逻辑回归有个显著性检验，这一步也可以筛选变量：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7tQDayxojxiaDkbVZZMediate96qiaUlkr3EsINC7MOolw7Czz3JiaBHGlA/640?wx_fmt=png
+ 这几个变量都是显著的，下面建模
+ 第一个模型是经过smote抽样后的逻辑回归模型：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7NBllZnYKNUzOpSMKoTficsSm9IfQ3hZ91ibicj9pe2cEkLTk2Ydvf0tYA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7tm5VaSy5qy9ClXGFxScTZMVhlmx8HEIKUH3oxJ5dmTIfWiacwQqroeA/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ia8knuRXRoeebx0tnAnmSqEle7ia1U6Umo4WcpoN0ENH0WnicDWGBRDrg/640?wx_fmt=png
+ 我们发现统计指标不是很好，别灰心，惊喜在下面！
+再看看<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 1.6;">经过smote抽样的xgboost模型：</span>
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR720rLOHQIdzogsDTJVLP1ULhzbrSSabZyb6oicHVcJKwlNCTlZImnwXQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7KrNRpPV1E1eZdJyJw3ELrfDfmu4MM4kiaJl9nuWrp5QPOM0pDBFhIhw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR79JpR8P7wuia51eibYcvGqBnfs3LpSgAUMibefZkibrAqjoV6YrWqoI9uow/640?wx_fmt=png
+  是不是很激动，统计指标辣么高！
+再看更鸡冻的：红线代表逾期客户的分数分布，蓝线代表正常客户的分数分布。
+ 我们发现：哇塞，低分与高分分的好开，直接拒绝低分的，放过高分的，人工审核中间分的，太棒了！
+   </pre><p style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;clear: both;min-height: 1em;color: rgb(62, 62, 62);"><br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR78fqETvKIeBbfruR7KrS9nxJmUYvbzDXm4CpPciaQAHHYZPaRRKQGF2w/640?wx_fmt=png
+ https://res.wx.qq.com/mpres/htmledition/images/icon/common/emotion_panel/smiley/smiley_5.png
+ 我们再看看未经过smote抽样的数据，分别用逻辑回归和xgboost试试。
+先看LR：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7Noh6BPBJynAGH0HUURLCCQ3OThE6TD1P9tRiaTa2GKCVnsicJd7nicgEw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ZNtbUQPF4IBM31GmuOK1Qbv54fnWbaLy71hgA1qNVgI7ia2J4DXtVng/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7INkibYJ19JX8YUdN5FfzVsic8icsrN59uY4l1F4hUpwQBRVFHgXiaSnkxA/640?wx_fmt=png
+ 我们会发现，未经过smote抽样的逻辑回归准确率大幅提升，KS和AUC变化不明显。
+ 再看XGBOOST：
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7EvVDICekrgacKDYS1ymqzA5SlyIocQ1vZIO95PCw56XJ1BicoQxZiclw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ib5Oysc0hVOwMk6iay2OsiaX8hGfqD72JxJFdibTibeIe9mJLBCDwDXnVGA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7eSYVgR5P6JFicGrQT6QfkFS2g09CN3whwMXJwObk1nwQaoR0sg382VA/640?wx_fmt=png
+  https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7FiaNkTKmBkjDPWQwgeRsyriaMholibBkQYyTn26s5viclShzxFCvUOKNcg/640?wx_fmt=png
+ https://res.wx.qq.com/mpres/htmledition/images/icon/common/emotion_panel/smiley/smiley_5.png
+ 这4个模型训练好了，我们看下这4个模型在2017年第1季度数据上的表现
+ 先加载未经过smote采样的逻辑回归模型
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7ZZIiczfmAwKGKsmnGia9dRkGbpicUJlNygcFRB6JeuJ69RecjQd3VIo1Q/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7oa2S3BkWAVJ95fQq3CHOiambIaicAhIwgnJr0oEgn9GCibWCePdp6D5dw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7oxA71Ivy0yhxBIojp35IyVACt0ypV39S5kg9D6Ttzbvf29icPdtjibug/640?wx_fmt=png
+ 可见：虽然说是不同的数据，但逻辑回归表现的还是比较稳定的
+   https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7C1c2icv1bhFgyCt4vJEtnYIEiaElQu6MY0HzUJwcLpAC4wibQ74Nia0SNQ/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7VyulPMZEFrnr8AILZFI6kBpvAwTh2o1jc7vBUMqFnQVIulFtBaNfSg/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjpeO8mRs4ZwBU5jyyW4mOR7rIHtwCOCuibLAPEV3SNT6nWJsVVzMxyvISaEGGdPs6pTotMDlz3HlicA/640?wx_fmt=png
+ 我们发现smote采样后的模型，测试准确率低了很多。
+ 前辈经验是10%坏样本以上的数据尽量先不用smote采样哦
+ 同样的方法加载XGBOOST模型，这里就不赘述了。

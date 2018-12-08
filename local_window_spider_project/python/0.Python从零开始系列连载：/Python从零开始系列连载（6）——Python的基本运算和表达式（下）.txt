@@ -1,0 +1,221 @@
+Python从零开始系列连载（6）——Python的基本运算和表达式（下）前文传送门：
+      输入指的是从输入设备获取数据，这里的输入设备往往指的是键盘，通过input（）函数可以实现这一目的
+ x = input（&lt;提示字符串&gt;）
+ 举个栗子：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lIaNHQADCPcIx3bKZ7PTexHFNYlMdUUtzYkD26QRVAUnbOXP3zPAIJA/0?wx_fmt=png
+ 运行后，出现一个输入框等待你输入
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lIYVRO3Wsrt1MvYlibqI3zNlibqv2TYGonAsSBXxFsppiaibm8St6gWnfFw/0?wx_fmt=png
+ 输入后回车，当我们查看name变量时，显示的就是刚才输入的信息了
+ 小明：我想知道小红的年龄和我是不是一样（其实她知道是一样的）！
+ 于是小明写了个代码让小红输入信息：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lTvMPGicaXnumxHBezcUea8ZtuAQ7Wc1wOqPicpjsb7YpaulNvPpW3Iicw/0?wx_fmt=png
+ 结果发现。。。竟然不一样。emmm
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l12ERIpFW0shboH3U4Gcp0W60fncibsB9yuFn3picKPXHrZuCoyAhGS8Q/0?wx_fmt=png
+ 可能细心的你已经发现了问题所在！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lpz4nbVSraarEz9nsaySK0QY52sWo9jxYnsclejeh2RsXbGD43ia3afQ/0?wx_fmt=png
+ 原来从input（）获得的是是字符串类型数据
+ 所以我们要用到之前学的类型转换
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l31JMlF0hpg7ibA72YFxu1SR0AvgauTYiacichoBTqSDqdLzBLgD4ib6G1w/0?wx_fmt=png
+ 这样就行啦，可是，这样好麻烦，怎么样从源头解决呢？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l7licpH1QxnSTU4al6Nx5SedjKAMaLsPqFrdicvTyJ6WjCxhu0HLON7MA/0?wx_fmt=png
+ 输出就是把结果显示在输出设备（一般是显示器），一般使用print函数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5leKiciaPtp8mxKddsFCPR1p0kMtR8zZLC7dkBOANpiaLNCqibwoHqmxBFbA/0?wx_fmt=png
+ sep参数是规定分隔符选用的是什么
+ print() 函数还可以用字符串格式化控制输出的形式
+ 常见的格式字符如下表：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lrpEdricAx0g04Vba06dJaaA6JZuHcvQONrMWgM6KGEXLe8xIMiaibp7BQ/0?wx_fmt=png
+看个例子：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5licuibkNJvW4Qib5OIocVcSt2SO1cOhUp0H7JWsjzGDSibEQQVTibicCBIqUA/0?wx_fmt=png
+ 我们用%s代替要输出的内容，而后一个%后面你的内容则是真正输出的内容
+ 如果有多个%s，在最后的%后面要加括号将真正输出内容括起来
+           http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5ltOLiafDbrv9RgBOJ34icuxdfmiakznvRMSYzqUEUxSHJibxvTNX8RcQQAw/0?wx_fmt=png
+ 如果是浮点数，
+%m.nf 
+ 
+m指的是输出总宽度，小数点之后保留n位（四舍五入保存），如果总宽度超过m，按照实际显示
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lxh9URLiaQibor18JOUoggFmI6ibTZgybxPFN8Qa58dQpVlQiaLOhTAkyibw/0?wx_fmt=png
+ 幸好我们学的是Python3
+ 现在压轴演出开始！！！
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lJ5J8musjPib93nHKYHE56JxqaZ8oc1p3XiblhMic4Vt9ETg3PYJQYMVicw/0?wx_fmt=gif
+  通过{}来代替%，功能更强！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lVQYyz3YCIickqRW7HkT5cXIaSM2UrBBIXHs07Qz1bd6Rh3VXDhh3Uibw/0?wx_fmt=png
+ 参数可以不按照顺序，也可以使用多次！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lSEvXsJ9oeLhNBsK1TpoC7ht4yM9WWSJu7ly6gKyK5lGx6ibuDHpicdtA/0?wx_fmt=png
+ 赋值，就是往盘子里放一些食品
+在Python中，使用' = ' 表示赋值
+一般形式为：
+变量 = 表达式
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l9QXbafTZxRyUPkN6WpN7Qa5ibatTgLN8OUk2X9Z8x5aPue3kpRUsHwQ/0?wx_fmt=png
+ 这里的 y = x 指的是将 x 变量的值复制一份给 y
+  关系运算符，说得通俗点就是作比较的比较运算符
+还记得这个经典的比较的广告么：
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lVvZ0BtlywZHOUExagRUENn73icR4WMZ2qKyL1Lc53iaGUdNMCiayaMTAA/0?wx_fmt=gif
+ 不知道这个孩子现在到底有多强了
+ 比较运算通常是比较两个数值型或者字符串型数据，然后返回一个布尔值
+ 小明：老湿！什么是布尔值？
+ 布尔值就是bool值
+它只有两种可能，‘真’或者是‘假’
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lVuftKIABsUKIrk2mAN7ULsGTR1RFPMe0p2cJaKUTiak0b8Q5cQIkPNg/0?wx_fmt=png
+ 关系运算符有以下几种：
+ &gt; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+大于
+&gt;= 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 大于或等于
+&lt;= 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 小于或等于
+&lt; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 小于
+== 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 等于（注意和赋值的 = 区分开）
+!= 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+不等于
+is 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 比较两个引用是否指向了同一个对象（引用比较）
+is not 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<span style="box-sizing: border-box;">比较两个引用是否指向了不同对象（引用比较）</span>
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5luvBTrDnIqnibwZ1gicqFFULQvF55kQr0mMDXutswYVmyl8UoCDb7KeRA/0?wx_fmt=png
+ 注意，在做数值比较的时候，这里的True相当于1，False相当于0
+ 甚至可以有这种操作：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lERpE3mqRxSSYIFfMxmB1QwaUdcQntkmC54b4FbgYDy9VFsa8uSVrqg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lSiccSiaB6E5Y9HvSbdkI632V1tV2GlMtbrWeJclCl0hXbxWyqQC6aSzg/0?wx_fmt=png
+  我们继续：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5leyULJjAu4L9WApFRDnDdNR9J4C2VgxOxSojYdIRc5BUiapVpHHkAaPQ/0?wx_fmt=png
+ 下面是见证奇迹的时刻：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lLY13aFSx3GQdDClL6rlUZ5odW6v8ZEyMlufkgs7hCME0hUfCONic86Q/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lJoUydMNPNRFDCUPMoE3pc5MCpEcLyvRktg9TVy07q1ZiaLMF7OV5XlQ/0?wx_fmt=png
+ 大家看到没，is和==应该怎么理解，怎么区别呢？
+  其中id用来唯一标识一个对象，即在内存开辟了一块空间暂时存放这个变量<br style="box-sizing: border-box;"  />
+type标识对象的类型，如之前说过的str，int，float等
+value是对象的值<br style="box-sizing: border-box;"  />
+   我们再看看：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l6TJTM2WSSN80iaUoEzlR2IRIwM0hN83wNJeq0lgzbsTib4RKMPpJrV2Q/0?wx_fmt=png
+  而c的id和他们不一样，c指向的值和他们不一样
+ 我们继续：
+ 刚才的没有涉及到字符串的比较
+ 字符串也可以比较大小
+规则是：按照英文字母的排序进行比较
+  流程是：
+首先取两个字符串的第1个字符比较，较大的字符所在的字符串更大
+如果第一个字符相同，再取<span style="box-sizing: border-box;">两个字符串的第2个字符比较，<span style="box-sizing: border-box;">较大的字符所在的字符串更大</span></span>
+其余以此类推
+如果比到最后都相同，则两个字符串相等
+如果某个字符串已经被比较完了，另一个还剩一部分，则剩一部分的字符串比较大
+特别要注意的，如果是空字符串和非空字符串比较，空串小
+ 我们举例看一下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lRAQtB9bqYic2a5HXKsD6iad2Bq0R8KYmBPOoBaVCsjaichMKZRdCrLMeQ/0?wx_fmt=png
+ 是不是感觉自己萌萌哒
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5l86vQjlfNlEqIaiaAdYby0TvNgpKoqlec8ZTxTXAylU7QqWXAicCiaticrw/0?wx_fmt=png
+ 张嘴吃药
+再看个例子【邪魅一笑】
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5licug5IO0I8fkTaePTzu7XdGxj4rsSl2IeApXRL0h4VM3T5bZZIRjJJQ/0?wx_fmt=png
+ hhhhh，这个你知道么
+ 是不是刷新了你的三观
+ 这是因为，这是Python中比较浮点数是否相等机制是他们的差距是否小于一个极小的值来判断
+所以是精度问题，你不要纠结啦~
+ 等等
+ 再给你看个宝贝
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lkevib4kjicAxDaibS1jDaTXZSiaXjXhic24vvLwPyZLHZvnjoDGKpcKnNIA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lD6f44tTwJLJ9aJwdpiccTqibc7VFQPduUVBOiaCb4xiaTeL8G5VVyHwMCQ/0?wx_fmt=png
+ 还可以这样玩
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lVo3JuX1keJ8qHHzqI7bWn39EOboGc3bCZWjjy9WKkFVQAibafOibXtWw/0?wx_fmt=png
+ 我们解释一下：
+ 常用字符大小关系是：
+空字符串&lt;空格&lt;'0'~'9'&lt;'A'~'Z'&lt;'a'~'z&lt;汉字
+  逻辑运算符有三种，与 或 非
+ and：逻辑‘与’运算符，只有当and两边都是真，结果才是真
+or：逻辑‘或’运算符，只要当or一边的是真的，结果就是真
+not：逻辑非运算符，反转逻辑值
+ 我们看几个例子：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5licSToLIARtXWUEwBBicYGwX95Mqb5wtwL6gpQKz76Tzo6QV6pIj24Xvg/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lWHeGJYiaztDPTHJS3Ko1eAEOH5B13zdJicsL9ia4EBvz16G1kmW3kJQ3A/0?wx_fmt=png
+ 值得注意的是：
+ 当数值运算时，不同类型的数值会偷偷发生转换类型，然后运算
+当int与float运算时，int常常转为float再计算
+ 证明如下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lYnnjv7tMlRTaTpQyKSRkckIMmacebuqY7AicZKTldSZL3ib7LkaJfCKg/0?wx_fmt=png
+ 刚才运算得到的结果b是float了
+ 运算符优先级如下：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttucicbsuZ6uJeEKiasNDSLh5lR3pMFKVowL7QE3hv8ac4ONM8ARC2M2FumF5icrXz84fEW0L2BTyA5aA/0?wx_fmt=png

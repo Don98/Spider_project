@@ -1,0 +1,24 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x904\xe3\x80\x91-- numpy'      前面3期介绍完Python的基础知识后，我们需要进入数据分析领域的Python实现，首先我们从Numpy模块讲起。该模块主要有这几个功能：<span style="color: rgb(0, 82, 255);"><strong style="">数学领域的线性代数、傅里叶变换；统计学领域的统计计算、随机数生成</strong></span>等。这里我们就针对统计里面的计算和随机数生成作讲解。<br style=""  />
+   数组的创建可以使用numpy模块中的array函数实现，一维数组只需要给array函数传入一个列表或元组，二维数组则是传入嵌套的列表或元组。具体举例可知：
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUicibJsdjKEIwqMt2St5KTcaibN3SgPV94e0U53aQpO10ryaQdl0AmePOsv46fWQa2zplrK2duptARg/640?wx_fmt=png
+ arr1和arr2为一维数组，arr3为二维数组，返回一个数组的行数和列数可使用shape方法，即
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUicibJsdjKEIwqMt2St5KTca8hfiahJsU2gzIKev8ONPlWmCiaArlqujJiaa1ibke8YJbCbiaxq8bYsicSOQ/640?wx_fmt=png
+    使用<span style="color: rgb(0, 82, 255);"><strong style="">索引</strong></span>的方式，查询一维数组和二维数组的元素。一维数组的索引与列表、元组的索引完全一致，这里就不在赘述；二维数组的索引就稍微有点复杂，我们可以通过例子来说明：
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUicibJsdjKEIwqMt2St5KTcaic7u9NRRUemTgu2XzoVBmgoVE7m3ZabzMjXxDHZ3qvs2Nba4OENnPIw/640?wx_fmt=png
+ print函数中的<span style="color: rgb(0, 82, 255);"><strong style="">'\n'，目的用来换行</strong></span>，使打印出来的结果不显得那么拥挤。
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUicibJsdjKEIwqMt2St5KTcaMvbG6WoLvbNfQQNaXaI9eZvs2NAGq3d5bibY2G2BvVicF23Lm1bicgTkA/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgUicibJsdjKEIwqMt2St5KTcaL6ibjYLNneVB9TwO4fCCDvqgFTpM0cdXgnjPYdWBYflweUTxhUA3u6A/640?wx_fmt=png
+                                                                                    http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiatTmIUj2mAIqsvrMJPC1HbfEyYZvaW2n8F1Ea9YRGNXjkIpTDS7f8UA/640?wx_fmt=png
+   numpy模块中的<span style="color: rgb(0, 82, 255);"><strong style="">子模块random</strong></span>提供了很多产生随机数的方法，帮我们产生伪数据带来了极大的方便，这里就介绍几种常用的分布随机数。有时候为了使每次产生的随机数都相同，就需要设置固定的随机种子，设置<span style="color: rgb(0, 82, 255);"><strong style="">随机种子可以调用seed函数</strong></span>实现。<br style=""  />
+     http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiaqbRj3jgGp3CVG9iaNibVvjRgWJ6sAyMtwAhA3C50DxBKaRcEVMLiaQgZQ/640?wx_fmt=png
+ size参数可以用来控制生成的随机数的形状，r1就是一个10个长度的一维数组；r2就是一个3×5的矩阵。
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiaNKFYbJ8cbnpRxdhnRqmYZG5xcGzuIvowOrnOMtv4UCAptWOHXbWaKA/640?wx_fmt=png
+ 生成3列泊松分布的数据，<span style="line-height: 25.6px;">lamda参数</span>分别取10,50,20，表示单位时间内某件事发生的频次。
+     http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiaqPRO8fObHBp2ztEvPUaY4cHCyUFq41O7OR6ic89k5kVXu54o3wiaaxxQ/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiaNm3AUib8k52AoMADSbQsjQyVNr581ibXpyuK4QGHqrTZSFwP92e3CwiaQ/640?wx_fmt=png
+   numpy模块还提供了读取数据与写数据的函数，方便我们将外部数据文件读入到Python的工作环境中。这里推荐两个读数据的函数：
+ http://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgXkUgbU9UczfFLCxEXvWIFiaIMHgjEuSLxZxGoePKoJyJDM43d6DK7ibatopMvaQ0unAEJC0FczMk2Q/640?wx_fmt=png
+       这里个人比较<span style="color: rgb(0, 82, 255);"><strong style="">推荐使用genfromtxt函数</strong></span>进行外部数据的读取。<span style="color: rgb(255, 104, 39);"><strong style="">切记</strong></span>，loadtxt函数和genfromtxt函数读入数据形成数组，故必须要求读进来的数据一定是数值型数据，否则会报错。
+   通过使用numpy模块中的savetxt函数实现python数据的写出，函数语法如下：
+  X：指定需要写出的数据
+fmt：指定输出数据的格式，<span style="line-height: 25.6px;">默认科学计算法</span>

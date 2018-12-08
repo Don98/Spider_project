@@ -1,0 +1,8 @@
+b'Flask\xe4\xb9\x8b\xe5\xbe\xae\xe5\x8d\x9a\xe5\x8d\x95\xe7\x94\xa8\xe6\x88\xb7\xe7\x94\xbb\xe5\x83\x8f\xe7\x94\x9f\xe6\x88\x90\xe5\x99\xa8' http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtts6q65TCaCPXfmA4HQtNfNQ72mdDcYexCnTaIHxkhsgQnlJF87XmykcbmUJiaicibBWxqoAjBiaxmibQMg/0?wx_fmt=gif
+开发步骤如下： 一、微博抓取  http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtts6q65TCaCPXfmA4HQtNfNQVVlyjfjKaFu0PqqEKDf9tiaVDe2CialVHSVK0OC6z7QAvBVpLN8SrUfg/0?wx_fmt=gif
+下面开始实现爬取博文的代码。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts6q65TCaCPXfmA4HQtNfNQUnibRHOuFeDIAQYBtoa4eKOWW1ZMYSOjdZonA8u3SibEHu2ibibicGiaUaeA/0?wx_fmt=png
+ 1.提取关键词这里从博文列表中提取出关键字，分析出博主的发表的热词
+2.生成词云图 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtts6q65TCaCPXfmA4HQtNfNQxTyPFUoc0DTBMgt1micMf2hibtsibXRLSCLJXIUgHEyvHMXqkhVIsqt0w/0?wx_fmt=png
+开发Flask不像Django那么复杂，小应用几个文件就可以完成。步骤如下：
+1. 安装使用pip安装flask，命令如下：

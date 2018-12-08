@@ -1,0 +1,25 @@
+b'\xe5\x9f\xba\xe4\xba\x8e\xe7\xbb\x9f\xe8\xae\xa1\xe8\xaf\x8d\xe9\xa2\x91\xe5\x88\x86\xe6\x9e\x90\xe5\x9b\xbe\xe4\xb9\xa6\xe9\xa6\x86\xe9\x87\x87\xe8\xb4\xad\xe4\xb9\xa6\xe7\xb1\x8d\xe6\x96\xb9\xe5\x90\x91\xef\xbc\x88\xe6\x9c\xb4\xe7\xb4\xa0\xe7\x89\x88\xef\xbc\x89'http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNtturjVX6J40kIkCac5IOiaoiaHA7BicIicOoDxHAl8uoWEIuK71TwX7n3Pq44CcLjCg6oAcibfjp2mCxVCw/0
+这个故事的开始是一个师姐（现在是本校图书馆老师）想要看看图书馆的被借过的书和没被借过的书的特征
+可能是想为之后图书馆采购书籍做个参考。
+于是当师姐找到我时
+我欣然接受这个task啦~
+首先，她给我两个excel文档
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0Rur7gnU1IbicxFzoRk9skZRQ3OHzTicQHprOz90deJgNSSFdCbOSEdZA/0?wx_fmt=png
+打开是这样的：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0wAKTia8cxYC6mTamcEa6yoe9twRCX3XD4Vw4HdBMPlKOvFu1tDJ129A/0?wx_fmt=png
+不重要和敏感信息已经打码脱敏~
+接下来，就要使用Python中学过的<span style="color: #E33737;"><strong>pandas</strong></span>啦~
+在使用pandas过程中，感谢@秦路老师和@诛胖土豆的深夜指导！
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd03R7mF0qal9pNULF9oOL4Acw4ZtznlNk9ticE3LREhicGBWHib9FzaCtqw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd02iaTjDMjaTavYz3edA0LeY25mtfRvRhseLgBJmdK9eZYfianTicK9jUBA/0?wx_fmt=png
+处理思路：将正题名一列的名字全部合成一条字符串，然后分词。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0prqDtb2Ukm1SrVc6KwNMjP5Oug7k3DxibTbZOK8xIGNkhXF568OOC8Q/0?wx_fmt=png
+  思路：建立一个空字典，用jieba的精准模式分词通过key存分出来的词，value存词频，最后打印词和对应词频
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0cHepw2hVxlcIo7DqygcNNKUdciajqJjSPBP9KZWIX2J2ByTpycvXGcA/0?wx_fmt=png
+没被借过的书分析结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0DM6wSG6ic4P9S3X0qWGVSkNOY6yicdpKowCpFvNnE0WgAsMz4I3oToeQ/0?wx_fmt=png
+通过观察可以发现：有与、的等无意义的词也被统计了，管理、经济、中国、研究等词在被借过的书和没被借过的书里都高频出现，说明图书馆有很多类似字样的书，而投资、物流、会计等在被借过的书中高频出现，而报告、产业、国际、现代等词在没被借过的书中高频出现，这为图书馆新采购书提供了一点点点点点点参考。
+<span style="color: #FF0000;">说到做到，新福利来啦：</span>关注公众号，在公众号菜单点击"<span style="color: #FF0000;">免费听课</span>"，即可参与活动免费听19.9元收费课程，当然，壕大大可以直接购买听课啦。壕大大入口：https://edu.hellobi.com/course/186，点击文末<span style="color: #FF0000;">本次主打课程：</span> http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvOL3bNkHRAHm8jELmmFMd0WyVKiap7BWlU2dkJx0iaK6Io1LUF748cU9aWvLYdCvibeibghRqtBNUX2g/0?wx_fmt=png
+ 课程名称：自然语言处理之-基于深度学习技术的聊天机器人实现
+课程背景：NLP是一个很大的领域，自成一系，本次课程通过一个企业级案例（聊天机器人）带领大家从了解项目场景开始一步步搭建，最后演示聊天机器人实例。通过本课程的学习，让你一举打开NLP的大门。
+主讲老师：

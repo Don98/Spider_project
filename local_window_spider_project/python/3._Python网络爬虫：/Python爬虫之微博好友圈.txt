@@ -1,0 +1,33 @@
+b'Python\xe7\x88\xac\xe8\x99\xab\xe4\xb9\x8b\xe5\xbe\xae\xe5\x8d\x9a\xe5\xa5\xbd\xe5\x8f\x8b\xe5\x9c\x88'    感觉很久没爬虫了，今天就爬下移动端的微博好友圈信息。
+import requests
+import json
+
+headers = {
+    'Cookie':'xxxxxxxx',
+    'User_Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+}
+
+f = open('C:/Users/LP/Desktop/weibo.txt','a+',encoding='utf-8')
+
+def get_info(url,page):
+    html = requests.get(url,headers=headers)
+    json_data = json.loads(html.text)
+    card_groups = json_data[0]['card_group']
+    for card_group in card_groups:
+        f.write(card_group['mblog']['text'].split(' ')[0]+'\n')
+
+    next_cursor = json_data[0]['next_cursor']
+
+    if page&lt;50:
+        next_url = 'https://m.weibo.cn/index/friends?format=cards&amp;next_cursor='+str(next_cursor)+'&amp;page=1'
+        page = page + 1
+        get_info(next_url,page)
+    else:
+        pass
+        f.close()
+
+if __name__ == '__main__':
+    url = 'https://m.weibo.cn/index/friends?format=cards'
+    get_info(url,1)</pre><h1 style="margin-top: 40px;margin-bottom: 20px;font-size: 24px;line-height: 1.7;white-space: normal;font-weight: bold;"><strong style=""><span style="font-size: 18px;">代码分析</span></strong></h1><p style="">1.提交cookie模拟登陆微博
+2.好友圈的信息也是异步加载，如图为第一页的url
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuslhZACadPC4GiapKI8qrsw1Dic4rReypMIwfwHMtF0Zj2DChWLXOMro10IEHHDLBr5mfL8uQcSC2w/0?wx_fmt=png

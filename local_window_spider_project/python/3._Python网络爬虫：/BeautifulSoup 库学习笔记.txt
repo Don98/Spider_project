@@ -1,0 +1,5 @@
+b'BeautifulSoup \xe5\xba\x93\xe5\xad\xa6\xe4\xb9\xa0\xe7\xac\x94\xe8\xae\xb0'http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttTdTZbY6iaVOWzcGEQWicJgp9FWLb1gqFMsR4Gq1wnttZEtRcibSibeZCyZBDVLEMLW8HoLhtKVCKSVA/0?wx_fmt=png
+  3.5、嵌套选择3.6.2、children3.6.3、descendants3.7.1、parent3.7.2、parents 4.1.1、name根据标签名4.1.2、attr根据属性4.1.3、text根据文本find_parents() find_parent()find_parents()返回所有祖先节点，find_parent()返回直接父节点。
+ find_next_siblings() find_next_sibling()find_next_siblings()返回后面所有兄弟节点，find_next_sibling()返回后面第一个兄弟节点。
+ find_previous_siblings() find_previous_sibling()find_previous_siblings()返回前面所有兄弟节点，find_previous_sibling()返回前面第一个兄弟节点。
+ 

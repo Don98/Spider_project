@@ -1,0 +1,15 @@
+b'Python\xe5\xb9\xb2\xe8\xb4\xa7\xef\xbc\x9a\xe8\xa1\xa8\xe8\xbe\xbe\xe5\xbc\x8f i += x \xe4\xb8\x8e i = i + x \xe7\xad\x89\xe4\xbb\xb7\xe5\x90\x97\xef\xbc\x9f' http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMmIpsficOfQmdFdASNhaLJPBib0Ur6OtokNQfbhgtSTYzuh1dKGWWibqZQQqvrXaaRqozWx93ibNJDhpA/640?wx_fmt=jpeg
+ Python 表达式
+<strong style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "><code style="margin-right: 0.15em; margin-left: 0.15em; padding-right: 0.3em; padding-left: 0.3em; max-width: 100%; font-size: 0.85em; font-family: Consolas, Inconsolata, Courier, monospace; white-space: pre-wrap; border-width: 1px; border-style: solid; border-color: rgb(234, 234, 234); background-color: rgb(248, 248, 248); border-radius: 3px; display: inline; box-sizing: border-box !important; word-wrap: break-word !important;">i += x</code></strong>
+与
+<strong style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "><code style="margin-right: 0.15em; margin-left: 0.15em; padding-right: 0.3em; padding-left: 0.3em; max-width: 100%; font-size: 0.85em; font-family: Consolas, Inconsolata, Courier, monospace; white-space: pre-wrap; border-width: 1px; border-style: solid; border-color: rgb(234, 234, 234); background-color: rgb(248, 248, 248); border-radius: 3px; display: inline; box-sizing: border-box !important; word-wrap: break-word !important;">i = i + x</code></strong>
+等价吗？如果你的回答是yes，那么恭喜你正确了50%，为什么说只对了一半呢？ 按照我们的一般理解它们俩是等价的，整数操作时两者没什么异同，但是对于列表操作，是不是也一样呢？先看下面两段代码：
+代码1
+  弄清楚这个问题之前，首选得明白两个概念：可变对象与不可变对象。
+在 Python 中任何对象都有的三个通用属性：唯一标识、类型、值。
+  对象的<strong style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">值</strong>与唯一标识不一样，并不是所有的对象的值都是一成不变的，有些对象的值可以通过某些操作发生改变，值可以变化的对象称之为可变对象（mutable），值不能改变的对象称之为不可变对象（immutable）
+对于不可变对象，值永远是刚开始创建时候的值，对该对象做的任何操作都会导致一个新的对象的创建。
+ http://mmbiz.qpic.cn/mmbiz_png/rO1ibUkmNGMmIpsficOfQmdFdASNhaLJPBMESkStZzFtIK4VmV53CsBUobC9aicpf1fBpToictRHqzctrfwFFdKBbg/640?wx_fmt=png
+可变对象的值可以通过某些操作动态的改变，比如列表对象，可以通过append方法不断地往列表中添加元素，该列表的值就在不断的处于变化中，一个可变对象赋值给两个变量时，他们共享同一个实例对象，指向相同的内存地址，对其中任何一个变量操作时，同时也会影响另外一个变量。
+http://mmbiz.qpic.cn/mmbiz_png/rO1ibUkmNGMmIpsficOfQmdFdASNhaLJPBcsMUwBr5bBHicq7AFLScUqxvM2VEVxdSzicMAF0ibxYej02MWtqt5Xhng/640?wx_fmt=png
+执行append操作后，对象的内存地址不会改变，x、y 依然指向的是原来同一个对象，只不过是他的值发生了变化而已。

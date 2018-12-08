@@ -1,0 +1,20 @@
+b'\xe5\x88\xa9\xe7\x94\xa8\xe6\x96\xb0\xe6\x8e\xa5\xe5\x8f\xa3\xe6\x8a\x93\xe5\x8f\x96\xe5\xbe\xae\xe4\xbf\xa1\xe5\x85\xac\xe4\xbc\x97\xe5\x8f\xb7\xe7\x9a\x84\xe6\x89\x80\xe6\x9c\x89\xe6\x96\x87\xe7\xab\xa0'<span style="color: rgb(255, 0, 0);">注意：今天的文字格式可能显示有点问题，相信你可以脑补~</span>各位小伙儿伴儿，一定深受过采集微信公众号之苦吧！特别是！！！！！！公共号历史信息！！！这丫除了通过中间代理采集APP、还真没什么招数能拿到数据啊！
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHxQvbGgVY0icUzy3s6Eb3Z0uxibA1HpaK1wF1tnlvC6rXj9bDakdP0vzQ/0?wx_fmt=gif
+直到············
+前天晚上微信官方发布了一个文章：https://mp.weixin.qq.com/s/67sk-uKz9Ct4niT-f4u1KA
+大致意思是说以后发布文章的时候可以直接插入其它公众号的文章了。
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHz9ylqsLSxoNfWElle6YvckXk3BNbzVm0Dbx9jqDFGAHgeyp77Wx3qw/0?wx_fmt=gif
+诶妈呀！这不是一直需要的采集接口嘛！啧啧 天助我也啊！来来·········下面大致的说一下方法。
+微信公众号登录我没仔细看。
+这个暂且不说了，我使用的是selenium 驱动浏览器获取Cookie的方法、来达到登录的效果。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHVv6QJempLZCCjr39GegeouLDYjeCFxTSM4ibmyCZCQvTMzrWz2ppn8A/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHIC0hgvVK4JENia4jQXob8yV1iaPNrYgabs3hym7qB2VJByK5PL7mNXgQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHYXu81DuUY2LNia9u0bvTdc3le0oHh7LhmPkGicvZJ3JhYk5UZdmTEgQg/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHBEXAn4cwZoUfqYiaUicf0Oollk4ovr5CLs2XHibBazNJhdzEeNZn8W12g/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHHeptn3XOH3ffSZM9ee2eibewSqibtTj9ZytBliaFEWPrBr951iaX5gvrAA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvH1HicZCdcwROCOGqvUFAviaczTTvG4BjN9dbIu2SxLVCUU0yJdzIumemQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHn0ZiaV1SFAI6DdJ32MMq3wjx5s4r4GdrY6qcYZszPEMW1THpKL2VIyw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHdHxhEbW7uWXP3ESTKX82icfsef2Q883LKCKHoE73iav2tR4W5KUzN18A/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHiauhOicBcs1a8l08JzD78bBU6PwpALzzvfWo7QV7XibUnODapXRLMchpw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHZCxb0ibo9icCd9QGCWr0pXBWgc1ib96VbERqPoa4fDEibqQPTTbmjFnhBw/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuzxGP3LHUhoSDzZic3gPOvHJzeXXazXcxDscP9sVmrj3MsdtsQYbU4GibhibsRTJRBWoFjevPk3rEaQ/0?wx_fmt=png

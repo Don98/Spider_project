@@ -1,0 +1,10 @@
+b'\xe5\xa6\x82\xe4\xbd\x95\xe6\xad\xa3\xe7\xa1\xae\xe7\x90\x86\xe8\xa7\xa3Python\xe5\x87\xbd\xe6\x95\xb0\xe6\x98\xaf\xe7\xac\xac\xe4\xb8\x80\xe7\xb1\xbb\xe5\xaf\xb9\xe8\xb1\xa1\xef\xbc\x88First-Class Object\xef\xbc\x89'   http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMmhojXl23icxNYkwP2QDfZpRbKONqRYkWc1iclPNOEcOZjsDhNsAQOs9bXNH9JpPW2CSTGCot7xwicBg/640.jpeg
+之前写过一篇关于<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484215&amp;idx=1&amp;sn=e3d8f6d69674fa2665ad35b3b3ff278b&amp;chksm=ec5edc4adb29555c78c782c047ab1bee720e1fc69305fa4d1ea6fa58e486f452809587a6f1fb&amp;scene=21#wechat_redirect" target="_blank" style="">装饰器</a>的文章，虽然写得还算不错，但是也有不少同学表示没看懂，我大概分析了其中的原因，主要问题是他们不理解函数，因为Python中的函数不同于其它语言。
+函数（Function）作为程序语言中不可或缺的一部分，太稀松平常了。但函数作为第一类对象（First-Class Object）却是 Python 
+函数的一大特性。那究竟什么是第一类对象呢？
+在 Python 中万物皆为对象，函数也不例外，函数作为对象可以赋值给一个变量、可以作为元素添加到集合对象中、可作为参数值传递给其它函数，还可以当做函数的返回值，这些特性就是<strong style="">第一类对象</strong>所特有的。
+正确理解 Python函数，能够帮助我们更好地理解 Python 装饰器、匿名函数（lambda）、函数式编程等高阶技术。先来看一个简单的例子
+ 函数身为一个对象，拥有对象模型的三个通用属性：id、类型、和值。
+ http://mmbiz.qpic.cn/mmbiz_jpg/rO1ibUkmNGMnTeTGibiclFeblNWiaNhBxFP56Y4QzlfKYeQicmTVv1FMZibNaiavAO4DW4cD9uMzTyoA8Ycef2hJTc1lQ/640.jpeg
+赋值给另外一个变量时，函数并不会被调用，仅仅是在函数对象上绑定一个新的名字而已。
+   

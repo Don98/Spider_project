@@ -1,0 +1,23 @@
+b'Python\xe8\xbf\x9b\xe9\x98\xb6\xe7\xb3\xbb\xe5\x88\x97\xe8\xbf\x9e\xe8\xbd\xbd\xef\xbc\x887\xef\xbc\x89\xe2\x80\x94\xe2\x80\x94\xe7\x94\x9f\xe6\x88\x90\xe5\x99\xa8\xef\xbc\x88\xe4\xb8\x8b\xef\xbc\x89'  Python进阶系列连载（1）——那些容易被忽略的问题（上）</a>
+Python进阶系列连载（2）——那些容易被忽略的问题（中）</a>
+Python进阶系列连载（3）——那些容易被忽略的问题（下）</a>
+Python进阶系列连载（4）——迭代器</a>
+Python进阶系列连载（5）——生成器（上）</a>
+  Python从零开始系列连载（25）——Python的random模块简单使用（入门知（姿）识（势）学习的最后一篇（片））</a>
+
+免费入门课程视频传送门：点击文末阅读原文send（）退化为next（）       http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KR9uagicKTYd2ViaVlSiawZFTl03sbsmq7W0TNDPeySxYZIXHqc9vhDnVMw/0?wx_fmt=png
+     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRSibQiayGWNVTX4DiaREvccicticicch9s5IJia6gHSqHj6LfhDtQC5K7QX3xA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KR6ib4NWcF1a7QxtpWRYrEt8xjkEdzlyiaFlgHniaLnuLdDQZic6L5WdMPkg/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRpfpaQdMWQd53wUgtg9hKTJTltaXc70sTp1vzSsk0lfica3PZCRTpujQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRmtvdQqF4Iow1ZXI3YkOlBaUYBQ09Tpd8vHvJJOVCbtUMBtslODFgcw/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRfZ0Q8tT5H2YmETiclvSaXYuUvc6qsXPQsLA5z2HKm7x0ZUJFlwBxq7Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRThEzTFBcJleXDYia3GLYEp0OEH1TteyKYgK6R2yHhibMvD5DzIRWicSFA/0?wx_fmt=png
+多任务——协程             http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRPfg6LLXmqicGfxYX7HQGEmM1DSy1afCsGib8FP6dUTXndMiaurGb1yQKA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvM8hjGQk4oEtpZjsl7m6KRB3q7ibcm79OTQymgvfJ3aP1fRFEYW0w7yqNUnoPpj2noNEes4Bc9WhA/0?wx_fmt=png
+         今天作业：敲一遍代码，理解一下两种生成器创建方式
+</strong>
+自己不敲代码永远学不会写代码</strong>
+下课</strong>
+人生苦短，我选Python</strong>
+未完待续，连载中......</strong>
+ 

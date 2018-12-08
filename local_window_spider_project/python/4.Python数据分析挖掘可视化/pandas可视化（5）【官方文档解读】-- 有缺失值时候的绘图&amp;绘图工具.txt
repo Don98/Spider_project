@@ -1,0 +1,42 @@
+b'pandas\xe5\x8f\xaf\xe8\xa7\x86\xe5\x8c\x96\xef\xbc\x885\xef\xbc\x89\xe3\x80\x90\xe5\xae\x98\xe6\x96\xb9\xe6\x96\x87\xe6\xa1\xa3\xe8\xa7\xa3\xe8\xaf\xbb\xe3\x80\x91-- \xe6\x9c\x89\xe7\xbc\xba\xe5\xa4\xb1\xe5\x80\xbc\xe6\x97\xb6\xe5\x80\x99\xe7\x9a\x84\xe7\xbb\x98\xe5\x9b\xbe&amp;\xe7\xbb\x98\xe5\x9b\xbe\xe5\xb7\xa5\xe5\x85\xb7'  前文传送门：
+     如绘图过程中，中文字体和负号显示有问题，可以参照如下链接修改配置参数设置正常显示：
+https://www.joinquant.com/post/441
+  pandas尝试绘制包含缺少数据的DataFrames或Series，根据绘图类型，丢失，遗漏或填充缺失值。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cjjcQHcBHOcbeUlTMHD1QGXvczmxu7tzTAfQYCDCf7Id5hEaaxib9HNg/0?wx_fmt=png
+如果任何这些默认值不是您想要的，或者如果要明确地说明如何处理缺少的值，请在绘制之前考虑使用fillna（）或dropna（）。<br style="box-sizing: border-box; "  />
+ 这些函数可以从pandas.plotting导入，并将一个Series或DataFrame作为参数。<br style="box-sizing: border-box; "  />
+新版本0.7.3
+您可以使用pandas.plotting中的scatter_matrix方法创建散点图矩阵：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cQuTBsXVZcDm0VWL7y9XiaUQ7gTf2ejHpITBnCwCW7szusbX1dr2icxjQ/0?wx_fmt=png
+注：这里的参数除了diagonal，其他在之前的文章基本都讲过，我们通过
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cNQaDjJmpO8ibKCCmWUaodxVEPAs1nkcXPibIIVmXM5UTuMoZlYvTOQow/0?wx_fmt=png
+注：所以有内核密度估计（kde）或直方图（hist）两种
+ 新版本0.8.0
+您可以使用Series.plot.kde（）和DataFrame.plot.kde（）方法创建密度图。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cae8rVfVmeP7v7xicGvnDnK4xUkD3yicISTkfsXQsibCTTFmr5CUgooJ8g/0?wx_fmt=png
+ 安德鲁斯曲线允许将多变量数据绘制为使用样本属性创建的大量曲线作为傅立叶级数的系数。
+通过<span style="box-sizing: border-box; ">绘制</span>每个类别的这些曲线，可以可视化数据集群。 属于同一类样品的曲线通常会更靠近在一起并形成较大的结构。<br style="box-sizing: border-box; "  />
+只能尽力翻译成这样了。。。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8c0vaBK1eaOHWdZuFPV3dicRlU3oYmB4yRCL1ia6F5LqOMR3Cz95wYB3ng/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8c16NOx73YZsEG4JgxPQGfrJyoN5kqCjl9mCia6iaUcfgcazEbJzfhaVVQ/0?wx_fmt=png
+注：这个iris.data我没理解，就把官网的直接截图，理解的小伙伴可以留言评论，谢谢
+ 平行坐标是绘制多变量数据的绘图技术。 它允许人们看到数据中的聚类，并可视觉地估计其他统计信息。
+使用平行坐标点表示为连接的线段。 每个垂直线代表一个属性。 一组连接的线段表示一个数据点。 趋向于集群的点将会更接近。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cJy7WAxWDBmVsgfCibX33BHbdQyqx9IibXck2pgJ8ibXvBltf39g2umAnQ/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8csXs9JiamuPyOTr9iaF1xfDzyEwS2JicJAb74qqFic1iaIV6jGdickM7GaIcw/0?wx_fmt=png
+  滞后图用于检查数据集或时间序列是否是随机的。
+
+随机数据不应在滞后图中显示任何结构。 非随机结构意味着底层数据不是随机的。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cBazMUyndzRMoeznCQXyHRF19aFDr5ZbIWapUFxFXNOkmH6e98x6LPw/0?wx_fmt=png
+从图中可以看出y（t）整体是有周期性的
+ 自相关图经常用于检查时间序列中的随机性。 这是通过在不同的时间滞后计算数据值的自相关来完成的。
+
+如果时间序列是随机的，对于任何和所有时滞分离，这种自相关应该接近零。
+
+如果时间序列是非随机的，则一个或多个自相关将显着非零。
+
+图中显示的水平线对应于95％和99％置信区。 虚线为99％置信区。<br style="box-sizing: border-box; "  />
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt0UvAmr2Y47Aot7WK2ce8cIicYhibz17QujxVsoCQFw26lpFJ1YvRziavzxW2z44GyCCKIDg7I4nCvw/0?wx_fmt=png
+ 引导图用于视觉评估统计量的不确定性，例如平均值，中值，中等等。
+从数据集中选择指定大小的随机子集，为该子集计算所讨论的统计量，并且过程为重复指定次数。
+

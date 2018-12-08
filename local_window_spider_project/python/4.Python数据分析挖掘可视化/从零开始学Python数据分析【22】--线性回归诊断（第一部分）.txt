@@ -1,0 +1,113 @@
+b'\xe4\xbb\x8e\xe9\x9b\xb6\xe5\xbc\x80\xe5\xa7\x8b\xe5\xad\xa6Python\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe3\x80\x9022\xe3\x80\x91--\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92\xe8\xaf\x8a\xe6\x96\xad\xef\xbc\x88\xe7\xac\xac\xe4\xb8\x80\xe9\x83\xa8\xe5\x88\x86\xef\xbc\x89'                      
+
+
+
+
+
+在上一期中，关于线性回归模型的创建，我们对比了Python和R语言的具体代码实现，受到了很多网友的关注。也有一些朋友问到，关于线性回归模型的那些前提假设为什么没有作分享，这期和下期我们就来回答一下这个问题。由于线性回归模型的偏回归系数通过最小二乘法（OLS）实现的，关于最小二乘法的使用是有一些假设前提的，具体是：
+自变量与因变量之间存在线性关系；
+自变量之间不存在多重共线性；
+回归模型的残差服从正态分布；
+回归模型的残差满足方差齐性（即方差为某个固定值）；
+回归模型的残差之间互相独立；
+ 
+
+
+
+
+
+当然，除了上面提到的5点之外，我们还需要注意的是，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">线性回归模型对异常值是非常敏感</strong></span>的，模型预测的结果非常容易受到异常值的影响，所以，我们还需要对原始数据进行异常点识别和处理。在本期中，我们先针对上面提到的前三个假设做判别，此外再分享一下关于异常点的相关内容。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">本次分享的数据集来自于UCI</strong></span>【高炉煤气联合循环发电(CCPP)数据集(数据来源：http://archive.ics.uci.edu/ml/datasets/combined+cycle+power+plant)】。
+
+
+
+
+
+
+线性回归模型，顾名思义，首先要保证自变量与因变量之间存在线性关系。关于线性关系的判断，我们可以<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">通过图形或Pearson相关系数来识别</strong></span>，具体Python代码如下：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdQemBhg1yx00VqOU0ibW6w2ianlxucASyobbqp9dkcIoXegtwkDibFsCpg/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdG8jfRoiarpqh9ibKJhwzgwUZ4eXhBekzrTRH3sSM9F6Mj0EuDQLkFzyQ/640?wx_fmt=png
+ 从上面的散点图来看，似乎AP(相对湿度)和RH(排气量)与PE(发电量)之间并不存在明显的线性关系，具体我们还需要看一下PE与其余变量之间的Pearson相关系数值。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3Apdsl6GryWAGn7Bnr7EkJV1grw5Ky4gemS4VAJjvCicLtFiaPvVwLZxpfVA/640?wx_fmt=png
+
+
+
+
+
+
+<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+从返回的结果来看，PE(发电量)与AT(温度)和V(压力)之间的相关系数还是蛮高的，而<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">PE与AP(相对湿度)和RH(排气量)之间的相关系数就明显小很多</strong></span>。一般情况下，当Pearson相关系数<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">低于0.4</strong></span>，则表明变量之间存在弱相关关系；当Pearson相关系数在<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">0.4~0.6之间</strong></span>，则说明变量之间存在中度相关关系；当相关系数在<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">0.6以上时</strong></span>，则反映变量之间存在强相关关系。经过对比发现，PE与RH之间的为弱相关关系，故不考虑将该变量纳入模型。当然，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">变量之间不存在线性关系并不代表不存在任何关系</strong></span>，可能是二次函数关系、对数关系等，所以一般还需要进行检验和变量转换。
+
+
+
+
+
+
+先来了解一下，如果模型的自变量之间存在严重的多重共线性的话，会产生什么后果呢?
+导致OLS估计量可能无效；
+增大OLS估计量的方差；
+变量的显著性检验将失去意义；
+模型缺乏稳定性；
+
+
+
+
+
+
+所以，多重共线性检验就显得非常重要了，关于多重共线性的检验可以使用方差膨胀因子(VIF)来鉴定，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">如果VIF大于10，则说明变量存在多重共线性</strong></span>。一旦发现变量之间存在多重共线性的话，可以考虑删除变量和重新选择模型（岭回归法）。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdglRwSDwsWz5KJibfv8oKzNtNuO17pOAFf1RYHclEcroFM1rtCEX5icWA/640?wx_fmt=png
+结果显示，所有自变量的VIF均低于10，说明自变量之间并不存在多重共线性的隐患。
+
+
+
+
+
+
+在异常点检测之前，我们需要对现有的数据，进行线性回归模型的构造。具体操作如下，与上一期文章中回归模型的建模一致：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdRT9N5d3t3FsC0KBgfIYMbHlQQ9Zc7U3tHaY74a18m3pSpsJviagJMIQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdibW3Ef7o7A3w837NLubiajC6xIpjTbV4ouVJG4Ghm6IETTgrKOy6A0mg/640?wx_fmt=png
+通过上面的建模结果来看，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">一切都显得那么的完美</strong></span>（模型的显著性检验通过，偏回归系数的显著性检验通过；R方值也达到了0.9以上）。尽管这样，我们还是需要基于这个模型，完成异常点的检测。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+
+
+
+
+
+关于异常点的检测方法，一般可以通过<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">高杠杆值点（帽子矩阵）或DFFITS值、学生化残差、cook距离和covratio值来判断</strong></span>。这些值的具体计算脚本如下：
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdkBbQaQsCJ19VkibH8fH76emGt5UQsveibExvXKMdkR63Fo7Vsn7a7YMA/640?wx_fmt=png
+ 通过参考薛毅老师的<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">《统计建模与R软件》书</strong></span>可知，当<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">高杠杆值点（或帽子矩阵）大于2(p+1)/n时</strong></span>，则认为该样本点可能存在异常（其中p为自变量的个数，n为观测的个数）；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">当DFFITS统计值大于2sqrt((p+1)/n)时<span class="Apple-converted-space">
+</span></strong></span>，则认为该样本点可能存在异常；<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">当学生化残差的绝对值大于2</strong></span>，则认为该样本点可能存在异常；对于cook距离来说，则没有明确的判断标准，一般来说，值越大则为异常点的可能性就越高；对于covratio值来说，如果一个样本的covratio值离数值1越远，则认为该样本越可能是异常值。这里我们就以学生化残差作为评判标准，因为其包含了帽子矩阵和DFFITS的信息。
+ 当异常比例极低时（如5%以内），可以考虑直接删除；
+当异常比例比较高时，可以考虑将异常值衍生为哑变量，即异常值对应到1，非异常值则对应到0；
+将单独把异常值提取出来，另行建模；
+
+
+
+
+
+
+这里为了简单起见，我们将3.7%的异常值作删除处理。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdJBicZr6um3KupzGMmDwsQZQosmCYUD8srhTwZ5kBcGbkWmEZ5wpOmcQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdLic4IkpboestxdNr3UwpiaKwmKjZN1UUsatKWK0q0gt9ftOZSvUo14gA/640?wx_fmt=png
+通过对比fit和fit2，将异常值删除后重新建模的话，效果会更理想一点，具体表现为：<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(0, 209, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">信息准则（AIC和BIC）均变小，同时RMSE（误差均方根）也由原来的4.89降低到4.26</strong></span>。
+
+
+
+
+
+
+当模型的残差服从正态性假设时，才能保证模型偏回归系数对于的t值和模型的F值是有效的。故模型建好后，要对模型的残差进行正态性检验。关于正态性检验由两类方法，即<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">定性的图形法</strong></span>（直方图、PP图和QQ图）和<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">定量的非参数法</strong></span>（Shapiro检验和K-S检验）。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdeHqfydWBXiaU1pqZbyF3cgh4EGSic1ua12b8N7w3Aq2snVH7YntzRgcQ/640?wx_fmt=png
+从残差的直方图来看，核密度曲线与理论的正态分布曲线的趋势还是比较吻合的，即使残差不服从正态分布，也能反映其<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">基本近似于正态分布</strong></span>。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdJT87Unt1MG9rVS6xoWhehnI6FImblJ0cxwa2UJvRHR7IhLtJxlyBaw/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3Apd6469smQCLEibQMKOgb3Vt56BG1bksVoZtVviaq9dBdke46dG3XpKsXhg/640?wx_fmt=png
+从PP图和QQ图来看，有一部分样本点并没有落在参考线上，但绝大多数样本点还是与参考线保持一致的步调。
+https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3Apdc6Rg7y34gtytctZVMwEzWdl7PFS9CfjeIbqxtlYYiaPl0kLze3F2vFQ/640?wx_fmt=png
+由于<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">shapiro正态性检验</strong></span>对样本量的要求是<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 76, 0);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">5000以内</strong></span>；而本次数据集的样本量由9000多，故选择K-S来完成正态性检验。<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(2, 30, 170);"><strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">从K-S检验的P值来看，拒绝了残差服从正态分布的假设，即认为残差并不满足正态性假设这个前提</strong></span>。如果残差不服从正态分布的话，建议对Y变量进行box-cox变换处理。由于fit2模型的残差并没有特别明显的偏态（偏度为0.058，接近于0），故这里就不对Y变量进行box-cox变换了。如果需要变换的话，可以以下面的代码为例：
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdVFUylNWFIQyEOdCSV4NGGvmqNn5eoGHMP4yVyIAJuwsIEg1M6SuHxA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdcBxSYfm7vydl0Za3qYGVAjKDDaI87CDsjck8pjx71Dx8XrgTPcibtiaA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3Apd0IDLLVFmicGjiaQjI5YheqRmsjDN9Jich3btYI7U4PT9qicnQicBggpzc8g/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdusqlTHTl41OIWlBzjUHMIbkHqWFtPnMztE48peyEiaCBpgiczia9LJf6Q/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdeIGs4exW4IwVg13sKDveiatgFtEQaxWldOrRVTLCEJNID1EkSMQOP0A/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApduNg7jKNQfQT9cUIFsEMXWqTojgB9BVk5UJvBJ71FicVIicR8spVTm1Xw/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdKrCoDCHxJWlHoe5USb6mm5gzRwNKj0k4bGZxLHFRuG3gPVbXr3Z0oA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3ApdLNLJj0e0DMnpTowWQzH5hjkibkp0laGrVfcVsRr2icZJnpVaTMQM9NJA/640?wx_fmt=png
+ https://mmbiz.qpic.cn/mmbiz_png/yjFUicxiaClgWUlTVqeZTiaeHzGiaBpN3Apd5vS4XqsGu5ibgCKrqwZF4WSU3BHAkrCGgrCZ8GkcqJ6jzZ52t7oceKQ/640?wx_fmt=png

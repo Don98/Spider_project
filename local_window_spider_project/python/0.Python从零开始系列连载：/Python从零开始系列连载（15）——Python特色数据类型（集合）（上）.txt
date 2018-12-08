@@ -1,0 +1,8 @@
+Python从零开始系列连载（15）——Python特色数据类型（集合）（上）                 集合不重复</strong>的<strong>无序集</strong>
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttq9caLpIPOKH3nHZdKdgjI6yaoWygS4Ih6O834SgyYnpwd2IibwHrL4xFj6C97jbRBDvaSo5tnWPA/0?wx_fmt=png
+      1.直接使用大括号{}创建</strong>
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttq9caLpIPOKH3nHZdKdgjIpSwIuyiczOjYYOCuibrb7aERW3P8ejibdZxw18NkryC8AFSQ0CqW5P3bQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttq9caLpIPOKH3nHZdKdgjIYeJAOc0GP4X2dia2w4PZlKJANE7wX6XYKNEMcXl2k6gOcpiaSibxgeKdA/0?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttq9caLpIPOKH3nHZdKdgjIxpPKuWd7ZdbluuZmP9aH33ibCMFC1wkZic2g3ITZpevAJW0nkibKibTUwg/0?wx_fmt=png
+2.使用列表或者元组创建   3.使用字符串创建http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttq9caLpIPOKH3nHZdKdgjIp5sVXuibdFk9uFaF5YWkrg7mhic1GOC2G5VibdLN93lribyMKq2AZI0AfQ/0?wx_fmt=png
+     现在还坚持再看连载学习的你们真的很棒棒！入门部分已经学完大部分啦！加油</strong>

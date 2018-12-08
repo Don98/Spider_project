@@ -1,0 +1,17 @@
+b'\xe4\xbd\xbf\xe7\x94\xa8Python\xe8\xbf\x9b\xe8\xa1\x8c\xe7\xba\xbf\xe6\x80\xa7\xe5\x9b\x9e\xe5\xbd\x92'博客：http://yphuang.github.io/
+线性回归是最简单同时也是最常用的一个统计模型。线性回归具有结果易于理解，计算量小等优点。如果一个简单的线性回归就能取得非常不错的预测效果，那么就没有必要采用复杂精深的模型了。
+今天，我们一起来学习使用Python实现线性回归的几种方法：
+通过公式编写矩阵运算程序；
+通过使用机器学习库sklearn;
+通过使用statmodels库。
+这里，先由简至繁，先使用sklearn实现，再讲解矩阵推导实现。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0bTWg8kQ0ZqIsmg0Lb94icfsFZSNib1cLVuLzcDiccv8H7ZVDN6m4ibbX9Q/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx03E737P0BxMN5iclulUwIKQL4TpH0pYvtVeC8icescozicMqCqnSKDa8YA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0TbPxvQ0GTZTialDLZbNTKfOdjKtbsPaoNibcJOLgKNFLeDPILK5UkuhA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0XavlrggWj0GrUOaWrugzZCYZniao9ich2DHz2ibiahZbgrrkTHSgArogwg/0?wx_fmt=png
+由上面分析可知，花瓣长<code class="highlighter-rouge" style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">sepal length</code>和花瓣宽<code class="highlighter-rouge" style="font-size: 13px; padding-right: 4px; padding-left: 4px; color: rgb(199, 37, 78); border-radius: 3px; display: inline-block; margin-right: 5px; margin-left: 5px; background: rgb(238, 238, 238);">septal width</code>有着非常显著的相关性。
+下面，通过线性回归进一步进行验证。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx073bm9D3uAwUic5OYQygYEqp2aiaiadKxueia9XWrFn8SALlwthY5D8O3CA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0nr83JPf0MLicoAaQdnXszvN5jy7nLjJCW4189wwUovJbUhjibAbWsofQ/0?wx_fmt=png
+线性回归，即是使得如下目标函数最小化：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNtttgj8ehUNXet5ez2fjibiamx0r7rZEkriaKqhvkUUI9QC28V4Gh1wste6Mf1L5Z9DaT4u2zic6GUiaibPgg/0?wx_fmt=png

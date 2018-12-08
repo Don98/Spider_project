@@ -1,0 +1,28 @@
+b'Python\xe6\x9c\xba\xe5\x99\xa8\xe5\xad\xa6\xe4\xb9\xa0\xe5\xae\x9e\xe6\x88\x98 \xe2\x80\x94\xe2\x80\x94 KNN\xe7\xae\x97\xe6\xb3\x95\xe8\xaf\xa6\xe8\xa7\xa3'  这个系列按照机器学习实战的章节来写，由于市面上已经有很多同类的文章，一般以介绍算法，贴代码，举例子为主，个人读下来，觉得对于实现的代码还是不能有很好的理解，所有有了这个系列。要写这个系列还有三个原因：
+实战的代码是Python2的，有一些用法已经在python3中不支持了，以后的系列都以pyhton3完成，遇到python2不支持的坑，会进行一下对比
+有一些初级的函数在初学阶段是需要积累的，孤立的去记忆比较费时费力，所以一边学算法的实现，一边把遇到的一些函数的用法记录下来~
+遇到有趣的pythonic的表达，记录分享出来，做知识积累。
+  邻近算法，或者说K最近邻(kNN，k-NearestNeighbor)分类算法是数据挖掘分类技术中最简单的方法之一。所谓K最近邻，就是k个最近的邻居的意思，说的是每个样本都可以用它最接近的k个邻居来代表。平常生活中我们都会下意识的运用到我们的判断中，比如富人区和穷人区，判断一个人是富人还是穷人根据他的朋友的判断，就是运用了kNN的思想。
+KNN是通过测量不同特征值之间的距离进行分类。它的的思路是：如果一个样本在特征空间中的k个最相似(即特征空间中最邻近)的样本中的大多数属于某一个类别，则该样本也属于这个类别。K通常是不大于20的整数。KNN算法中，所选择的邻居都是已经正确分类的对象。该方法在定类决策上只依据最邻近的一个或者几个样本的类别来决定待分样本所属的类别。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />在KNN中，通过计算对象间距离来作为各个对象之间的非相似性指标，避免了对象之间的匹配问题，在这里距离一般使用欧氏距离：
+https://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfpX187hwhRx9EfS9HtV7V0XIbKPPaN9shD3SLnEwdCq9bTTnZB9YEeLr6HuvUQU1nnxD6kLz2xVgw/640?wx_fmt=jpeg
+或曼哈顿距离
+https://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfpX187hwhRx9EfS9HtV7V0XUD4wiaVn1C9Hic5muysvY8kasictAsnnzbNX9rE7lYwaca2fbNPBxUerA/640?wx_fmt=jpeg
+欧式距离和曼哈顿距离都是闵可夫斯基距离(Minkowski Distance)$p=2$和$p=1$的特例，定义为：
+https://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfpX187hwhRx9EfS9HtV7V0Xecn0K8u5g6XGoo7JRxOMFBibS3DD0p6BAibXBEZLxKibcEMyYD0UPxBTQ/640?wx_fmt=jpeg
+本节主要参考刘建平Pinard的博文K近邻法(KNN)原理小结，<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(51, 51, 51);">刘建平Pinard的博文</span>对每个算法有很深刻的见解，一般在看不懂李航的《统计学习方法》的时候，去看刘大大的博客会有豁然开朗的感觉。他博文中提到scikit-learn里只使用了蛮力实现(brute-force)，KD树实现(KDTree)和球树(BallTree)实现，所以他的这篇文章中只讨论这几种算法的实现原理。其余的实现方法比如BBF树，MVP树等没有做讨论，需要对算法有更深一步了解的童鞋，移步刘建平Pinard的文章~
+ 这一部分主要是参考实战，然后主要讲解一些具体的实现~<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />下面的代码为运行程序导入所需要的库
+     argsort()函数是将x中的元素从小到大排列，提取其对应的index(索引)，然后输出到y。<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />输出是按照从小到大的顺序输出的<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />例子：
+   https://mmbiz.qpic.cn/mmbiz_jpg/HRPhFuUkDfpX187hwhRx9EfS9HtV7V0X0cibL8Q375MWhd6RTVE9opysft2ibWVqLle7Enz5ZulicxLj9iarAxssdA/640?wx_fmt=jpeg
+   用sort函数对列表排序时会影响列表本身，而sorted不会
+  sorted(iterable，cmp，key，reverse）（pyhton2的用法）
+python3 sorted取消了对cmp的支持。
+   1）key函数的运用
+ ‘asdf234GDSdsf23’这是一个字符串排序，排序规则：小写&lt;大写&lt;奇数&lt;偶数
+ Boolean 的排序会将 False 排在前，True排在后 .
+
+1.x.isdigit()的作用是把数字放在后边,字母放在前边.
+2.x.isdigit() and int(x) % 2 == 0的作用是保证奇数在前，偶数在后。
+3.x.isupper()的作用是在前面基础上,保证字母小写在前大写在后.
+4.最后的x表示在前面基础上,对所有类别数字或字母排序。
+若不进行第四步，每个内部是未排序的，但是整体顺序是按照要求排序的
+ 

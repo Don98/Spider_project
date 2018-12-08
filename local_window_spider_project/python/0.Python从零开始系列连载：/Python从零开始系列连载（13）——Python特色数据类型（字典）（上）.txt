@@ -1,0 +1,33 @@
+Python从零开始系列连载（13）——Python特色数据类型（字典）（上）                 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvCbugkH971Ijthn0tShbzUOU2jYbibf2RWFKS78xChslljH1WH0mAibLw/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvkD64OdiaLMwwqm6MCViaa6vX3Pws5Cox8T114PPE6R7dgiazDSEY4P8Wg/0?wx_fmt=png
+  字典是一些列键（key）值（value）对组成的，形式如下：</span>
+{键1：值1，键2,：值2}</span>
+ 每对之间用逗号隔开</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvxsVsKeuxDVajY2zruCZ4HsLbljogtudzSs5TSDzCnY8ViaoXk2Vvzdw/0?wx_fmt=png
+<br  />划重点：键必须是唯一的，必须是不可变的，如字符串，数字，元组值可以是任何数据类型 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvu2CV1o0fxbqqj4aNwBeBODVRfZ4ibFmXNDqteveDEUDQMepicle1tckA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvyLwanbBhfI1MonXfUFKLZMwy9DA3iccyPShlQtdXZg6iaopFhIabMXbQ/0?wx_fmt=png
+ 用法如下：</span>
+通过放入列表套元组或者元组套列表实现</span>
+或者列表套列表 、元组套元组</span>
+还记得上节课在元组里讲到的列表和元组的相互转换么？</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvicoLs6vaTgXYgPa6BHJBiatFRLNia0UnwNTa2WW053JCDKuTZyIVPcVpA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvG80zG4UEZy2ZQWkhrzr3Ee3D38Y35QoAIlFWJuODB0WmUVE058pjYQ/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv5yEh5NAoq5AqxKyTF0AeGwBXaBD3EoIs9xJ4GAwKOzSdiczJZt1antQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv1YfmnZxNHJicczgjuXhZWZqVRVfOUhrHAt0tBCutHGAqPDJF5icIEUfw/0?wx_fmt=png
+访问字典中的值：和列表元组的索引相似，以以下形式访问键对应的值：</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvmt3LIMr7v4wOI91fyjzbYFFicxdF8HN5J6QPQTzgHKVzDzabzK7PAOg/0?wx_fmt=png
+ 注意：如果查找的键不在字典里，会报错：</span>
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHv5RNCGgTSAuvpx1seichHzflP1ypGkyLc4VVmUtwY0o2icqltfWiaicJkHg/0?wx_fmt=png
+ 看报错信息，是KeyKerror</span>
+  键 
+in 
+字典</span>
+返回的是True 
+ 或者 
+False</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvnIckLfpqpibic0dTrweLYJbpMm8AIFyuEmlgJciarCh4jFQryyfoIPM2A/0?wx_fmt=png
+ 添加、删除、更新修改 字典中的键值对：</span>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttuLa9ype2Qh8E3X6ZVvXDHvojmCskaRTkibdaumNWUjBImLV8uq0aqH3NEiazHeIphpvgJmaMhNSd7A/0?wx_fmt=png
+ 自己不敲代码永远学不会写代码</span>
+  未完待续，连载中......</span>
+现在还坚持再看连载学习的你们真的很棒棒！  

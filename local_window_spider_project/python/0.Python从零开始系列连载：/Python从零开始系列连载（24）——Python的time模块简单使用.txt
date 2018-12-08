@@ -1,0 +1,10 @@
+Python从零开始系列连载（24）——Python的time模块简单使用                          time模块                              http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKbcibibVGoP343oo6RlogbZ5sPLliclYu8W4CuGWRnJgjMicLicO3iaFEaA0Q/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKpCfic09yIoN8GIZAVEvh7yvlFovoGwpN6OIoaNfUkfPKmacLkqBiaawQ/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKAIDbtGG9qXnvfS5JjYOBYhOK9eBlzfD8CnSbCiclUT8JPiaYf8vUNupw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKfOqqaDIw5mhCXO5zdaoyviagia8OoBibAWIibIfRRotFHnNjc0APYYeoqA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKPnofFOOlxjiapxvj8Tpvbso4lxib3wFCtrnKU5mtmjAAHib2SwPoajTPw/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttscWvlJ4lkHAgC6KKdibRicicKy2lmgBEkT5KkXf4KyA8LaqcwOX2Rq229UbVaZrT2eC1rkGzFJGXy2g/0?wx_fmt=png
+    下课
+ 人生苦短，我选Python
+未完待续，连载中.....
+ 今日作业： 现在还坚持再看连载学习的你们真的很棒棒！

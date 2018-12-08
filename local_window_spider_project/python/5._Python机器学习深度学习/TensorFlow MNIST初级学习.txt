@@ -1,0 +1,32 @@
+b'TensorFlow MNIST\xe5\x88\x9d\xe7\xba\xa7\xe5\xad\xa6\xe4\xb9\xa0' MNIST 是一个入门级计算机视觉数据集，包含了很多手写数字图片。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsxE823uheTL1UeaYBDrGVGUpGerzG0eS3qu4vrMibLGKLBG60WWiaDt0tfZWAh7djWUFs9zOvyA1KA/0?wx_fmt=png
+数据集中包含了图片和对应的标注，在 TensorFlow 中提供了这个数据集，我们可以用如下方法进行导入：
+    数据集中包含了 55000 行的训练数据集（mnist.train）、5000 行验证集（mnist.validation）和 10000 行的测试数据集（mnist.test），文件如下所示：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsxE823uheTL1UeaYBDrGVG4icDUiboFPlaEwk6DtH4aAWdfaYibPiaqaS8RhTMAIb319xhwduSksIZtw/0?wx_fmt=jpeg
+正如前面提到的一样，每一个 MNIST 数据单元有两部分组成：一张包含手写数字的图片和一个对应的标签。我们把这些图片设为 xs，把这些标签设为 ys。训练数据集和测试数据集都包含 xs 和 ys，比如训练数据集的图片是 mnist.train.images ，训练数据集的标签是 mnist.train.labels，每张图片是 28 x 28 像素，即 784 个像素点，我们可以把它展开形成一个向量，即长度为 784 的向量。
+所以训练机我们可以转化为 [55000, 784] 的向量，第一维就是训练集中包含的图片个数，第二维是图片的像素点表示的向量。
+Softmax 可以看成是一个激励（activation）函数或者链接（link）函数，把我们定义的线性函数的输出转换成我们想要的格式，也就是关于10个数字类的概率分布。因此，给定一张图片，它对于每一个数字的吻合度可以被 Softmax 函数转换成为一个概率值。Softmax 函数可以定义为：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsxE823uheTL1UeaYBDrGVG3jffCmPUS7Rt2iarTLnLPIVVqL8MR1kDne1EEWJ9SAAgMOc53J865Bw/0?wx_fmt=jpeg
+展开等式右边的子式，可以得到：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsxE823uheTL1UeaYBDrGVG7LKhIH9G02CbBeN36OXHjAEVl5Rz09ib8FIqQzNrcx4LbQrkXehvyQQ/0?wx_fmt=jpeg
+判断一张图片中的动物是什么，可能的结果有三种，猫、狗、鸡，我们可以经过计算得出它们分别的得分为 3.2、5.1、-1.7，Softmax 的过程首先会对各个值进行次幂计算，分别为 24.5、164.0、0.18，然后计算各个次幂结果占总次幂结果的比重，这样就可以得到 0.13、0.87、0.00 这三个数值，所以这样我们就可以实现差别的放缩，即好的更好、差的更差。
+如果要进一步求损失值可以进一步求对数然后取负值，这样 Softmax 后的值如果值越接近 1，那么得到的值越小，即损失越小，如果越远离 1，那么得到的值越大。
+首先导入 TensorFlow，命令如下：
+  所以可以先声明一个 placeholder 对象：
+  接下来我们需要构建第一层网络，表达式如下：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsxE823uheTL1UeaYBDrGVGVaRicysSHAiaSM2V6ibIic8uXQUoskUkjNCC745ysjkNM4TZ8lD5qclLNA/0?wx_fmt=jpeg
+这里实际上是对输入的 x 乘以 w 权重，然后加上一个偏置项作为输出，而这两个变量实际是在训练的过程中动态调优的，所以我们需要指定它们的类型为 Variable，代码如下：
+      为了训练我们的模型，我们首先需要定义一个指标来评估这个模型是好的。其实，在机器学习，我们通常定义指标来表示一个模型是坏的，这个指标称为成本（cost）或损失（loss），然后尽量最小化这个指标。但是这两种方式是相同的。
+一个非常常见的，非常漂亮的成本函数是“交叉熵”（cross-entropy）。交叉熵产生于信息论里面的信息压缩编码技术，但是它后来演变成为从博弈论到机器学习等其他领域里的重要技术手段。它的定义如下：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttsxE823uheTL1UeaYBDrGVGnFBXo1eEamH6DT3xA0oHbNrHuNJnjj43eUpEtic5kfaOyU636BLib7Kw/0?wx_fmt=jpeg
+y 是我们预测的概率分布, y' 是实际的分布，比较粗糙的理解是，交叉熵是用来衡量我们的预测用于描述真相的低效性。
+我们可以首先定义 y'，它的表达式是：
+    然后调用 reduce_mean() 则求平均值，将一个向量中的所有元素求算平均值。
+这样我们最后只需要优化这个交叉熵就好了。
+所以这样我们再定义一个优化方法：
+  定义好了以上内容之后，相当于我们已经构建好了一个计算图，即设置好了模型，我们把它放到 Session 里面运行即可：
+  那么我们的模型性能如何呢？
+首先让我们找出那些预测正确的标签。tf.argmax() 是一个非常有用的函数，它能给出某个 tensor 对象在某一维上的其数据最大值所在的索引值。由于标签向量是由 0,1 组成，因此最大值 1 所在的索引位置就是类别标签，比如 tf.argmax(y,1) 返回的是模型对于任一输入x预测到的标签值，而 tf.argmax(y_,1) 代表正确的标签，我们可以用 tf.equal() 方法来检测我们的预测是否真实标签匹配（索引位置一样表示匹配）。
+      这样我们就通过完成了训练和测试阶段，实现了一个基本的训练模型，后面我们会继续优化模型来达到更好的效果。
+ 参考来源：http://www.tensorfly.cn/tfdoc/tutorials/mnist_beginners.html
+http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/640.gif?

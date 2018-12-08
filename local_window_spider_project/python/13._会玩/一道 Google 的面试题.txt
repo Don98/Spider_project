@@ -1,0 +1,25 @@
+b'\xe4\xb8\x80\xe9\x81\x93 Google \xe7\x9a\x84\xe9\x9d\xa2\xe8\xaf\x95\xe9\xa2\x98'   面试题目是这样的：
+ 假设第1个杯子的容量是A升，第2个杯子的容量B升，两个杯子一开始都为空，现在有以下三种操作：
+   如果你每次只能进行上面操作中的一种，如何使其中一个杯子的水容量恰好为C<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">（C &lt;= max(A,B)）</span>升？
+ 看到这个问题，似乎是无从下手，但是我们可以从一个简单的问题入手分析：
+ 当A=3， B=5<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">，</span>
+C=4 时，初始时两个杯子均为空，该如何操作？
+ 很容易得出依次需要进行的操作为：
+FILL(2)，此时两个杯子的水容量为：0，5
+POUR(2,1)，此时两个杯子的水容量为：3，2
+DROP(1)，此时两个杯子的水容量为：0，2
+POUR(2,1)，此时两个杯子的水容量为：2，0
+FILL(2)，此时两个杯子的水容量为：2，5
+POUR(2,1)，此时两个杯子的水容量为：3，4
+ 这就得到了容量为4的水。通过这个分析，我们能够得到哪些启发？
+    假设目前2个杯子水的容量分别为 a 和 b，那么可以执行的操作分别为：
+ 此时杯子1的水的容量变为A，而杯子2的水的容量不发生变化。
+ 此时杯子2的水的容量变为B，而杯子1的水的容量不发生变化。
+          此种情况同<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">POUR(1,2)</span>，也要分为两种场景：
+1<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">)</span>、若杯子2中的水可以全部倒入杯子1中，即满足b&lt;=A-a，那么杯子2的水的容量变为0，杯子1的水的容量变为a+b。
+2<span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; ">)</span>、若杯子2中的水倒入杯子1中还会有剩余，即b&gt;A-a，那么杯子2的水的容量变为 b-(A-a)，杯子1的水的容量变为A。
+ 所以，对于某个状态，我们需要广度优先遍历上述6种操作，当遇到某个杯子的容量为C时，停止广度优先遍历，遍历的过程可以用下图简单表示：
+ http://mmbiz.qpic.cn/mmbiz_png/MQ4FoG1HmnKHB3aUoTXat9CDKW53mAiaw1weibWK8ia9giatB3NVHWvzOya9xBkqZUzwL6HH2faReKjJGwhx1eHD8g/640?wx_fmt=png
+ 明白了上述原理，就可以考虑队列节点的数据结构了：
+ 对于每个状态，我们需要存储的信息包括：当前杯子1的水的容量a，当前杯子2的水的容量b，由上个状态到本状态执行的操作，以及上一个状态的信息（<strong style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; "><span style="max-width: 100%; box-sizing: border-box !important; word-wrap: break-word !important; color: rgb(0, 209, 0); ">需要由此获得所有的操作流程</span></strong>）。Python代码如下：
+ 

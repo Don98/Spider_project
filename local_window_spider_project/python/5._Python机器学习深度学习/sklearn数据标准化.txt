@@ -1,0 +1,73 @@
+b'sklearn\xe6\x95\xb0\xe6\x8d\xae\xe6\xa0\x87\xe5\x87\x86\xe5\x8c\x96'
+ 
+ 
+ 
+ 学习机器学习的第一步就是要先学会做特征工程，python中的机器学习库sklearn就提供了许多便利的方法来做特征工程。数据的标准化是特征工程里面的重要环节，今天我们就来学习一下用sklearn做数据的标准化。
+
+ 
+ 
+ 
+ sklearn.preprocessing提供了许多方便的用于做数据预处理工具，在数据标准化方面，sklearn.preprocessing提供了几种scaler进行不同种类的数据标准化操作，今天的主要内容就是几种scaler的使用方法。
+
+ 
+ 
+ 
+ 首先导入sklearn中的preprocessing库以及numpy。
+&gt;&gt;&gt; import sklearn.preprocessing as sp
+&gt;&gt;&gt; import numpy as np
+
+ 
+ 
+ 
+ 然后创建一个numpy数组。
+&gt;&gt;&gt; test_X = np.array([[1., -1., 2., 0], [3., -2., 4., -1], [2., 0, -3., 1.]])
+&gt;&gt;&gt; test_X
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX6Ea1gUH9wrY0J4ArMvI3xJzvlVcQGK7PykXCkicXYibLqQWTJicY6nNj4w/640?wx_fmt=png
+ 
+ 
+ 
+ 
+ 用sklearn实现正态标准化有两种方法，一是利用<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">scale</strong>函数，二是利用<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">StandardScaler</strong>类。
+&gt;&gt;&gt; X_scaled = sp.scale(test_X)
+&gt;&gt;&gt; X_scaled
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX6IrBdajLEKhhc5WpwjAmARpBYSUmIWaL6FGtWBUpKhPDYOTNG9TFUpQ/640?wx_fmt=png
+ &gt;&gt;&gt; #查看标准化后数据的均值与标准差
+&gt;&gt;&gt; X_scaled.mean()
+&gt;&gt;&gt; X_scaled.std()
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX61kd1ZCLuumYicCYZTUdOwOcTOEQ8ho1xZlXHnIQ1lAAI0pUyXXMRw5w/640?wx_fmt=png
+ &gt;&gt;&gt; my_scaler = sp.StandardScaler().fit(test_X)
+&gt;&gt;&gt; X_scaled = my_scaler.transform(test_X)
+&gt;&gt;&gt; X_scaled
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX6t8YwAiaIYKkJHVOJQ1LXvL1TpzBMOr7oiaJXEofq4NGNewSUD8cFeXVA/640?wx_fmt=png
+ 
+ 
+ 
+ 
+ 使用scale函数更为方便快速，而使用StandardScaler类的好处是可以把相同的标准化传递到任意其他数组中。假设我们上面的test_X是一个训练集（虽然名字不太像），那么如果想把相同的标准化操作也在测试集中执行，只要把transform的数组换成测试集的数组就可以了。
+
+ 
+ 
+ 
+ 与StandardScaler这个类相似的，sklearn.preprocessing也同样有一个类用于零一标准化的，那就是<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">MinMaxScaler</strong>。
+&gt;&gt;&gt; my_scaler2 = sp.MinMaxScaler().fit(test_X)
+&gt;&gt;&gt; X_scaled2 = my_scaler2.transform(test_X)
+&gt;&gt;&gt; X_scaled2
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX6nvpG6iaoviaibIoh3aDhhsImjPmHiaZj8vXJUcIweOF2hEL0BtH88U1WfQ/640?wx_fmt=png
+ 
+ 
+ 
+ 
+ 如果想要指定数据标准化的范围，可以在实例化MinMaxScalre对象时提供参数<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">feature_range = (min, max)</strong>。
+&gt;&gt;&gt; my_scaler3 = sp.MinMaxScaler(feature_range = (0, 10)).fit(test_X) 
+<em style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;font-style: italic;">#[0 , 10]标准化</em>
+&gt;&gt;&gt; X_scaled3 = my_scaler3.transform(test_X)<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+&gt;&gt;&gt; X_scaled3<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U0blrKk6nvibSRwkJyvyTqX6DeGQOicRoZicicQVnYylctnwsy2tHfxIMXjd7ej0yqF8E0MbJKGK0v5TQ/640?wx_fmt=png
+
+ 
+ 
+ 
+ 
+零中心化数据和稀疏数据标准化实质上是[-1, 1]的标准化，也算是零一标准化的一个特例。sklearn.preprocessing同样也提供了这样一个类，<strong style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;">MaxAbsScaler</strong>。
+&gt;&gt;&gt; my_scaler4 = sp.MaxAbsScaler().fit(test_X)<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+&gt;&gt;&gt; X_scaled4 = my_scaler4.transform(test_X)

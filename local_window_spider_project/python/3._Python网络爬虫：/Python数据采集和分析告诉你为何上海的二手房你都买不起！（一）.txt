@@ -1,0 +1,28 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe9\x87\x87\xe9\x9b\x86\xe5\x92\x8c\xe5\x88\x86\xe6\x9e\x90\xe5\x91\x8a\xe8\xaf\x89\xe4\xbd\xa0\xe4\xb8\xba\xe4\xbd\x95\xe4\xb8\x8a\xe6\xb5\xb7\xe7\x9a\x84\xe4\xba\x8c\xe6\x89\x8b\xe6\x88\xbf\xe4\xbd\xa0\xe9\x83\xbd\xe4\xb9\xb0\xe4\xb8\x8d\xe8\xb5\xb7\xef\xbc\x81\xef\xbc\x88\xe4\xb8\x80\xef\xbc\x89'1.前言本人是个学生党，在过两年就要研究生毕业了，面临着找工作，相信很多人也面临或者经历过工作，定居租房买房之类的
+在此，我们来采集一下上海在售的二手房信息，有人想问，为啥不采集新房？快醒醒吧，新房可远观而不可亵玩焉，一般人都买不起，看的只会心情不好，hhhh
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkjkzILuxe1RH4FrpmqZh008e0Do3QD7TvAsMKc4bAdVkKl423cMytlQ/0?wx_fmt=png
+当然，二手房估计你也买不起！咱们拿数据说话！
+ 2.观察网站结构以本人所在的城市上海为例，走在上海的大街小巷，你会看到很多做房产中介的，最常见的就是链家了~
+我们进一下链家的上海二手房页面：http://sh.lianjia.com/ershoufang/?utm_source=360&amp;utm_medium=cpp&amp;utm_term=链家二手房交易&amp;utm_content=链家二手房&amp;utm_campaign=品牌词
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkYgxYCe1doiajrCwayFldXqmG7IdJc3KgT2rHVke5NsDlOfZe75XRbrg/0?wx_fmt=png
+ 有81508套二手房源在出售，这么多！
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkGh7cicpIewQ2zQv8eVicfadbRnTdWkWWVZbEv7ELL0Bb0swgNqjeKa1Q/0?wx_fmt=png
+ 3.寻找需要爬取信息http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkt0Hl8wCfggiapqWPtnBNZow5OUcfwicsG1iaG041Z9wPJ6MHjia9Bb6uxw/0?wx_fmt=png
+感觉这些红色框的我都想要，但是感觉还是不够全面，我们点击进去看看详细信息。
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkiaHxSQ1HbfMSHXtnSO319ibsjek7xMorXGHTyRjBuQib7DRw8WUaGHibzw/0?wx_fmt=png
+这里面的信息挺全的，当然，我根据需要的数据（可能之后分析需要用到）来选择爬取的数据
+分析网页结构在我之前的文章里有写到，就不赘述了
+传送门：Python网络爬虫爬取智联招聘职位：https://ask.hellobi.com/blog/wangdawei/6710
+爬取起点中文网月票榜前500名网络小说介绍：https://ask.hellobi.com/blog/wangdawei/7285
+4.撰写爬虫 http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkNkC2gweNwV5zvGNZibcmEMNTzVDHh8l5ZLyuF7lK0icVpMnibtZfCkQMg/0?wx_fmt=png
+我们来看一下爬的结果：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkP88hcaclhSV22EseltZYWAicDP2qc8qn7H0ic1n1IMx806bzlzmwPuuw/0?wx_fmt=png
+就是将每次爬取的信息做成dict依次添加在list中
+接下来使用pandas神器~
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkFlbgtaRWhicuee6gu6zSfN5SLz8HMrcKibicPEACplpbyvPZPgicibIrLxA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQkbAfTc9iclgnHXDLZibsIZ0jibaP8y68A3mgop2wl0UfEj9aVZbc0KhtaA/0?wx_fmt=png
+考虑到主程序写了双重for循环，函数里写了循环，所以时间复杂度是O（n^3）,对于一个算法，一般是不可以接受的，好吧，萌萌的我只能接受，如果你问我为什么，我只能说，我写不出低复杂度的了。。。爬了这1w+条数据用了我1小时时间。。。各位dalao如果有方法可以指点一下，之后我想学习多线程提高爬取速度~
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQk4K4VCEdvGu3JwFlE5o1pyOicXNfQ4V28NDA9AHibtiavZwxHeOQFOQXmg/0?wx_fmt=png
+ 最后存到本地excel文件中
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttv2CcKgoibctFPpLr2S4UrQk4cPRKoInsibz7r7qNWupJzAiaSNWlawDDYN0LOia8Tns8gibIcAxsqUMIg/0?wx_fmt=png
+ 5.结语

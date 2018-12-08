@@ -1,0 +1,272 @@
+b'\xe8\x8e\xb7\xe5\x8f\x96\xe7\x9f\xa5\xe4\xb9\x8e\xe9\x97\xae\xe9\xa2\x98\xe7\xad\x94\xe6\xa1\x88\xe5\xb9\xb6\xe8\xbd\xac\xe6\x8d\xa2\xe4\xb8\xbaMarkDown\xe6\x96\x87\xe4\xbb\xb6'大家好，我是四毛。
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttVicyy88o8BRwqOku00r0fib0TL8ia8dFfQv3jwV8iaAiab3jUFzXqwcLxmHG6pxf7uw8MmIvgPtI7iaxw/0?wx_fmt=jpeg
+写在前面的话在开始前，给大家分享一个前段时间逛Github时看到的某个爬虫脚本中的内容：
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttVicyy88o8BRwqOku00r0fib2Rlm2lD5kA6picuRt4iaeiabSGOkiczUSUbEdTJsfW3zdN83jFftP2qtWg/0?wx_fmt=jpeg
+所以，大家爬网站的时候，还是友善一点为好，且爬且珍惜啊。
+好了，言归正传。
+今天主要讲一下如何将某一个知乎问题的所有答案转换为本地MarkDown文件。
+python2.7
+html2text
+markdownpad(这里随意，只要可以支持md就行)
+会抓包。。。。。
+最重要的是你要有代理，因为知乎开始封IP了
+Markdown 是一种用来写作的轻量级<strong>「标记语言」</strong>，它用简洁的语法代替排版，而不像一般我们用的字处理软件
+<em>Word</em>
+或
+<em>Pages</em>
+有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。例如此文从内容到格式，甚至插图，键盘就可以通通搞定了。
+恩，上面是我抄的，哈哈。想多了解的可以看看：http://www.jianshu.com/p/1e402922ee32/。
+因为。。。。。。懒，哈哈，开个玩笑。最重要的原因还是markdown看着比较舒服。平时写脚本的时候，也一直在思考一个问题，如何将一个文字与图片穿插的网页原始的保存下来呢。如果借助工具的话，那就很多了，CTRL+P 
+打印的时候，选择另存为PDF，或者搞个印象笔记，直接保存整个网页。那么，我们如何用爬虫实现呢？正好前几天看到了这个项目https://github.com/egrcc/zhihu-python，仔细研究了一下，大受启发。
+原理说起来很简单：获取请求到的内容的BODY部分，然后重新构建一个HTML文件，接着利用html2text这个模块将其转换为markdown文件，最后对图片及标题按照markdown的格式做一些处理就好了。目前应用的场景主要是在知乎。
+写代码的时候，主要考虑了两种使用场景。第一，获取某一特定答案的数据然后进行转换；第二，获取某一个问题的所有答案进行然后挨个进行转换，在这里可以 通过赞同数来对要获取的答案进行质量控制。
+&nbsp; &nbsp; 4.1.1、某一个特定答案的数据获取url：https://www.zhihu.com/question/<span style="color: #FF0000;">27621722</span>/answer/<span style="color: #FF0000;">48658220</span>（前面那个是问题ID，后边的是答案ID）
+这一数据的获取我这里分为了两个部分，第一部分请求上述网址，拿到答案主体数据以及赞同数，第二部分请求下面这个接口：
+https://www.zhihu.com/api/v4/answers/<span style="color: #FF0000;">48658220</span>
+为什么会这样？因为这个接口得到的答案正文数据不是完整数据，所以只能分两步了。
+&nbsp; &nbsp; &nbsp;4.1.2、某一个特定答案的数据获取这一个数据就可以通过很简单的方式得到了，接口如下：
+https://www.zhihu.com/api/v4/questions/<span style="color: #FF0000;">27621722</span>/answers?sort_by=default&amp;include=data%5B%2A%5D.is_normal%2Cis_collapsed%2Ccollapse_reason%2Cis_sticky%2Ccollapsed_by%2Csuggest_edit%2Ccomment_count%2Ccan_comment%2Ccontent%2Ceditable_content%2Cvoteup_count%2Creshipment_settings%2Ccomment_permission%2Cmark_infos%2Ccreated_time%2Cupdated_time%2Crelationship.is_authorized%2Cis_author%2Cvoting%2Cis_thanked%2Cis_nothelp%2Cupvoted_followees%3Bdata%5B%2A%5D.author.follower_count%2Cbadge%5B%3F%28type%3Dbest_answerer%29%5D.topics&amp;limit=20&amp;offset=3
+返回的都是JSON数据，很方便获取。但是这里有一个地方需要注意，从这里面取的答案正文数据就是文本数据，不是一个完整的html文件，所以需要在构造一下。
+&nbsp; &nbsp; 4.1.2、保存的字段author_name 回答用户名
+answer_id 
+答案ID
+question_id 问题ID
+question_title 
+问题
+vote_up_count 
+赞同数
+create_time 
+创建时间
+答案主体
+
+主脚本：zhihu.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Created by shimeng on 17-6-5
+import os
+import re
+import json
+import requests
+import html2text
+from parse_content import parse
+
+"""
+just for study and fun
+Talk is cheap
+show me your code
+"""
+
+class ZhiHu(object):
+    def __init__(self):
+         self.request_content = None
+
+    def request(self, url, retry_times=10):
+        header = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
+            'authorization': 'oauth c3cef7c66a1843f8b3a9e6a1e3160e20',
+            'Host': 'www.zhihu.com'
+        }
+        times = 0
+        while retry_times&gt;0:
+            times += 1
+            print 'request %s, times: %d' %(url, times)
+            try:
+                ip = 'your proxy ip'
+                if ip:
+                    proxy = {
+                        'http': 'http://%s' % ip,
+                        'https': 'http://%s' % ip
+                    }
+                    self.request_content = requests.get(url, headers=header, proxies=proxy, timeout=10).content
+            except Exception, e:
+                print e
+                retry_times -= 1
+            else:
+                return self.request_content
+
+    def get_all_answer_content(self, question_id, flag=2):
+        first_url_format = 'https://www.zhihu.com/api/v4/questions/{}/answers?sort_by=default&amp;include=data%5B%2A%5D.is_normal%2Cis_collapsed%2Ccollapse_reason%2Cis_sticky%2Ccollapsed_by%2Csuggest_edit%2Ccomment_count%2Ccan_comment%2Ccontent%2Ceditable_content%2Cvoteup_count%2Creshipment_settings%2Ccomment_permission%2Cmark_infos%2Ccreated_time%2Cupdated_time%2Crelationship.is_authorized%2Cis_author%2Cvoting%2Cis_thanked%2Cis_nothelp%2Cupvoted_followees%3Bdata%5B%2A%5D.author.follower_count%2Cbadge%5B%3F%28type%3Dbest_answerer%29%5D.topics&amp;limit=20&amp;offset=3'
+        first_url = first_url_format.format(question_id)
+        response = self.request(first_url)
+        if response:
+            contents = json.loads(response)
+            print contents.get('paging').get('is_end')
+            while not contents.get('paging').get('is_end'):
+                for content in contents.get('data'):
+                    self.parse_content(content, flag)
+                next_page_url = contents.get('paging').get('next').replace('http', 'https')
+                contents = json.loads(self.request(next_page_url))
+        else:
+            raise ValueError('request failed, quit......')
+
+    def get_single_answer_content(self, answer_url, flag=1):
+        all_content = {}
+        question_id, answer_id = re.findall('https://www.zhihu.com/question/(\d+)/answer/(\d+)', answer_url)[0]
+
+        html_content = self.request(answer_url)
+        if html_content:
+            all_content['main_content'] = html_content
+        else:
+            raise  ValueError('request failed, quit......')
+
+        ajax_answer_url = 'https://www.zhihu.com/api/v4/answers/{}'.format(answer_id)
+        ajax_content = self.request(ajax_answer_url)
+        if ajax_content:
+            all_content['ajax_content'] = json.loads(ajax_content)
+        else:
+            raise  ValueError('request failed, quit......')
+
+        self.parse_content(all_content, flag, )
+
+    def parse_content(self, content, flag=None):
+        data = parse(content, flag)
+        self.transform_to_markdown(data)
+
+    def transform_to_markdown(self, data):
+        content = data['content']
+        author_name = data['author_name']
+        answer_id = data['answer_id']
+        question_id = data['question_id']
+        question_title = data['question_title']
+        vote_up_count = data['vote_up_count']
+        create_time = data['create_time']
+
+        file_name = u'%s--%s的回答[%d].md' % (question_title, author_name,answer_id)
+        folder_name = u'%s' % (question_title)
+
+        if not os.path.exists(os.path.join(os.getcwd(),folder_name)):
+            os.mkdir(folder_name)
+        os.chdir(folder_name)
+
+        f = open(file_name, "wt")
+        f.write("-" * 40 + "\n")
+        origin_url = 'https://www.zhihu.com/question/{}/answer/{}'.format(question_id, answer_id)
+        f.write("## 本答案原始链接: " + origin_url + "\n")
+        f.write("### question_title: " + question_title.encode('utf-8') + "\n")
+        f.write("### Author_Name: " + author_name.encode('utf-8') + "\n")
+        f.write("### Answer_ID: %d" % answer_id + "\n")
+        f.write("### Question_ID %d: " % question_id + "\n")
+        f.write("### VoteCount: %s" % vote_up_count + "\n")
+        f.write("### Create_Time: " + create_time + "\n")
+        f.write("-" * 40 + "\n")
+
+        text = html2text.html2text(content.decode('utf-8')).encode("utf-8")
+        # 标题
+        r = re.findall(r'\*\*(.*?)\*\*', text, re.S)
+        for i in r:
+            if i != " ":
+                text = text.replace(i, i.strip())
+
+        r = re.findall(r'_(.*)_', text)
+        for i in r:
+            if i != " ":
+                text = text.replace(i, i.strip())
+        text = text.replace('_ _', '')
+
+        # 图片
+        r = re.findall(r'!\[\]\((?:.*?)\)', text)
+        for i in r:
+            text = text.replace(i, i + "\n\n")
+
+        f.write(text)
+
+        f.close()
+
+
+if __name__ == '__main__':
+    zhihu = ZhiHu()
+    url = 'https://www.zhihu.com/question/27621722/answer/105331078'
+    zhihu.get_single_answer_content(url)
+
+    # question_id = '27621722'
+    # zhihu.get_all_answer_content(question_id)
+</pre><p style="margin-bottom: 15px; color: rgb(85, 85, 85); font-size: 15px; line-height: 26px; text-indent: 30px; text-align: left;">zhihu.py为主脚本，内容很简单，发起请求，调用解析函数进行解析，最后再进行保存。
+解析函数脚本：parse_content.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Created by shimeng on 17-6-5
+import time
+from bs4 import BeautifulSoup
+ 
+ 
+def html_template(data):
+    # api content
+    html = '''
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;body&gt;
+        %s
+        &lt;/body&gt;
+        &lt;/head&gt;
+        &lt;/html&gt;
+        ''' % data
+    return html
+ 
+ 
+def parse(content, flag=None):
+    data = {}
+    if flag == 1:
+        # single
+        main_content = content.get('main_content')
+        ajax_content = content.get('ajax_content')
+ 
+        soup = BeautifulSoup(main_content.decode("utf-8"), "lxml")
+        answer = soup.find("span", class_="RichText CopyrightRichText-richText")
+ 
+        author_name = ajax_content.get('author').get('name')
+        answer_id = ajax_content.get('id')
+        question_id = ajax_content.get('question').get('id')
+        question_title = ajax_content.get('question').get('title')
+        vote_up_count = soup.find("meta", itemprop="upvoteCount")["content"]
+        create_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ajax_content.get('created_time')))
+ 
+ 
+    else:
+        # all
+        answer_content = content.get('content')
+ 
+        author_name = content.get('author').get('name')
+        answer_id = content.get('id')
+        question_id = content.get('question').get('id')
+        question_title = content.get('question').get('title')
+        vote_up_count = content.get('voteup_count')
+        create_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(content.get('created_time')))
+ 
+        content = html_template(answer_content)
+        soup = BeautifulSoup(content, 'lxml')
+        answer = soup.find("body")
+ 
+    print author_name,answer_id,question_id,question_title,vote_up_count,create_time
+    # 这里非原创，看了别人的代码，修改了一下
+    soup.body.extract()
+    soup.head.insert_after(soup.new_tag("body", **{'class': 'zhi'}))
+ 
+    soup.body.append(answer)
+ 
+    img_list = soup.find_all("img", class_="content_image lazy")
+    for img in img_list:
+        img["src"] = img["data-actualsrc"]
+    img_list = soup.find_all("img", class_="origin_image zh-lightbox-thumb lazy")
+    for img in img_list:
+        img["src"] = img["data-actualsrc"]
+    noscript_list = soup.find_all("noscript")
+    for noscript in noscript_list:
+        noscript.extract()
+ 
+    data['content'] = soup
+    data['author_name'] = author_name
+    data['answer_id'] = answer_id
+    data['question_id'] = question_id
+    data['question_title'] = question_title
+    data['vote_up_count'] = vote_up_count
+    data['create_time'] = create_time
+ 
+    return data</pre><p style="margin-bottom: 15px; color: rgb(85, 85, 85); font-size: 15px; line-height: 26px; text-indent: 30px; text-align: left;"><span style="font-size: 15px; line-height: 26px;">parse_content.py主要负责构造新的html，然后对其进行解析，获取数据。</span>
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttVicyy88o8BRwqOku00r0fib8XIscZgjntL4Xqfx0QlicepQHhANpIJdHMiaYrsQJibTuYI44tlsiczPag/0?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNtttVicyy88o8BRwqOku00r0fibvicbf6OYTWLXc4JN2G4r4yVt9WJOcetwOnnMwILsibFfeyPYIib62ia27A/0?wx_fmt=jpeg
+恩，下面还有，就不截图了。
+下面聊一聊这种方法的缺点：
+这种方法的最大缺点就是：
+因为。。。。。。 在md文件中我们只是写了个图片的网址，这就意味着markdown的编辑器帮我们去存放图片的服务器上对这个图片进行了获取，所以断网也就意味着你看不到图片了；同时也意味着如果用户删除了这张图片，你也就看不到了。
+但是，后来我又发现在markdownpad中将文件导出为html时，即使是断网了，依然可以看到全部的内容，包括图片，所以如果你真的喜欢某一个答案，保存到印象笔记肯定是不错的选择，PDF直接保存也不错，如果是使用了这个方法，记得转为html最好。
+还有一个缺点就是html2text转换过后的效果其实并不是特别好，还是需要后期在进行处理的。

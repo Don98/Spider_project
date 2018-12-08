@@ -1,0 +1,62 @@
+b'Python VS R\xef\xbc\x9a\xe5\x8f\x8c\xe8\xaf\xad\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe2\x80\x94\xe2\x80\x94\xe4\xb8\x8a\xe6\xb5\xb7\xe7\xa7\x9f\xe6\x88\xbf\xe6\x95\xb0\xe6\x8d\xae\xe5\x85\xa8\xe8\xa7\xa3\xe6\x9e\x90' 由于周围的朋友很多都选择在上海发展，所以这次我把目标锁定在了上海，看看上海的租房行情怎么样。（<strong>温馨提示</strong>：看之前要调整好心态。。）
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pheuUUexLb07HB6jOianoNsmz0fKicgZtMcp4UfF01yoFtGvicFCjibyX1Q/640?wx_fmt=png
+ 本文使用<strong>python</strong>和<strong>R</strong>两种语言进行数据分析，尽量做到代码完整，易于理解。关注的重点在于数据清洗与分析的流程，每一部分的代码不一定是实现完全一样的效果，在对比之中实现取长补短、各显其能才是最佳的做法。感兴趣的同学们赶紧来一起练手吧！
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pHOv1tmXLKicZTXj4g0tcmxs01qWupBCndvb7icElVwz5YbSaVbBvXFhg/640?wx_fmt=png
+一、数据获取和读入在<strong>python</strong>中使用<strong>pandas</strong>读入数据；在<strong>R</strong>中使用<strong>readxl包</strong>读入数据。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6puBiby5XhwWEGbicrBMIkcuCicpnTg200RfEO2OZRA06icUbU8vK2RIAvDQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_gif/pXLWib9706U2nyibF2xROia8Lrj8baOgicJmWl1FvnHjNkm0iaHg1LszqmehlS9INEibPaWWsRTIHG52xCJ4lDJicDibBg/0?wx_fmt=gif
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6ps2SPeGPYMZqlAiaHQdX31tk5lo4icbh4Pzx9mtic1eTIMxbNCGMia7lThQ/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pQlTxUjn3ZZUUCqbIp0Kbq14mNVjVGzZia0xkSBlkt1PlTvj7ibiaYkB2g/640?wx_fmt=png
+ 可以看到，python和R读数据的时候还是有些差别的，python将纯数字的<strong>kanguo</strong>和<strong>price</strong>两列读成了整型，而R则将所有变量都读成了字符串，所以之后在做预处理的时候同样也要区别处理。
+http://mmbiz.qpic.cn/mmbiz_jpg/pXLWib9706U184PdEU1oQOF4acmIZlv6pOAynPoxHiaD00eWwo8Dp0eb2eSbw9mvRMXsicqYEovPicqc5XicibCj4tsw/640?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pqMqYwTjuuQuibS5Hw60ZdylCKcMxbic7HibKwwId2MeYeo03icTcaRb8ibQ/640?wx_fmt=png
+  python中使用<strong>apply</strong>结合<strong>lambda表达式</strong>进行缺失值查看，是常用的做法；而R中则有比较多的方法，这里采用了<strong>is.na()函数</strong>进行缺失值的全局查看，并使用<strong>VIM包</strong>的<strong>aggr函数</strong>进行缺失值的可视化。无论用哪一种方法，我们所有的数据都没有观测到有缺失值，这首先要归功于链家网数据的完整性，当然更重要的，要归功于我们的爬虫写的太好了。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p7cVQ7XKY6rFLgvWOAYdPzzBxc6e9YKV8XtsiayEL1MI3KVQviaBibAibOg/640?wx_fmt=png
+对滴对滴，拿到数据赶紧看看最重要的——价格都是多钱呀！
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pv3FJTl78eVqalp0q7HWrmo1pP8t1lKrEZqBIBR3b0l4EWX5dN04Cyw/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pWwjv90w37ZN3sSfcD2W228FoGMmavibnG781XM6xQDou9sib0oym8SgA/640?wx_fmt=png
+ 这里我们利用python的pandas快捷作图作出价格分布的箱线图，用R的<strong>psych包</strong>对租房价格做一下基本的描述性统计。
+从箱线图中看出一半的出租房价格集中在4000-10000的范围内，中位数为5500。 http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pTAXVNWxYMVeIBZulxtgNYsLhybibhAzJCRC3IJ2Ga0knFPLuia9iaQjTw/640?wx_fmt=png
+此时按捺不住好奇心的我取出了每月租金高于10W的子集。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pyWHLt7ArP1vu2poiajZjLrFE4N75OrEdibt88j8fC4hJafLib8jGVOVCA/640?wx_fmt=png
+ 居然有25套房子每个月要10W以上的租金！我们随便找一个房子的信息百度一下看看到底是啥样的房子。。对！就找那个最贵的58W的！凤阳路338号！9室9厅，1338平，我滴妈？？？
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6picq1zLMwdfHqjTNm6KXgCiaaqlp2rokzz6oMBkUOibcnXoHfzCcNGGLNQ/640?wx_fmt=png
+ 打开网页的我是崩溃的。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pK8xQKacKBVzUkgficIpYKCvVYYFzve8K8libsPUJ5GXdf8vY1E1vc2Yw/640?wx_fmt=png
+   http://mmbiz.qpic.cn/mmbiz_jpg/pXLWib9706U184PdEU1oQOF4acmIZlv6pUVgDcXI10tG3Yk1eZa4uwWYrtdxyHwzPSqbgOlKpep1EIG7HoHWpiaQ/640?wx_fmt=jpeg
+ 古董洋房我去！一个月才58W呢，真是白菜价哟！
+三、数据清洗和单一变量分析http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pHO7fdatBWQHVIqttGicZ7K6LAiaqz5nhNbSAhSEe5mJgSjAe1F0Lo6ibQ/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_jpg/pXLWib9706U184PdEU1oQOF4acmIZlv6pH1y2CmibXTmXaeSv5qMvuPcMftg7GaRfXOUaTz2XeKGQ3f5hOeVsx4Q/640?wx_fmt=jpeg
+ 使用正则表达式提取相应数据，python中使用<strong>re库</strong>，R中使用<strong>stringr包</strong>，都很方便，不过两种语言的正则表达式语法稍有不同，需要分别学习。
+从柱状图中可以看出，高区和中区的房屋要多于地区的房屋，不愧是大魔都呀。由于楼层信息较为零散，我们将其切段，0代表1-5层，1代表6-10层，2代表11-20层，3代表21-30层，4代表30层以上。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pNEFHJiaicCVNibxIibYovvAUAOtq0kqk8wfS1jvn1ghBkMddFmIvtfscgA/640?wx_fmt=png
+library 从图中可以看出，上海出租房的楼层分布主要集中在6-10层，以及20层以内。我们先看看朝向的取值都有哪些：
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6plQzsaqjQGGuSV9UXTHPBUd2Y5tPp0bNQCb2KUxIt8ckIiaUuP5vKofw/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pEMwXJSdtdiaNib9cND0rDOeoXNuD1fo7kHhESyhQj3JsSoKHefzsYtOg/640?wx_fmt=png
+ 有将近一半的房屋没有朝向的数据（在爬取数据时就用<strong>“无朝向数据”</strong>填充了），其他的各种朝向都有，我们来可视化一下。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p5q3RYDczTAIr7cIA3uNpsWtfxLT8dtr2XlGboEDVf5icDqXHlVSicL4Q/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p0gpzWUpzpeEpyHGYa5r3gAbeSNL30QgQ4NKUric8tWLVJnZAenSdsYw/640?wx_fmt=png
+<br  />在拥有朝向数据的房屋中，朝南和朝南北的占绝大多数。“朝南北”的房屋对大多数人更具有吸引力，中介也往往用“南北通透”来做宣传。既然不朝南或者不是南北通透的房子都是“奇葩”，那我们干脆将其他的朝向都纳入“其他”了事。Rhttp://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p4ib3lTyCXurgoDAKoGvqNWOh6aZgib3wQNJiacjeIgRgkjh0ibBuO8ia22g/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6psIicpicdDEajCv1fnKHqricBSQtOWVtm3Pib8LNBpAceQLuvmwTibgDa7ZA/640?wx_fmt=png
+<br  />ok，看到从今年三月份开始，链家网上海的租房信息才开始逐渐增多的。带看次数的取值也比较多，我们也采取切段的方式处理：0代表0次，1代表1次，2代表2-5次，3代表6-10次，4代表10次以上。
+http://mmbiz.qpic.cn/mmbiz_jpg/pXLWib9706U184PdEU1oQOF4acmIZlv6p5NsobMSoWCGIcr0HWQe9VkUkic3GqMbGLsoVDPNgicsygzQdpJmtx0Cg/640?wx_fmt=jpeg
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pYWFzw9rDE8X6MKO0RltqXBz8NUbnTS1UheOiaKN4R9Rc3TJEicNYzlYw/640?wx_fmt=png
+<br  />有三分之一多的房屋还静静地躺着，并没有人去看过；看过6次以上的抢手出租房有约5000套，不过看了这么多次也有可能是大坑，一定要小心选择啊。面积数据在爬取的时候周围有换行符等等干扰，所以要清理一下，再转成整型。这里依然使用正则表达式提取关键数据。
+Rhttps://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p5gOia6hyGD6b1Jiakrk3tAAZ8Y0jazlnibUQ6icgoZnXxAGB3lcx0hwYPw/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pnZrZIFMOYcnpmhUpB4es5ia1dehFOvwEkjAj0NjEJzbj4du4Zibw0iazg/640?wx_fmt=png
+<br  />浦东出租房数量遥遥领先于其他区，闵行、徐汇和宝山位于2-4位，最少的崇明在链家网上只有7套房屋在出租。户型的数据格式为<strong>X室X厅</strong>，我们先对各种户型出租房的数量进行可视化分析，然后将其拆分为<strong>rooms</strong>和<strong>living_rooms</strong>两列。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pvSYOk1iawyOtRqCAVianlSZaSiajngdicz3In8QerRDtnSp64Q7kfyb9VA/640?wx_fmt=png
+ 这里将数量较少的户型并入<strong>“其他”</strong>，然后采用截断式柱状图进行可视化。
+户型种类繁多，尤其还包括上面“超级洋房”9室9厅那种。不过最多的还是2室2厅，3室2厅，2室1厅这样的家庭、合租式的住房以及1室1厅这样的单身出租房。使用R作截断式柱状图比较繁琐，下面只给出拆分列的代码，可视化代码略去
+8、街道、小区、标题Rhttp://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pT2gNfgyobpgEH3jOiaMiaUDxKmjHluuibPOlmKs50Auu2mXsmCJznibX9Q/640?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p4VFN4aYBbfDDxwLTyHDBj0ODAVVMIxbQF6009U4GGNDhsfs7NUU7rA/640?wx_fmt=png
+四、多变量分析http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p1eg26GngvyiajHLCFVHBCXuibltGOIsg1wy0Kgz1sPibEaqe0X6Hfc60Q/640?wx_fmt=png
+<br  />从箱线图中看出，静安的租房价格最高，百度了一下，果然，静安区是市中心呀。接下来可以看看各区租房面积的分布是怎样的。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pjICBiblYPfms32QibWqPjX1o25K4dbrzMWjADjsjhCW2hTCuiadXicb67w/640?wx_fmt=png
+<br  />好吧，面积分布都差不多，青浦的出租房面积稍大一些。和买房一样，租房也要看单价的呀，我们再来看下各区房屋单价的分布吧。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pyugKsXhlKTq0y9pqPtPYdoYLiaibozw291uS5Iy8TyALFDUfVXdXjKSA/640?wx_fmt=png
+<br  />看起来还是静安价格最高，不过高低排名看得不是很清晰。http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6p8P80tY2qTV3Wwvc7WPDibxcGjekMG4nweJica1MjibsIW3867icl7awcvA/640?wx_fmt=png
+<br  />用漏斗图来看就清楚多了，租房单价最高的是静安区，平均每平米要将近150块；接着是黄浦、长宁和徐汇；房屋出租数量最多的浦东价格在中间的位置，平均每平米78块多，听起来还可以的样子。而在崇明，租一个一百平的房子一个月只要两千多（虽然数据量太少），真是适宜生存呢。接着我们再来看一下，是不是真的“南北通透”的房子价格会高一些呢？
+因为奇葩的价格还是比较多的，我们还是用带有中位数线的箱线图来看。
+http://mmbiz.qpic.cn/mmbiz_png/pXLWib9706U184PdEU1oQOF4acmIZlv6pcBCwXaKIj8Va4sK20UQZ5b77w1BXibPSDHyFHHYsgoEich1tLs9nGTtw/640?wx_fmt=png
+<br  />从箱线图中可以看出，“朝南北”的房屋价格是要高一些。  

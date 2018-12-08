@@ -1,0 +1,86 @@
+Python从零开始系列连载（10）——Python特色数据类型（列表）（下）               列表切片指的是将列表的一部分切出来，有点像字符串切片
+列表切片的形式是：
+list[起始索引：终止索引（不包含）：步长间隔]
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYHCEof1XYO3IQXUIicaSuLEGiaauoiaPc94lmiaYsviapQRxXuGnT35KdiaYQ/0?wx_fmt=png
+ 还有一些特殊的切片省略：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYbvt8Xp8ib4f6UZxj3JHACHkGaRUP1aDo6RBoPrwwKSYj0sxGnhobxXA/0?wx_fmt=png
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYrzsroSbgnMjgSBwxMxW0Ng6VafRLorMR4PpyIvWaplug3ibibpiaXgRJw/0?wx_fmt=png
+ 我们来看个好玩的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY1XpS4WWmAXGPMQYSKWtNC3PpkllL0RSCIfE3BOyGWXBaUmzzawjzlw/0?wx_fmt=png
+ 这说明什么？你好好思考我们之前讲过的id（）函数
+  列表是一种可变的数据类型，所以可以修改其内容
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYn2Sh2ehk5RsekaaLia7qoSd9GPJdbibK4f9udWVwWs7TxskBDfQAEWUw/0?wx_fmt=png
+ 针对列表，可以有一些方法操作列表，这里的方法可以理解为函数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYibgIDwSAUP9icu8JyafERQsYOjafFDycic4UbPCXDqg43puY3jWfHdeoQ/0?wx_fmt=png
+ 我们分别演示一下：
+  在列表末尾添加新的对象
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYd9abiaKeFiaXGUfwZxOSrz2EV46nFPia17icvHgibib994uIdliby9dxiclOmg/0?wx_fmt=png
+  统计某个元素在列表中出现的次数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYiaL1VXibrzURBoAyLCzf1ibZUGJtM0Z3570C1wBRG2M6QrWx5sXtlmiblA/0?wx_fmt=png
+ 这里分别统计了list1中字符串1和整型1出现的次数
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYT4nQYicBJ4A8emsmMxLUEv41eWkheMygNtWYvSLlofv5dV2JPwEIpcQ/0?wx_fmt=png
+ extend添加单个元素和append很像，但他可以一次添加更多元素，元素可以是列表
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYOXciazVQg0uIarSibWSmxoGxJgssmrzmbmv597vK3F133LRodTgkOt3Q/0?wx_fmt=png
+ 在第一个索引位置就找到了值为1的元素
+      http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYYvJhZFOTN85nPwM8XzicEHibDpzFgFvAL0mOyAFcm6mOZpr52Anibg2zA/0?wx_fmt=png
+ 可以看出，我们指定的索引是2，最后‘a’插在了原来索引2的元素 3 的前面
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYTSkucmtI7XMYFdkicx4Gyxn8Ibj4KV8RraVtrHYyQWbWTwjDYNKTwUA/0?wx_fmt=png
+ 当然，我们也可以插入一个列表
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYXQsicVoFNJSOg7cjMDxL5GQ1ialeTNc8DYAA3ko3OUu805bib209X4NUw/0?wx_fmt=png
+ 可以看出，执行这个方法有返回值，返回值是被删除的那个列表最后一个元素
+ 我们也可以指定删除的索引
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYjicSS8p7sbC3U4ahIAbpJv8ABBsS5QFAke0AkS3FNdPN7dyVW1C4HSA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYAuGUO1q3RInY41QiaJEQun9JwmNuV9LSzEibGucknAAS4sxpIkpq0EZA/0?wx_fmt=png
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYiaBo03gcibuuyviaBr3ffQkGFSA5Ve3jMyAo8o00ySl0gfHJdzYlib2tCQ/0?wx_fmt=png
+ 和list4[：：-1]效果一样
+    http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYVlcCH3FZ7tNvicvKtPXZcf6iakdKGXevYw0DmweHfNKic0D1Rhess8ZxQ/0?wx_fmt=png
+ 字符串也是能比较大小的，你还记得么？不记得就去回顾字符串那节课：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYLA7CFK9aqUcmWic9CxEJtKGSxpm2vhm8M6akicRafJiaYGtiafcR9c9oibg/0?wx_fmt=png
+ 这里默认为升序，如果我要逆序排列呢？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYMdibAZSZgCFTE66PEuKZ1TjKtjibfcW3SibtKPibiaujibI7Eo1oezMicRfTA/0?wx_fmt=png
+ del操作可以删除整个列表或者列表的子列表
+   http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYsKsxqvDUfuVWHzkaibVkjtXHzhY0IBSlreysbX7V2qiborOb8eNwNz7w/0?wx_fmt=png
+ 删除列表的字列表：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYyibibhbQk6mnUzGdSmNA67CRLbRXoghiaah3NicZhCgLiblC4xLtjpicISfQ/0?wx_fmt=png
+ 删除整个列表：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYba3JXf3ckIL6ytkVyb3UgevgDuhuICiaCowUWXQIcZukn40CcKFltSg/0?wx_fmt=png
+ 删除之后再次访问list1就报错了~
+  在Python的列表中，列表生成式体现了Python优雅的特色
+ 如果让你生成一个列表，元素是1~10的平方，你会怎么生成？
+ 可能，你会这样：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYvia54u4VrtugZknD7vD5icsqmxzpmyzZdS3YiariaPIiaBpMwTsOFb39ekA/0?wx_fmt=png
+ 小明：老师！你讲错了！你只给了前五个的！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYpibRviaM3q6DhiccIPPTtm5ibqic7oqG9ZaBk2BVXOHTDAicuT4ggUXBvVSg/0?wx_fmt=png
+ 小明啊，不是老师错了，是老师懒啊，程序员都喜欢偷懒的，之后的规律大家都懂的，我就不打了
+ 小红：老师！我有更好的想法
+ 哦？你说说.
+ 小红：老师，我们之前学了for循环，可以这样生成这个列表的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYReRD8vY0ACRF4FEFwhTWZ1FqSavE2FYqvibzjdlHTPbAZqeS0icNoGmA/0?wx_fmt=png
+ 小红：先建立个空列表，再每次循环将元素append（）进去
+最后就ok啦~\(≧▽≦)/~啦啦啦
+ 小红真棒！小明你好好学习一下
+ 不过，今天我们要打开新世界的大门了！！！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYyw4Db1GM4E7luHjnOibiamG02eDF6ffFcxC9bVRKUcNVZbMImhM8Qpmw/0?wx_fmt=png
+ 不要激动！小明，你怎么流鼻血了？？
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY5h3652HKxTTHs4dgPqDgL5h6kPicxxrNq4N9Iic0bTpeVktgCL01O86Q/0?wx_fmt=png
+ 列表生成式来解决这一问题：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY0KKps1xJoVIcmgcNWXoEBfwI6cAR7tlAxlA0s8TH3ql3J3CQs3kQEw/0?wx_fmt=png
+ 一行代码搞定！，是不是很优雅，哈哈
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYte1BYfZdIwVExMT7tmibGJJt9OrmXLqZTLicxexYS88TeS3ucmDcbqbg/0?wx_fmt=png
+ 大家比较一下循环和列表生成式，发现列表生成式结构如下
+[表达式 for i in 序列]
+ 小明：老师！如果循环里是双层的，你还能用列表生成式？
+ 这。。。当然可以！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYZeYkicPx74XNxLw4eyKQW2DgLib47e7PRaKLppveXos3CC01mCkibVGLg/0?wx_fmt=png
+ 其实，还有这些操作：
+排列组合（其实相当于双层循环）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeY3hGTbHjNLZzGbk9JrCpUqp8UocYVJjKSmXfK3kD8XHSHg4NnDTib7kQ/0?wx_fmt=png
+ 求出1~10中能被3整除的数的平方做成列表：
+通过if来筛选符合条件的（就是循环里嵌套判断）
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYQibYtM8udAgw4TYSYibIrG9XTFnoZ7N0I46sC18WIFrEkvVa2ianB3wpQ/0?wx_fmt=png
+ 其实呢，你们刚学的列表生成式是Python高级编程的内容，但是你已经学会了
+是不是感觉自己很棒棒啊！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvSNkdcjibcgde67wblJxiaeYBZQwDEwacEqwYvEr7qXjibLPnJVLHZKsV1lbIVvnzTyZ3OpDlnmdicyA/0?wx_fmt=png
+ 今天作业是自己跟着操作一遍~
+自己不敲代码永远学不会写代码
+ 下课

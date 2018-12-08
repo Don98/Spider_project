@@ -1,0 +1,117 @@
+Python从零开始系列连载（3）——Python的基本数据类型（上）  前文传送门：
+   好了，jupyter相信大家都已经会用了，我们就可以愉快地学习写代码了！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwV8BwWg4DbylFWt1caLbxFicfRPaujl37HEWT8Fu4evMvKphEkWhqP6g/0?wx_fmt=png
+ 打断一下，刚才少讲了一个内容，就是我们可以改文件名，双击红框部分
+输入你想要的名字
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwFU15vNh8icCvDUPtwPQoCsBogibwyHZtPXMCQg7iaK7pRbjLSanrsicOmA/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFw2EKqYZgRRavY5nxImoEH7tYBzzibLLz14D3Bp8qu3f3FwMH1oBUhBYg/0?wx_fmt=png
+ ok啦
+  Python有着很多种数据类型，什么叫数据类型呢
+ 我搜了一下粘贴过来：
+    这里说的变量又是啥？？？
+ 如果你学过编程语言，例如大学理工科学的C和其他专业学的VB，很好理解
+ 如果你从来没学过编程语言
+ 那我就通俗解释一下：
+ 在家里吃饭，用盘子盛放美味可口菜肴
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwqRvtiay7kibQtvBIcKpjd8EYtiaZKZ4qs226aoIcXjiaI7tTaLQMxoibXtw/0?wx_fmt=png
+ 盘子（盛放菜）就是变量，而盘子的名字（青花瓷盘子）则是变量名
+而这里用盘子（盛放菜），而不是碗（盛放菜），因为盘子和碗不是一类东西
+盘子和碗就是两种数据类型，他们都能保存数据（这里的数据指的是菜）
+ 你理解了没？什么？本来懂的被我绕的不懂了？？？emmmm....
+那你自我ctrl+z一下吧
+ 说到数字，很多人纷纷起身，说：这有啥好学的，我幼儿园都会了。。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwstJtlVtIzF15jogWIHAQGxpAL3ia7CdrzD95GBwspia95FYGfygN5hOg/0?wx_fmt=png
+ 5秒钟后。。。
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwukPumt182KRBmiblnmjdcZ5QiaXQfoBpfDibWWiaojibFWYfiazatqgBWr5g/0?wx_fmt=png
+ 那我就说咯~
+ Python的数字也有4中数据类型（就好比盘子也有四种，大盘子，中等盘子，小盘子，迷你盘子）
+分别是：整数（int）、浮点数（float）、布尔值（bool）、复数（complex）
+ 小明提问：老湿，这些有啥不同啊？
+小红interrupt小明：你就不能静静听么？
+ 好的，那我们看一下他们有啥不同
+默默打开背包里的工具箱，拿出了一个函数
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwnbsOtC7Y9OcVmV5uMYz6Tn9dmqBth2wibRKTkBICQ6CzjDLicyiaEAmoA/0?wx_fmt=png
+ type：类型的意思
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFw78APvalfl6Br3bcPZf8HyysyicJKL4n1mnIictQeO2S89jB1y9eIr67g/0?wx_fmt=png
+ 我们发现测量出的233是整数类型（int）
+233.0是浮点数类型（float）、
+'233'（注意有单引号）是字符串类型（str）
+ 我们继续掏出一个函数：isinstance()
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwQNUBvqAB7DtpWiaqhkvzk4FP7yV62DVGwwHOgsJQticbibWu3MNwfdRGQ/0?wx_fmt=png
+ 这个函数传入两个参数（也就是括号内的内容，参数之间用逗号分隔）
+第一位参数：数据
+第二位参数：判断该数据是否是某个类型
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwhwwibOic4MS77CUP7FcXLEo3pneMLyAzYRYwn3ZfNVSSnszTT5ibSM4qA/0?wx_fmt=png
+判断233是不是浮点数？返回False，意思是233不是浮点数
+     例如0，-1，23333333
+Python的整数长度限制我也不清楚，反正可以写超多位
+不像其他很多编程语言有int 
+smallint 
+longint啥的
+ 不信？
+ 我们试试
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwUEiaXasLc7xL5iaXMgicbia7THZvSfql3qMNQsiarw3ywssA0IxicIQfzBWA/0?wx_fmt=png
+上面的6***666意思是：6的666次方，好了，这么长的数据大小肯定够你用了吧
+ Python整数花头（花样）挺多的，有十进制，二进制，十六进制，八进制
+现在不懂进制没关系，想了解的话可以百度，我就不长篇大论了
+他们之间的相互转化可以参考：http://www.cnblogs.com/xugang/archive/2008/08/02/1258610.html
+        http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwjvPUCCfo0esYKKHic7JZayBS7icJcibhZDzDribFL0ILGtZM8hDE4T6icXQ/0?wx_fmt=png
+     不信？试试
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwcB0Nkc7mD2RdK0ywUelJCZ9ibtd9wdleAfosHI0Rm5p5Ts2icsDXEb5g/0?wx_fmt=png
+    说明不能在二进制写法中加小数点
+ 当然，除了这个错误，你还可能犯另一个错误<strong style="box-sizing: border-box;">（如果你好好听课）</strong>
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwT9W0XRuv6StH7rzF4Ta0Y65RkjeWhyd5ta7HlmLm6b9QK6ksaNJmQQ/0?wx_fmt=png
+ 什么？好好听课还更可能犯错！这课我不听了！
+Python入门失败。。。
+ 这个错误就是之前讲过的int整数可以6**666
+ 我们给6加个小数点变成浮点数，其他不变，运行一下
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwrgB4UqY9NW2pFv3o62vX9icveIfVQJc0mTNNtavUFynhBFibWK8khxsQ/0?wx_fmt=png
+显示溢出错误：结果太大了，不能承受！
+ 这个错误大家要注意！
+ 浮点数其实还包括分数
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFw2j2gFuD2TianclCcZnMibT2qmZR4CczkYKOFonWF4wTZcgYa1bKiabUgg/0?wx_fmt=png
+ 因为是无限循环的，所以显示和保存是有误差的
+  布尔值就是我们常说的逻辑
+可以理解为对或者错，正面与反面
+例如，某国的<strong style="box-sizing: border-box;">爱情动作</strong>电影里：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwkxYOmdmAhZQsTicxVDicHFQUELjtNlPyTLcKUNkz4TYM6ic8iaWRahhiaSQ/0?wx_fmt=png
+     女主<span style="box-sizing: border-box;color: rgb(227, 55, 55);"><strong style="box-sizing: border-box;">失恋</strong></span>后开始<span style="color: rgb(227, 55, 55);box-sizing: border-box;"><strong style="box-sizing: border-box;">撕扯</strong></span><span style="box-sizing: border-box;">玫瑰花瓣</span>
+ 你到底爱不爱我
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwuntMb4EJCx7alic3B09ibS9jPnyvkKzE2vaotEO9vMpmzZ3IMLKXjZFw/0?wx_fmt=png
+爱
+不爱
+爱
+不爱
+爱
+ 若干次后。。。
+ 爱
+不爱
+爱
+不爱
+女主：让我去死
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwiaJyMHfKVX77HxUFpTeld490q7Fer9NkY9Vvy56hzLREkymYVrP5Tyw/0?wx_fmt=png
+ 可以认为只有两种情况：爱或者不爱，这对应了逻辑True 或者 False
+ 我们看一下实例：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwcgWJkbqKzXqhiaq4ATbQEzVjR5429rk4v9VGaXREH8bVTauKpLicj5bw/0?wx_fmt=png
+ 233（int）竟然等于233.0（float）
+这刷新了我的三观，不是说好了他们数据类型不一样么！
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwgScGzUp4icUVazeNt0e37j9GABicOqQlcaXQFb9COOkCT743GJ4nFfsw/0?wx_fmt=png
+ 注意了，这里只是比较两个值是否相等，233和233.0可以认为相等，只是精度保留不一样
+ 那'233'和233为啥不相等呢？
+因为'233'是字符串，不能数值运算，而233是数字
+  复数是啥？当年初中，我们以为有理数可以表示万物，突然杀出个不讲道理的无理数
+而有理数和无理数统称实数
+在实数之外还有一种叫复数
+有兴趣自行摆渡
+ 在派森中，复数是这样表示的：
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwbnyPrLAibNrbqa9MNKw4ia8pdnPibteksmlVFpk9DPlx9oenCvlYzicaLA/0?wx_fmt=png
+type返回的是complex（复杂的），意思就是复数，复数确实复杂，多了个j的部分，那女生是实数的话，男生是？？【坏笑
+ 但是你不能这样写：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwavzLmb600J2MOkVVWE4c2zTC8zQyuWKCzTk6p4vBXgBxDeApGlt8Vw/0?wx_fmt=png
+  http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttvA2uVth1I2Z3hiaIt4zIUFwJj3P6Ic8Gsyze7XtlWPC056xN6JdDmaVFOEwf0NBHUMUUDhUS28bnA/0?wx_fmt=png
+ 通过将他们括起来再使用real（真是的）和imag（虚假的）方法即可获得
+ 数字的数据类型分类讲解到此结束
+    人生苦短，我选Python
+未完待续，连载中......
+ http://mmbiz.qpic.cn/mmbiz_png/yqVAqoZvDibGpfYS2cC4YzbozH31oekibOpLFWEQicW5ufOeKMJQ9qoh8sCyjrX9k8Wm9ibic0quI4XDdTGKd0OjKBA/0.png
+  

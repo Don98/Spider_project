@@ -1,0 +1,24 @@
+b'\xe4\xbb\x8e\xe5\xa4\xa9\xe9\xbe\x99\xe5\x85\xab\xe9\x83\xa8\xe5\xb0\x8f\xe8\xaf\xb4\xe8\xa1\x8d\xe7\x94\x9f\xe5\x87\xba\xe7\x9a\x84google\xe8\xaf\xad\xe4\xb9\x89\xe5\x88\x86\xe6\x9e\x90\xe4\xb8\x8egephi\xe7\xa4\xbe\xe4\xba\xa4\xe7\xbd\x91\xe7\xbb\x9c' http://mmbiz.qpic.cn/mmbiz_jpg/LiaGhAsRNttvt30TwI5jIuV45Dl9ZKjnjicIicsZgjNn1q7oWiamlQYYcnptvhJIozuUQkpNWb0MIf065onPQBHsDw/0?wx_fmt=jpeg
+数据和图获取方式：关注<span style="color: rgb(255, 41, 65);">Python爱好者社区</span>后回复<span class="Apple-converted-space">&nbsp;</span><span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;color: rgb(255, 41, 65);">天龙八部</span> 最近迷上了可视化，周末在家好好学了echarts与python+echarts的集合pyecharts，还有gephi。感兴趣的小伙伴可以看看。
+ 忠告下，MAC下的gephi是大坑，windows下的pyecharts也稍微有点坑。
+本文主要提供一个思路，把分析结果展示给大家，抛砖引玉。
+   https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yECMmRicka6Y0xkHJvxvaO9pp0ct1ybyeumFTE06pn3IbteywLrsRVS1w/640?wx_fmt=png
+ jiabe tf_idf 分析，提取出最重要的100个词，这里只打印前10个词
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yE2OljfkLA9Zhpicq2vrQskrgXZkUndUtB6ia8b2ZdGldAP5GoXRXWBoQw/640?wx_fmt=png
+ 萧峰和乔峰分别位于第2和第3呀，加起来第1哟，段誉当之无愧的第二，大家记好段誉这个名字，后面会对他进行相似度分析。至于虚竹是谁？虚竹？好像听过这个名字。。。
+ python一个好玩的包是词云，像不像大字报？上图
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yED0cGjibWTNdNRjdlesOTsjLXEU1ysJdGiaI5vWtsK09RufOs3UKFVyhw/640?wx_fmt=png
+   https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yEhtZSwXa3ZQgvlP9HtaPgTU8vrlQ0DgjYeResdA9jnibV29OAnWOyDww/640?wx_fmt=png
+ 先分析阿朱、<span style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;line-height: 1.6;">阿紫的相似度</span>
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yE5RNnIrtat052nBmibfOD0qMTXe2icbt7OF0UhrTBnHVIFZLGXwgCGMmw/640?wx_fmt=png
+ 再看与段誉最相似/相关的
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yERYgWmelSk6MPPw32BibecrStDKlR7libmy1liaZ112KHJnK4eyt1aUwag/640?wx_fmt=png
+出来了木婉清、王语嫣。嘿嘿，段誉别装了，就是木婉清了！
+ 继续，老规矩的Python社交网络分析<br style="margin: 0px;padding: 0px;max-width: 100%;box-sizing: border-box !important;overflow-wrap: break-word !important;"  />
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yEImxsWUsLcrAF2K7l1y2w4zPn4sExXd08G0ldxYcVGze4rkf6mpHicPQ/640?wx_fmt=png
+https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yEr15QxHYgdLIuZVOw9ejiarRzzENKyxhBwWqzyIoibckbgOGmmJngSUFg/640?wx_fmt=png
+ 上次很多小伙伴留言要我的社交网络画图法，这次我就一并放上吧，但是对于大数据下的社交网络，建议用gephi或别的可视化工具。
+ https://mmbiz.qpic.cn/mmbiz_png/Bib22SAriaHjqlZlCfgk3YJftGSBmjr2yEwszKDicLnU34rAic7pwHFtzrwfOFKia1vZI3mpKGjRYaU1gM4YuCicc6eA/640?wx_fmt=png
+ 这个图是什么？看不懂！
+下面上gephi图：
+ 

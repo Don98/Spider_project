@@ -1,0 +1,111 @@
+b'Python\xe6\x95\xb0\xe6\x8d\xae\xe9\x87\x87\xe9\x9b\x86\xe5\x92\x8c\xe5\x88\x86\xe6\x9e\x90\xe5\x91\x8a\xe8\xaf\x89\xe4\xbd\xa0\xe4\xb8\xba\xe4\xbd\x95\xe4\xb8\x8a\xe6\xb5\xb7\xe7\x9a\x84\xe4\xba\x8c\xe6\x89\x8b\xe6\x88\xbf\xe4\xbd\xa0\xe9\x83\xbd\xe4\xb9\xb0\xe4\xb8\x8d\xe8\xb5\xb7\xef\xbc\x81\xef\xbc\x88\xe4\xba\x8c\xef\xbc\x89' http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttstf3EFMKwTKlc4F6wtYOic1ibUo4tq6d3A6EbhGdV8nLiaGwCESMibM28tOhXZylSxicQnLS4nh39ibNTw/0.gif
+http://mmbiz.qpic.cn/mmbiz_gif/LiaGhAsRNttuXemFWZN1AUXLCqDLVJI9rWDypWibk8iaoPOTZsdPFyucevicmmuhDUPiaiaVnkicgP9PRAeoGo9jR578w/0?wx_fmt=gif
+  这篇文章的下篇终于写出来了，上篇（数据采集）在两个月前写出来的：
+传送门：<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247483790&amp;idx=1&amp;sn=30eb7240e3b736f1a4fb3daf484f0362&amp;chksm=ec5edef3db2957e5cb522db3692cc8fd97a8a4e63b3753c8fce7f15521153a3377ef05d87c58&amp;scene=21#wechat_redirect" target="_blank" style="">Python数据采集和分析告诉你为何上海的二手房你都买不起！（一）</a>
+为何下篇现在才写出来呢？
+有两个原因：
+1.两个月前对python数据分析掌握的很差，那时候天天学爬虫，对pandas，numpy了解的也不多。
+2.人嘛，总是有惰性，喜欢一拖再拖。
+http://mmbiz.qpic.cn/mmbiz/cZV2hRpuAPhrxQU1opLkENnCB9ArIxUwWq26RwicbQNpQN3ubDHibBSJfI6PzP0icQfn0s21DvR4xKYyPEs741UXQ/0.gif
+  Python3.X
+编辑器：Jupyter notebook
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jqHibUuS4mic5tbLUyL36dXll26ZRBR1qRn5N90BMmKXJ2RcUia0KIFS3w/640.png
+......
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jSxRvUlZYe7xwA4ibZFmNEHiarntWyFbMDBhcn91WW8h7Lfoegq8BMvzA/640.png
+查看数据信息（包括每个字段数据类型），数据条数，文件大小等
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jXHibgQXMt8G5cSltA4S4icgQmzV1IPJxzA9OukfSnrnd25Baz2xh37Ng/640.png
+查看数据前五行：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jGDOA3gywPmYx3iaTedAuuo8kHvQFd5or2fvqVlQu7ycO587HtiaspEgw/640.png
+ 查看数据后五行：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jEz7pL702GJBrjfia9xjO3FMFeYPVwic8JSQ6RsM4oVcQ0w38LzsLsuhg/640.png
+我们可以看到‘梯户比例’一栏好像都是暂无数据
+我们可以专门将这一栏数据拿出来查看：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jsrN1JPqIaGicQ4Jfr7ROmibSHPqkmjeQ0fnFwyeR1vwaHibT0jRjiaiadzg/640.png
+显示的都是暂无数据
+为了确定是否所有都是暂无数据，我们可以使用如下办法：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j4FK5WX1rqRYib5vasn8iblyKJh5tP7XO6abbaUZe4iaMyh184dzIMX6ug/640.png
+......<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jKcM5pf3IGfJI0oI7SaSgblqlXtdibPYb1vFT3zBcbK1m5PSb7KMpibSQ/640.png
+取出了2871行，说明所有行的这栏都是暂无数据
+那么，这一栏对我们数据分析没有意义，可以删去：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jDlYGKOYLSyrbN4OiaksZAqCiaedljSK5TH78TPARoMb5AC3ibIwibnmyzQ/640.png
+我们可以看一下数据的简单统计信息，从图中可以看出每个栏位数据的个数，不重复数据个数，出现最多的数据及其出现的次数
+注意到最后一栏，进门朝向数据只有13个，这说明了数据缺失很严重，不考虑缺失值补齐，直接删除该栏数据：
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jKIsjbpwK3yxACz0uIawwGpgtOiaicNjgj54DKI1USL1BcX6uCHTC8buw/640.png
+False表示没有缺失
+当然，这样看起来非常难受，而且不直观
+查看各字段是否有缺失值：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j6qxnRILUic7OWYnD53YKaTMCI5MCK2dic4uDHlq3AIdNdKJnLyXicuwPA/640.png
+这样，我们就能看到除了'房屋朝向'字段有缺失值，其他字段都没有缺失值。
+我们想看看‘房屋朝向’字段有多少缺失值：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jlpTSFQZ0pvFJNwTKUF0OWHfFAjPnCzoR48W5eK0jryWxGm939GsPcQ/640.png
+显示有13个缺失值
+如果你对这个个数不敏感，我们可以看看缺失值的比例：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jUenC9ibvghXibbqUvqHh8icB1EQuAgiclpJ6doq51rKmZZIRiaESyg6BYUQ/640.png
+‘房屋朝向’的缺失值只有0.45%左右
+我们想看看数据分布是怎样的
+例如看一下二手房所在区的情况：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j0RO5nXGh9dOJZZ4ibLrHrXs8THKFibfk7EkjHyEciaycQIv0dOaVpBfkA/640.png
+浦东的二手房在售的最多，可能是因为浦东新区地大
+看一下二手房房屋朝向的情况：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jM5dA2seXhibRkib7ljib1eABXR2ia89ltOECST5NuJe5icM0sdNPrnVNWicQ/640.png
+南和南北朝向的有很多，阳光充足
+看一下房屋户型的情况：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j2uElqzaiaJAWtZb20sTPxl7dj0XwLicClLyar6libogWdTv3uvbqjbSSw/640.png
+可以看出在售的二手房多为2室1厅1卫
+看一下房屋类型的情况：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jfgr2lIzYibZmrsTbOdBgGGqxZicuQpN5hfPLS1XrOjEkwuNzFAM8AjiaA/640.png
+说明公寓类型最多
+如果我们想看一下我们感兴趣的房屋，例如我想找3室1厅1卫的房屋，并且只看部分：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jZ2kEB8VD76OShlMTc6pjqMhjsrSte9VV9YhriaicP1V9rl1VM2FibE89w/640.png
+这些看起来都好奢侈好贵，我还是看看单身狗一室一厅的房子多少钱吧：<br style=""  />
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jyibxKjD7mwBDPo1nicnJv0vcSQMJmomics0AXzfw8ghwW6tYOJdlMAMaw/640.png
+ 当然你也可以使用and（&amp;）和or（|）挑选你感兴趣的房屋信息，这里不再赘述。
+之前看到有包含13个含缺失值的行，我们将其舍弃：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jCXOAf75DNtEgIIWNkUT4uybhUda6KAXsVVfuibCoicx8GWvhBEQJTu6g/640.png
+小插曲：在jupyter notebook中，如果想要看一个方法的具体使用方法，我们可以：
+ 此时，我们再看看是否还有缺失值：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j2UeuvANl82VEpDmibjkXyIjbciaiavFLe7GRWPNoDVIsb0qszRicOMUx2g/640.png
+显示已经没有缺失值了
+我们发现：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j5eicYJVoGTQ175vkPmfrwpAh0HQfLCAC2ib76MaeBjg4kfLfAje4l5HQ/640.png
+房屋类型中，所有类型前面都显示‘住宅-’，我们将其去除
+ 然后在pandas里用map加载匿名函数lambda，返回的e即为‘-’后面的部分信息
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j9rzTHuVPGQzjyaWQ4LopvVaC59Aicn2qkpXxLnpZ6aMj8vPA633Tz1g/640.png
+由于建筑面积的信息不是数值型，而且建筑面积里含有‘平’这个字，不能直接用于计算
+所以我们提取出其中的数字：
+ \d+:匹配0-9中一个及其以上数字
+\.：转义，匹配点
+(\d+\.\d+)用括号括起来，提取括号中的信息
+提取的结果如下：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jria35aA371wgnJGWovLZmP0rnsibTAxogBvJnlXoBqH0ErgWQ9mWSgeA/640.png
+我们将提取的结果反馈回dataframe表格：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jLJ5Bkzyj41tVov2xS1KwR7Q51DWCAq8tgUJDZ3ZHVJNeRRGhgvqWBA/640.png
+看来已经完成这一步骤
+同理，使用正则提取‘总价’栏位中的数字：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jNaicicnxMibkbdMFcehIX4L3Izm1jSC7E8qLOtibic4xN8XmJia24h7VXhbw/640.png
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j22GAObRBhKbMqEPu4qjWdFyDfRrWHThf04GFeK2Gico00HpArJyPqZQ/640.png
+提取出来的数字是字符类型，我们需要将其转化为数字类型，例如float浮点数，int整型等
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jwiciaZuOrdHD0VFib2h3tjkVYoCNiaVZpuu8TpzGDiaZ1qc46kicAnO5bkAA/640.png
+转换完成后，可以看出‘建筑面积’和‘总价’已经是数值型的了
+我们构造一个属性叫做‘均价’
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jj6hM70icxicgDb14vialyUzc55RbCeJdgTcMFlu9WuD8NLTX5ZWib465eA/640.png
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jxhFRPajKMUMLuFS32Frk5pC9fP1KDJg4OnzkNDQz87kiamysFI50Uxg/640.png
+我们看到，装修情况栏位中有着'暂无数据'的字样情况：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jiaL6k68OewDaUH0YqNiaRtIHdKLTLl7PB9Nk9AUNPlIhV5z3XM7ADapw/640.png
+ 我们将其变为缺失值：
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j96heGTMZx5ysd5Qicc9siaibyibufclSwAtmEf9UsMjNK3gl9g1B7YCq5A/640.png
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jib5wmgJcGuENuH9Y5ZIvhy83cExnkvUwPHONLbv6brvpiaHgeppwfkEQ/640.png
+我们注意到行数确实减少了
+我们再次制作数据透视表：
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jYLB5uJr294qs0dqKRzZibk5azM85xRv4NcMNnbjLL1kENuyR4qic3wHQ/640.png
+  http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4j2kNfuug5icGsozu0kQGONcrWmBc90wxMOZdW5ic6iadEkepZ2dxEF4E4g/640.png
+做数据分析，数据展现的方法之一就是图
+  https://www.joinquant.com/post/441<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jZIXv1ZVS80c8I7SJtDtqHX0HQGFSnsWagibcOsrkDN3ZrNzDs7CiaPkg/640.png
+可以看出，随着建筑面积的增大，二手房的总价也在上升，并没有出现特别异常的值
+但是有离群值出现，例如靠近右上角的，我们可以看一下这些房屋的信息：<br style=""  />
+http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4jqbdsMFz1vhs0JUxp1nQbqcaD9etuDBoiauWNSnHYcuvjIqUYicsTWBcw/640.png
+ http://mmbiz.qpic.cn/mmbiz_png/HRPhFuUkDfqaO0MxgBmmYnQIquHy7x4juw84JI2TZBibJUoib7Kj3dZrra9gk1q1fyGYrrgRRI26q802ibq5fS5QQ/640.png
+可以从图中直观看出不同装修房屋在售的大概数量
+最后再看一下描述性统计：

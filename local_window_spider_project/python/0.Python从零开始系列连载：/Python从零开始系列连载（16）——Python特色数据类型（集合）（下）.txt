@@ -1,0 +1,12 @@
+Python从零开始系列连载（16）——Python特色数据类型（集合）（下）                 集合的方法 1.set.add( x )</strong>
+  2.set.update(a_set)  3.set.pop( )   4.set.remove(x)  5.set.discard(x)  6.set.clear( )  集合的数学运算     http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsibkTLoQUJzX7icyBhoqyKDSEf6upY4GAgoGVfrMpeV8nB7Jibgdp0ibg3Tm94mF3Vur8JxGO6Lh15Ww/0?wx_fmt=png
+ http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttsibkTLoQUJzX7icyBhoqyKDSfw7x1y18teBiaOphF34v5nu1TsibBKCjfgkFs0KE5dZyVnfmKFlvPjYQ/0?wx_fmt=png
+    现在还坚持再看连载学习的你们真的很棒棒！入门部分已经学完大部分啦！加油</strong>
+<span style="font-size: 18px;">接下来是福利时间！！！</span> 点击文末<span style="color: rgb(255, 41, 65);">阅读原文</span>立即报名        
+</span>
+ 2、</span><span style="color: rgb(51, 51, 51);">jupyter常用操作</span>
+3、</span><span style="color: rgb(51, 51, 51);">Python基本数据类型</span>
+4、</span><span style="color: rgb(51, 51, 51);">Python基本运算和表达式</span>
+5、</span><span style="color: rgb(51, 51, 51);">Python程序基本控制流程（顺序，分支，循环）</span>
+6、</span><span style="color: rgb(51, 51, 51);">Python特色数据类型（列表，元组，字典，集合）</span>
+7、</span><span style="color: rgb(51, 51, 51);">Python函数</span>

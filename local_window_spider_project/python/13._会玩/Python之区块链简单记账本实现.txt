@@ -1,0 +1,10 @@
+b'Python\xe4\xb9\x8b\xe5\x8c\xba\xe5\x9d\x97\xe9\x93\xbe\xe7\xae\x80\xe5\x8d\x95\xe8\xae\xb0\xe8\xb4\xa6\xe6\x9c\xac\xe5\xae\x9e\xe7\x8e\xb0' 在上一篇<a href="https://mp.weixin.qq.com/s?__biz=MzI5NDY1MjQzNA==&amp;mid=2247484185&amp;idx=1&amp;sn=d6ed166aa4cd2051e46e0f409fbdfe60&amp;chksm=ec5edc64db295572bf05d105162057424d356adcc4d1744fe75cbbbe5c5a62c8ad83b99fe702&amp;scene=21#wechat_redirect" target="_blank" style="">《Python之区块链入门》</a>中讲述了区块链的基础知识，并用Python实现了区块和区块链的结构。在本篇中，将基于上面的内容实现一个简单的记账本功能。
+记账本的功能如下：
+实现基本的收支记录；
+计算当前余额；
+对收支情况做简单统计分析。
+账单记录的格式如下：
+ 在上一篇中区块的内容是简单的文本，这里实现将基于Block实现一个支持收支记录格式的类，代码如下：
+In
+[36]:
+ 

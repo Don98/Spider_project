@@ -1,0 +1,13 @@
+b'Python\xe6\x8a\x93\xe5\x8f\x96\xe6\xb7\x98\xe5\xae\x9d\xe5\xa5\xb3\xe8\xa3\x85\xe4\xbf\xa1\xe6\x81\xaf\xef\xbc\x88\xe4\xb8\x80\xef\xbc\x89'本次实战案例以抓取淘宝上连衣裙信息为切入点，共抓取4356件连衣裙产品信息。在此基础上进行初步分析。这里首先感谢@大宇，后期的数据处理与图表制作全靠大神帮助。下面我们进入正式介绍环节。
+
+淘宝、京东、链家等大型网站都采取了一定反爬策略，这篇主要讲解下爬取过程中遇到的坑与处理办法。<strong>关键词</strong>：正则表达式、json、selenium
+我们要抓取的商品页面：
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt23YFSDLXEficlWhqlIfPpBKNLLoLyY92MeyLWnLaKVGhbRSU4QMuYVJ8sIV9eDoqpsC9XCrk8jDg/0?wx_fmt=png
+这里用urllib.request或request.get方式提交网页链接后，在控制台下print出该网页源码，你会发现关于商品的店铺、省份、价格、销量等信息全都没有。当我们在审查工具中一个个点开XHR、JS、Doc下面的链接并分析时，（如下图）
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt23YFSDLXEficlWhqlIfPpB8RAC8pTaHU9HQmoa9KkncdLw5Bic5OcWlAicsu65IoAWk8fVG5EqbYBA/0?wx_fmt=png
+会发现这些链接对应的网页中会有我们需要的商品关键信息，通过该链接可以提取出所需内容。但是…..构成这些链接的参数我们无法完全找到，甚至有些参数是动态加载的，这样就导致我们只能手动在审查工具中找到链接再提取信息，但是对于多级页面怎么办呢？在坑里待了好一段时间坑后，发现在&lt;head&gt;标签下有我们需要的信息（如下图）
+
+http://mmbiz.qpic.cn/mmbiz_png/LiaGhAsRNttt23YFSDLXEficlWhqlIfPpBricYVEFSKZib1Ny8wzkyWDia58hW3IJZO9S0z1Fg4SxFY9cx1HnngOPRg/0?wx_fmt=png
+这里我们用正则表达式匹配出该段信息。进一步可以发现它是一个json数据，用json.loads()解析。解析后我们可以借助在线工具可以查看数据的层级结构，找到需要数据的key。这里我们把页面分析与数据提取放到一块来讲了，代码逻辑：
+第二步：翻页
